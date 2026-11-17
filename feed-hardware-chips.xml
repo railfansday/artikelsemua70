@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+    <title>Portal Berita - Hardware & Chips</title>
+    <link>https://railfansday.github.io/artikelsemua70/</link>
+    <description>Curated news feed for Hardware & Chips.</description>
+    <lastBuildDate>Tue, 17 Nov 2026 20:51:35 -0000</lastBuildDate>
+    
+            <item>
+                <title>Scaling-up BERT Inference on CPU (Part 1)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-inference-on-cpu-part-1-2801.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-inference-on-cpu-part-1-2801.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Scaling up BERT-like model Inference on modern CPU  - Part 2</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-like-model-inference-on-modern-cpu-part-2-2784.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-like-model-inference-on-modern-cpu-part-2-2784.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Accelerating PyTorch distributed fine-tuning with Intel technologies</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-distributed-fine-tuning-with-intel-technolog-2782.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-distributed-fine-tuning-with-intel-technolog-2782.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Tech Report: Intel and Hugging Face Partner to Democratize Machine Learning Hardware Acceleration</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-intel-and-hugging-face-partner-to-democratize-machine-2729.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-intel-and-hugging-face-partner-to-democratize-machine-2729.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Accelerate your models with 🤗 Optimum Intel and OpenVINO</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerate-your-models-with-optimum-intel-and-openvino-2681.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerate-your-models-with-optimum-intel-and-openvino-2681.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Faster Training and Inference: Habana Gaudi®2 vs Nvidia A100 80GB</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-training-and-inference-habana-gaudi2-vs-nvidia-a100-80gb-2663.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-training-and-inference-habana-gaudi2-vs-nvidia-a100-80gb-2663.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Accelerating PyTorch Transformers with Intel Sapphire Rapids - part 1</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-transformers-with-intel-sapphire-rapids-part-2658.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-transformers-with-intel-sapphire-rapids-part-2658.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Accelerating PyTorch Transformers with Intel Sapphire Rapids - part 2</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-transformers-with-intel-sapphire-rapids-part-2644.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-transformers-with-intel-sapphire-rapids-part-2644.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Fine-tuning 20B LLMs with RLHF on a 24GB consumer GPU</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-20b-llms-with-rlhf-on-a-24gb-consumer-gpu-2628.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-20b-llms-with-rlhf-on-a-24gb-consumer-gpu-2628.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Industry News: Accelerating Stable Diffusion Inference on Intel CPUs</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-accelerating-stable-diffusion-inference-on-intel-cp-2623.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-accelerating-stable-diffusion-inference-on-intel-cp-2623.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Extensions and limitations of the neural GPU</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/extensions-and-limitations-of-the-neural-gpu-2582.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/extensions-and-limitations-of-the-neural-gpu-2582.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Tech Report: Optimizing Stable Diffusion for Intel CPUs with NNCF and 🤗 Optimum</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-optimizing-stable-diffusion-for-intel-cpus-with-nncf--2562.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-optimizing-stable-diffusion-for-intel-cpus-with-nncf--2562.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Hugging Face and AMD partner on accelerating state-of-the-art models for CPU and GPU platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-and-amd-partner-on-accelerating-state-of-the-art-mod-2520.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-and-amd-partner-on-accelerating-state-of-the-art-mod-2520.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Block-sparse GPU kernels</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/block-sparse-gpu-kernels-2514.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/block-sparse-gpu-kernels-2514.html</guid>
+                <description>According to recent reports, we’re releasing highly-optimized GPU kernels for an underexplored class of neural network architectures: networks with block-sparse weights. Depending on the chosen sparsity, these kernels can run orders of magnitude faster than cuBLAS or cuSPARSE. We...</description>
+            </item>
+            <item>
+                <title>Tech Report: Fine-tuning Stable Diffusion models on Intel CPUs</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-fine-tuning-stable-diffusion-models-on-intel-cpus-2454.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-fine-tuning-stable-diffusion-models-on-intel-cpus-2454.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+</channel>
+</rss>
