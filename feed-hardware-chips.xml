@@ -4,97 +4,96 @@
     <title>Portal Berita - Hardware & Chips</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Hardware & Chips.</description>
-    <lastBuildDate>Wed, 18 Nov 2026 07:03:24 -0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 20:23:20 -0000</lastBuildDate>
     
             <item>
-                <title>Accelerating Protein Language Model ProtST on Intel Gaudi 2</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-protein-language-model-protst-on-intel-gaudi-2-4971.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-protein-language-model-protst-on-intel-gaudi-2-4971.html</guid>
+                <title>Scaling-up BERT Inference on CPU (Part 1)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-inference-on-cpu-part-1-7129.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-inference-on-cpu-part-1-7129.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Serverless Inference with Hugging Face and NVIDIA NIM</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/serverless-inference-with-hugging-face-and-nvidia-nim-4956.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/serverless-inference-with-hugging-face-and-nvidia-nim-4956.html</guid>
+                <title>Scaling up BERT-like model Inference on modern CPU  - Part 2</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-like-model-inference-on-modern-cpu-part-2-7112.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/scaling-up-bert-like-model-inference-on-modern-cpu-part-2-7112.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Optimize and deploy with Optimum-Intel and OpenVINO GenAI</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/optimize-and-deploy-with-optimum-intel-and-openvino-genai-4910.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/optimize-and-deploy-with-optimum-intel-and-openvino-genai-4910.html</guid>
+                <title>Accelerating PyTorch distributed fine-tuning with Intel technologies</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-distributed-fine-tuning-with-intel-technolog-7110.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-pytorch-distributed-fine-tuning-with-intel-technolog-7110.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Introducing the AMD 5th Gen EPYC™ CPU</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-amd-5th-gen-epyc-cpu-4875.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-amd-5th-gen-epyc-cpu-4875.html</guid>
+                <title>Extensions and limitations of the neural GPU</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/extensions-and-limitations-of-the-neural-gpu-7074.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/extensions-and-limitations-of-the-neural-gpu-7074.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Tech Report: Controlling Language Model Generation with NVIDIA's LogitsProcessorZoo</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-controlling-language-model-generation-with-nvidias-lo-4762.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-controlling-language-model-generation-with-nvidias-lo-4762.html</guid>
+                <title>Latest Update: Block-sparse GPU kernels</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-block-sparse-gpu-kernels-6994.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-block-sparse-gpu-kernels-6994.html</guid>
+                <description>According to recent reports, we’re releasing highly-optimized GPU kernels for an underexplored class of neural network architectures: networks with block-sparse weights. Depending on the chosen sparsity, these kernels can run orders of magnitude faster than cuBLAS or cuSPARSE. We...</description>
+            </item>
+            <item>
+                <title>Tech Report: Intel and Hugging Face Partner to Democratize Machine Learning Hardware Acceleration</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-intel-and-hugging-face-partner-to-democratize-machine-6976.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-intel-and-hugging-face-partner-to-democratize-machine-6976.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Visualize and understand GPU memory in PyTorch</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/visualize-and-understand-gpu-memory-in-pytorch-4759.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/visualize-and-understand-gpu-memory-in-pytorch-4759.html</guid>
+                <title>Accelerate your models with 🤗 Optimum Intel and OpenVINO</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerate-your-models-with-optimum-intel-and-openvino-6835.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerate-your-models-with-optimum-intel-and-openvino-6835.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Latest Update: Introducing AutoRound: Intel’s Advanced Quantization for LLMs and VLMs</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-introducing-autoround-intels-advanced-quantization--4549.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-introducing-autoround-intels-advanced-quantization--4549.html</guid>
+                <title>Introducing Triton: Open-source GPU programming for neural networks</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-triton-open-source-gpu-programming-for-neural-network-6831.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-triton-open-source-gpu-programming-for-neural-network-6831.html</guid>
+                <description>We’re releasing Triton 1.0, an open-source Python-like programming language which enables researchers with no CUDA experience to write highly efficient GPU code—most of the time on par with what an expert would be able to produce. → Read original article...</description>
+            </item>
+            <item>
+                <title>Faster Training and Inference: Habana Gaudi®2 vs Nvidia A100 80GB</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-training-and-inference-habana-gaudi2-vs-nvidia-a100-80gb-6782.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-training-and-inference-habana-gaudi2-vs-nvidia-a100-80gb-6782.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Tech Report: No GPU left behind: Unlocking Efficiency with Co-located vLLM in TRL</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-no-gpu-left-behind-unlocking-efficiency-with-co-locat-4495.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-no-gpu-left-behind-unlocking-efficiency-with-co-locat-4495.html</guid>
+                <title>Tech Report: Accelerating PyTorch Transformers with Intel Sapphire Rapids - part 1</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-accelerating-pytorch-transformers-with-intel-sapphire-6768.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-accelerating-pytorch-transformers-with-intel-sapphire-6768.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Introducing Training Cluster as a Service - a new collaboration with NVIDIA</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-training-cluster-as-a-service-a-new-collaboration-wit-4478.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-training-cluster-as-a-service-a-new-collaboration-wit-4478.html</guid>
+                <title>Breaking: Accelerating PyTorch Transformers with Intel Sapphire Rapids - part 2</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-accelerating-pytorch-transformers-with-intel-sapphire-ra-6729.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-accelerating-pytorch-transformers-with-intel-sapphire-ra-6729.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Welcome the NVIDIA Llama Nemotron Nano VLM to Hugging Face Hub</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/welcome-the-nvidia-llama-nemotron-nano-vlm-to-hugging-face-hub-4453.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/welcome-the-nvidia-llama-nemotron-nano-vlm-to-hugging-face-hub-4453.html</guid>
+                <title>Fine-tuning 20B LLMs with RLHF on a 24GB consumer GPU</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-20b-llms-with-rlhf-on-a-24gb-consumer-gpu-6684.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-20b-llms-with-rlhf-on-a-24gb-consumer-gpu-6684.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Creating custom kernels for the AMD MI300</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/creating-custom-kernels-for-the-amd-mi300-4434.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/creating-custom-kernels-for-the-amd-mi300-4434.html</guid>
+                <title>Accelerating Stable Diffusion Inference on Intel CPUs</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-stable-diffusion-inference-on-intel-cpus-6669.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-stable-diffusion-inference-on-intel-cpus-6669.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Accelerate a World of LLMs on Hugging Face with NVIDIA NIM</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerate-a-world-of-llms-on-hugging-face-with-nvidia-nim-4402.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerate-a-world-of-llms-on-hugging-face-with-nvidia-nim-4402.html</guid>
+                <title>Optimizing Stable Diffusion for Intel CPUs with NNCF and 🤗 Optimum</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/optimizing-stable-diffusion-for-intel-cpus-with-nncf-and-optimum-6590.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/optimizing-stable-diffusion-for-intel-cpus-with-nncf-and-optimum-6590.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Accelerate ND-Parallel: A guide to Efficient Multi-GPU Training</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/accelerate-nd-parallel-a-guide-to-efficient-multi-gpu-training-4370.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerate-nd-parallel-a-guide-to-efficient-multi-gpu-training-4370.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>ProcReverser: Multi-Agent Black-Box Microarchitectural Reverse Engineering for Processor Vulnerability Analysis</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/procreverser-multi-agent-black-box-microarchitectural-reverse-eng-4363.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/procreverser-multi-agent-black-box-microarchitectural-reverse-eng-4363.html</guid>
-                <description>arXiv:2611.20827v2 Announce Type: replace-cross 
-Abstract: When processor implementation details are unavailable, black-box microarchitectural reverse engineering helps security researchers identify hardware conditions related to security vulnerabilities. However, this process re...</description>
-            </item>
-            <item>
-                <title>From Zero to GPU: A Guide to Building and Scaling Production-Ready CUDA Kernels</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/from-zero-to-gpu-a-guide-to-building-and-scaling-production-ready-4340.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/from-zero-to-gpu-a-guide-to-building-and-scaling-production-ready-4340.html</guid>
+                <title>Breaking: Hugging Face and AMD partner on accelerating state-of-the-art models for CPU and GPU platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-hugging-face-and-amd-partner-on-accelerating-state-of-th-6562.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-hugging-face-and-amd-partner-on-accelerating-state-of-th-6562.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
 </channel>

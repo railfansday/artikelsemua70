@@ -4,97 +4,97 @@
     <title>Portal Berita - AI & Tech</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for AI & Tech.</description>
-    <lastBuildDate>Wed, 18 Nov 2026 07:03:24 -0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 20:23:20 -0000</lastBuildDate>
     
             <item>
-                <title>Ethics and Society Newsletter #6: Building Better AI: The Importance of Data Quality</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/ethics-and-society-newsletter-6-building-better-ai-the-importance-4976.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/ethics-and-society-newsletter-6-building-better-ai-the-importance-4976.html</guid>
+                <title>My Journey to a serverless transformers pipeline on Google Cloud</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/my-journey-to-a-serverless-transformers-pipeline-on-google-cloud-7134.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/my-journey-to-a-serverless-transformers-pipeline-on-google-cloud-7134.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Fine-tuning Florence-2 - Microsoft's Cutting-edge Vision Language Models</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-florence-2-microsofts-cutting-edge-vision-language-mo-4975.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-florence-2-microsofts-cutting-edge-vision-language-mo-4975.html</guid>
+                <title>Industry News: Introducing OpenAI</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-introducing-openai-7099.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-introducing-openai-7099.html</guid>
+                <description>According to recent reports, openAI is a non-profit artificial intelligence research company. Our goal is to advance digital intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return. Since our research is fre...</description>
+            </item>
+            <item>
+                <title>Latest Update: OpenAI Gym Beta</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-openai-gym-beta-7093.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-openai-gym-beta-7093.html</guid>
+                <description>Sources indicate that we’re releasing the public beta of OpenAI Gym, a toolkit for developing and comparing reinforcement learning (RL) algorithms. It consists of a growing suite of environments (from simulated robots to Atari games), and a site for comparing and reproducing resu...</description>
+            </item>
+            <item>
+                <title>OpenAI technical goals</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-technical-goals-7087.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-technical-goals-7087.html</guid>
+                <description>OpenAI’s mission is to build safe AI, and ensure AI’s benefits are as widely and evenly distributed as possible. → Read original article...</description>
+            </item>
+            <item>
+                <title>Concrete AI safety problems</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/concrete-ai-safety-problems-7086.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/concrete-ai-safety-problems-7086.html</guid>
+                <description>Sources indicate that we (along with researchers from Berkeley and Stanford) are co-authors on today’s paper led by Google Brain researchers, Concrete Problems in AI Safety. The paper explores many research problems around ensuring that modern machine learning systems operate as ...</description>
+            </item>
+            <item>
+                <title>Announcing the 🤗 AI Research Residency Program</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/announcing-the-ai-research-residency-program-7068.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/announcing-the-ai-research-residency-program-7068.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Welcome Gemma 2 - Google’s new open LLM</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/welcome-gemma-2-googles-new-open-llm-4973.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/welcome-gemma-2-googles-new-open-llm-4973.html</guid>
+                <title>OpenAI and Microsoft</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-and-microsoft-7064.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-and-microsoft-7064.html</guid>
+                <description>We’re working with Microsoft to start running most of our large-scale experiments on Azure. → Read original article...</description>
+            </item>
+            <item>
+                <title>Breaking: OpenAI Baselines: DQN</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-openai-baselines-dqn-7034.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-openai-baselines-dqn-7034.html</guid>
+                <description>We’re open-sourcing OpenAI Baselines, our internal effort to reproduce reinforcement learning algorithms with performance on par with published results. We’ll release the algorithms over upcoming months; today’s release includes DQN and three of its variants. → Read original arti...</description>
+            </item>
+            <item>
+                <title>OpenAI Baselines: ACKTR &amp; A2C</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-baselines-acktr-a2c-7014.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-baselines-acktr-a2c-7014.html</guid>
+                <description>Recent findings suggest that we’re releasing two upcoming OpenAI Baselines implementations: ACKTR and A2C. A2C is a synchronous, deterministic variant of Asynchronous Advantage Actor Critic (A3C) which we’ve found gives equal performance. ACKTR is a more sample-efficient reinforc...</description>
+            </item>
+            <item>
+                <title>Breaking: Meta-learning for wrestling</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-meta-learning-for-wrestling-7006.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-meta-learning-for-wrestling-7006.html</guid>
+                <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction. → Read original article...</description>
+            </item>
+            <item>
+                <title>Asymmetric actor critic for image-based robot learning</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/asymmetric-actor-critic-for-image-based-robot-learning-7002.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/asymmetric-actor-critic-for-image-based-robot-learning-7002.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Google Cloud TPUs made available to Hugging Face people</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/google-cloud-tpus-made-available-to-hugging-face-people-4968.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/google-cloud-tpus-made-available-to-hugging-face-people-4968.html</guid>
+                <title>OpenAI supporters</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-supporters-6986.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-supporters-6986.html</guid>
+                <description>We’re excited to welcome latest donors to OpenAI. → Read original article...</description>
+            </item>
+            <item>
+                <title>Latest Update: Preparing for malicious uses of AI</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-preparing-for-malicious-uses-of-ai-6985.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-preparing-for-malicious-uses-of-ai-6985.html</guid>
+                <description>We’ve co-authored a paper that forecasts how malicious actors could misuse AI technology, and potential ways we can prevent and mitigate these threats. This paper is the outcome of almost a year of sustained work with our colleagues at the Future of Humanity Institute, the Centre...</description>
+            </item>
+            <item>
+                <title>OpenAI hackathon</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-hackathon-6983.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-hackathon-6983.html</guid>
+                <description>Come to OpenAI’s office in San Francisco’s Mission District for talks and a hackathon on Saturday, March 3rd. → Read original article...</description>
+            </item>
+            <item>
+                <title>Some considerations on learning to explore via meta-reinforcement learning</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/some-considerations-on-learning-to-explore-via-meta-reinforcement-6979.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/some-considerations-on-learning-to-explore-via-meta-reinforcement-6979.html</guid>
                 <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Tech Report: Google releases Gemma 2 2B, ShieldGemma and Gemma Scope</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-google-releases-gemma-2-2b-shieldgemma-and-gemma-scop-4954.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-google-releases-gemma-2-2b-shieldgemma-and-gemma-scop-4954.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Working with 400,000 teachers to shape the future of AI in schools</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/working-with-400000-teachers-to-shape-the-future-of-ai-in-schools-4949.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/working-with-400000-teachers-to-shape-the-future-of-ai-in-schools-4949.html</guid>
-                <description>OpenAI partners with the American Federation of Teachers to launch a 5-year initiative equipping 400,000 K-12 educators to lead AI innovation in classrooms. → Read original article...</description>
-            </item>
-            <item>
-                <title>The EU Code of Practice and future of AI in Europe</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-eu-code-of-practice-and-future-of-ai-in-europe-4947.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-eu-code-of-practice-and-future-of-ai-in-europe-4947.html</guid>
-                <description>OpenAI joins the EU Code of Practice, advancing responsible AI while partnering with European governments to drive innovation, infrastructure, and economic growth. → Read original article...</description>
-            </item>
-            <item>
-                <title>OpenAI nonprofit jam</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-nonprofit-jam-4944.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-nonprofit-jam-4944.html</guid>
-                <description>It has been revealed that at OpenAI, we build tools to help people solve hard problems—including nonprofits working on the frontlines of their communities. The OpenAI Academy is teaming up with the Walton Family Foundation, Emerson Collective, and a network of local nonprofit org...</description>
-            </item>
-            <item>
-                <title>Statement from the OpenAI Board of Directors on the Nonprofit Commission Report</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/statement-from-the-openai-board-of-directors-on-the-nonprofit-com-4943.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/statement-from-the-openai-board-of-directors-on-the-nonprofit-com-4943.html</guid>
-                <description>The Board of Directors thanks the members of the independent OpenAI Nonprofit Commission for their extensive work and engagement. → Read original article...</description>
-            </item>
-            <item>
-                <title>Tech Report: Invideo AI uses OpenAI models to create videos 10x faster</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-invideo-ai-uses-openai-models-to-create-videos-10x-fa-4941.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-invideo-ai-uses-openai-models-to-create-videos-10x-fa-4941.html</guid>
-                <description>Invideo AI uses OpenAI’s GPT-4.1, gpt-image-1, and text-to-speech models to transform creative ideas into professional videos in minutes. → Read original article...</description>
-            </item>
-            <item>
-                <title>ChatGPT agent System Card</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/chatgpt-agent-system-card-4940.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/chatgpt-agent-system-card-4940.html</guid>
-                <description>ChatGPT agent System Card: OpenAI’s agentic model unites research, browser automation, and code tools with safeguards under the Preparedness Framework. → Read original article...</description>
-            </item>
-            <item>
-                <title>Introducing ChatGPT agent</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-chatgpt-agent-4938.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-chatgpt-agent-4938.html</guid>
-                <description>Introducing ChatGPT agent: it thinks and acts, using tools to complete tasks like research, bookings, and slideshows—all with your guidance. → Read original article...</description>
-            </item>
-            <item>
-                <title>Deploy Meta Llama 3.1 405B on Google Cloud Vertex AI</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/deploy-meta-llama-31-405b-on-google-cloud-vertex-ai-4936.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/deploy-meta-llama-31-405b-on-google-cloud-vertex-ai-4936.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Tech Report: AI as the greatest source of empowerment for all</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-ai-as-the-greatest-source-of-empowerment-for-all-4935.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-ai-as-the-greatest-source-of-empowerment-for-all-4935.html</guid>
-                <description>It has been revealed that I’ve always considered myself a pragmatic technologist—someone who loves technology not for its own sake, but for the direct impact it can have on people’s lives. That’s what makes this job so exciting, since I believe AI will unlock more opportunities f...</description>
-            </item>
-            <item>
-                <title>Tech Report: OpenAI and UK Government announce strategic partnership to deliver AI-driven growth</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-openai-and-uk-government-announce-strategic-partnersh-4934.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-openai-and-uk-government-announce-strategic-partnersh-4934.html</guid>
-                <description>OpenAI partners with the UK Government to boost AI adoption, drive economic growth, and enhance public services for a thriving AI ecosystem in the UK. → Read original article...</description>
             </item>
 </channel>
 </rss>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sashiko: Lessons from building an agentic code review system for Linux</title>
+    <meta name="description" content="Software Engineer, AI & Infrastructure. VP, Infrastructure & Google Fellow, AI & Infrastructure. The front door to AI in the workplace. In a recent develop">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/sashiko-lessons-from-building-an-agentic-code-review-system-for-l-5533.html">
+    <meta property="og:title" content="Sashiko: Lessons from building an agentic code review system for Linux">
+    <meta property="og:description" content="Software Engineer, AI & Infrastructure. VP, Infrastructure & Google Fellow, AI & Infrastructure. The front door to AI in the workplace. In a recent develop">
+    <meta property="og:image" content="https://storage.googleapis.com/gweb-cloudblog-publish/images/App_Dev.max-2500x2500.jpg">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/sashiko-lessons-from-building-an-agentic-code-review-system-for-l-5533.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Sashiko: Lessons from building an agentic code review system for Linux", "image": ["https://storage.googleapis.com/gweb-cloudblog-publish/images/App_Dev.max-2500x2500.jpg"], "datePublished": "2026-11-18T17:00:00", "dateModified": "2026-11-18T20:21:34.177461", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/sashiko-lessons-from-building-an-agentic-code-review-system-for-l-5533.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Sashiko: Lessons from building an agentic code review system for Linux</h1>
+        <div class="meta-line">🌐 Source: <strong>Google</strong> &bull; 📅 18 Nov 2026 &bull; ⏱️ 11 min read (2102 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>VP, Infrastructure & Google Fellow, AI & Infrastructure.</li><li style='margin-bottom:6px;'>In a recent development, the speed of development in large open-source projects has always been limited by code review, not code generation.</li><li style='margin-bottom:6px;'>Linux runs billions of Android phones, most cloud providers, and nearly every supercomputer.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-5533"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-5533"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-5533"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Sashiko: Lessons from building an agentic code review system for Linux" loading="lazy" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/App_Dev.max-2500x2500.jpg" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-5533">Software Engineer, AI &amp; Infrastructure.</p>
+<p>VP, Infrastructure &amp; Google Fellow, AI &amp; Infrastructure.</p>
+<p>The front door to AI in the workplace.</p>
+<p>In a recent development, the speed of development in large open-source projects has always been limited by code review, not code generation. Even as coding agents get better at writing code, they do not accelerate development on their own. This is especially true of patches to the Linux kernel. Without a way to build trust in proposed changes, more generated code simply piles up in front of the same small group of human maintainers. Some of those patches are solid changes, just written faster; many others are plausible-looking "AI slop" sent by contributors who do not fully understand the systems they are modifying. And the influx of AI-generated security reports, many of which are duplicates or inaccurate, only adds to maintainers’ load.</p>
+<p>Linux runs billions of Android phones, most cloud providers, and nearly every supercomputer. It spans more than 35 million lines of code, and over 85,000 changes land every year. Automated build bots and fuzzers like Syzkaller catch build errors and crashes, but code review has always been the main way to guarantee the stability and safety of the kernel. Every day, maintainers read hundreds and hundreds of proposed patches by hand to catch memory leaks, deadlocks, race conditions, and security bugs.</p>
+<p>It has been revealed that to help maintainers handle the load and catch bugs before they land, the Google AI &amp; Infrastructure team built Sashiko, an open-source, agentic code review system powered by Gemini. We named the project after the Japanese word 刺し子, a stitching technique for artistically reinforcing worn cloth, and donated it to the Linux Foundation earlier this year.</p>
+<p>In this blog, we cover the problem Sashiko was designed to solve, how it works, what the data shows, and what we learned from building and running it in the wild.</p>
+<p>Reviewing a change in a complex code base is objectively hard, both for humans and LLMs. It often requires a deep understanding of how the system works in general, well outside the proposed change. In fact, it’s pretty common to see patches that engineers claim perfectly solve the problem, but if they were to be merged, would actually introduce even worse problems (albeit subtle). Traditionally, only experienced maintainers have been able to spot and prevent these concerns. The same is true for agentically generated code.</p>
+<p>To verify the correctness of a change, a potentially large number of invariants should be proven, which is often a much larger and harder task than developing the change itself. This is true for both human and agentic reviewers. However, LLM-based reviewers have some unique properties, both positive and negative:.</p>
+<p>To avoid these failure modes, Sashiko separates finding candidate bugs from verification of those bugs, and requires each pass to record what it ruled out:.</p>
+<p>Gather context and plan: Sashiko first pulls in the code around the diff (modified functions, struct definitions, and direct callers) and loads the subsystem's domain guides, so the changed lines are never judged in isolation. A planner then decides which specialist passes are needed (skipping hardware checks on pure software code, for example) and sets a reasoning budget for each pass based on patch complexity.</p>
+<p>Parallel specialist sessions: Up to seven specialist sessions run in parallel, each focused on a single class of problems: commit intent, implementation match, control flow, resource lifetimes, locking, security, and hardware. Giving each pass a single focus prevents one type of bug from crowding out another. Each session searches and reads the repository with git tools (averaging about 100 tool calls per review) and outputs two lists: concerns it believes are real, and candidate concerns it investigated and ruled out, along with the code that supports that conclusion.</p>
+<p>In a recent development, triage: A lead verifier audits those two lists together. Clear-cut bugs already proven by the code in front of it pass straight through; dismissals proven by a local check are dropped. Everything else deserves additional investigation. Crucially, that includes not only contested bugs where specialists disagreed, but also shaky self-dismissals — cases where a specialist spotted a real bug and dismissed it by assuming, without proof, that some unseen caller or lock would prevent it.</p>
+<p>Per-bug deep checks: Instead of checking all difficult cases in one shared prompt, Sashiko gives each difficult case its own verification agent that runs in parallel. Each agent gets one specific question to answer with git tools under a symmetrical rule: Neither a bug claim nor a dismissal is accepted without concrete code proof across all call sites. If a specialist talks itself out of a real bug based on a false assumption, this step catches it and promotes it back to a real finding.</p>
+<p>Review report: Sashiko generates a report that sounds like a human maintainer asking questions about the proposed change, matching the style expected on a Linux mailing list.</p>
+<p>It has been revealed that all this happens at no cost for developers. Deep agentic reviews at scale require a substantial token budget. If developers had to pay for them with their own API keys, many important contributors would be pushed away. Instead, Sashiko reviews patches sent to public Linux kernel mailing lists, and Google runs the service at sashiko.dev. Everything runs in the open: every prompt, tool call, reasoning step, and ruled-out bug is public. The project initially used the open-source Linux review prompts started by Chris Mason, and more than 100 contributors, including prominent kernel maintainers and engineers, have since helped to improve prompts and Sashiko itself. Recently, Sashiko switched to a different prompt system that combines per-tree or per-version auto-generated notes on code with subjective maintainers notes, which contain directions and instructions from maintainers that can’t be derived from the code.</p>
+<p>The real test of an automated reviewer is whether maintainers pay attention to the reports it sends out, and whether those reports track actual software quality. Seven months of Sashiko production data from the kernel mailing lists give a clear picture of both these questions.</p>
+<p>It is part of the daily workflow. Sashiko completes roughly 1200 reviews a day across over 100 kernel mailing lists. It sends review emails only to lists whose maintainers opt in, and already over 70 of them have done so. Developers also engage directly with the reports: More than 1500 kernel developers have replied on the mailing lists, and their pushback on false alarms has directly driven improvements to Sashiko's prompts and verification engine. In fact, LWN.net recently wrote that Sashiko has already become an crucial part of the kernel's development process and was the top bug reporter of issues in the 7.2 release cycle.</p>
+<p>It prevents new bugs and uncovers old ones. When Sashiko flags a bug in a proposed patch, the author typically fixes it in the next revision before the change is ever merged. Many developers run Sashiko locally or in corporate private instances. The bugs that Sashiko helped to prevent leave no trace in the git commit log, making them hard to count directly. What can be counted are fixes for preexisting bugs that Sashiko finds and reports as a byproduct of reviewing new changes: Sashiko is cited in over 2000 mainline kernel commits and in over 500 of this year's official Linux kernel CVEs, spanning drivers, core kernel code, networking, GPUs, memory management, and virtualization.</p>
+<p id="sec-mid-5533">Fewer bugs are slipping into mainline releases. Across the 18 kernel releases prior to Sashiko (Linux 6.2 through 6.19, covering 254000 commits), an average of 3.4% of merged commits required a follow-up fix within 60 days. Since Sashiko rolled out, that 60-day fix rate has fallen to 2.8% in Linux 7.1 and 2.2% in Linux 7.2, a 35% drop (with the 30-day fix rate falling from 2.3% to 1.4%). It’s too early to make strong claims, and obviously many other factors can influence release-to-release numbers, so we cannot solely credit Sashiko for the entire drop, but the trend is optimistic.</p>
+<p>A clean review carries real signal. If Sashiko's warnings were mostly noise, commits merged with warnings would need follow-up fixes no more often than commits that passed cleanly. In practice, across 21,500 tracked mainline commits, patches that received a clean Sashiko review required a follow-up fix within 60 days just 0.9% of the time — less than a third of the historical baseline. Patches merged despite a critical Sashiko warning needed a fix 7.6% of the time — an 8x higher risk (and 6.3x higher even after adjusting for patch size).</p>
+<p>That gap is what makes Sashiko useful to maintainers: A clean pass instills real confidence, while a critical warning is a strong reason to take another look at the proposed patch.</p>
+<p>This all tracks with what Linus Torvalds wrote in a mailing-list discussion a few weeks after Sashiko’s launch:.</p>
+<p>"As you say, Sashiko tends to be quite good. Even when it flags something unnecessarily and there's no actual problem, there's likely to be a reason for the question. And we've seen some truly stellar reports too. Things that are deep and subtle, and the AI is 100% correct. So anybody who thinks that all AI is slop is in denial about the current state." - Linus Torvalds (on lore.kernel.org).</p>
+<p>Opted-in kernel subsystem lists.</p>
+<p>Mainline commits crediting Sashiko.</p>
+<p>2026 Linux kernel CVEs crediting Sashiko.</p>
+<p>Down from 3.4% baseline to 2.2% (Linux 7.2).</p>
+<p>According to recent reports, first, benchmark-driven development beats intuition. While developing Sashiko, we tried many ideas that looked very reasonable on their face but didn’t end up working out. Other ideas were less obvious but worked surprisingly well. What was crucial: Early on, we built a benchmark out of nearly 1,000 real Linux kernel bugs and used it to evaluate every major Sashiko change. Every bug in this set was a real mistake that had passed human review by kernel experts, had been merged into mainline Linux, and later had to be fixed. On that benchmark, Sashiko with the upcoming Gemini 4 Carbon model catches 75.8% of the bugs that human reviewers missed (using high thinking level).</p>
+<p>Second, coding agents are not great at reviewing their own code. Models are trained to produce a working solution within a limited token budget. Asking these agents to review their own code might work well for isolated tasks, but for real, large codebases, creating a functional solution is often just 5-10% of the work. What’s really hard is to produce a solution that works all of the time, is well-integrated into the surrounding code, and doesn’t introduce subtle regressions. This is often substantially more complex and requires additional effort. Similar to human developers, agents benefit from external code review: Reviewers often spot issues that the initial author missed, even if they are not more experienced.</p>
+<p>Third, open source and shared community ownership and development help to build trust. By being fully open and transparent from the beginning, Sashiko allowed anyone to run it the way they wanted: using different models (including open source and local models), customizing prompts, or even adopting Sashiko to other-than-Linux projects. This helped with community adoption and brought over 100 contributors to improve Sashiko, including some prominent kernel developers.</p>
+<p>In a recent development, more and more engineers are putting local Sashiko instances into their coding-agent loops, so patches are checked against the community's review rules before a human maintainer ever sees them. We use the same workflow to build Sashiko itself ("Sashiko for Sashiko"), running it to review every change to its codebase and prompt pipeline both locally and through a Github integration.</p>
+<p>Although Sashiko started in the Linux kernel, the need for an agentic trust layer applies across critical open-source software. Because the core review engine does not depend on C or on kernel-specific rules, the Linux kernel playbook (combining an open verification pipeline, community-owned domain guides, and a benchmark mined from historically known problems and fixes) can likely be applied to other foundational open-source projects such as GCC, LLVM, or Git.</p>
+<p>"Now, I think the other side of AI - and this is where Sashiko comes in - is that it basically does end up being a tool that can then increase the trust in the patch. So AI giveth, and AI taketh away. But the basic issue shouldn't be AI per se, it should be that notion of 'trust'." - Linus Torvalds on LKML.</p>
+<p>You can check out Sashiko at sashiko.dev, or find the code on GitHub to run it in your own development workflow.</p>
+<p>By Gary Eimerman • 4-minute read.</p>
+<p>By Mark Lohmeyer • 9-minute read.</p>
+<p id="sec-end-5533">By Sagar Randive • 7-minute read.</p>
+<p style="margin-top: 25px;">
+<a href="https://cloud.google.com/blog/products/application-development/lessons-from-building-sashiko-an-agentic-code-review-system/" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="legora-is-building-the-agentic-operating-system-for-legal-work-5800.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #5800. Legora is building the agentic operating system for legal work
+        </a>
+        
+        <a href="datadog-uses-codex-for-system-level-code-review-4612.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #4612. Datadog uses Codex for system-level code review
+        </a>
+        
+        <a href="building-an-early-warning-system-for-llm-aided-biological-threat--6644.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #6644. Building an early warning system for LLM-aided biological threat creation
+        </a>
+        
+        <a href="building-verifiable-databases-at-scale-from-the-chemical-literatu-6032.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #6032. Building verifiable databases at scale from the chemical literature via a multi-agent system
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
