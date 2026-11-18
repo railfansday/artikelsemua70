@@ -4,100 +4,100 @@
     <title>Portal Berita - Gadgets</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Gadgets.</description>
-    <lastBuildDate>Tue, 17 Nov 2026 20:51:35 -0000</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2026 07:03:24 -0000</lastBuildDate>
     
             <item>
-                <title>Using Stable Diffusion with Core ML on Apple Silicon</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-2667.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-2667.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Faster Stable Diffusion with Core ML on iPhone, iPad, and Mac</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-2507.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-2507.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Releasing Swift Transformers: Run On-Device LLMs in Apple Devices</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-2391.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-2391.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
                 <title>How We Used Codex to Ship Sora for Android in 28 Days</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-1557.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-1557.html</guid>
-                <description>OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development. → Read original article...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-4647.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-4647.html</guid>
+                <description>Industry observers note that openAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development. → Read original article...</description>
+            </item>
+            <item>
+                <title>Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-4154.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-4154.html</guid>
+                <description>Content not available. → Read original article...</description>
             </item>
             <item>
                 <title>Apple is getting this wrong</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-1007.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-1007.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-3998.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-3998.html</guid>
                 <description>OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened. → Read original article...</description>
             </item>
             <item>
-                <title>Tech Report: Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-anylanguagemodel-one-api-for-local-and-re-961.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-anylanguagemodel-one-api-for-local-and-re-961.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Latest Update: AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-anylanguagemodel-10-one-year-of-local-models-on-app-459.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-anylanguagemodel-10-one-year-of-local-models-on-app-459.html</guid>
-                <description>Recent findings suggest that last November, we introduced AnyLanguageModel on this blog:
+                <title>AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-3296.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-3296.html</guid>
+                <description>In a recent development, last November, we introduced AnyLanguageModel on this blog:
 a drop-in replacement for Apple's Foundation Models framework
 that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models
-but w...</description>
+but weren...</description>
             </item>
             <item>
-                <title>Breaking: Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-anyspeechrecognizer-and-anydecisionmodel-ope-443.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-anyspeechrecognizer-and-anydecisionmodel-ope-443.html</guid>
-                <description>Recent findings suggest that language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Say a customer calls your support line. First, you want to know what they mentioned (speech recognition). Th...</description>
-            </item>
-            <item>
-                <title>Latest Update: Best Apple 3-in-1 Travel Chargers (2026): Anker, ESR, Satechi</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-best-apple-3-in-1-travel-chargers-2026-anker-esr-sa-312.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-best-apple-3-in-1-travel-chargers-2026-anker-esr-sa-312.html</guid>
-                <description>It has been revealed that A three-in-one travel charger that can power up my iPhone, Apple Watch, and AirPods is one of the first items I pack for any trip. I’ve tried out plenty of options, but these are my favorite chargers for keeping the holy trinity of Apple gadgets going st...</description>
+                <title>Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--3269.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--3269.html</guid>
+                <description>Language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. It has been revealed that say a customer calls your support line. First, you want to know what they said (speech recognition). Then, you ...</description>
             </item>
             <item>
                 <title>The iPhone Duo Is Getting a Limited Version of Face ID</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-iphone-duo-is-getting-a-limited-version-of-face-id-285.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-iphone-duo-is-getting-a-limited-version-of-face-id-285.html</guid>
-                <description>Apple's most expensive smartphone—the iPhone Duo—lacks one of the firm's hallmark features: Face ID. The folding phone is already jam-packed with a hinge and multiple display layers, leaving no room for the TrueDepth sensor required for biometric face authentication. The Duo reli...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/the-iphone-duo-is-getting-a-limited-version-of-face-id-3142.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-iphone-duo-is-getting-a-limited-version-of-face-id-3142.html</guid>
+                <description>It has been revealed that apple's most expensive smartphone—the iPhone Duo—lacks one of the tech giant's hallmark features: Face ID. The folding phone is already jam-packed with a hinge and multiple display layers, leaving no room for the TrueDepth sensor required for biometric f...</description>
+            </item>
+            <item>
+                <title>Best early Black Friday 2026 tablet deals on Apple, Amazon, and more</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-2026-tablet-deals-on-apple-amazon-and-mor-3127.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-2026-tablet-deals-on-apple-amazon-and-mor-3127.html</guid>
+                <description>Black Friday officially kicks off next week, and several early deals on top tablets are already live. We only choose tablet deals we’ve personally tested and recommend to help you cut through the noise and find the best options from Amazon, Best Buy, Walmart, and more. According ...</description>
+            </item>
+            <item>
+                <title>The Apple Watch’s Live Rewind Can Record and Rewind Spoken Conversations. It’s Pretty Awkward</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/the-apple-watchs-live-rewind-can-record-and-rewind-spoken-convers-3076.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-apple-watchs-live-rewind-can-record-and-rewind-spoken-convers-3076.html</guid>
+                <description>My wife and I were driving back from a date night. She was talking about a friend's very expensive utility bill, but I had missed the beginning of what she noted (I was driving, after all). Recent findings suggest that then I remembered: Wait, I can ask Siri to remind me! At a tr...</description>
             </item>
             <item>
                 <title>Standard Intelligence: Training General Intelligence in Pixel Space</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-233.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-233.html</guid>
-                <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? Industry observers note that the race to scale language models â and the agent ecosy...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-3073.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-3073.html</guid>
+                <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? According to recent reports, the race to scale language models â and the agent ecosy...</description>
             </item>
             <item>
-                <title>Breaking: The Apple Watch’s Live Rewind Can Record and Rewind Spoken Conversations. It’s Pretty Awkward</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-the-apple-watchs-live-rewind-can-record-and-rewind-spoke-227.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-the-apple-watchs-live-rewind-can-record-and-rewind-spoke-227.html</guid>
-                <description>According to recent reports, my wife and I were driving back from a date night. She was talking about a friend's very expensive utility bill, but I had missed the beginning of what she noted (I was driving, after all). Sources indicate that then I remembered: Wait, I can ask Siri...</description>
+                <title>Review: Nubia Redmagic 12 Pro | Camera</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/review-nubia-redmagic-12-pro-camera-3032.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/review-nubia-redmagic-12-pro-camera-3032.html</guid>
+                <description>10% Off Canon Promo Code + Up to 30% Off. LG Discount Code: 10% Off Sitewide. 20% Off Your First Order with VistaPrint Promo Code. Squarespace Promo Code 50% Off Core Plan. LegalZoom Promo Code 10% Off Sitewide. → Read original article...</description>
             </item>
             <item>
-                <title>Latest Update: Apple services, including iCloud, App Store, Apple Music, and more, hit by outage</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-apple-services-including-icloud-app-store-apple-mus-157.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-apple-services-including-icloud-app-store-apple-mus-157.html</guid>
-                <description>After a recent slew of tech outages, service disruptions, and flight chaos this week, now it’s Apple customers who are facing technical issues. The iPhone maker’s System Status page indicates that there are complications with iCloud’s Account &amp; Sign In services affecting “all use...</description>
-            </item>
-            <item>
-                <title>Industry News: The iPhone Duo feels far more intuitive with Apple’s new face unlock</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-iphone-duo-feels-far-more-intuitive-with-apples-94.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-iphone-duo-feels-far-more-intuitive-with-apples-94.html</guid>
-                <description>There are limitations compared with Face ID, but this is much better than nothing. There are limitations compared with Face ID, but this is much better than nothing. According to recent reports, apple is testing adding face unlock to the iPhone Duo — not true Face ID, but somethi...</description>
+                <title>Apple services, including iCloud, App Store, Apple Music, and more, hit by outage</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-services-including-icloud-app-store-apple-music-and-more-hi-2989.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-services-including-icloud-app-store-apple-music-and-more-hi-2989.html</guid>
+                <description>After a recent slew of tech outages, service disruptions, and flight chaos this week, it’s now Apple customers who are facing technical challenges. According to recent reports, the iPhone maker’s System Status page indicates that there are issues with iCloud’s Account &amp; Sign In s...</description>
             </item>
             <item>
                 <title>iPhone Duo 2 prototypes suggest Face ID, Action Button, other potential 2027 features</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-93.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-93.html</guid>
-                <description>Sources indicate that although the iPhone Duo was released just this fall, Apple is finalizing the foldable’s second generation. According to a Bloomberg report, Apple has already created prototypes for the second iPhone Duo, codenamed V78, and some include a sought-after feature...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-2933.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-2933.html</guid>
+                <description>Recent findings suggest that although the iPhone Duo was released just this fall, Apple is finalizing the foldable’s second generation. According to a Bloomberg report, Apple has already created prototypes for the second iPhone Duo, codenamed V78, and some include a sought-after ...</description>
+            </item>
+            <item>
+                <title>The MacBook Neo is receiving a rare $50 discount ahead of Black Friday</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/the-macbook-neo-is-receiving-a-rare-50-discount-ahead-of-black-fr-2920.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-macbook-neo-is-receiving-a-rare-50-discount-ahead-of-black-fr-2920.html</guid>
+                <description>While $50 might not feel like much, it brings the laptop closer to its original launch price. While $50 might not feel like much, it brings the laptop closer to its original launch price. Industry observers note that if you buy something from a link, The Verge may earn a commissi...</description>
+            </item>
+            <item>
+                <title>iFixit’s Apple HomeView teardown reveals a device that will be difficult to repair</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/ifixits-apple-homeview-teardown-reveals-a-device-that-will-be-dif-2911.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/ifixits-apple-homeview-teardown-reveals-a-device-that-will-be-dif-2911.html</guid>
+                <description>Apple’s inroads on designing repairable devices seems to have been abandoned with the HomeView.﻿. Apple’s inroads on designing repairable devices seems to have been abandoned with the HomeView.﻿. After finding recent versions of Apple’s iPads and HomePods much easier to disassemb...</description>
+            </item>
+            <item>
+                <title>T-Mobile will give you a free Apple Watch, no new phone needed – how to get the Black Friday deal</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/t-mobile-will-give-you-a-free-apple-watch-no-new-phone-needed-how-2882.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/t-mobile-will-give-you-a-free-apple-watch-no-new-phone-needed-how-2882.html</guid>
+                <description>According to recent reports, the Apple Watch SE 3 is a great pick for smartwatch owners on a budget, and with this Black Friday offer at T-Mobile, you can get one on your wrist for free right now. Simply adding a fresh line on the carrier’s Watch Blueprint Plus will save you $300...</description>
             </item>
 </channel>
 </rss>

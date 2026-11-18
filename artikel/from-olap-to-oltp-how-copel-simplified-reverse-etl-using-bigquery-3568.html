@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From OLAP to OLTP: How Copel Simplified Reverse ETL Using BigQuery's Native Export to AlloyDB</title>
+    <meta name="description" content="Solutions & Cloud Architect, Copel. The front door to AI in the workplace. According to recent reports, bridging the gap between analytical systems (OLAP) ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/from-olap-to-oltp-how-copel-simplified-reverse-etl-using-bigquery-3568.html">
+    <meta property="og:title" content="From OLAP to OLTP: How Copel Simplified Reverse ETL Using BigQuery's Native Export to AlloyDB">
+    <meta property="og:description" content="Solutions & Cloud Architect, Copel. The front door to AI in the workplace. According to recent reports, bridging the gap between analytical systems (OLAP) ">
+    <meta property="og:image" content="https://storage.googleapis.com/gweb-cloudblog-publish/images/Data_Analytics_JooYPJr.max-2500x2500.jpg">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/from-olap-to-oltp-how-copel-simplified-reverse-etl-using-bigquery-3568.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "From OLAP to OLTP: How Copel Simplified Reverse ETL Using BigQuery's Native Export to AlloyDB", "image": ["https://storage.googleapis.com/gweb-cloudblog-publish/images/Data_Analytics_JooYPJr.max-2500x2500.jpg"], "datePublished": "2026-11-13T17:00:00", "dateModified": "2026-11-18T07:01:41.614768", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/from-olap-to-oltp-how-copel-simplified-reverse-etl-using-bigquery-3568.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>From OLAP to OLTP: How Copel Simplified Reverse ETL Using BigQuery's Native Export to AlloyDB</h1>
+        <div class="meta-line">🌐 Source: <strong>Google</strong> &bull; 📅 13 Nov 2026 &bull; ⏱️ 4 min read (777 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>According to recent reports, bridging the gap between analytical systems (OLAP) and transactional databases (OLTP) is notoriously complex.</li><li style='margin-bottom:6px;'>We’re announcing the general availability (GA) of BigQuery exports to AlloyDB, allowing data engineering teams to use a single, declarative SQL statement to export data from BigQuery to AlloyDB.</li><li style='margin-bottom:6px;'>To demonstrate the benefits of this feature, we are sharing how Copel, a Brazilian electric power provider, eliminated a massive orchestration bottleneck and scaled their smart meter telemetry by migrating to high-performance, built-in Reverse ETL.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-3568"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-3568"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-3568"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="From OLAP to OLTP: How Copel Simplified Reverse ETL Using BigQuery's Native Export to AlloyDB" loading="lazy" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/Data_Analytics_JooYPJr.max-2500x2500.jpg" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-3568">Solutions &amp; Cloud Architect, Copel.</p>
+<p>The front door to AI in the workplace.</p>
+<p>According to recent reports, bridging the gap between analytical systems (OLAP) and transactional databases (OLTP) is notoriously complex. Synchronizing data between the two systems, often called Reverse ETL (Extract, Transform, Load), traditionally requires heavy middleware, staging buckets, and complex orchestration, especially at enterprise scale.</p>
+<p>We’re announcing the general availability (GA) of BigQuery exports to AlloyDB, allowing data engineering teams to use a single, declarative SQL statement to export data from BigQuery to AlloyDB. This approach completely removes the need for complex ETL middleware.</p>
+<p>To demonstrate the benefits of this feature, we are sharing how Copel, a Brazilian electric power provider, eliminated a massive orchestration bottleneck and scaled their smart meter telemetry by migrating to high-performance, built-in Reverse ETL.</p>
+<p>At Copel, managing telemetry data from millions of smart electricity meters is a mission-critical operation. This data is streamed continuously and consolidated in an analytical Gold layer in BigQuery. However, to power Copel's "Systems of Action" — low-latency customer support dashboards, mobile applications, and operational billing systems — this rich dataset must be constantly synced back into its high-performance transactional database, AlloyDB for PostgreSQL.</p>
+<p>Until recently, Copel orchestrated this Reverse ETL architecture with a complex DAG in Google’s Managed Service for Apache Airflow. However, there were multiple brittle, intermediate stages in the process of enriching and exporting hundreds of millions of records from BigQuery to AlloyDB:.</p>
+<p>Figure 1: Copel’s legacy multi-stage architecture requiring Cloud Storage file dumps and sequential gCloud scripts.</p>
+<p>BigQuery ran enrichment and extraction queries, dumping SQL results into dozens of fragmented CSV files inside a Google Cloud Storage bucket.</p>
+<p>Apache Airflow executed SQL to create temp tables in AlloyDB to prevent write locking or data corruption for production tables.</p>
+<p>Sequential gCloud scripts combed through the Cloud Storage CSVs to load data into a respective AlloyDB cluster and shards.</p>
+<p>Finally, a SQL transaction block safely dropped the production table and renamed the temporary table to production.</p>
+<p>To run this legacy architecture, Copel’s team needed to maintain the pipeline, carefully manage file staging, perform complex IAM impersonation across multiple services, and constantly monitor end-to-end system health.</p>
+<p>With BigQuery's EXPORT DATA to AlloyDB, Copel was able to replace this entire multi-step pipeline infrastructure with a single, elegant SQL statement.</p>
+<p>Now, BigQuery exports communicate directly with AlloyDB instances over highly optimized, parallelized connections — no staging files in Cloud Storage, gCloud scripts, or managing temporary tables required!</p>
+<p>Figure 2: Fresh architecture showing direct parallel Reverse ETL connection between BigQuery and AlloyDB.</p>
+<p id="sec-mid-3568">Here is how simple the new Reverse ETL process looks in code:.</p>
+<p>The resulting BigQuery values map perfectly to AlloyDB's columns during the export, leaving the nested structures fully queryable and indexable on the PostgreSQL side.</p>
+<p>To validate this fresh architecture, Copel executed two large-scale Reverse ETL benchmarks: comparing the performance and scalability of a smaller incremental Reverse ETL export against a much larger full-table Reverse ETL export.</p>
+<p>The performance results exceeded all initial expectations:.</p>
+<p>Sources indicate that pro-tip on ingestion: Sustaining an export throughput of ~4.2 million rows/minute on complex JSONB telemetry fields is an outstanding technical achievement. It highlights the low-level optimizations between BigQuery's distributed processing engine and AlloyDB's advanced storage layer.</p>
+<p>By adopting this declarative SQL approach, Copel successfully deleted dozens of lines of complex scripting and custom error-handling blocks. Their Airflow DAG now contains a single, simplified BigQueryInsertJobOperator task that executes the export query.</p>
+<p>This built-in approach unlocks several core business benefits:.</p>
+<p>Direct cost reduction: By bypassing Cloud Storage entirely, there are no staging storage costs and associated API read/write operation fees.</p>
+<p>Enhanced data security: Data moves directly from BigQuery to AlloyDB inside Google's secure internal network without ever being dumped into readable CSV files.</p>
+<p>Near-zero maintenance: Pipeline errors are now contained within a single SQL statement, making troubleshooting and logging drastically simpler.</p>
+<p>Massive distributed writing: The direct export achieved write speeds exceeding 4 million records per minute by leveraging BigQuery's massive parallelism combined with AlloyDB's optimized PostgreSQL write performance.</p>
+<p>Now, rather than spending valuable engineering hours monitoring pipeline failures and intermediate storage buffers, data engineering teams can focus on what matters: delivering smart analytics and premium experiences to customers.</p>
+<p>Now that BigQuery exports to AlloyDB are generally available, there has never been a better time to simplify your data architecture. If your team is struggling with complex, multi-stage pipelines to push BigQuery data into downstream OLTP databases, we invite you to try built-in export functionality for AlloyDB, Bigtable, Spanner, or Pub/Sub today.</p>
+<p>By Kate Grinevskaja • 7-minute read.</p>
+<p>By The Google Cloud Data Analytics, BI, and Database teams  • 26-minute read.</p>
+<p id="sec-end-3568">By Sirish Chandrasekaran • 7-minute read.</p>
+<p style="margin-top: 25px;">
+<a href="https://cloud.google.com/blog/products/data-analytics/reverse-etl-bigquery-exports-to-alloydb/" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="experimenting-with-automatic-pii-detection-on-the-hub-using-presi-4966.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #4966. Experimenting with Automatic PII Detection on the Hub using Presidio
+        </a>
+        
+        <a href="how-people-are-using-chatgpt-4851.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #4851. How people are using ChatGPT
+        </a>
+        
+        <a href="using-codex-across-the-software-development-lifecycle-4700.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #4700. Using Codex across the software development lifecycle
+        </a>
+        
+        <a href="industry-news-llm-inference-on-edge-a-fun-and-easy-guide-to-run-l-4642.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #4642. Industry News: LLM Inference on Edge: A Fun and Easy Guide to run LLMs via React Native on your Phone!
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
