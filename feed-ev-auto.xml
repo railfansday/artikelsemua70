@@ -4,103 +4,107 @@
     <title>Portal Berita - EV & Auto</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for EV & Auto.</description>
-    <lastBuildDate>Wed, 18 Nov 2026 20:23:20 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 07:06:09 -0000</lastBuildDate>
     
             <item>
-                <title>Building an autonomous financial analyst with o1 and o3-mini</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-6335.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-6335.html</guid>
-                <description>Endex builds the future of financial analysis, powered by OpenAI’s reasoning models. → Read original article...</description>
+                <title>Adapting Generalist Vehicle Models for High-Speed MPC Across Terrains</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/adapting-generalist-vehicle-models-for-high-speed-mpc-across-terr-8676.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/adapting-generalist-vehicle-models-for-high-speed-mpc-across-terr-8676.html</guid>
+                <description>arXiv:2607.13319v5 Announce Type: replace-cross 
+Abstract: High-speed off-road autonomy requires precise closed-loop control for a target vehicle while remaining robust across changing terrains. Recent forward kinodynamic (FKD) prediction foundation models suggest a promising pat...</description>
+            </item>
+            <item>
+                <title>Breaking: Human-like Semantic Navigation for Autonomous Driving using Knowledge Representation and Large Language Models</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-human-like-semantic-navigation-for-autonomous-driving-us-8569.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-human-like-semantic-navigation-for-autonomous-driving-us-8569.html</guid>
+                <description>arXiv:2505.16498v2 Announce Type: replace-cross 
+Abstract: Achieving full automation in self-driving vehicles remains a challenge, especially in dynamic urban environments where navigation requires real-time adaptability. Existing systems struggle to handle navigation plans when ...</description>
             </item>
             <item>
                 <title>Do Multi-Agents Dream of Electric Screens? Achieving 100% on AndroidWorld Through Task Decomposition</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/do-multi-agents-dream-of-electric-screens-achieving-100-on-androi-6051.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/do-multi-agents-dream-of-electric-screens-achieving-100-on-androi-6051.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/do-multi-agents-dream-of-electric-screens-achieving-100-on-androi-8447.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/do-multi-agents-dream-of-electric-screens-achieving-100-on-androi-8447.html</guid>
                 <description>arXiv:2602.07787v2 Announce Type: replace 
 Abstract: We present Minitap's mobile-use, a multi-agent system for Android UI control, and evaluate it on the 116 tasks of AndroidWorld, on Android emulators in Minitap's cloud device infrastructure, real Pixel 7 phones from our device ...</description>
             </item>
             <item>
-                <title>Benchmarking Deep Learning Models for Wheelchair Configuration Classification in Accessible Automated Vehicle Applications</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/benchmarking-deep-learning-models-for-wheelchair-configuration-cl-5823.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/benchmarking-deep-learning-models-for-wheelchair-configuration-cl-5823.html</guid>
-                <description>Sources indicate that arXiv:2611.21945v1 Announce Type: cross 
-Abstract: Making automated vehicles accessible requires consideration of vulnerable road users, including wheelchair users. To offer a more tailored experience that supports independence for this group, vehicle design...</description>
+                <title>Learning Agent-Centric Vision-Language-Action World Models for Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/learning-agent-centric-vision-language-action-world-models-for-au-8325.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/learning-agent-centric-vision-language-action-world-models-for-au-8325.html</guid>
+                <description>Recent findings suggest that arXiv:2611.22880v1 Announce Type: cross 
+Abstract: Recent progress in integrating vision-language-action (VLA) models with world modeling has significantly advanced end-to-end autonomous driving by allowing systems to reason about imagined futures ins...</description>
             </item>
             <item>
-                <title>AR-WAM: efficient streaming world-action modeling for autonomous driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/ar-wam-efficient-streaming-world-action-modeling-for-autonomous-d-5790.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/ar-wam-efficient-streaming-world-action-modeling-for-autonomous-d-5790.html</guid>
-                <description>arXiv:2611.21851v1 Announce Type: cross 
-Abstract: Autonomous driving requires anticipating how traffic will evolve while responding swiftly to latest observations. Video foundation models offer the first ability, but repeated history encoding and iterative video generation make ...</description>
+                <title>Making the World React Realistically: A Closed-Loop Interactive World Model for Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/making-the-world-react-realistically-a-closed-loop-interactive-wo-8289.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/making-the-world-react-realistically-a-closed-loop-interactive-wo-8289.html</guid>
+                <description>arXiv:2611.22691v1 Announce Type: cross 
+Abstract: World models (WMs) generate driving scenarios beyond recorded logs, enabling the training and evaluation of autonomous driving systems in unseen interactions. However, existing WMs struggle to ensure both behavioral realism and v...</description>
             </item>
             <item>
-                <title>Industry News: Inventa: Decentralized Self-Improving Agents for Autonomous Scientific Discovery</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-inventa-decentralized-self-improving-agents-for-aut-5786.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-inventa-decentralized-self-improving-agents-for-aut-5786.html</guid>
-                <description>Industry observers note that arXiv:2611.21847v1 Announce Type: cross 
-Abstract: Large language model (LLM) agents can generate research ideas and improve scientific discovery through iterative experimentation. However, increasing the number of agents or iterations does not automa...</description>
+                <title>Breaking: Benchmarking Deep Learning Models for Wheelchair Configuration Classification in Accessible Automated Vehicle Applications</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-benchmarking-deep-learning-models-for-wheelchair-configu-8092.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-benchmarking-deep-learning-models-for-wheelchair-configu-8092.html</guid>
+                <description>arXiv:2611.21945v1 Announce Type: cross 
+Abstract: Making automated vehicles accessible requires consideration of vulnerable road users, including wheelchair users. To offer a more tailored experience that supports independence for this group, vehicle design needs to accommodate ...</description>
+            </item>
+            <item>
+                <title>Industry News: AR-WAM: efficient streaming world-action modeling for autonomous driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-ar-wam-efficient-streaming-world-action-modeling-fo-8062.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-ar-wam-efficient-streaming-world-action-modeling-fo-8062.html</guid>
+                <description>It has been revealed that arXiv:2611.21851v1 Announce Type: cross 
+Abstract: Autonomous driving requires anticipating how traffic will evolve while responding swiftly to new observations. Video foundation models offer the first ability, but repeated history encoding and iterative...</description>
+            </item>
+            <item>
+                <title>Inventa: Decentralized Self-Improving Agents for Autonomous Scientific Discovery</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/inventa-decentralized-self-improving-agents-for-autonomous-scient-8059.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/inventa-decentralized-self-improving-agents-for-autonomous-scient-8059.html</guid>
+                <description>arXiv:2611.21847v1 Announce Type: cross 
+Abstract: Large language model (LLM) agents can generate research ideas and improve scientific discovery through iterative experimentation. However, increasing the number of agents or iterations does not automatically translate to producin...</description>
             </item>
             <item>
                 <title>DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-5740.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-5740.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-7872.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-7872.html</guid>
                 <description>DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. → Read original article...</description>
             </item>
             <item>
-                <title>Multistage Contextual Optimization for Vehicle Repositioning</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/multistage-contextual-optimization-for-vehicle-repositioning-5552.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/multistage-contextual-optimization-for-vehicle-repositioning-5552.html</guid>
-                <description>arXiv:2611.22330v1 Announce Type: latest 
-Abstract: Ride-hailing platforms reposition idle vehicles to improve spatial supply-demand balances. This problem is prediction-driven and multistage: at each stage, the platform forecasts future demand, executes current decisions, and us...</description>
+                <title>Industry News: Multistage Contextual Optimization for Vehicle Repositioning</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-multistage-contextual-optimization-for-vehicle-repo-7753.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-multistage-contextual-optimization-for-vehicle-repo-7753.html</guid>
+                <description>Recent findings suggest that arXiv:2611.22330v1 Announce Type: upcoming 
+Abstract: Ride-hailing platforms reposition idle vehicles to improve spatial supply-demand balances. This problem is prediction-driven and multistage: at each stage, the platform forecasts future demand, exe...</description>
             </item>
             <item>
                 <title>How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/how-much-of-sar-vehicle-recognition-is-the-vehicle-background-sho-5431.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-much-of-sar-vehicle-recognition-is-the-vehicle-background-sho-5431.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/how-much-of-sar-vehicle-recognition-is-the-vehicle-background-sho-7599.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-much-of-sar-vehicle-recognition-is-the-vehicle-background-sho-7599.html</guid>
                 <description>arXiv:2611.21827v1 Announce Type: fresh 
 Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern network (ConvNeXt-Small, 3 seed...</description>
             </item>
             <item>
                 <title>Tesla’s $30,000 Cybercab comes with a $299 monthly catch</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/teslas-30000-cybercab-comes-with-a-299-monthly-catch-5320.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/teslas-30000-cybercab-comes-with-a-299-monthly-catch-5320.html</guid>
-                <description>According to recent reports, there is always a catch. Or in the case of Tesla’s self-driving Cybercab, several. Last Friday night, Tesla said it had invited “select customers” to purchase their very own Cybercabs. The two-seat, gold vehicle is unlike any other on the market: It l...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/teslas-30000-cybercab-comes-with-a-299-monthly-catch-7485.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/teslas-30000-cybercab-comes-with-a-299-monthly-catch-7485.html</guid>
+                <description>Industry observers note that there is always a catch. Or in the case of Tesla’s self-driving Cybercab, several. Industry observers note that last Friday night, Tesla said it had invited “select customers” to purchase their very own Cybercabs. The two-seat, gold vehicle is unlike ...</description>
             </item>
             <item>
                 <title>Waymo has stopped its robotaxis from driving on the freeway—here’s why</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/waymo-has-stopped-its-robotaxis-from-driving-on-the-freewayheres--5318.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/waymo-has-stopped-its-robotaxis-from-driving-on-the-freewayheres--5318.html</guid>
-                <description>Sources indicate that waymo is at the moment restricting its fleet of robotaxis to surface streets after getting into hot water with California over its cars’ driving behavior on highways. Specifically, the software tends to drive into construction zones at speed. As first report...</description>
-            </item>
-            <item>
-                <title>Latest Update: Tesla’s Cybercab Is the Subscription Hell They Told You Not to Worry About</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-teslas-cybercab-is-the-subscription-hell-they-told--5305.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-teslas-cybercab-is-the-subscription-hell-they-told--5305.html</guid>
-                <description>There is always a catch. Or in the case of Tesla’s self-driving Cybercab, several. In a recent development, last Friday night, Tesla remarked it had invited “select customers” to purchase their very own Cybercabs. The two-seat, gold vehicle is unlike any other on the market: It l...</description>
-            </item>
-            <item>
-                <title>Waymo Pauses All Highway Rides After California Safety Ban</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/waymo-pauses-all-highway-rides-after-california-safety-ban-5266.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/waymo-pauses-all-highway-rides-after-california-safety-ban-5266.html</guid>
-                <description>Recent findings suggest that waymo self-driving taxis are no longer driving on highways after the California Department of Motor Vehicles banned its vehicles from state freeway operations. The ban, which the DMV says began on November 11, comes after the department determined tha...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/waymo-has-stopped-its-robotaxis-from-driving-on-the-freewayheres--7482.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/waymo-has-stopped-its-robotaxis-from-driving-on-the-freewayheres--7482.html</guid>
+                <description>According to recent reports, waymo is at the moment restricting its fleet of robotaxis to surface streets after getting into hot water with California over its cars’ driving behavior on highways. Specifically, the software tends to drive into construction zones at speed. As first...</description>
             </item>
             <item>
                 <title>Partnering with Waymo to Reshape how the World Moves</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-5253.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-5253.html</guid>
-                <description>Industry observers note that 1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. According to recent reports, ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieve...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-7462.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-7462.html</guid>
+                <description>It has been revealed that 1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Recent findings suggest that ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved a...</description>
             </item>
             <item>
                 <title>Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-5183.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-5183.html</guid>
-                <description>Change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Change has always been the fundamental operational signal in infrastructure. Empirik is turning that...</description>
-            </item>
-            <item>
-                <title>Industry News: China dominates battery graphite, but this startup could break the monopoly</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-china-dominates-battery-graphite-but-this-startup-c-5152.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-china-dominates-battery-graphite-but-this-startup-c-5152.html</guid>
-                <description>Electric vehicle sales in the U.S. may have leveled off, but the market for batteries inside them isn’t slowing down, quintupling in the last five years. Many of those are made in the U.S., but they’re largely dependent on China for key ingredients, including graphite. According ...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-7365.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-7365.html</guid>
+                <description>In a recent development, change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Change has always been the fundamental operational signal in infrastructure...</description>
             </item>
 </channel>
 </rss>

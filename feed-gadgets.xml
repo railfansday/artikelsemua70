@@ -4,100 +4,100 @@
     <title>Portal Berita - Gadgets</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Gadgets.</description>
-    <lastBuildDate>Wed, 18 Nov 2026 20:23:20 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Nov 2026 07:06:09 -0000</lastBuildDate>
     
             <item>
-                <title>Using Stable Diffusion with Core ML on Apple Silicon</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-6794.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-6794.html</guid>
+                <title>Industry News: How We Used Codex to Ship Sora for Android in 28 Days</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-how-we-used-codex-to-ship-sora-for-android-in-28-da-9114.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-how-we-used-codex-to-ship-sora-for-android-in-28-da-9114.html</guid>
+                <description>OpenAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development. → Read original article...</description>
+            </item>
+            <item>
+                <title>Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-8452.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-8452.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Faster Stable Diffusion with Core ML on iPhone, iPad, and Mac</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-6554.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-6554.html</guid>
-                <description>Content not available. → Read original article...</description>
+                <title>Apple is getting this wrong</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-8354.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-8354.html</guid>
+                <description>OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened. → Read original article...</description>
             </item>
             <item>
-                <title>Releasing Swift Transformers: Run On-Device LLMs in Apple Devices</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-6479.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-6479.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Industry News: AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-anylanguagemodel-10-one-year-of-local-models-on-app-5452.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-anylanguagemodel-10-one-year-of-local-models-on-app-5452.html</guid>
-                <description>Recent findings suggest that last November, we introduced AnyLanguageModel on this blog:
+                <title>AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-7664.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-7664.html</guid>
+                <description>In a recent development, last November, we introduced AnyLanguageModel on this blog:
 a drop-in replacement for Apple's Foundation Models framework
 that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models
-but w...</description>
+but weren...</description>
             </item>
             <item>
                 <title>Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--5428.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--5428.html</guid>
-                <description>Industry observers note that language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. It has been revealed that say a customer calls your support line. First, you want to know what they stated (...</description>
-            </item>
-            <item>
-                <title>Breaking: The Apple Watch’s Live Rewind Can Record and Rewind Spoken Conversations. It’s Pretty Awkward</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-the-apple-watchs-live-rewind-can-record-and-rewind-spoke-5295.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-the-apple-watchs-live-rewind-can-record-and-rewind-spoke-5295.html</guid>
-                <description>My wife and I were driving back from a date night. She was talking about a friend's very expensive utility bill, but I had missed the beginning of what she said (I was driving, after all). In a recent development, then I remembered: Wait, I can ask Siri to remind me! At a traffic...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--7633.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--7633.html</guid>
+                <description>Recent findings suggest that language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Say a customer calls your support line. First, you want to know what they said (speech recognition). Then, y...</description>
             </item>
             <item>
                 <title>Review: Nubia Redmagic 12 Pro | Camera</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/review-nubia-redmagic-12-pro-camera-5256.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/review-nubia-redmagic-12-pro-camera-5256.html</guid>
-                <description>10% Off Canon Promo Code + Up to 30% Off. LG Discount Code: 10% Off Sitewide. 20% Off Your First Order with VistaPrint Promo Code. Squarespace Discount Code 50% Off Advanced Initiative. LegalZoom Promo Code 10% Off Sitewide. → Read original article...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/review-nubia-redmagic-12-pro-camera-7519.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/review-nubia-redmagic-12-pro-camera-7519.html</guid>
+                <description>10% Off Canon Promo Code + Up to 30% Off. LG Discount Code: 10% Off Sitewide. 20% Off Your First Order with VistaPrint Promo Code. Squarespace Discount Code 50% Off Advanced Strategy. LegalZoom Promo Code 10% Off Sitewide. → Read original article...</description>
             </item>
             <item>
-                <title>Industry News: Standard Intelligence: Training General Intelligence in Pixel Space</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-standard-intelligence-training-general-intelligence-5222.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-standard-intelligence-training-general-intelligence-5222.html</guid>
-                <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? Recent findings suggest that the race to scale language models â and the agent ecosy...</description>
+                <title>Netflix CEO admits app may bury stuff you want to watch under stuff you don’t</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/netflix-ceo-admits-app-may-bury-stuff-you-want-to-watch-under-stu-7457.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/netflix-ceo-admits-app-may-bury-stuff-you-want-to-watch-under-stu-7457.html</guid>
+                <description>The streaming wars, or the battle to be the top streaming company, are ongoing, according to Ted Sarandos, a co-CEO of what many would consider today’s frontrunner. But in an interview with Bloomberg published today, Sarandos noted that people are still spending significant time ...</description>
             </item>
             <item>
                 <title>Apple HomeView Review (2026): Should’ve Been Better</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-homeview-review-2026-shouldve-been-better-5217.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-homeview-review-2026-shouldve-been-better-5217.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-homeview-review-2026-shouldve-been-better-7455.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-homeview-review-2026-shouldve-been-better-7455.html</guid>
                 <description>I never thought Apple would launch a smart display. Apple has been historically late to the game in the smart-home world, if it bothers showing up at all. It’s had the most minimal smart speaker (and general smart home) offerings of any of the major brands, with just the HomePod ...</description>
             </item>
             <item>
                 <title>Exclusive: Germ DM Is a Signal Alternative That’s Now on Android</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/exclusive-germ-dm-is-a-signal-alternative-thats-now-on-android-5215.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/exclusive-germ-dm-is-a-signal-alternative-thats-now-on-android-5215.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/exclusive-germ-dm-is-a-signal-alternative-thats-now-on-android-7451.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/exclusive-germ-dm-is-a-signal-alternative-thats-now-on-android-7451.html</guid>
                 <description>Tessa Brown is visibly excited to talk to me about Germ DM, her secure messaging platform. It’s now available on Android, a major expansion for the small startup. Her eyes light up as she explains how her ambitious, three-person team—including an ex-Apple engineer who worked on i...</description>
             </item>
             <item>
-                <title>The MacBook Neo Just Got Its Largest Discount Ever Ahead of Black Friday</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-macbook-neo-just-got-its-largest-discount-ever-ahead-of-black-5192.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-macbook-neo-just-got-its-largest-discount-ever-ahead-of-black-5192.html</guid>
-                <description>It has been revealed that the MacBook Neo is on sale (finally), bringing the price down from $699 to $649. Fifty dollars might not sound like a lot, but it's the largest discount the MacBook Neo has ever received. The previous best deal was just $10 off. As Apple's first foray in...</description>
+                <title>Walmart’s early Black Friday sale is live: Save up to 66% on Apple, Dyson, and more</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/walmarts-early-black-friday-sale-is-live-save-up-to-66-on-apple-d-7434.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/walmarts-early-black-friday-sale-is-live-save-up-to-66-on-apple-d-7434.html</guid>
+                <description>Black Friday is still coming soon, but the first wave of Walmart’s early sale went live Nov. 12, with the next massive wave set for Nov. 23. Right now, though, you’ll find major deals on hot items, like the Apple Watch Series 11 for $299 (save $100), Beats Solo 4 headphones for $...</description>
             </item>
             <item>
-                <title>Best Early Black Friday Phone Deals (2026)</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-phone-deals-2026-5185.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-phone-deals-2026-5185.html</guid>
-                <description>We see tempting Black Friday phone deals every year, and in 2026, the sales have kicked off early. I spotted phones we have tested and already recommend at a cheaper price than usually, and collected them below. It’s possible some of these prices will dip lower as day-of Black Fr...</description>
+                <title>Latest Update: Standard Intelligence: Training General Intelligence in Pixel Space</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-standard-intelligence-training-general-intelligence-7427.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-standard-intelligence-training-general-intelligence-7427.html</guid>
+                <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? The race to scale language models â and the agent ecosystem around them â is white...</description>
             </item>
             <item>
-                <title>iPhone Duo 2 prototypes suggest Face ID, Action Button, other potential 2027 features</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-5104.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-5104.html</guid>
-                <description>Although the iPhone Duo was released just this fall, Apple is finalizing the foldable’s second generation. According to a Bloomberg report, Apple has already created prototypes for the second iPhone Duo, codenamed V78, and some include a sought-after feature: Face ID. In a recent...</description>
+                <title>The MacBook Neo Is on Sale Ahead of Black Friday (2026)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/the-macbook-neo-is-on-sale-ahead-of-black-friday-2026-7420.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-macbook-neo-is-on-sale-ahead-of-black-friday-2026-7420.html</guid>
+                <description>Recent findings suggest that the MacBook Neo is on sale (finally), bringing the price down from $699 to $649. Fifty dollars might not sound like a lot, but it's the largest discount the MacBook Neo has ever received. The previous best deal was just $10 off. As Apple's first foray...</description>
             </item>
             <item>
-                <title>This bestselling Samsung SSD is $250 off at Amazon right now</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/this-bestselling-samsung-ssd-is-250-off-at-amazon-right-now-5064.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/this-bestselling-samsung-ssd-is-250-off-at-amazon-right-now-5064.html</guid>
-                <description>SSD deals have been tough to find lately, thanks in part to ongoing economic pressures. But this early Black Friday deal on Samsung’s 990 Pro SSD for 39% off at both Amazon and Best Buy caught our attention — especially because this SSD has been the top-selling option for our rea...</description>
+                <title>Breaking: Best Early Black Friday Phone Deals (2026)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-best-early-black-friday-phone-deals-2026-7408.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-best-early-black-friday-phone-deals-2026-7408.html</guid>
+                <description>We see tempting Black Friday phone deals every year, and in 2026 the sales have kicked off early. I spotted phones we have tested and already recommend at a cheaper price than usual, and collected them below. It’s possible some of these prices will dip lower as day-of Black Frida...</description>
             </item>
             <item>
-                <title>Industry News: Walmart’s early Black Friday sale is live: Save up to 66% on Apple, Dyson, and more</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-walmarts-early-black-friday-sale-is-live-save-up-to-5061.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-walmarts-early-black-friday-sale-is-live-save-up-to-5061.html</guid>
-                <description>Black Friday is still coming soon, but the first wave of Walmart’s early sale went live Nov. 12, with the next big wave set for Nov. 23. Right now, though, you’ll find major deals on hot items, like the Apple Watch Series 11 for $299 (save $100), Beats Solo 4 headphones for $129 ...</description>
+                <title>Latest Update: iPhone Duo 2 prototypes suggest Face ID, Action Button, other potential 2027 features</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-iphone-duo-2-prototypes-suggest-face-id-action-butt-7286.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-iphone-duo-2-prototypes-suggest-face-id-action-butt-7286.html</guid>
+                <description>In a recent development, although the iPhone Duo was released just this fall, Apple is finalizing the foldable’s second generation. According to a Bloomberg report, Apple has already created prototypes for the second iPhone Duo, codenamed V78, and some include a sought-after feat...</description>
+            </item>
+            <item>
+                <title>Need a rugged Android tablet for your business? This one outperformed in our lab testing</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/need-a-rugged-android-tablet-for-your-business-this-one-outperfor-7275.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/need-a-rugged-android-tablet-for-your-business-this-one-outperfor-7275.html</guid>
+                <description>Best battery performance in hot environments. It has been revealed that for me, Oukitel is synonymous with ruggedness. Every product I’ve ever been sent from them is an exercise in durability. Just picking up one of the brand’s tablets or phones makes you realize how light and de...</description>
             </item>
 </channel>
 </rss>
