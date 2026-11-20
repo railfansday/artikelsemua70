@@ -4,101 +4,100 @@
     <title>Portal Berita - Gadgets</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Gadgets.</description>
-    <lastBuildDate>Fri, 20 Nov 2026 06:57:45 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 19:58:27 -0000</lastBuildDate>
     
             <item>
-                <title>How We Used Codex to Ship Sora for Android in 28 Days</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-13401.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-13401.html</guid>
-                <description>Sources indicate that openAI shipped Sora for Android in 28 days using Codex. AI-assisted planning, translation, and parallel coding workflows helped a nimble team deliver rapid, reliable development. → Read original article...</description>
-            </item>
-            <item>
-                <title>Tech Report: Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-anylanguagemodel-one-api-for-local-and-re-13255.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-anylanguagemodel-one-api-for-local-and-re-13255.html</guid>
+                <title>Using Stable Diffusion with Core ML on Apple Silicon</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-15567.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-15567.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>PhoneValue-Bench: A Dual-Ground-Truth Scorecard Benchmark for Smartphone Recommerce Inspection</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/phonevalue-bench-a-dual-ground-truth-scorecard-benchmark-for-smar-13055.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/phonevalue-bench-a-dual-ground-truth-scorecard-benchmark-for-smar-13055.html</guid>
-                <description>arXiv:2611.00791v2 Announce Type: replace-cross 
-Abstract: Remote smartphone recommerce is scaling rapidly, and locking a repurchase offer from seller photos and diagnostic screens before the handset arrives has become a central operational task. Existing multimodal resources mai...</description>
+                <title>Faster Stable Diffusion with Core ML on iPhone, iPad, and Mac</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-15335.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-15335.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Industry News: Apple is getting this wrong</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-apple-is-getting-this-wrong-15261.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-apple-is-getting-this-wrong-15261.html</guid>
+                <description>OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened. → Read original article...</description>
+            </item>
+            <item>
+                <title>Industry News: Releasing Swift Transformers: Run On-Device LLMs in Apple Devices</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-releasing-swift-transformers-run-on-device-llms-in--15260.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-releasing-swift-transformers-run-on-device-llms-in--15260.html</guid>
+                <description>Content not available. → Read original article...</description>
             </item>
             <item>
                 <title>AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-12200.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-12200.html</guid>
-                <description>It has been revealed that last November, we introduced AnyLanguageModel on this blog:
+                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-14452.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-14452.html</guid>
+                <description>Last November, we introduced AnyLanguageModel on this blog:
 a drop-in replacement for Apple's Foundation Models framework
 that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models
-but were...</description>
+but weren't always sure how to get...</description>
             </item>
             <item>
-                <title>Breaking: Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-anyspeechrecognizer-and-anydecisionmodel-ope-12163.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-anyspeechrecognizer-and-anydecisionmodel-ope-12163.html</guid>
-                <description>Language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. In a recent development, say a customer calls your support line. First, you want to know what they said (speech recognition). Then, you w...</description>
-            </item>
-            <item>
-                <title>Netflix CEO admits app may bury stuff you want to watch under stuff you don’t</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/netflix-ceo-admits-app-may-bury-stuff-you-want-to-watch-under-stu-12054.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/netflix-ceo-admits-app-may-bury-stuff-you-want-to-watch-under-stu-12054.html</guid>
-                <description>The streaming wars, or the battle to be the top streaming organization, are ongoing, according to Ted Sarandos, a co-CEO of what many would consider today’s frontrunner. But in an interview with Bloomberg published today, Sarandos noted that people are still spending significant ...</description>
+                <title>Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--14421.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--14421.html</guid>
+                <description>Language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Say a customer calls your support line. First, you want to know what they mentioned (speech recognition). Then, you want to decide where ...</description>
             </item>
             <item>
                 <title>Mouse fight club might explain why we like to watch violent things</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/mouse-fight-club-might-explain-why-we-like-to-watch-violent-thing-12042.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/mouse-fight-club-might-explain-why-we-like-to-watch-violent-thing-12042.html</guid>
-                <description>There’s something about watching violent events that broadly appeals to us, whether it’s the latest John Wick movie, a video game, or a live UFC bout. Scientists have debated whether watching violent things could make us more aggressive, but it could also be an adaptive survival ...</description>
-            </item>
-            <item>
-                <title>Best Early Black Friday Phone Deals (2026)</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-phone-deals-2026-12013.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-phone-deals-2026-12013.html</guid>
-                <description>Recent findings suggest that we see tempting Black Friday phone deals every year, and in 2026 the sales have kicked off early. I spotted phones we have tested and already recommend at a cheaper price than usual, and collected them below. It’s possible some of these prices will di...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/mouse-fight-club-might-explain-why-we-like-to-watch-violent-thing-14315.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/mouse-fight-club-might-explain-why-we-like-to-watch-violent-thing-14315.html</guid>
+                <description>Industry observers note that there’s something about watching violent events that broadly appeals to us, whether it’s the latest John Wick movie, a video game, or a live UFC bout. Scientists have debated whether watching violent things could make us more aggressive, but it could ...</description>
             </item>
             <item>
                 <title>Standard Intelligence: Training General Intelligence in Pixel Space</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-11923.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-11923.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-14223.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-14223.html</guid>
                 <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? The race to scale language models â and the agent ecosystem around them â is white...</description>
             </item>
             <item>
-                <title>Industry News: Adorama Camera Coupon Codes &amp; Promo Codes: November 2026</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-adorama-camera-coupon-codes-promo-codes-november-20-11907.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-adorama-camera-coupon-codes-promo-codes-november-20-11907.html</guid>
-                <description>Sources indicate that for professional photographers and photography enthusiasts, Adorama has long been the go-to for new and used cameras, lenses, accessories, and services such as repairs, rentals, and photo printing. The retailer has since expanded into home electronics, audio...</description>
+                <title>Adorama Camera Coupon Codes &amp; Promo Codes: November 2026</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/adorama-camera-coupon-codes-promo-codes-november-2026-14196.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/adorama-camera-coupon-codes-promo-codes-november-2026-14196.html</guid>
+                <description>For professional photographers and photography enthusiasts, Adorama has long been the go-to for new and used cameras, lenses, accessories, and services such as repairs, rentals, and photo printing. The retailer has since expanded into home electronics, audio, and musical instrume...</description>
             </item>
             <item>
-                <title>UK government forced to disclose secret Apple backdoor order</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/uk-government-forced-to-disclose-secret-apple-backdoor-order-11871.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/uk-government-forced-to-disclose-secret-apple-backdoor-order-11871.html</guid>
-                <description>Recent findings suggest that the U.K. government has been ordered to confirm that it issued a secret order demanding Apple to provide authorities with encrypted customer information. The Thursday ruling from the U.K.’s Investigatory Powers Tribunal, an independent court that allo...</description>
+                <title>Elon Musk claims SpaceX has a plan to eliminate cell phone dead zones</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/elon-musk-claims-spacex-has-a-plan-to-eliminate-cell-phone-dead-z-14141.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/elon-musk-claims-spacex-has-a-plan-to-eliminate-cell-phone-dead-z-14141.html</guid>
+                <description>CEO Elon Musk said SpaceX has completed the design of a miniature rooftop cell tower that could provide better coverage to mobile phones and eliminate dead zones inside buildings where signals from its Starlink satellites have trouble reaching. These mini cell towers are expected...</description>
             </item>
             <item>
-                <title>Elon Musk says SpaceX has a strategy to eliminate cell phone dead zones</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/elon-musk-says-spacex-has-a-strategy-to-eliminate-cell-phone-dead-11850.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/elon-musk-says-spacex-has-a-strategy-to-eliminate-cell-phone-dead-11850.html</guid>
-                <description>CEO Elon Musk mentioned SpaceX has completed the design of a miniature rooftop cell tower that could provide better coverage to mobile phones and eliminate dead zones inside buildings where signals from its Starlink satellites have trouble reaching. These mini cell towers are exp...</description>
+                <title>Latest Update: 5 upcoming Apple Health features you should try in iOS 27.3 – if your phone qualifies</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-5-upcoming-apple-health-features-you-should-try-in--14052.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-5-upcoming-apple-health-features-you-should-try-in--14052.html</guid>
+                <description>Apple is kicking off a latest and improved Health app next month with the release of iOS 27.3. Instead of just recording and displaying your health-related stats, the app will tap into Apple Intelligence to analyze the data and dispense advice on how to improve your health and fi...</description>
             </item>
             <item>
-                <title>iPhone Duo 2 prototypes suggest Face ID, Action Button, other potential 2027 features</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-11836.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/iphone-duo-2-prototypes-suggest-face-id-action-button-other-poten-11836.html</guid>
-                <description>It has been revealed that although the iPhone Duo was released just this fall, Apple is finalizing the foldable’s second generation. According to a Bloomberg report, Apple has already created prototypes for the second iPhone Duo, codenamed V78, and some include a sought-after fea...</description>
+                <title>Breaking: Get an ESR iPhone case and screen protector for up to 28% off with this Black Friday deal</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-get-an-esr-iphone-case-and-screen-protector-for-up-to-28-14044.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-get-an-esr-iphone-case-and-screen-protector-for-up-to-28-14044.html</guid>
+                <description>It has been revealed that an advertiser paid for editorial consideration of this deal. Our editorial experts vetted the deal using their independent expertise. Because we determined that the deal will save money for the consumer, we wrote the content. Industry observers note that...</description>
             </item>
             <item>
-                <title>Best early Black Friday streaming deals: Up to 79% off HBO Max, Apple TV, Paramount+, more</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-streaming-deals-up-to-79-off-hbo-max-appl-11796.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-streaming-deals-up-to-79-off-hbo-max-appl-11796.html</guid>
-                <description>Black Friday is the best (and often only) time of year to find deals on popular streaming services, and we’re already seeing some excellent deals go live, including a year of HBO Max at 50% off ($5.49/month) and six months of Apple TV at 53% off ($6.99/month). Also: Best early Bl...</description>
+                <title>Latest Update: Here are the Apple deals actually worth picking up ahead of Black Friday</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-here-are-the-apple-deals-actually-worth-picking-up--14036.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-here-are-the-apple-deals-actually-worth-picking-up--14036.html</guid>
+                <description>From AirPods to Apple Watches, many Apple devices are already seeing notable discounts ahead of November 27th. From AirPods to Apple Watches, many Apple devices are already seeing notable discounts ahead of November 27th. According to recent reports, if you buy something from a l...</description>
             </item>
             <item>
-                <title>Tech Report: Amazon’s Black Friday sale is live: Up to 53% off Oura Ring, Kindle, Apple, more</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-amazons-black-friday-sale-is-live-up-to-53-off-oura-r-11793.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-amazons-black-friday-sale-is-live-up-to-53-off-oura-r-11793.html</guid>
-                <description>Also: Best early Black Friday streaming deals: Up to 79% off HBO Max, Apple TV, more. We’ve tested and personally recommend every deal on this list. Amazon’s Black Friday sale runs today through Nov. 30, so don’t miss out. Recent findings suggest that the Oura Ring 5 is our teste...</description>
+                <title>Latest Update: Best early Black Friday 2026 Samsung deals: TVs, phones, tablets, and more</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-best-early-black-friday-2026-samsung-deals-tvs-phon-14019.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-best-early-black-friday-2026-samsung-deals-tvs-phon-14019.html</guid>
+                <description>Recent findings suggest that the Black Friday shopping weekend is almost here, but you can already find some of the best discounts of the year on big-name brands like Apple, LG, Amazon, and more. For Samsung fans, everything from tablets to smartphones to TVs will be on sale. Als...</description>
+            </item>
+            <item>
+                <title>Echo Studio with Home Camera review: An excellent speaker – if you’re OK with being tracked</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/echo-studio-with-home-camera-review-an-excellent-speaker-if-youre-13949.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/echo-studio-with-home-camera-review-an-excellent-speaker-if-youre-13949.html</guid>
+                <description>According to recent reports, the Echo Studio, Amazon’s flagship smart speaker, just got an upgrade that includes a Home Camera. It’s not just for watching what’s going on in your house while you’re away; the camera also tracks your location to adjust audio volume depending on whe...</description>
             </item>
 </channel>
 </rss>

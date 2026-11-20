@@ -4,97 +4,97 @@
     <title>Portal Berita - AI & Tech</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for AI & Tech.</description>
-    <lastBuildDate>Fri, 20 Nov 2026 06:57:45 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 19:58:27 -0000</lastBuildDate>
     
             <item>
-                <title>Make LLM Fine-tuning 2x faster with Unsloth and 🤗 TRL</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/make-llm-fine-tuning-2x-faster-with-unsloth-and-trl-13941.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/make-llm-fine-tuning-2x-faster-with-unsloth-and-trl-13941.html</guid>
+                <title>Introducing OpenAI</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-openai-16172.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-openai-16172.html</guid>
+                <description>Sources indicate that openAI is a non-profit artificial intelligence research company. Our goal is to advance digital intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return. Since our research is free from ...</description>
+            </item>
+            <item>
+                <title>OpenAI Gym Beta</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-gym-beta-16168.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-gym-beta-16168.html</guid>
+                <description>Sources indicate that we’re releasing the public beta of OpenAI Gym, a toolkit for developing and comparing reinforcement learning (RL) algorithms. It consists of a growing suite of environments (from simulated robots to Atari games), and a site for comparing and reproducing resu...</description>
+            </item>
+            <item>
+                <title>OpenAI technical goals</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-technical-goals-16164.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-technical-goals-16164.html</guid>
+                <description>OpenAI’s mission is to build safe AI, and ensure AI’s benefits are as widely and evenly distributed as possible. → Read original article...</description>
+            </item>
+            <item>
+                <title>Breaking: Concrete AI safety problems</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-concrete-ai-safety-problems-16163.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-concrete-ai-safety-problems-16163.html</guid>
+                <description>It has been revealed that we (along with researchers from Berkeley and Stanford) are co-authors on today’s paper led by Google Brain researchers, Concrete Problems in AI Safety. The paper explores many research problems around ensuring that modern machine learning systems operate...</description>
+            </item>
+            <item>
+                <title>OpenAI and Microsoft</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-and-microsoft-16149.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-and-microsoft-16149.html</guid>
+                <description>We’re working with Microsoft to start running most of our large-scale experiments on Azure. → Read original article...</description>
+            </item>
+            <item>
+                <title>OpenAI Baselines: DQN</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-baselines-dqn-16129.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-baselines-dqn-16129.html</guid>
+                <description>We’re open-sourcing OpenAI Baselines, our internal effort to reproduce reinforcement learning algorithms with performance on par with published results. We’ll release the algorithms over upcoming months; today’s release includes DQN and three of its variants. → Read original arti...</description>
+            </item>
+            <item>
+                <title>OpenAI Baselines: ACKTR &amp; A2C</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-baselines-acktr-a2c-16116.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-baselines-acktr-a2c-16116.html</guid>
+                <description>Industry observers note that we’re releasing two upcoming OpenAI Baselines implementations: ACKTR and A2C. A2C is a synchronous, deterministic variant of Asynchronous Advantage Actor Critic (A3C) which we’ve found gives equal performance. ACKTR is a more sample-efficient reinforc...</description>
+            </item>
+            <item>
+                <title>Meta-learning for wrestling</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/meta-learning-for-wrestling-16112.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/meta-learning-for-wrestling-16112.html</guid>
+                <description>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to quickly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction. → Read original article...</description>
+            </item>
+            <item>
+                <title>Asymmetric actor critic for image-based robot learning</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/asymmetric-actor-critic-for-image-based-robot-learning-16108.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/asymmetric-actor-critic-for-image-based-robot-learning-16108.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Hugging Face and Google partner for open AI collaboration</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-and-google-partner-for-open-ai-collaboration-13933.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-and-google-partner-for-open-ai-collaboration-13933.html</guid>
+                <title>OpenAI supporters</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-supporters-16098.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-supporters-16098.html</guid>
+                <description>We’re excited to welcome newly introduced donors to OpenAI. → Read original article...</description>
+            </item>
+            <item>
+                <title>Preparing for malicious uses of AI</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/preparing-for-malicious-uses-of-ai-16097.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/preparing-for-malicious-uses-of-ai-16097.html</guid>
+                <description>We’ve co-authored a paper that forecasts how malicious actors could misuse AI technology, and potential ways we can prevent and mitigate these threats. This paper is the outcome of almost a year of sustained work with our colleagues at the Future of Humanity Institute, the Centre...</description>
+            </item>
+            <item>
+                <title>OpenAI hackathon</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-hackathon-16096.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-hackathon-16096.html</guid>
+                <description>Come to OpenAI’s office in San Francisco’s Mission District for talks and a hackathon on Saturday, March 3rd. → Read original article...</description>
+            </item>
+            <item>
+                <title>Tech Report: Some considerations on learning to explore via meta-reinforcement learning</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-some-considerations-on-learning-to-explore-via-meta-r-16093.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-some-considerations-on-learning-to-explore-via-meta-r-16093.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>An Introduction to AI Secure LLM Safety Leaderboard</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/an-introduction-to-ai-secure-llm-safety-leaderboard-13932.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/an-introduction-to-ai-secure-llm-safety-leaderboard-13932.html</guid>
-                <description>Content not available. → Read original article...</description>
+                <title>OpenAI Scholars</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/openai-scholars-16092.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-scholars-16092.html</guid>
+                <description>We’re providing 6–10 stipends and mentorship to individuals from underrepresented groups to study deep learning full-time for 3 months and open-source a project. → Read original article...</description>
             </item>
             <item>
-                <title>Constitutional AI with Open LLMs</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/constitutional-ai-with-open-llms-13926.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/constitutional-ai-with-open-llms-13926.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>From OpenAI to Open LLMs with Messages API on Hugging Face</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/from-openai-to-open-llms-with-messages-api-on-hugging-face-13923.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/from-openai-to-open-llms-with-messages-api-on-hugging-face-13923.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>AMD Pervasive AI Developer Contest!</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/amd-pervasive-ai-developer-contest-13922.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/amd-pervasive-ai-developer-contest-13922.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Introducing the Open Ko-LLM Leaderboard: Leading the Korean LLM Evaluation Ecosystem</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-open-ko-llm-leaderboard-leading-the-korean-llm-ev-13919.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-open-ko-llm-leaderboard-leading-the-korean-llm-ev-13919.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Welcome Gemma - Google’s upcoming open LLM</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/welcome-gemma-googles-upcoming-open-llm-13918.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/welcome-gemma-googles-upcoming-open-llm-13918.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Breaking: AI Watermarking 101: Tools and Techniques</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-ai-watermarking-101-tools-and-techniques-13914.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-ai-watermarking-101-tools-and-techniques-13914.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Text-Generation Pipeline on Intel® Gaudi® 2 AI Accelerator</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/text-generation-pipeline-on-intel-gaudi-2-ai-accelerator-13911.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/text-generation-pipeline-on-intel-gaudi-2-ai-accelerator-13911.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Easily Train Models with H100 GPUs on NVIDIA DGX Cloud</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/easily-train-models-with-h100-gpus-on-nvidia-dgx-cloud-13905.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/easily-train-models-with-h100-gpus-on-nvidia-dgx-cloud-13905.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Hugging Face partners with Wiz Research to Improve AI Security</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-partners-with-wiz-research-to-improve-ai-security-13894.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-partners-with-wiz-research-to-improve-ai-security-13894.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>CodeGemma - an official Google release for code LLMs</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/codegemma-an-official-google-release-for-code-llms-13892.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/codegemma-an-official-google-release-for-code-llms-13892.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Making thousands of open LLMs bloom in the Vertex AI Model Garden</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/making-thousands-of-open-llms-bloom-in-the-vertex-ai-model-garden-13891.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/making-thousands-of-open-llms-bloom-in-the-vertex-ai-model-garden-13891.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>AI Apps in a Flash with Gradio's Reload Mode</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/ai-apps-in-a-flash-with-gradios-reload-mode-13885.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/ai-apps-in-a-flash-with-gradios-reload-mode-13885.html</guid>
-                <description>Content not available. → Read original article...</description>
+                <title>Industry News: Reptile: A scalable meta-learning algorithm</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-reptile-a-scalable-meta-learning-algorithm-16091.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-reptile-a-scalable-meta-learning-algorithm-16091.html</guid>
+                <description>It has been revealed that we’ve developed a simple meta-learning algorithm called Reptile which works by repeatedly sampling a task, performing stochastic gradient descent on it, and updating the initial parameters towards the final parameters learned on that task. Reptile is the...</description>
             </item>
 </channel>
 </rss>

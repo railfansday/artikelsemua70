@@ -4,187 +4,187 @@
     <title>Portal Berita Interaktif - Latest News Feed</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Daily curated technology, automotive, and business news.</description>
-    <lastBuildDate>Fri, 20 Nov 2026 06:57:45 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 19:58:27 -0000</lastBuildDate>
     
         <item>
-            <title>2023, year of open LLMs</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/2023-year-of-open-llms-13945.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/2023-year-of-open-llms-13945.html</guid>
+            <title>Introducing OpenAI</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-openai-16172.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-openai-16172.html</guid>
+            <description>Sources indicate that openAI is a non-profit artificial intelligence research company. Our goal is to advance digital intelligence in the way that is most likely to benefit humanity as a whole, unconstrained by a need to generate financial return. Since our research is free from ...</description>
+        </item>
+        <item>
+            <title>Breaking: Weight normalization: A simple reparameterization to accelerate training of deep neural networks</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-weight-normalization-a-simple-reparameterization-to-acce-16171.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-weight-normalization-a-simple-reparameterization-to-acce-16171.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Speculative Decoding for 2x Faster Whisper Inference</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/speculative-decoding-for-2x-faster-whisper-inference-13944.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/speculative-decoding-for-2x-faster-whisper-inference-13944.html</guid>
+            <title>Latest Update: Team++</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-team-16170.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-team-16170.html</guid>
+            <description>Sources indicate that we’ve had some fantastic people join over the past few months (and we’re still hiring). Welcome, everyone! → Read original article...</description>
+        </item>
+        <item>
+            <title>Welcome, Pieter and Shivon!</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/welcome-pieter-and-shivon-16169.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/welcome-pieter-and-shivon-16169.html</guid>
+            <description>We have two more team updates. → Read original article...</description>
+        </item>
+        <item>
+            <title>OpenAI Gym Beta</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/openai-gym-beta-16168.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-gym-beta-16168.html</guid>
+            <description>Sources indicate that we’re releasing the public beta of OpenAI Gym, a toolkit for developing and comparing reinforcement learning (RL) algorithms. It consists of a growing suite of environments (from simulated robots to Atari games), and a site for comparing and reproducing resu...</description>
+        </item>
+        <item>
+            <title>Latest Update: Adversarial training methods for semi-supervised text classification</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-adversarial-training-methods-for-semi-supervised-te-16167.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-adversarial-training-methods-for-semi-supervised-te-16167.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>LoRA training scripts of the world, unite!</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/lora-training-scripts-of-the-world-unite-13943.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/lora-training-scripts-of-the-world-unite-13943.html</guid>
+            <title>Team upgrade</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/team-upgrade-16166.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/team-upgrade-16166.html</guid>
+            <description>We’d like to welcome the latest set of team members to OpenAI (and we’re still hiring!). → Read original article...</description>
+        </item>
+        <item>
+            <title>Generative models</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/generative-models-16165.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/generative-models-16165.html</guid>
+            <description>In a recent development, this post describes four projects that share a common theme of enhancing or using generative models, a branch of unsupervised learning techniques in machine learning. In addition to describing our work, this post will tell you a bit more about generative ...</description>
+        </item>
+        <item>
+            <title>OpenAI technical goals</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/openai-technical-goals-16164.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-technical-goals-16164.html</guid>
+            <description>OpenAI’s mission is to build safe AI, and ensure AI’s benefits are as widely and evenly distributed as possible. → Read original article...</description>
+        </item>
+        <item>
+            <title>Breaking: Concrete AI safety problems</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-concrete-ai-safety-problems-16163.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-concrete-ai-safety-problems-16163.html</guid>
+            <description>It has been revealed that we (along with researchers from Berkeley and Stanford) are co-authors on today’s paper led by Google Brain researchers, Concrete Problems in AI Safety. The paper explores many research problems around ensuring that modern machine learning systems operate...</description>
+        </item>
+        <item>
+            <title>Latest Update: Special projects</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-special-projects-16162.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-special-projects-16162.html</guid>
+            <description>Impactful scientific work requires working on the right problems—problems which are not just interesting, but whose solutions matter. → Read original article...</description>
+        </item>
+        <item>
+            <title>Latest Update: Team revision</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-team-revision-16161.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-team-revision-16161.html</guid>
+            <description>According to recent reports, we’ve hired more great people to help us achieve our goals. Welcome, everyone! → Read original article...</description>
+        </item>
+        <item>
+            <title>Latest Update: Machine Learning Unconference</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-machine-learning-unconference-16160.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-machine-learning-unconference-16160.html</guid>
+            <description>The latest information about the Unconference is now available at the Unconference wiki, which will be periodically updated with more information for attendees. → Read original article...</description>
+        </item>
+        <item>
+            <title>Breaking: Infrastructure for deep learning</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-infrastructure-for-deep-learning-16159.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-infrastructure-for-deep-learning-16159.html</guid>
+            <description>Deep learning is an empirical science, and the quality of a group’s infrastructure is a multiplier on progress. Fortunately, today’s open-source ecosystem makes it possible for anyone to build great deep learning infrastructure. → Read original article...</description>
+        </item>
+        <item>
+            <title>Transfer from simulation to real world through learning deep inverse dynamics model</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/transfer-from-simulation-to-real-world-through-learning-deep-inve-16158.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/transfer-from-simulation-to-real-world-through-learning-deep-inve-16158.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Welcome aMUSEd: Efficient Text-to-Image Generation</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/welcome-amused-efficient-text-to-image-generation-13942.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/welcome-amused-efficient-text-to-image-generation-13942.html</guid>
+            <title>Report from the self-organizing conference</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/report-from-the-self-organizing-conference-16157.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/report-from-the-self-organizing-conference-16157.html</guid>
+            <description>Last week we hosted over a hundred and fifty AI practitioners in our offices for our first self-organizing conference on machine learning. → Read original article...</description>
+        </item>
+        <item>
+            <title>Semi-supervised knowledge transfer for deep learning from private training data</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/semi-supervised-knowledge-transfer-for-deep-learning-from-private-16156.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/semi-supervised-knowledge-transfer-for-deep-learning-from-private-16156.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Make LLM Fine-tuning 2x faster with Unsloth and 🤗 TRL</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/make-llm-fine-tuning-2x-faster-with-unsloth-and-trl-13941.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/make-llm-fine-tuning-2x-faster-with-unsloth-and-trl-13941.html</guid>
+            <title>Extensions and limitations of the neural GPU</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/extensions-and-limitations-of-the-neural-gpu-16155.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/extensions-and-limitations-of-the-neural-gpu-16155.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>A guide to setting up your own Hugging Face leaderboard: an end-to-end example with Vectara's hallucination leaderboard</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/a-guide-to-setting-up-your-own-hugging-face-leaderboard-an-end-to-13940.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/a-guide-to-setting-up-your-own-hugging-face-leaderboard-an-end-to-13940.html</guid>
+            <title>Variational lossy autoencoder</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/variational-lossy-autoencoder-16154.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/variational-lossy-autoencoder-16154.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Tech Report: Run ComfyUI workflows for free with Gradio on Hugging Face Spaces</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-run-comfyui-workflows-for-free-with-gradio-on-hugging-13939.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-run-comfyui-workflows-for-free-with-gradio-on-hugging-13939.html</guid>
+            <title>Latest Update: RL²: Fast reinforcement learning via slow reinforcement learning</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-rl-fast-reinforcement-learning-via-slow-reinforceme-16153.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-rl-fast-reinforcement-learning-via-slow-reinforceme-16153.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Accelerating SD Turbo and SDXL Turbo Inference with ONNX Runtime and Olive</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/accelerating-sd-turbo-and-sdxl-turbo-inference-with-onnx-runtime--13938.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerating-sd-turbo-and-sdxl-turbo-inference-with-onnx-runtime--13938.html</guid>
+            <title>A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/a-connection-between-generative-adversarial-networks-inverse-rein-16152.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/a-connection-between-generative-adversarial-networks-inverse-rein-16152.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Preference Tuning LLMs with Direct Preference Optimization Methods</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/preference-tuning-llms-with-direct-preference-optimization-method-13937.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/preference-tuning-llms-with-direct-preference-optimization-method-13937.html</guid>
+            <title>On the quantitative analysis of decoder-based generative models</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/on-the-quantitative-analysis-of-decoder-based-generative-models-16151.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/on-the-quantitative-analysis-of-decoder-based-generative-models-16151.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>PatchTSMixer in HuggingFace</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/patchtsmixer-in-huggingface-13936.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/patchtsmixer-in-huggingface-13936.html</guid>
+            <title>Tech Report: #Exploration: A study of count-based exploration for deep reinforcement learning</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-exploration-a-study-of-count-based-exploration-for-de-16150.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-exploration-a-study-of-count-based-exploration-for-de-16150.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Industry News: Fine-Tune W2V2-Bert for low-resource ASR with 🤗 Transformers</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-fine-tune-w2v2-bert-for-low-resource-asr-with-trans-13935.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-fine-tune-w2v2-bert-for-low-resource-asr-with-trans-13935.html</guid>
+            <title>OpenAI and Microsoft</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/openai-and-microsoft-16149.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/openai-and-microsoft-16149.html</guid>
+            <description>We’re working with Microsoft to start running most of our large-scale experiments on Azure. → Read original article...</description>
+        </item>
+        <item>
+            <title>Universe</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/universe-16148.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/universe-16148.html</guid>
+            <description>We’re releasing Universe, a software platform for measuring and training an AI’s general intelligence across the world’s supply of games, websites and other applications. → Read original article...</description>
+        </item>
+        <item>
+            <title>Faulty reward functions in the wild</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/faulty-reward-functions-in-the-wild-16147.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/faulty-reward-functions-in-the-wild-16147.html</guid>
+            <description>It has been revealed that reinforcement learning algorithms can break in surprising, counterintuitive ways. In this post we’ll explore one failure mode, which is where you misspecify your reward function. → Read original article...</description>
+        </item>
+        <item>
+            <title>PixelCNN++: Improving the PixelCNN with discretized logistic mixture likelihood and other modifications</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/pixelcnn-improving-the-pixelcnn-with-discretized-logistic-mixture-16146.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/pixelcnn-improving-the-pixelcnn-with-discretized-logistic-mixture-16146.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Open-source LLMs as LangChain Agents</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/open-source-llms-as-langchain-agents-13934.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/open-source-llms-as-langchain-agents-13934.html</guid>
+            <title>Team upgrade</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/team-upgrade-16145.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/team-upgrade-16145.html</guid>
+            <description>It has been revealed that the OpenAI team is now 45 people. Together, we’re pushing the frontier of AI capabilities—whether by validating novel ideas, creating upcoming software systems, or deploying machine learning on robots. → Read original article...</description>
+        </item>
+        <item>
+            <title>Adversarial attacks on neural network policies</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/adversarial-attacks-on-neural-network-policies-16144.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/adversarial-attacks-on-neural-network-policies-16144.html</guid>
             <description>Content not available. → Read original article...</description>
         </item>
         <item>
-            <title>Hugging Face and Google partner for open AI collaboration</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-and-google-partner-for-open-ai-collaboration-13933.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-and-google-partner-for-open-ai-collaboration-13933.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>An Introduction to AI Secure LLM Safety Leaderboard</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/an-introduction-to-ai-secure-llm-safety-leaderboard-13932.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/an-introduction-to-ai-secure-llm-safety-leaderboard-13932.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>The Hallucinations Leaderboard, an Open Effort to Measure Hallucinations in Large Language Models</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/the-hallucinations-leaderboard-an-open-effort-to-measure-hallucin-13931.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/the-hallucinations-leaderboard-an-open-effort-to-measure-hallucin-13931.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Accelerate StarCoder with 🤗 Optimum Intel on Xeon: Q8/Q4 and Speculative Decoding</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/accelerate-starcoder-with-optimum-intel-on-xeon-q8q4-and-speculat-13930.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/accelerate-starcoder-with-optimum-intel-on-xeon-q8q4-and-speculat-13930.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Introducing the Enterprise Scenarios Leaderboard: a Leaderboard for Real World Use Cases</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-enterprise-scenarios-leaderboard-a-leaderboard-fo-13929.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-enterprise-scenarios-leaderboard-a-leaderboard-fo-13929.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Patch Time Series Transformer in Hugging Face</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/patch-time-series-transformer-in-hugging-face-13928.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/patch-time-series-transformer-in-hugging-face-13928.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Hugging Face Text Generation Inference available for AWS Inferentia2</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-text-generation-inference-available-for-aws-inferent-13927.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/hugging-face-text-generation-inference-available-for-aws-inferent-13927.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Constitutional AI with Open LLMs</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/constitutional-ai-with-open-llms-13926.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/constitutional-ai-with-open-llms-13926.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>NPHardEval Leaderboard: Unveiling the Reasoning Abilities of Large Language Models through Complexity Classes and Dynamic Updates</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/nphardeval-leaderboard-unveiling-the-reasoning-abilities-of-large-13925.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/nphardeval-leaderboard-unveiling-the-reasoning-abilities-of-large-13925.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>SegMoE: Segmind Mixture of Diffusion Experts</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/segmoe-segmind-mixture-of-diffusion-experts-13924.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/segmoe-segmind-mixture-of-diffusion-experts-13924.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>From OpenAI to Open LLMs with Messages API on Hugging Face</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/from-openai-to-open-llms-with-messages-api-on-hugging-face-13923.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/from-openai-to-open-llms-with-messages-api-on-hugging-face-13923.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>AMD Pervasive AI Developer Contest!</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/amd-pervasive-ai-developer-contest-13922.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/amd-pervasive-ai-developer-contest-13922.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Tech Report: Synthetic data: save money, time and carbon with open source</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-synthetic-data-save-money-time-and-carbon-with-open-s-13921.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-synthetic-data-save-money-time-and-carbon-with-open-s-13921.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>🤗 PEFT welcomes newly introduced merging methods</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/peft-welcomes-newly-introduced-merging-methods-13920.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/peft-welcomes-newly-introduced-merging-methods-13920.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Introducing the Open Ko-LLM Leaderboard: Leading the Korean LLM Evaluation Ecosystem</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-open-ko-llm-leaderboard-leading-the-korean-llm-ev-13919.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-open-ko-llm-leaderboard-leading-the-korean-llm-ev-13919.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Welcome Gemma - Google’s upcoming open LLM</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/welcome-gemma-googles-upcoming-open-llm-13918.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/welcome-gemma-googles-upcoming-open-llm-13918.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>🪆 Introduction to Matryoshka Embedding Models</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/introduction-to-matryoshka-embedding-models-13917.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/introduction-to-matryoshka-embedding-models-13917.html</guid>
-            <description>Content not available. → Read original article...</description>
-        </item>
-        <item>
-            <title>Introducing the Red-Teaming Resistance Leaderboard</title>
-            <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-red-teaming-resistance-leaderboard-13916.html</link>
-            <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-the-red-teaming-resistance-leaderboard-13916.html</guid>
-            <description>Content not available. → Read original article...</description>
+            <title>Attacking machine learning with adversarial examples</title>
+            <link>https://railfansday.github.io/artikelsemua70/artikel/attacking-machine-learning-with-adversarial-examples-16143.html</link>
+            <guid>https://railfansday.github.io/artikelsemua70/artikel/attacking-machine-learning-with-adversarial-examples-16143.html</guid>
+            <description>Industry observers note that adversarial examples are inputs to machine learning models that an attacker has intentionally designed to cause the model to make a mistake; they’re like optical illusions for machines. In this post we’ll show how adversarial examples work across diff...</description>
         </item>
 </channel>
 </rss>
