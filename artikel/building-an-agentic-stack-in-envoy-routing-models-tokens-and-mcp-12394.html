@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building an agentic stack in Envoy: routing models, tokens, and MCP</title>
+    <meta name="description" content="The front door to AI in the workplace. At Google Cloud, we believe the next generation of AI and agentic systems must be built on open, battle-tested found">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/building-an-agentic-stack-in-envoy-routing-models-tokens-and-mcp-12394.html">
+    <meta property="og:title" content="Building an agentic stack in Envoy: routing models, tokens, and MCP">
+    <meta property="og:description" content="The front door to AI in the workplace. At Google Cloud, we believe the next generation of AI and agentic systems must be built on open, battle-tested found">
+    <meta property="og:image" content="https://storage.googleapis.com/gweb-cloudblog-publish/images/Networking.max-2500x2500.jpg">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/building-an-agentic-stack-in-envoy-routing-models-tokens-and-mcp-12394.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Building an agentic stack in Envoy: routing models, tokens, and MCP", "image": ["https://storage.googleapis.com/gweb-cloudblog-publish/images/Networking.max-2500x2500.jpg"], "datePublished": "2026-11-18T17:00:00", "dateModified": "2026-11-20T06:55:22.982796", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/building-an-agentic-stack-in-envoy-routing-models-tokens-and-mcp-12394.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Building an agentic stack in Envoy: routing models, tokens, and MCP</h1>
+        <div class="meta-line">🌐 Source: <strong>Google</strong> &bull; 📅 18 Nov 2026 &bull; ⏱️ 6 min read (1248 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>At Google Cloud, we believe the next generation of AI and agentic systems must be built on open, battle-tested foundations.</li><li style='margin-bottom:6px;'>Sources indicate that earlier this year, we presented the technical case for Envoy networking in the agentic AI era, examining how autonomous AI agents fundamentally challenge traditional Layer 7 networking assumptions.</li><li style='margin-bottom:6px;'>According to recent reports, at Google Cloud, we have been working hard to develop Envoy for the agentic era.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-12394"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-12394"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-12394"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Building an agentic stack in Envoy: routing models, tokens, and MCP" loading="lazy" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/Networking.max-2500x2500.jpg" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-12394">The front door to AI in the workplace.</p>
+<p>At Google Cloud, we believe the next generation of AI and agentic systems must be built on open, battle-tested foundations. Envoy, an open-source edge and service proxy designed for cloud-native applications, has already transformed microservices and modern cloud networking, powering everything from Google Cloud’s Application Load Balancers to the Agent Substrate dataplane on Google Kubernetes Engine. Now, Envoy is uniquely positioned to become the open standard for AI traffic, MCP tooling, and agent-to-agent communication.</p>
+<p>Sources indicate that earlier this year, we presented the technical case for Envoy networking in the agentic AI era, examining how autonomous AI agents fundamentally challenge traditional Layer 7 networking assumptions. Unlike microservices, autonomous agent workloads choose who they communicate with. In addition, their routing attributes live deep within request bodies, with their traffic governed by token budgets as well as request rates, and their multi-turn reasoning loops requiring stateful session affinity and strict tool execution boundaries.</p>
+<p>According to recent reports, at Google Cloud, we have been working hard to develop Envoy for the agentic era. Read on for a closer look at how Envoy has evolved to better support autonomous agents, giving developers the performance and portability of an open-source ecosystem, backed by enterprise security and scalability.</p>
+<p>Over the past decade, Envoy became the industry standard for cloud-native traffic management by operating cleanly at Layer 4 (TCP/UDP connection management) and Layer 7 (URI, method, and header-based routing).</p>
+<p>Autonomous agents introduce two higher-order protocol layers:.</p>
+<p>In a recent development, layer 8 (agentic interaction protocols): such as LLM APIs, Anthropic’s Model Context Protocol (MCP) and Google’s Agent2Agent (A2A), running over JSON-RPC 2.0 or gRPC. Critical policy attributes—such as tools/call, tool_name: "execute_sql", or model: "gemini-1.5-pro"—are serialized inside the request payload.</p>
+<p>Layer 9 (agent framework interfaces): Coordination frameworks such as UCP, AP2, and Google Cloud’s Agent Development Kit, where multi-turn workflows produce dynamic token consumption and non-linear execution graphs.</p>
+<p>Fronting these workloads with traditional L7 proxies creates four major architectural challenges:.</p>
+<p>Payload blindness: Nearly all LLM traffic shares the same paths (such as /v1/chat/completions), so a header-based proxy cannot distinguish between a low-cost query and an expensive 500,000-token prompt, or one model from another.</p>
+<p>Request rate limiting fallacy: One request  per minute with a massive context window can use  more accelerator compute and memory bandwidth than dozens of  short queries, and agent loops can burn through budgets unnoticed.</p>
+<p>According to recent reports, stateless load balancing: Each turn of an agent's conversation should go back to the server that already remembers it. Traditional load balancers send it to whichever server is next, so the model has to start over for every turn, this wastes time and GPUs.</p>
+<p>Ungoverned tool execution: Agents query databases, execute code in sandboxes, and call third-party APIs. Without inline inspection of MCP tool  calls, organizations risk prompt injection, data exfiltration, and runaway billing loops.</p>
+<p>To address these challenges, Envoy provides capabilities that turn the network into an active governance layer:.</p>
+<p>Payload blindness: Read request bodies, not just headers.Line-rate payload normalization across OpenAI, Anthropic, and Gemini schemas with SSE stream handling.</p>
+<p>Request-rate fallacy: Count tokens, not just requests.Pre-inference token estimation, tokens per minute (TPM)/tokens per day (TPD) rate limiting.</p>
+<p>Stateless load balancing: Keep agent sessions on the right serversEndpoint Picker (EPP) model dispatch, KV-cache prefix affinity, MCP Stateless support.</p>
+<p>Ungoverned tool execution: Policy tool calls.Inline policy, decision point (ext_proc) callouts for guardrails: Model Armor, ShieldGemma, and data loss prevention.</p>
+<p>Client applications often get locked into specific model APIs. For example, client code built for OpenAI's schema cannot communicate with Anthropic's endpoints or Google’s Gemini without client-side translation layers.</p>
+<p>To help, Envoy ecosystem includes native body parsers that normalize requests across diverse model families, providing:.</p>
+<p>Client abstraction: Upstream applications send a standardized schema. Envoy inspects the JSON payload at line-rate, extracts the target model, and dynamically transcodes the request into the downstream provider's native format.</p>
+<p id="sec-mid-12394">Industry observers note that no application code changes: Switching from an external commercial model to a self-hosted open-source model (such as Gemma or Llama on vLLM) requires only an Envoy configuration patch. Application code remains unchanged.</p>
+<p>Streaming token extraction: Envoy parses server-sent events (SSE) response streams in real time, capturing token counts from usage chunks while maintaining ultra-low time-to-first-token latency.</p>
+<p>In AI networking, tokens are the fundamental unit of capacity. Envoy replaces coarse request counters with token-aware traffic management features such as:.</p>
+<p>Token rate limiting: Enforces tokens per minute (TPM) and tokens per day (TPD) limits per tenant, project, or model.</p>
+<p>Pre-inference throttling: Envoy estimates input tokens from request payload bytes and extracts actual token usage from LLM responses to record in a quota database, rejecting subsequent over-quota requests with an HTTP 429 before they reach the inference cluster.</p>
+<p>Industry observers note that runaway loop protection: Autonomous agents can enter recursive reasoning loops. By tracking cumulative token consumption and message counts per session or agent ID, Envoy throttles multi-turn sessions once an agent exceeds its assigned budget.</p>
+<p>Envoy manages traffic for both downstream model backends and outbound tool calls, with:.</p>
+<p>KV-cache prefix affinity: Using the Kubernetes Gateway API Inference Extensions and Endpoint Picker (EPP), Envoy routes prompts sharing identical system instructions to the GPU worker at the moment holding that cache in memory, reducing latency.</p>
+<p>Model retry and fallback: If a primary model returns a 429 status code or fails, Envoy automatically retries or redirects the request to a secondary model pool with zero client interruption.</p>
+<p>MCP tool routing: For MCP agents, Envoy routes requests via JSON-RPC 2.0 bodies and HTTP headers. Per the 2026-07-28 MCP specification, Envoy uses Mcp-Method and Mcp-Name headers for zero-body-parsing routing to backend servers. Backends reject header-body mismatches with an HTTP 400 / -32020 (HeaderMismatch) error to prevent tampering.</p>
+<p>Industry observers note that inline safety filtering cannot come at the expense of network throughput. To prevent this, Envoy provides security callouts: Using standardized external processing (ext_proc), Envoy connects to dedicated policy decision engines — such as Google Cloud’s Model Armor, ShieldGemma, or local classifiers — to detect prompt injections and sensitive data leaks with minimal latency overhead.</p>
+<p>In enterprise production environments, agents frequently spend time idle between user queries or long-running tool executions. Running hundreds of thousands of idle agents in dedicated containers or virtual machines can create prohibitive infrastructure costs.</p>
+<p>Envoy pairs directly with high-density execution runtimes like Agent Substrate to provide:.</p>
+<p>Sources indicate that scale-to-zero traffic steering: Agent Substrate uses lightweight isolation runtimes (such as Cloud Hypervisor, microVMs and gVisor application sandboxes) that can suspend and resume in milliseconds. When traffic arrives for a suspended agent, Envoy buffers the initial packet while signaling the runtime to resume the instance, completing the end-to-end resume in milliseconds.</p>
+<p>Egress perimeter defense: Envoy functions as both an ingress and egress gateway for agent environments, routing the inbound traffic and restricting outbound network calls to verified domains and preventing untrusted autonomous code from reaching unauthorized endpoints.</p>
+<p>Recent findings suggest that envoy has evolved into an intelligent, extensible networking layer designed specifically for the unique demands of multi-agent architectures. To begin building with the agentic stack in Envoy:.</p>
+<p>Explore the code: Review the Envoy proxy and Agent Router implementations on Github and examine the open-source sample configurations.</p>
+<p>Join the community: Participate in CNCF, Gateway API, and Kubernetes AI Gateway Working Group to collaborate on standardized inference APIs, MCP routing specifications, and token management conventions.</p>
+<p>By Shrikant Kelkar • 4-minute read.</p>
+<p>By Whitney Jenkins • 3-minute read.</p>
+<p>By Himanshu Mehra • 3-minute read.</p>
+<p id="sec-end-12394">By Himanshu Mehra • 3-minute read.</p>
+<p style="margin-top: 25px;">
+<a href="https://cloud.google.com/blog/products/networking/the-envoy-agentic-stack-routing-models-tokens-and-mcp/" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="building-the-hugging-face-mcp-server-13555.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #13555. Building the Hugging Face MCP Server
+        </a>
+        
+        <a href="beyond-routing-weights-faithful-response-level-interpretation-of--12793.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12793. Beyond Routing Weights: Faithful Response-Level Interpretation of Mixture-of-Experts Reward Models via Contribution Contrast
+        </a>
+        
+        <a href="breaking-is-it-agentic-enough-benchmarking-open-models-on-your-ow-12760.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12760. Breaking: Is it agentic enough? Benchmarking open models on your own tooling
+        </a>
+        
+        <a href="legora-is-building-the-agentic-operating-system-for-legal-work-12510.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12510. Legora is building the agentic operating system for legal work
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

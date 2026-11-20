@@ -4,104 +4,106 @@
     <title>Portal Berita - EV & Auto</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for EV & Auto.</description>
-    <lastBuildDate>Thu, 19 Nov 2026 20:27:31 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Nov 2026 06:57:45 -0000</lastBuildDate>
     
             <item>
-                <title>Building an autonomous financial analyst with o1 and o3-mini</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-11034.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-11034.html</guid>
-                <description>Endex builds the future of financial analysis, powered by OpenAI’s reasoning models. → Read original article...</description>
+                <title>Autonomous discovery of upcoming structure-plausibility laws for explainable and rapid crystal diagnosis and screening</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/autonomous-discovery-of-upcoming-structure-plausibility-laws-for--13005.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/autonomous-discovery-of-upcoming-structure-plausibility-laws-for--13005.html</guid>
+                <description>Recent findings suggest that arXiv:2609.01209v2 Announce Type: replace-cross 
+Abstract: Generative models and autonomous agents now propose candidate inorganic crystals by the million, yet most screens test little beyond a minimum-distance cutoff and give no chemical reason for f...</description>
             </item>
             <item>
-                <title>Breaking: Learning Agent-Centric Vision-Language-Action World Models for Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-learning-agent-centric-vision-language-action-world-mode-10723.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-learning-agent-centric-vision-language-action-world-mode-10723.html</guid>
-                <description>arXiv:2611.22880v1 Announce Type: cross 
-Abstract: Recent progress in integrating vision-language-action (VLA) models with world modeling has significantly advanced end-to-end autonomous driving by allowing systems to reason about imagined futures instead of merely reacting to cu...</description>
+                <title>FedS2R: One-Shot Federated Domain Generalization for Synthetic-to-Real Semantic Segmentation in Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/feds2r-one-shot-federated-domain-generalization-for-synthetic-to--12887.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/feds2r-one-shot-federated-domain-generalization-for-synthetic-to--12887.html</guid>
+                <description>Industry observers note that arXiv:2507.19881v4 Announce Type: replace-cross 
+Abstract: Federated domain generalization has shown promising progress in image classification by enabling collaborative training across multiple clients without sharing raw data. However, its potential...</description>
             </item>
             <item>
-                <title>Making the World React Realistically: A Closed-Loop Interactive World Model for Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/making-the-world-react-realistically-a-closed-loop-interactive-wo-10680.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/making-the-world-react-realistically-a-closed-loop-interactive-wo-10680.html</guid>
-                <description>arXiv:2611.22691v1 Announce Type: cross 
-Abstract: World models (WMs) generate driving scenarios beyond recorded logs, enabling the training and evaluation of autonomous driving systems in unseen interactions. However, existing WMs struggle to ensure both behavioral realism and v...</description>
+                <title>CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/cadfather-autonomous-cad-reconstruction-through-coordinated-tool--12818.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/cadfather-autonomous-cad-reconstruction-through-coordinated-tool--12818.html</guid>
+                <description>arXiv:2610.09127v2 Announce Type: replace 
+Abstract: Reconstructing an editable CAD model from a 3D shape remains a challenging engineering task. Existing methods can propose CAD operations, but no single source of proposals works equally well across different part geometries and...</description>
             </item>
             <item>
-                <title>Benchmarking Deep Learning Models for Wheelchair Configuration Classification in Accessible Automated Vehicle Applications</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/benchmarking-deep-learning-models-for-wheelchair-configuration-cl-10444.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/benchmarking-deep-learning-models-for-wheelchair-configuration-cl-10444.html</guid>
-                <description>Recent findings suggest that arXiv:2611.21945v1 Announce Type: cross 
-Abstract: Making automated vehicles accessible requires consideration of vulnerable road people, including wheelchair users. To offer a more tailored experience that supports independence for this group, vehicl...</description>
-            </item>
-            <item>
-                <title>Industry News: AR-WAM: efficient streaming world-action modeling for autonomous driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-ar-wam-efficient-streaming-world-action-modeling-fo-10401.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-ar-wam-efficient-streaming-world-action-modeling-fo-10401.html</guid>
-                <description>arXiv:2611.21851v1 Announce Type: cross 
-Abstract: Autonomous driving requires anticipating how traffic will evolve while responding rapidly to new observations. Video foundation models offer the first ability, but repeated history encoding and iterative video generation make the...</description>
-            </item>
-            <item>
-                <title>Inventa: Decentralized Self-Improving Agents for Autonomous Scientific Discovery</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/inventa-decentralized-self-improving-agents-for-autonomous-scient-10398.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/inventa-decentralized-self-improving-agents-for-autonomous-scient-10398.html</guid>
-                <description>Recent findings suggest that arXiv:2611.21847v1 Announce Type: cross 
-Abstract: Large language model (LLM) agents can generate research ideas and improve scientific discovery through iterative experimentation. However, increasing the number of agents or iterations does not automa...</description>
+                <title>Does the Action Matter? Probing Action-Conditioned Semantic Forecasting as a World Model for Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/does-the-action-matter-probing-action-conditioned-semantic-foreca-12735.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/does-the-action-matter-probing-action-conditioned-semantic-foreca-12735.html</guid>
+                <description>According to recent reports, arXiv:2611.24840v1 Announce Type: cross 
+Abstract: World models are increasingly used in autonomous driving to predict how a scene evolves under the ego vehicle's actions, supporting counterfactual reasoning and model-based planning. However, existing...</description>
             </item>
             <item>
                 <title>DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-10179.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-10179.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-12457.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-12457.html</guid>
                 <description>DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. → Read original article...</description>
             </item>
             <item>
-                <title>Multistage Contextual Optimization for Vehicle Repositioning</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/multistage-contextual-optimization-for-vehicle-repositioning-10028.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/multistage-contextual-optimization-for-vehicle-repositioning-10028.html</guid>
-                <description>arXiv:2611.22330v1 Announce Type: new 
-Abstract: Ride-hailing platforms reposition idle vehicles to improve spatial supply-demand balances. This problem is prediction-driven and multistage: at each stage, the platform forecasts future demand, executes current decisions, and uses ...</description>
+                <title>HydroMind: A Checkable Agent for Autonomous Hydrological Research</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/hydromind-a-checkable-agent-for-autonomous-hydrological-research-12392.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/hydromind-a-checkable-agent-for-autonomous-hydrological-research-12392.html</guid>
+                <description>arXiv:2611.23323v1 Announce Type: cross 
+Abstract: General-purpose coding agents have written code for hydrological and Earth-system models. In these studies the researchers decided in advance how the model would be evaluated, for example the test period, the scoring function, an...</description>
             </item>
             <item>
-                <title>How Much of SAR Vehicle Recognition Is the Vehicle? Background Shortcuts, Angle Gaps and Partial Libraries on MSTAR and ATRNet-STAR</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/how-much-of-sar-vehicle-recognition-is-the-vehicle-background-sho-9880.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-much-of-sar-vehicle-recognition-is-the-vehicle-background-sho-9880.html</guid>
-                <description>According to recent reports, arXiv:2611.21827v1 Announce Type: new 
-Abstract: Deep networks score near 99% on the MSTAR vehicle benchmark, and the newer ATRNet-STAR benchmark was built to be harder. We ask how much of these scores comes from the vehicle itself. With a modern netw...</description>
+                <title>When Figures Disagree with Text: Evaluating Autonomous Visual Evidence Verification in Scientific Papers</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-12238.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-12238.html</guid>
+                <description>In a recent development, arXiv:2611.24353v1 Announce Type: upcoming 
+Abstract: Scientific figures carry evidence for the claims that cite them, so reviewing a paper means checking that a figure agrees with the text, and not only describing what the figure highlights. Benchmarks o...</description>
             </item>
             <item>
-                <title>Tech Report: What a billion-dollar deal states about the US battery market</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-what-a-billion-dollar-deal-states-about-the-us-batter-9819.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-what-a-billion-dollar-deal-states-about-the-us-batter-9819.html</guid>
+                <title>FedE2E: One-Shot Federated Learning for End-to-End Autonomous Driving with Closed-Loop Evaluation</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/fede2e-one-shot-federated-learning-for-end-to-end-autonomous-driv-12225.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/fede2e-one-shot-federated-learning-for-end-to-end-autonomous-driv-12225.html</guid>
+                <description>Sources indicate that arXiv:2611.24254v2 Announce Type: new 
+Abstract: Federated learning enables collaborative model training without sharing datasets. However, existing federated learning methods for autonomous driving typically require multi-round communication and lack closed...</description>
+            </item>
+            <item>
+                <title>Attention Is Not Relevance: Challenging the Causality of Attention in Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/attention-is-not-relevance-challenging-the-causality-of-attention-12208.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/attention-is-not-relevance-challenging-the-causality-of-attention-12208.html</guid>
+                <description>According to recent reports, arXiv:2611.24051v1 Announce Type: new 
+Abstract: Attention has become one of the most widely adopted solutions for estimating the relevance of surrounding objects and interpreting an autonomous vehicle's driving decisions. However, its ability to capt...</description>
+            </item>
+            <item>
+                <title>MLE Agents: Autonomous ML Engineering in Large-scale Recommendation Systems</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/mle-agents-autonomous-ml-engineering-in-large-scale-recommendatio-12191.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/mle-agents-autonomous-ml-engineering-in-large-scale-recommendatio-12191.html</guid>
+                <description>In a recent development, arXiv:2611.23910v1 Announce Type: new 
+Abstract: The typical workflow for improving large-scale ranking and recommendation models is slow and tedious: an engineer forms a hypothesis, implements it as a code change, trains a model, and evaluates it both of...</description>
+            </item>
+            <item>
+                <title>Latest Update: What a billion-dollar deal indicates about the US battery market</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-what-a-billion-dollar-deal-indicates-about-the-us-b-12077.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-what-a-billion-dollar-deal-indicates-about-the-us-b-12077.html</guid>
                 <description>After a tough few years littered with some high-profile failures, there’s some positive news for next-generation batteries in the US. According to recent reports, sila just signed an agreement with Panasonic Energy, a global battery manufacturer, to supply silicon-carbon anode ma...</description>
             </item>
             <item>
-                <title>Industry News: Waymo has stopped its robotaxis from driving on the freeway—here’s why</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-waymo-has-stopped-its-robotaxis-from-driving-on-the-9780.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-waymo-has-stopped-its-robotaxis-from-driving-on-the-9780.html</guid>
-                <description>It has been revealed that waymo is at the moment restricting its fleet of robotaxis to surface streets after getting into hot water with California over its cars’ driving behavior on highways. Specifically, the software tends to drive into construction zones at speed. As first re...</description>
+                <title>Breaking: Partnering with Waymo to Reshape how the World Moves</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-partnering-with-waymo-to-reshape-how-the-world-moves-11940.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-partnering-with-waymo-to-reshape-how-the-world-moves-11940.html</guid>
+                <description>Recent findings suggest that 1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Recent findings suggest that ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieve...</description>
             </item>
             <item>
-                <title>Partnering with Waymo to Reshape how the World Moves</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-9666.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-9666.html</guid>
-                <description>In a recent development, 1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved across 127 million fully autono...</description>
+                <title>Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-11893.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-11893.html</guid>
+                <description>Change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Change has always been the fundamental operational signal in infrastructure. Empirik is turning that...</description>
             </item>
             <item>
-                <title>Latest Update: Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-partnering-with-empirik-building-the-autonomous-inf-9625.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-partnering-with-empirik-building-the-autonomous-inf-9625.html</guid>
-                <description>Change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Recent findings suggest that change has always been the fundamental operational signal in infrastruc...</description>
-            </item>
-            <item>
-                <title>Your Wear OS smartwatch just got a new way to save battery life</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-new-way-to-save-battery-life-9511.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-new-way-to-save-battery-life-9511.html</guid>
-                <description>Some of the most popular Android smartwatches just got a battery-saving update. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. In a recent development, the v26.45 update concerns location tracki...</description>
+                <title>Tech Report: Your Wear OS smartwatch just got a new way to save battery life</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-your-wear-os-smartwatch-just-got-a-new-way-to-save-ba-11794.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-your-wear-os-smartwatch-just-got-a-new-way-to-save-ba-11794.html</guid>
+                <description>According to recent reports, some of the most popular Android smartwatches just got a battery-saving revision. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. It has been revealed that the v26.45...</description>
             </item>
             <item>
                 <title>Heat from your charger could be killing your battery – I found one that stays cool</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/heat-from-your-charger-could-be-killing-your-battery-i-found-one--9443.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/heat-from-your-charger-could-be-killing-your-battery-i-found-one--9443.html</guid>
-                <description>Your Apple devices spend a lot of time charging, and if you’re like most people, you charge overnight on your nightstand. That means it’s cooking for a good third of a day. Every day. Also: The top-selling cords, cables, and chargers readers bought this year. Recent findings sugg...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/heat-from-your-charger-could-be-killing-your-battery-i-found-one--11769.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/heat-from-your-charger-could-be-killing-your-battery-i-found-one--11769.html</guid>
+                <description>Recent findings suggest that your Apple devices spend a lot of time charging, and if you’re like most people, you charge overnight on your nightstand. That means it’s cooking for a good third of a day. Every day. Also: The top-selling cords, cables, and chargers readers bought th...</description>
             </item>
 </channel>
 </rss>

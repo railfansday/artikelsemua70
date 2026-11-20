@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon S3 Replication adds exclusions and Multi-Region key resolution</title>
+    <meta name="description" content="Industry observers note that you can now replicate data in Amazon S3 buckets with fewer replication rules using two new S3 Replication capabilities, exclus">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/amazon-s3-replication-adds-exclusions-and-multi-region-key-resolu-12282.html">
+    <meta property="og:title" content="Amazon S3 Replication adds exclusions and Multi-Region key resolution">
+    <meta property="og:description" content="Industry observers note that you can now replicate data in Amazon S3 buckets with fewer replication rules using two new S3 Replication capabilities, exclus">
+    <meta property="og:image" content="https://via.placeholder.com/350x180/2563eb/ffffff?text=Global+News+Desk">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/amazon-s3-replication-adds-exclusions-and-multi-region-key-resolu-12282.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Amazon S3 Replication adds exclusions and Multi-Region key resolution", "image": ["https://via.placeholder.com/350x180/2563eb/ffffff?text=Global+News+Desk"], "datePublished": "2026-11-18T07:00:00", "dateModified": "2026-11-20T06:55:15.485633", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/amazon-s3-replication-adds-exclusions-and-multi-region-key-resolu-12282.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Amazon S3 Replication adds exclusions and Multi-Region key resolution</h1>
+        <div class="meta-line">🌐 Source: <strong>Amazon</strong> &bull; 📅 18 Nov 2026 &bull; ⏱️ 1 min read (217 words, 📖 Standard)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Industry observers note that you can now replicate data in Amazon S3 buckets with fewer replication rules using two new S3 Replication capabilities, exclusions and Multi-Region key resolution.</li><li style='margin-bottom:6px;'>Sources indicate that with exclusions, you can replicate an entire bucket while skipping specific prefixes or tagged objects, such as logs or experimental data.</li><li style='margin-bottom:6px;'>Sources indicate that exclusions and Multi-Region key resolution are optional and available at no additional charge in all AWS Regions.</li></ul>
+        </div>
+        
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://via.placeholder.com/350x180/2563eb/ffffff?text=Global+News+Desk" alt="Amazon S3 Replication adds exclusions and Multi-Region key resolution" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="line-height: 1.8;">
+                <p>Industry observers note that you can now replicate data in Amazon S3 buckets with fewer replication rules using two new S3 Replication capabilities, exclusions and Multi-Region key resolution. Buckets that many tenants or applications share often need many rules to skip certain data or to match encryption keys in each AWS Region. With these capabilities, customers who manage multi-tenant and shared buckets can replace many replication rules with a single rule.</p>
+<p>Sources indicate that with exclusions, you can replicate an entire bucket while skipping specific prefixes or tagged objects, such as logs or experimental data. With Multi-Region key resolution, S3 Replication encrypts each replica with the matching AWS Key Management Service (AWS KMS) Multi-Region key in the destination Region, so replicas meet the same encryption requirements as their source objects. For example, a bucket that stores data for hundreds of tenants, each with its own Multi-Region key, can replicate with a single rule, including tenants you add later.</p>
+<p>Sources indicate that exclusions and Multi-Region key resolution are optional and available at no additional charge in all AWS Regions. To get started, use the AWS SDKs, AWS CLI, S3 API, or S3 console. To learn more, visit the S3 Replication product page and Replicating objects within and across Regions in the S3 User Guide.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-s3-replication-exclusions-multi-region-key-resolution/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Read original article
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="industry-news-amazon-aurora-dsql-now-supports-multi-region-peerin-12047.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12047. Industry News: Amazon Aurora DSQL now supports multi-Region peering across continents
+        </a>
+        
+        <a href="amazon-ec2-c8ine-instances-are-now-available-in-aws-europe-irelan-12348.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12348. Amazon EC2 C8ine instances are now available in AWS Europe (Ireland) region
+        </a>
+        
+        <a href="amazon-ec2-c8gn-instances-are-now-available-in-aws-israel-tel-avi-12343.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12343. Amazon EC2 C8gn instances are now available in AWS Israel (Tel Aviv) region
+        </a>
+        
+        <a href="amazon-workspaces-applications-adds-support-for-smart-card-redire-12300.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #12300. Amazon WorkSpaces Applications adds support for smart card redirection
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
