@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory and new controls for ChatGPT</title>
+    <meta name="description" content="June 3, 2025 update: Memory improvements are starting to roll out for free users. In addition to the saved memories that were there before, ChatGPT now ref">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/memory-and-new-controls-for-chatgpt-19589.html">
+    <meta property="og:title" content="Memory and new controls for ChatGPT">
+    <meta property="og:description" content="June 3, 2025 update: Memory improvements are starting to roll out for free users. In addition to the saved memories that were there before, ChatGPT now ref">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/2lW7hRxuHUPhPhneJvRHda/e45e7e76c1046d72f1223d5769feb649/Memory_and_new__controls_for_ChatGPT.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/memory-and-new-controls-for-chatgpt-19589.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Memory and new controls for ChatGPT", "image": ["https://images.ctfassets.net/kftzwdyauwt9/2lW7hRxuHUPhPhneJvRHda/e45e7e76c1046d72f1223d5769feb649/Memory_and_new__controls_for_ChatGPT.png?w=1600&h=900&fit=fill"], "datePublished": "2024-02-13T00:00:00", "dateModified": "2026-11-21T19:03:35.986778", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/memory-and-new-controls-for-chatgpt-19589.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Memory and new controls for ChatGPT</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 13 Feb 2024 &bull; ⏱️ 6 min read (1266 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>June 3, 2025 update: Memory improvements are starting to roll out for free users.</li><li style='margin-bottom:6px;'>Sources indicate that free people have a lightweight version of memory improvements that provides short term continuity across conversations.</li><li style='margin-bottom:6px;'>You’re in control of ChatGPT’s memory and can turn off  referencing “saved memories” or “chat history” at any time in Settings.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19589"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19589"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19589"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Memory and new controls for ChatGPT" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/2lW7hRxuHUPhPhneJvRHda/e45e7e76c1046d72f1223d5769feb649/Memory_and_new__controls_for_ChatGPT.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19589">June 3, 2025 update: Memory improvements are starting to roll out for free users. In addition to the saved memories that were there before, ChatGPT now references your recent conversations to provide more personalized responses.</p>
+<p>Sources indicate that free people have a lightweight version of memory improvements that provides short term continuity across conversations. Memory for Plus and Pro users provides a longer term understanding of the user.</p>
+<p>You’re in control of ChatGPT’s memory and can turn off  referencing “saved memories” or “chat history” at any time in Settings.</p>
+<p>April 10, 2025 enhancement: Memory in ChatGPT is now more comprehensive. In addition to the saved memories that were there before, it now references all your past conversations to deliver responses that feel more relevant and tailored to you. This means memory now works in two ways: "saved memories" you’ve asked it to remember and "chat history", which are insights ChatGPT gathers from past chats to improve future ones.</p>
+<p>You’re in control of ChatGPT’s memory. You can turn off referencing "saved memories" or "chat history" at any time in Settings. If you’ve already opted out of memory, ChatGPT won’t reference past conversations by default. You can also ask ChatGPT to change what it knows about you directly in conversation, or use Temporary Chat for conversations that don’t use or update memory. To see what ChatGPT remembers about you, you can also ask it.</p>
+<p>The more you use ChatGPT, the more useful it becomes. New conversations build upon what it already knows about you to make smoother, more tailored interactions over time. This is available in ChatGPT to Plus and Pro customers, and Team, Enterprise, and Edu users in a few weeks.</p>
+<p>Sources indicate that september 5, 2024 update: Memory is now available to ChatGPT Free, Plus, Team, and Enterprise consumers. Based on feedback from the earlier test, ChatGPT now lets you know when memories are updated. We’ve also made it easier to access all memories when updates occur—hover over “Memory updated,” then click “Manage memories” to review everything ChatGPT has picked up from your conversations or forget any unwanted memories. You can still access memories at any time in settings.</p>
+<p>We’re testing memory with ChatGPT. Remembering things you discuss across all chats saves you from having to repeat information and makes future conversations more helpful.</p>
+<p>You’re in control of ChatGPT’s memory. You can explicitly tell it to remember something, ask it what it remembers, and tell it to forget conversationally or through settings. You can also turn it off entirely.</p>
+<p>We are rolling out to a small portion of ChatGPT free and Plus users this week to learn how useful it is. We will share intends for broader roll out soon.</p>
+<p>Recent findings suggest that as you chat with ChatGPT, you can ask it to remember something specific or let it pick up details itself. ChatGPT’s memory will get better the more you use it and you’ll start to notice the improvements over time. For example:.</p>
+<p>You’ve explained that you prefer meeting notes to have headlines, bullets and action items summarized at the bottom. ChatGPT remembers this and recaps meetings this way.</p>
+<p>Industry observers note that you’ve told ChatGPT you own a neighborhood coffee shop. When brainstorming messaging for a social post celebrating a latest location, ChatGPT knows where to start.</p>
+<p>Recent findings suggest that you mention that you have a toddler and that she loves jellyfish. When you ask ChatGPT to help create her birthday card, it suggests a jellyfish wearing a party hat.</p>
+<p>According to recent reports, as a kindergarten teacher with 25 students, you prefer 50-minute lessons with follow-up activities. ChatGPT remembers this when helping you create lesson prepares.</p>
+<p>It has been revealed that you can turn off memory at any time (Settings &gt; Personalization &gt; Memory). While memory is off, you won’t create or use memories.</p>
+<p id="sec-mid-19589">In a recent development, if you want ChatGPT to forget something, just tell it. You can also view and delete specific memories or clear all memories in settings (Settings &gt; Personalization &gt; Manage Memory). ChatGPT's memories evolve with your interactions and aren’t linked to specific conversations. Deleting a chat doesn’t erase its memories; you must delete the memory itself. You can find more details in our Help Center⁠(opens in a latest window).</p>
+<p>We may use content that you provide to ChatGPT, including memories, to improve our models for everyone. If you’d like, you can turn this off through your Data Controls. As always, we won’t train on content from ChatGPT Team and Enterprise customers. Learn more about how we use content to train our models and your choices in our Help Center⁠(opens in a new window).</p>
+<p>If you’d like to have a conversation without using memory, use temporary chat. Temporary chats won’t appear in history, won’t use memory, and won’t be used to train our models. Learn more about temporary chats in our Help Center⁠(opens in a latest window).</p>
+<p>Sources indicate that custom Instructions⁠ continue to allow you to provide ChatGPT with direct guidance on what you’d like it to know about you and how you’d like it to respond. For explicit information or instructions, you can add it to your Custom Instructions. For information shared via conversations, ChatGPT can remember relevant details for you.</p>
+<p>In a recent development, memory brings additional privacy and safety considerations, such as what type of information should be remembered and how it’s used. We’re taking steps to assess and mitigate biases, and steer ChatGPT away from proactively remembering sensitive information, like your health details - unless you explicitly ask it to.</p>
+<p>For Enterprise and Team users, memory can be useful when using ChatGPT for work. It can learn your style and preferences, and build upon past interactions. This saves you time and leads to more relevant and insightful responses. For example:.</p>
+<p>ChatGPT can remember your tone, voice, and format preferences, and automatically apply them to blog post drafts without needing repetition.</p>
+<p>When coding, you tell ChatGPT your programming language and frameworks. It can remember these preferences for subsequent tasks, streamlining the process.</p>
+<p>For monthly business reviews, you securely upload your data to ChatGPT and it creates your preferred charts with three takeaways each.</p>
+<p>According to recent reports, as with any ChatGPT feature, you’re in control of your organization’s data. Memories and any other information on your workspace are excluded from training our models. Customers have control on how and when their memories are used in chats. In addition, Enterprise account owners can turn memory off for their organization at any time.</p>
+<p>Enterprise and Team users will have access to memory as part of our wider rollout.</p>
+<p>It has been revealed that GPTs will have their own distinct memory. Builders will have the option to enable memory for their GPTs. Like your chats, memories are not shared with builders. To interact with a memory-enabled GPT, you will also need to have memory on. For example:.</p>
+<p>Recent findings suggest that the Books GPT⁠(opens in a new window) helps you find your next read. With memory enabled, it remembers your preferences, such as favorite genres or top books, and tailors recommendations accordingly, without needing repeated inputs.</p>
+<p>Sources indicate that each GPT has its own memory, so you might need to repeat details you’ve previously shared with ChatGPT. For example:.</p>
+<p>If you’re using the Artful Greeting Card GPT⁠(opens in a new window) to create a birthday card for your daughter, it won’t know her age or that she loves jellyfish. You’ll need to tell it the relevant details.</p>
+<p id="sec-end-19589">Memory for GPTs will be available when we roll it out more broadly.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/memory-and-new-controls-for-chatgpt" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="dreaming-better-memory-for-a-more-helpful-chatgpt-17567.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #17567. Dreaming: Better memory for a more helpful ChatGPT
+        </a>
+        
+        <a href="introducing-chatgpt-19669.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19669. Introducing ChatGPT
+        </a>
+        
+        <a href="industry-news-introducing-chatgpt-plus-19658.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19658. Industry News: Introducing ChatGPT Plus
+        </a>
+        
+        <a href="chatgpt-plugins-19647.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19647. ChatGPT plugins
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

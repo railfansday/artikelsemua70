@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generalizing from simulation</title>
+    <meta name="description" content="Our latest robotics techniques allow robot controllers, trained entirely in simulation and deployed on physical robots, to react to unplanned changes in th">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/generalizing-from-simulation-19822.html">
+    <meta property="og:title" content="Generalizing from simulation">
+    <meta property="og:description" content="Our latest robotics techniques allow robot controllers, trained entirely in simulation and deployed on physical robots, to react to unplanned changes in th">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/231bd1f1-8591-44b1-9ee13ba4e96a/9d4d29b4855ab09282bfd04c332f653f/generalizing-from-simulation.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/generalizing-from-simulation-19822.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Generalizing from simulation", "image": ["https://images.ctfassets.net/kftzwdyauwt9/231bd1f1-8591-44b1-9ee13ba4e96a/9d4d29b4855ab09282bfd04c332f653f/generalizing-from-simulation.jpg?w=1600&h=900&fit=fill"], "datePublished": "2017-10-19T07:00:00", "dateModified": "2026-11-21T19:04:20.373180", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/generalizing-from-simulation-19822.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Generalizing from simulation</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 19 Oct 2017 &bull; ⏱️ 3 min read (693 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Our latest robotics techniques allow robot controllers, trained entirely in simulation and deployed on physical robots, to react to unplanned changes in the environment as they solve simple tasks.</li><li style='margin-bottom:6px;'>According to recent reports, the simulator need not match the real-world in appearance or dynamics; instead, we randomize relevant aspects of the environment, from friction to action delays to sensor noise.</li><li style='margin-bottom:6px;'>Sources indicate that we developed dynamics randomization⁠(opens in a upcoming window) to train a robot to adapt to unknown real-world dynamics.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19822"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19822"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19822"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Generalizing from simulation" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/231bd1f1-8591-44b1-9ee13ba4e96a/9d4d29b4855ab09282bfd04c332f653f/generalizing-from-simulation.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19822">Our latest robotics techniques allow robot controllers, trained entirely in simulation and deployed on physical robots, to react to unplanned changes in the environment as they solve simple tasks. That is, we’ve used these techniques to build closed-loop systems rather than open-loop ones as before.</p>
+<p>According to recent reports, the simulator need not match the real-world in appearance or dynamics; instead, we randomize relevant aspects of the environment, from friction to action delays to sensor noise. Our fresh results provide more evidence that general-purpose robots can be built by training entirely in simulation, followed by a small amount of self-calibration in the real world.</p>
+<p>Sources indicate that we developed dynamics randomization⁠(opens in a upcoming window) to train a robot to adapt to unknown real-world dynamics. During training, we randomize a large set of ninety-five properties that determine the dynamics of the environment, such as altering the mass of each link in the robot’s body; the friction and damping of the object it is being trained on; the height of the table the object is on; the latency between actions; the noise in its observations; and so on.</p>
+<p>Sources indicate that we used this approach to train an LSTM⁠(opens in a fresh window)-based policy to push a hockey puck around a table. Our feed-forward networks fail⁠ at this task, whereas LSTMs can use their past observations to analyze the dynamics of the world and adjust their behavior accordingly.</p>
+<p>According to recent reports, we also trained a robot end-to-end in simulation using reinforcement learning (RL), and deployed the resulting policy on a physical robot. The resulting system maps vision directly to action without special sensors, and can adapt to visual feedback.</p>
+<p id="sec-mid-19822">Industry observers note that the abundance of RL results with simulated robots can make it seem like RL easily solves most robotics tasks. But common RL algorithms work well only on tasks where small perturbations to your action can provide an incremental change to the reward. Some robotics tasks have simple rewards, like walking, where you can be scored on distance traveled. But most tasks do not⁠—to define a dense reward for block stacking, you’d need to encode that the arm is close to the block, that the arm approaches the block in the correct orientation, that the block is lifted off the ground, the distance of block to the desired position, etc.</p>
+<p>Sources indicate that we spent a number of months unsuccessfully trying to get conventional RL algorithms working on pick-and-place tasks before ultimately developing a latest reinforcement learning algorithm, Hindsight Experience Replay⁠(opens in a new window) (HER), which allows agents to learn from a binary reward by pretending that a failure was what they wanted to do all along and learning from it accordingly. (By analogy, imagine looking for a gas station but ending up at a pizza shop. You still don’t know where to get gas, but you’ve now learned where to get pizza.) We also used domain randomization⁠ on the visual shapes to learn a vision system robust enough for the physical world.</p>
+<p>Recent findings suggest that our HER implementation uses the actor-critic technique with asymmetric information. (The actor is the policy, and the critic is a network which receives action/state pairs and estimates their Q-value, or sum of future rewards, providing training signal to the actor.) While the critic has access to the full state of the simulator, the actor only has access to RGB and depth data. Thus the critic can provide fully accurate feedback, while the actor uses only data present in the real world.</p>
+<p>Both techniques increase the computational requirements: dynamics randomization slows training down by a factor of 3x, while learning from images rather than states is about 5–10x slower.</p>
+<p>It has been revealed that we see three approaches to building general-purpose robots: training on huge fleets of physical robots, making simulators increasingly match the real world, and randomizing the simulator to allow the model to generalize to the real-world. We increasingly believe that the third will be the most important part of the solution.</p>
+<p id="sec-end-19822">If you’re interested in helping us push towards general-purpose robots, consider joining our team at OpenAI⁠.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/generalizing-from-simulation" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="transfer-from-simulation-to-real-world-through-learning-deep-inve-19873.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19873. Transfer from simulation to real world through learning deep inverse dynamics model
+        </a>
+        
+        <a href="how-to-build-a-healthcare-robot-from-simulation-to-deployment-wit-18836.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #18836. How to Build a Healthcare Robot from Simulation to Deployment with NVIDIA Isaac for Healthcare
+        </a>
+        
+        <a href="building-a-healthcare-robot-from-simulation-to-deployment-with-nv-18835.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #18835. Building a Healthcare Robot from Simulation to Deployment with NVIDIA Isaac
+        </a>
+        
+        <a href="nvidia-cosmos-h-dreams-bringing-real-time-generative-simulation-t-18644.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #18644. NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

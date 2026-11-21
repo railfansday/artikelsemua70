@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Codex became a collaborator for OpenAI’s creative team</title>
+    <meta name="description" content="This is part of our series sharing internal examples of how OpenAI is using its own technology and APIs. These tools are being used internally, at OpenAI, ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-codex-became-a-collaborator-for-openais-creative-team-19269.html">
+    <meta property="og:title" content="How Codex became a collaborator for OpenAI’s creative team">
+    <meta property="og:description" content="This is part of our series sharing internal examples of how OpenAI is using its own technology and APIs. These tools are being used internally, at OpenAI, ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3eagPQOkwIuyIssXtzh5BF/1cfe3d3b5fb125e19693b5adae363336/OAIonOAI_ChadNelson_16x9_1.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-codex-became-a-collaborator-for-openais-creative-team-19269.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How Codex became a collaborator for OpenAI’s creative team", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3eagPQOkwIuyIssXtzh5BF/1cfe3d3b5fb125e19693b5adae363336/OAIonOAI_ChadNelson_16x9_1.png?w=1600&h=900&fit=fill"], "datePublished": "2026-07-16T07:00:00", "dateModified": "2026-11-21T19:02:34.805058", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-codex-became-a-collaborator-for-openais-creative-team-19269.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How Codex became a collaborator for OpenAI’s creative team</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 16 Jul 2026 &bull; ⏱️ 4 min read (745 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>This is part of our series sharing internal examples of how OpenAI is using its own technology and APIs.</li><li style='margin-bottom:6px;'>Recent findings suggest that most people assume Codex is just for engineers and developers, but for Chad Nelson, Creative Specialist at OpenAI, Codex has become a creative problem solver and collaborator.</li><li style='margin-bottom:6px;'>Used to working within the constraints of the standard software for creatives, Chad’s been impressed with Codex’s ability to help him create better tools, build custom workflows, and generate campaign directions grounded in the full context of a project.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19269"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19269"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19269"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How Codex became a collaborator for OpenAI’s creative team" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3eagPQOkwIuyIssXtzh5BF/1cfe3d3b5fb125e19693b5adae363336/OAIonOAI_ChadNelson_16x9_1.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19269">This is part of our series sharing internal examples of how OpenAI is using its own technology and APIs. These tools are being used internally, at OpenAI, and are shared here as illustrative examples of how frontier AI is supporting use cases across our teams.</p>
+<p>Recent findings suggest that most people assume Codex is just for engineers and developers, but for Chad Nelson, Creative Specialist at OpenAI, Codex has become a creative problem solver and collaborator. Chad’s role is to explore what OpenAI models can make possible for creative teams, then turn those possibilities into demos, workflows, and ideas brand partners can build on.</p>
+<p>Used to working within the constraints of the standard software for creatives, Chad’s been impressed with Codex’s ability to help him create better tools, build custom workflows, and generate campaign directions grounded in the full context of a project.</p>
+<p>It has been revealed that “The tools I’ve been using my whole career have no idea what project I’m on, what brand I’m working for, what product I’m trying to pitch,” Chad says. “Codex and ChatGPT have the context. They understand that I’m working for this client, with this product, with these strategic goals.”.</p>
+<p>Codex can also understand brand books, style guides, fonts, and composition—and with that knowledge becomes more attuned to the creative needs of a project.</p>
+<p>Industry observers note that A campaign direction is shaped by the brand it’s for, the product, and the emotional quality you want to convey in the work. Chad found that Codex can take all of this context and work across those inputs in a way traditional tools could not.</p>
+<p>He also uses Codex to create and customize tools that will help solve specific problems.</p>
+<p>Sources indicate that using natural language, he can describe the workflow he wants and ask Codex to help build it. That might mean connecting an API key, creating a prototype interface, or designing a custom UI that lets him explore visual treatments.</p>
+<p>In a recent development, “With Codex, I can actually create tools, user interfaces, sliders, and controls,” he states. “I can adjust camera composition or lighting, and create real-time shadows with depth and dimension.”.</p>
+<p>Codex is also speeding up creative exploration. Recently, Chad had one day to develop a broad set of campaign ideas for a new client. Normally, he might have pursued five directions, or maybe 10 with enough time. Many would likely have been close variations of the same idea.</p>
+<p>It has been revealed that with Codex, Chad started by giving the system project context: the brand and its products, some guidelines, and the client’s goals. He also provided input about the tone he wanted the campaign to strike.</p>
+<p id="sec-mid-19269">In just one day, Chad and Codex generated 50 campaign directions, which he then reviewed and distilled into the 10 strongest ideas. “What I found is Codex is allowing me to riff creatively and to explore all these different options with a greater sense of freedom,” he claims.</p>
+<p>With more ideas to work with, Chad was able to bring a stronger set of options into the pitch, even under a tight deadline.</p>
+<p>Codex gives creative teams leverage in places where work often slows down: initial concepting, workflow design, and technical implementation.</p>
+<p>Industry observers note that when Chad has a prototype in mind, he can describe it and start building. If a workflow depends on new modalities or API integrations, he can ask Codex to help connect them. And if he gets stuck, he can explain the problem in natural language and work through it without leaving the creative flow.</p>
+<p>For creatives, this reduces the gap between idea and execution:.</p>
+<p>Technical hurdles that once required a handoff can become part of the same creative process.</p>
+<p>Creative directors can work with composition and lighting controls instead of long prompts.</p>
+<p>Designers can prototype an interface without waiting for custom tools to be scoped and built.</p>
+<p>Teams can explore more concepts while keeping human judgment at the center.</p>
+<p>More broadly, Chad’s experience illustrates the latest ways creative teams are using AI: building the systems they need to create, evaluate, and refine ideas as the work takes shape.</p>
+<p id="sec-end-19269">“One thing that I think I’ve learned through using Codex is that if you have an idea for a creative workflow or a solution or an interface, just ask it,” he claims. “Tell it what you’re thinking of, and suddenly in 10 minutes you’ll be looking at a prototype for it.”.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/codex-collaborator-creative-team" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="openai-codex-19710.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19710. OpenAI Codex
+        </a>
+        
+        <a href="industry-news-openai-leadership-team-patch-19691.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19691. Industry News: OpenAI leadership team patch
+        </a>
+        
+        <a href="powering-next-generation-applications-with-openai-codex-19689.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19689. Powering next generation applications with OpenAI Codex
+        </a>
+        
+        <a href="gondola-doubles-revenue-as-its-team-builds-more-with-codex-18744.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #18744. Gondola doubles revenue as its team builds more with Codex
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

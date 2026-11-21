@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta-learning for wrestling</title>
+    <meta name="description" content="We show that for the task of simulated robot wrestling, a meta-learning agent can learn to rapidly defeat a stronger non-meta-learning agent, and also show">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/meta-learning-for-wrestling-19827.html">
+    <meta property="og:title" content="Meta-learning for wrestling">
+    <meta property="og:description" content="We show that for the task of simulated robot wrestling, a meta-learning agent can learn to rapidly defeat a stronger non-meta-learning agent, and also show">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/cbb687d8-0398-4000-1f8b2b36c1bf/03017ab02a40880350fd43acb965abbe/meta-learning-for-wrestling.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/meta-learning-for-wrestling-19827.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Meta-learning for wrestling", "image": ["https://images.ctfassets.net/kftzwdyauwt9/cbb687d8-0398-4000-1f8b2b36c1bf/03017ab02a40880350fd43acb965abbe/meta-learning-for-wrestling.jpg?w=1600&h=900&fit=fill"], "datePublished": "2017-10-11T07:00:00", "dateModified": "2026-11-21T19:04:21.289222", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/meta-learning-for-wrestling-19827.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Meta-learning for wrestling</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 11 Oct 2017 &bull; ⏱️ 2 min read (358 words, 📖 Standard)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We show that for the task of simulated robot wrestling, a meta-learning agent can learn to rapidly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</li><li style='margin-bottom:6px;'>Recent findings suggest that we’ve extended the Model-Agnostic Meta-Learning (MAML)⁠(opens in a new window) algorithm by basing its objective function on optimizing against pairs of environments, rather than single ones as in stock MAML.</li><li style='margin-bottom:6px;'>In a recent development, to test our continuous adaptation approach we designed 3 types of agents—Ant (4-leg), Bug (6-leg), and Spider (8-leg)—and set up a multi-round game where each agent played several matches against the same opponent and adapted its policy parameters between the rounds to better counter the opponent’s policy.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19827"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19827"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19827"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Meta-learning for wrestling" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/cbb687d8-0398-4000-1f8b2b36c1bf/03017ab02a40880350fd43acb965abbe/meta-learning-for-wrestling.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19827">We show that for the task of simulated robot wrestling, a meta-learning agent can learn to rapidly defeat a stronger non-meta-learning agent, and also show that the meta-learning agent can adapt to physical malfunction.</p>
+<p>Recent findings suggest that we’ve extended the Model-Agnostic Meta-Learning (MAML)⁠(opens in a new window) algorithm by basing its objective function on optimizing against pairs of environments, rather than single ones as in stock MAML. MAML initializes the policies of our agents so that after only a small number of parameter updates during execution on a new environment (or task) the agents learn to do better in that environment. The policy parameter updates at execution are done via gradient ascent steps on the reward collected during the few episodes of initial interaction with a new environment. By training on pairs we’re able to create policies that promptly adapt to previously unseen environments, as long as the environment doesn’t diverge too wildly from previous ones.</p>
+<p id="sec-mid-19827">In a recent development, to test our continuous adaptation approach we designed 3 types of agents—Ant (4-leg), Bug (6-leg), and Spider (8-leg)—and set up a multi-round game where each agent played several matches against the same opponent and adapted its policy parameters between the rounds to better counter the opponent’s policy. In tests, we found that agents that could adapt their tactics are much better competitors than agents that have fixed policies. After training over a hundred agents, some of which learned fixed policies and others learned to adapt, we evaluated the fitness of each agent.</p>
+<p>Learning on the fly can also let agents deal with unusual changes in their own bodies as well, like adapting to some of their own limbs losing functionality over time. This suggests we can use techniques like this to develop agents that can handle both changes in their external environment and also changes in their own bodies or internal states.</p>
+<p id="sec-end-19827">In a recent development, we’re exploring meta-learning as part of our work on large-scale multi-agent research. Additionally, we’re releasing the MuJoCo environments and trained policies⁠(opens in a upcoming window) used in this work so that others can experiment with these systems.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/meta-learning-for-wrestling" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="some-considerations-on-learning-to-explore-via-meta-reinforcement-19808.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19808. Some considerations on learning to explore via meta-reinforcement learning
+        </a>
+        
+        <a href="breaking-reptile-a-scalable-meta-learning-algorithm-19806.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19806. Breaking: Reptile: A scalable meta-learning algorithm
+        </a>
+        
+        <a href="on-first-order-meta-learning-algorithms-19805.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19805. On first-order meta-learning algorithms
+        </a>
+        
+        <a href="machine-learning-unconference-19875.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19875. Machine Learning Unconference
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

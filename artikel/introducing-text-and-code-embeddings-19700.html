@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing text and code embeddings</title>
+    <meta name="description" content="We are introducing embeddings, a new endpoint in the OpenAI API that makes it easy to perform natural language and code tasks like semantic search, cluster">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-text-and-code-embeddings-19700.html">
+    <meta property="og:title" content="Introducing text and code embeddings">
+    <meta property="og:description" content="We are introducing embeddings, a new endpoint in the OpenAI API that makes it easy to perform natural language and code tasks like semantic search, cluster">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/35c53b88-9dc7-4952-3f7abd9c666b/a491e80106a3a61fb827446905f49294/introducing-text-and-code-embeddings-og.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-text-and-code-embeddings-19700.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing text and code embeddings", "image": ["https://images.ctfassets.net/kftzwdyauwt9/35c53b88-9dc7-4952-3f7abd9c666b/a491e80106a3a61fb827446905f49294/introducing-text-and-code-embeddings-og.jpg?w=1600&h=900&fit=fill"], "datePublished": "2022-01-25T08:00:00", "dateModified": "2026-11-21T19:03:57.481504", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-text-and-code-embeddings-19700.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing text and code embeddings</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 25 Jan 2022 &bull; ⏱️ 5 min read (1006 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We are introducing embeddings, a new endpoint in the OpenAI API that makes it easy to perform natural language and code tasks like semantic search, clustering, topic modeling, and classification.</li><li style='margin-bottom:6px;'>It has been revealed that embeddings are numerical representations of concepts converted to number sequences, which make it easy for computers to understand the relationships between those concepts.</li><li style='margin-bottom:6px;'>Embeddings are useful for working with natural language and code, because they can be readily consumed and compared by other machine learning models and algorithms like clustering or search.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19700"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19700"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19700"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing text and code embeddings" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/35c53b88-9dc7-4952-3f7abd9c666b/a491e80106a3a61fb827446905f49294/introducing-text-and-code-embeddings-og.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19700">We are introducing embeddings, a new endpoint in the OpenAI API that makes it easy to perform natural language and code tasks like semantic search, clustering, topic modeling, and classification.</p>
+<p>It has been revealed that embeddings are numerical representations of concepts converted to number sequences, which make it easy for computers to understand the relationships between those concepts. Our embeddings outperform top models in 3 standard benchmarks, including a 20% relative improvement in code search.</p>
+<p>Embeddings are useful for working with natural language and code, because they can be readily consumed and compared by other machine learning models and algorithms like clustering or search.</p>
+<p>According to recent reports, embeddings that are numerically similar are also semantically similar. For example, the embedding vector of “canine companions say” will be more similar to the embedding vector of “woof” than that of “meow.”.</p>
+<p>The fresh endpoint uses neural network models, which are descendants of GPT‑3, to map text and code to a vector representation—“embedding” them in a high-dimensional space. Each dimension captures some aspect of the input.</p>
+<p>The latest /embeddings⁠(opens in a new window) endpoint in the OpenAI API⁠(opens in a new window) provides text and code embeddings with a few lines of code:.</p>
+<p>We’re releasing three families of embedding models, each tuned to perform well on different functionalities: text similarity, text search, and code search. The models take either text or code as input and return an embedding vector.</p>
+<p>Text similarity: Captures semantic similarity between pieces of text.</p>
+<p>text-similarity-{ada, babbage, curie, davinci}-001.</p>
+<p>Clustering, regression, anomaly detection, visualization.</p>
+<p>Text search: Semantic information retrieval over documents.</p>
+<p>text-search-{ada, babbage, curie, davinci}-{query, doc}-001.</p>
+<p>Search, context relevance, information retrieval.</p>
+<p>Code search: Find relevant code with a query in natural language.</p>
+<p id="sec-mid-19700">code-search-{ada, babbage}-{code, text}-001.</p>
+<p>Recent findings suggest that text similarity models provide embeddings that capture the semantic similarity of pieces of text. These models are useful for many tasks including clustering⁠(opens in a newly introduced window), data visualization⁠(opens in a new window), and classification⁠(opens in a new window).</p>
+<p>The following interactive visualization highlights embeddings of text samples from the DBpedia dataset:.</p>
+<p>To compare the similarity of two pieces of text, you simply use the dot product⁠(opens in a new window) on the text embeddings. The result is a “similarity score”, sometimes called “cosine similarity⁠(opens in a new window),” between –1 and 1, where a higher number means more similarity. In most applications, the embeddings can be pre-computed, and then the dot product comparison is extremely fast to carry out.</p>
+<p>Sources indicate that one popular use of embeddings is to use them as features in machine learning tasks, such as classification. In machine learning literature, when using a linear classifier, this classification task is called a “linear probe.” Our text similarity models achieve fresh state-of-the-art results on linear probe classification in SentEval⁠(opens in a new window) (Conneau et al., 2018⁠(opens in a new window)), a commonly used benchmark for evaluating embedding quality.</p>
+<p>Text search models provide embeddings that enable large-scale search tasks, like finding a relevant document among a collection of documents given a text query. Embedding for the documents and query are produced separately, and then cosine similarity is used to compare the similarity between the query and each document.</p>
+<p>Embedding-based search can generalize better than word overlap techniques used in classical keyword search, because it captures the semantic meaning of text and is less sensitive to exact phrases or words. We evaluate the text search model’s performance on the BEIR⁠(opens in a latest window) (Thakur, et al. 2021⁠(opens in a new window)) search evaluation suite and obtain better search performance than previous methods. Our text search guide⁠(opens in a new window) provides more details on using embeddings for search tasks.</p>
+<p>According to recent reports, code search models provide code and text embeddings for code search tasks. Given a collection of code blocks, the task is to find the relevant code block for a natural language query. We evaluate the code search models on the CodeSearchNet⁠(opens in a upcoming window) (Husain et al., 2019⁠(opens in a new window)) evaluation suite where our embeddings achieve significantly better results than prior methods. Check out the code search guide⁠(opens in a new window) to use embeddings for code search.</p>
+<p>JetBrains Research’s Astroparticle Physics Lab⁠(opens in a fresh window) analyzes data like The Astronomer’s Telegram⁠(opens in a new window) and NASA’s GCN Circulars⁠(opens in a new window), which are reports that contain astronomical events that can’t be parsed by traditional algorithms.</p>
+<p>In a recent development, powered by OpenAI’s embeddings of these astronomical reports, researchers are now able to search for events like “crab pulsar bursts” across multiple databases and publications. Embeddings also achieved 99.85% accuracy on data source classification through k-means clustering.</p>
+<p>FineTune Learning⁠(opens in a new window) is a tech giant building hybrid human-AI solutions for learning, like adaptive learning loops⁠(opens in a new window) that help students reach academic standards.</p>
+<p>In a recent development, openAI’s embeddings significantly improved the task of finding textbook content based on learning objectives. Achieving a top-5 accuracy of 89.1%, OpenAI’s text-search-curie embeddings model outperformed previous approaches like Sentence-BERT (64.5%). While human experts are still better, the FineTune team is now able to label entire textbooks in a matter of seconds, in contrast to the hours that it took the experts.</p>
+<p>Fabius⁠(opens in a upcoming window) helps companies turn customer conversations into structured insights that inform planning and prioritization. OpenAI’s embeddings allow companies to more easily find and tag customer call transcripts with feature requests.</p>
+<p>Recent findings suggest that for instance, customers might use words like “automated” or “easy to use” to ask for a better self-service platform. Previously, Fabius was using fuzzy keyword search to attempt to tag those transcripts with the self-service platform label. With OpenAI’s embeddings, they’re now able to find 2x more examples in general, and 6x–10x more examples for features with abstract use cases that don’t have a clear keyword customers might use.</p>
+<p id="sec-end-19700">All API customers can get started with the embeddings documentation⁠(opens in a latest window) for using embeddings in their applications.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-text-and-code-embeddings" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-text-and-code-embeddings-by-contrastive-pre-training-19701.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19701. Breaking: Text and code embeddings by contrastive pre-training
+        </a>
+        
+        <a href="introducing-canvas-a-latest-way-to-write-and-code-with-chatgpt-19459.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19459. Introducing canvas, a latest way to write and code with ChatGPT.
+        </a>
+        
+        <a href="latest-update-introducing-olmoearth-embeddings-custom-embedding-e-18635.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #18635. Latest Update: Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis
+        </a>
+        
+        <a href="introducing-contextual-how-well-can-your-multimodal-model-jointly-17433.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #17433. Introducing ConTextual: How well can your Multimodal model jointly reason over text and image in text-rich scenes?
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

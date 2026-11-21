@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine-tuning GPT-2 from human preferences</title>
+    <meta name="description" content="It has been revealed that we’ve fine-tuned the 774M parameter GPT‑2 language model using human feedback for various tasks, successfully matching the prefer">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-gpt-2-from-human-preferences-19745.html">
+    <meta property="og:title" content="Fine-tuning GPT-2 from human preferences">
+    <meta property="og:description" content="It has been revealed that we’ve fine-tuned the 774M parameter GPT‑2 language model using human feedback for various tasks, successfully matching the prefer">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/11e7cd24-019f-46dc-b8ca7ca27d3d/179b4bf59b949bcc06199cf669ed1e8d/image-34.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-gpt-2-from-human-preferences-19745.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Fine-tuning GPT-2 from human preferences", "image": ["https://images.ctfassets.net/kftzwdyauwt9/11e7cd24-019f-46dc-b8ca7ca27d3d/179b4bf59b949bcc06199cf669ed1e8d/image-34.webp?w=1600&h=900&fit=fill"], "datePublished": "2019-09-19T07:00:00", "dateModified": "2026-11-21T19:04:05.737409", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/fine-tuning-gpt-2-from-human-preferences-19745.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Fine-tuning GPT-2 from human preferences</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 19 Sep 2019 &bull; ⏱️ 8 min read (1608 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>It has been revealed that we’ve fine-tuned the 774M parameter GPT‑2 language model using human feedback for various tasks, successfully matching the preferences of the external human labelers, though those preferences did not always match our own.</li><li style='margin-bottom:6px;'>We believe language is a key ingredient in making reinforcement learning practical and safe for real-world tasks.</li><li style='margin-bottom:6px;'>It has been revealed that this work applies human preference learning to several natural language tasks: continuing text with positive sentiment or physically descriptive language using the BookCorpus⁠(opens in a fresh window), and summarizing content from the TL;DR⁠(opens in a new window) and CNN/Daily Mail⁠(opens in a new window) datasets.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19745"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19745"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19745"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Fine-tuning GPT-2 from human preferences" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/11e7cd24-019f-46dc-b8ca7ca27d3d/179b4bf59b949bcc06199cf669ed1e8d/image-34.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19745">It has been revealed that we’ve fine-tuned the 774M parameter GPT‑2 language model using human feedback for various tasks, successfully matching the preferences of the external human labelers, though those preferences did not always match our own. Specifically, for summarization tasks the labelers preferred sentences copied wholesale from the input (we’d only asked them to ensure accuracy), so our models learned to copy. Summarization required 60k human labels; simpler tasks which continue text in various styles required only 5k. Our motivation is to move safety techniques closer to the general task of “machines talking to humans,” which we believe is key to extracting information about human values.</p>
+<p>We believe language is a key ingredient in making reinforcement learning practical and safe for real-world tasks. Previous⁠ work⁠(opens in a new window) on learning models of human preferences has focused on simple simulated environments (Atari games or robotics tasks) which do not capture the complexity of language. Language is also a necessary ingredient for algorithms such as amplification⁠ and debate⁠, which target the reasoning behind preferences.</p>
+<p>It has been revealed that this work applies human preference learning to several natural language tasks: continuing text with positive sentiment or physically descriptive language using the BookCorpus⁠(opens in a fresh window), and summarizing content from the TL;DR⁠(opens in a new window) and CNN/Daily Mail⁠(opens in a new window) datasets. Each of these tasks can be viewed as a text completion problem: starting with some text X, we ask what text Y should follow.A.</p>
+<p>We start with a pretrained language model (the 774M parameter version of GPT‑2⁠) and fine-tune the model by asking human labelers⁠(opens in a fresh window) which of four samples is best. Fine-tuning for the stylistic continuation tasks is sample efficient: 5,000 human samples suffice for strong performance according to humans. For summarization, models trained with 60,000 comparisons learn to copy whole sentences from the input while skipping irrelevant preamble; this copying is an easy way to ensure accurate summaries, but may exploit the fact that labelers rely on simple heuristics.</p>
+<p>For the stylistic continuation tasks, samples comparing the raw 774M GPT‑2 model and our fine-tuned versions are shown below.B.</p>
+<p>According to the same human labelers used to train them, our fine-tuned models are preferred to the base GPT‑2 model (zero-shot) 88% and 86% of the time for sentiment and descriptiveness, respectively.</p>
+<p>We also applied human fine-tuning to two summarization tasks: summarization of articles from the CNN/Daily Mail dataset, and summarization of Reddit snippets from the TL;DR dataset.</p>
+<p>Sources indicate that these tasks are harder: our main models use 60,000 four-way comparisons. We also need online data collection, where the samples shown to humans are collected throughout training as the policy changes; an offline data collection strategy which shows humans only samples from the base GPT‑2 language model performed poorly.</p>
+<p>It has been revealed that our models achieve very good performance according to human labelers, but are likely exploiting the fact that labelers rely on simple heuristics: they prefer the lead-3 baseline of copying the first three sentences to our models. However, when combining supervised fine-tuning with human fine-tuning, our models outperform lead-3 on ROUGE scores.</p>
+<p>Samples from zero-shot and supervised baselines, as well as RL fine-tuning of each, are shown below.</p>
+<p>Industry observers note that the reader may have noticed a few things about these samples. First, our RL fine-tuned model is mostly a smart copying engine: it typically summarizes content by copying entire sentences from the article or Reddit snippet. By contrast, the zero-shot and supervised fine-tuned samples are more novel:.</p>
+<p>Sentence novelty: Percentage of sentences in summaries that do not appear in source text.</p>
+<p>The RL fine-tuned model does vary where it copies from: while they copy the start of the input 28.3% and 77.6% of the time on TL;DR and CNN/Daily Mail, these numbers fall to 0.2% and 1.4% if the input starts with uninformative preamble (defined as “hi”, “hello”, “hey”, “ok”, “okay”, “so” for TL;DR, or a colon in the first three words for CNN/Daily Mail such as “Winner: Simon Wood took home the TV crown [...]”).</p>
+<p>The visualization below shows where the variation in where the summarization models copy from, illustrated by the longest common subsequence of bigrams between context and summary for randomly chosen contexts.</p>
+<p>Second, while summaries from GPT‑2 zero-shot and the supervised fine-tuned version of GPT‑2 are more novel as measured by n-grams or sentences, they are also more novel in terms of content. That is, they’re not true:.</p>
+<p id="sec-mid-19745">Summary accuracy: Accuracy frequency of generated summaries, judged by authors on 30 articles from each dataset.</p>
+<p>According to recent reports, there are at least two ways of interpreting these results. The first is that copying is the easiest way to be accurate. The labelers were told to penalize inaccuracy but not copying. The zero-shot model copies some of the time, and when it copied it was accurate, so copying was reinforced. The result is a model that mostly copies, but at least does not lie.</p>
+<p>According to recent reports, however, this does not fully explain the results of human evaluation: both our model and a simple lead-3 baseline which copies the first three sentences are strongly preferred by the labelers to the human reference summaries in both datasets. The authors do not agree: we find the reference summaries are accurate and better capture the overall message. This reveals a mismatch between the notion of quality we wanted our model to learn, and what the humans labelers actually evaluated. Labelers want to work as quickly as possible, and they can work very quickly by following the heuristic of “if the summary copies, then select it.”.</p>
+<p>Online data collection was necessary to achieve the best results on summarization, but led to multiple difficulties:.</p>
+<p>Sources indicate that software complexity. Interleaving data gathering, reward model training, and RL fine-tuning led to a far more complex system than if each component was separate.</p>
+<p>Machine learning complexity. An ML bug in any component would break the whole system, and it was awkward to debug one component in isolation.</p>
+<p>Quality control complications. Online label collection required low latency between generating a sample and receiving data back from Scale⁠(opens in a fresh window) (typically ~30 minutes). Quality control with low latency is hard, and regressions in data quality were often not detected until after training runs were complete.</p>
+<p>Recent findings suggest that we believe the right middle ground between offline and online data collection is batched data collection: we would alternate between collecting large batches of data (with higher latency) and training on collected data. The cost of human data means that volume will always be low, so it is easy to retrain from scratch (or rather, from the GPT‑2 starting point) each time.</p>
+<p>A single human may have a clear notion of whether a given sample is separately accurate, grammatical, nonredundant, or hits the key points, but comparing two summaries often requires subjective weighing of different kinds of deficiencies. When possible, it seems better to design less ambiguous labeling tasks that get at the same information. For example, rather than asking a person to compare summaries, we could ask for a verbal description of the problems with a summary, or a suggested correction. Even if two people disagree on the most important problem, they may agree that the other picked some problem, and more agreement eases data quality control and the overall experimental process.</p>
+<p>One of our code refactors introduced a bug which flipped the sign of the reward. Flipping the reward would usually produce incoherent text, but the same bug also flipped the sign of the KL penalty. The result was a model which optimized for negative sentiment while preserving natural language. Since our instructions told humans to give very low ratings to continuations with sexually explicit text, the model rapidly learned to output only content of this form. This bug was remarkable since the result was not gibberish but maximally bad output. The authors were asleep during the training process, so the problem was noticed only once training had finished. A mechanism such as Toyota’s Andon cord⁠(opens in a upcoming window) could have prevented this, by allowing any labeler to stop a problematic training process.</p>
+<p>It has been revealed that we’ve demonstrated reward learning from human preferences on two kinds of natural language tasks, stylistic continuation and summarization. Our results are mixed: for continuation we achieve good results with very few samples, but our summarization models are only “smart copiers”: they copy from the input text but skip over irrelevant preamble. The advantage of smart copying is truthfulness: the zero-shot and supervised models produce natural, plausible-looking summaries that are often lies. We believe the limiting factor in our experiments is data quality exacerbated by the online data collection setting, and plan to use batched data collection in the future.</p>
+<p>We believe the application of reward learning to language is crucial both from a capability and safety perspective. On the capability side, reinforcement learning lets us correct mistakes that supervised learning would not catch, but RL with programmatic reward functions “can be detrimental to model quality⁠(opens in a latest window).” On the safety side, reward learning for language allows important criteria like “don’t lie” to be represented during training, and is a step towards scalable safety methods such as a debate⁠ and amplification⁠.</p>
+<p>For summarization, the text is the article plus the string “TL;DR:”.</p>
+<p>Each fine-tuned model is trained using 5,000 four-way comparisons by humans.</p>
+<p id="sec-end-19745">Thanks to Ethan Perez, Jack Clark, Ashley Pilipiszyn &amp; Greg Brockman for feedback on this post. Thanks to Justin Jay Wang, Brooke Chan &amp; Shan Carter for design and development.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/fine-tuning-gpt-2" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-fine-tuning-gpt-3-to-scale-video-creation-19663.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19663. Tech Report: Fine-tuning GPT-3 to scale video creation
+        </a>
+        
+        <a href="gpt-35-turbo-fine-tuning-and-api-updates-19624.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19624. GPT-3.5 Turbo fine-tuning and API updates
+        </a>
+        
+        <a href="fine-tuning-now-available-for-gpt-4o-19500.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19500. Fine-tuning now available for GPT-4o
+        </a>
+        
+        <a href="industry-news-fine-tuning-gpt-4o-webinar-19497.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19497. Industry News: Fine-tuning GPT-4o webinar
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

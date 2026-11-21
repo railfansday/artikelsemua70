@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Introducing OpenAI o1</title>
+    <meta name="description" content="A fresh series of reasoning models for solving hard problems. Sources indicate that the ChatGPT access information reflects the September 2024 launch. o1‑p">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-openai-o1-19486.html">
+    <meta property="og:title" content="Tech Report: Introducing OpenAI o1">
+    <meta property="og:description" content="A fresh series of reasoning models for solving hard problems. Sources indicate that the ChatGPT access information reflects the September 2024 launch. o1‑p">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3AqcHnbr83HdNA15e6Va2k/1edb01c8fc6ead20c09cdbe00b5ad8e9/o1-preview-general-blogcard-big.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-openai-o1-19486.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Introducing OpenAI o1", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3AqcHnbr83HdNA15e6Va2k/1edb01c8fc6ead20c09cdbe00b5ad8e9/o1-preview-general-blogcard-big.png?w=1600&h=900&fit=fill"], "datePublished": "2024-09-12T10:03:00", "dateModified": "2026-11-21T19:03:16.851882", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-openai-o1-19486.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Introducing OpenAI o1</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 12 Sep 2024 &bull; ⏱️ 5 min read (924 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>A fresh series of reasoning models for solving hard problems.</li><li style='margin-bottom:6px;'>Sources indicate that the ChatGPT access information reflects the September 2024 launch.</li><li style='margin-bottom:6px;'>Update on September 17, 2024: Rate limits are now 50 queries per week for o1‑preview and 50 queries per day for o1‑mini.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-19486"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-19486"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-19486"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Introducing OpenAI o1" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3AqcHnbr83HdNA15e6Va2k/1edb01c8fc6ead20c09cdbe00b5ad8e9/o1-preview-general-blogcard-big.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-19486">A fresh series of reasoning models for solving hard problems.</p>
+<p>Sources indicate that the ChatGPT access information reflects the September 2024 launch. o1‑preview and o1‑mini have been retired from the API. See the API deprecation schedule⁠(opens in a newly introduced window).</p>
+<p>Update on September 17, 2024: Rate limits are now 50 queries per week for o1‑preview and 50 queries per day for o1‑mini.</p>
+<p>In a recent development, we've developed a latest series of AI models designed to spend more time thinking before they respond. They can reason through complex tasks and solve harder problems than previous models in science, coding, and math.Today, we are releasing the first of this series in ChatGPT and our API. This is a preview and we expect regular updates and improvements. Alongside this release, we’re also including evaluations for the next revision, right now in development.</p>
+<p>We trained these models to spend more time thinking through problems before they respond, much like a person would. Through training, they learn to refine their thinking process, try different strategies, and recognize their mistakes.</p>
+<p>It has been revealed that in our tests, the next model enhancement performs similarly to PhD students on challenging benchmark tasks in physics, chemistry, and biology. We also found that it excels in math and coding. In a qualifying exam for the International Mathematics Olympiad (IMO), GPT‑4o correctly solved only 13% of problems, while the reasoning model scored 83%. Their coding abilities were evaluated in contests and reached the 89th percentile in Codeforces competitions. You can read more about this in our technical research post.</p>
+<p>As an early model, it doesn't yet have many of the features that make ChatGPT useful, like browsing the web for information and uploading files and images. For many common cases GPT‑4o will be more capable in the near term.</p>
+<p>In a recent development, but for complex reasoning tasks this is a significant advancement and represents a new level of AI capability. Given this, we are resetting the counter back to 1 and naming this series OpenAI o1.</p>
+<p>As part of developing these new models, we have come up with a new safety training approach that harnesses their reasoning capabilities to make them adhere to safety and alignment guidelines. By being able to reason about our safety rules in context, it can apply them more effectively.</p>
+<p id="sec-mid-19486">In a recent development, one way we measure safety is by testing how well our model continues to follow its safety rules if a user tries to bypass them (known as "jailbreaking"). On one of our hardest jailbreaking tests, GPT‑4o scored 22 (on a scale of 0-100) while our o1‑preview model scored 84. You can read more about this in the system card and our research post.</p>
+<p>According to recent reports, to match the new capabilities of these models, we’ve bolstered our safety work, internal governance, and federal government collaboration. This includes rigorous testing and evaluations using our Preparedness Framework⁠(opens in a new window), best-in-class red teaming, and board-level review processes, including by our Safety &amp; Security Committee.To advance our commitment to AI safety, we recently formalized agreements with the U.S. and U.K. AI Safety Institutes. We've begun operationalizing these agreements, including granting the institutes early access to a research version of this model. This was an vital first step in our partnership, helping to establish a process for research, evaluation, and testing of future models prior to and following their public release.</p>
+<p>It has been revealed that these enhanced reasoning capabilities may be particularly useful if you’re tackling complex problems in science, coding, math, and similar fields. For example, o1 can be used by healthcare researchers to annotate cell sequencing data, by physicists to generate complicated mathematical formulas needed for quantum optics, and by developers in all fields to build and execute multi-step workflows.</p>
+<p>It has been revealed that the o1 series excels at accurately generating and debugging complex code. To offer a more efficient solution for developers, we’re also releasing OpenAI o1‑mini, a faster, cheaper reasoning model that is particularly effective at coding. As a smaller model, o1‑mini is 80% cheaper than o1‑preview, making it a powerful, cost-effective model for applications that require reasoning but not broad world knowledge.</p>
+<p>ChatGPT Plus and Team consumers will be able to access o1 models in ChatGPT starting today. Both o1‑preview and o1‑mini can be selected manually in the model picker, and at launch, weekly rate limits will be 30 messages for o1‑preview and 50 for o1‑mini. We are working to increase those rates and enable ChatGPT to automatically choose the right model for a given prompt.</p>
+<p>In a recent development, chatGPT Enterprise and Edu users will get access to both models beginning next week. Developers who qualify for API usage tier 5⁠(opens in a new window) can start prototyping with both models in the API today with a rate limit of 20 RPM. We’re working to increase these limits after additional testing. The API for these models currently doesn't include function calling, streaming, support for system messages, and other features. To get started, check out the API documentation⁠(opens in a new window).</p>
+<p>We also are planning to bring o1‑mini access to all ChatGPT Free users.</p>
+<p>This is an early preview of these reasoning models in ChatGPT and the API. In addition to model updates, we expect to add browsing, file and image uploading, and other features to make them more useful to everyone.</p>
+<p id="sec-end-19486">We also plan to continue developing and releasing models in our GPT series, in addition to the new OpenAI o1 series.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-openai-o1-preview" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-introducing-openai-japan-19566.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19566. Tech Report: Introducing OpenAI Japan
+        </a>
+        
+        <a href="tech-report-introducing-openai-presence-19261.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19261. Tech Report: Introducing OpenAI Presence
+        </a>
+        
+        <a href="tech-report-introducing-openai-privacy-filter-17658.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #17658. Tech Report: Introducing OpenAI Privacy Filter
+        </a>
+        
+        <a href="introducing-openai-19887.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19887. Introducing OpenAI
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
