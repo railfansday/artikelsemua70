@@ -4,106 +4,43 @@
     <title>Portal Berita - EV & Auto</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for EV & Auto.</description>
-    <lastBuildDate>Fri, 20 Nov 2026 19:58:27 -0000</lastBuildDate>
+    <lastBuildDate>Sat, 21 Nov 2026 06:54:11 -0000</lastBuildDate>
     
+            <item>
+                <title>DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-16956.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-16956.html</guid>
+                <description>DevRev uses GPT‑6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. Recent findings suggest that devRev⁠(opens in a fresh window) built Computer and Operator to help service and operations teams carry even the hardest customer and ...</description>
+            </item>
+            <item>
+                <title>Industry News: What a billion-dollar deal states about the US battery market</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-what-a-billion-dollar-deal-states-about-the-us-batt-16570.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-what-a-billion-dollar-deal-states-about-the-us-batt-16570.html</guid>
+                <description>After a tough few years littered with some high-profile failures, there’s some positive news for next-generation batteries in the US. According to recent reports, sila just signed an agreement with Panasonic Energy, a global battery manufacturer, to supply silicon-carbon anode ma...</description>
+            </item>
+            <item>
+                <title>Partnering with Waymo to Reshape how the World Moves</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-16463.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-16463.html</guid>
+                <description>Recent findings suggest that 1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Sources indicate that ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved acros...</description>
+            </item>
+            <item>
+                <title>Industry News: Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-partnering-with-empirik-building-the-autonomous-inf-16389.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-partnering-with-empirik-building-the-autonomous-inf-16389.html</guid>
+                <description>Recent findings suggest that change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. It has been revealed that change has always been the fundamental operat...</description>
+            </item>
+            <item>
+                <title>Your Wear OS smartwatch just got a new way to save battery life</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-new-way-to-save-battery-life-16288.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-new-way-to-save-battery-life-16288.html</guid>
+                <description>In a recent development, some of the most popular Android smartwatches just got a battery-saving revision. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. In a recent development, the v26.45 upda...</description>
+            </item>
             <item>
                 <title>Building an autonomous financial analyst with o1 and o3-mini</title>
                 <link>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-15495.html</link>
                 <guid>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-15495.html</guid>
                 <description>Endex builds the future of financial analysis, powered by OpenAI’s reasoning models. → Read original article...</description>
-            </item>
-            <item>
-                <title>FedS2R: One-Shot Federated Domain Generalization for Synthetic-to-Real Semantic Segmentation in Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/feds2r-one-shot-federated-domain-generalization-for-synthetic-to--15105.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/feds2r-one-shot-federated-domain-generalization-for-synthetic-to--15105.html</guid>
-                <description>arXiv:2507.19881v4 Announce Type: replace-cross 
-Abstract: Federated domain generalization has shown promising progress in image classification by enabling collaborative training across multiple clients without sharing raw data. However, its potential in the semantic segmentation...</description>
-            </item>
-            <item>
-                <title>CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/cadfather-autonomous-cad-reconstruction-through-coordinated-tool--15040.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/cadfather-autonomous-cad-reconstruction-through-coordinated-tool--15040.html</guid>
-                <description>arXiv:2610.09127v2 Announce Type: replace 
-Abstract: Reconstructing an editable CAD model from a 3D shape remains a challenging engineering task. Existing methods can propose CAD operations, but no single source of proposals works equally well across different part geometries and...</description>
-            </item>
-            <item>
-                <title>Breaking: Does the Action Matter? Probing Action-Conditioned Semantic Forecasting as a World Model for Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-does-the-action-matter-probing-action-conditioned-semant-14962.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-does-the-action-matter-probing-action-conditioned-semant-14962.html</guid>
-                <description>Recent findings suggest that arXiv:2611.24840v1 Announce Type: cross 
-Abstract: World models are increasingly used in autonomous driving to predict how a scene evolves under the ego vehicle's actions, supporting counterfactual reasoning and model-based planning. However, existing...</description>
-            </item>
-            <item>
-                <title>DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-14752.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-14752.html</guid>
-                <description>DevRev uses GPT-6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. → Read original article...</description>
-            </item>
-            <item>
-                <title>HydroMind: A Checkable Agent for Autonomous Hydrological Research</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/hydromind-a-checkable-agent-for-autonomous-hydrological-research-14649.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/hydromind-a-checkable-agent-for-autonomous-hydrological-research-14649.html</guid>
-                <description>In a recent development, arXiv:2611.23323v1 Announce Type: cross 
-Abstract: General-purpose coding agents have written code for hydrological and Earth-system models. In these studies the researchers decided in advance how the model would be evaluated, for example the test period,...</description>
-            </item>
-            <item>
-                <title>When Figures Disagree with Text: Evaluating Autonomous Visual Evidence Verification in Scientific Papers</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-14509.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-14509.html</guid>
-                <description>According to recent reports, arXiv:2611.24353v1 Announce Type: newly introduced 
-Abstract: Scientific figures carry evidence for the claims that cite them, so reviewing a paper means checking that a figure agrees with the text, and not only describing what the figure demonstrates...</description>
-            </item>
-            <item>
-                <title>FedE2E: One-Shot Federated Learning for End-to-End Autonomous Driving with Closed-Loop Evaluation</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/fede2e-one-shot-federated-learning-for-end-to-end-autonomous-driv-14492.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/fede2e-one-shot-federated-learning-for-end-to-end-autonomous-driv-14492.html</guid>
-                <description>It has been revealed that arXiv:2611.24254v2 Announce Type: upcoming 
-Abstract: Federated learning enables collaborative model training without sharing datasets. However, existing federated learning methods for autonomous driving typically require multi-round communication and la...</description>
-            </item>
-            <item>
-                <title>Attention Is Not Relevance: Challenging the Causality of Attention in Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/attention-is-not-relevance-challenging-the-causality-of-attention-14473.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/attention-is-not-relevance-challenging-the-causality-of-attention-14473.html</guid>
-                <description>arXiv:2611.24051v1 Announce Type: fresh 
-Abstract: Attention has become one of the most widely adopted solutions for estimating the relevance of surrounding objects and interpreting an autonomous vehicle's driving decisions. However, its ability to capture the causal impact of in...</description>
-            </item>
-            <item>
-                <title>MLE Agents: Autonomous ML Engineering in Large-scale Recommendation Systems</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/mle-agents-autonomous-ml-engineering-in-large-scale-recommendatio-14454.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/mle-agents-autonomous-ml-engineering-in-large-scale-recommendatio-14454.html</guid>
-                <description>arXiv:2611.23910v1 Announce Type: fresh 
-Abstract: The typical workflow for improving large-scale ranking and recommendation models is slow and tedious: an engineer forms a hypothesis, implements it as a code change, trains a model, and evaluates it both offline and online, often...</description>
-            </item>
-            <item>
-                <title>What a billion-dollar deal says about the US battery market</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/what-a-billion-dollar-deal-says-about-the-us-battery-market-14336.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/what-a-billion-dollar-deal-says-about-the-us-battery-market-14336.html</guid>
-                <description>After a tough few years littered with some high-profile failures, there’s some positive news for next-generation batteries in the US. Recent findings suggest that sila just signed an agreement with Panasonic Energy, a global battery manufacturer, to supply silicon-carbon anode ma...</description>
-            </item>
-            <item>
-                <title>Partnering with Waymo to Reshape how the World Moves</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-14255.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-14255.html</guid>
-                <description>It has been revealed that 1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. It has been revealed that ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved acro...</description>
-            </item>
-            <item>
-                <title>Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-14165.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-14165.html</guid>
-                <description>Change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. It has been revealed that change has always been the fundamental operational signal in infrastructur...</description>
-            </item>
-            <item>
-                <title>Your Wear OS smartwatch just got a new way to save battery life</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-new-way-to-save-battery-life-14058.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-new-way-to-save-battery-life-14058.html</guid>
-                <description>Sources indicate that some of the most popular Android smartwatches just got a battery-saving revision. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. It has been revealed that the v26.45 enhanc...</description>
-            </item>
-            <item>
-                <title>Autonomous discovery of upcoming structure-plausibility laws for explainable and rapid crystal diagnosis and screening</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/autonomous-discovery-of-upcoming-structure-plausibility-laws-for--13005.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/autonomous-discovery-of-upcoming-structure-plausibility-laws-for--13005.html</guid>
-                <description>Recent findings suggest that arXiv:2609.01209v2 Announce Type: replace-cross 
-Abstract: Generative models and autonomous agents now propose candidate inorganic crystals by the million, yet most screens test little beyond a minimum-distance cutoff and give no chemical reason for f...</description>
             </item>
 </channel>
 </rss>

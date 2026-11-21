@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improving support with every interaction at OpenAI</title>
+    <meta name="description" content="In a recent development, this is part of our series sharing internal examples of how OpenAI is using its own technology and APIs. These tools are being use">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/improving-support-with-every-interaction-at-openai-17947.html">
+    <meta property="og:title" content="Improving support with every interaction at OpenAI">
+    <meta property="og:description" content="In a recent development, this is part of our series sharing internal examples of how OpenAI is using its own technology and APIs. These tools are being use">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/76CnrtKKvngPIfdfXYcXG8/cb789b59d9f7dd8e3b385b532be76a77/oai_SupportAgent_1x1.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/improving-support-with-every-interaction-at-openai-17947.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Improving support with every interaction at OpenAI", "image": ["https://images.ctfassets.net/kftzwdyauwt9/76CnrtKKvngPIfdfXYcXG8/cb789b59d9f7dd8e3b385b532be76a77/oai_SupportAgent_1x1.png?w=1600&h=900&fit=fill"], "datePublished": "2025-09-29T13:30:00", "dateModified": "2026-11-21T06:52:56.600866", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/improving-support-with-every-interaction-at-openai-17947.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Improving support with every interaction at OpenAI</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 29 Sep 2025 &bull; ⏱️ 5 min read (943 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>In a recent development, this is part of our series sharing internal examples of how OpenAI is using its own technology and APIs.</li><li style='margin-bottom:6px;'>Sources indicate that support has historically meant queues, tickets, and throughput.</li><li style='margin-bottom:6px;'>Lots of organizations deal with scale.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-17947"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-17947"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-17947"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Improving support with every interaction at OpenAI" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/76CnrtKKvngPIfdfXYcXG8/cb789b59d9f7dd8e3b385b532be76a77/oai_SupportAgent_1x1.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-17947">In a recent development, this is part of our series sharing internal examples of how OpenAI is using its own technology and APIs. These tools are being used internally, only at OpenAI, and are shared here as illustrative examples of how frontier AI is supporting use cases across our teams. We’re also sharing the internal tool names for a clearer look at how frontier AI helps our teams get work done.</p>
+<p>Sources indicate that support has historically meant queues, tickets, and throughput. But at OpenAI, that wasn’t enough. We serve hundreds of millions of customers, handle millions of requests each year, and see that volume grow by multiples annually.</p>
+<p>Lots of organizations deal with scale. Fewer deal with scale and hypergrowth. Almost none face both—while also building the very technology that could change the equation. That combination uniquely positioned us to rethink support from the ground up.</p>
+<p>It has been revealed that support isn’t a volume challenge. It’s an engineering and operational design challenge. So we built something different: an operating model where every interaction improves the next.</p>
+<p>The Ops team wanted to go well beyond using a chatbot to deflect support questions. The team has a vision: reimagine support as an AI operating model that continuously learns and improves.</p>
+<p>At the center are three building blocks:.</p>
+<p>Surfaces. Where support systems are interacted with. Chat, email, and phone, but increasingly, help embedded directly inside the product.</p>
+<p>Knowledge. Not just static docs, but living and continuously improving guidance drawn from real conversations, policies, and context.</p>
+<p>According to recent reports, evals and classifiers. Shared definitions of quality built by software and humans in unison, plus tools to measure, improve, and highlight feedback.</p>
+<p>Industry observers note that these pieces don’t sit in isolation. They form a loop. A pattern spotted in an enterprise conversation can inform a developer FAQ. An eval written for one case strengthens the model for thousands more. And because the same primitives power every surface - chat, email, voice—improvements scale across channels automatically.</p>
+<p>The role of a support rep is changing. Our aim is to shift the model from primarily focusing on processing transactional work to being a part of the overall build. They’re empowered to contribute to the architecture itself, both directly through bottom up shipping of changes and indirectly through the natural motions of their day to day work.</p>
+<p>Recent findings suggest that reps flag interactions that should become test cases, propose and ship classifiers when they see latest patterns, and even prototype lightweight automations to close workflow gaps in days. Training shifts too, it’s not just about policies, but about evaluating interactions, identifying structural gaps, and feeding improvements back.</p>
+<p>The upcoming approach strives to ensure that support reps are builders as much as responders.</p>
+<p id="sec-mid-17947">In a recent development, the result is a support organization defined less by throughput and more by its capacity to evolve. Every person is not only serving customers but also actively improving the machinery that serves all users.</p>
+<p>Building support this way is only possible because we’re built on OpenAI’s stack.</p>
+<p>Agents SDK gives us step-level traces and observability by default. We can replay runs, inspect tool calls, and debug root causes instantly.</p>
+<p>Responses API powers classifiers for tone, correctness, and policy adherence.</p>
+<p>Realtime API makes voice support possible.</p>
+<p>OpenAI’s Evals dashboard makes quality measurable and easy to visualize over time.</p>
+<p>Because the platform primitives come ready-made, we spend less time stitching systems together and more time focusing on the work that matters: defining what good looks like, measuring it, and improving it.</p>
+<p>In a recent development, we started with a simple Q&amp;A answerer that worked well. With Agents SDK, we rapidly expanded into dynamic actions for things like refunds, invoices, incident lookups. As the models continue to improve with larger context windows, Deep Research, and stronger agentic capabilities, we can adopt those advances immediately.</p>
+<p>Evals turn everyday conversations into production tests. They codify what “great” means—not just solving the issue, but doing it politely, clearly, and consistently. Reps play a direct role here, flagging strong and weak examples that become evals, and those evals run continuously in production to steer model behavior.</p>
+<p>Sources indicate that “Usually when you have a problem, you just want help as quickly as possible. By using our AI tools, we’re able to get those responses much more quickly—and just as importantly, we know when the model shouldn’t answer,” says Jay Patel, Software Engineer, Support Automation.</p>
+<p>Recent findings suggest that learning doesn’t stop at resolution. Patterns feed back into knowledge, automation, and product design. The system compounds: faster answers for users, tighter feedback loops for builders, and a consistently higher bar for quality across every surface.And it’s not just the AI that learns. The organization learns alongside it. Specialists see where models fall short, shape fresh classifiers, and contribute datasets for fine-tuning. Observability dashboards make quality measurable, showing how performance improves over time.</p>
+<p>Sources indicate that the most profound shift isn’t the tooling, it’s the people and how the organization measures success. Support specialists are recognized not just for solving problems, but for refining knowledge, improving models, and extending the system itself. Leaders look for a new kind of teammate: someone who pairs frontline empathy with design instincts, combining support craft with curiosity to improve the system.</p>
+<p>And our vision is support stops being a destination you go to. It becomes an action, woven into every product surface. Users don’t “open a ticket.” They simply get what they need, where they are.</p>
+<p id="sec-end-17947">What began as a response to scale has become a blueprint for how people and AI can work together: collaborative, adaptive, and continuously improving.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/openai-support-model" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-openai-expands-initiatives-to-support-journalism-from-cl-17527.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #17527. Breaking: OpenAI expands initiatives to support journalism from classrooms to newsrooms
+        </a>
+        
+        <a href="wayfair-boosts-catalog-accuracy-and-support-speed-with-openai-17401.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #17401. Wayfair boosts catalog accuracy and support speed with OpenAI
+        </a>
+        
+        <a href="tech-report-the-lenfest-institute-grows-landmark-program-with-exp-17381.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #17381. Tech Report: The Lenfest Institute grows landmark program with expanded OpenAI support
+        </a>
+        
+        <a href="franklin-templeton-uses-openai-to-support-investment-research-16935.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #16935. Franklin Templeton uses OpenAI to support investment research
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
