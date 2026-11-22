@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing in-place migration to GKE Dataplane V2</title>
+    <meta name="description" content="The front door to AI in the workplace. Sources indicate that GKE Dataplane V2 is Google Cloud’s next-generation networking dataplane for Google Kubernetes ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-in-place-migration-to-gke-dataplane-v2-20496.html">
+    <meta property="og:title" content="Introducing in-place migration to GKE Dataplane V2">
+    <meta property="og:description" content="The front door to AI in the workplace. Sources indicate that GKE Dataplane V2 is Google Cloud’s next-generation networking dataplane for Google Kubernetes ">
+    <meta property="og:image" content="https://storage.googleapis.com/gweb-cloudblog-publish/images/Networking.max-2500x2500.jpg">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-in-place-migration-to-gke-dataplane-v2-20496.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing in-place migration to GKE Dataplane V2", "image": ["https://storage.googleapis.com/gweb-cloudblog-publish/images/Networking.max-2500x2500.jpg"], "datePublished": "2026-11-19T17:00:00", "dateModified": "2026-11-22T06:23:50.390199", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-in-place-migration-to-gke-dataplane-v2-20496.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing in-place migration to GKE Dataplane V2</h1>
+        <div class="meta-line">🌐 Source: <strong>Google</strong> &bull; 📅 19 Nov 2026 &bull; ⏱️ 3 min read (659 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Sources indicate that GKE Dataplane V2 is Google Cloud’s next-generation networking dataplane for Google Kubernetes Engine (GKE), built on extended Berkeley Packet Filter (eBPF) and open-source Cilium to replace traditional iptables routing and kube-proxy.</li><li style='margin-bottom:6px;'>GKE customers consistently tell us that while they want to adopt GKE Dataplane V2 for its performance and scale, migrating production clusters carrying stateful workloads and established IP allocations has been challenging, often requiring a disruptive parallel cluster setup.</li><li style='margin-bottom:6px;'>Let’s take a look at what GKE Dataplane V2 brings to the table and how to start migrating your environment to it.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-20496"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-20496"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-20496"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing in-place migration to GKE Dataplane V2" loading="lazy" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/Networking.max-2500x2500.jpg" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-20496">The front door to AI in the workplace.</p>
+<p>Sources indicate that GKE Dataplane V2 is Google Cloud’s next-generation networking dataplane for Google Kubernetes Engine (GKE), built on extended Berkeley Packet Filter (eBPF) and open-source Cilium to replace traditional iptables routing and kube-proxy. We built GKE Dataplane V2 to meet the performance, scalability, and security demands of modern cloud-native workloads.</p>
+<p>GKE customers consistently tell us that while they want to adopt GKE Dataplane V2 for its performance and scale, migrating production clusters carrying stateful workloads and established IP allocations has been challenging, often requiring a disruptive parallel cluster setup. Today, we are pleased to introduce the preview of in-place migration, allowing you to transition eligible VPC-native clusters from GKE Dataplane V1 to GKE Dataplane V2 directly.</p>
+<p>Let’s take a look at what GKE Dataplane V2 brings to the table and how to start migrating your environment to it.</p>
+<p>Recent findings suggest that GKE Dataplane V2 is built on the extended Berkeley Packet Filter (eBPF) and open-source Cilium, with features specifically tuned for performance, scalability, and deep integration with Google Cloud networking. Consider the following capabilities:.</p>
+<p>It has been revealed that scale and performance: By handling packet processing with eBPF maps in the Linux kernel instead of linear iptables rules, GKE Dataplane V2 supports clusters of up to 15,000 nodes with network policy enforcement (and up to 65,000 nodes when network policy enforcement is disabled, which requires recreating clusters). This architecture also handles the high Pod churn, fast sandbox provisioning, and network identity scaling required by large agentic AI workloads.</p>
+<p>High-throughput accelerator networking: Serves as the foundational networking layer for GPU and Cloud TPU clusters on GKE, helping keep accelerators computing rather than waiting on network initialization. It also powers capabilities like GKE managed DRANET for Dynamic Resource Allocation (DRA) of network devices.</p>
+<p>Industry observers note that network security and observability: With GKE Dataplane V2, standard Kubernetes NetworkPolicy enforcement and hierarchical ClusterNetworkPolicy work directly in the kernel with optimized performance. GKE Dataplane V2 also provides the underlying dataplane for sidecarless GKE ambient networking, while GKE Dataplane V2 observability delivers native network policy logging, live traffic topology, and Hubble flow metrics.</p>
+<p>Instead of having to manually move workloads to a upcoming cluster, GKE now automates the transition across three stages, as described in the GKE Dataplane V2 migration guide:.</p>
+<p>1. Eligibility and preflight checks: Before starting, verify that your Pod IP ranges have enough capacity to recreate the nodes by using GKE IP address utilization insights, and check Active Assist for incompatible configurations like custom eBPF programs on managed interfaces.</p>
+<p>Recent findings suggest that 2. Initiate the migration: Once you’ve verified the preflight checks, start the migration with a single Google Cloud CLI revision command.</p>
+<p id="sec-mid-20496">To initiate the migration on an eligible cluster, run:.</p>
+<p>3. Automated rollout and finalization: GKE updates your node pools to GKE Dataplane V2 while respecting your configured maintenance windows, exclusions, and upgrade strategies. To move faster, you can also patch specific node pools manually, or roll back to GKE Dataplane V1 at any time prior to finalization.</p>
+<p>In-place migration supports VPC-native clusters running GKE 1.35 or later (see the migration guide for exact version requirements). It does not support routes-based clusters or clusters running Calico.</p>
+<p>Industry observers note that in-place migration to GKE Dataplane V2 is available now in preview. During this time, we recommend testing migrations on non-production or test clusters first as you plan your broader transition.</p>
+<p>To learn more about GKE Dataplane V2 and to get started:.</p>
+<p>Review cluster eligibility and migration phases in About migrating to GKE Dataplane V2.</p>
+<p>Follow the instructions in Migrate VPC-native clusters to GKE Dataplane V2.</p>
+<p>Read GKE Network Interface, from kubenet to eBPF/Cilium to DRANET for background on the evolution of GKE CNIs.</p>
+<p>Explore GKE networking dataplane for large agentic AI workloads to see how Dataplane V2 scales for large AI clusters.</p>
+<p>By Whitney Jenkins • 3-minute read.</p>
+<p id="sec-end-20496">By Himanshu Mehra • 3-minute read.</p>
+<p style="margin-top: 25px;">
+<a href="https://cloud.google.com/blog/products/networking/gke-dataplane-v2-in-place-migration/" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="introducing-ambient-networking-for-gke-20410.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #20410. Introducing ambient networking for GKE
+        </a>
+        
+        <a href="breaking-introducing-chatgpt-agent-21731.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21731. Breaking: Introducing ChatGPT agent
+        </a>
+        
+        <a href="introducing-study-mode-in-chatgpt-21721.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21721. Introducing study mode in ChatGPT
+        </a>
+        
+        <a href="breaking-introducing-stargate-norway-21719.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21719. Breaking: Introducing Stargate Norway
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

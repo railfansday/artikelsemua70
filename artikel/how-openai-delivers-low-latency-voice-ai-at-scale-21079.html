@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How OpenAI delivers low-latency voice AI at scale</title>
+    <meta name="description" content="By Yi Zhang and William McDonald, Members of Technical Staff. Voice AI only feels natural if conversation moves at the speed of speech. When the network ge">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-openai-delivers-low-latency-voice-ai-at-scale-21079.html">
+    <meta property="og:title" content="How OpenAI delivers low-latency voice AI at scale">
+    <meta property="og:description" content="By Yi Zhang and William McDonald, Members of Technical Staff. Voice AI only feels natural if conversation moves at the speed of speech. When the network ge">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5LQivcsFcndtRl4EsbtnOC/c548a54b9bbe11c0b4d9de714f800b30/Voice_AI___SEO_card.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-openai-delivers-low-latency-voice-ai-at-scale-21079.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How OpenAI delivers low-latency voice AI at scale", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5LQivcsFcndtRl4EsbtnOC/c548a54b9bbe11c0b4d9de714f800b30/Voice_AI___SEO_card.png?w=1600&h=900&fit=fill"], "datePublished": "2026-05-04T00:00:00", "dateModified": "2026-11-22T06:24:49.163131", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-openai-delivers-low-latency-voice-ai-at-scale-21079.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How OpenAI delivers low-latency voice AI at scale</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 04 May 2026 &bull; ⏱️ 14 min read (2875 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>By Yi Zhang and William McDonald, Members of Technical Staff.</li><li style='margin-bottom:6px;'>Voice AI only feels natural if conversation moves at the speed of speech.</li><li style='margin-bottom:6px;'>At OpenAI’s scale, that translates into three concrete requirements:.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-21079"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-21079"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-21079"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How OpenAI delivers low-latency voice AI at scale" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5LQivcsFcndtRl4EsbtnOC/c548a54b9bbe11c0b4d9de714f800b30/Voice_AI___SEO_card.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-21079">By Yi Zhang and William McDonald, Members of Technical Staff.</p>
+<p>Voice AI only feels natural if conversation moves at the speed of speech. When the network gets in the way, people hear it immediately as awkward pauses, clipped interruptions, or delayed barge-in. That matters for ChatGPT voice, for developers building with the Realtime API, for agents working in interactive workflows, and for models that need to process audio while a user is still talking.</p>
+<p>At OpenAI’s scale, that translates into three concrete requirements:.</p>
+<p>Global reach for more than 900 million weekly active owners.</p>
+<p>Fast connection setup so a user can start speaking as soon as a session begins.</p>
+<p>Low and stable media round-trip time, with low jitter and packet loss, so turn-taking feels crisp.</p>
+<p>It has been revealed that the team at OpenAI responsible for real-time AI interactions recently rearchitected our WebRTC stack to address three constraints that started to collide at scale: one-port-per-session media termination does not fit OpenAI infrastructure well, stateful ICE (Interactive Connectivity Establishment) and DTLS (Datagram Transport Layer Security) sessions need stable ownership, and global routing has to keep first-hop latency low. In this post, we walk through the split relay plus transceiver architecture we built to preserve standard WebRTC behavior for clients while changing how packets are routed inside OpenAI’s infrastructure.</p>
+<p>WebRTC is an open standard for sending low-latency audio, video, and data between browsers, mobile apps, and servers. It’s often associated with peer-to-peer calling, but it’s also a practical foundation for client-to-server real-time systems because it standardizes the hard parts of interactive media: ICE for connectivity establishment and NAT (Network Address Translation) traversal, DTLS and SRTP (Secure Real-time Transport Protocol) for encrypted transport, codec negotiation for compressing and decoding audio, RTCP (Real-time Transport Control Protocol) for quality control, and client-side features such as echo cancellation and jitter buffering.</p>
+<p>Sources indicate that that standardization matters for AI products. Without WebRTC, every client would need a different answer for how to establish connectivity across NATs, encrypt media, negotiate codecs (the coder-decoders selected for transmission and decompression) and adapt to changing network conditions. With WebRTC, we can build on a protocol stack that’s already implemented across browsers and mobile platforms, focusing our own work on the infrastructure that connects real-time media to models.</p>
+<p>We also build on the WebRTC ecosystem itself, including mature open-source implementations and the standard work that keeps browsers, mobile apps, and servers interoperable. Foundational work by Justin Uberti (one of WebRTC’s original architects) and Sean DuBois (creator and maintainer of Pion) made it possible for teams like ours to build on battle-tested media infrastructure rather than reinvent low-level transport, encryption, and congestion-control behavior. We’re fortunate that both Justin and Sean are now colleagues here at OpenAI, helping guide how we bring WebRTC and real-time AI closer together.</p>
+<p>In a recent development, for AI, the most crucial property is that audio arrives as a continuous stream. A spoken agent can begin transcribing, reasoning, calling tools, or generating speech while the user is still talking, instead of waiting for a full upload. That’s the difference between a system that feels conversational and one that feels like push-to-talk.</p>
+<p>According to recent reports, once we chose WebRTC, the next question was where to terminate it (where we’d accept and own the WebRTC connection—for example, at the edge) and how to connect those sessions to the inference backend. Termination matters because it determines how we handle real-time session state, media transport, routing, latency, and failure isolation.</p>
+<p>Recent findings suggest that an SFU, or selective forwarding unit, is a media server that receives one WebRTC stream from each participant and selectively forwards streams to the others. In this model, the SFU terminates a separate WebRTC connection for every participant, and the AI joins as another participant in the session. That can be a good fit for products that are inherently multiparty, such as group calls, classrooms, or collaborative meetings. It keeps audio codecs, RTCP messages, data channels, recording, and per-stream policy in one place.1.</p>
+<p>Even in client-to-AI products, an SFU is often the default starting point because it lets teams reuse one proven system for signaling, media routing, recording, observability, and future extensions such as human handoff or adding more participants.</p>
+<p>It has been revealed that our workload is different. Most sessions are 1:1—one user talking to one model, or one application talking to one real-time agent—with latency sensitivity on every turn. For that shape of traffic, we chose a transceiver model: a WebRTC edge service terminates the client connection and then converts media and events into simpler internal protocols for model inference, transcription, speech generation, tool use, and orchestration.</p>
+<p>In this design, the transceiver is the only service that owns the WebRTC session state, including ICE connectivity checks, the DTLS handshake, SRTP encryption keys, and session lifecycle. “Termination” here means the transceiver is the endpoint that completes those handshakes and encrypts or decrypts the media. Keeping that state in one place made session ownership easier to reason about, and it let backend services scale like ordinary services instead of acting as WebRTC peers themselves.</p>
+<p>After choosing the transceiver model, our first implementation was a single Go service built on Pion that handled both signaling and media termination. It powers ChatGPT voice, the Realtime API’s WebRTC endpoint, and a number of research projects.</p>
+<p>Operationally, the transceiver service does two jobs:.</p>
+<p>Signaling: SDP negotiation, codec selection, ICE credentials, and session setup.</p>
+<p>Media: Terminating downstream WebRTC connections and maintaining upstream connections to backend services for inference and orchestration.</p>
+<p>It has been revealed that we wanted the service to run like the rest of our infrastructure: on Kubernetes, where workloads can scale up and down, and move across hosts as demand changes. But the conventional one-port-per-session WebRTC model fits that environment poorly, because it depends on large public UDP port ranges that are difficult to expose, secure, and preserve as pods are added, removed, or rescheduled.2.</p>
+<p>According to recent reports, the first problem was the one-port-per-session model itself. At high concurrency, that means exposing and managing very large UDP port ranges.</p>
+<p>Cloud load balancers and Kubernetes services are not designed around tens of thousands of public UDP ports per service. Each additional range adds operational complexity in load balancer config, health checking, firewall policy, and rollout safety.3.</p>
+<p>Large UDP port ranges are hard to secure because they expand the externally reachable surface area and make network policy harder to audit.</p>
+<p>They’re also a poor fit for autoscaling. Pods are constantly added, removed, and rescheduled in Kubernetes. Requiring each pod to reserve and advertise a large stable port range makes that elasticity brittle.4.</p>
+<p>This is why many WebRTC systems move toward a single UDP port per server, with application-level demultiplexing behind that port.5.</p>
+<p>Single-port-per-server designs solve port count, but they introduce a second problem: preserving ownership of each session across a fleet.</p>
+<p>ICE and DTLS are stateful protocols. The process that created a session needs to keep receiving that session’s packets so it can validate connectivity checks, complete the DTLS handshake, decrypt SRTP, and process later session changes such as ICE restarts. If packets for the same session land on a different process, setup can fail or media can break.</p>
+<p>That gave us a specific target: expose a small, fixed UDP surface to the public internet, while still routing every packet to the transceiver that owns the corresponding WebRTC session.</p>
+<p>We evaluated several ways to get there, including TURN (Traversal Using Relays around NAT), where an edge relay terminates client allocations and forwards traffic on their behalf.2.</p>
+<p>Unique IP:port per session (also known as native direct UDP).</p>
+<p>Direct client-to-server media path.</p>
+<p>No forwarding layer in the data path.</p>
+<p>Requires one public UDP port per session.</p>
+<p>Large port ranges are difficult to expose and secure.</p>
+<p>Poor fit for Kubernetes and cloud load balancers.</p>
+<p>Much smaller public UDP footprint than per-session exposure.</p>
+<p>One shared socket per server can demultiplex many sessions.</p>
+<p>Works cleanly on a single host, but not across a shared load-balanced fleet by itself.</p>
+<p>Session demultiplexing on a single host only helps after a packet reaches that host; across a load-balanced fleet, the first packet can still land on the wrong instance, so you still need a deterministic way to steer each session to the process that owns it.</p>
+<p>TURN relay (protocol-terminating).</p>
+<p id="sec-mid-21079">Clients only need to reach the TURN relay address and port.</p>
+<p>Can centralize policy at the edge.</p>
+<p>TURN allocations add setup round trips.</p>
+<p>Moving or recovering allocations across TURN servers is still difficult.</p>
+<p>Stateless forwarder + stateful terminator (OpenAI’s relay + transceiver).</p>
+<p>Transceiver still owns the full WebRTC session.</p>
+<p>Adds one forwarding hop before media reaches the owning transceiver.</p>
+<p>Requires custom coordination between relay and transceiver.</p>
+<p>It has been revealed that the architecture we shipped splits packet routing from protocol termination. Signaling still reaches the transceiver for session setup, while media enters through the relay first. The relay is a lightweight UDP forwarding layer with a small public footprint, and the transceiver is the stateful WebRTC endpoint behind it.</p>
+<p>Industry observers note that the relay does not decrypt media, run ICE state machines, or participate in codec negotiation. It reads enough packet metadata to choose a destination, then forwards the packet to the transceiver that owns the session. The transceiver still sees a normal WebRTC flow and still owns all protocol state. From the client’s perspective, nothing about the WebRTC session changes.</p>
+<p>Sources indicate that first-packet routing is the key step in this setup. A relay has to route the first packet from a client before any session exists on the packet path itself rather than by pausing on an external lookup service.</p>
+<p>Recent findings suggest that every WebRTC session already carries a protocol-native routing hook: the ICE username fragment, or ufrag, a short identifier exchanged during session setup and echoed in STUN connectivity checks. We generate the server-side ufrag so it contains just enough routing metadata for relay to infer the destination cluster and owning transceiver.</p>
+<p>Sources indicate that during signaling, the transceiver allocates session state and returns a shared relay VIP and UDP port in the SDP answer. A VIP is a virtual IP address fronting the relay fleet; combined with the port, it gives the client a single stable destination, such as `203.0.113.10:3478`, even though many relay instances sit behind it. The client’s first media-path packet is usually a STUN (Session Traversal Utilities for NAT) binding request, which ICE uses to verify that packets can reach the advertised address.</p>
+<p>According to recent reports, relay parses just enough of that first STUN packet to read the server ufrag, decode the routing hint, and forward the packet to the owning transceiver. Each transceiver listens on a shared UDP socket, meaning one operating system endpoint bound to an internal IP:port, not one socket per session. After the relay creates a session from the client’s source IP:port to that transceiver destination, subsequent DTLS, RTP, and RTCP packets flow within the session without re-decoding the ufrag.</p>
+<p>Industry observers note that the relay’s session is purposefully minimal, consisting only of an in-memory session to inform packet forwarding, along with necessary counters for monitoring and timers for session expiration and cleanup. This design choice maintains packet routing directly on the packet path. If a relay restarts and loses the session, the next STUN packet rebuilds the session from the ufrag routing hint. To make it even more reliable, a Redis cache is employed to hold the mapping of  once the route is established so that it can be recovered much earlier, before the next STUN packet arrives.</p>
+<p>Once we reduced the public UDP surface to a small number of stable addresses and ports, we could deploy the same relay pattern globally. Global Relay is our fleet of geographically distributed relay ingress points that all implement the same packet-forwarding behavior.</p>
+<p>It has been revealed that broad geographic ingress shortens the first client-to-OpenAI hop because a packet can enter our network at a relay close to the user, in both geography and network topology, instead of crossing the public internet to a distant region first. In practical terms, that means lower latency, less jitter, and fewer avoidable loss bursts before traffic reaches our backbone.6.</p>
+<p>Industry observers note that we use Cloudflare geo and proximity steering for signaling so the initial HTTP or WebSocket request reaches a nearby transceiver cluster. The request context dictates the session’s location and which Global Relay ingress point is advertised to the client. The SDP answer provides the Global Relay address, while the ufrag contains sufficient information for Global Relay to route media to the designated cluster and relay to route to the destination transceiver.</p>
+<p>Recent findings suggest that together, geo-steered signaling and Global Relay put both setup and media on a nearby entry path while keeping the session anchored to one transceiver. That reduces the round-trip time for signaling and for the first ICE connectivity check, which directly shortens how long a user waits before speech can start.</p>
+<p>We wrote the relay service in Go and kept the implementation narrow on purpose. On Linux, the kernel’s networking stack receives UDP packets from the machine’s network interface and delivers them to a socket, the operating system endpoint that a process reads after binding an IP:Port. Relay runs in userspace, so a regular Go process reads packet headers from that socket, updates a small amount of flow state, and forwards packets without terminating WebRTC. We did not need any kernel-bypass framework, which would let a userspace process poll network queues directly for higher packet rates but also add operational complexity.</p>
+<p>No protocol termination: Relay parses only STUN headers/ufrag; it uses cached state for subsequent DTLS, RTP, and RTCP, keeping packets opaque.</p>
+<p>Ephemeral state: It maintains a small, short-timeout, in-memory map of client address to transceiver destination for flow state and observability.</p>
+<p>In a recent development, horizontal scalability: Multiple relay instances run in parallel behind a load balancer. State is not hard WebRTC state, so restarts cause minimal traffic drops and quick flow recovery.</p>
+<p>Recent findings suggest that SO_REUSEPORT is a Linux socket option that allows multiple relay workers on the same machine to bind the same UDP port. The kernel then distributes incoming packets across those workers, which avoids a single read-loop bottleneck.</p>
+<p>runtime.LockOSThread pins each UDP-reading goroutine to a specific OS thread. Combined with SO_REUSEPORT, that tends to keep packets from the same flow (the source and destination IP:Port plus protocol) on the same CPU core, improving cache locality and reducing context switching.</p>
+<p>Pre-allocated buffers and minimal copying keep parsing and allocation overhead low to avoid garbage collection in Go.</p>
+<p>This implementation handled our global real-time media traffic with a relatively small relay footprint, so we kept the simpler design instead of taking on a kernel bypass route.</p>
+<p>It has been revealed that this architecture lets us run WebRTC media in Kubernetes without exposing thousands of UDP ports. That matters because a smaller and fixed UDP surface is easier to secure and load balance, and it lets the infrastructure scale without reserving large public port ranges. With better infra support from Kubernetes and more security due to smaller surface area, this design also preserves standard WebRTC behavior for clients and confirms that an SFU-less design was the right default for our workload. Most of our sessions are point-to-point, latency-sensitive, and easier to scale when inference services don’t need to behave like WebRTC peers.</p>
+<p>In a recent development, the broader lesson is that the best place to add complexity is in a thin routing layer, not in every backend service, and not in custom client behavior. Encoding routing metadata into a protocol-native field gave us deterministic first-packet routing, a small public UDP footprint, and enough flexibility to place ingress close to customers around the world.</p>
+<p>A few choices were especially vital:.</p>
+<p>In a recent development, preserve protocol semantics at the edge. Clients still speak standard WebRTC, which keeps browser and mobile interoperability intact.</p>
+<p>Recent findings suggest that keep hard session states in one place. Transceiver owns ICE, DTLS, SRTP, and session lifecycle; relay only forwards packets.</p>
+<p>Route on information already present in setup. The ICE ufrag gave us a first-packet routing hook without adding a hot-path lookup dependency.</p>
+<p>According to recent reports, optimize for the common case before reaching for kernel bypass. A narrow Go implementation with careful use of SO_REUSEPORT, thread pinning, and low-allocation parsing was enough for our workload.</p>
+<p>Real-time voice AI only works when infrastructure makes latency feel invisible. For us, that meant changing the shape of our WebRTC deployment without changing what clients expect from WebRTC itself.</p>
+<p>Industry observers note that 1. How Discord Handles Two and Half Million Concurrent Voice Customers using WebRTC⁠(opens in a latest window).</p>
+<p>2. GitHub - l7mp/stunner: A Kubernetes media gateway for WebRTC⁠(opens in a new window).</p>
+<p>It has been revealed that 3. WebRTC Ports in a nutshell [Examples] - BlogGeek.me⁠(opens in a newly introduced window).</p>
+<p>Industry observers note that 4. Deploy to Kubernetes - LiveKit docs⁠(opens in a new window).</p>
+<p>According to recent reports, 5. Use only a single UDP port instead a substantial port range for media connection - mediasoup⁠(opens in a new window).</p>
+<p id="sec-end-21079">Recent findings suggest that 6. Cloudflare Calls: millions of cascading trees all the way down⁠(opens in a newly introduced window).</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/delivering-low-latency-voice-ai-at-scale" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="build-low-latency-multilingual-voice-agents-open-weights-full-dep-20528.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #20528. Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS
+        </a>
+        
+        <a href="latest-update-openai-partners-with-scale-to-provide-support-for-e-19623.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19623. Latest Update: OpenAI partners with Scale to provide support for enterprises fine-tuning models
+        </a>
+        
+        <a href="personalizing-travel-at-scale-with-openai-19375.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19375. Personalizing travel at scale with OpenAI
+        </a>
+        
+        <a href="assisted-generation-a-new-direction-toward-low-latency-text-gener-18963.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #18963. Assisted Generation: a new direction toward low-latency text generation
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

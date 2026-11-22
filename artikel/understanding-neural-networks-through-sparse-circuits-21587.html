@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding neural networks through sparse circuits</title>
+    <meta name="description" content="We trained models to think in simpler, more traceable steps—so we can better understand how they work. Sources indicate that ​​Neural networks power today’">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/understanding-neural-networks-through-sparse-circuits-21587.html">
+    <meta property="og:title" content="Understanding neural networks through sparse circuits">
+    <meta property="og:description" content="We trained models to think in simpler, more traceable steps—so we can better understand how they work. Sources indicate that ​​Neural networks power today’">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/2RB1AxHNYdAFCN2CDPxlwv/86f61efe5420d7a7daaa6e0e17a0adf3/IT_Blog_SEO_Art_Card_16x9__1_.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/understanding-neural-networks-through-sparse-circuits-21587.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Understanding neural networks through sparse circuits", "image": ["https://images.ctfassets.net/kftzwdyauwt9/2RB1AxHNYdAFCN2CDPxlwv/86f61efe5420d7a7daaa6e0e17a0adf3/IT_Blog_SEO_Art_Card_16x9__1_.png?w=1600&h=900&fit=fill"], "datePublished": "2025-11-13T10:00:00", "dateModified": "2026-11-22T06:25:36.366708", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/understanding-neural-networks-through-sparse-circuits-21587.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Understanding neural networks through sparse circuits</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 13 Nov 2025 &bull; ⏱️ 7 min read (1372 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We trained models to think in simpler, more traceable steps—so we can better understand how they work.</li><li style='margin-bottom:6px;'>Sources indicate that ​​Neural networks power today’s most capable AI systems, but they remain difficult to understand.</li><li style='margin-bottom:6px;'>As AI systems become more capable and have real-world impact on decisions in science, education, and healthcare, understanding how they work is essential.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-21587"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-21587"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-21587"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Understanding neural networks through sparse circuits" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/2RB1AxHNYdAFCN2CDPxlwv/86f61efe5420d7a7daaa6e0e17a0adf3/IT_Blog_SEO_Art_Card_16x9__1_.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-21587">We trained models to think in simpler, more traceable steps—so we can better understand how they work.</p>
+<p>Sources indicate that ​​Neural networks power today’s most capable AI systems, but they remain difficult to understand. We don’t write these models with explicit, step-by-step instructions. Instead, they learn by adjusting billions of internal connections, or “weights,” until they master a task. We design the rules of training, but not the specific behaviors that emerge, and the result is a dense web of connections that no human can easily decipher.</p>
+<p>As AI systems become more capable and have real-world impact on decisions in science, education, and healthcare, understanding how they work is essential. Interpretability refers to methods that help us understand why a model produced a given output. There are many ways we might achieve this.</p>
+<p>According to recent reports, for example, reasoning models are incentivized to explain their work on the way to a final answer. Chain of thought interpretability leverages these explanations to monitor the model’s behavior. This is immediately useful: current reasoning models’ chains of thought seem to be informative with respect to concerning behaviors like deception. However, fully relying on this property is a brittle strategy, and this may break down over time.</p>
+<p>On the other hand, mechanistic interpretability, which is the focus of this work, seeks to completely reverse engineer a model’s computations. It has so far been less immediately useful, but in principle, could offer a more complete explanation of the model’s behavior. By seeking to explain model behavior at the most granular level, mechanistic interpretability can make fewer assumptions and give us more confidence. But the path from low-level details to explanations of complex behaviors is much longer and more difficult.</p>
+<p>Recent findings suggest that interpretability supports several key goals, for example enabling better oversight and providing early warning signs of unsafe or strategically misaligned behavior. It also complements our other safety efforts, such as scalable oversight, adversarial training, and red-teaming.</p>
+<p>In a recent development, in this work, we show that we can often train models in ways that make them easier to interpret. We see our work as a promising complement to post-hoc analysis of dense networks.</p>
+<p>This is a very ambitious bet; there is a long path from our work to fully understanding the complex behaviors of our most powerful models. Still, for simple behaviors, we find that sparse models trained with our method contain small, disentangled circuits that are both understandable and sufficient to perform the behavior. This suggests there may be a tractable path toward training larger systems whose mechanisms we can understand.</p>
+<p>Previous mechanistic interpretability work has started from dense, tangled networks, and tried to untangle them. In these networks, each individual neuron is connected to thousands of other neurons. Most neurons seem to perform many distinct functions, making it seemingly impossible to understand.</p>
+<p>Recent findings suggest that but what if we trained untangled neural networks, with many more neurons, but where each neuron has only a few dozen connections? Then maybe the resulting network will be simpler, and easier to understand. This is the central research bet of our work.</p>
+<p>Recent findings suggest that with this principle in mind, we trained language models with a very similar architecture to existing language models like GPT‑2, with one small modification: we force the vast majority of the model’s weights to be zeros. This constrained the model to use only very few of the possible connections between its neurons. This is a simple change which we argue substantially disentangles the model’s internal computations.</p>
+<p>In a recent development, in normal dense neural networks, each neuron is connected to every neuron in the next layer. In our sparse models, each neuron only connects to a few neurons in the next layer. We hope that this makes the neurons, and the network as a whole, easier to understand.</p>
+<p>According to recent reports, we wish to measure the extent to which our sparse models’ computations are disentangled. We considered various simple model behaviors, and checked whether we could isolate the parts of the model responsible for each behavior—which we term circuits.</p>
+<p id="sec-mid-21587">According to recent reports, we hand-curated a suite of simple algorithmic tasks. For each, we pruned the model down to the smallest circuit that can still perform the task, and examined how simple that circuit is. (For details, see our paper⁠(opens in a new window).) We found that by training bigger and sparser models, we could produce increasingly capable models with increasingly simple circuits.</p>
+<p>Recent findings suggest that we plot interpretability versus capability across models (lower-left is better). For a fixed sparse model size, increasing sparsity—setting more weights to zero—reduces capability but increases interpretability. Scaling up model size shifts this frontier outward, suggesting we can build larger models that are both capable and interpretable.</p>
+<p>It has been revealed that to make this concrete, consider a task where a model trained on Python code has to complete a string with the correct type of quote. In Python, ‘hello’ must end with a single quote, and “hello” must end with a double quote. The model can solve this by remembering which quote type opened the string and reproducing it at the end.</p>
+<p>Our most interpretable models appear to contain disentangled circuits which implement exactly that algorithm.</p>
+<p>Industry observers note that example circuit in a sparse transformer that predicts whether to end a string in a single or double quote. This circuit uses just five residual channels (vertical gray lines), two MLP neurons in layer 0, and one attention query-key channel and one value channel in layer 10. The model (1) encodes single quotes in one residual channel and double quotes in another; (2) uses an MLP layer to convert this into one channel that detects any quote and another that classifies between single and double quotes; (3) uses an attention operation to ignore intervening tokens, find the previous quote, and copy its type to the final token; and (4) predicts the matching closing quote.</p>
+<p>It has been revealed that in our definition, the exact connections shown above are sufficient to perform the task—if we remove the rest of the model, this small circuit still works. They are also necessary–deleting these few edges causes the model to fail.</p>
+<p>Industry observers note that we also looked at some more complicated behaviors. Our circuits for these behaviors (for example variable binding shown below) are harder to explain completely. Even then, we can still achieve relatively simple partial explanations which are predictive of model behavior.</p>
+<p>Sources indicate that another example circuit, in less detail. To determine the type of a variable called current, one attention operation copies the variable name into the set() token when it’s defined, and another later operation copies the type from the set() token into a subsequent use of the variable, allowing the model to infer the correct next token.</p>
+<p>This work is an early step toward a larger goal: making model computations easier to understand. But, there’s still a long way to go. Our sparse models are much smaller than frontier models, and large parts of their computation remain uninterpreted.</p>
+<p>It has been revealed that next, we hope to scale our techniques to larger models, and to explain more of the models’ behavior. By enumerating circuit motifs underlying more complex reasoning in capable sparse models, we could develop an understanding that helps us better target investigations of frontier models.</p>
+<p>Recent findings suggest that to overcome the inefficiency of training sparse models, we see two paths forward. One is to extract sparse circuits from existing dense models, rather than training sparse models from scratch. Dense models are fundamentally more efficient to deploy than sparse models. The other path is to develop more efficient techniques to train models for interpretability, which might be easier to put in production.</p>
+<p>Note that our findings here are no guarantee that this approach will extend to more capable systems, but these early results are promising. Our aim is to gradually expand how much of a model we can reliably interpret, and to build tools that make future systems easier to analyze, debug, and evaluate.</p>
+<p id="sec-end-21587">In a recent development, leo Gao, Achyuta Rajaram, Jacob Coxon, Soham V. Govande, Bowen Baker, Dan Mossing.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/understanding-neural-networks-through-sparse-circuits" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="learning-sparse-neural-networks-through-l-regularization-19819.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19819. Learning sparse neural networks through L₀ regularization
+        </a>
+        
+        <a href="weight-normalization-a-simple-reparameterization-to-accelerate-tr-19886.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19886. Weight normalization: A simple reparameterization to accelerate training of deep neural networks
+        </a>
+        
+        <a href="stochastic-neural-networks-for-hierarchical-reinforcement-learnin-19848.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19848. Stochastic Neural Networks for hierarchical reinforcement learning
+        </a>
+        
+        <a href="breaking-multimodal-neurons-in-artificial-neural-networks-19717.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19717. Breaking: Multimodal neurons in artificial neural networks
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

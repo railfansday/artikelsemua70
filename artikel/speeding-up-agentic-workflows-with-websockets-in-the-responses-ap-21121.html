@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speeding up agentic workflows with WebSockets in the Responses API</title>
+    <meta name="description" content="By Brian Yu and Ashwin Nathan, Members of the Technical Staff. According to recent reports, when you ask Codex to fix a bug, it scans through your codebase">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/speeding-up-agentic-workflows-with-websockets-in-the-responses-ap-21121.html">
+    <meta property="og:title" content="Speeding up agentic workflows with WebSockets in the Responses API">
+    <meta property="og:description" content="By Brian Yu and Ashwin Nathan, Members of the Technical Staff. According to recent reports, when you ask Codex to fix a bug, it scans through your codebase">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/4OePmYEOLzZNcxVLLd9pMH/cc16f505aa589ef72ef3c1c265705727/SEO.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/speeding-up-agentic-workflows-with-websockets-in-the-responses-ap-21121.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Speeding up agentic workflows with WebSockets in the Responses API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/4OePmYEOLzZNcxVLLd9pMH/cc16f505aa589ef72ef3c1c265705727/SEO.png?w=1600&h=900&fit=fill"], "datePublished": "2026-04-22T10:00:00", "dateModified": "2026-11-22T06:24:52.619962", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/speeding-up-agentic-workflows-with-websockets-in-the-responses-ap-21121.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Speeding up agentic workflows with WebSockets in the Responses API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 22 Apr 2026 &bull; ⏱️ 7 min read (1427 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>By Brian Yu and Ashwin Nathan, Members of the Technical Staff.</li><li style='margin-bottom:6px;'>According to recent reports, when you ask Codex to fix a bug, it scans through your codebase for relevant files, reads them to build context, makes edits, and runs tests to verify the fix worked.</li><li style='margin-bottom:6px;'>Recent findings suggest that all of these requests can add up to minutes that consumers spend waiting for Codex to complete complex tasks.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-21121"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-21121"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-21121"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Speeding up agentic workflows with WebSockets in the Responses API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/4OePmYEOLzZNcxVLLd9pMH/cc16f505aa589ef72ef3c1c265705727/SEO.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-21121">By Brian Yu and Ashwin Nathan, Members of the Technical Staff.</p>
+<p>According to recent reports, when you ask Codex to fix a bug, it scans through your codebase for relevant files, reads them to build context, makes edits, and runs tests to verify the fix worked. Under the hood, that means dozens of back-and-forth Responses API requests: determine the model’s next action, run a tool on your computer, send the tool output back to the API, and repeat.</p>
+<p>Recent findings suggest that all of these requests can add up to minutes that consumers spend waiting for Codex to complete complex tasks. From a latency perspective, the Codex agent loop spends most of its time in three main stages: working in the API services (to validate and process requests), model inference, and client-side time (running tools and building model context). Inference is the stage where the model runs on GPUs to generate newly introduced tokens. In the past, running LLM inference on GPUs was the slowest part of the agentic loop, so API service overhead was easy to hide. As inference gets faster, the cumulative API overhead from an agentic rollout is much more notable.</p>
+<p>In this post, we'll explain how we made agent loops using the API 40% faster end-to-end, letting users experience the jump in inference speed from 65 to nearly 1,000 tokens per second. We approached this through caching, eliminating unnecessary network hops, improving our safety stack to quickly flag challenges, and—most importantly—building a way to create a persistent connection to the Responses API, instead of having to make a series of synchronous API calls.</p>
+<p>Industry observers note that in the Responses API, previous flagship models like GPT‑5 and GPT‑5.2 ran at roughly 65 tokens per second (TPS). For the launch of GPT‑5.3‑Codex‑Spark, a fast coding model, our goal was an order of magnitude faster: over 1,000 TPS, enabled by specialized Cerebras hardware optimized for LLM inference. To make sure owners could experience the true speed of this newly introduced model, we had to reduce API overhead.</p>
+<p>Around November of 2025, we rolled out a performance sprint on the Responses API, landing many optimizations to the critical-path latency for a single request:.</p>
+<p>Caching rendered tokens and model configuration in memory to skip expensive tokenization and network calls for multi-turn responses.</p>
+<p>Reducing network hop latency by eliminating calls to intermediate services (for example, image processing resolution) and directly calling the inference service itself.</p>
+<p>Improving our safety stack so we could run certain classifiers to flag conversations faster.</p>
+<p>With these improvements, we saw close to a 45% improvement in time to first token (TTFT)—which reflects how responsive the API feels—but these improvements were still not fast enough for GPT‑5.3‑Codex‑Spark. Even with these improvements, Responses API overhead was too large relative to the speed of the model—that is, people had to wait for the CPUs running our API before they could use the GPUs serving the model.</p>
+<p>It has been revealed that the deeper issue was structural: we treated each Codex request as independent, processing conversation state and other reusable context in every follow-up request. Even when most of the conversation hadn't changed, we still paid for work tied to the full history. As conversations got longer, that repeated processing became more expensive.</p>
+<p>To tighten up the design, we rethought the transport protocol: could we keep a persistent connection and cache state, rather than establishing a fresh connection over HTTP and sending the full conversation history for each follow-up request? The idea was to only send any new information requiring validation and processing and cache reusable state in memory for the lifetime of the connection. This would reduce overhead from redundant work.</p>
+<p>In a recent development, we considered a few different approaches, including WebSockets and gRPC bidirectional streaming. We landed on WebSockets because as a simple message transport protocol, customers wouldn't have to change their Responses API input and output shapes. It was developer-friendly and fit our existing architecture with little disruption.</p>
+<p>Industry observers note that the first WebSocket prototype changed what we thought was possible for Responses API latency. An engineer on the Codex team with deep expertise across the API stack pulled together a prototype by running a Codex agent overnight.</p>
+<p>Recent findings suggest that in that prototype, agentic rollouts were modeled as a single long-running Response. Using asyncio features, the Responses API would asynchronously block in the sampling loop after a tool call was sampled, and the Responses API would send a response.done event back to the client. After executing the tool call, clients would send back a response.append event with the tool result, which unblocked the sampling loop and let the model continue.</p>
+<p>Industry observers note that an analogy here is treating the local tool call as a hosted tool call. When the model calls web search, the inference loop blocks, calls a web search service, and puts the service response in the model context. In our design, we did the same thing; but instead of calling a remote service, we sent the model's tool call to the client back over the WebSocket. When the client responded, we put the client's tool call response into the context and continued to sample.</p>
+<p>In a recent development, this design was extremely effective because it eliminated repeated API work across an agent rollout. We could do preinference work once, pause for tool execution, and do postinference work once at the end.</p>
+<p>It has been revealed that unfortunately, this came at the cost of a less familiar and more complicated API shape. We wanted developers to be able to drop in WebSocket support without having to rewrite their API integration around a new interaction mode.</p>
+<p id="sec-mid-21121">For the version we released, we switched back to a familiar shape: keep using response.create with the same body, and use previous_response_id to continue the conversation context from the previous response’s state.</p>
+<p>Sources indicate that on a WebSocket connection, the server keeps a connection-scoped, in-memory cache of previous response state. When a follow-up response.create includes previous_response_id, we fetch that state from the cache instead of rebuilding the full conversation from scratch.</p>
+<p>Tool definitions and namespaces.</p>
+<p>Reusable sampling artifacts, like previously rendered tokens.</p>
+<p>By reusing the in-memory previous response state, we were able to land several major optimizations:.</p>
+<p>Making some of our safety classifiers and request validators process only fresh input, not the full history every time.</p>
+<p>Keeping an in-memory cache of rendered tokens that we append to so we can skip unnecessary tokenization.</p>
+<p>Reusing our successful model resolution/routing logic across requests.</p>
+<p>Overlapping non-blocking postinference work like billing with subsequent requests.</p>
+<p>The goal was to get as close as possible to the minimal-overhead prototype but with an API shape developers already understood and built around.</p>
+<p>Industry observers note that after a two-month sprint building WebSocket mode, we launched an alpha with key coding agent startups so they could integrate it into their infrastructure and safely ramp up traffic. Alpha customers loved it, reporting up to 40% improvements⁠(opens in a new window) in their agentic workflows. Given the positive alpha feedback, we were ready to launch.</p>
+<p>The launch results were immediate. Codex quickly ramped up the majority of their Responses API traffic onto WebSocket mode, seeing significant latency improvements. For GPT‑5.3‑Codex‑Spark, we hit our 1,000 TPS target and saw bursts up to 4,000 TPS, showing that the Responses API could keep up with much faster inference in real production traffic. The impact showed up quickly in the developer community too:.</p>
+<p>According to recent reports, codex quickly ramped the majority of their traffic onto WebSockets. Codex users running the latest models such as GPT‑5.3‑Codex⁠(opens in a upcoming window), GPT‑5.4⁠(opens in a new window), and beyond all benefit from WebSocket mode’s speed up.</p>
+<p>Vercel integrated WebSocket mode into the AI SDK and saw latency decrease by up to 40%⁠(opens in a new window).</p>
+<p>Cline’s multi-file workflows are 39% faster⁠(opens in a new window).</p>
+<p>OpenAI models in Cursor became up to 30% faster⁠(opens in a new window).</p>
+<p>WebSocket mode is the one of the most significant new capabilities in the Responses API since its launch in March 2025. We went from idea to running in production in just a few weeks through close collaboration between OpenAI's API and Codex teams. It not only dramatically improves agent rollout latency but also supports a growing need for builders: as model inference gets faster, the services and systems that surround inference also need to speed up to transfer these gains to users.</p>
+<p id="sec-end-21121">Special thanks to the Responses API and Codex teams, who worked on creating WebSocket mode.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/speeding-up-agentic-workflows-with-websockets" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="industry-news-consensus-accelerates-research-with-gpt-5-and-respo-21618.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21618. Industry News: Consensus accelerates research with GPT-5 and Responses API
+        </a>
+        
+        <a href="from-model-to-agent-equipping-the-responses-api-with-a-computer-e-21262.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21262. From model to agent: Equipping the Responses API with a computer environment
+        </a>
+        
+        <a href="enterprises-power-agentic-workflows-in-cloudflare-agent-cloud-wit-21149.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21149. Enterprises power agentic workflows in Cloudflare Agent Cloud with OpenAI
+        </a>
+        
+        <a href="new-tools-and-features-in-the-responses-api-19322.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19322. New tools and features in the Responses API
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

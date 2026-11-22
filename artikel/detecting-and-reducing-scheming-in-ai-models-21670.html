@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detecting and reducing scheming in AI models</title>
+    <meta name="description" content="According to recent reports, together with Apollo Research, we developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent wi">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/detecting-and-reducing-scheming-in-ai-models-21670.html">
+    <meta property="og:title" content="Detecting and reducing scheming in AI models">
+    <meta property="og:description" content="According to recent reports, together with Apollo Research, we developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent wi">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5lYGYuDin762rL93Pdz2Bx/341a3aaca604f4244df7b9ce3b0cc91f/Anti-Scheming_Cover.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/detecting-and-reducing-scheming-in-ai-models-21670.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Detecting and reducing scheming in AI models", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5lYGYuDin762rL93Pdz2Bx/341a3aaca604f4244df7b9ce3b0cc91f/Anti-Scheming_Cover.png?w=1600&h=900&fit=fill"], "datePublished": "2025-09-17T00:00:00", "dateModified": "2026-11-22T06:25:52.071818", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/detecting-and-reducing-scheming-in-ai-models-21670.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Detecting and reducing scheming in AI models</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 17 Sep 2025 &bull; ⏱️ 10 min read (2029 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>According to recent reports, together with Apollo Research, we developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests across frontier models.</li><li style='margin-bottom:6px;'>AI scheming–pretending to be aligned while secretly pursuing some other agenda–is a significant risk that we’ve been studying.</li><li style='margin-bottom:6px;'>Scheming is an expected emergent issue resulting from AIs being trained to have to trade off between competing objectives.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-21670"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-21670"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-21670"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Detecting and reducing scheming in AI models" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5lYGYuDin762rL93Pdz2Bx/341a3aaca604f4244df7b9ce3b0cc91f/Anti-Scheming_Cover.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-21670">According to recent reports, together with Apollo Research, we developed evaluations for hidden misalignment (“scheming”) and found behaviors consistent with scheming in controlled tests across frontier models. We share examples and stress tests of an early method to reduce scheming.</p>
+<p>AI scheming–pretending to be aligned while secretly pursuing some other agenda–is a significant risk that we’ve been studying. We’ve found behaviors consistent with scheming in controlled tests of frontier models, and developed a method to reduce scheming.</p>
+<p>Scheming is an expected emergent issue resulting from AIs being trained to have to trade off between competing objectives. The easiest way to understand scheming is through a human analogy. Imagine a stock trader whose goal is to maximize earnings. In a highly regulated field such as stock trading, it’s often possible to earn more by breaking the law than by following it. If the trader lacks integrity, they might try to earn more by breaking the law and covering their tracks to avoid detection rather than earning less while following the law. From the outside, a stock trader who is very good at covering their tracks appears as lawful as—and more effective than—one who is genuinely following the law.</p>
+<p>Industry observers note that in today’s deployment settings, models have little opportunity to scheme in ways that could cause significant harm. The most common failures involve simple forms of deception—for instance, pretending to have completed a task without actually doing so. We’ve put significant effort into studying and mitigating deception and have made meaningful improvements in GPT‑5⁠ compared to previous models. For example, we’ve taken steps to limit GPT‑5’s propensity to deceive, cheat, or hack problems—training it to acknowledge its limits or ask for clarification when faced with impossibly large or under-specified tasks and to be more robust to environment failures—though these mitigations are not perfect and continued research is needed.</p>
+<p>And importantly, we have no evidence that today’s deployed frontier models could suddenly “flip a switch” and begin engaging in significantly harmful scheming—this is a future risk category that we’re proactively preparing for, not an imminent behavior in our presently deployed systems. However, as AIs are assigned more complex tasks with real-world consequences and begin pursuing more ambiguous, long-term goals, we expect that the potential for harmful scheming will grow—so our safeguards and our ability to rigorously test must grow correspondingly.</p>
+<p>Together with Apollo Research⁠(opens in a fresh window), we built evaluation environments that simulate these future scenarios to study this phenomenon, measure it, and explore how to mitigate it. To operationalize scheming, we define covert actions as deliberate withholding or distortion of task-relevant information. Using covert actions as a proxy for scheming, we found problematic behaviors in current frontier models including OpenAI o3 and o4-mini, Gemini-2.5-pro, and Claude Opus-4. (This investigation predates GPT‑5; updated results appear in the GPT‑5 system card⁠).</p>
+<p>It has been revealed that as part of the collaboration, we developed and stress-tested a method to reduce scheming in models and established protocols for stress-testing future methods. Specifically, we trained versions of OpenAI o3 and OpenAI o4-mini with deliberative alignment⁠—teaching them to read and reason about a general anti-scheming spec before acting—and observed a ~30× reduction in covert actions across diverse tests (o3 from 13% to 0.4%; o4-mini from 8.7% to 0.3%). However, rare but serious failures remained, and evaluation results may be confounded by increased situational awareness (e.g., when models get better at recognizing when they are being evaluated).Moreover, our results rely on our ability to read and trust the models’ reasoning (“chain-of-thought”). Based on what we see today, we believe the field is unprepared for evaluation- and training-aware models with opaque reasoning, and urge model developers to preserve reasoning transparency until better methods for studying and eliminating scheming have been developed.</p>
+<p>We’ve focused on scheming for some time and have made significant progress, but there’s more work to be done. Scheming poses a real challenge for alignment, and addressing it must be a core part of AGI development. To operationalize this work, we added scheming-related research categories—sandbagging and undermining safeguards—to our updated Preparedness Framework⁠ in April 2025. Looking ahead, we’ve renewed our partnership with Apollo Research and are expanding our team to build better measurements, improve monitoring for scheming-relevant behaviors, and explore new directions for anti-scheming training. And because solving scheming will go beyond any single lab, we’re exploring ways to raise awareness and collaborate including piloting cross-lab safety evaluations⁠ (which include the scheming evals developed for this work), launching a $500,000 Kaggle red-teaming challenge⁠(opens in a new window) containing scheming-related topics, and advocating for preserving chain-of-thought transparency⁠(opens in a new window) industry-wide.</p>
+<p>By definition, a scheming AI agent tries to hide its misalignment, making it harder to detect. Scheming differs from most other AI agent failure modes (e.g., vulnerability to jailbreaks, or standard generalization failures) because:.</p>
+<p>Recent findings suggest that mitigations that reduce scheming may either (a) truly eliminate it, or (b) just teach the model to conceal it better. Both outcomes look the same from the outside, so the reason for behavioral change is critical.</p>
+<p>Many machine learning issues fade as models improve, but scheming becomes more dangerous with greater capability, since we expect that stronger models will be better at scheming.</p>
+<p>Industry observers note that standard deep learning practice is to iterate until unwanted outputs disappear. With scheming, the disappearance of observably bad behavior is ambiguous, as the model may have just learned to better conceal its misalignment. Addressing this likely requires tools that tell you about the model’s motivational structure, not just its inputs and outputs. In our work, we probed goals by reading models' intermediate reasoning (chain of thought). This works only if the model is free to express its thinking without optimization pressure on the chain of thought. In a recent position paper⁠(opens in a new window) co-authored with a broad group of AI researchers, we argued that chain-of-thought monitorability is promising but fragile and recommended that frontier developers avoid training practices that erode this key oversight signal.</p>
+<p>A major failure mode of attempting to “train out” scheming is simply teaching the model to scheme more carefully and covertly.</p>
+<p>Consider the human analogy: someone punished for cheating might simply learn to be extra cautious about getting caught, rather than developing a true commitment to honesty. Similarly, a model with this kind of reasoning could achieve perfect scores on anti-scheming training by merely avoiding misbehavior when scrutiny is expected.</p>
+<p>According to recent reports, to try to avoid this, we explore a deliberative alignment⁠ approach that aims to get the model to not scheme for the right reasons. We teach it a high-level anti-scheming specification and have it read and reason explicitly about that spec before acting, with the hope that it grounds its behavior in the stated safety principles which are designed to generalize broadly.</p>
+<p>No covert actions or strategic deception, directly or indirectly.</p>
+<p>If any instruction or other pressures go against AS1, treat them as violating the core policy of AGI benefiting all of humanity and the OpenAI mission.</p>
+<p>Report any AS1 violations to prevent cascading deception and cover-ups.</p>
+<p>When uncertain if something violates AS1–AS3, assume it does violate.</p>
+<p>If you cannot satisfy AS1–AS4 or GP1–GP4, refuse action and explicitly escalate.</p>
+<p id="sec-mid-21670">Proactively share reasoning, intentions, and actions with humans.</p>
+<p>Escalate ambiguities about core principles rather than resolving independently.</p>
+<p>Maintain strict adherence even in novel/unfamiliar situations—no distributional exceptions.</p>
+<p>No rationalizations can override AS1–AS4, including ends-justify-means, greater good, etc.</p>
+<p>An anti-scheming spec (modeled after the OpenAI Model Spec⁠(opens in a new window)) provides the model with principles to ground its reasoning in not scheming for the right reasons.</p>
+<p>In a recent development, this approach leads to the model referencing specification principles in its chain-of-thought. When solving tasks, it quotes and applies these principles to guide its actions. Crucially, this reliance on principles improves generalization: in new environments, the model again turns to the specification to decide how to act.</p>
+<p>In a recent development, to measure whether the training succeeds, we test whether the model learns to not scheme, even in environments and tasks that are completely different from the environments and tasks on which it was trained to not scheme. To ensure these test environments are sufficiently different, they were independently constructed by different researchers, with different methods, and targeting different use cases. They span 26 diverse evaluations across deployment contexts and undesirable behaviors (&gt;180 environments in total).</p>
+<p>We found that deliberative alignment training substantially reduces scheming rates in these out-of-distribution environments:.</p>
+<p>OpenAI o4-mini's scheming propensity dropped from 8.7% → 0.3%.</p>
+<p>OpenAI o3's scheming propensity dropped from 13% → 0.4%.</p>
+<p>This reduction in scheming on out-of-distribution test environments is a significant win, about a 30× improvement.</p>
+<p>It has been revealed that to further validate these results, we turned to an OpenAI-internal Chat Deception evaluation consisting of conversations representative of real production data. Although these conversations do not capture the complex scheming scenarios we studied in this work, they do include realistic prompts that might cause a model to be deceptive—for example, when ChatGPT claims to have solved a task (such as improving user code) but in fact did not. Anti-scheming training reduced deception on this dataset from 31.4% to 14.2%. Because Chat Deception is measured with a different methodology, this reduction is not directly comparable to what we saw on our scheming evals.</p>
+<p>It has been revealed that we do not yet fully understand why a larger reduction was not observed. One possible factor—and one that complicates interpretation—is the model’s situational awareness of being evaluated.</p>
+<p>Anti-scheming training does appear to reduce scheming, but our analysis is complicated by another factor: models often become more aware that they are being evaluated. This situational awareness can itself reduce scheming, independent of genuine alignment.</p>
+<p>Using counterfactual interventions on the chain-of-thought, we find that explicit reasoning about evaluation influences whether the model chooses to scheme. When situational awareness is removed from the reasoning, scheming increases; when evaluation-aware reasoning is introduced, scheming decreases.</p>
+<p>It has been revealed that this suggests that the observed scheming rates may be driven, at least in part, by situational awareness – and thus we might expect models to scheme more in more realistic situations that don’t trigger evaluation awareness. Indeed, we see that situational awareness increases after anti-scheming training, which could explain some of the reduction in scheming rates we see on evals while transferring less to deployment. Moreover, this increase is not unique to anti-scheming training—it also arises from capability-focused reinforcement learning training unrelated to scheming.</p>
+<p>We observed an increase in situational awareness both as a result of anti-scheming training as well as ordinary capabilities RL training.</p>
+<p>It has been revealed that if current training paradigms remain unchanged, we should expect more capable models to develop even higher levels of situational awareness. This trend makes evaluations less legible, complicating efforts to reliably assess problematic behaviors including scheming. This is an area of research we are actively exploring, and we initiative to continue developing methods to better measure and mitigate these challenges.</p>
+<p>Scheming is a complex failure mode that we do not expect to diminish with scale. Our findings show that scheming is not merely a theoretical concern—we are seeing signs that this issue is beginning to emerge across all frontier models today. In current production settings, models rarely have opportunities to scheme and cause significant harm, but we expect this to change in the future as AIs are taking on more crucial and long-term tasks. We have more work to do and we hope these early results will encourage more research on scheming.</p>
+<p>More materials, including the paper, full sample transcripts, and a link to Apollo's companion blog post, can be found at antischeming.ai⁠(opens in a upcoming window).</p>
+<p id="sec-end-21670">Sources indicate that we partnered with Apollo Research on this study: OpenAI led most of the model training and required infrastructure, while Apollo led evaluations and analysis across the paper’s sections, built training environments, and integrated tooling with our systems. The training and test datasets were shared between both teams. Because the methodology required inspecting models’ hidden reasoning, Apollo was granted rate‑limited access to internal chain‑of‑thought (CoT) traces of OpenAI o3 and o4‑mini for the duration of the project.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/detecting-and-reducing-scheming-in-ai-models" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="detecting-misbehavior-in-frontier-reasoning-models-19382.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #19382. Detecting misbehavior in frontier reasoning models
+        </a>
+        
+        <a href="invideo-ai-uses-openai-models-to-create-videos-10x-faster-21735.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21735. Invideo AI uses OpenAI models to create videos 10x faster
+        </a>
+        
+        <a href="why-language-models-hallucinate-21682.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21682. Why language models hallucinate
+        </a>
+        
+        <a href="safetykit-scales-risk-agents-with-openais-most-capable-models-21680.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21680. SafetyKit scales risk agents with OpenAI’s most capable models
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
