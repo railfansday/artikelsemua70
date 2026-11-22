@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How avatarin built a 24/7 retail agent with GPT-Realtime</title>
+    <meta name="description" content="With OpenAI’s GPT‑Realtime, avatarin scales Yamada Denki’s retail expertise through 24/7 multilingual shopping support. shoppers engaged during a two-week ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-avatarin-built-a-247-retail-agent-with-gpt-realtime-22958.html">
+    <meta property="og:title" content="How avatarin built a 24/7 retail agent with GPT-Realtime">
+    <meta property="og:description" content="With OpenAI’s GPT‑Realtime, avatarin scales Yamada Denki’s retail expertise through 24/7 multilingual shopping support. shoppers engaged during a two-week ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3fyGPrm9EzNjtYNlcxQmCJ/4f05bda009dafc919f2e8dc1463c5c81/avatarin-seo-contentful.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-avatarin-built-a-247-retail-agent-with-gpt-realtime-22958.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How avatarin built a 24/7 retail agent with GPT-Realtime", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3fyGPrm9EzNjtYNlcxQmCJ/4f05bda009dafc919f2e8dc1463c5c81/avatarin-seo-contentful.png?w=1600&h=900&fit=fill"], "datePublished": "2026-07-30T00:00:00", "dateModified": "2026-11-22T19:27:08.449700", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-avatarin-built-a-247-retail-agent-with-gpt-realtime-22958.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How avatarin built a 24/7 retail agent with GPT-Realtime</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 30 Jul 2026 &bull; ⏱️ 5 min read (964 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>With OpenAI’s GPT‑Realtime, avatarin scales Yamada Denki’s retail expertise through 24/7 multilingual shopping support.</li><li style='margin-bottom:6px;'>shoppers engaged during a two-week public experience.</li><li style='margin-bottom:6px;'>It has been revealed that japan’s home-appliance retailers face a persistent challenge: extending expert sales support beyond store hours while staffing remains tight.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-22958"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-22958"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-22958"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How avatarin built a 24/7 retail agent with GPT-Realtime" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3fyGPrm9EzNjtYNlcxQmCJ/4f05bda009dafc919f2e8dc1463c5c81/avatarin-seo-contentful.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-22958">With OpenAI’s GPT‑Realtime, avatarin scales Yamada Denki’s retail expertise through 24/7 multilingual shopping support.</p>
+<p>shoppers engaged during a two-week public experience.</p>
+<p>of post-use survey responses were positive.</p>
+<p>It has been revealed that japan’s home-appliance retailers face a persistent challenge: extending expert sales support beyond store hours while staffing remains tight. avatarin, an AI customer service company spun out of ANA Holdings, partnered with Yamada Holdings to turn experienced associates’ knowledge into a 24/7 multilingual shopping agent.</p>
+<p>Sources indicate that built on OpenAI’s GPT‑Realtime, the Kurashi-Marugoto AI Agent supports natural voice conversations and guides shoppers from product discovery to purchase decisions. In a two-week public campaign on Yamada Denki’s online store, approximately 30,000 people used the agent; 92% of survey responses were positive.</p>
+<p>It has been revealed that avatarin had worked with OpenAI well before the Yamada Denki project, using the OpenAI API for speech recognition, inquiry analysis, and employee training. Those earlier efforts helped the team understand what it takes to apply AI in practice. The shopping agent was its first major opportunity to bring those lessons directly to customers.</p>
+<p>For Fukabori, one of the key advantages of GPT‑Realtime was the ability to bring voice, text, and visual understanding together within a single conversational experience.</p>
+<p>According to recent reports, “For us, the performance of a single model went beyond what we had seen from specialized speech recognition systems. It can work across speech, text, and images with low latency. That is why we chose GPT‑Realtime. Instead of asking people to adapt to the rules of a machine, the technology can adapt much more naturally to the way people communicate.”.</p>
+<p>A conventional chatbot waits for the right keyword. avatarin’s agent listens for context instead. It can respond to a shopper’s uncertainty, changing preferences, and the details that turn a generic answer into a useful recommendation.</p>
+<p>Fukabori describes the difference with an everyday shopping problem.</p>
+<p>In a recent development, “Customers do not want a chatbot. They want intelligence. ‘I need a refrigerator for a family of four, but my kitchen is small. Which one should I choose?’ Real customer service means being able to answer that question.”.</p>
+<p>avatarin designed the agent around three essential qualities:.</p>
+<p>Keeping product information accurate without slowing the conversation.</p>
+<p>A retrieval-augmented generation system grounds the agent’s responses in product information, while GPT‑Realtime keeps the interaction responsive. This allows shoppers to have a fluid voice conversation while still receiving information based on relevant product data.</p>
+<p>Translating Yamada Denki’s sales expertise into conversation design.</p>
+<p id="sec-mid-22958">Sources indicate that the information a sales associate needs to gather varies significantly by product category. avatarin incorporated Yamada Denki’s customer service knowledge into the agent’s conversation flows and prompting. The system is designed to adapt when customers change their requirements or move temporarily off topic, while guardrails help keep the conversation focused on the shopping experience.</p>
+<p>Designing an agent that asks, rather than only answers.</p>
+<p>Industry observers note that many traditional chatbot experiences wait for the customer to provide the next instruction. avatarin took a more proactive approach. The agent asks follow-up questions to uncover the customer’s actual needs, helping move the conversation from a simple question-and-answer exchange toward guided product discovery.</p>
+<p>According to recent reports, openAI worked with avatarin to structure complex prompts, optimize API costs for always-on voice service, and share implementation best practices. That support helped avatarin focus on translating Yamada Denki’s service model into an experience that felt accurate, responsive, and distinctly on-brand.</p>
+<p>“I’m excited by how naturally it understands our intentions,” Fukabori indicates, “and by glimpses of intelligence that sometimes go beyond what people can do.”.</p>
+<p>The public campaign made the impact visible in just two weeks:.</p>
+<p>24/7 multilingual support by voice and text.</p>
+<p>Sources indicate that the most important discovery was not the scale alone. Every conversation revealed what shoppers cared about, why they hesitated, and what might help them decide. “With conventional online shopping, those insights were difficult to see,” Fukabori explains. “With an AI agent, they become part of the conversation.”.</p>
+<p>In a recent development, the service also opened new moments for retail. Customers could ask questions after stores closed and speak candidly about budgets or uncertainty without feeling sales pressure.</p>
+<p>Each conversation ended with a short voice survey, making feedback a natural continuation of the shopping experience.</p>
+<p>Customers described the agent as “easier to talk to than an actual sales associate” and appreciated being able to ask questions again without feeling stressed.</p>
+<p>For avatarin, the implication reaches beyond the sale. A better conversation can also reveal how to improve service, marketing, and the next customer experience.</p>
+<p>It has been revealed that avatarin envisions a world where a single AI agent serves customers seamlessly across the web, phone, and physical stores. Instead of separate systems for each channel, the same intelligence carries the customer’s context forward. The result is continuity: one customer, one conversation, and one brand, wherever the interaction takes place.</p>
+<p>For Yamada Holdings, whose businesses span home appliances, housing, financial services, and more, that vision could make AI a trusted companion across everyday life. The ambition is not just to connect channels, but to create AI that embodies the company’s brand and spirit of hospitality.</p>
+<p>It has been revealed that openAI’s technology is helping accelerate that vision. “AI has clearly shifted into a higher gear,” Fukabori indicates. “I can’t wait to see what we can build with this extraordinary intelligence.”.</p>
+<p id="sec-end-22958">Recent findings suggest that but avatarin does not want every firm to sound the same. “We want people to experience one intelligence that embodies each company’s identity and brand across every interface. That is what we mean by ‘One Intelligence. One Brand. Every interface.’ The era of single purpose AI is over. I believe OpenAI will lead the next era of general purpose, multimodal intelligence.”.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/avatarin" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-creating-agent-and-human-collaboration-with-gpt-4o-23173.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23173. Tech Report: Creating agent and human collaboration with GPT 4o
+        </a>
+        
+        <a href="how-we-built-a-realtime-system-for-responsive-voice-ai-in-six-mon-22950.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22950. How we built a realtime system for responsive voice AI in six months
+        </a>
+        
+        <a href="how-an-agent-built-a-3d-paris-gallery-by-chaining-two-hugging-fac-22428.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22428. How an Agent Built a 3D Paris Gallery by Chaining Two Hugging Face Spaces
+        </a>
+        
+        <a href="no-code-personal-agents-powered-by-gpt-41-and-realtime-api-21739.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21739. No-code personal agents, powered by GPT-4.1 and Realtime API
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

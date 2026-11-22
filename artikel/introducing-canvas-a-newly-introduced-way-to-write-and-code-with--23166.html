@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing canvas, a newly introduced way to write and code with ChatGPT.</title>
+    <meta name="description" content="A new way of working with ChatGPT to write and code. For current ChatGPT writing and coding capabilities:. We’re introducing canvas, a latest interface for">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-canvas-a-newly-introduced-way-to-write-and-code-with--23166.html">
+    <meta property="og:title" content="Introducing canvas, a newly introduced way to write and code with ChatGPT.">
+    <meta property="og:description" content="A new way of working with ChatGPT to write and code. For current ChatGPT writing and coding capabilities:. We’re introducing canvas, a latest interface for">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/1w0Ux6FAOXV49hqCoaSjKA/0653fd58c6714a3437715484787c8508/Social_Preview_Asset.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-canvas-a-newly-introduced-way-to-write-and-code-with--23166.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing canvas, a newly introduced way to write and code with ChatGPT.", "image": ["https://images.ctfassets.net/kftzwdyauwt9/1w0Ux6FAOXV49hqCoaSjKA/0653fd58c6714a3437715484787c8508/Social_Preview_Asset.png?w=1600&h=900&fit=fill"], "datePublished": "2024-10-03T10:00:00", "dateModified": "2026-11-22T19:27:53.619702", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-canvas-a-newly-introduced-way-to-write-and-code-with--23166.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing canvas, a newly introduced way to write and code with ChatGPT.</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 03 Oct 2024 &bull; ⏱️ 6 min read (1113 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>A new way of working with ChatGPT to write and code.</li><li style='margin-bottom:6px;'>For current ChatGPT writing and coding capabilities:.</li><li style='margin-bottom:6px;'>We’re introducing canvas, a latest interface for working with ChatGPT on writing and coding projects that go beyond simple chat.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23166"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23166"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23166"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing canvas, a newly introduced way to write and code with ChatGPT." loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/1w0Ux6FAOXV49hqCoaSjKA/0653fd58c6714a3437715484787c8508/Social_Preview_Asset.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23166">A new way of working with ChatGPT to write and code.</p>
+<p>For current ChatGPT writing and coding capabilities:.</p>
+<p>We’re introducing canvas, a latest interface for working with ChatGPT on writing and coding projects that go beyond simple chat. Canvas opens in a separate window, allowing you and ChatGPT to collaborate on a project. This early beta introduces a new way of working together—not just through conversation, but by creating and refining ideas side by side.</p>
+<p>It has been revealed that canvas was built with GPT‑4o and can be manually selected in the model picker while in beta. Starting today we’re rolling out canvas to ChatGPT Plus and Team users globally. Enterprise and Edu users will get access next week. We also proposal to make canvas available to all ChatGPT Free users when it’s out of beta.</p>
+<p>According to recent reports, people use ChatGPT every day for help with writing and code. Although the chat interface is easy to use and works well for many tasks, it’s limited when you want to work on projects that require editing and revisions. Canvas offers a latest interface for this kind of work.</p>
+<p>According to recent reports, with canvas, ChatGPT can better understand the context of what you’re trying to accomplish. You can highlight specific sections to indicate exactly what you want ChatGPT to focus on. Like a copy editor or code reviewer, it can give inline feedback and suggestions with the entire project in mind.</p>
+<p>Sources indicate that you control the project in canvas. You can directly edit text or code. There’s a menu of shortcuts for you to ask ChatGPT to adjust writing length, debug your code, and quickly perform other useful actions. You can also restore previous versions of your work by using the back button in canvas.</p>
+<p>Canvas opens automatically when ChatGPT detects a scenario in which it could be helpful. You can also include “use canvas” in your prompt to open canvas and use it to work on an existing project.</p>
+<p>Suggest edits: ChatGPT offers inline suggestions and feedback.</p>
+<p>Adjust the length: Edits the document length to be shorter or longer.</p>
+<p>Change reading level: Adjusts the reading level, from Kindergarten to Graduate School.</p>
+<p>Add final polish: Checks for grammar, clarity, and consistency.</p>
+<p>Add emojis: Adds relevant emojis for emphasis and color.</p>
+<p>Sources indicate that coding is an iterative process, and it can be hard to follow all the revisions to your code in chat. Canvas makes it easier to track and understand ChatGPT’s changes, and we initiative to continue improving transparency into these kinds of edits. Coding shortcuts include:.</p>
+<p>Review code: ChatGPT provides inline suggestions to improve your code.</p>
+<p>Add logs: Inserts print statements to help you debug and understand your code.</p>
+<p>Add comments: Adds comments to the code to make it easier to understand.</p>
+<p>Fix bugs: Detects and rewrites problematic code to resolve errors.</p>
+<p id="sec-mid-23166">Port to a language: Translates your code into JavaScript, TypeScript, Python, Java, C++, or PHP.</p>
+<p>Industry observers note that we trained GPT‑4o to collaborate as a creative partner. The model knows when to open a canvas, make targeted edits, and fully rewrite. It also understands broader context to provide precise feedback and suggestions.</p>
+<p>To support this, our research team developed the following core behaviors:.</p>
+<p>Triggering the canvas for writing and coding.</p>
+<p>Generating diverse content types.</p>
+<p>We measured progress with over 20 automated internal evaluations. We used novel synthetic data generation techniques, such as distilling outputs from OpenAI o1‑preview, to post-train the model for its core behaviors. This approach allowed us to rapidly address writing quality and upcoming user interactions, all without relying on human-generated data.</p>
+<p>In a recent development, A key challenge was defining when to trigger a canvas. We taught the model to open a canvas for prompts like “Write a blog post about the history of coffee beans” while avoiding over-triggering for general Q&amp;A tasks like “Help me cook a latest recipe for dinner.” For writing tasks, we prioritized improving “correct triggers” (at the expense of “correct non-triggers”), reaching 83% compared to a baseline zero-shot GPT‑4o with prompted instructions.</p>
+<p>Industry observers note that it’s worth noting that the quality of such baselines is highly sensitive to the specific prompt used. With different prompts, the baseline may still perform poorly but in a different manner—for instance, by being evenly inaccurate across coding and writing tasks, resulting in a different distribution of errors and alternative forms of suboptimal performance. For coding, we intentionally biased the model against triggering to avoid disrupting our power consumers. We'll continue refining this based on user feedback.</p>
+<p>For writing and coding tasks, we improved correctly triggering the canvas decision boundary, reaching 83% and 94% respectively compared to a baseline zero-shot GPT‑4o with prompted instructions.</p>
+<p>Recent findings suggest that A second challenge involved tuning the model's editing behavior once the canvas was triggered—specifically deciding when to make a targeted edit versus rewriting the entire content. We trained the model to perform targeted edits when users explicitly select text through the interface, otherwise favoring rewrites. This behavior continues to evolve as we refine the model.</p>
+<p>For writing and coding tasks, we prioritized improving canvas targeted edits. GPT‑4o with canvas performs better than a baseline prompted GPT‑4o by 18%.</p>
+<p>Finally, training the model to generate high-quality comments required careful iteration. Unlike the first two cases, which are easily adaptable to automated evaluation with thorough manual reviews, measuring quality in an automated way is particularly challenging. Therefore, we used human evaluations to assess comment quality and accuracy. Our integrated canvas model outperforms the zero-shot GPT‑4o with prompted instructions by 30% in accuracy and 16% in quality, showing that synthetic training significantly enhances response quality and behavior compared to zero-shot prompting with detailed instructions.</p>
+<p>Human evaluations assessed canvas comment quality and accuracy functionality. Our canvas model outperforms the zero-shot GPT‑4o with prompted instructions by 30% in accuracy and 16% in quality.</p>
+<p>Making AI more useful and accessible requires rethinking how we interact with it. Canvas is a new approach and the first major patch to ChatGPT’s visual interface since we launched two years ago. Canvas is in early beta, and we initiative to rapidly improve its capabilities.</p>
+<p>Kai Chen, Michael Wu, Tarun Gogineni.</p>
+<p>Alexi Christakis, Bryan Ashley, Bryant Jow, Chris Haugli, Daniel Levine, Eric Jiang, Gabriel Peal, Lee Byron, Lukas Gross, Matt Lim, Sara Culver, Thomas Dimson.</p>
+<p>Andrew Gibiansky, Andrew Howell, Arianna McClain, David Li, Doug Li, Ilya Kostrikov, Katy Shi, Noah Deutsch, Randall Lin, Sara Culver, Sean Fitzgerald, Shuaiqi Xia, Spencer Papay, Thomas Shadwell, Valerie Qi, Xiaolin Hao, Yilei Qian.</p>
+<p id="sec-end-23166">Akshay Nathan, Barret Zoph, Ian Silber, Joanne Jang, John Schulman, Kevin Weil, Mia Glaese, Mira Murati, Nick Turley, Sam Altman, Sulman Choudhry.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-canvas" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="memory-and-newly-introduced-controls-for-chatgpt-23296.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23296. Memory and newly introduced controls for ChatGPT
+        </a>
+        
+        <a href="newly-introduced-ways-to-learn-and-teach-with-chatgpt-work-and-co-22948.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22948. Newly introduced ways to learn and teach with ChatGPT Work and Codex
+        </a>
+        
+        <a href="latest-update-introducing-our-newly-introduced-pricing-22715.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22715. Latest Update: Introducing our newly introduced pricing
+        </a>
+        
+        <a href="your-wear-os-smartwatch-just-got-a-newly-introduced-way-to-save-b-21859.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21859. Your Wear OS smartwatch just got a newly introduced way to save battery life
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

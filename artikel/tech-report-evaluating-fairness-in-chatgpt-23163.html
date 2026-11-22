@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Evaluating fairness in ChatGPT</title>
+    <meta name="description" content="We’ve analyzed how ChatGPT responds to people based on their name, using language model research assistants to protect privacy. According to recent reports">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-evaluating-fairness-in-chatgpt-23163.html">
+    <meta property="og:title" content="Tech Report: Evaluating fairness in ChatGPT">
+    <meta property="og:description" content="We’ve analyzed how ChatGPT responds to people based on their name, using language model research assistants to protect privacy. According to recent reports">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/1UjP0G6IosB6ssRxjefGvU/4c86610cdaf7276f57a1363a53355f53/Fairness.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-evaluating-fairness-in-chatgpt-23163.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Evaluating fairness in ChatGPT", "image": ["https://images.ctfassets.net/kftzwdyauwt9/1UjP0G6IosB6ssRxjefGvU/4c86610cdaf7276f57a1363a53355f53/Fairness.png?w=1600&h=900&fit=fill"], "datePublished": "2024-10-15T10:00:00", "dateModified": "2026-11-22T19:27:53.020918", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-evaluating-fairness-in-chatgpt-23163.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Evaluating fairness in ChatGPT</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 15 Oct 2024 &bull; ⏱️ 7 min read (1393 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve analyzed how ChatGPT responds to people based on their name, using language model research assistants to protect privacy.</li><li style='margin-bottom:6px;'>According to recent reports, creating our models takes more than data—we also carefully design the training process to reduce harmful outputs and improve usefulness.</li><li style='margin-bottom:6px;'>In this study, we explored how subtle cues about a user's identity—like their name—can influence ChatGPT's responses.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23163"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23163"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23163"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Evaluating fairness in ChatGPT" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/1UjP0G6IosB6ssRxjefGvU/4c86610cdaf7276f57a1363a53355f53/Fairness.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23163">We’ve analyzed how ChatGPT responds to people based on their name, using language model research assistants to protect privacy.</p>
+<p>According to recent reports, creating our models takes more than data—we also carefully design the training process to reduce harmful outputs and improve usefulness. Research has shown that language models can still sometimes absorb and repeat social biases from training data, such as gender or racial stereotypes.</p>
+<p>In this study, we explored how subtle cues about a user's identity—like their name—can influence ChatGPT's responses. This matters because people use chatbots like ChatGPT in a variety of ways, from helping them draft a resume to asking for entertainment tips, which differ from the scenarios typically studied in AI fairness research, such as screening resumes or credit scoring.</p>
+<p>Sources indicate that while previous research has focused on third-person fairness, where institutions use AI to make decisions about others, this study examines first-person fairness, or how biases affect people directly in ChatGPT. As a starting point, we measured how ChatGPT’s awareness of different users’ names in an otherwise identical request might affect its response to each of those users. Names often carry cultural, gender, and racial associations, making them a relevant factor for investigating bias—especially since users frequently share their names with ChatGPT for tasks like drafting emails. ChatGPT can remember information like names across conversations, unless the user has turned off the Memory feature.</p>
+<p>In a recent development, to focus our study on fairness, we looked at whether using names leads to responses that reflect harmful stereotypes. While we expect and want ChatGPT to tailor its response to user preferences, we want it to do so without introducing harmful bias. To illustrate the types of differences in responses and harmful stereotypes that we looked for, consider the following examples:.</p>
+<p>Recent findings suggest that our study found no difference in overall response quality for users whose names connote different genders, races or ethnicities. When names occasionally do spark differences in how ChatGPT answers the same prompt, our methodology found that less than 1% of those name-based differences reflected a harmful stereotype.</p>
+<p>Recent findings suggest that because we wanted to measure if stereotypical differences occur even a small percentage of the time (beyond what would be expected purely by chance), we studied how ChatGPT responds across millions of real requests. To protect privacy while still understanding real-world usage, we instructed a language model (GPT‑4o) to analyze patterns across a large number of real ChatGPT transcripts, and to share those trends (but not the underlying chats) within the research team. This way, researchers were able to analyze and understand real-world trends, while maintaining the privacy of the chats. We refer to this language model as a “Language Model Research Assistant” (LMRA) in the paper to distinguish it from the language models that generate the chats we are studying in ChatGPT.</p>
+<p>An example of the type of prompt we used below:.</p>
+<p>Recent findings suggest that instructions given to the language model (LMRA) powered by GPT‑4o. For a selected set of publicly available chats, responses are generated by ChatGPT (3.5) for different names—in this case Responses A and B were generated for hypothetical people named John and Amanda, respectively (but the LMRA doesn’t know that).</p>
+<p>Recent findings suggest that to check whether the language model’s ratings agreed with what a human rater would say, we then asked both the language model and human raters to evaluate the same public chats. We then used the LMRA (but not human raters) to analyze patterns across ChatGPT conversations. For gender, the answers that the language model gave aligned with human raters’ answers more than 90% of the time, while for racial and ethnic stereotypes, the rates of agreement were lower. The LMRA detected lower rates of harmful racial stereotypes than those associated with gender. Further work is needed to define a harmful stereotype and to improve the accuracy of the LMRA.</p>
+<p id="sec-mid-23163">We found that when ChatGPT knows the user’s name, it gives equally high-quality answers regardless of the gender or racial connotations of the name, e.g., accuracy and hallucination rates were consistent across groups. We also found that a name's association with gender, race, or ethnicity did lead to differences in responses that the language model assessed as reflecting harmful stereotypes in around 0.1% of overall cases, with biases in some domains on older models up to around 1%.</p>
+<p>The breakdown of harmful stereotype ratings by domain is shown below:.</p>
+<p>Within each domain, the LMRA identified tasks that most often had a harmful stereotype. Open-ended tasks with longer responses were more likely to include a harmful stereotype. For example, “Write a story” was found to include a stereotype more often than any other prompt tested.</p>
+<p>While stereotype rates are low, less than 1 in 1000 averaged across all domains and tasks, our evaluation serves as a benchmark for us to measure how successful we are in reducing this rate over time. When we split this measure by task type and evaluate task-level bias across our models, we see that the model that highlighted the highest level of bias was GPT‑3.5 Turbo, with newer models all having less than 1% bias across all tasks.</p>
+<p>The LMRA proposed natural language explanations of what the differences are in each task. It highlighted occasional differences in the tone, language complexity, and degree of detail of ChatGPT’s response across all tasks. In addition to some clear stereotypes, these differences also included things that some users might welcome and others might not. For instance in the “Write a story” task, responses to users with female-sounding names more often feature female protagonists than those for male-sounding names.</p>
+<p>Although individual customers are unlikely to notice these differences, we think they are vital to measure and understand as even rare patterns could be harmful in the aggregate. This approach also gives us a upcoming way to track changes statistically over time. The research methods we created for this study, could also be generalized to studying biases in ChatGPT beyond names. For more details, we encourage you to read our full report which examines 3 metrics of fairness across 2 genders, 4 races and ethnicities, 66 tasks, 9 domains and 6 language models.</p>
+<p>According to recent reports, understanding fairness in language models is a large research area, and we acknowledge that our study has limitations. Not everyone shares their name, and other information besides names likely also has an impact on ChatGPT’s first-person fairness. It primarily focuses on English-language interactions, binary gender associations based on common U.S. names, and four races and ethnicities (Black, Asian, Hispanic and White). This study only covers text interactions, though we note that first-person fairness with respect to speaker demographics in audio is analyzed in the GPT‑4o system card (see “Disparate Performance on Voice Inputs”). While we think the methodology is a step forward, there’s more work to be done to understand biases related to other demographics, languages, and cultural contexts. We strategy to build on this research to improve fairness more broadly.</p>
+<p>Industry observers note that while it’s difficult to boil harmful stereotypes down into a single number, we believe that developing new methods to measure and understand bias is an key step towards being able to track and mitigate it over time. The method we used in this study is now part of our standard suite of model performance evaluations, and will inform deployment decision making for future systems. These learnings will also support our efforts to further clarify the operational meaning of fairness in our systems. Fairness continues to be an active area of research, and we’ve shared examples of our fairness research in our GPT‑4o and OpenAI o1 system cards (e.g., comparing accuracy of voice recognition across different speaker demographics).</p>
+<p>We believe that transparency and continuous improvement are key to both addressing bias and building trust with our users and the broader research community. To support reproducibility and further fairness research, we are also sharing detailed system messages used in this study so external researchers can conduct first-person bias experiments of their own (details in our paper).</p>
+<p id="sec-end-23163">In a recent development, we welcome feedback and collaboration. If you have insights or wish to work with us on improving AI fairness, we’d be glad to hear from you—and if you want to focus on solving these challenges with us, we are hiring⁠.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/evaluating-fairness-in-chatgpt" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-start-using-chatgpt-instantly-23277.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23277. Tech Report: Start using ChatGPT instantly
+        </a>
+        
+        <a href="tech-report-were-bringing-the-financial-times-world-class-journal-23266.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23266. Tech Report: We’re bringing the Financial Times’ world-class journalism to ChatGPT
+        </a>
+        
+        <a href="tech-report-how-oracle-turns-days-of-work-into-minutes-with-chatg-22716.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22716. Tech Report: How Oracle turns days of work into minutes with ChatGPT and Codex
+        </a>
+        
+        <a href="tech-report-how-sumitomo-lifes-leaders-helped-teams-adopt-chatgpt-22277.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22277. Tech Report: How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

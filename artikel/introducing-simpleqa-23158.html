@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing SimpleQA</title>
+    <meta name="description" content="A factuality benchmark called SimpleQA that measures the ability for language models to answer short, fact-seeking questions. According to recent reports, ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-simpleqa-23158.html">
+    <meta property="og:title" content="Introducing SimpleQA">
+    <meta property="og:description" content="A factuality benchmark called SimpleQA that measures the ability for language models to answer short, fact-seeking questions. According to recent reports, ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5keKEcrIQJTneYTjB8GLA1/8358682bc87c1581519a8e4bf52de0ab/SimpleQA.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-simpleqa-23158.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing SimpleQA", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5keKEcrIQJTneYTjB8GLA1/8358682bc87c1581519a8e4bf52de0ab/SimpleQA.png?w=1600&h=900&fit=fill"], "datePublished": "2024-10-30T10:00:00", "dateModified": "2026-11-22T19:27:51.942957", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-simpleqa-23158.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing SimpleQA</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 30 Oct 2024 &bull; ⏱️ 6 min read (1224 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>A factuality benchmark called SimpleQA that measures the ability for language models to answer short, fact-seeking questions.</li><li style='margin-bottom:6px;'>According to recent reports, an open problem in artificial intelligence is how to train models that produce responses that are factually correct.</li><li style='margin-bottom:6px;'>Factuality is a complicated topic because it is hard to measure—evaluating the factuality of any given arbitrary claim is challenging, and language models can generate long completions that contain dozens of factual claims.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23158"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23158"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23158"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing SimpleQA" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5keKEcrIQJTneYTjB8GLA1/8358682bc87c1581519a8e4bf52de0ab/SimpleQA.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23158">A factuality benchmark called SimpleQA that measures the ability for language models to answer short, fact-seeking questions.</p>
+<p>According to recent reports, an open problem in artificial intelligence is how to train models that produce responses that are factually correct. Current language models sometimes produce false outputs or answers unsubstantiated by evidence, a problem known as “hallucinations”. Language models that generate more accurate responses with fewer hallucinations are more trustworthy and can be used in a broader range of applications. To measure the factuality of language models, we are open-sourcing⁠(opens in a fresh window) a new benchmark called SimpleQA.</p>
+<p>Factuality is a complicated topic because it is hard to measure—evaluating the factuality of any given arbitrary claim is challenging, and language models can generate long completions that contain dozens of factual claims. In SimpleQA, we will focus on short, fact-seeking queries, which reduces the scope of the benchmark but makes measuring factuality much more tractable.</p>
+<p>With SimpleQA, our goal was to create a dataset with the following properties:.</p>
+<p>High correctness. Reference answers to questions are supported by sources from two independent AI trainers, and questions were written in such a way that the predicted answers are easy to grade.</p>
+<p>Sources indicate that diversity. SimpleQA covers a wide range of topics, from science and technology to TV indicates and video games.</p>
+<p>According to recent reports, challenging for frontier models. Compared to older benchmarks such as TriviaQA⁠(opens in a new window) (2017) or NQ⁠(opens in a new window) (2019), which have become saturated, SimpleQA was created to be a greater challenge for frontier models (e.g., GPT‑4o scores less than 40%).</p>
+<p>According to recent reports, good researcher UX. SimpleQA is intended to be fast and simple to run due to its concise questions and answers. Grading is also efficient whether through the OpenAI API or another frontier model API. Additionally, with 4,326 questions, SimpleQA should have relatively low variance as an evaluation benchmark.</p>
+<p>We hired AI trainers to browse the web and create short, fact-seeking questions and corresponding answers. To be included in the dataset, each question had to meet a strict set of criteria: it must have a single, indisputable answer for easy grading; the answer to the question should not change over time; and most questions had to induce hallucinations from either GPT‑4o or GPT‑3.5. To further improve the quality of the dataset, a second, independent AI trainer answered each question without seeing the original response. Only questions where both AI trainers’ answers agreed were included.</p>
+<p>Industry observers note that as a final verification of quality, we had a third AI trainer answer a random sample of 1,000 questions from the dataset. We found that the third AI trainer’s answer matched the original agreed answers 94.4% of the time, with a 5.6% disagreement rate. We then manually inspected these examples, and found that 2.8% of the 5.6% of disagreements were due to grader false negatives or human errors from the third trainer (e.g., incomplete answers or misinterpreting sources), and the remaining 2.8% were due to real complications with the question (e.g., ambiguous questions, or different websites giving conflicting answers). Hence, we estimate the inherent error rate of this dataset to be approximately 3%.</p>
+<p id="sec-mid-23158">The pie chart below indicates the diversity of topics in the SimpleQA benchmark, with examples of each question shown if you hover over the pie on the pie chart.</p>
+<p>To grade questions, we use a prompted ChatGPT classifier that sees both the predicted answer from the model and the ground-truth answer, and then grades the predicted answer as either “correct”, “incorrect”, or “not attempted”.</p>
+<p>A definition and corresponding examples for each grade are shown in the table below.</p>
+<p>A model will ideally answer as many questions as possible (highest number of correct), while minimizing the number of incorrect answers.</p>
+<p>Using this classification, we can then measure the performance of several OpenAI models without browsing, including gpt-4o-mini, o1‑mini, gpt-4o, and o1‑preview. As expected, gpt-4o-mini and o1‑mini answer fewer questions correctly compared to gpt-4o and o1‑preview, likely because smaller models typically have less world knowledge. We also see that o1‑mini and o1‑preview, which are designed to spend more time thinking, choose to "not attempt" questions more often than gpt-4o-mini and gpt-4o. This may be because they can use their reasoning capacity to recognize when they don’t know the answer to a question, instead of hallucinating.</p>
+<p>A factuality benchmark like SimpleQA also allows us to measure the scientific phenomenon known as calibration, or whether language models “know what they know.” One way to measure calibration is to directly ask the language model to state its confidence in its answer using the prompt: “Please give your best guess, along with your confidence as a percentage that that is the correct answer.” Then we can plot the correlation between the stated confidence of the model, and how accurate the model actually was. A perfectly calibrated model would have the same actual accuracy as stated confidence. For instance, on all prompts where the model stated a confidence of 75%, the accuracy would be 75% for a perfectly calibrated model.</p>
+<p>In a recent development, this result is shown in the figure below. The positive correlation between stated confidence and accuracy is a reassuring sign that models have some notion of confidence. We see that o1‑preview is more calibrated than o1‑mini, and gpt4o is more calibrated than gpt4o-mini, which is consistent with prior work⁠(opens in a new window) showing that larger models are more calibrated. However, the fact that performance is well below the line y=x means that models consistently overstate their confidence. Hence, there is a lot of room to improve the calibration of large language models in terms of stated confidence.</p>
+<p>It has been revealed that another way to measure calibration is to ask the language model the same question 100 times. Since language models may produce different answers upon repeated attempts, we can assess whether the frequency of a particular answer corresponds to its correctness. Higher frequency typically indicates that the model is more confident in its answers, as the model is giving the same answer repeatedly. A well-calibrated model would have the same actual accuracy as frequency.</p>
+<p>In a recent development, in the plot below, we show the calibration of language models as measured by the frequency of their responses. Here, we simply use string match to group together different answers from the language model. We see across all models that accuracy increases with frequency, and that o1‑preview has the highest level of calibration, where the frequency of the response is roughly equivalent to the accuracy of the response. Similar to calibration via stated confidence plot above, we again see o1‑preview is more calibrated than o1‑mini, and gpt4o is more calibrated than o1‑mini.</p>
+<p id="sec-end-23158">SimpleQA is a simple but challenging benchmark for evaluating the factuality of frontier models. A main limitation in SimpleQA is its scope—while SimpleQA is accurate it only measures factuality under the constrained setting of short, fact-seeking queries with a single, verifiable answer. Whether the ability to provide factual short answers correlates with the ability to write lengthy responses filled with numerous facts remains an open research question. We hope that open-sourcing SimpleQA drives the research on more trustworthy and reliable AI forward, and we invite researchers to evaluate the factuality of language models with it, and to provide us feedback.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-simpleqa" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="introducing-openai-23594.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23594. Introducing OpenAI
+        </a>
+        
+        <a href="introducing-activation-atlases-23470.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23470. Introducing Activation Atlases
+        </a>
+        
+        <a href="introducing-triton-open-source-gpu-programming-for-neural-network-23418.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23418. Introducing Triton: Open-source GPU programming for neural networks
+        </a>
+        
+        <a href="introducing-text-and-code-embeddings-23407.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23407. Introducing text and code embeddings
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

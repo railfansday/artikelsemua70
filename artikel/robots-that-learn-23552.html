@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots that learn</title>
+    <meta name="description" content="We’ve created a robotics system, trained entirely in simulation and deployed on a physical robot, which can learn a fresh task after seeing it done once. L">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/robots-that-learn-23552.html">
+    <meta property="og:title" content="Robots that learn">
+    <meta property="og:description" content="We’ve created a robotics system, trained entirely in simulation and deployed on a physical robot, which can learn a fresh task after seeing it done once. L">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/9303995f-6ada-40ad-76fbe9bf02ea/79b67763dd00b101bcf1e21eff248aca/robots-that-learn.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/robots-that-learn-23552.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Robots that learn", "image": ["https://images.ctfassets.net/kftzwdyauwt9/9303995f-6ada-40ad-76fbe9bf02ea/79b67763dd00b101bcf1e21eff248aca/robots-that-learn.jpg?w=1600&h=900&fit=fill"], "datePublished": "2017-05-16T07:00:00", "dateModified": "2026-11-22T19:29:19.445724", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/robots-that-learn-23552.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Robots that learn</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 16 May 2017 &bull; ⏱️ 3 min read (671 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve created a robotics system, trained entirely in simulation and deployed on a physical robot, which can learn a fresh task after seeing it done once.</li><li style='margin-bottom:6px;'>Last month, we indicated an earlier version⁠(opens in a new window) of this robot where we’d trained its vision system using domain randomization⁠(opens in a new window), that is, by showing it simulated objects with a variety of color, backgrounds, and textures, without the use of any real images.</li><li style='margin-bottom:6px;'>Now, we’ve developed and deployed a new algorithm, one-shot imitation learning⁠(opens in a new window), allowing a human to communicate how to do a new task by performing it in VR⁠(opens in a new window).</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23552"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23552"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23552"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Robots that learn" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/9303995f-6ada-40ad-76fbe9bf02ea/79b67763dd00b101bcf1e21eff248aca/robots-that-learn.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23552">We’ve created a robotics system, trained entirely in simulation and deployed on a physical robot, which can learn a fresh task after seeing it done once.</p>
+<p>Last month, we indicated an earlier version⁠(opens in a new window) of this robot where we’d trained its vision system using domain randomization⁠(opens in a new window), that is, by showing it simulated objects with a variety of color, backgrounds, and textures, without the use of any real images.</p>
+<p>Now, we’ve developed and deployed a new algorithm, one-shot imitation learning⁠(opens in a new window), allowing a human to communicate how to do a new task by performing it in VR⁠(opens in a new window). Given a single demonstration, the robot is able to solve the same task from an arbitrary starting configuration.</p>
+<p>Our system can learn a behavior from a single demonstration delivered within a simulator, then reproduce that behavior in different setups in reality.</p>
+<p>The system is powered by two neural networks: a vision network and an imitation network.</p>
+<p>It has been revealed that the vision network ingests an image from the robot’s camera and outputs state representing the positions of the objects. As before⁠(opens in a fresh window), the vision network is trained with hundreds of thousands of simulated images with different perturbations of lighting, textures, and objects. (The vision system is never trained on a real image.).</p>
+<p id="sec-mid-23552">Recent findings suggest that the imitation network observes a demonstration, processes it to infer the intent of the task, and then accomplishes the intent starting from another starting configuration. Thus, the imitation network must generalize the demonstration to a latest setting. But how does the imitation network know how to generalize?</p>
+<p>The network learns this from the distribution of training examples. It is trained on dozens of different tasks with thousands of demonstrations for each task. Each training example is a pair of demonstrations that perform the same task. The network is given the entirety of the first demonstration and a single observation from the second demonstration. We then use supervised learning to predict what action the demonstrator took at that observation. In order to predict the action effectively, the robot must learn how to infer the relevant portion of the task from the first demonstration.</p>
+<p>In a recent development, applied to block stacking, the training data consists of pairs of trajectories that stack blocks into a matching set of towers in the same order, but start from different start states. In this way, the imitation network learns to match the demonstrator’s ordering of blocks and size of towers without worrying about the relative location of the towers.</p>
+<p>In a recent development, the task of creating color-coded stacks of blocks is simple enough that we were able to solve it with a scripted policy in simulation. We used the scripted policy to generate the training data for the imitation network. At test time, the imitation network was able to parse demonstrations produced by a human, even though it had never seen messy human data before.</p>
+<p>Sources indicate that the imitation network uses soft attention⁠(opens in a newly introduced window) over the demonstration trajectory and the state vector which represents the locations of the blocks, allowing the system to work with demonstrations of variable length. It also performs attention over the locations of the different blocks, allowing it to imitate longer trajectories than it’s ever seen, and stack blocks into a configuration that has more blocks than any demonstration in its training data.</p>
+<p>According to recent reports, for the imitation network to learn a robust policy, we had to inject a modest amount of noise into the outputs of the scripted policy. This forced the scripted policy to demonstrate how to recover when things go wrong, which taught the imitation network to deal with the disturbances from an imperfect policy. Without injecting the noise, the policy learned by the imitation network would usually fail to complete the stacking task.</p>
+<p id="sec-end-23552">If you’d like to help us build this robot, join us⁠ at OpenAI.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/robots-that-learn" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="gotta-learn-fast-a-new-benchmark-for-generalization-in-rl-23507.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23507. Gotta Learn Fast: A new benchmark for generalization in RL
+        </a>
+        
+        <a href="plan-online-learn-offline-efficient-learning-and-exploration-via--23481.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23481. Plan online, learn offline: Efficient learning and exploration via model-based control
+        </a>
+        
+        <a href="newly-introduced-ways-to-learn-and-teach-with-chatgpt-work-and-co-22948.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22948. Newly introduced ways to learn and teach with ChatGPT Work and Codex
+        </a>
+        
+        <a href="helping-teens-learn-plan-and-shape-the-future-of-ai-22730.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22730. Helping teens learn, plan, and shape the future of AI
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improving language understanding with unsupervised learning</title>
+    <meta name="description" content="We’ve obtained state-of-the-art results on a suite of diverse language tasks with a scalable, task-agnostic system, which we’re also releasing. Our approac">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/improving-language-understanding-with-unsupervised-learning-23500.html">
+    <meta property="og:title" content="Improving language understanding with unsupervised learning">
+    <meta property="og:description" content="We’ve obtained state-of-the-art results on a suite of diverse language tasks with a scalable, task-agnostic system, which we’re also releasing. Our approac">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/bbab3cf5-a807-49f0-9f93ff442ad7/2cb463c19ae4d17e661a8a18ce574f6b/image-19.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/improving-language-understanding-with-unsupervised-learning-23500.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Improving language understanding with unsupervised learning", "image": ["https://images.ctfassets.net/kftzwdyauwt9/bbab3cf5-a807-49f0-9f93ff442ad7/2cb463c19ae4d17e661a8a18ce574f6b/image-19.webp?w=1600&h=900&fit=fill"], "datePublished": "2018-06-11T07:00:00", "dateModified": "2026-11-22T19:29:06.774372", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/improving-language-understanding-with-unsupervised-learning-23500.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Improving language understanding with unsupervised learning</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 11 Jun 2018 &bull; ⏱️ 7 min read (1488 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve obtained state-of-the-art results on a suite of diverse language tasks with a scalable, task-agnostic system, which we’re also releasing.</li><li style='margin-bottom:6px;'>Our system works in two stages; first we train a transformer model on a very large amount of data in an unsupervised manner—using language modeling as a training signal—then we fine-tune this model on much smaller supervised datasets to help it solve specific tasks.</li><li style='margin-bottom:6px;'>Sources indicate that this work builds on the approach introduced in Semi-supervised Sequence Learning⁠(opens in a new window), which showed how to improve document classification performance by using unsupervised pre-training of an LSTM followed by supervised fine-tuning.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23500"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23500"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23500"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Improving language understanding with unsupervised learning" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/bbab3cf5-a807-49f0-9f93ff442ad7/2cb463c19ae4d17e661a8a18ce574f6b/image-19.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23500">We’ve obtained state-of-the-art results on a suite of diverse language tasks with a scalable, task-agnostic system, which we’re also releasing. Our approach is a combination of two existing ideas: transformers⁠(opens in a upcoming window) and unsupervised pre-training⁠(opens in a new window). These results provide a convincing example that pairing supervised learning methods with unsupervised pre-training works very well; this is an idea that many have explored in the past, and we hope our result motivates further research into applying this idea on larger and more diverse datasets.</p>
+<p>Our system works in two stages; first we train a transformer model on a very large amount of data in an unsupervised manner—using language modeling as a training signal—then we fine-tune this model on much smaller supervised datasets to help it solve specific tasks. We developed this approach following our sentiment neuron⁠ work, in which we noted that unsupervised learning techniques can yield surprisingly discriminative features when trained on enough data. Here, we wanted to further explore this idea: can we develop one model, train it in an unsupervised way on a large amount of data, and then fine-tune the model to achieve good performance on many different tasks? Our results indicate that this approach works surprisingly well; the same core model can be fine-tuned for very different tasks with minimal adaptation.</p>
+<p>Sources indicate that this work builds on the approach introduced in Semi-supervised Sequence Learning⁠(opens in a new window), which showed how to improve document classification performance by using unsupervised pre-training of an LSTM followed by supervised fine-tuning. It also extends ULMFiT⁠(opens in a new window), research that shows how a single dataset-agnostic LSTM language model can be fine-tuned to get state-of-the-art performance on a variety of document classification datasets; our work shows how a Transformer-based model can be used in this approach to succeed at a broader range of tasks beyond document classification, such as commonsense reasoning, semantic similarity, and reading comprehension. It is also similar to but more task-agnostic than ELMo⁠(opens in a new window), which incorporates pre-training but uses task-customized architectures to get state-of-the-art results on a broad suite of tasks.</p>
+<p>Very little tuning was used to achieve our results. All datasets use a single forward language model, without any ensembling, and the majority of the reported results use the exact same hyperparameter settings.</p>
+<p>In a recent development, A result we are particularly excited about is the performance of our approach on three datasets—COPA⁠(opens in a fresh window), RACE⁠(opens in a new window), and ROCStories⁠(opens in a new window)—designed to test commonsense reasoning and reading comprehension. Our model obtains new state-of-the-art results on these datasets by a wide margin. These datasets are thought to require multi-sentence reasoning and significant world knowledge to solve suggesting that our model improves these skills predominantly via unsupervised learning. This suggests there’s hope for developing complex language understanding capabilities via unsupervised techniques.</p>
+<p>Supervised learning is at the core of most of the recent success of machine learning. However, it can require large, carefully cleaned, and expensive to create datasets to work well. Unsupervised learning is attractive because of its potential to address these drawbacks. Since unsupervised learning removes the bottleneck of explicit human labeling it also scales well with current trends of increasing compute⁠(opens in a new window) and availability of raw data. Unsupervised learning is a very⁠(opens in a new window) active⁠(opens in a new window) area⁠(opens in a new window) of⁠(opens in a new window) research⁠(opens in a new window) but practical uses of it are often still limited.</p>
+<p>Recent findings suggest that there’s been a recent push to try to further language capabilities by using unsupervised learning to augment systems with large amounts of unlabeled data; representations of words trained via unsupervised techniques can use large datasets consisting of terabytes of information and, when integrated with supervised learning, improve performance on a wide range of NLP tasks. Until recently, these unsupervised techniques for NLP (for example, GLoVe⁠(opens in a upcoming window) and word2vec⁠(opens in a new window)) used simple models (word vectors) and training signals (the local co-occurence of words). Skip-Thought Vectors⁠(opens in a new window) is a notable early demonstration of the potential improvements more complex approaches can realize. But new techniques are now being used which are further boosting performance. These include the use of pre-trained sentence representation models, contextualized word vectors (notably ELMo⁠(opens in a new window) and CoVE⁠(opens in a new window)), and approaches which use customized architectures to fuse unsupervised pre-training with supervised fine-tuning, like our own.</p>
+<p>We also noticed we can use the underlying language model to begin to perform tasks without ever training on them. For example, performance on tasks like picking the right answer to a multiple choice question steadily increases as the underlying language model improves. While the absolute performance of these methods is still often quite low compared to the supervised state-of-the-art (for question answering it still outperformed by a simple sliding-window baseline) it is encouraging that this behavior is robust across a broad set of tasks. Randomly initialized networks containing no information about the task and the world perform no-better than random using these heuristics. This provides some insight into why generative pre-training can improve performance on downstream tasks.</p>
+<p>According to recent reports, we can also use the existing language functionality in the model to perform sentiment analysis. For the Stanford Sentiment Treebank dataset, which consists of sentences from positive and negative movie reviews, we can use the language model to guess whether a review is positive or negative by inputting the word “very” after the sentence and seeing whether the model predicts the word “positive” or “negative” as more likely. This approach, without adapting the model at all to the task, performs on par with classic baselines ~80% accuracy⁠(opens in a newly introduced window).</p>
+<p id="sec-mid-23500">Our work is also a validation of the robustness and usefulness of the transformer architecture, indicating that it is sufficiently flexible to achieve state-of-the-art results on a wide range of tasks without requiring complicated task-specific customization or hyperparameter tuning.</p>
+<p>This project has a few outstanding complications which are worth noting:.</p>
+<p>Compute Requirements: Many previous approaches to NLP tasks train relatively small models on a single GPU from scratch. Our approach requires an expensive pre-training step—1 month on 8 GPUs. Luckily, this only has to be done once and we’re releasing our model so others can avoid it. It is also a large model (in comparison to prior work) and consequently uses more compute and memory—we used a 37-layer (12 block) Transformer architecture, and we train on sequences of up to 512 tokens. Most experiments were conducted on 4 and 8 GPU systems. The model does fine-tune to new tasks very rapidly which helps mitigate the additional resource requirements.</p>
+<p>Sources indicate that the limits and bias of learning about the world through text: Books and text readily available on the internet do not contain complete or even accurate information about the world. Recent work⁠(opens in a latest window) has shown that certain kinds of information are difficult to learn via just text and other work⁠(opens in a new window) has shown that models learn and exploit biases in data distributions.</p>
+<p>Still brittle generalization: Although our approach improves performance across a broad range of tasks, current deep learning NLP models still exhibit surprising and counterintuitive behavior - especially when evaluated in a systematic, adversarial, or out-of-distribution way. Our approach is not immune to these problems, though we have observed some indications of progress. Our approach indicates improved lexical robustness over previous purely neural approaches to textual entailment. On the dataset introduced in Glockner et al. (2018)⁠(opens in a new window) our model achieves 83.75%, performing similarly to KIM⁠(opens in a new window), which incorporates external knowledge via WordNet.</p>
+<p>Scaling the approach: We’ve observed that improvements in the performance of the language model are well correlated with improvements on downstream tasks. We’re currently using commodity hardware (a single 8 GPU machine) and a training dataset of only a few thousand books (~5GB of text). This suggests there is significant room for improvement using the well-validated approach of more compute and data.</p>
+<p>Sources indicate that improved fine-tuning: Our approach is currently very simple. It is likely that substantial improvements can be made using more intricate adaptation and transfer techniques such as those explored in ULMFiT⁠(opens in a fresh window).</p>
+<p>In a recent development, better understanding of why generative pre-training helps: Although we’ve discussed some ideas we are partial to here, more targeted experiments and research will help distinguish between competing explanations. For instance, how much of the benefits we observe are due to improved ability to process broader context versus improved world knowledge?</p>
+<p id="sec-end-23500">Industry observers note that we’re increasingly interested in understanding the relationship between the compute we expend on training models and the resulting output⁠(opens in a new window). The total compute used to train this model was 0.96 petaflop days (pfs-days).</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/language-unsupervised" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="understanding-the-capabilities-limitations-and-societal-impact-of-23425.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23425. Understanding the capabilities, limitations, and societal impact of large language models
+        </a>
+        
+        <a href="industry-news-improving-language-model-behavior-by-training-on-a--23420.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23420. Industry News: Improving language model behavior by training on a curated dataset
+        </a>
+        
+        <a href="webgpt-improving-the-factual-accuracy-of-language-models-through--23409.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23409. WebGPT: Improving the factual accuracy of language models through web browsing
+        </a>
+        
+        <a href="filling-crucial-language-learning-gaps-23358.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23358. Filling crucial language learning gaps
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

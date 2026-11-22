@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Distillation in the API</title>
+    <meta name="description" content="Fine-tune a cost-efficient model with the outputs of a large frontier model–all on the OpenAI platform. We’re introducing a upcoming Model Distillation off">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/model-distillation-in-the-api-23172.html">
+    <meta property="og:title" content="Model Distillation in the API">
+    <meta property="og:description" content="Fine-tune a cost-efficient model with the outputs of a large frontier model–all on the OpenAI platform. We’re introducing a upcoming Model Distillation off">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/WAfhxKn1jlwPcmkHH4sl6/5e82e35f685a447799791a1f777a9e24/04_Model_Distillation.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/model-distillation-in-the-api-23172.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Model Distillation in the API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/WAfhxKn1jlwPcmkHH4sl6/5e82e35f685a447799791a1f777a9e24/04_Model_Distillation.png?w=1600&h=900&fit=fill"], "datePublished": "2024-10-01T10:02:00", "dateModified": "2026-11-22T19:27:54.925558", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/model-distillation-in-the-api-23172.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Model Distillation in the API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 01 Oct 2024 &bull; ⏱️ 4 min read (746 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Fine-tune a cost-efficient model with the outputs of a large frontier model–all on the OpenAI platform.</li><li style='margin-bottom:6px;'>We’re introducing a upcoming Model Distillation offering to provide developers with an integrated workflow to manage the entire distillation pipeline directly within the OpenAI platform.</li><li style='margin-bottom:6px;'>Industry observers note that model distillation involves fine-tuning smaller, cost-efficient models using outputs from more capable models, allowing them to match the performance of advanced models on specific tasks at a much lower cost.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23172"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23172"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23172"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Model Distillation in the API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/WAfhxKn1jlwPcmkHH4sl6/5e82e35f685a447799791a1f777a9e24/04_Model_Distillation.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23172">Fine-tune a cost-efficient model with the outputs of a large frontier model–all on the OpenAI platform.</p>
+<p>We’re introducing a upcoming Model Distillation offering to provide developers with an integrated workflow to manage the entire distillation pipeline directly within the OpenAI platform. This lets developers easily use the outputs of frontier models like o1‑preview and GPT‑4o to fine-tune and improve the performance of more cost-efficient models like GPT‑4o mini.</p>
+<p>Industry observers note that model distillation involves fine-tuning smaller, cost-efficient models using outputs from more capable models, allowing them to match the performance of advanced models on specific tasks at a much lower cost. Until now, distillation has been a multi-step, error-prone process, which required developers to manually orchestrate multiple operations across disconnected tools, from generating datasets to fine-tuning models and measuring performance improvements. Since distillation is inherently iterative, developers needed to repeatedly run each step, adding significant effort and complexity.</p>
+<p>Our new Model Distillation suite includes:.</p>
+<p>Stored Completions⁠(opens in a newly introduced window): Developers can now easily generate datasets for distillation by automatically capturing and storing the input-output pairs generated by one of our models, like GPT‑4o or o1‑preview through our API. With Stored Completions, you can easily build datasets with your production data to evaluate and fine-tune models. Developers can review this integration guide⁠(opens in a new window) to learn how to opt-in to storing completions.</p>
+<p>Recent findings suggest that evals⁠(opens in a newly introduced window) (beta): Developers can now create and run custom evaluations on our platform to measure model performance on specific tasks. Instead of manually creating evaluation scripts and integrating disparate logging tools, Evals provides an integrated way to measure model performance. You can either use data from Stored Completions or upload existing datasets to set up your evaluations. Evals can also be used independently of fine-tuning to quantitatively evaluate model performance for your use cases.</p>
+<p>Fine-tuning⁠(opens in a new window): Stored Completions and Evals are fully integrated with our existing fine-tuning offering. This means that developers can use datasets created with Stored Completions in their fine-tuning jobs and run evaluations on fine-tuned models using Evals, all within our platform.</p>
+<p id="sec-mid-23172">First, create an evaluation⁠(opens in a newly introduced window) to measure the performance of the model you want to distill into, which in this example will be GPT‑4o mini. This evaluation will be used to continuously test the distilled model’s performance, to help you decide whether to deploy it.</p>
+<p>Next, use Stored Completions to create a distillation dataset of real-world examples using GPT‑4o’s outputs for the tasks on which you want to fine-tune GPT‑4o mini. You can do this by setting the ‘store:true’ flag in the Chat Completions API to automatically store these input-output pairs without any latency impact. These stored completions can be reviewed, filtered, and tagged to create high-quality datasets for fine-tuning or evaluation.</p>
+<p>According to recent reports, finally, use this dataset to fine-tune GPT‑4o mini. Stored Completions can be used as a training file when creating a fine-tuned model. Once the model is fine-tuned, you can go back to Evals to test whether the fine-tuned GPT‑4o mini model meets your performance criteria when compared to GPT‑4o.</p>
+<p>Sources indicate that fine-tuning is an iterative process. If the initial results aren’t satisfactory, you may need to refine the dataset, adjust the training parameters, or capture more specific examples where the model is underperforming. The goal is to incrementally improve the distilled model until it performs well enough for production use.</p>
+<p>Model Distillation is available today to all developers and can be used to distill any of our models, including GPT‑4o and o1‑preview. As a reminder, we’re also offering 2M free training tokens per day on GPT‑4o mini and 1M free training tokens per day on GPT‑4o until October 31 to help developers get started with distillation. Beyond that limit, the cost of training and running a distilled model is the same as our standard fine-tuning prices, which you can find on our API pricing page⁠.</p>
+<p>Stored Completions is available for free. Evals, which are available in beta, are charged at standard model prices based on the tokens used. Through the end of the year, developers can run evaluations for free (up to 7 per week) when they opt in⁠(opens in a new window) to share their Evals with OpenAI. Evals shared with us will be used to help us improve and evaluate our future models.</p>
+<p id="sec-end-23172">For more information, check out our Model Distillation docs⁠(opens in a new window).</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/api-model-distillation" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="upgrading-the-moderation-api-with-our-new-multimodal-moderation-m-23186.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23186. Upgrading the Moderation API with our new multimodal moderation model
+        </a>
+        
+        <a href="breaking-introducing-our-latest-image-generation-model-in-the-api-23051.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23051. Breaking: Introducing our latest image generation model in the API
+        </a>
+        
+        <a href="disrupting-a-coordinated-model-distillation-campaign-22776.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #22776. Disrupting a coordinated model-distillation campaign
+        </a>
+        
+        <a href="from-model-to-agent-equipping-the-responses-api-with-a-computer-e-21262.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21262. From model to agent: Equipping the Responses API with a computer environment
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

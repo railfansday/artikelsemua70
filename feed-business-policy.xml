@@ -4,97 +4,97 @@
     <title>Portal Berita - Business & Policy</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Business & Policy.</description>
-    <lastBuildDate>Sun, 22 Nov 2026 06:27:30 -0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Nov 2026 19:30:35 -0000</lastBuildDate>
     
             <item>
-                <title>A $50 million fund to build with communities</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/a-50-million-fund-to-build-with-communities-21730.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/a-50-million-fund-to-build-with-communities-21730.html</guid>
-                <description>OpenAI is launching an initial $50 million fund that supports nonprofit and community organizations, informed by the independent OpenAI Nonprofit Commission report. At OpenAI, we believe AI should help people solve humanity’s hardest problems, and that includes empowering the org...</description>
+                <title>Measuring Goodhart’s law</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/measuring-goodharts-law-23400.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/measuring-goodharts-law-23400.html</guid>
+                <description>Goodhart’s law famously indicates: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we have to grapple with at OpenAI when figuring out how to optimize objectives that are difficult or costly to measure. In a re...</description>
             </item>
             <item>
-                <title>Silver lining playbook: Likely China-origin activity targeting US persons</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/silver-lining-playbook-likely-china-origin-activity-targeting-us--21414.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/silver-lining-playbook-likely-china-origin-activity-targeting-us--21414.html</guid>
-                <description>OpenAI banned likely China-origin accounts using AI to research US persons, locations, and social-engineering tactics. This case study was originally published in OpenAI’s February 2026⁠(opens in a newly introduced window) report on disrupting malicious uses of AI. It has been re...</description>
+                <title>Latest Update: GPTs are GPTs: An early look at the labor market impact potential of large language models</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-gpts-are-gpts-an-early-look-at-the-labor-market-imp-23355.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-gpts-are-gpts-an-early-look-at-the-labor-market-imp-23355.html</guid>
+                <description>We investigate the potential implications of Generative Pre-trained Transformer (GPT) models and related technologies on the U.S. labor market. Using a upcoming rubric, we assess occupations based on their correspondence with GPT capabilities, incorporating both human expertise a...</description>
             </item>
             <item>
-                <title>Tech Report: “Cyber Special Operations”: China-linked influence planning</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-cyber-special-operations-china-linked-influence-plann-21405.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-cyber-special-operations-china-linked-influence-plann-21405.html</guid>
-                <description>OpenAI banned an account linked to an individual associated with Chinese law enforcement, using AI to plan influence activity, harassment, and online operations. This case study was originally published in OpenAI’s February 2026⁠(opens in a latest window) report on disrupting mal...</description>
+                <title>Operation "Spamouflage": China-linked influence activity</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/operation-spamouflage-china-linked-influence-activity-23265.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/operation-spamouflage-china-linked-influence-activity-23265.html</guid>
+                <description>OpenAI banned accounts associated with the PRC-origin operation "Spamouflage", using AI to research social media activity, generate posts, and debug a previously unreported website. This case study was originally published in OpenAI’s May 2024⁠(opens in a upcoming window) report....</description>
             </item>
             <item>
-                <title>1 Billion Classifications</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/1-billion-classifications-21095.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/1-billion-classifications-21095.html</guid>
+                <title>SweetSpecter: China-linked cyber activity</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/sweetspecter-china-linked-cyber-activity-23180.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/sweetspecter-china-linked-cyber-activity-23180.html</guid>
+                <description>OpenAI banned accounts likely belonging to a suspected China-based adversary tracked as SweetSpecter, using AI to research vulnerabilities, write code, and support spear-phishing activity. This case study was originally published in OpenAI’s October 2024⁠(opens in a new window) r...</description>
+            </item>
+            <item>
+                <title>Vixen and Keyhole Panda: China-linked cyber operations</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/vixen-and-keyhole-panda-china-linked-cyber-operations-23016.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/vixen-and-keyhole-panda-china-linked-cyber-operations-23016.html</guid>
+                <description>OpenAI banned accounts associated with threat actors publicly attributed to the PRC, using AI to support vulnerability research, scripting, translation, and operational troubleshooting. This case study was originally published in OpenAI’s June 2025⁠(opens in a fresh window) repor...</description>
+            </item>
+            <item>
+                <title>Operation “Sneer Review”: China-origin influence activity</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/operation-sneer-review-china-origin-influence-activity-23014.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/operation-sneer-review-china-origin-influence-activity-23014.html</guid>
+                <description>OpenAI banned accounts using AI to generate posts criticizing a Taiwanese social media influencer and related US topics. This case study was originally published in OpenAI’s June 2025⁠(opens in a new window) report. We banned ChatGPT accounts that we detected using our models to ...</description>
+            </item>
+            <item>
+                <title>Large Language Models: A New Moore's Law?</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/large-language-models-a-new-moores-law-22870.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/large-language-models-a-new-moores-law-22870.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Industry News: Journey to 1 Million Gradio Consumers!</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-journey-to-1-million-gradio-consumers-21045.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-journey-to-1-million-gradio-consumers-21045.html</guid>
+                <title>We Raised $100 Million for Open &amp; Collaborative Machine Learning 🚀</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/we-raised-100-million-for-open-collaborative-machine-learning-22812.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/we-raised-100-million-for-open-collaborative-machine-learning-22812.html</guid>
                 <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Confidential submission of draft S-1 to the SEC</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/confidential-submission-of-draft-s-1-to-the-sec-20898.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/confidential-submission-of-draft-s-1-to-the-sec-20898.html</guid>
-                <description>It has been revealed that we recently submitted a confidential S-1. We expect it to leak so we’re just announcing it. We have not decided on timing yet; it may be a while because there are things we want to do that are likely easier as a private organization. But it’s a complicat...</description>
-            </item>
-            <item>
-                <title>Introducing Astra for Law</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-astra-for-law-20776.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-astra-for-law-20776.html</guid>
-                <description>Our most powerful model, configured into a latest AI foundation for law. For the latest availability and benchmarks, read the November Astra for Law update⁠. Today, we’re introducing Astra for Law: a new foundation for law firms and legal technology companies to build AI products...</description>
             </item>
             <item>
                 <title>Ulysses Sequence Parallelism: Training with Million-Token Contexts</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/ulysses-sequence-parallelism-training-with-million-token-contexts-20700.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/ulysses-sequence-parallelism-training-with-million-token-contexts-20700.html</guid>
-                <description>In a recent development, training large language models on long sequences has become essential for building capable AI systems. As models are increasingly used for tasks like document analysis, code understanding, complex reasoning, and RAG workloads, the need to process sequence...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/ulysses-sequence-parallelism-training-with-million-token-contexts-22500.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/ulysses-sequence-parallelism-training-with-million-token-contexts-22500.html</guid>
+                <description>Content not available. → Read original article...</description>
             </item>
             <item>
                 <title>DeepSeek-V4: a million-token context that agents can actually use</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/deepseek-v4-a-million-token-context-that-agents-can-actually-use-20646.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/deepseek-v4-a-million-token-context-that-agents-can-actually-use-20646.html</guid>
-                <description>Recent findings suggest that deepSeek released V4 today. Two MoE checkpoints are on the Hub: DeepSeek-V4-Pro at 1.6T total parameters with 49B active, and DeepSeek-V4-Flash at 284B total with 13B active. Both have a 1M-token context window. The benchmark numbers are competitive, ...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/deepseek-v4-a-million-token-context-that-agents-can-actually-use-22465.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/deepseek-v4-a-million-token-context-that-agents-can-actually-use-22465.html</guid>
+                <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Industry News: Astra for Law leads in legal intelligence</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-astra-for-law-leads-in-legal-intelligence-20451.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-astra-for-law-leads-in-legal-intelligence-20451.html</guid>
+                <title>Astra for Law leads in legal intelligence</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/astra-for-law-leads-in-legal-intelligence-22316.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/astra-for-law-leads-in-legal-intelligence-22316.html</guid>
                 <description>Our latest model configuration earned leading marks on multiple benchmarks. Every ChatGPT Enterprise customer can now request access. Today, we're releasing an updated Astra for Law that is state-of-the-art on Harvey LAB-AA and a top performer on Vals AI’s Legal Research Bench. W...</description>
             </item>
             <item>
-                <title>Traders start to move US copper to China as Trump tariff fears ease</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/traders-start-to-move-us-copper-to-china-as-trump-tariff-fears-ea-20450.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/traders-start-to-move-us-copper-to-china-as-trump-tariff-fears-ea-20450.html</guid>
-                <description>Acute Chinese shortage and high local premium create lucrative arbitrage. → Read original article...</description>
-            </item>
-            <item>
-                <title>Industry News: Navy budget pick has family investments in Trump Jr-linked contractor</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-navy-budget-pick-has-family-investments-in-trump-jr-20445.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-navy-budget-pick-has-family-investments-in-trump-jr-20445.html</guid>
-                <description>Democrats have promised to raise alleged conflicts of interest concerning administration officials when they take over Congress. → Read original article...</description>
-            </item>
-            <item>
-                <title>Tech Report: Dream of gas-powered vehicles falters in China’s hydrogen capital</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-dream-of-gas-powered-vehicles-falters-in-chinas-hydro-20441.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-dream-of-gas-powered-vehicles-falters-in-chinas-hydro-20441.html</guid>
-                <description>High costs and dwindling subsidies leave rows of hydrogen-powered buggies sitting idle in the southern city of Foshan. → Read original article...</description>
-            </item>
-            <item>
                 <title>AWS DevOps Agent reduces investigation latency</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-devops-agent-reduces-investigation-latency-20404.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-devops-agent-reduces-investigation-latency-20404.html</guid>
-                <description>When an incident is occurring, mean time to recover needs to be as fast as possible. Recent findings suggest that with this launch, incident investigations performed by AWS DevOps Agent complete faster. Investigations now also include a real-time summary that is updated with the ...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-devops-agent-reduces-investigation-latency-22278.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-devops-agent-reduces-investigation-latency-22278.html</guid>
+                <description>When an incident is occurring, mean time to recover needs to be as fast as possible. With this launch, incident investigations performed by AWS DevOps Agent complete faster. Investigations now also include a real-time summary that is updated with the current state of an investiga...</description>
             </item>
             <item>
-                <title>Serbian strongman called officials ‘ignoramuses’ over Trump hotel</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/serbian-strongman-called-officials-ignoramuses-over-trump-hotel-20395.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/serbian-strongman-called-officials-ignoramuses-over-trump-hotel-20395.html</guid>
-                <description>Aleksandar Vučić went to great lengths to secure development backed by Jared Kushner, testimonies show. → Read original article...</description>
+                <title>Breaking: Democrats will seek to unwind Trump’s tax and tariff policies</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-democrats-will-seek-to-unwind-trumps-tax-and-tariff-poli-22272.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-democrats-will-seek-to-unwind-trumps-tax-and-tariff-poli-22272.html</guid>
+                <description>Top lawmaker Richard Neal vows hearings into the president’s flagship economic measures. → Read original article...</description>
+            </item>
+            <item>
+                <title>US ports face cyber attack onslaught as hackers target vital trade routes</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/us-ports-face-cyber-attack-onslaught-as-hackers-target-vital-trad-22257.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/us-ports-face-cyber-attack-onslaught-as-hackers-target-vital-trad-22257.html</guid>
+                <description>America’s biggest crude oil export hub reports thousands of attempted hacks each day as shipping companies battle breaches. → Read original article...</description>
+            </item>
+            <item>
+                <title>Xi needs Trump more than ever</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/xi-needs-trump-more-than-ever-22248.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/xi-needs-trump-more-than-ever-22248.html</guid>
+                <description>The Shenzhen summit shows the high stakes for Beijing as many in Washington call for tougher measures. → Read original article...</description>
             </item>
 </channel>
 </rss>

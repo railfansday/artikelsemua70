@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>March 20 ChatGPT outage: Here’s what happened</title>
+    <meta name="description" content="An revision on our findings, the actions we’ve taken, and technical details of the bug. We took ChatGPT offline earlier this week due to a bug in an open-s">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/march-20-chatgpt-outage-heres-what-happened-23353.html">
+    <meta property="og:title" content="March 20 ChatGPT outage: Here’s what happened">
+    <meta property="og:description" content="An revision on our findings, the actions we’ve taken, and technical details of the bug. We took ChatGPT offline earlier this week due to a bug in an open-s">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/2f08cb6b-5faa-4204-28e879b00056/3981d51d868a6a59eac83ec8fac1b335/March_20_ChatGPT_outage__Here_s_what_happened.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/march-20-chatgpt-outage-heres-what-happened-23353.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "March 20 ChatGPT outage: Here’s what happened", "image": ["https://images.ctfassets.net/kftzwdyauwt9/2f08cb6b-5faa-4204-28e879b00056/3981d51d868a6a59eac83ec8fac1b335/March_20_ChatGPT_outage__Here_s_what_happened.png?w=1600&h=900&fit=fill"], "datePublished": "2023-03-24T07:00:00", "dateModified": "2026-11-22T19:28:35.982442", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/march-20-chatgpt-outage-heres-what-happened-23353.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>March 20 ChatGPT outage: Here’s what happened</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 24 Mar 2023 &bull; ⏱️ 4 min read (867 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>An revision on our findings, the actions we’ve taken, and technical details of the bug.</li><li style='margin-bottom:6px;'>We took ChatGPT offline earlier this week due to a bug in an open-source library which allowed some consumers to see titles from another active user’s chat history.</li><li style='margin-bottom:6px;'>It has been revealed that the bug is now patched.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23353"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23353"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23353"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="March 20 ChatGPT outage: Here’s what happened" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/2f08cb6b-5faa-4204-28e879b00056/3981d51d868a6a59eac83ec8fac1b335/March_20_ChatGPT_outage__Here_s_what_happened.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23353">An revision on our findings, the actions we’ve taken, and technical details of the bug.</p>
+<p>We took ChatGPT offline earlier this week due to a bug in an open-source library which allowed some consumers to see titles from another active user’s chat history. It’s also possible that the first message of a newly-created conversation was visible in someone else’s chat history if both users were active around the same time.</p>
+<p>It has been revealed that the bug is now patched. We were able to restore both the ChatGPT service and, later, its chat history feature, with the exception of a few hours of history. As promised, we’re publishing more technical details⁠ of this problem below.</p>
+<p>Open a subscription confirmation email sent on Monday, March 20, between 1 a.m. and 10 a.m. Pacific time. Due to the bug, some subscription confirmation emails generated during that window were sent to the wrong users. These emails contained the credit card type and last four digits of another user’s credit card number, but full credit card numbers did not appear. It’s possible that a small number of subscription confirmation emails might have been incorrectly addressed prior to March 20, although we have not confirmed any instances of this.</p>
+<p>Industry observers note that in ChatGPT, click on “My account,” then “Manage my subscription” between 1 a.m. and 10 a.m. Pacific time on Monday, March 20. During this window, another active ChatGPT Plus user’s first and last name, email address, payment address, the credit card type and last four digits (only) of a credit card number, and credit card expiration date might have been visible. It’s possible that this also could have occurred prior to March 20, although we have not confirmed any instances of this.</p>
+<p>According to recent reports, we have reached out to notify affected users that their payment information may have been exposed. We are confident that there is no ongoing risk to users’ data.</p>
+<p>Sources indicate that everyone at OpenAI is committed to protecting our owners’ privacy and keeping their data safe. It’s a responsibility we take incredibly seriously. Unfortunately, this week we fell short of that commitment, and of our users’ expectations. We apologize again to our users and to the entire ChatGPT community and will work diligently to rebuild trust.</p>
+<p>Sources indicate that the bug was discovered in the Redis client open-source library, redis-py. As soon as we identified the bug, we reached out to the Redis maintainers with a patch to resolve the concern. Here’s how the bug worked:.</p>
+<p>We use Redis to cache user information in our server so we don’t need to check our database for every request.</p>
+<p>We use Redis Cluster to distribute this load over multiple Redis instances.</p>
+<p>We use the redis-py library to interface with Redis from our Python server, which runs with Asyncio.</p>
+<p>The library maintains a shared pool of connections between the server and the cluster, and recycles a connection to be used for another request once done.</p>
+<p>When using Asyncio, requests and responses with redis-py behave as two queues: the caller pushes a request onto the incoming queue, and will pop a response from the outgoing queue, and then return the connection to the pool.</p>
+<p id="sec-mid-23353">If a request is canceled after the request is pushed onto the incoming queue, but before the response popped from the outgoing queue, we see our bug: the connection thus becomes corrupted and the next response that’s dequeued for an unrelated request can receive data left behind in the connection.</p>
+<p>In most cases, this results in an unrecoverable server error, and the user will have to try their request again.</p>
+<p>But in some cases the corrupted data happens to match the data type the requester was expecting, and so what gets returned from the cache appears valid, even if it belongs to another user.</p>
+<p>At 1 a.m. Pacific time on Monday, March 20, we inadvertently introduced a change to our server that caused a spike in Redis request cancellations. This created a small probability for each connection to return bad data.</p>
+<p>This bug only appeared in the Asyncio redis-py client for Redis Cluster, and has now been fixed.</p>
+<p>As our investigation wraps up, supporting and informing our customers is our top priority.</p>
+<p>We have taken the following actions to improve our systems:.</p>
+<p>Extensively tested our fix to the underlying bug.</p>
+<p>Added redundant checks to ensure the data returned by our Redis cache matches the requesting user.</p>
+<p>Programatically examined our logs to make sure that all messages are only available to the correct user.</p>
+<p>Correlated several data sources to precisely identify the affected owners so that we can notify them.</p>
+<p>Improved logging to identify when this is happening and fully confirm it has stopped.</p>
+<p>Improved the robustness and scale of our Redis cluster to reduce the likelihood of connection errors at extreme load.</p>
+<p id="sec-end-23353">The Redis open-source maintainers have been fantastic collaborators, swiftly addressing the bug and rolling out a patch. Redis, along with other open-source software, plays a crucial role in our research efforts. Their significance cannot be understated—we would not have been able to scale ChatGPT without Redis. We’re dedicated to continually supporting and contributing to the Redis community.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/march-20-chatgpt-outage" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="upcoming-in-chatgpt-for-business-march-2025-23085.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23085. Upcoming in ChatGPT for Business: March 2025
+        </a>
+        
+        <a href="heres-what-happened-in-crypto-today-21972.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21972. Here’s what happened in crypto today
+        </a>
+        
+        <a href="heres-what-happened-in-crypto-today-21881.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #21881. Here’s what happened in crypto today
+        </a>
+        
+        <a href="industry-news-introducing-chatgpt-23376.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23376. Industry News: Introducing ChatGPT
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

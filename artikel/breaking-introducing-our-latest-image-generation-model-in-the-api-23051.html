@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: Introducing our latest image generation model in the API</title>
+    <meta name="description" content="When we introduced image generation in ChatGPT last month, it promptly became one of our most popular features: over 130 million users around the world cre">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-our-latest-image-generation-model-in-the-api-23051.html">
+    <meta property="og:title" content="Breaking: Introducing our latest image generation model in the API">
+    <meta property="og:description" content="When we introduced image generation in ChatGPT last month, it promptly became one of our most popular features: over 130 million users around the world cre">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/572UKpToOWAsLoMXXdAg9H/1c9a2cce86965f1ed56e24a97feeaf50/Image_Gen_Hero.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-our-latest-image-generation-model-in-the-api-23051.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: Introducing our latest image generation model in the API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/572UKpToOWAsLoMXXdAg9H/1c9a2cce86965f1ed56e24a97feeaf50/Image_Gen_Hero.png?w=1600&h=900&fit=fill"], "datePublished": "2025-04-23T10:00:00", "dateModified": "2026-11-22T19:27:28.523807", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-our-latest-image-generation-model-in-the-api-23051.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: Introducing our latest image generation model in the API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 23 Apr 2025 &bull; ⏱️ 3 min read (695 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>When we introduced image generation in ChatGPT last month, it promptly became one of our most popular features: over 130 million users around the world created more than 700 million images in just the first week⁠(opens in a latest window).</li><li style='margin-bottom:6px;'>Sources indicate that today, we’re bringing the natively multimodal model that powers this experience in ChatGPT to the API via gpt-image-1, enabling developers and businesses to easily integrate high-quality, professional-grade image generation directly into their own tools and platforms.</li><li style='margin-bottom:6px;'>Leading enterprises and startups across industries including creative tools, e-commerce, education, enterprise software, gaming, are already using image generation in their products and experiences.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23051"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23051"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23051"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: Introducing our latest image generation model in the API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/572UKpToOWAsLoMXXdAg9H/1c9a2cce86965f1ed56e24a97feeaf50/Image_Gen_Hero.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23051">When we introduced image generation in ChatGPT last month, it promptly became one of our most popular features: over 130 million users around the world created more than 700 million images in just the first week⁠(opens in a latest window).</p>
+<p>Sources indicate that today, we’re bringing the natively multimodal model that powers this experience in ChatGPT to the API via gpt-image-1, enabling developers and businesses to easily integrate high-quality, professional-grade image generation directly into their own tools and platforms. The model’s versatility allows it to create images across diverse styles, faithfully follow custom guidelines, leverage world knowledge, and accurately render text—unlocking countless practical applications across multiple domains.</p>
+<p>Leading enterprises and startups across industries including creative tools, e-commerce, education, enterprise software, gaming, are already using image generation in their products and experiences. We’re excited to share some of these examples below.</p>
+<p>We’re also continuing to work with developers and businesses to uncover more ways image generation in the API can serve their use cases, including:.</p>
+<p>Industry observers note that designing and editing: Canva is exploring ways to integrate OpenAI's gpt-image-1 to push the boundaries of design generation and editing in its Canva AI and Magic Studio tools. Through gpt-image-1 capabilities like transforming rough sketches into stunning graphic elements and enabling high-fidelity visual edits, Canva will further empower its 230 million customers to bring their ideas to life in entirely latest ways.</p>
+<p>Recent findings suggest that creating and editing logos: GoDaddy is actively experimenting to integrate image generation so customers can easily create logos that are editable, remove backgrounds, and generate professional typography. In addition, as a new experience with GoDaddy Airo®, the team is working towards customers creating social media posts and marketing assets that reflect their unique brand identities for original product and brand content created from a prompt.</p>
+<p>Building marketing collateral: HubSpot is exploring how OpenAI's new AI image generation capabilities can help customers create marketing and sales collateral. As HubSpot continues to add new AI-powered tools for scaling businesses, these image generation capabilities have the potential to transform how customers produce high-quality images for social media, email marketing, and landing pages without requiring specialized design expertise.</p>
+<p>Generating recipes and shopping lists: Instacart is testing new ways to use the API for image generation, including images for recipes and shopping lists.</p>
+<p>Editing videos: invideo enables millions of customers to transform their ideas into videos using AI. With the integration of gpt-image-1, the platform now offers improved text generation, fine-grain editing controls, and advanced style guidance.</p>
+<p id="sec-mid-23051">The gpt-image-1 model in the API leverages the same safety guardrails as 4o image generation in ChatGPT, including safeguards that restrict the model from generating harmful images and the inclusion of C2PA metadata in generated images—you can read more about this in our past blog post here. Additionally, developers can also control moderation sensitivity with the `moderation` parameter, which can be set to auto (default) for standard filtering, or low for less restrictive filtering. Learn more in our docs⁠(opens in a new window).</p>
+<p>By default, we never train on customer API data, and all image inputs and outputs remain subject to our API usage policies.</p>
+<p>Usage of gpt-image-1 is priced per token, with separate pricing for text and image tokens:.</p>
+<p>Text input tokens (prompt text): $5 per 1M tokens.</p>
+<p>Image input tokens (input images): $10 per 1M tokens.</p>
+<p>Image output tokens (generated images): $40 per 1M tokens.</p>
+<p>In practice, this translates to roughly $0.02, $0.07, and $0.19 per generated image for low, medium, and high-quality square images, respectively. For detailed pricing by image quality and size, see the docs⁠(opens in a upcoming window).</p>
+<p>It has been revealed that the gpt-image-1 model is now available globally via the Images API, with support in the Responses API coming soon. Some developers may need to verify⁠(opens in a fresh window) their organization before being able to use the model. Please check the organization settings⁠(opens in a new window) to see if you already have access.</p>
+<p id="sec-end-23051">To get started, explore the model’s capabilities in the playground⁠(opens in a new window) and check out our image generation guide⁠(opens in a new window). We look forward to seeing what you build.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/image-generation-api" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-introducing-improvements-to-the-fine-tuning-api-and-expa-23275.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23275. Breaking: Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="upgrading-the-moderation-api-with-our-new-multimodal-moderation-m-23186.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23186. Upgrading the Moderation API with our new multimodal moderation model
+        </a>
+        
+        <a href="introducing-next-generation-audio-models-in-the-api-23083.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23083. Introducing next-generation audio models in the API
+        </a>
+        
+        <a href="introducing-4o-image-generation-23077.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23077. Introducing 4o Image Generation
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

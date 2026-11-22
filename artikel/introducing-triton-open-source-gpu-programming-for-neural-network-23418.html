@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing Triton: Open-source GPU programming for neural networks</title>
+    <meta name="description" content="We’re releasing Triton 1.0, an open-source Python-like programming language which enables researchers with no CUDA experience to write highly efficient GPU">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-triton-open-source-gpu-programming-for-neural-network-23418.html">
+    <meta property="og:title" content="Introducing Triton: Open-source GPU programming for neural networks">
+    <meta property="og:description" content="We’re releasing Triton 1.0, an open-source Python-like programming language which enables researchers with no CUDA experience to write highly efficient GPU">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/cdce1ebd-19a2-4848-a08ec8c44e18/55b924fc6628318148b7c5c4902551e7/image-18.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-triton-open-source-gpu-programming-for-neural-network-23418.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing Triton: Open-source GPU programming for neural networks", "image": ["https://images.ctfassets.net/kftzwdyauwt9/cdce1ebd-19a2-4848-a08ec8c44e18/55b924fc6628318148b7c5c4902551e7/image-18.webp?w=1600&h=900&fit=fill"], "datePublished": "2021-07-28T07:00:00", "dateModified": "2026-11-22T19:28:49.472248", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-triton-open-source-gpu-programming-for-neural-network-23418.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">Hardware & Chips</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing Triton: Open-source GPU programming for neural networks</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 28 Jul 2021 &bull; ⏱️ 7 min read (1368 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing Triton 1.0, an open-source Python-like programming language which enables researchers with no CUDA experience to write highly efficient GPU code—most of the time on par with what an expert would be able to produce.</li><li style='margin-bottom:6px;'>According to recent reports, triton makes it possible to reach peak hardware performance with relatively little effort; for example, it can be used to write FP16 matrix multiplication kernels that match the performance of cuBLAS—something that many GPU programmers can’t do—in under 25 lines of code.</li><li style='margin-bottom:6px;'>According to recent reports, novel research ideas in the field of Deep Learning are generally implemented using a combination of native framework operators.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-23418"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-23418"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-23418"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing Triton: Open-source GPU programming for neural networks" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/cdce1ebd-19a2-4848-a08ec8c44e18/55b924fc6628318148b7c5c4902551e7/image-18.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-23418">We’re releasing Triton 1.0, an open-source Python-like programming language which enables researchers with no CUDA experience to write highly efficient GPU code—most of the time on par with what an expert would be able to produce.</p>
+<p>According to recent reports, triton makes it possible to reach peak hardware performance with relatively little effort; for example, it can be used to write FP16 matrix multiplication kernels that match the performance of cuBLAS—something that many GPU programmers can’t do—in under 25 lines of code. Our researchers have already used it to produce kernels that are up to 2x more efficient than equivalent Torch implementations, and we’re excited to work with the community to make GPU programming more accessible to everyone.</p>
+<p>According to recent reports, novel research ideas in the field of Deep Learning are generally implemented using a combination of native framework operators. While convenient, this approach often requires the creation (and/or movement) of many temporary tensors, which can hurt the performance of neural networks at scale. These issues can be mitigated by writing specialized GPU kernels, but doing so can be surprisingly difficult due to the many intricacies of GPU programming.1, 2, 3 And, although a variety of systems have recently emerged4, 5 to make this process easier, we have found them to be either too verbose, lack flexibility or generate code noticeably slower than our hand-tuned baselines. This has led us to extend and improve Triton6, a recent language and compiler whose original creator now works at OpenAI.</p>
+<p>The architecture of modern GPUs can be roughly divided into three major components—DRAM, SRAM and ALUs—each of which must be considered when optimizing CUDA code:.</p>
+<p>Memory transfers from DRAM must be coalesced into large transactions to leverage the large bus width of modern memory interfaces.</p>
+<p>Data must be manually stashed to SRAM prior to being re-used, and managed so as to minimize shared memory bank conflicts upon retrieval.</p>
+<p>Computations must be partitioned and scheduled carefully, both across and within Streaming Multiprocessors (SMs), so as to promote instruction/thread-level parallelism and leverage special-purpose ALUs (e.g., tensor cores).</p>
+<p>According to recent reports, reasoning about all these factors can be challenging, even for seasoned CUDA programmers with many years of experience. The purpose of Triton is to fully automate these optimizations, so that developers can better focus on the high-level logic of their parallel code. Triton aims to be broadly applicable, and therefore does not automatically schedule work across SMs -- leaving some important algorithmic considerations (e.g. tiling, inter-SM synchronization) to the discretion of developers.</p>
+<p>Compiler optimizations in CUDA vs Triton.</p>
+<p>Out of all the Domain Specific Languages and JIT-compilers available, Triton is perhaps most similar to Numba: kernels are defined as decorated Python functions, and rolled out concurrently with different program_id’s on a grid of so-called instances. However, as shown in the code snippet below, the resemblance stops there: Triton exposes intra-instance parallelism via operations on blocks—small arrays whose dimensions are powers of two—rather than a Single Instruction, Multiple Thread (SIMT)7 execution model. In doing so, Triton effectively abstracts away all the problems related to concurrency within CUDA thread blocks (e.g., memory coalescing, shared memory synchronization/conflicts, tensor core scheduling).</p>
+<p>While this may not be particularly helpful for embarrassingly parallel (i.e., element-wise) computations, it can greatly simplify the development of more complex GPU programs.</p>
+<p>According to recent reports, consider for example the case of a fused softmax kernel (below) in which each instance normalizes a different row of the given input tensor X_∈R_M_×_N. Standard CUDA implementations of this parallelization strategy can be challenging to write, requiring explicit synchronization between threads as they concurrently reduce the same row of X. Most of this complexity goes away with Triton, where each kernel instance loads the row of interest and normalizes it sequentially using NumPy-like primitives.</p>
+<p>Note that the Triton JIT treats X and Y as pointers rather than tensors; we felt like retaining low-level control of memory accesses was notable to address more complex data structures (e.g., block-sparse tensors).</p>
+<p>According to recent reports, importantly, this particular implementation of softmax keeps the rows of X in SRAM throughout the entire normalization process, which maximizes data reuse when applicable (~&lt;32K columns). This differs from PyTorch’s internal CUDA code, whose use of temporary memory makes it more general but significantly slower (below). The bottom line here is not that Triton is inherently better, but that it simplifies the development of specialized kernels that can be much faster than those found in general-purpose libraries.</p>
+<p>The lower performance of the Torch (v1.9) JIT highlights the difficulty of automatic CUDA code generation from sequences of high-level tensor operations.</p>
+<p>Fused softmax with the Torch JIT.</p>
+<p>Sources indicate that being able to write fused kernels for element-wise operations and reductions is important, but not sufficient given the prominence of matrix multiplication tasks in neural networks. As it turns out, Triton also works very well for those, achieving peak performance with just ~25 lines of Python code. On the other hand, implementing something similar in CUDA would take a lot more effort⁠(opens in a upcoming window) and would even be likely to achieve lower performance.</p>
+<p id="sec-mid-23418">Matrix multiplication in Triton.</p>
+<p>It has been revealed that one vital advantage of handwritten matrix multiplication kernels is that they can be customized as desired to accommodate fused transformations of their inputs (e.g., slicing) and outputs (e.g., Leaky ReLU). Without a system like Triton, non-trivial modifications of matrix multiplication kernels would be out-of-reach for developers without exceptional GPU programming expertise.</p>
+<p>The good performance of Triton comes from a modular system architecture centered around Triton-IR, an LLVM-based intermediate representation in which multi-dimensional blocks of values are first-class citizens.</p>
+<p>Sources indicate that the @triton.jit decorator works by walking the Abstract Syntax Tree (AST) of the provided Python function so as to generate Triton-IR on-the-fly using a common SSA construction algorithm.8 The resulting IR code is then simplified, optimized and automatically parallelized by our compiler backend, before being converted into high-quality LLVM-IR—and eventually PTX—for execution on recent NVIDIA GPUs. CPUs and AMD GPUs are not supported at the moment, but we welcome community contributions aimed at addressing this limitation.</p>
+<p>In a recent development, we have found that the use of blocked program representations via Triton-IR allows our compiler to automatically perform a wide variety of important program optimizations. For example, data can be automatically stashed to shared memory by looking at the operands of computationally intensive block-level operations (e.g., tl.dot)—and allocated/synchronized using standard liveness analysis techniques.</p>
+<p>On the other hand, Triton programs can be efficiently and automatically parallelized both (1) across SMs by executing different kernel instances concurrently, and (2) within SMs by analyzing the iteration space of each block-level operation and partitioning it adequately across different SIMD units, as shown below.</p>
+<p>Sources indicate that we intend for Triton to become a community-driven project. Feel free to fork our repository on GitHub⁠(opens in a new window)!</p>
+<p>If you’re interested in joining our team and working on Triton &amp; GPU kernels, we’re hiring⁠!</p>
+<p>It has been revealed that gray, S. (2017). SGEMM Walkthrough⁠(opens in a new window). URL https://github.com/NervanaSystems/maxas/wiki/SGEMM⁠(opens in a new window).</p>
+<p>Kerr, A. (2020). Developing CUDA kernels to push Tensor Cores to the Absolute Limit on NVIDIA A100⁠(opens in a new window). URL https://developer.nvidia.com/gtc/2020/video/s21745-vid⁠(opens in a new window).</p>
+<p>It has been revealed that yan, D., Wang, W., &amp; Chu, X. (2020, May). Demystifying tensor cores to optimize half-precision matrix multiply⁠(opens in a upcoming window). In 2020 IEEE International Parallel and Distributed Processing Symposium (IPDPS). IEEE.</p>
+<p>NVIDIA CUTLASS⁠(opens in a new window).</p>
+<p>Apache TVM⁠(opens in a new window).</p>
+<p>According to recent reports, tillet, P., Kung, H. T., &amp; Cox, D. (2019, June). Triton: an intermediate language and compiler for tiled neural network computations⁠(opens in a new window). In Proceedings of the 3rd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages (pp. 10-19).</p>
+<p>Lin, Y. &amp; Grover, V. (2018). Using CUDA Warp-Level Primitives⁠(opens in a fresh window). URL https://developer.nvidia.com/blog/using-cuda-warp-level-primitives/⁠(opens in a new window).</p>
+<p>Braun, M., Buchwald, S., Hack, S., Leißa, R., Mallon, C., &amp; Zwinkau, A. (2013, March). Simple and efficient construction of static single assignment form⁠(opens in a new window). In International Conference on Compiler Construction (pp. 102-122). Springer, Berlin, Heidelberg.</p>
+<p id="sec-end-23418">Da Yan (HKUST), DeepSpeed (Microsoft), Anthropic.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/triton" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="weight-normalization-a-simple-reparameterization-to-accelerate-tr-23593.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23593. Weight normalization: A simple reparameterization to accelerate training of deep neural networks
+        </a>
+        
+        <a href="latest-update-extensions-and-limitations-of-the-neural-gpu-23577.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23577. Latest Update: Extensions and limitations of the neural GPU
+        </a>
+        
+        <a href="latest-update-stochastic-neural-networks-for-hierarchical-reinfor-23555.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23555. Latest Update: Stochastic Neural Networks for hierarchical reinforcement learning
+        </a>
+        
+        <a href="learning-sparse-neural-networks-through-l-regularization-23526.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #23526. Learning sparse neural networks through L₀ regularization
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
