@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measuring Goodhart’s law</title>
+    <meta name="description" content="Goodhart’s law famously claims: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we ha">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/measuring-goodharts-law-27852.html">
+    <meta property="og:title" content="Measuring Goodhart’s law">
+    <meta property="og:description" content="Goodhart’s law famously claims: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we ha">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/bc7398a0-41a2-49ac-550027540010/5da5f59157a3accae2bc9bd28fd47177/image-11.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/measuring-goodharts-law-27852.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Measuring Goodhart’s law", "image": ["https://images.ctfassets.net/kftzwdyauwt9/bc7398a0-41a2-49ac-550027540010/5da5f59157a3accae2bc9bd28fd47177/image-11.webp?w=1600&h=900&fit=fill"], "datePublished": "2022-04-13T07:00:00", "dateModified": "2026-11-23T23:51:36.031597", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/measuring-goodharts-law-27852.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">Business & Policy</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Measuring Goodhart’s law</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 13 Apr 2022 &bull; ⏱️ 6 min read (1284 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Goodhart’s law famously claims: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we have to grapple with at OpenAI when figuring out how to optimize objectives that are difficult or costly to measure.</li><li style='margin-bottom:6px;'>Sources indicate that goodhart’s law⁠(opens in a fresh window) famously indicates: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we have to grapple with at OpenAI when figuring out how to optimize objectives that are difficult or costly to measure.</li><li style='margin-bottom:6px;'>For example, as part of our work to align⁠ models like GPT‑3 with human intent and values, we would like to optimize things like “How helpful⁠ is this response?”, or “How factually accurate⁠ is this claim?”.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-27852"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-27852"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-27852"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Measuring Goodhart’s law" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/bc7398a0-41a2-49ac-550027540010/5da5f59157a3accae2bc9bd28fd47177/image-11.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-27852">Goodhart’s law famously claims: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we have to grapple with at OpenAI when figuring out how to optimize objectives that are difficult or costly to measure.</p>
+<p>Sources indicate that goodhart’s law⁠(opens in a fresh window) famously indicates: “When a measure becomes a target, it ceases to be a good measure.” Although originally from economics, it’s something we have to grapple with at OpenAI when figuring out how to optimize objectives that are difficult or costly to measure. It’s often necessary to introduce some proxy objective that’s easier or cheaper to measure, but when we do this, we need to be careful not to optimize it too much.</p>
+<p>For example, as part of our work to align⁠ models like GPT‑3 with human intent and values, we would like to optimize things like “How helpful⁠ is this response?”, or “How factually accurate⁠ is this claim?”. These are complex objectives that require humans to carefully check things over. For this reason, we train a model to predict these human preferences, known as a reward model, and use the reward model’s predictions as a proxy objective. But it’s important to keep track of how well the true objective is being optimized.</p>
+<p>Industry observers note that in this post we’ll look at some of the mathematics behind how we do this. We’ll focus on a setting that is particularly clean to analyze, in which we have access to the true objective. In practice, even human preferences can fail to measure what we really care about, but we’re setting that issue aside in this post.</p>
+<p>There are many ways in which one could optimize the proxy objective, but perhaps the simplest is best-of-n n n sampling, also known as rejection sampling or reranking. We simply sample n times and take the one that scores the highest according to the proxy objective.</p>
+<p>Although this method is very simple, it can actually be competitive with more advanced techniques such as reinforcement learning, albeit at the cost of more inference-time compute. For example, in WebGPT⁠, our best-of-64 model outperformed our reinforcement learning model, perhaps in part because the best-of-64 model got to browse many more websites. Even applying best-of-4 provided a significant boost to human preferences.</p>
+<p>In addition, best-of-n n n sampling has reliable performance and is straightforward to analyze mathematically, making it well-suited to empirical studies of Goodhart’s law and related phenomena.</p>
+<p>Let’s study best-of-n n n sampling more formally. Suppose we have some sample space S S S (such as the set of possible question-answer pairs), some probability distribution P P P over S S S, a true objective (or “reward”) Rtrue:S→R R_{\text{true}}:S\to\mathbb R Rtrue​:S→R, and a proxy objective Rproxy:S→R R_{\text{proxy}}:S\to\mathbb RRproxy​:S→R. Let’s say that we somehow optimize Rproxy R_{\text{proxy}} Rproxy​ and thereby obtain some upcoming distribution P′ P^\prime P′. Then:.</p>
+<p>The expectation Ex′∼P′[Rtrue(x′)] \mathbb E_{x^\prime\sim P^\prime}\left[R_{\text{true}}\left(x^\prime\right)\right] Ex′∼P′​[Rtrue​(x′)] measures how well we have optimized the true objective.</p>
+<p>It has been revealed that the KL divergence⁠(opens in a newly introduced window) DKL(P′∥P) D_{\text{KL}}\left(P^\prime\parallel P\right) DKL​(P′∥P) measures how much optimization we have done. For example, if P′ P^\prime P′ is obtained by taking the first sample from P P P that lies in some subset S′⊆S S^\prime\subseteq S S′⊆S, then this KL divergence is just the negative log probability that a sample from P P P lies in S′ S^\prime S′.</p>
+<p>It turns out that in the case of best-of- n n n sampling, both of these quantities can be estimated efficiently using samples from P P P.</p>
+<p>Let’s look at the expectation first. The naive approach is to use a Monte Carlo estimator: run best-of- n n n sampling many times, measure the true objective on those samples, and average the results. However, there is a better estimator. If we have N≥n N\geq n N≥n samples from P P P overall, then we can simultaneously consider every possible subset of these samples of size n n n, weight each sample by the number of subsets for which it is the best according to the proxy objective, and then take the weighted average true objective score. This weight is just the binomial coefficient (k−1n−1) \binom{k-1}{n-1} (n−1k−1​), where k k k is the rank of the sample under the proxy objective, from 1 1 1 (worst) up to N N N (best).A.</p>
+<p id="sec-mid-27852">The sum of these weights is (Nn) \binom{N}{n} (nN​), giving a proof of the Hockey-stick identity⁠(opens in a new window). For a formal derivation of the estimator described here, see Appendix I of the WebGPT paper⁠(opens in a new window).</p>
+<p>According to recent reports, as well as using samples more efficiently, this also allows us to reuse samples for different values of n n n. As for the KL divergence, surprisingly, this turns out to have an exact formula that works for any continuous probability distribution P P P (i.e., as long as P P P has no point masses). One might naively guess that the answer is log⁡n \log n logn, since best-of-n n n is doing something like taking the top 1n \frac 1n n1​ of the distribution, and this is roughly correct: the exact answer is log⁡n−n−1n \log n-\frac{n-1}n logn−nn−1​. B.</p>
+<p>Together, these estimators allow us to easily analyze how the true objective varies with the amount of optimization applied to the proxy objective.</p>
+<p>Here’s a real-life example from WebGPT⁠:.</p>
+<p>The main limitation of best-of-n n n sampling is that the KL divergence grows logarithmically with n n n, so it is only suitable for applying a small amount of optimization.</p>
+<p>To apply more optimization, we typically use reinforcement learning. In the settings we’ve studied so far, such as summarization⁠, we’ve typically been able to reach a KL of around 10 nats⁠(opens in a fresh window) using reinforcement learning before the true objective starts to decrease due to Goodhart’s law. We’d have to take n to be around 60,000 to reach this KL using best-of-n n n, and we hope to be able to reach much larger KLs than this with improvements to our reward modeling and reinforcement learning practices.</p>
+<p>However, not all nats are equal. Empirically, for small KL budgets, best-of-n n n better optimizes both the proxy and the true objectives than reinforcement learning. Intuitively, best-of-n n n is the “brute force” approach, making it more information-theoretically efficient than reinforcement learning, but less computationally efficient at large KLs.C.</p>
+<p>We’re actively studying the scaling properties of proxy objectives as part of our work to align⁠ our models with human intent and values. If you’d like to help us with this research, we’re hiring⁠!</p>
+<p>According to recent reports, the sum of these weights is (Nn) \binom{N}{n} (nN​), giving a proof of the Hockey-stick identity⁠(opens in a fresh window). For a formal derivation of the estimator described here, see Appendix I of the WebGPT paper⁠(opens in a new window).</p>
+<p>Hint: express the PDF of the best-of-n n n distribution as a function of both the PDF and the CDF of the original distribution.</p>
+<p>Best-of-nnn is not necessarily optimal in the information-theoretic sense, however. For example, if PPP has a heavy right tail⁠(opens in a new window), then for any x&gt;0x&gt;0x&gt;0 and any ε&gt;0\varepsilon&gt;0ε&gt;0, there is a distribution QQQ such that Ey∼Q[y]&gt;x\mathbb E_{y\sim Q}\left[y\right]&gt;xEy∼Q​[y]&gt;x and DKL(Q∥P)&lt;εD_{\text{KL}}\left(Q\parallel P\right)&lt;\varepsilonDKL​(Q∥P)&lt;ε (exercise).</p>
+<p id="sec-end-27852">Thanks to Suchir Balaji, Paul Christiano, William Guss, Vineet Kosaraju, John Schulman, Nisan Stiennon, Jeff Wu, and Daniel Ziegler for discussions related to the ideas in this post. Thanks to Greg Brockman, Jan Leike, Holly Mandel, John Schulman, and Jeff Wu for feedback on drafts. Thanks to Bianca Martin, Steve Dowling, Natalie Summers and Justin Jay Wang for communications and design.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/measuring-goodharts-law" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="truthfulqa-measuring-how-models-mimic-human-falsehoods-27867.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27867. TruthfulQA: Measuring how models mimic human falsehoods
+        </a>
+        
+        <a href="how-law-firm-gilbert-tobin-governs-and-scales-ai-with-openai-27348.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27348. How law firm Gilbert + Tobin governs and scales AI with OpenAI
+        </a>
+        
+        <a href="measuring-how-ai-agents-handle-everyday-wet-lab-science-27208.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27208. Measuring how AI agents handle everyday wet-lab science
+        </a>
+        
+        <a href="large-language-models-a-upcoming-moores-law-27176.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27176. Large Language Models: A Upcoming Moore's Law?
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

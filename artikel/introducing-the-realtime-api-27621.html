@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing the Realtime API</title>
+    <meta name="description" content="Developers can now build fast speech-to-speech experiences into their applications. It has been revealed that update on August 28, 2025: We announced the g">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-the-realtime-api-27621.html">
+    <meta property="og:title" content="Introducing the Realtime API">
+    <meta property="og:description" content="Developers can now build fast speech-to-speech experiences into their applications. It has been revealed that update on August 28, 2025: We announced the g">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/139I6Ga8xl6qTXGPL9lWyc/82838b1ef1a26a4946a27d656de0c806/01_Realtime_API.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-the-realtime-api-27621.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing the Realtime API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/139I6Ga8xl6qTXGPL9lWyc/82838b1ef1a26a4946a27d656de0c806/01_Realtime_API.png?w=1600&h=900&fit=fill"], "datePublished": "2024-10-01T10:05:00", "dateModified": "2026-11-23T23:49:41.138046", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-the-realtime-api-27621.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing the Realtime API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 01 Oct 2024 &bull; ⏱️ 6 min read (1252 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Developers can now build fast speech-to-speech experiences into their applications.</li><li style='margin-bottom:6px;'>It has been revealed that update on August 28, 2025: We announced the general availability of the Realtime API.</li><li style='margin-bottom:6px;'>Sources indicate that update on February 3, 2025: We no longer limit the number of simultaneous sessions on the Realtime API.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-27621"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-27621"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-27621"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing the Realtime API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/139I6Ga8xl6qTXGPL9lWyc/82838b1ef1a26a4946a27d656de0c806/01_Realtime_API.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-27621">Developers can now build fast speech-to-speech experiences into their applications.</p>
+<p>It has been revealed that update on August 28, 2025: We announced the general availability of the Realtime API. Learn more here.</p>
+<p>Sources indicate that update on February 3, 2025: We no longer limit the number of simultaneous sessions on the Realtime API. Please refer to our docs⁠(opens in a new window) for the latest rate limits on the Realtime API.</p>
+<p>Enhancement on October 30, 2024: We’ve added five latest voices with greater range and expressiveness. Cached pricing is now also available for text and audio inputs, lowering the price to $2.50/1M cached text input tokens and $20/1M cached audio input tokens. Learn more here⁠(opens in a new window).</p>
+<p>It has been revealed that update on October 17, 2024: Audio inputs and outputs are now available in the Chat Completions API. Get started here⁠(opens in a latest window).</p>
+<p>It has been revealed that today, we’re introducing a public beta of the Realtime API, enabling all paid developers to build low-latency, multimodal experiences in their apps. Similar to ChatGPT’s Advanced Voice Mode, the Realtime API supports natural speech-to-speech conversations using the six preset voices⁠(opens in a upcoming window) already supported in the API.</p>
+<p>Recent findings suggest that we’re also introducing audio input and output in the Chat Completions API⁠(opens in a upcoming window) to support use cases that don’t require the low-latency benefits of the Realtime API. With this update, developers can pass any text or audio inputs into GPT‑4o⁠ and have the model respond with their choice of text, audio, or both.</p>
+<p>According to recent reports, from language apps and educational software to customer support experiences, developers have already been leveraging voice experiences to connect with their users. Now with the Realtime API and soon with audio in the Chat Completions API, developers no longer have to stitch together multiple models to power these experiences. Instead, you can build natural conversational experiences with a single API call.</p>
+<p>According to recent reports, previously, to create a similar voice assistant experience, developers had to transcribe audio with an automatic speech recognition model like Whisper⁠, pass the text to a text model for inference or reasoning, and then play the model’s output using a text-to-speech⁠(opens in a newly introduced window) model. This approach often resulted in loss of emotion, emphasis and accents, plus noticeable latency. With the Chat Completions API, developers can handle the entire process with a single API call, though it remains slower than human conversation. The Realtime API improves this by streaming audio inputs and outputs directly, enabling more natural conversational experiences. It can also handle interruptions automatically, much like Advanced Voice Mode in ChatGPT.</p>
+<p>Sources indicate that under the hood, the Realtime API lets you create a persistent WebSocket connection to exchange messages with GPT‑4o. The API supports function calling⁠(opens in a upcoming window), which makes it possible for voice assistants to respond to user requests by triggering actions or pulling in new context. For example, a voice assistant could place an order on behalf of the user or retrieve relevant customer information to personalize its responses.</p>
+<p>Industry observers note that as part of our iterative deployment strategy, we’ve been testing the Realtime API with a handful of partners to gather feedback while we build. A couple of promising early use cases include:.</p>
+<p>Healthify, a nutrition and fitness coaching app, uses the Realtime API to enable natural conversations with its AI coach Ria, while involving human dietitians when needed for personalized support.</p>
+<p>Speak, a language learning app, uses Realtime API to power its role-play feature, encouraging users to practice conversations in a new language.</p>
+<p>The Realtime API will begin rolling out today in public beta to all paid developers. Audio capabilities in the Realtime API are powered by the new GPT‑4o model gpt-4o-realtime-preview.</p>
+<p id="sec-mid-27621">Audio in the Chat Completions API will be released in the coming weeks, as a newly introduced model gpt-4o-audio-preview. With gpt-4o-audio-preview, developers can input text or audio into GPT‑4o and receive responses in text, audio, or both.</p>
+<p>The Realtime API uses both text tokens and audio tokens. Text input tokens are priced at $5 per 1M and $20 per 1M output tokens. Audio input is priced at $100 per 1M tokens and output is $200 per 1M tokens. This equates to approximately $0.06 per minute of audio input and $0.24 per minute of audio output. Audio in the Chat Completions API will be the same price.</p>
+<p>Sources indicate that the Realtime API uses multiple layers of safety protections to mitigate the risk of API abuse, including automated monitoring and human review of flagged model inputs and outputs. The Realtime API is built on the same version of GPT‑4o that powers Advanced Voice Mode in ChatGPT, which we carefully assessed using both automated and human evaluations, including evaluations according to our Preparedness Framework⁠, detailed in the GPT‑4o System Card⁠. The Realtime API also leverages the same audio safety infrastructure we built for Advanced Voice Mode, which our testing highlights has helped to reduce the potential for harm.</p>
+<p>Industry observers note that it is against our usage policies⁠ to repurpose or distribute output from our services to spam, mislead, or otherwise harm others – and we actively monitor for potential abuse. Our policies also require developers to make it clear to their users that they are interacting with AI, unless it’s obvious from the context.</p>
+<p>Sources indicate that prior to launch, we tested the Realtime API with our external red teaming network and found that the Realtime API didn’t introduce any high-risk gaps not covered by our existing mitigations. As with all API services, the Realtime API is subject to our Enterprise privacy⁠ commitments. We do not train our models on the inputs or outputs used in this service without your explicit permission.</p>
+<p>Developers can start building with the Realtime API over the coming days in the Playground⁠(opens in a new window), or by using our docs⁠(opens in a new window) and the reference client⁠(opens in a new window).</p>
+<p>We’ve also worked with LiveKit⁠(opens in a latest window) and Agora⁠(opens in a new window) to create client libraries of audio components like echo cancellation, reconnection, and sound isolation, and Twilio⁠(opens in a new window) to integrate the Realtime API with Twilio’s Voice APIs⁠(opens in a new window) which enable developers to seamlessly build, deploy and connect AI virtual agents to customers via voice calls.</p>
+<p>It has been revealed that as we work towards general availability, we’re actively collecting feedback to improve the Realtime API. Some of the capabilities we initiative to introduce include:.</p>
+<p>More modalities: To start, the Realtime API will support voice, and we plan to add additional modalities like vision and video over time.</p>
+<p>Sources indicate that increased rate limits: Today the API is rate limited to approximately 100 simultaneous sessions for Tier 5 developers, with lower limits for Tiers 1-4. We will increase these limits over time to support larger deployments.</p>
+<p>Official SDK support: We will integrate support for Realtime API into the OpenAI Python and Node.js SDKs.</p>
+<p>Prompt Caching: We will add support for Prompt Caching⁠(opens in a new window) so previous conversation turns can be reprocessed at a discount.</p>
+<p>Expanded model support: The Realtime API will also support GPT‑4o mini in upcoming versions of that model.</p>
+<p id="sec-end-27621">We’re looking forward to seeing how developers leverage these new capabilities to create compelling new audio experiences for their users across a variety of use cases from education to translation, customer service, accessibility and beyond.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-the-realtime-api" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="introducing-gpt-realtime-and-realtime-api-updates-25774.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25774. Introducing gpt-realtime and Realtime API updates
+        </a>
+        
+        <a href="introducing-improvements-to-the-fine-tuning-api-and-expanding-our-27727.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27727. Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="introducing-more-enterprise-grade-features-for-api-customers-27722.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27722. Introducing more enterprise-grade features for API customers
+        </a>
+        
+        <a href="introducing-structured-outputs-in-the-api-27668.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27668. Introducing Structured Outputs in the API
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

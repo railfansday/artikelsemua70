@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry News: Proximal Policy Optimization</title>
+    <meta name="description" content="We’re releasing a new class of reinforcement learning algorithms, Proximal Policy Optimization (PPO), which perform comparably or better than state-of-the-">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/industry-news-proximal-policy-optimization-27995.html">
+    <meta property="og:title" content="Industry News: Proximal Policy Optimization">
+    <meta property="og:description" content="We’re releasing a new class of reinforcement learning algorithms, Proximal Policy Optimization (PPO), which perform comparably or better than state-of-the-">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/b4073079-b924-447c-00367a362468/d766c62670a5c92f913c54206060ba54/image_140.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/industry-news-proximal-policy-optimization-27995.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Industry News: Proximal Policy Optimization", "image": ["https://images.ctfassets.net/kftzwdyauwt9/b4073079-b924-447c-00367a362468/d766c62670a5c92f913c54206060ba54/image_140.png?w=1600&h=900&fit=fill"], "datePublished": "2017-07-20T07:00:00", "dateModified": "2026-11-23T23:52:43.257534", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/industry-news-proximal-policy-optimization-27995.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Industry News: Proximal Policy Optimization</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 20 Jul 2017 &bull; ⏱️ 4 min read (752 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing a new class of reinforcement learning algorithms, Proximal Policy Optimization (PPO), which perform comparably or better than state-of-the-art approaches while being much simpler to implement and tune.</li><li style='margin-bottom:6px;'>In a recent development, policy gradient methods⁠(opens in a new window) are fundamental to recent breakthroughs in using deep neural networks for control, from video games⁠(opens in a new window), to 3D locomotion⁠(opens in a new window), to Go⁠(opens in a new window).</li><li style='margin-bottom:6px;'>It has been revealed that researchers have sought to eliminate these flaws with approaches like TRPO⁠(opens in a latest window) and ACER⁠(opens in a new window), by constraining or otherwise optimizing the size of a policy upgrade.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-27995"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-27995"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-27995"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Industry News: Proximal Policy Optimization" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/b4073079-b924-447c-00367a362468/d766c62670a5c92f913c54206060ba54/image_140.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-27995">We’re releasing a new class of reinforcement learning algorithms, Proximal Policy Optimization (PPO), which perform comparably or better than state-of-the-art approaches while being much simpler to implement and tune. PPO has become the default reinforcement learning algorithm at OpenAI because of its ease of use and good performance.</p>
+<p>In a recent development, policy gradient methods⁠(opens in a new window) are fundamental to recent breakthroughs in using deep neural networks for control, from video games⁠(opens in a new window), to 3D locomotion⁠(opens in a new window), to Go⁠(opens in a new window). But getting good results via policy gradient methods is challenging because they are sensitive to the choice of stepsize — too small, and progress is hopelessly slow; too large and the signal is overwhelmed by the noise, or one might see catastrophic drops in performance. They also often have very poor sample efficiency, taking millions (or billions) of timesteps to learn simple tasks.</p>
+<p>It has been revealed that researchers have sought to eliminate these flaws with approaches like TRPO⁠(opens in a latest window) and ACER⁠(opens in a new window), by constraining or otherwise optimizing the size of a policy upgrade. These methods have their own trade-offs—ACER is far more complicated than PPO, requiring the addition of code for off-policy corrections and a replay buffer, while only doing marginally better than PPO on the Atari benchmark; TRPO—though useful for continuous control tasks—isn’t easily compatible with algorithms that share parameters between a policy and value function or auxiliary losses, like those used to solve problems in Atari and other domains where the visual input is significant.</p>
+<p>With supervised learning, we can easily implement the cost function, run gradient descent on it, and be very confident that we’ll get excellent results with relatively little hyperparameter tuning. The route to success in reinforcement learning isn’t as obvious—the algorithms have many moving parts that are hard to debug, and they require substantial effort in tuning in order to get good results. PPO strikes a balance between ease of implementation, sample complexity, and ease of tuning, trying to compute an revision at each step that minimizes the cost function while ensuring the deviation from the previous policy is relatively small.</p>
+<p>According to recent reports, we’ve previously⁠(opens in a fresh window) detailed a variant of PPO that uses an adaptive KL⁠(opens in a new window) penalty to control the change of the policy at each iteration. The new variant uses a novel objective function not typically found in other algorithms:.</p>
+<p>θ \theta θ is the policy parameter.</p>
+<p>E^t \hat{E}_{t} E^t​ denotes the empirical expectation over timesteps.</p>
+<p id="sec-mid-27995">rt r_t rt​ is the ratio of the probability under the new and old policies, respectively.</p>
+<p>A^t \hat{A}_t A^t​ is the estimated advantage at time t t t.</p>
+<p>ε \varepsilon ε is a hyperparameter, usually 0.1 or 0.2.</p>
+<p>It has been revealed that this objective implements a way to do a Trust Region enhancement which is compatible with Stochastic Gradient Descent, and simplifies the algorithm by removing the KL penalty and need to make adaptive updates. In tests, this algorithm has displayed the best performance on continuous control tasks and almost matches ACER’s performance on Atari, despite being far simpler to implement.</p>
+<p>We’ve created interactive agents based on policies trained by PPO—we can use the keyboard⁠(opens in a new window) to set new target positions for a robot in an environment within Roboschool; though the input sequences are different from what the agent was trained on, it manages to generalize.</p>
+<p>This release of baselines⁠(opens in a latest window) includes scalable, parallel implementations of PPO and TRPO which both use MPI for data passing. Both use Python3 and TensorFlow. We’re also adding pre-trained versions of the policies used to train the above robots to the Roboschool⁠ agent zoo⁠(opens in a new window).</p>
+<p>Patch: We’re also releasing a GPU-enabled implementation of PPO, called PPO2. This runs approximately 3x faster than the current PPO baseline on Atari. In addition, we’re releasing an implementation of Actor Critic with Experience Replay (ACER), a sample-efficient policy gradient algorithm. ACER makes use of a replay buffer, enabling it to perform more than one gradient update using each piece of sampled experience, as well as a Q-Function approximate trained with the Retrace algorithm.</p>
+<p id="sec-end-27995">We’re looking for people to help build and optimize our reinforcement learning algorithm codebase. If you’re excited about RL, benchmarking, thorough experimentation, and open source, please apply⁠(opens in a fresh window), and mention that you read the baselines PPO post in your application.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/openai-baselines-ppo" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-proximal-policy-optimization-ppo-27093.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27093. Breaking: Proximal Policy Optimization (PPO)
+        </a>
+        
+        <a href="fine-tuning-next-scale-visual-autoregressive-models-with-group-re-27004.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #27004. Fine-Tuning Next-Scale Visual Autoregressive Models with Group Relative Policy Optimization
+        </a>
+        
+        <a href="industry-news-suaf-spectral-universal-advantage-features-for-zero-26866.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #26866. Industry News: SUAF: Spectral Universal Advantage Features for Zero-Shot Policy Improvement
+        </a>
+        
+        <a href="industry-news-pace-policy-augmentation-and-compensation-with-expl-26647.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #26647. Industry News: PACE: Policy Augmentation and Compensation With Explicit Disturbance Estimation for Robust Locomotion
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -4,106 +4,105 @@
     <title>Portal Berita - EV & Auto</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for EV & Auto.</description>
-    <lastBuildDate>Mon, 23 Nov 2026 07:17:10 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 23:54:00 -0000</lastBuildDate>
     
+            <item>
+                <title>Building an autonomous financial analyst with o1 and o3-mini</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-27549.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-27549.html</guid>
+                <description>In a recent development, endex⁠(opens in a latest window), an AI platform for financial firms, is developing an AI Analyst that retrieves, synthesizes, and reasons through complex financial data. They work closely with OpenAI to reinvent the workflow of investment professionals. ...</description>
+            </item>
+            <item>
+                <title>Industry News: DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-devrev-delivers-autonomous-self-service-with-gpt-61-27225.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-devrev-delivers-autonomous-self-service-with-gpt-61-27225.html</guid>
+                <description>DevRev uses GPT‑6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. Recent findings suggest that devRev⁠(opens in a newly introduced window) built Computer and Operator to help service and operations teams carry even the hardest cu...</description>
+            </item>
+            <item>
+                <title>Breaking: AutoDFT: A Closed-Loop Multi-Agent Framework for Autonomous DFT Calculations</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-autodft-a-closed-loop-multi-agent-framework-for-autonomo-27078.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-autodft-a-closed-loop-multi-agent-framework-for-autonomo-27078.html</guid>
+                <description>Sources indicate that arXiv:2605.26179v3 Announce Type: replace-cross 
+Abstract: Density functional theory (DFT) serves as the basis for computational discovery in materials science and chemistry, yet each calculation demands extensive human effort: adjusting algorithms when conv...</description>
+            </item>
+            <item>
+                <title>When Figures Disagree with Text: Evaluating Autonomous Visual Evidence Verification in Scientific Papers</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-26981.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-26981.html</guid>
+                <description>arXiv:2611.24353v2 Announce Type: replace 
+Abstract: Scientific figures carry evidence for the claims that cite them, so reviewing a paper means checking that a figure agrees with the text, and not only describing what the figure indicates. Benchmarks of figure-text verification ...</description>
+            </item>
+            <item>
+                <title>Tech Report: MLE Agents: Autonomous ML Engineering in Large-scale Recommendation Systems</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-mle-agents-autonomous-ml-engineering-in-large-scale-r-26979.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-mle-agents-autonomous-ml-engineering-in-large-scale-r-26979.html</guid>
+                <description>Industry observers note that arXiv:2611.23910v2 Announce Type: replace 
+Abstract: The typical workflow for improving large-scale ranking and recommendation models is slow and tedious: an engineer forms a hypothesis, implements it as a code change, trains a model, and evaluates it...</description>
+            </item>
+            <item>
+                <title>Tech Report: Quantitative Measurement of Pavement Distress based on Vehicle Camera and Perspective Correction</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-quantitative-measurement-of-pavement-distress-based-o-26827.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-quantitative-measurement-of-pavement-distress-based-o-26827.html</guid>
+                <description>arXiv:2611.27728v1 Announce Type: cross 
+Abstract: Using image data is becoming an crucial method for highway agencies to automatically evaluate pavement conditions. However, most studies focus on improving detection accuracy rather than obtaining quantitative measurements, such ...</description>
+            </item>
+            <item>
+                <title>Latest Update: Mechanism Parity for Simulation-Based Validation of Autonomous-Driving Perception</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-mechanism-parity-for-simulation-based-validation-of-26773.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-mechanism-parity-for-simulation-based-validation-of-26773.html</guid>
+                <description>arXiv:2611.27447v1 Announce Type: cross 
+Abstract: Simulation is central to intelligent-vehicle validation, but visual realism or output agreement between a real scene and its synthetic counterpart does not prove that a perception system used the same evidence in both domains. Th...</description>
+            </item>
+            <item>
+                <title>Epistemic Guard: Out-of-Process MCP Receipt Proxying, Post-Turn Prose Supervision, and Provenance-Gated Memory for Tool-Using Autonomous Agents</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/epistemic-guard-out-of-process-mcp-receipt-proxying-post-turn-pro-26659.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/epistemic-guard-out-of-process-mcp-receipt-proxying-post-turn-pro-26659.html</guid>
+                <description>arXiv:2611.27095v1 Announce Type: cross 
+Abstract: Language-model agents using the Model Context Protocol (MCP) face three runtime verification gaps: (i) action fabrication, where post-tool prose narrates side effects that failed, timed out, or never ran; (ii) provenance collapse...</description>
+            </item>
+            <item>
+                <title>FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/fore-a-force-guided-framework-for-autonomous-grasp-recovery-in-vi-26634.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/fore-a-force-guided-framework-for-autonomous-grasp-recovery-in-vi-26634.html</guid>
+                <description>arXiv:2611.27011v1 Announce Type: cross 
+Abstract: Vision-language-action (VLA) models have demonstrated strong performance in grasp-based manipulation, yet reliable recovery from local grasping failures remains challenging. Specifically, in pick-and-place tasks, policies may con...</description>
+            </item>
+            <item>
+                <title>What a billion-dollar deal indicates about the US battery market</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/what-a-billion-dollar-deal-indicates-about-the-us-battery-market-26243.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/what-a-billion-dollar-deal-indicates-about-the-us-battery-market-26243.html</guid>
+                <description>After a tough few years littered with some high-profile failures, there’s some positive news for next-generation batteries in the US. Sources indicate that sila just signed an agreement with Panasonic Energy, a global battery manufacturer, to supply silicon-carbon anode material,...</description>
+            </item>
+            <item>
+                <title>Partnering with Waymo to Reshape how the World Moves</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-26071.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-26071.html</guid>
+                <description>1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Recent findings suggest that ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved across 127 million fully au...</description>
+            </item>
+            <item>
+                <title>Latest Update: Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-partnering-with-empirik-building-the-autonomous-inf-26034.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-partnering-with-empirik-building-the-autonomous-inf-26034.html</guid>
+                <description>It has been revealed that change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. In a recent development, change has always been the fundamental operationa...</description>
+            </item>
+            <item>
+                <title>Your Wear OS smartwatch just got a fresh way to save battery life</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-fresh-way-to-save-battery-life-25952.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-fresh-way-to-save-battery-life-25952.html</guid>
+                <description>Some of the most popular Android smartwatches just got a battery-saving update. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. The v26.45 enhancement concerns location tracking during outdoor wo...</description>
+            </item>
+            <item>
+                <title>Breaking: These 10 cheap car gadgets are worth every penny (yes, we’ve tested them)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-these-10-cheap-car-gadgets-are-worth-every-penny-yes-wev-25918.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-these-10-cheap-car-gadgets-are-worth-every-penny-yes-wev-25918.html</guid>
+                <description>This year, AAA predicts that nearly 73 million drivers will hit the road between Nov. 24 and Nov. 30 for Thanksgiving. If you’re planning to be one of those travelers, or will be making trips later in the holiday season, it’s a great time to consider outfitting your car with some...</description>
+            </item>
             <item>
                 <title>Breaking: SYSEVOLVE: Safe, Autonomous Attack-Defense Co-evolution for Evolving Cyber Defense</title>
                 <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-sysevolve-safe-autonomous-attack-defense-co-evolution-fo-24849.html</link>
                 <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-sysevolve-safe-autonomous-attack-defense-co-evolution-fo-24849.html</guid>
                 <description>arXiv:2608.15012v2 Announce Type: replace-cross 
 Abstract: The offensive capability of large language models (LLMs) has crossed from research demonstration into documented reality. Frontier models have autonomously breached real production systems, and open-weight models now deli...</description>
-            </item>
-            <item>
-                <title>What Graph Unlearning Cannot Erase: Physics-Induced Leakage of Cyberattack Information in Electric Vehicle Charging Networks</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/what-graph-unlearning-cannot-erase-physics-induced-leakage-of-cyb-24833.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/what-graph-unlearning-cannot-erase-physics-induced-leakage-of-cyb-24833.html</guid>
-                <description>Industry observers note that arXiv:2606.19566v2 Announce Type: replace-cross 
-Abstract: Electric vehicle charging stations (EVCSs) can expose distribution feeders to cyberattacks. While machine learning methods, including graph neural networks (GNNs), can localize which bus is co...</description>
-            </item>
-            <item>
-                <title>AutoDFT: A Closed-Loop Multi-Agent Framework for Autonomous DFT Calculations</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/autodft-a-closed-loop-multi-agent-framework-for-autonomous-dft-ca-24809.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/autodft-a-closed-loop-multi-agent-framework-for-autonomous-dft-ca-24809.html</guid>
-                <description>In a recent development, arXiv:2605.26179v3 Announce Type: replace-cross 
-Abstract: Density functional theory (DFT) serves as the basis for computational discovery in materials science and chemistry, yet each calculation demands extensive human effort: adjusting algorithms when c...</description>
-            </item>
-            <item>
-                <title>When Figures Disagree with Text: Evaluating Autonomous Visual Evidence Verification in Scientific Papers</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-24726.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/when-figures-disagree-with-text-evaluating-autonomous-visual-evid-24726.html</guid>
-                <description>It has been revealed that arXiv:2611.24353v2 Announce Type: replace 
-Abstract: Scientific figures carry evidence for the claims that cite them, so reviewing a paper means checking that a figure agrees with the text, and not only describing what the figure shows. Benchmarks of fig...</description>
-            </item>
-            <item>
-                <title>MLE Agents: Autonomous ML Engineering in Large-scale Recommendation Systems</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/mle-agents-autonomous-ml-engineering-in-large-scale-recommendatio-24723.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/mle-agents-autonomous-ml-engineering-in-large-scale-recommendatio-24723.html</guid>
-                <description>arXiv:2611.23910v2 Announce Type: replace 
-Abstract: The typical workflow for improving large-scale ranking and recommendation models is slow and tedious: an engineer forms a hypothesis, implements it as a code change, trains a model, and evaluates it both offline and online, oft...</description>
-            </item>
-            <item>
-                <title>Latest Update: Quantitative Measurement of Pavement Distress based on Vehicle Camera and Perspective Correction</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-quantitative-measurement-of-pavement-distress-based-24582.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-quantitative-measurement-of-pavement-distress-based-24582.html</guid>
-                <description>Industry observers note that arXiv:2611.27728v1 Announce Type: cross 
-Abstract: Using image data is becoming an crucial method for highway agencies to automatically evaluate pavement conditions. However, most studies focus on improving detection accuracy rather than obtaining qua...</description>
-            </item>
-            <item>
-                <title>DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-24564.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-24564.html</guid>
-                <description>DevRev uses GPT‑6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. DevRev⁠(opens in a upcoming window) built Computer and Operator to help service and operations teams carry even the hardest customer and employee requests through ...</description>
-            </item>
-            <item>
-                <title>Mechanism Parity for Simulation-Based Validation of Autonomous-Driving Perception</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/mechanism-parity-for-simulation-based-validation-of-autonomous-dr-24534.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/mechanism-parity-for-simulation-based-validation-of-autonomous-dr-24534.html</guid>
-                <description>arXiv:2611.27447v1 Announce Type: cross 
-Abstract: Simulation is central to intelligent-vehicle validation, but visual realism or output agreement between a real scene and its synthetic counterpart does not prove that a perception system used the same evidence in both domains. Th...</description>
-            </item>
-            <item>
-                <title>Epistemic Guard: Out-of-Process MCP Receipt Proxying, Post-Turn Prose Supervision, and Provenance-Gated Memory for Tool-Using Autonomous Agents</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/epistemic-guard-out-of-process-mcp-receipt-proxying-post-turn-pro-24431.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/epistemic-guard-out-of-process-mcp-receipt-proxying-post-turn-pro-24431.html</guid>
-                <description>arXiv:2611.27095v1 Announce Type: cross 
-Abstract: Language-model agents using the Model Context Protocol (MCP) face three runtime verification gaps: (i) action fabrication, where post-tool prose narrates side effects that failed, timed out, or never ran; (ii) provenance collapse...</description>
-            </item>
-            <item>
-                <title>Latest Update: FoRe: A Force-Guided Framework for Autonomous Grasp Recovery in Vision-Language-Action Models</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-fore-a-force-guided-framework-for-autonomous-grasp--24408.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-fore-a-force-guided-framework-for-autonomous-grasp--24408.html</guid>
-                <description>In a recent development, arXiv:2611.27011v1 Announce Type: cross 
-Abstract: Vision-language-action (VLA) models have demonstrated strong performance in grasp-based manipulation, yet reliable recovery from local grasping failures remains challenging. Specifically, in pick-and-plac...</description>
-            </item>
-            <item>
-                <title>China is winning the car war</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/china-is-winning-the-car-war-24231.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/china-is-winning-the-car-war-24231.html</guid>
-                <description>It has been revealed that western carmakers have been routed from China as EVs go mainstream. Now they are battling to avoid a similar fate at home. → Read original article...</description>
-            </item>
-            <item>
-                <title>What a billion-dollar deal says about the US battery market</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/what-a-billion-dollar-deal-says-about-the-us-battery-market-24009.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/what-a-billion-dollar-deal-says-about-the-us-battery-market-24009.html</guid>
-                <description>After a tough few years littered with some high-profile failures, there’s some positive news for next-generation batteries in the US. Recent findings suggest that sila just signed an agreement with Panasonic Energy, a global battery manufacturer, to supply silicon-carbon anode ma...</description>
-            </item>
-            <item>
-                <title>Industry News: Partnering with Waymo to Reshape how the World Moves</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-partnering-with-waymo-to-reshape-how-the-world-move-23899.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-partnering-with-waymo-to-reshape-how-the-world-move-23899.html</guid>
-                <description>1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved across 127 million fully autonomous miles. The technolog...</description>
-            </item>
-            <item>
-                <title>Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-23803.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-23803.html</guid>
-                <description>Sources indicate that change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Change has always been the fundamental operational signal in infrastructure. E...</description>
-            </item>
-            <item>
-                <title>Your Wear OS smartwatch just got a latest way to save battery life</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-latest-way-to-save-battery-lif-23718.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-latest-way-to-save-battery-lif-23718.html</guid>
-                <description>Recent findings suggest that some of the most popular Android smartwatches just got a battery-saving upgrade. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. The v26.45 upgrade concerns location ...</description>
             </item>
 </channel>
 </rss>

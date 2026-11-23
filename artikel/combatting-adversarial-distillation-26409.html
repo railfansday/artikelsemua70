@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combatting adversarial distillation</title>
+    <meta name="description" content="How we’re addressing safety risks of distillation and lessons we’ve learned for strengthening safeguards across the industry. As frontier AI models become ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/combatting-adversarial-distillation-26409.html">
+    <meta property="og:title" content="Combatting adversarial distillation">
+    <meta property="og:description" content="How we’re addressing safety risks of distillation and lessons we’ve learned for strengthening safeguards across the industry. As frontier AI models become ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5SUtPGdssrttC7LfP1yoJ1/b6b000846ab3576c1735c29534ab20b0/combatting-adversarial-distillation-social.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/combatting-adversarial-distillation-26409.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Combatting adversarial distillation", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5SUtPGdssrttC7LfP1yoJ1/b6b000846ab3576c1735c29534ab20b0/combatting-adversarial-distillation-social.png?w=1600&h=900&fit=fill"], "datePublished": "2026-11-20T10:00:00", "dateModified": "2026-11-23T23:45:31.722583", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/combatting-adversarial-distillation-26409.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Combatting adversarial distillation</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 20 Nov 2026 &bull; ⏱️ 11 min read (2103 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>How we’re addressing safety risks of distillation and lessons we’ve learned for strengthening safeguards across the industry.</li><li style='margin-bottom:6px;'>As frontier AI models become more capable, safeguards play an increasingly key role in how they can be used responsibly.</li><li style='margin-bottom:6px;'>We’re sharing how OpenAI detects and disrupts adversarial distillation, how we’ve strengthened protections for our models’ protected reasoning, and what we’ve learned that can help strengthen defenses across the industry.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-26409"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-26409"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-26409"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Combatting adversarial distillation" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5SUtPGdssrttC7LfP1yoJ1/b6b000846ab3576c1735c29534ab20b0/combatting-adversarial-distillation-social.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-26409">How we’re addressing safety risks of distillation and lessons we’ve learned for strengthening safeguards across the industry.</p>
+<p>As frontier AI models become more capable, safeguards play an increasingly key role in how they can be used responsibly. Adversarial distillation creates a path for bad actors to reproduce these capabilities without appropriate safeguards. An actor may use a frontier model’s outputs without authorization to train another model with similar capabilities, then deploy it without comparable protections. For instance, an adversary might distill a model’s cyber capabilities and use the resulting model to help carry out cyberattacks that the original model would have refused to assist with or that its safeguards would have blocked.</p>
+<p>We’re sharing how OpenAI detects and disrupts adversarial distillation, how we’ve strengthened protections for our models’ protected reasoning, and what we’ve learned that can help strengthen defenses across the industry.</p>
+<p>In a recent development, our approach to adversarial distillation combines adversarial testing, model training, classifiers, and API-level protections with investigations into coordinated attempts to extract model capabilities. These updated safeguards align more closely with those we use for biology and cybersecurity.</p>
+<p>We place particular emphasis on preventing attackers from extracting our models’ protected reasoning: the intermediate steps a model generates internally while working toward an answer, known as its chain-of-thought. These traces can contain information the final answer leaves out, making them especially valuable training data for another model.</p>
+<p>We’ve strengthened our defenses against protected reasoning extraction in GPT‑6.2 Astra and GPT‑6.2 Sol. In an internal adaptive evaluation using strong automated red-teaming, we tested whether attackers could recover protected reasoning the model had generated while answering an earlier prompt. The average attack success rate fell from 54.0% against GPT‑6 Astra with its original safeguards to 0.2% against GPT‑6.2 Astra with its updated safeguards.</p>
+<p>In a recent development, distillation is a common machine-learning technique in which one model learns from data produced by another. For example, a model can learn from another model’s answers, its reasoning, or its judgments about which answers are better and why. Beyond intellectual property concerns, unauthorized distillation poses serious safety risks. Through adversarial distillation, a second model can learn advanced frontier capabilities without inheriting the safeguards that govern how the original model can use them.</p>
+<p>It has been revealed that the concern is especially clear in dual-use domains like cybersecurity and biology. A model that helps defenders find vulnerabilities in software could also help an attacker exploit them; a model that assists with biological research could also help someone develop a harmful pathogen. If such capabilities were transferred to a model with weaker safeguards, it may provide assistance that the original model would have refused, or that the original safeguards would have blocked.</p>
+<p>Our models help consumers with coding and defensive cybersecurity tasks. A second model trained on many of those benign outputs may learn skills that also apply to offensive cybersecurity tasks. To better understand this, we study how distillation, especially involving reasoning traces, may transfer risky cyber capabilities.</p>
+<p>Industry observers note that in this setting, the model that produces the training data is called the teacher, and the model that learns from it is called the student. In an internal study on how cyber capabilities transfer, we used the content normally visible to customers—final responses, reasoning summaries, and tool interactions—as our baseline for distillation, and tested how much additional cyber capability transfers when the student has access to the teacher’s exact reasoning traces.</p>
+<p>According to recent reports, we started each training run from the same pretrained student model. We created a supervised fine-tuning dataset consisting primarily of trajectories from Astra-level teacher models working on coding and defensive cybersecurity tasks. Each trajectory includes all of the steps a model takes as it works through a task, including any tool interactions and its final response. We evaluated each student after fine-tuning and again after a lightweight round of reinforcement learning in cybersecurity and coding environments.</p>
+<p>Industry observers note that after supervised fine-tuning, the student trained on exact reasoning traces generally outperformed the student trained on reasoning summaries. After reinforcement learning, the exact-trace student still scored higher at the largest inference budget tested on both benchmarks shown, while the summary-trained student scored higher at lower budgets.1.</p>
+<p>Our cyber distillation results suggest that protecting reasoning traces can limit cyber capability transfer, even when the underlying task is one allowed under our usage policies. Across many such interactions, exact reasoning traces can teach a student skills that generalize beyond the tasks the teacher originally performed. We will continue studying how much additional capability transfers across different student models and distillation training recipes.</p>
+<p>We defend against adversarial distillation at two complementary levels of our safeguard stack. At the request level, model behavior, classifier checks, and API controls limit reasoning trace extraction. At the campaign level, we look for patterns in request-level and account-level signals that can reveal coordinated extraction attempts. In turn, attacks uncovered in investigations become examples for training and testing our safeguards.</p>
+<p>It has been revealed that our defenses against adversarial distillation combine safeguards for individual requests with campaign detection and enforcement. Findings from investigations and automated red-teaming help strengthen those safeguards.</p>
+<p>Adversarial training teaches models to recognize reasoning extraction attempts and refuse to disclose protected reasoning, while preserving responses to legitimate requests for explanations and assistance. Adversarial training examples come from successful attacks identified through internal automated red-teaming, investigations, and responsible disclosures of potential security weaknesses from outside researchers or industry partners.</p>
+<p>We use input classifiers to detect attempts to extract protected reasoning, and output classifiers to detect leaks of protected reasoning in assistant messages and tool-call arguments. These safeguards apply to both streaming and non-streaming responses.</p>
+<p>Tool-call coverage is crucial because a model can expose protected reasoning in a tool’s arguments without including it in its final answer. Output classifiers can block suspected leaks before that content reaches the caller.</p>
+<p>API-level protections restrict how protected reasoning can be reused across interactions and models. Our September disclosure described attacks that moved encrypted reasoning from one conversation into another and asked the model to reveal the reasoning in user-readable form. We strengthened protections across user, workspace, organization, and model-family boundaries, including closing a pathway that could expose another user’s encrypted reasoning.</p>
+<p>Recent findings suggest that with GPT‑6.2 Astra and GPT‑6.2 Sol, we tie a model’s protected reasoning to the conversation history that produced it. As new messages are added, the model can build on its earlier reasoning. If an earlier message is rewritten, our API drops the reasoning that followed it⁠(opens in a new window). We also prevent older model families with weaker safeguards from reading GPT‑6.2 Astra and Sol’s protected reasoning.</p>
+<p>It has been revealed that when our systems detect unauthorized adversarial distillation campaigns, which often include coordinated attempts to extract our models’ reasoning, we investigate the accounts responsible. When we identify violations, we enforce against the network of accounts, consistent with our policies and terms of service. Through investigations of each campaign, we generate insights that allow us to upgrade our defenses in order to better detect similar activity. We also share indicators of compromise with other model providers so they can investigate related abuse on their own services.</p>
+<p id="sec-mid-26409">This work extends beyond our own platform. Our consistent-standards policy establishes shared standards for safeguards and coordinated enforcement across providers offering our models. We work closely with partners where appropriate to uphold these standards and strengthen protections across deployments.</p>
+<p>Sharing relevant findings across industry and government where appropriate can help disrupt campaigns and enable model developers and providers to better identify and defend against attempts to distill frontier models.</p>
+<p>Recent findings suggest that to measure how well our request-level safeguards work together, we test whether attackers can still extract protected reasoning in a setup that closely mirrors production deployments of our models and safeguards. In static evaluations, we replay a fixed set of previously successful attacks to see which still expose protected reasoning. In adaptive evaluations, automated AI red-teamers adjust their approach based on how the system responds, which can uncover weaknesses the static tests miss.</p>
+<p>Recent findings suggest that we also vary what testers can see. Black-box testing gives them the same view an external user would have, while white-box testing gives them additional information about the system to help them develop stronger attacks. In our adaptive black-box evaluation, we tested whether attackers could recover protected reasoning the model had generated while answering an earlier request or the current one. On GPT‑6.2 Astra with its updated safeguards, the average attack success rate was below 1% for each attack type. Both rates were substantially lower than on GPT‑6 Astra with its original safeguards. We’re now applying selected safeguard improvements to GPT‑6 Astra as well.</p>
+<p>GPT‑6 Astra defender with original safeguards.</p>
+<p>GPT‑6.2 Astra defender with updated safeguards.</p>
+<p>Extracting protected reasoning from an earlier request.</p>
+<p>Extracting protected reasoning from the current request.</p>
+<p>Attack success rate (ASR) in adaptive black-box red-teaming against GPT‑6 Astra and GPT‑6.2 Astra, aggregated across six attacker models. Lower ASR is better.</p>
+<p>We have seen multiple unauthorized adversarial distillation campaigns on our platform this year, and shared initial findings in our September report. Our weekly enforcement actions against these campaigns have ranged in scale from thousands to tens of thousands of accounts, with the rate increasing significantly this past summer.</p>
+<p>It has been revealed that in order to measure the effectiveness of our efforts, we also track the prevalence of distillation abuse, as well as the time between detection and enforcement. Our objective is to constrain the volume and value of the data distillers are able to obtain, to increase the cost of distillation campaigns, and to shorten the time needed to respond to new attacks. We continue to improve these defenses through adversarial testing and investigations.</p>
+<p>Adversarial distillation also poses a national security risk. A foreign actor that reproduces advanced capabilities from a U.S. model can deploy them without the protections its developer put in place. In February, we briefed⁠(opens in a new window) Congress on activity indicating that DeepSeek was attempting to distill U.S. frontier models. In September, we reported disrupting a campaign to extract our models’ protected reasoning and attributed a core part of that activity to individuals associated with Moonshot AI, the developer of Kimi. We proposal to share more soon about recent campaigns we’ve disrupted.</p>
+<p>We support legislation that would give the U.S. government more tools to identify and sanction foreign actors that illicitly extract capabilities from American AI models. We’ve also told Congress we support the Chip Security Act, the AI OVERWATCH Act, and the MATCH Act. Stronger export controls can limit adversaries’ access to the hardware needed to train frontier models. Distillation defenses make it harder to acquire some of the same capabilities from models already trained. Both efforts help maintain a U.S. lead in frontier AI, giving developers more room to slow a release when they need time to test safeguards.</p>
+<p>Supporting the safe proliferation of frontier capabilities is an important goal of our anti-distillation work. Our experience so far suggests several useful steps that other model developers and platforms can take:.</p>
+<p>Protect private reasoning across the full interaction. Check assistant messages and tool-call arguments for leaks, and restrict how encrypted reasoning can be reused across conversations and models.</p>
+<p>Keep successful extraction attack logs found through red-teaming, production monitoring, or responsible disclosure as regression tests. Where appropriate, and consistent with applicable privacy policies, use those examples to improve model training and classifiers. When evaluating updated defenses, replay the original attacks and test whether an adaptive red-teamer can still find a way through those defenses.</p>
+<p>Combine request-level mitigations with campaign-level investigation and enforcement.</p>
+<p>Coordinate safeguard requirements and enforcement with deployment partners, and share expertise with other AI model developers, to ensure a high floor of distillation safeguards across the industry.</p>
+<p>We have previously also shared findings through the Frontier Model Forum⁠(opens in a new window) and appropriate government information-sharing channels to help other developers strengthen their defenses while keeping the details attackers could exploit private. We’ll continue working with researchers, developers, and partners to share what we learn about emerging attacks and effective defenses.</p>
+<p>As we make frontier AI broadly available, our defenses against adversarial distillation aim to reduce the risk that its capabilities are reproduced without adequate safeguards, supporting our mission to ensure that artificial general intelligence is deployed safely and benefits all of humanity.</p>
+<p id="sec-end-26409">Sources indicate that related work from Anthropic⁠(opens in a new window) reported a similar advantage when training on full reasoning transcripts rather than summaries on SWE-bench Verified, a software engineering benchmark. Our result demonstrates this advantage extends to frontier cybersecurity.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/combatting-adversarial-distillation" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-adversarial-training-methods-for-semi-supervised-text-cl-28040.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #28040. Breaking: Adversarial training methods for semi-supervised text classification
+        </a>
+        
+        <a href="a-connection-between-generative-adversarial-networks-inverse-rein-28026.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #28026. A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models
+        </a>
+        
+        <a href="latest-update-adversarial-attacks-on-neural-network-policies-28018.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #28018. Latest Update: Adversarial attacks on neural network policies
+        </a>
+        
+        <a href="attacking-machine-learning-with-adversarial-examples-28017.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #28017. Attacking machine learning with adversarial examples
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
