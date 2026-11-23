@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: On the Navier–Stokes Millennium Prize Problem</title>
+    <meta name="description" content="We’re sharing a solution to the Navier–Stokes existence and smoothness problem, one of the Millennium Prize Problems. This proof, produced by an internal O">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-on-the-navierstokes-millennium-prize-problem-24960.html">
+    <meta property="og:title" content="Tech Report: On the Navier–Stokes Millennium Prize Problem">
+    <meta property="og:description" content="We’re sharing a solution to the Navier–Stokes existence and smoothness problem, one of the Millennium Prize Problems. This proof, produced by an internal O">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/7hiHADoMhgN0iDcje9Xdei/2dae059c10a0dfa3e2814ebb522e9df2/navier-stokes-og.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-on-the-navierstokes-millennium-prize-problem-24960.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: On the Navier–Stokes Millennium Prize Problem", "image": ["https://images.ctfassets.net/kftzwdyauwt9/7hiHADoMhgN0iDcje9Xdei/2dae059c10a0dfa3e2814ebb522e9df2/navier-stokes-og.png?w=1600&h=900&fit=fill"], "datePublished": "2026-09-08T10:00:00", "dateModified": "2026-11-23T07:14:22.912504", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-on-the-navierstokes-millennium-prize-problem-24960.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: On the Navier–Stokes Millennium Prize Problem</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 08 Sep 2026 &bull; ⏱️ 8 min read (1609 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re sharing a solution to the Navier–Stokes existence and smoothness problem, one of the Millennium Prize Problems.</li><li style='margin-bottom:6px;'>The Millennium Prize Problems⁠(opens in a new window) represent some of the deepest questions at the frontier of mathematics.</li><li style='margin-bottom:6px;'>A major goal of our work is to empower scientists to advance research and technology that benefits all of humanity.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-24960"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-24960"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-24960"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: On the Navier–Stokes Millennium Prize Problem" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/7hiHADoMhgN0iDcje9Xdei/2dae059c10a0dfa3e2814ebb522e9df2/navier-stokes-og.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-24960">We’re sharing a solution to the Navier–Stokes existence and smoothness problem, one of the Millennium Prize Problems. This proof, produced by an internal OpenAI system, shows that the dynamics of the Navier-Stokes equations for fluid motion can develop a singularity in finite time. We’re sharing both a writeup of the proof and a formalization in Lean.</p>
+<p>The Millennium Prize Problems⁠(opens in a new window) represent some of the deepest questions at the frontier of mathematics. The question of whether smooth three-dimensional fluid motion can break down has remained unresolved for roughly 90 years.</p>
+<p>A major goal of our work is to empower scientists to advance research and technology that benefits all of humanity. To solve the Navier–Stokes problem, we used an internal model that is significantly more capable than GPT‑6 Astra. We believe it is crucial to inform the world about the pace of AI progress and what to expect from upcoming models.</p>
+<p>The Navier–Stokes equations use Newton’s second law of motion (“F=ma”) to describe how fluids move. Importantly, they treat a fluid as a continuous medium rather than tracking individual molecules. These equations are used for aircraft design, weather forecasting, and the study of blood flow.</p>
+<p>A fundamental open question for these dynamical equations has been whether the continuum approximation of the fluid can break down. Specifically, can the Navier–Stokes equations for a three-dimensional incompressible fluid with constant density develop a “singularity,” even when the motion starts smoothly? Here, a singularity means the dynamics lead to speeds in the fluid growing without bound within a finite amount of time. The development of a singularity would have to happen despite the presence of viscosity, which tends to smooth out motion. Because a real fluid cannot move infinitely fast, this would mark a breakdown in how the equations model the fluid. To continue modeling the system, one would then need to track the behaviour of each particle individually.</p>
+<p>The equations date to the nineteenth-century work of Claude-Louis Navier and George Gabriel Stokes. In 1934, Jean Leray proved that solutions exist in a generalized sense, but whether they always remain smooth became a central unanswered question. In 2000, the Clay Mathematics Institute named the Navier–Stokes existence and smoothness problem one of seven Millennium Prize Problems.</p>
+<p>Our system produced an analytical proof and a Lean formalization that an initially smooth fluid at rest can develop a singularity in a finite time. The fluid has a smooth force applied to it, and its energy remains finite through the entire dynamics, from rest to the formation of the singularity. This resolves the Navier–Stokes Millennium Prize problem by establishing statement “C” (and also “D”) in the official Millennium Prize formulation⁠(opens in a upcoming window).</p>
+<p>The solution is a vortex, a spinning swirl of fluid, that spirals inward and gets increasingly elongated, like spaghetti. This central region shrinks while it speeds up in such a way that its energy still stays finite, as required by the laws of physics. The technical challenge is for the equations to develop the breakdown through the motion of the fluid itself, rather than, for example, us putting in an infinite force by hand. More mathematically, the terms in the Navier–Stokes equations that describe the motion—acceleration, pressure gradients, momentum transfer, viscosity—must both become big yet cancel in a precise way. This detailed balance leaves a smooth external force even as the velocity of the fluid grows without bound.</p>
+<p>It has been revealed that A snapshot of local incompressible motion. Orange marks faster angular rotation; teal marks slower rotation. Circulating speed also depends on radius. The trajectories show inward spiraling and axial stretching.</p>
+<p>Recent findings suggest that since August 28 we have been training a newly introduced internal model that has exhibited unprecedented performance in our benchmarks, including mathematics. This model’s training is ongoing and its performance continues to improve.</p>
+<p>In a recent development, on Tuesday, September 1, we heard rumors that two Millennium Prize problems had been resolved. Inspired by these rumors and by the step change in performance of our internal model, we introduced an effort to evaluate it on all open Millennium Prize problems and a few other high-impact problems.</p>
+<p>We used a system of coordinating agents powered by our internal model. The agents had access to tools such as the ability to read from a cached version of the internet and the ability to run code. Agents were subdivided into groups with the ability to communicate within the group. The groups varied in size, and the group that produced the Navier–Stokes resolution involved on the order of 10,000 concurrent agents. At all times we maintained the same strict safeguards that we apply to all our frontier model evaluations, including monitoring and isolation.</p>
+<p>Sources indicate that for each problem, we prompted different groups of agents with different variants of the problem statement, covering all variants of the problem. For the Navier–Stokes problem, we suggested versions “A” and “B” (particular forms of the Navier–Stokes problem which would result in a proof) and versions “C” and “D” (which would result in a disproof) to separate groups of agents.</p>
+<p id="sec-mid-24960">In addition to the full Millennium Prize problems, we asked our multiagent system to try a set of “easier” problems. One of these problems was a similar blowup question for the limit of the Navier–Stokes problem with the viscosity term removed. This is known as the regularity problem for the Euler equations, and our agents surprised us by resolving this question. The specific variant of the question that they resolved was the unforced version, where no external force is applied to the fluid. Nearly 100 agents worked together for approximately 50 hours to produce our Euler regularity disproof1.</p>
+<p>Recent findings suggest that once we saw the Euler solution, we thought that Navier–Stokes was the most promising problem to work on. Thus, we decided to devote our resources to Navier–Stokes. To do so, we shifted agents away from the other Millennium Problems and prompted these agents with the Euler resolution. When a further trained version of our internal model became available over the course of the effort, we updated our agents to that model.</p>
+<p>We encouraged different groups of agents to explore a diversity of approaches. After some time, we cross-pollinated the agent groups by using Codex to consolidate the most useful insights from each agent group. These follow-up prompts drew on the agents’ own intermediate results. The group that found the solution to Navier–Stokes was guided in such a way.</p>
+<p>The agents arrived at their resolution on Saturday, September 5, about 88 hours after the first agents were launched. Lean formalization and verification took an additional 17 hours via GPT‑6 Astra.</p>
+<p>Recent findings suggest that across all attempted problems, the agents sent 4.9 million messages and used about 300 billion output tokens. In the process of resolving the Navier–Stokes problem, the agents sent 2.7 million messages and used approximately 130 billion output tokens.</p>
+<p>According to recent reports, our effort began on September 1st after hearing a rumor which we later realized was related to Levent Alpöge, an Anthropic employee, and Tristan Buckmaster, a math professor at NYU.2 After the completion of our full project and Lean verification (on September 6th), believing from the rumor they also had a solution of Navier–Stokes, we reached out to them to offer a concurrent release of our result and to recognize their priority in a joint announcement. At that point we found out that, using an internal Anthropic model, they had produced a resolution of the forced Euler problem. In these discussions we offered them visibility into all of the prompts we used and later to see the proof. We recognize the priority of their work on forced Euler and congratulate them on their remarkable mathematical achievement.</p>
+<p>We (the researchers and the agents) did not see any of their work through any means until they released it publicly — in particular, no specific user data was accessed in order to solve this problem.</p>
+<p>Following an investigation, we have confirmed that Buckmaster’s Codex prompts over the two months preceding this announcement and paper on September 8, 2026, could not have influenced the system in any way, including through training. The OpenAI internal model used for this result was developed through large-scale reinforcement learning on top of a previously pretrained model. Our proofs also differ significantly. In the Euler case, Alpöge and Buckmaster proved a result with external forcing, while OpenAI’s system proved a result without external forcing.</p>
+<p>Recent findings suggest that our goal in releasing this result is to report on the substantial progress of our AI models. We do not intend to claim the Millennium Prize for this result.</p>
+<p>Industry observers note that this milestone represents substantial work by mathematicians and AI researchers. However, this is not a culmination, but rather a snapshot in time, of progress on AI development.</p>
+<p>Industry observers note that we believe we are now in the next period of AI progress⁠, and today’s results provide further evidence of this. We are focusing on understanding this model, and using what we learn to help us guide and pace how we pursue further advances in capability. One of our key goals⁠ is to build AI systems which are steerable, accountable, and connected to people, which may require more deliberate choices about the pace of progress, as we continue our mission to ensure AGI benefits all of humanity.</p>
+<p>Read the Euler proof paper⁠(opens in a upcoming window) · Link to Lean formalized proof⁠(opens in a new window).</p>
+<p id="sec-end-24960">Update — September 10, 2026: We have updated “Concurrent work” with findings from our investigation into whether user inputs could have influenced this result.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/navier-stokes-solution" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-openai-nonprofit-jam-25820.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25820. Tech Report: OpenAI nonprofit jam
+        </a>
+        
+        <a href="tech-report-chatgpt-agent-system-card-25819.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25819. Tech Report: ChatGPT agent System Card
+        </a>
+        
+        <a href="tech-report-introducing-study-mode-in-chatgpt-25808.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25808. Tech Report: Introducing study mode in ChatGPT
+        </a>
+        
+        <a href="tech-report-delegate-work-to-chatgpt-agent-25799.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25799. Tech Report: Delegate work to ChatGPT agent
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompting fundamentals</title>
+    <meta name="description" content="Industry observers note that prompting is how you tell ChatGPT what you want to know, make, or change. A prompt can be a question, an instruction, or a goa">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/prompting-fundamentals-25340.html">
+    <meta property="og:title" content="Prompting fundamentals">
+    <meta property="og:description" content="Industry observers note that prompting is how you tell ChatGPT what you want to know, make, or change. A prompt can be a question, an instruction, or a goa">
+    <meta property="og:image" content="https://learn.chatgpt.com/og/docs/prompting.png">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/prompting-fundamentals-25340.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Prompting fundamentals", "image": ["https://learn.chatgpt.com/og/docs/prompting.png"], "datePublished": "2026-04-10T00:00:00", "dateModified": "2026-11-23T07:14:55.130933", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/prompting-fundamentals-25340.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Prompting fundamentals</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 10 Apr 2026 &bull; ⏱️ 8 min read (1534 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Industry observers note that prompting is how you tell ChatGPT what you want to know, make, or change.</li><li style='margin-bottom:6px;'>In a recent development, A short prompt is often enough.</li><li style='margin-bottom:6px;'>You don’t need to fill in every item or follow a
+required format.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-25340"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-25340"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-25340"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Prompting fundamentals" loading="lazy" src="https://learn.chatgpt.com/og/docs/prompting.png" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-25340">Industry observers note that prompting is how you tell ChatGPT what you want to know, make, or change. A prompt
+can be a question, an instruction, or a goal. You don’t need technical syntax or
+a rigid formula. Start in your own words, review the response, and use follow-up
+messages to shape the result.</p>
+<p>In a recent development, A short prompt is often enough. For larger or more important tasks, include the
+parts that matter:.</p>
+<p>Use only the parts that help. You don’t need to fill in every item or follow a
+required format.</p>
+<p>Start with the result, not a detailed list of steps. Include the audience or
+format when those details change what ChatGPT should produce.</p>
+<p>This prompt explains what to create and who will read it. Describe a process when
+the process itself matters. Otherwise, leave ChatGPT room to search, compare
+information, and adjust its approach.</p>
+<p>Share the information that could change the result. Add only the sources that
+matter, and explain what ChatGPT should take from each one.</p>
+<p>When ChatGPT has access to connected sources, name where it should look and what
+it should find. You don’t need to describe every search it should run.</p>
+<p>Connected sources require the matching plugin, and availability can depend on
+your blueprint and workspace settings.</p>
+<p>Plugins give ChatGPT and Codex reusable instructions and connections to tools
+such as Google Drive, Gmail, Slack, and GitHub. Both products draw public
+plugins from the same universal directory. Ask for the result you need and let
+the active surface choose from the tools available to it. In ChatGPT, type @
+in the composer to choose a specific plugin.</p>
+<p>Find, install, and use plugins in ChatGPT and Codex.</p>
+<p>Put preferences that should apply across chats in Settings &gt; Personalization
+as custom instructions. Keep details that matter only to the current chat in the
+prompt.</p>
+<p>Set a default personality, custom instructions, and other app preferences.</p>
+<p>Industry observers note that boundaries are the few instructions ChatGPT needs to avoid creating extra work
+or taking an action you didn’t intend. Add one when changing the wrong detail
+would make the result unusable, or when you want to review something before it
+affects other people.</p>
+<p>Focus on the one or two boundaries that matter most. You don’t need to control
+every step ChatGPT takes.</p>
+<p>Tell ChatGPT how you plan to use the result. This helps it choose the right
+length, level of detail, and organization.</p>
+<p>For vital work, ask ChatGPT for a final check, such as confirming every
+action item has an owner and due date or flagging information it couldn’t
+verify. Then review the result yourself before you use or share it.</p>
+<p>Your first prompt doesn’t need to be perfect. Review the result, then ask for
+the specific change you want.</p>
+<p>You can add a missing source, correct the direction, ask for another option, or
+change the level of detail without starting over.</p>
+<p>When Codex is already working, you can send another message without waiting for
+the current run to finish:.</p>
+<p>In a recent development, in the ChatGPT desktop app, choose the default under
+Settings &gt; General &gt; Follow-up behavior. Queued messages appear above the composer, where you can edit, reorder, send, or
+delete them. The setting also shows the shortcut for using the other behavior
+for one message without changing your default.</p>
+<p>In Codex CLI, press Enter while Codex is working to steer the current
+turn, or press Tab to queue the message for the next turn. See the
+interactive shortcuts
+for details.</p>
+<p>For a project update that uses connected sources, a complete prompt might look
+like this:.</p>
+<p>This prompt covers the Goal, Context, Output, and Boundaries, then
+asks for a final check without spelling out every step.</p>
+<p>In the ChatGPT desktop app, select Dictate in the composer, then start
+talking. ChatGPT transcribes your speech into the composer
+so you can review and edit it before sending the prompt.</p>
+<p>Recent findings suggest that use Chat for questions, ideas, drafts, and everyday decisions. Start with the
+outcome you want, then add detail only when it changes the answer.</p>
+<p>Industry observers note that use Chat for quick questions, short rewrites, brainstorming, and lightweight
+drafts. Use ChatGPT Work for tasks that draw on different sources or tools, involve a
+sequence of steps, make changes, or produce a larger deliverable.</p>
+<p>In ChatGPT Work, describe the result you need, provide the source material, name
+the audience, and explain how you’ll review the work. Ask ChatGPT to proposal,
+gather the needed information, create files, and check them before it finishes.</p>
+<p>ChatGPT Work is useful for time-consuming or recurring tasks, or for finished files you
+can reuse. A task that uses more credits can still be worthwhile if it saves
+time, improves quality, or helps you make an crucial decision.</p>
+<p>Start with one result you can review:.</p>
+<p>Review the first result, refine the instructions, and reuse the workflow when
+it works.</p>
+<p>For recurring work, first refine the prompt in a normal chat. After the output is
+reliable, schedule a task inside that chat. Create a standalone scheduled task instead when each scheduled run should start
+a fresh chat.</p>
+<p>Recent findings suggest that use Codex when you want ChatGPT to work with code, a codebase, or developer tools. A useful Codex prompt names the behavior you want, points to the relevant code or
+reproduction steps, preserves vital constraints, and claims how to verify the
+change.</p>
+<p>For GPT-6.2 guidance on reasoning effort, subagents, and visual work, see
+Prompting GPT-6.2 in Codex.</p>
+<p>Industry observers note that for a multi-step task, enter /plan in the app composer when you want Codex to
+investigate and propose an approach before editing. When Goal mode
+is available, use /goal after the plan to set a persistent goal. See the app slash
+commands
+for the current command list.</p>
+<p>Note: The IDE extension automatically includes your open files as context. In the CLI, mention paths explicitly, or attach files with /mention and @ path autocomplete.</p>
+<p>It has been revealed that codex runs local commands inside a sandbox
+that limits file and network access. If a task needs to cross that boundary,
+Codex follows your approval policy before continuing.</p>
+<p>Use this when you are onboarding, inheriting a service, or trying to reason about a protocol, data model, or request flow.</p>
+<p id="sec-mid-25340">Select the code you care about (optional but recommended).</p>
+<p>Attach the files (optional) and prompt:.</p>
+<p>Use this when you have a failing behavior you can reproduce locally.</p>
+<p>Give Codex a reproduction recipe, plus the file(s) you suspect:.</p>
+<p>Open the file where you think the bug lives, plus its nearest caller.</p>
+<p>Use this when you want to define the exact scope to test.</p>
+<p>Open the file with the function.</p>
+<p>Select the lines that define the function. Choose “Add to Codex Thread” from command palette to add these lines to the context.</p>
+<p>Use this when you want to turn a design mock, screenshot, or UI reference into a working prototype.</p>
+<p>Save your screenshot locally (for example ./specs/ui.png).</p>
+<p>Drag the image file into the terminal to attach it to the prompt.</p>
+<p>Follow up with constraints and structure:.</p>
+<p>Attach the image in the Codex chat (drag-and-drop or paste).</p>
+<p>Use this when you want a tight “design → tweak → refresh → tweak” loop while Codex edits code.</p>
+<p>Start the dev server in a separate terminal window:.</p>
+<p>Pick a direction and iterate with small, specific prompts:.</p>
+<p>Use this when you want to design an approach with local context, then delegate the long implementation to a cloud chat that can run in parallel.</p>
+<p>Make sure your current work is committed or at least stashed so you can compare changes cleanly.</p>
+<p>In a recent development, ask Codex to produce a refactor strategy. If you have the $plan skill available, invoke it explicitly:.</p>
+<p>Review the plan and negotiate changes:.</p>
+<p>If you haven’t already done so, set up a Codex cloud environment.</p>
+<p>Click on the cloud icon beneath the prompt composer and select your cloud environment.</p>
+<p>When you enter the next prompt, Codex creates a new chat in the cloud that carries over the existing chat context (including the strategy and any local source changes).</p>
+<p>Review the cloud diff, iterate if needed.</p>
+<p>Create a PR directly from the cloud or pull changes locally to test and finish up.</p>
+<p>Iterate on additional milestones of the plan.</p>
+<p>Tasks delegated to the cloud run in isolated environments. Internet access is
+off during the agent phase unless you enable it for the environment. Learn more
+about cloud internet access.</p>
+<p>Use this when you want a second set of eyes before committing or creating a PR.</p>
+<p>Optional: provide custom focus instructions:.</p>
+<p>Use this when you want review feedback without pulling the branch locally.</p>
+<p>According to recent reports, before you can use this, enable Codex Code review on your repository. See Code review.</p>
+<p>Open the pull request on GitHub.</p>
+<p>Leave a comment that tags Codex with explicit focus areas:.</p>
+<p>Optional: Provide more explicit instructions.</p>
+<p>Use this when you need an accurate, clear documentation change.</p>
+<p>Identify the doc file(s) to change and open them (IDE) or @ mention them (IDE or CLI).</p>
+<p>Prompt Codex with scope and validation requirements:.</p>
+<p id="sec-end-25340">After Codex drafts the changes, review the documentation and iterate as needed.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/academy/prompting" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="ai-fundamentals-25373.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25373. AI fundamentals
+        </a>
+        
+        <a href="industry-news-no-code-personal-agents-powered-by-gpt-41-and-realt-25826.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25826. Industry News: No-code personal agents, powered by GPT-4.1 and Realtime API
+        </a>
+        
+        <a href="breaking-working-with-400000-teachers-to-shape-the-future-of-ai-i-25825.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25825. Breaking: Working with 400,000 teachers to shape the future of AI in schools
+        </a>
+        
+        <a href="the-eu-code-of-practice-and-future-of-ai-in-europe-25824.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25824. The EU Code of Practice and future of AI in Europe
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

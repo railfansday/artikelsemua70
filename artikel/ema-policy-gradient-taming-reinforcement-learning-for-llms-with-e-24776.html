@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL</title>
+    <meta name="description" content="According to recent reports, arXiv:2602.04417v3 Announce Type: replace-cross Abstract: Reinforcement Learning (RL) has enabled Large Language Models (LLMs)">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/ema-policy-gradient-taming-reinforcement-learning-for-llms-with-e-24776.html">
+    <meta property="og:title" content="EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL">
+    <meta property="og:description" content="According to recent reports, arXiv:2602.04417v3 Announce Type: replace-cross Abstract: Reinforcement Learning (RL) has enabled Large Language Models (LLMs)">
+    <meta property="og:image" content="/static/browse/0.3.4/images/arxiv-logo-fb.png">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/ema-policy-gradient-taming-reinforcement-learning-for-llms-with-e-24776.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL", "image": ["/static/browse/0.3.4/images/arxiv-logo-fb.png"], "datePublished": "2026-11-23T05:00:00", "dateModified": "2026-11-23T07:14:15.273921", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/ema-policy-gradient-taming-reinforcement-learning-for-llms-with-e-24776.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL</h1>
+        <div class="meta-line">🌐 Source: <strong>Arxiv</strong> &bull; 📅 23 Nov 2026 &bull; ⏱️ 1 min read (204 words, 📖 Standard)</div>
+        
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="/static/browse/0.3.4/images/arxiv-logo-fb.png" alt="EMA Policy Gradient: Taming Reinforcement Learning for LLMs with EMA Anchor and Top-k KL" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="line-height: 1.8;">
+                <p>According to recent reports, arXiv:2602.04417v3 Announce Type: replace-cross 
+Abstract: Reinforcement Learning (RL) has enabled Large Language Models (LLMs) to acquire increasingly complex reasoning and agentic behaviors. In this work, we propose two simple techniques to improve policy gradient algorithms for LLMs. First, we replace the fixed anchor policy during RL with an Exponential Moving Average (EMA), similar to a target network in deep Q-learning. Second, we introduce Top-$k$ KL estimator, which allows for flexible interpolation between exact KL and sampled KL. We derive the stability conditions for using EMA anchor; moreover, we show that our Top-$k$ KL estimator yields both unbiased KL values and unbiased gradients at any $k$, while bringing the benefits of exact KL. When combined with GRPO, the two techniques (EMA-PG) lead to a significant performance boost. On math reasoning, it allows R1-distilled Qwen-1.5B to reach 53.9% on OlympiadBench compared to 50.8% by GRPO. On agentic RL domains, with Qwen-3B base, EMA-PG improves GRPO by an average of 35.6% across 7 datasets of Q&A with search engines, including 29.7% $\rightarrow$ 45.8% on HotpotQA, 27.4% $\rightarrow$ 40.5% on 2WikiMultiHopQA. Overall, we show that EMA-PG is a simple, principled, and powerful approach to scaling RL for LLMs. Code: https://github.com/LunjunZhang/ema-pg.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://arxiv.org/abs/2602.04417" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Read original article
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="latest-update-thundersync-lossless-acceleration-of-agentic-reinfo-24866.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #24866. Latest Update: ThunderSync: Lossless Acceleration of Agentic Reinforcement Learning
+        </a>
+        
+        <a href="industry-news-omniharness-harnessing-generalizable-visual-generat-24859.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #24859. Industry News: OmniHarness: Harnessing Generalizable Visual Generation via Symbolic Policy Learning
+        </a>
+        
+        <a href="streampro-reinforcement-learning-with-multi-grained-rewards-for-p-24805.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #24805. StreamPro: Reinforcement Learning with Multi-Grained Rewards for Proactive Streaming Video Understanding
+        </a>
+        
+        <a href="delightful-policy-gradient-under-distributed-friction-24780.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #24780. Delightful Policy Gradient under Distributed Friction
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Update: Beyond rate limits: scaling access to Codex and Sora</title>
+    <meta name="description" content="By Jonah Cohen, Member of the Technical Staff. Sources indicate that in the past year, both Codex and Sora have seen rapid adoption, with usage quickly pus">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/latest-update-beyond-rate-limits-scaling-access-to-codex-and-sora-25548.html">
+    <meta property="og:title" content="Latest Update: Beyond rate limits: scaling access to Codex and Sora">
+    <meta property="og:description" content="By Jonah Cohen, Member of the Technical Staff. Sources indicate that in the past year, both Codex and Sora have seen rapid adoption, with usage quickly pus">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/7FMhFpu8FeilKOa7OxJrm6/110b1593b2d5288997db58ea5c948b7c/FinEng_SEO.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/latest-update-beyond-rate-limits-scaling-access-to-codex-and-sora-25548.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Latest Update: Beyond rate limits: scaling access to Codex and Sora", "image": ["https://images.ctfassets.net/kftzwdyauwt9/7FMhFpu8FeilKOa7OxJrm6/110b1593b2d5288997db58ea5c948b7c/FinEng_SEO.png?w=1600&h=900&fit=fill"], "datePublished": "2026-02-13T09:00:00", "dateModified": "2026-11-23T07:15:10.368584", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/latest-update-beyond-rate-limits-scaling-access-to-codex-and-sora-25548.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Latest Update: Beyond rate limits: scaling access to Codex and Sora</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 13 Feb 2026 &bull; ⏱️ 6 min read (1289 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Sources indicate that in the past year, both Codex and Sora have seen rapid adoption, with usage quickly pushing beyond what we originally expected.</li><li style='margin-bottom:6px;'>Rate limits can help smooth demand and ensure fair access; however, when users are getting value, hitting a hard stop can be frustrating.</li><li style='margin-bottom:6px;'>According to recent reports, to solve this, we built a real‑time access engine that counts usage.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-25548"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-25548"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-25548"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Latest Update: Beyond rate limits: scaling access to Codex and Sora" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/7FMhFpu8FeilKOa7OxJrm6/110b1593b2d5288997db58ea5c948b7c/FinEng_SEO.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-25548">By Jonah Cohen, Member of the Technical Staff.</p>
+<p>Sources indicate that in the past year, both Codex and Sora have seen rapid adoption, with usage quickly pushing beyond what we originally expected. We’ve seen a consistent pattern: owners dive in, find real value, and then run into rate limits.</p>
+<p>Rate limits can help smooth demand and ensure fair access; however, when users are getting value, hitting a hard stop can be frustrating. We wanted a way for users to keep going, while protecting system performance and user trust in our approach.</p>
+<p>According to recent reports, to solve this, we built a real‑time access engine that counts usage. One of the layers in that engine is the ability to purchase credits. When users exceed their rate limits, credits let them keep using our products by spending down their credit balance.</p>
+<p>Recent findings suggest that underneath this is a complex system that fuses limits, real‑time usage tracking, and credit balances in a single access model. This post covers why scaling Codex and Sora required rethinking access control, how a provably correct, real-time system blends rate limits and credits per request, and how that foundation now unlocks additional access for both products.</p>
+<p>Zooming out, traditional access models tend to force a choice:.</p>
+<p>Rate limits can be helpful at first, but leave owners with a bad experience when they run out: “come back later”.</p>
+<p>Usage‑based billing is flexible, but leaves users paying from the first token—not ideal for supporting early exploration.</p>
+<p>In a recent development, for Codex and Sora, neither was sufficient on its own. If we simply raised rate limits, we’d lose crucial demand-smoothing and fairness controls and run out of capacity to serve everyone. If we relied entirely on asynchronous usage billing, we’d introduce lag, overages, or reconciliation challenges—exactly the kinds of problems users notice when they’re most engaged.</p>
+<p>What we needed instead was a single hybrid system combining real-time limits with pay-as-you-go access:.</p>
+<p>Enforce rate limits until they’re reached.</p>
+<p>Seamlessly transition to credits within the same request.</p>
+<p>Make that decision in real time.</p>
+<p>Be rigorously accurate and auditable when tracking credit consumption.</p>
+<p>Sources indicate that one of the key conceptual shifts we made was modeling access as a decision waterfall. Instead of asking “is this allowed?”, we ask “how much is allowed, and from where?” When counting usage, the system goes through the following sequence:.</p>
+<p>This model reflects how consumers actually experience the product. Rate limits, free tiers, credits, promotions, and enterprise entitlements are all just layers in the same decision stack. From a user’s perspective, they don’t “switch systems”—they just keep using Codex and Sora. That’s why credits feel invisible: they’re just another element in the waterfall.</p>
+<p>We evaluated third‑party usage billing and metering platforms to handle credit consumption. They’re well‑suited for invoicing and reporting, but didn’t meet two critical requirements:.</p>
+<p>Sources indicate that when a user hits a limit and has credits available, the system must know immediately. Best‑effort or delayed counting demonstrates up as surprise blocks, inconsistent balances, and incorrect charges. For interactive products like Codex and Sora, those failures become visible and frustrating.</p>
+<p>We also needed to offer transparency into every outcome:.</p>
+<p>Why a request was allowed or blocked.</p>
+<p id="sec-mid-25548">Which limits or balances were applied.</p>
+<p>Recent findings suggest that this capability needed to be tightly integrated into our decision waterfall rather than solved in isolation in a separate usage billing platform that only saw one piece of what was happening. To let users access our products without compromising trust, we needed full control over correctness, timing, and observability. That pushed us toward an in‑house solution.</p>
+<p>To power this, we built a distributed usage and balance system designed specifically for synchronous access decisions.</p>
+<p>Tracks per‑user, per‑feature usage.</p>
+<p>Maintains real‑time credit balances.</p>
+<p>Debits balances idempotently through a streaming async processor.</p>
+<p>In a recent development, every request passes through a single evaluation path that makes a real‑time decision about how much usage is allowed by synchronously consuming from rate limits and, if needed, verifying sufficient credits; it then returns one definitive outcome while settling any credit debits asynchronously. This ensures consistent behavior across products and eliminates duplicated logic across teams.</p>
+<p>One of the key design principles of this system is that we must be able to prove that our billing is correct. This reflects the roots of our credit support, which originated with enterprise customers. In the above system diagram, we have three separate datasets that all tie together:.</p>
+<p>Product usage events: What the user actually did.</p>
+<p>Monetization events: What we charge the user for their usage.</p>
+<p>Balance updates: How much we adjusted the user’s credit balance and why.</p>
+<p>These datasets aren’t a casual by-product; they actually drive the system, with each dataset triggering the next. Separating what occurred, any associated charges, and what we debited lets us independently audit, replay, and reconcile every layer. This is an intentional trade-off where we are prioritizing provable correctness, at the cost of credit balance updates being slightly delayed. How we accomplished this:.</p>
+<p>Recent findings suggest that product usage events are published for all user activity, whether it drives credit consumption or not. This provides an audit trail for user activity and allows us to explain why we charged, or didn’t charge, credits.</p>
+<p>Every event carries a stable idempotency key, so retries, replays, or worker restarts can never double‑debit a balance, which prevents double‑charging. This also lets us run a batch reconciliation to verify our work offline.</p>
+<p>We do asynchronous (but still near-real-time) balance updates instead of synchronous updates to create an audit trail. We tolerate a small delay in updating the user’s balance so that we can prove that the system is functioning and assure our people that we are not misbilling them. When that brief delay causes us to overshoot a user’s credit balance, we automatically refund it; we choose provable correctness and user trust over strict enforcement.</p>
+<p>In a recent development, we decrease the Credit Balance and insert a Balance Revision record in a single atomic database transaction. Balance updates are serialized per account, so concurrent requests can never race to spend the same credits. The Balance Update record contains both the debit amount as well as attribution back to the monetization event that triggered the update; wrapping this in a single database transaction guarantees we have an audit trail for every adjustment to the credit balance.</p>
+<p>All of this rigor supports one objective: to make access simple and safe. When people are creating or coding, they shouldn’t have to wonder whether a request will go through, if they’ll be overcharged, or whether their balance is accurate. By making usage, billing, and balances provably correct, we give owners a system that doesn’t distract from their experience. That’s what lets us replace hard stops with continuous access—and it’s what makes credits usable in the middle of real work, not just on an invoice.</p>
+<p>In a recent development, the guiding principle behind our approach is protecting user momentum. Every architectural decision maps back to a user-facing outcome: real-time balances prevent unnecessary interruptions, atomic consumption prevents double-charging, and unified access logic ensures predictable behavior. The result is that people can work longer, explore more deeply, and take projects further without facing hard stops or premature plan changes.</p>
+<p>Recent findings suggest that when users are engaged, the system should help them continue, not get in the way. Limits and credits disappear into the background.</p>
+<p>In a recent development, building that experience required rethinking access, usage, and billing as a single system and building infrastructure that treats correctness as a first‑class product feature. The same foundation can extend to more products over time; Codex and Sora are just the beginning.</p>
+<p id="sec-end-25548">Special thanks to the entire FinEng team that built credits.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/beyond-rate-limits" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="how-we-used-codex-to-ship-sora-for-android-in-28-days-25627.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25627. How We Used Codex to Ship Sora for Android in 28 Days
+        </a>
+        
+        <a href="latest-update-scaling-codex-to-enterprises-worldwide-25283.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25283. Latest Update: Scaling Codex to enterprises worldwide
+        </a>
+        
+        <a href="scaling-trusted-access-for-cyber-with-gpt-55-and-gpt-55-cyber-25186.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25186. Scaling Trusted Access for Cyber with GPT-5.5 and GPT-5.5-Cyber
+        </a>
+        
+        <a href="industry-news-how-engineers-at-nextdoor-use-codex-to-build-withou-25054.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #25054. Industry News: How engineers at Nextdoor use Codex to build without limits
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
