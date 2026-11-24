@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industry News: Techniques for training large neural networks</title>
+    <meta name="description" content="Large neural networks are at the core of many recent advances in AI, but training them is a difficult engineering and research challenge which requires orc">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/industry-news-techniques-for-training-large-neural-networks-31587.html">
+    <meta property="og:title" content="Industry News: Techniques for training large neural networks">
+    <meta property="og:description" content="Large neural networks are at the core of many recent advances in AI, but training them is a difficult engineering and research challenge which requires orc">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/62793de4-0f01-42fc-539325d9af36/bc1ac82499fc1dc43f59accdd31d0195/image-9.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/industry-news-techniques-for-training-large-neural-networks-31587.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Industry News: Techniques for training large neural networks", "image": ["https://images.ctfassets.net/kftzwdyauwt9/62793de4-0f01-42fc-539325d9af36/bc1ac82499fc1dc43f59accdd31d0195/image-9.webp?w=1600&h=900&fit=fill"], "datePublished": "2022-06-09T07:00:00", "dateModified": "2026-11-24T22:21:56.599326", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/industry-news-techniques-for-training-large-neural-networks-31587.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Industry News: Techniques for training large neural networks</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 09 Jun 2022 &bull; ⏱️ 9 min read (1784 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Large neural networks are at the core of many recent advances in AI, but training them is a difficult engineering and research challenge which requires orchestrating a cluster of GPUs to perform a single synchronized calculation.</li><li style='margin-bottom:6px;'>Sources indicate that large neural networks are at the core of many recent advances in AI, but training them is a difficult engineering and research challenge which requires orchestrating a cluster of GPUs to perform a single synchronized calculation.</li><li style='margin-bottom:6px;'>Training a neural network is an iterative process.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31587"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31587"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31587"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Industry News: Techniques for training large neural networks" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/62793de4-0f01-42fc-539325d9af36/bc1ac82499fc1dc43f59accdd31d0195/image-9.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31587">Large neural networks are at the core of many recent advances in AI, but training them is a difficult engineering and research challenge which requires orchestrating a cluster of GPUs to perform a single synchronized calculation.</p>
+<p>Sources indicate that large neural networks are at the core of many recent advances in AI, but training them is a difficult engineering and research challenge which requires orchestrating a cluster of GPUs to perform a single synchronized calculation. As cluster and model sizes have grown, machine learning practitioners have developed an increasing variety of techniques to parallelize model training over many GPUs. At first glance, understanding these parallelism techniques may seem daunting, but with only a few assumptions about the structure of the computation these techniques become much more clear—at that point, you’re just shuttling around opaque bits from A to B like a network switch shuttles around packets.</p>
+<p>Training a neural network is an iterative process. In every iteration, we do a pass forward through a model’s layers⁠(opens in a new window) to compute an output for each training example in a batch of data. Then another pass proceeds backward⁠(opens in a new window) through the layers, propagating how much each parameter affects the final output by computing a gradient⁠(opens in a new window) with respect to each parameter. The average gradient for the batch, the parameters, and some per-parameter optimization state is passed to an optimization algorithm, such as Adam⁠(opens in a new window), which computes the next iteration’s parameters (which should have slightly better performance on your data) and new per-parameter optimization state. As the training iterates over batches of data, the model evolves to produce increasingly accurate outputs.</p>
+<p>Various parallelism techniques slice this training process across different dimensions, including:.</p>
+<p>Data parallelism—run different subsets of the batch on different GPUs;.</p>
+<p>Pipeline parallelism—run different layers of the model on different GPUs;.</p>
+<p>Tensor parallelism—break up the math for a single operation such as a matrix multiplication to be split across GPUs;.</p>
+<p>Mixture-of-Experts—process each example by only a fraction of each layer.</p>
+<p>(In this post, we’ll assume that you are using GPUs to train your neural networks, but the same ideas apply to those using any other neural network accelerator⁠(opens in a new window).).</p>
+<p>It has been revealed that data Parallel training means copying the same parameters to multiple GPUs (often called “workers”) and assigning different examples to each to be processed simultaneously. Data parallelism alone still requires that your model fits into a single GPU’s memory, but lets you utilize the compute of many GPUs at the cost of storing many duplicate copies of your parameters. That being stated, there are strategies to increase the effective RAM available to your GPU, such as temporarily offloading parameters to CPU memory between usages.</p>
+<p>As each data parallel worker updates its copy of the parameters, they need to coordinate to ensure that each worker continues to have similar parameters. The simplest approach is to introduce blocking communication between workers: (1) independently compute the gradient on each worker; (2) average the gradients across workers⁠(opens in a newly introduced window); and (3) independently compute the same new parameters on each worker. Step (2) is a blocking average which requires transferring quite a lot of data (proportional to the number of workers times the size of your parameters), which can hurt your training throughput. There are various asynchronous synchronization schemes⁠(opens in a new window) to remove this overhead, but they hurt learning efficiency; in practice, people generally stick with the synchronous approach.</p>
+<p>With Pipeline Parallel training, we partition sequential chunks of the model across GPUs. Each GPU holds only a fraction of parameters, and thus the same model consumes proportionally less memory per GPU.</p>
+<p>Recent findings suggest that it’s straightforward to split a large model into chunks of consecutive layers. However, there’s a sequential dependency between inputs and outputs of layers, so a naive implementation can lead to a large amount of idle time while a worker waits for outputs from the previous machine to be used as its inputs. These waiting time chunks are known as “bubbles,” wasting the computation that could be done by the idling machines.</p>
+<p>We can reuse the ideas from data parallelism to reduce the cost of the bubble by having each worker only process a subset of data elements at one time, allowing us to cleverly overlap new computation with wait time. The core idea is to split one batch into multiple microbatches; each microbatch should be proportionally faster to process and each worker begins working on the next microbatch as soon as it’s available, thus expediting the pipeline execution. With enough microbatches the workers can be utilized most of the time with a minimal bubble at the beginning and end of the step. Gradients are averaged across microbatches, and updates to the parameters happen only once all microbatches have been completed.</p>
+<p>The number of workers that the model is split over is commonly known as pipeline depth.</p>
+<p id="sec-mid-31587">During the forward pass, workers only need to send the output (called activations) of its chunk of layers to the next worker; during the backward pass, it only sends the gradients on those activations to the previous worker. There’s a massive design space of how to schedule these passes and how to aggregate the gradients across microbatches. GPipe⁠(opens in a fresh window) has each worker process forward and backward passes consecutively and then aggregates gradients from multiple microbatches synchronously at the end. PipeDream⁠(opens in a new window) instead schedules each worker to alternatively process forward and backward passes.</p>
+<p>Pipeline parallelism splits a model “vertically” by layer. It’s also possible to “horizontally” split certain operations within a layer, which is usually called Tensor Parallel training. For many modern models (such as the Transformer⁠(opens in a fresh window)), the computation bottleneck is multiplying an activation batch matrix with a large weight matrix. Matrix multiplication⁠(opens in a new window) can be thought of as dot products between pairs of rows and columns; it’s possible to compute independent dot products on different GPUs, or to compute parts of each dot product on different GPUs and sum up the results. With either strategy, we can slice the weight matrix into even-sized “shards”, host each shard on a different GPU, and use that shard to compute the relevant part of the overall matrix product before later communicating to combine the results.</p>
+<p>Industry observers note that one example is Megatron-LM⁠(opens in a upcoming window), which parallelizes matrix multiplications within the Transformer’s self-attention and MLP layers. PTD-P⁠(opens in a new window) uses tensor, data, and pipeline parallelism; its pipeline schedule assigns multiple non-consecutive layers to each device, reducing bubble overhead at the cost of more network communication.</p>
+<p>In a recent development, sometimes the input to the network can be parallelized across a dimension with a high degree of parallel computation relative to cross-communication. Sequence parallelism⁠(opens in a new window) is one such idea, where an input sequence is split across time into multiple sub-examples, proportionally decreasing peak memory consumption by allowing the computation to proceed with more granularly-sized examples.</p>
+<p>According to recent reports, with the Mixture-of-Experts (MoE)⁠(opens in a new window) approach, only a fraction of the network is used to compute the output for any one input. One example approach is to have many sets of weights and the network can choose which set to use via a gating mechanism at inference time. This enables many more parameters without increased computation cost. Each set of weights is referred to as “experts,” in the hope that the network will learn to assign specialized computation and skills to each expert. Different experts can be hosted on different GPUs, providing a clear way to scale up the number of GPUs used for a model.</p>
+<p>Recent findings suggest that illustration of a mixture-of-experts (MoE) layer. Only 2 out of the n experts are selected by the gating network. (Image adapted from: Shazeer et al., 2017⁠(opens in a new window)).</p>
+<p>Industry observers note that GShard⁠(opens in a newly introduced window) scales an MoE Transformer up to 600 billion parameters with a scheme where only the MoE layers are split across multiple TPU devices and other layers are fully duplicated. Switch Transformer⁠(opens in a new window) scales model size to trillions of parameters with even higher sparsity by routing one input to a single expert.</p>
+<p>In a recent development, there are many other computational strategies to make training increasingly large neural networks more tractable. For example:.</p>
+<p>To compute the gradient, you need to have saved the original activations, which can consume a lot of device RAM. Checkpointing⁠(opens in a latest window) (also known as activation recomputation) stores any subset of activations, and recomputes the intermediate ones just-in-time during the backward pass. This saves a lot of memory at the computational cost of at most one additional full forward pass. One can also continually trade off between compute and memory cost by selective activation recomputation⁠(opens in a new window), which is checkpointing subsets of the activations that are relatively more expensive to store but cheaper to compute.</p>
+<p>Recent findings suggest that mixed Precision Training⁠(opens in a upcoming window) is to train models using lower-precision numbers (most commonly FP16⁠(opens in a new window)). Modern accelerators can reach much higher FLOP counts with lower-precision numbers, and you also save on device RAM. With proper care, the resulting model can lose almost no accuracy.</p>
+<p>Sources indicate that offloading is to temporarily offload unused data to the CPU or amongst different devices and later read it back when needed. Naive implementations will slow down training a lot, but sophisticated implementations will pre-fetch data so that the device never needs to wait on it. One implementation of this idea is ZeRO⁠(opens in a upcoming window) which splits the parameters, gradients, and optimizer states across all available hardware and materializes them as needed.</p>
+<p>Memory Efficient Optimizers have been proposed to reduce the memory footprint of the running state maintained by the optimizer, such as Adafactor⁠(opens in a new window).</p>
+<p>Sources indicate that compression also can be used for storing intermediate results in the network. For example, Gist⁠(opens in a new window) compresses activations that are saved for the backward pass; DALL·E⁠ compresses the gradients before synchronizing them.</p>
+<p>Sources indicate that at OpenAI, we are training and improving large models from the underlying infrastructure all the way to deploying them for real-world problems. If you’d like to put the ideas from this post into practice—especially relevant for our Scaling and Applied Research teams—we’re hiring⁠!</p>
+<p id="sec-end-31587">Thanks to Nikolas Tezak, Sam Altman, Daniel Gackle, Ilya Sutskever, and Steven Adler for feedback on drafts. Thanks to Justin Jay Wang, Bianca Martin, and Steve Dowling for communications and design.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/techniques-for-training-large-neural-networks" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="weight-normalization-a-simple-reparameterization-to-accelerate-tr-31787.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31787. Weight normalization: A simple reparameterization to accelerate training of deep neural networks
+        </a>
+        
+        <a href="unlocking-large-scale-ai-training-networks-with-mrc-multipath-rel-29058.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #29058. Unlocking large scale AI training networks with MRC (Multipath Reliable Connection)
+        </a>
+        
+        <a href="stochastic-neural-networks-for-hierarchical-reinforcement-learnin-31749.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31749. Stochastic Neural Networks for hierarchical reinforcement learning
+        </a>
+        
+        <a href="tech-report-learning-sparse-neural-networks-through-l-regularizat-31720.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31720. Tech Report: Learning sparse neural networks through L₀ regularization
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

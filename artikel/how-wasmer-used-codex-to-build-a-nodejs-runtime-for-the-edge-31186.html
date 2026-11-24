@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Wasmer used Codex to build a Node.js runtime for the edge</title>
+    <meta name="description" content="Teams use Codex with GPT‑5.5 to take on more ambitious projects and complete them 10x to 20x faster. According to recent reports, engineers at Wasmer exper">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-wasmer-used-codex-to-build-a-nodejs-runtime-for-the-edge-31186.html">
+    <meta property="og:title" content="How Wasmer used Codex to build a Node.js runtime for the edge">
+    <meta property="og:description" content="Teams use Codex with GPT‑5.5 to take on more ambitious projects and complete them 10x to 20x faster. According to recent reports, engineers at Wasmer exper">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/4F1wJcjKLMpeQRDFerXS0q/24b7a1f737acdce2b86ea350fd9ebce6/oai_wasmer_SEO.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-wasmer-used-codex-to-build-a-nodejs-runtime-for-the-edge-31186.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How Wasmer used Codex to build a Node.js runtime for the edge", "image": ["https://images.ctfassets.net/kftzwdyauwt9/4F1wJcjKLMpeQRDFerXS0q/24b7a1f737acdce2b86ea350fd9ebce6/oai_wasmer_SEO.png?w=1600&h=900&fit=fill"], "datePublished": "2026-06-03T12:00:00", "dateModified": "2026-11-24T22:19:35.469853", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-wasmer-used-codex-to-build-a-nodejs-runtime-for-the-edge-31186.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How Wasmer used Codex to build a Node.js runtime for the edge</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 03 Jun 2026 &bull; ⏱️ 3 min read (628 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Teams use Codex with GPT‑5.5 to take on more ambitious projects and complete them 10x to 20x faster.</li><li style='margin-bottom:6px;'>According to recent reports, engineers at Wasmer experienced a breakthrough this year: They figured out how to run Node.js workloads inside a WebAssembly sandbox, enabling developers to run JavaScript apps, MCPs, and agents without Docker.</li><li style='margin-bottom:6px;'>Wasmer is a young company with a small team and a significant goal: an edge computing platform that scales across local and global environments without platform restrictions.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31186"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31186"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31186"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How Wasmer used Codex to build a Node.js runtime for the edge" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/4F1wJcjKLMpeQRDFerXS0q/24b7a1f737acdce2b86ea350fd9ebce6/oai_wasmer_SEO.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31186">Teams use Codex with GPT‑5.5 to take on more ambitious projects and complete them 10x to 20x faster.</p>
+<p>According to recent reports, engineers at Wasmer experienced a breakthrough this year: They figured out how to run Node.js workloads inside a WebAssembly sandbox, enabling developers to run JavaScript apps, MCPs, and agents without Docker. This effort would have taken one year without Codex, but with Codex, it took two weeks. Now, they’re the first cloud host to provide full Node.js at the edge layer.</p>
+<p>Wasmer is a young company with a small team and a significant goal: an edge computing platform that scales across local and global environments without platform restrictions.</p>
+<p>“The kinds of projects that we are taking on are incredibly ambitious, and it would have taken us ages to do them without AI,” states Syrus Akbary Nieto, Founder and CEO. “Now, things are way simpler and faster.”.</p>
+<p>That simplicity and speed translated directly into a groundbreaking project: Edge.js⁠(opens in a newly introduced window), a JavaScript runtime that can run Node.js workloads for AI and edge computing.</p>
+<p>It’s a project the team had long wanted to take on, but they didn’t always have the resources to do it. “Everyone here is very, very technical, but we just didn’t have the time to dedicate to these projects. And now, we can launch upcoming products that would have been impossible before,” explains Nieto.</p>
+<p>It has been revealed that with Codex, Wasmer engineers can multiply their efforts. “We have increased development speed by 10x to 20x, at least,” says Nieto.</p>
+<p id="sec-mid-31186">Like many teams, Wasmer engineers were initially skeptical of AI. “We were not very trusting of AI outputs at the beginning,” explains Nieto. But when the team started experimenting, the results exceeded their expectations. “Over the last year, and especially over the last few months, we have been working with Codex, and the results have been really, really good.”.</p>
+<p>Industry observers note that as Codex’s reasoning abilities evolve, Wasmer engineers spend less and less time with handholding. “We are actually moving out of the IDE itself, and we are not touching the code as much. We are just guiding it where we want it to go,” says Nieto.</p>
+<p>Recent findings suggest that the team used Codex from the very beginning of the project to the very end, from building the initial architectural building blocks to polishing the final product. Throughout, Codex helped the team find bugs and identify their root causes.</p>
+<p>According to recent reports, “There were certain bugs that we didn’t imagine we were going to have, and as soon as we started discovering them, Codex went directly into debugging,” Nieto says. “The impressive thing for us was seeing how fast it went from debugging to finding the root cause and identifying the solution.”.</p>
+<p>According to recent reports, typically, Nieto explains, developers would need special expertise to find many of these bugs. But Codex, Nieto states, “was able to master console logs to trace calls and a low-level debugger like LLD, which accesses things on the assembly level. Codex can get very low level, and see what is happening under the code.”.</p>
+<p>Before Edge.js, Nieto explains, it wasn’t possible to run a JavaScript runtime at the edge. And before Codex, it would have been impossible for the Wasmer team to take on a project this ambitious and with this timeline.</p>
+<p>Recent findings suggest that “Codex enabled a small company to achieve things that were only possible at major companies. This project literally would have been impossible without it,” states Nieto.</p>
+<p id="sec-end-31186">With their ambitions emboldened, the Wasmer team is looking ahead to even bigger projects. “Now, we have at hand things that were not possible before. We need to look at even more challenging problems,” says Nieto.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/wasmer" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="how-engineers-at-nextdoor-use-codex-to-build-without-limits-31176.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31176. How engineers at Nextdoor use Codex to build without limits
+        </a>
+        
+        <a href="holiday-extras-is-rethinking-what-it-can-build-with-codex-30573.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #30573. Holiday Extras is rethinking what it can build with Codex
+        </a>
+        
+        <a href="how-we-used-codex-to-ship-sora-for-android-in-28-days-29599.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #29599. How We Used Codex to Ship Sora for Android in 28 Days
+        </a>
+        
+        <a href="how-nvidia-engineers-and-researchers-build-with-codex-29018.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #29018. How NVIDIA engineers and researchers build with Codex
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

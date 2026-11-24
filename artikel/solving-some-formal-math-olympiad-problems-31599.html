@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solving (some) formal math olympiad problems</title>
+    <meta name="description" content="We built a neural theorem prover for Lean⁠(opens in a fresh window) that learned to solve a variety of challenging high-school olympiad problems, including">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/solving-some-formal-math-olympiad-problems-31599.html">
+    <meta property="og:title" content="Solving (some) formal math olympiad problems">
+    <meta property="og:description" content="We built a neural theorem prover for Lean⁠(opens in a fresh window) that learned to solve a variety of challenging high-school olympiad problems, including">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/107bb1e1-daad-40bf-85975dfa741c/57d987d185a7a46828ea203bb0132867/image-12_copy.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/solving-some-formal-math-olympiad-problems-31599.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Solving (some) formal math olympiad problems", "image": ["https://images.ctfassets.net/kftzwdyauwt9/107bb1e1-daad-40bf-85975dfa741c/57d987d185a7a46828ea203bb0132867/image-12_copy.png?w=1600&h=900&fit=fill"], "datePublished": "2022-02-02T08:00:00", "dateModified": "2026-11-24T22:22:00.650663", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/solving-some-formal-math-olympiad-problems-31599.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Solving (some) formal math olympiad problems</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 02 Feb 2022 &bull; ⏱️ 6 min read (1116 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We built a neural theorem prover for Lean⁠(opens in a fresh window) that learned to solve a variety of challenging high-school olympiad problems, including problems from the AMC12⁠(opens in a new window) and AIME⁠(opens in a new window) competitions, as well as two problems adapted from the IMO⁠(opens in a new window).</li><li style='margin-bottom:6px;'>We built a neural theorem prover for Lean⁠(opens in a fresh window) that learned to solve a variety of challenging high-school olympiad problems, including problems from the AMC12⁠(opens in a new window) and AIME⁠(opens in a new window) competitions, as well as two problems adapted from the IMO⁠(opens in a new window).A The prover uses a language model to find proofs of formal statements.</li><li style='margin-bottom:6px;'>We achieved a new state-of-the-art (41.2% vs 29.3%) on the miniF2F⁠(opens in a new window) benchmark, a challenging collection of high-school olympiad problems.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31599"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31599"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31599"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Solving (some) formal math olympiad problems" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/107bb1e1-daad-40bf-85975dfa741c/57d987d185a7a46828ea203bb0132867/image-12_copy.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31599">We built a neural theorem prover for Lean⁠(opens in a fresh window) that learned to solve a variety of challenging high-school olympiad problems, including problems from the AMC12⁠(opens in a new window) and AIME⁠(opens in a new window) competitions, as well as two problems adapted from the IMO⁠(opens in a new window).</p>
+<p>We built a neural theorem prover for Lean⁠(opens in a fresh window) that learned to solve a variety of challenging high-school olympiad problems, including problems from the AMC12⁠(opens in a new window) and AIME⁠(opens in a new window) competitions, as well as two problems adapted from the IMO⁠(opens in a new window).A The prover uses a language model to find proofs of formal statements. Each time we find a new proof, we use it as new training data, which improves the neural network and enables it to iteratively find solutions to harder and harder statements.</p>
+<p>We achieved a new state-of-the-art (41.2% vs 29.3%) on the miniF2F⁠(opens in a new window) benchmark, a challenging collection of high-school olympiad problems. Our approach, which we call statement curriculum learning, consists of manually collecting a set of statements of varying difficulty levels (without proof) where the hardest statements are similar to the benchmark we target. Initially our neural prover is weak and can only prove a few of them. We iteratively search for new proofs and re-train our neural network on the newly discovered proofs, and after 8 iterations, our prover ends up being vastly superior when tested on miniF2F.</p>
+<p>Formal mathematics is an exciting domain to study because of (i) its richness, letting you prove arbitrary theorems which require reasoning, creativity and insight and (ii) its similarity to games—where AI has been spectacularly successful—in that it has an automated way of determining whether a proof is successful (i.e., verified by the formal system). As demonstrated in the trivial example below, proving a formal statement requires generating a sequence of proof steps, each proof step consisting in a call to a tactic.B.</p>
+<p>These tactics take mathematical terms as arguments and each tactic call will transform the current statement to prove, into statements that are easier to prove, until nothing is left to prove.</p>
+<p>We observe that the capability to generate original mathematical terms required as arguments of tactics, which cannot be done without a neural language model, emerges from our training procedure. The proof below is an example of it: the proof step use n + 1 (entirely generated by our models) proposes to use n + 1 as a solution, the rest of the formal proof relying on the [ring_exp](https://leanprover-community.github.io/mathlib_docs/tactic/ring_exp.html) tactic to verify that it is indeed valid.</p>
+<p>Recent findings suggest that we also observe that our models and search procedure are capable of producing proofs that chain multiple non-trivial reasoning steps. In the proof below, the model starts by using contraposition leading to the existential statement (∃ (x : ℝ), f x ≠ a * x + b). It then generates a witness for it with use (0 : ℝ) and finishes the proof by leveraging the [norm_num](https://leanprover-community.github.io/mathlib_docs/tactics.html#norm_num) tactic.</p>
+<p>Sources indicate that our models, trained with statement curriculum learning, were able to close a variety of problems from training textbooks as well as AMC12⁠(opens in a fresh window) and AIME⁠(opens in a new window) competitions, and 2 problems adapted from the IMO⁠(opens in a new window). We present below three examples of such generated proofs.</p>
+<p>Formal mathematics involves two main challenges that make a naive application of reinforcement learning unlikely to succeed.</p>
+<p id="sec-mid-31599">Recent findings suggest that (i) Infinite action space: not only does formal mathematics have an extremely large search space (like Go for example), it also has an infinite action space. At each step of a proof search, the model must choose not from a well-behaved finite set of actions, but a complex and infinite set of tactics, involving exogenous mathematical terms that have to be generated (e.g., generating a mathematical statement to be used as a witness, an object used in steps such as “there exists an x s.t. …”, or a cut, the introduction and the chaining of a lemma in the middle of a proof).</p>
+<p>(ii) Lack of self-play: conversely to 2-player games, a prover is not playing against an opponent but against a set of statements to prove. When faced with a statement that is just too hard, there is no obvious reframing that will let the prover generate intermediary easier statements to tackle first. This asymmetry prevents naive application of the self-play algorithms that were successful with 2-player games.</p>
+<p>Recent findings suggest that in our work, we address the infinite action space problem by sampling actions from a language model as we search for a proof. Language models have the capability to generate the tactic calls as well as the original mathematical terms often required as arguments. Our basis for addressing the lack of self-play is the observation that the key role of self-play in 2-player games is to provide an unsupervised curriculum. Our methodology proposes to replace this unsupervised curriculum with an auxiliary set of problem statements (without requiring proofs) of varying difficulty. We empirically show that, when the difficulty of these auxiliary problems is varied enough, our training procedure is able to solve a curriculum of increasingly difficult problems, eventually generalizing to the set of problems we care about.</p>
+<p>While these results are extremely exciting, as they demonstrate that deep learning models are capable of non-trivial mathematical reasoning when interacting with a formal system, we are still very far from best-student performance on these competitions, only occasionally, rather than consistently, closing challenging olympiad problems. We hope nonetheless that our work will motivate research in this domain, in particular towards the IMO Grand Challenge⁠(opens in a new window) and that the statement curriculum learning methodology we propose will help accelerate progress in automated reasoning in general.</p>
+<p>These problems are not standard math exercises, they are used to let the best high-school students from the US (AMC12, AIME) or the world (IMO) compete against each other.</p>
+<p>Sources indicate that the artifacts accepted by the formal system are low-level (like assembly code) and hard for humans to produce. Tactics are search procedures that generate such artifacts from higher level directives to assist formalization.</p>
+<p>Thanks to our paper co-authors: Igor Babuschkin, Kunhao Zheng and Mantas Baksys.</p>
+<p>Thanks to the students of the Xena Project Discord who helped us formalize proofs and statements (in particular: Antoine Labelle, Hanting Zhang, Shing Tak Lam, Paul Lezeau, Sara Diaz, Nikita Golikov, Yael Dillies, Artem Vasilyev, Ollie Perree, and Yourong Zang).</p>
+<p id="sec-end-31599">Thanks in particular to Kevin Buzzard and Daniel Selsam for their support and thoughtful feedback since the very beginning of this project.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/formal-math" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-solving-math-word-problems-31607.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31607. Breaking: Solving math word problems
+        </a>
+        
+        <a href="solving-complex-problems-with-openai-o1-models-31356.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31356. Solving complex problems with OpenAI o1 models
+        </a>
+        
+        <a href="concrete-ai-safety-problems-31779.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31779. Concrete AI safety problems
+        </a>
+        
+        <a href="some-considerations-on-learning-to-explore-via-meta-reinforcement-31709.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31709. Some considerations on learning to explore via meta-reinforcement learning
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

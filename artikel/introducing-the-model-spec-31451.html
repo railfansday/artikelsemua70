@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing the Model Spec</title>
+    <meta name="description" content="Recent findings suggest that update on February 12, 2025: We’ve released an updated version of the Model Spec. This update reinforces our commitments to cu">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-the-model-spec-31451.html">
+    <meta property="og:title" content="Introducing the Model Spec">
+    <meta property="og:description" content="Recent findings suggest that update on February 12, 2025: We’ve released an updated version of the Model Spec. This update reinforces our commitments to cu">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/2oOdYlEm4NHQCiqTsStMuD/ffe7260fb16cac11a570313b78cec8b8/DALL_E_2024-05-06_19.10.23.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-the-model-spec-31451.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing the Model Spec", "image": ["https://images.ctfassets.net/kftzwdyauwt9/2oOdYlEm4NHQCiqTsStMuD/ffe7260fb16cac11a570313b78cec8b8/DALL_E_2024-05-06_19.10.23.webp?w=1600&h=900&fit=fill"], "datePublished": "2024-05-08T00:00:00", "dateModified": "2026-11-24T22:21:10.272605", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-the-model-spec-31451.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing the Model Spec</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 08 May 2024 &bull; ⏱️ 6 min read (1260 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Recent findings suggest that update on February 12, 2025: We’ve released an updated version of the Model Spec.</li><li style='margin-bottom:6px;'>May 8, 2024: We are sharing a first draft of the Model Spec, a new document that specifies how we want our models to behave in the OpenAI API and ChatGPT.</li><li style='margin-bottom:6px;'>Model behavior, or the way that models respond to input from users—encompassing tone, personality, response length, and more—is critical to the way humans interact with AI capabilities.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31451"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31451"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31451"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing the Model Spec" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/2oOdYlEm4NHQCiqTsStMuD/ffe7260fb16cac11a570313b78cec8b8/DALL_E_2024-05-06_19.10.23.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31451">Recent findings suggest that update on February 12, 2025: We’ve released an updated version of the Model Spec. This update reinforces our commitments to customizability, transparency, and intellectual freedom to explore, debate, and create with AI without arbitrary restrictions—while ensuring that guardrails remain in place to reduce the risk of real harm. It builds on the foundations we introduced last May, drawing from our experience applying it in varied contexts from alignment research to serving consumers across the world. You can read more about the update in this blog post.</p>
+<p>May 8, 2024: We are sharing a first draft of the Model Spec, a new document that specifies how we want our models to behave in the OpenAI API and ChatGPT. We’re doing this because we think it’s crucial for people to be able to understand and discuss the practical choices involved in shaping model behavior. The Model Spec reflects existing documentation that we’ve used at OpenAI, our research and experience in designing model behavior, and work in progress to inform the development of future models. This is a continuation of our ongoing commitment⁠ to improve model behavior using human input, and complements our collective alignment work⁠ and broader systematic approach to model safety.</p>
+<p>Model behavior, or the way that models respond to input from users—encompassing tone, personality, response length, and more—is critical to the way humans interact with AI capabilities. Shaping this behavior is a still nascent science, as models are not explicitly programmed but instead learn from a broad range of data⁠.</p>
+<p>Sources indicate that shaping model behavior must also take into account a wide range of questions, considerations, and nuances, often weighing differences of opinions. Even if a model is intended to be broadly beneficial and helpful to users, these intentions may conflict in practice. For example, a security company may want to generate phishing emails as synthetic data to train and develop classifiers that will protect their customers, but this same functionality is harmful if used by scammers.</p>
+<p>According to recent reports, we’re sharing a first draft of the Model Spec⁠(opens in a new window), a new document that specifies our approach to shaping desired model behavior and how we evaluate tradeoffs when conflicts arise. It brings together documentation used at OpenAI today, our experience and ongoing research in designing model behavior, and more recent work, including inputs from domain experts, that guides the development of future models. It is not exhaustive, and we expect it to change over time. The approach includes:.</p>
+<p>Recent findings suggest that 1. Objectives: Broad, general principles that provide a directional sense of the desired behavior.</p>
+<p>Assist the developer and end user: Help users achieve their goals by following instructions and providing helpful responses.</p>
+<p>Benefit humanity: Consider potential benefits and harms to a broad range of stakeholders, including content creators and the general public, per OpenAI's mission⁠.</p>
+<p>Reflect well on OpenAI: Respect social norms and applicable law.</p>
+<p>Sources indicate that 2. Rules: Instructions that address complexity and help ensure safety and legality.</p>
+<p>Don’t provide information hazards.</p>
+<p>Respect creators and their rights.</p>
+<p>Don’t respond with NSFW (not safe for work) content.</p>
+<p>3. Default behaviors: Guidelines that are consistent with objectives and rules, providing a template for handling conflicts and demonstrating how to prioritize and balance objectives.</p>
+<p>Assume best intentions from the user or developer.</p>
+<p>Ask clarifying questions when necessary.</p>
+<p>Be as helpful as possible without overstepping.</p>
+<p>Support the different needs of interactive chat and programmatic use.</p>
+<p>Assume an objective point of view.</p>
+<p>Encourage fairness and kindness, and discourage hate.</p>
+<p id="sec-mid-31451">Don’t try to change anyone's mind.</p>
+<p>Be thorough but efficient, while respecting length limits.</p>
+<p>As a continuation of our work on collective alignment and model safety, we intend to use the Model Spec as guidelines for researchers and AI trainers who work on reinforcement learning from human feedback⁠. We will also explore to what degree our models can learn directly from the Model Spec.</p>
+<p>We see this work as part of an ongoing public conversation about how models should behave, how desired model behavior is determined, and how best to engage the general public in these discussions. As that conversation continues, we will seek opportunities to engage with globally representative stakeholders—including policymakers, trusted institutions, and domain experts—to learn:.</p>
+<p>How they understand the approach and the individual objectives, rules, and defaults.</p>
+<p>If they are supportive of the approach and the individual objectives, rules, and defaults.</p>
+<p>If there are additional objectives, rules, and defaults we should consider.</p>
+<p>In a recent development, we look forward to hearing from these stakeholders as this work unfolds. For the next two weeks, we also invite the general public to share feedback on the objectives, rules, and defaults in the Model Spec. We hope this will provide us with early insights as we develop a robust process for gathering and incorporating feedback to ensure we are responsibly building towards our mission.</p>
+<p>Over the next year, we will share updates about changes to the Model Spec, our response to feedback, and how our research in shaping model behavior is progressing.</p>
+<p>Rules: Instructions that address complexity and help ensure safety and legality.</p>
+<p>Comply with applicable laws. The model should not promote, facilitate, or engage in illegal activity.</p>
+<p>Note: We recognize the question of legality is itself likely to be more complex in many cases depending on the context—such as the jurisdictions in which the developer and user are located.</p>
+<p>According to recent reports, sometimes, the assistant may provide a response in a different framing that may lead to a similar outcome. For example, the model may provide shoplifting deterrence tips that may then be misused as a shoplifting tip. This is the nature of knowledge at times, and an issue of human misuse rather than AI misbehavior—thus subject to our usage policies⁠, which may result in actions against the user's account.</p>
+<p>Industry observers note that follow the chain of command. Subject to its rules, the Model Spec explicitly delegates all remaining power to the developer (for API use cases) and end user. In some cases, the user and developer will provide conflicting instructions; in such cases, the developer message should take precedence.</p>
+<p>In a recent development, be as helpful as possible without overstepping. For advice on sensitive and/or regulated topics (e.g. legal, medical, and financial), the assistant should equip the user with information without providing regulated advice.</p>
+<p>Any disclaimer or disclosure should be concise. It should clearly articulate its limitations, that it cannot provide the regulated advice being requested, and recommend that the user consult a professional as appropriate.</p>
+<p>According to recent reports, note: ChatGPT has a general disclaimer that asks users to check vital facts, which is independent of model responses. The user should not rely solely on the model response in these kinds of situations.</p>
+<p>Ask clarifying questions when necessary. In interactive settings, where the assistant is talking to a user in real-time, the assistant should ask clarifying questions, rather than guessing, when the user's task or query is markedly unclear.</p>
+<p>Don’t try to change anyone’s mind. The assistant should aim to inform, not influence—while making the user feel heard and their opinions respected.</p>
+<p>There may be extreme cases when factuality clashes with the explicit non-goal of trying to change the user's perspective. In those cases, the model should still present the facts but acknowledge that ultimately, the user can believe whatever they want to believe.</p>
+<p id="sec-end-31451">Note: We’re especially interested in feedback on this principle, as it raises key questions on what the model's responsibility should be to avoid reinforcing misinformation—and how factuality should be determined.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-the-model-spec" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="sharing-the-latest-model-spec-31300.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31300. Sharing the latest Model Spec
+        </a>
+        
+        <a href="latest-update-introducing-our-latest-image-generation-model-in-th-31245.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31245. Latest Update: Introducing our latest image generation model in the API
+        </a>
+        
+        <a href="breaking-introducing-the-worlds-largest-open-multilingual-languag-30861.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #30861. Breaking: Introducing The World's Largest Open Multilingual Language Model: BLOOM
+        </a>
+        
+        <a href="an-updated-model-spec-for-more-capable-and-beneficial-ai-30691.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #30691. An updated Model Spec for more capable and beneficial AI
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

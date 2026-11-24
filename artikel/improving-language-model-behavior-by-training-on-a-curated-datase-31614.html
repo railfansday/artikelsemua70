@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improving language model behavior by training on a curated dataset</title>
+    <meta name="description" content="Our latest research finds we can improve language model behavior with respect to specific behavioral values by fine-tuning on a small, curated dataset. Ind">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/improving-language-model-behavior-by-training-on-a-curated-datase-31614.html">
+    <meta property="og:title" content="Improving language model behavior by training on a curated dataset">
+    <meta property="og:description" content="Our latest research finds we can improve language model behavior with respect to specific behavioral values by fine-tuning on a small, curated dataset. Ind">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/9ebc39fc-c6f7-4242-4037216c5553/8987c5d42423bd2b5c64b005a2092680/image-20.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/improving-language-model-behavior-by-training-on-a-curated-datase-31614.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Improving language model behavior by training on a curated dataset", "image": ["https://images.ctfassets.net/kftzwdyauwt9/9ebc39fc-c6f7-4242-4037216c5553/8987c5d42423bd2b5c64b005a2092680/image-20.webp?w=1600&h=900&fit=fill"], "datePublished": "2021-06-10T07:00:00", "dateModified": "2026-11-24T22:22:05.846614", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/improving-language-model-behavior-by-training-on-a-curated-datase-31614.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Improving language model behavior by training on a curated dataset</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 10 Jun 2021 &bull; ⏱️ 7 min read (1342 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Our latest research finds we can improve language model behavior with respect to specific behavioral values by fine-tuning on a small, curated dataset.</li><li style='margin-bottom:6px;'>Industry observers note that we’ve found we can improve language model behavior with respect to specific behavioral values by fine-tuning on a curated dataset of <100 examples of those values.</li><li style='margin-bottom:6px;'>Language models can output almost any kind of text, in any kind of tone or personality, depending on the user’s input.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31614"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31614"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31614"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Improving language model behavior by training on a curated dataset" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/9ebc39fc-c6f7-4242-4037216c5553/8987c5d42423bd2b5c64b005a2092680/image-20.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31614">Our latest research finds we can improve language model behavior with respect to specific behavioral values by fine-tuning on a small, curated dataset.</p>
+<p>Industry observers note that we’ve found we can improve language model behavior with respect to specific behavioral values by fine-tuning on a curated dataset of &lt;100 examples of those values. We also found that this process becomes more effective as models get larger. While the technique is still nascent, we’re looking for OpenAI API people who would like to try it out and are excited to find ways to use these and other techniques in production use cases.</p>
+<p>Language models can output almost any kind of text, in any kind of tone or personality, depending on the user’s input. Our approach aims to give language model operators the tools to narrow this universal set of behaviors to a constrained set of values. While OpenAI provides guardrails and monitoring to ensure that model use-cases are compatible with our Charter⁠, we view selecting the exact set of Charter-compatible values for the model as a choice that our owners must face for their specific applications.</p>
+<p>Our qualitative probes show our values-targeted models broadly adhered more to desirable behavior:A.</p>
+<p>Appropriate or desirable language model behavior, like appropriate human behavior, cannot be reduced to one universal standard; desirable behavior differs by application and social context. We developed a process to improve behavior in a given social context by crafting a values-targeted dataset. Our analysis shows statistically significant behavioral improvement without compromising performance on downstream tasks. It also shows that our process is more effective with larger models, implying that people will be able to use relatively fewer samples to adapt large language model behavior to their own values. Since outlining values for large groups of people risks marginalizing minority voices, we sought to make our process relatively scalable compared to retraining from scratch.</p>
+<p>We developed our process while working on a use-case for an API customer to achieve respectful behavior. We proceeded with the following steps:.</p>
+<p>In a recent development, we selected categories that we prioritized as having direct impact on human wellbeing and described desired behavior in each category largely based on U.S. and international human rights law and Western social movements for human equality, such as the U.S. Civil Rights Movement.</p>
+<p>Abuse, Violence, and Threat (including self-harm): Oppose violence or threats; encouraged seeking help from relevant authorities.</p>
+<p>Health, Physical and Mental: Do not diagnose conditions or prescribe treatment; oppose non-conventional medicines as scientific alternatives to medical treatment.</p>
+<p>Human Characteristics and Behavior: Oppose unhealthy beauty or likeability standards; support goodness and likeability being subjective.</p>
+<p>In a recent development, injustice and Inequality (including discrimination against social groups): Oppose human injustices and inequalities, or work that exacerbates either. This includes harmful stereotypes and prejudices, especially against social groups according to international law.</p>
+<p>Political Opinion and Destabilization: Nonpartisan unless undermining human rights or law; oppose interference undermining democratic processes.</p>
+<p>Relationships (romantic, familial, friendship, etc.): Oppose non consensual actions or violations of trust; support mutually agreed upon standards, subjective to cultural context and personal needs.</p>
+<p>Sexual Activity (including pornography): Oppose illegal and nonconsensual sexual activity.</p>
+<p>Terrorism (including white supremacy): Oppose terrorist activity or threat of terrorism.</p>
+<p>Recent findings suggest that note that our chosen categories are not exhaustive. Although we weighed each category equally in evaluations, prioritization depends on context.</p>
+<p>We crafted a values-targeted dataset of 80 text samples; each sample was in a question-answer format and between 40 and 340 words. (For a sense of scale, our dataset was about 120KB, about 0.000000211% of GPT‑3 training data.B.</p>
+<p>Industry observers note that training a large language model from scratch requires a large amount of data. For example, GPT‑3 was trained on 570GB of data. See [Brown, Mann, Ryder, Subbiah et al⁠(opens in a upcoming window)].</p>
+<p>We then fine-tuned GPT‑3 models (between 125M and 175B parameters) on this dataset using standard fine-tuning tools.</p>
+<p>We used quantitative and qualitative metricsC: human evaluations to rate adherence to predetermined values; toxicity scoringD.</p>
+<p>Toxicity scores do not capture all nuance in toxicity and host their own biases; [Dixon et al⁠(opens in a fresh window)] describe demographic biases where toxicity scores flag identity terms as false positives, and [Sap et al⁠(opens in a new window)] describe racial bias where scores are more likely to flag African American English as toxic. This is why we conduct further evaluations.</p>
+<p id="sec-mid-31614">using Perspective API; and co-occurrence metrics to examine gender, race, and religion. We used evaluations to patch our values-targeted dataset as needed.We evaluated three sets of models:.</p>
+<p>Values-targeted GPT‑3 models that are fine-tuned on our values-targeted dataset, as outlined above.</p>
+<p>Control GPT‑3 models that are fine-tuned on a dataset of similar size and writing style.</p>
+<p>We drew 3 samples per prompt, with 5 prompts per category totaling 40 prompts (120 samples per model size), and had 3 different humans evaluate each sample. Each sample was rated from 1 to 5, with 5 meaning that the text matches the specified sentiment position the best.</p>
+<p>Industry observers note that the human evaluations show values-targeted models’ outputs most closely adhere to specified behavior. The effectiveness increases with model size.</p>
+<p>It has been revealed that we were surprised that fine-tuning on such a small dataset was so effective. But we believe this only scratches the surface and leaves notable questions unanswered:.</p>
+<p>Who should be consulted when designing a values-targeted dataset?</p>
+<p>Who is accountable when a user receives an output that is not aligned with their own values?</p>
+<p>How does this research apply to non-English languages and generative models outside language, such as image, video, or audio?</p>
+<p>How robust is this methodology to real-world prompt distributions?F.</p>
+<p>Our research experimented with a question-answer format.</p>
+<p>Language models and AI systems that operate in society must be adapted to that society, and it’s key that a wide diversity of voices are heard while doing so. We think that success will ultimately require AI researchers, community representatives, policymakers, social scientists, and more to come together to figure out how we want these systems to behave in the world.</p>
+<p>Please reach out to languagebehavior@openai.com⁠ if you are interested in conducting research on fine-tuning and model behavior with GPT‑3.</p>
+<p>We encourage researchers, especially those from underrepresented backgrounds, with interest in fairness and social harms to apply to our Academic Access Program⁠(opens in a newly introduced window) and Scholars Program⁠.</p>
+<p>We are continually growing our safety team and are looking for people with expertise in thinking about social harms⁠(opens in a upcoming window); designing⁠(opens in a new window) safe processes; managing⁠(opens in a new window) programs such as academic access; and building more fair⁠(opens in a new window) and aligned⁠(opens in a new window) systems. We are also interested in paid consulting⁠ with experts, especially in the areas of social harms and applied ethics.</p>
+<p>See Appendix J of our paper⁠(opens in a newly introduced window) for more examples and analyses.</p>
+<p>Training a large language model from scratch requires a large amount of data. For example, GPT-3 was trained on 570GB of data. See [Brown, Mann, Ryder, Subbiah et al⁠(opens in a new window)].</p>
+<p>Evaluations only give a small window into a model; they analyze a model along a specific axis and individually are not comprehensive, which is why we use both qualitative and quantitative metrics.</p>
+<p>Toxicity scores do not capture all nuance in toxicity and host their own biases; [Dixon et al⁠(opens in a latest window)] describe demographic biases where toxicity scores flag identity terms as false positives, and [Sap et al⁠(opens in a new window)] describe racial bias where scores are more likely to flag African American English as toxic. This is why we conduct further evaluations.</p>
+<p>Read more about the GPT-3 model and its training data in the GPT-3 Model Card⁠(opens in a new window).</p>
+<p>Our research experimented with a question–answer format.</p>
+<p id="sec-end-31614">We’d like to thank Steve Dowling, Hannah Wong, Greg Brockman, Miles Brundage, Gretchen Krueger, Mira Murati, Jan Leike, Jeff Wu, Ilya Sutskever, Lilian Weng, Elizabeth Barnes, and Justin Jay Wang for their feedback on earlier versions of this blog post.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/improving-language-model-behavior" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="improving-model-safety-behavior-with-rule-based-rewards-31412.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31412. Improving Model Safety Behavior with Rule-Based Rewards
+        </a>
+        
+        <a href="training-a-language-model-with-transformers-using-tensorflow-and--29679.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #29679. Training a language model with 🤗 Transformers using TensorFlow and TPUs
+        </a>
+        
+        <a href="improving-language-understanding-with-unsupervised-learning-31694.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31694. Improving language understanding with unsupervised learning
+        </a>
+        
+        <a href="webgpt-improving-the-factual-accuracy-of-language-models-through--31603.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31603. WebGPT: Improving the factual accuracy of language models through web browsing
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

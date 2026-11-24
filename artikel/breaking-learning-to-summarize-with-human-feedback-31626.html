@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: Learning to summarize with human feedback</title>
+    <meta name="description" content="We’ve applied reinforcement learning from human feedback to train language models that are better at summarization. Our models generate summaries that are ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-learning-to-summarize-with-human-feedback-31626.html">
+    <meta property="og:title" content="Breaking: Learning to summarize with human feedback">
+    <meta property="og:description" content="We’ve applied reinforcement learning from human feedback to train language models that are better at summarization. Our models generate summaries that are ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3583c4ac-dfd4-4af1-d8fa819aea9b/57875fe437269844d643f77b9bffe84b/image-27.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-learning-to-summarize-with-human-feedback-31626.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: Learning to summarize with human feedback", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3583c4ac-dfd4-4af1-d8fa819aea9b/57875fe437269844d643f77b9bffe84b/image-27.webp?w=1600&h=900&fit=fill"], "datePublished": "2020-09-04T07:00:00", "dateModified": "2026-11-24T22:22:10.259566", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-learning-to-summarize-with-human-feedback-31626.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: Learning to summarize with human feedback</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 04 Sep 2020 &bull; ⏱️ 16 min read (3244 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve applied reinforcement learning from human feedback to train language models that are better at summarization.</li><li style='margin-bottom:6px;'>Our models generate summaries that are better than summaries from 10x larger models trained only with supervised learning.</li><li style='margin-bottom:6px;'>Large-scale language models are becoming increasingly capable on NLP tasks.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31626"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31626"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31626"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: Learning to summarize with human feedback" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3583c4ac-dfd4-4af1-d8fa819aea9b/57875fe437269844d643f77b9bffe84b/image-27.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31626">We’ve applied reinforcement learning from human feedback to train language models that are better at summarization.</p>
+<p>Our models generate summaries that are better than summaries from 10x larger models trained only with supervised learning. Even though we train our models on the Reddit TL;DR dataset, the same models transfer to generate good summaries of CNN/DailyMail news articles without any further fine-tuning. Our techniques are not specific to summarization; in the long run, our goal is to make aligning AI systems with human preferences a central component of AI research and deployment in many domains.</p>
+<p>Large-scale language models are becoming increasingly capable on NLP tasks. These models are usually trained with the objective of next word prediction on a dataset of human-written text. But this objective doesn’t capture exactly what we want; usually, we don’t want our models to imitate humans, we want them to give high-quality answers. This mismatch is clear when a model is trained to imitate low-quality human-written text, but it can also happen in more subtle ways. For example, a model trained to predict what a human would say might make up facts when it is unsure, or generate sentences reflecting harmful social bias, both failure modes that have been well-documented.3, 4, 5, 6.</p>
+<p>As part of our work on safety, we want to develop techniques that align our models’ objectives with the end behavior we really care about. As our models become more powerful, we believe aligning them with our goals will be very important to ensure they are beneficial for humans. In the short term, we wanted to test if human feedback techniques could help our models improve performance on useful tasks.</p>
+<p>In a recent development, we focused on English text summarization, as it’s a challenging problem where the notion of what makes a “good summary” is difficult to capture without human input. We apply our method primarily to an existing dataset1 of posts submitted to the social network RedditB together with human-written “TL;DRs,” which are short summaries written by the original poster.</p>
+<p>We first train a reward model via supervised learning to predict which summaries humans will prefer.A We then fine-tune a language model with reinforcement learning (RL) to produce summaries that score highly according to that reward model. We find that this significantly improves the quality of the summaries, as evaluated by humans, even on datasets very different from the one used for fine-tuning.</p>
+<p>Our approach follows directly from our previous work⁠ on learning from human feedback.7 There has also been other work on using human feedback to train summarization models.8 We push the technique further by scaling to larger models, collecting more feedback data, closely monitoring researcher-labeler agreement, and providing frequent feedback to labelers. Human feedback has also been used to train models in several other domains, such as dialogue,9, 10, 11 semantic parsing,12 translation,13, 14 story15 and review16 generation, evidence extraction,17 and more traditional RL tasks.18, 19.</p>
+<p>We evaluated several different summarization models—some pre-trained on a broad distribution of text from the internet, some fine-tuned via supervised learning to predict TL;DRs, and some fine-tuned using human feedback.D To evaluate each model, we had it summarize posts from the validation set and asked humans to compare their summaries to the human-written TL;DR. The results are shown in Figure 1⁠.</p>
+<p>Recent findings suggest that we found that RL fine-tuning with human feedback had a very large effect on quality compared to both supervised fine-tuning and scaling up model size. In particular, our 1.3 billion parameter (1.3B) model trained with human feedback outperforms our 12B model trained only with supervised learning. Summaries from both our 1.3B and 6.7B human feedback models are preferred by our labelers to the original human-written TL;DRs in the dataset.E.</p>
+<p>People make different trade-offs when writing summaries, including between conciseness and coverage of the original text; depending on the purpose of the summary, different summary lengths might be preferred. Our labelers tended to prefer longer summaries, so our models adapted to that preference and converged to the longest allowable length. Controlling for length reduced human preferences for our 6.7B model’s summaries from 70% to 65%, explaining a minority of our gains.F.</p>
+<p>To test our models’ generalization, we also applied them directly to the popular CNN/DM news dataset.2 These articles are more than twice as long as Reddit posts and are written in a very different style. Our models have seen news articles during pre-training, but all of our human data and RL fine-tuning was on the Reddit TL;DR dataset.</p>
+<p>This time we evaluated our models by asking our labelers to rate them on a scale from 1–7.G We discovered that our human feedback models transfer to generate excellent short summaries of news articles without any training. When controlling for summary length, our 6.7B human feedback model generates summaries that are rated higher than the CNN/DM reference summaries written by humans. This suggests that our human feedback models have learned something more general about how to summarize text, and are not specific to Reddit posts.</p>
+<p>A diagram of our method, which is similar to the one used in our previous work⁠(opens in a newly introduced window).</p>
+<p>Our core method consists of four steps: training an initial summarization model, assembling a dataset of human comparisons between summaries, training a reward model to predict the human-preferred summary, and then fine-tuning our summarization models with RL to get a high reward.</p>
+<p>We trained several supervised baselines by starting from GPT‑style transformer models trained on text from the Internet,20⁠ and fine-tuning them to predict the human-written TL;DR via supervised learning. We mainly use models with 1.3 and 6.7 billion parameters. As a sanity check, we confirmed that this training procedure led to competitive resultsH on the CNN/DM dataset.</p>
+<p>Sources indicate that we then collected a dataset of human quality judgments. For each judgment, a human compares two summaries of a given post and picks the one they think is better.I We use this data to train a reward model that maps a (post, summary) pair to a reward r. The reward model is trained to predict which summary a human will prefer, using the rewards as logits.</p>
+<p>Finally, we optimize the policy against the reward model using RL. We use PPO⁠ with 1 million episodes in total, where each episode consists of the policy summarizing a single article and then receiving a reward r. We include a KL penalty that incentivizes the policy to remain close to the supervised initialization.</p>
+<p>Any training procedure that uses human feedback is directly influenced by the actual humans labeling the data. In our previous work on fine-tuning language models from human preferences,7⁠ our labelers often gave high ratings to summaries we thought were average, which was reflected in the quality of our trained models.</p>
+<p>In response, in this project we invested heavily in ensuring high data quality. We hired about 80 contractors using third-party vendor sites,J and paid them an hourly wage regardless of the number of summaries evaluated.K Hiring contractors rather than relying on crowdsourcing websites allowed us to maintain a hands-on relationship with labelers: we created an onboarding process, developed a website with a customizable labeler interface, answered questions in a shared chat room, and had one-on-one video calls with labelers. We also made sure to clearly communicate our definition of summary quality, after spending significant time reading summaries ourselves, and we carefully monitored agreement rates between us and labelers throughout the project.</p>
+<p>Recent findings suggest that optimizing against our reward model is supposed to make our policy align with human preferences. But the reward model is only a proxy for human preferences, as it only sees a small amount of comparison data from a narrow distribution of summaries. While the reward model performs well on the kinds of summaries it was trained on, we wanted to know how much we could optimize against it until it started giving useless evaluations.</p>
+<p>Recent findings suggest that we trained policies at different “optimization strengths” against the reward model, and asked our labelers to evaluate the summaries from these models. We did this by varying the KL coefficient, which trades off the incentive to get a higher reward against the incentive to remain close to the initial supervised policy. We found the best samples had roughly the same predicted reward as the 99th percentile of reference summaries from the dataset. Eventually optimizing the reward model actually makes things worse.</p>
+<p>In a recent development, if we have a well-defined notion of the desired behavior for a model, our method of training from human feedback allows us to optimize for this behavior. However, this is not a method for determining what the desired model behavior should be. Deciding what makes a good summary is fairly straightforward, but doing this for tasks with more complex objectives, where different humans might disagree on the correct model behavior, will require significant care. In these cases, it is likely not appropriate to use researcher labels as the “gold standard”; rather, individuals from groups that will be impacted by the technology should be included in the process to define “good” behavior, and hired as labelers to reinforce this behavior in the model.</p>
+<p>In a recent development, we trained on the Reddit TL;DR dataset1⁠ because the summarization task is significantly more challenging than on CNN/DM. However, since the dataset consists of user-submitted posts with minimal moderation, they sometimes contain content that is offensive or reflects harmful social biases. This means our models can generate biased or offensive summaries, as they have been trained to summarize such content.</p>
+<p>Sources indicate that part of our success involves scaling up our reward model and policy size. This requires a large amount of compute, which is not available to all researchers: notably, fine-tuning our 6.7B model with RL required about 320 GPU-days. However, since smaller models trained with human feedback can exceed the performance of much larger models, our procedure is more cost-effective than simply scaling up for training high-quality models on specific tasks.</p>
+<p>Though we outperform the human-written reference summaries on TL;DR, our models have likely not reached human-level performance, as the reference summary baselines for TL;DR and CNN/DM are not the highest possible quality. When evaluating our model’s TL;DR summaries on a 7-point scale along several axes of quality (accuracy, coverage, coherence, and overall), labelers find our models can still generate inaccurate summaries, and give a perfect overall score 45% of the time.L For cost reasons, we also do not directly compare to using a similar budget to collect high-quality demonstrations, and training on those using standard supervised fine-tuning.</p>
+<p>Sources indicate that we’re interested in scaling human feedback to tasks where humans can’t easily evaluate the quality of model outputs. For example, we might want our models to answer questions that would take humans a lot of research to verify; getting enough human evaluations to train our models this way would take a long time. One approach to tackle this problem is to give humans tools to help them evaluate more quickly and accurately. If these tools use ML, we can also improve them with human feedback, which could allow humans to accurately evaluate model outputs for increasingly complicated tasks.23.</p>
+<p>In a recent development, in addition to tackling harder problems, we’re also exploring different types of feedback beyond binary comparisons: we can ask humans to provide demonstrations, edit model outputs to make them better, or give explanations as to why one model output is better than another. We’d like to figure out which kinds of feedback are most effective for training models that are aligned with human preferences.</p>
+<p>If you are interested in working on these research questions, we’re hiring⁠!</p>
+<p>For training, we use the Reddit TL;DR dataset instead of the more popular CNN/DM dataset because simple copying baselines perform better than the human-written reference summaries on CNN/DM, which is not the case for TL;DR (see Appendix D of our paper). We performed a newly introduced web crawl to increase the TL;DR dataset size, required summaries to be between 24 and 48 tokens, and performed some other cleaning and filtering.</p>
+<p>We hire human labelers to judge summary quality, and implement quality control to ensure that labeler judgments agree with our own. We describe our human data collection procedure below.</p>
+<p>Interestingly, we found that human evaluators preferred the Lead-3 baseline (taking the first 3 sentences of the article) to the dataset’s reference summaries, and we confirmed this ourselves.</p>
+<p>We generate all of our samples at temperature 0, which we found humans preferred most.</p>
+<p id="sec-mid-31626">While we use human-written TL;DRs as our main point of comparison, they don’t always represent optimal human performance; they are sometimes intended to be funny or to summarize only a part of the post, and their grammar and style are all over the map.</p>
+<p>We control by training a logistic regression model to predict the preferred summary given only the policy ID and the log ratio of the lengths of the summaries. Then, we report the regression coefficients on each policy ID, corresponding to a length ratio of 1 with the reference summaries.</p>
+<p>We took this approach because it is hard to directly compare our TL;DR-trained models to models trained on CNN/DM; the CNN/DM summaries are much longer and written in bullet-point form.</p>
+<p>In terms of ROUGE results on CNN/DM, our 6.7B supervised models are a bit worse than T5 , but a bit better than state-of-the-art models from mid-2019.</p>
+<p>Our main models are trained on about 65K comparisons, though we achieve good results with as few as 8K comparisons.</p>
+<p>In a recent development, specifically, we use Upwork, Scale, and Lionbridge. Our contractors have a range of ages, genders, and educational backgrounds, and are mostly American or Filipino (see Appendix C of our paper for demographic data).</p>
+<p>Industry observers note that our criteria for hiring contractors were: (1) they were willing to do the task, and (2) they passed a minimum threshold of speed and agreement with researcher labels. We paid all our contractors at least $15/hr.</p>
+<p>This is impressive relative to the TL;DR reference summaries, which get a perfect overall score 23% of the time, but indicates there is still room for improvement.</p>
+<p>Völske, M., Potthast, M., Syed, S., &amp; Stein, B. (2017). “TL; DR: Mining reddit to learn automatic summarization⁠(opens in a latest window).” In Proceedings of the Workshop on New Frontiers in Summarization 2017.</p>
+<p>Hermann, K. M., Kocisky, T., Grefenstette, E., Espeholt, L., Kay, W., Suleyman, M., &amp; Blunsom, P. (2015). ” Teaching machines to read and comprehend⁠(opens in a latest window).” In Advances in neural information processing systems 2015.</p>
+<p>Maynez, J., Narayan, S., Bohnet, B., &amp; McDonald, R. (2020). “On Faithfulness and Factuality in Abstractive Summarization.⁠(opens in a latest window).” arXiv preprint.</p>
+<p>Recent findings suggest that sheng, E., Chang, K. W., Natarajan, P., &amp; Peng, N. (2019). “The woman worked as a babysitter: On biases in language generation⁠(opens in a new window).” arXiv preprint.</p>
+<p>It has been revealed that bordia, S., &amp; Bowman, S. R. (2019). “Identifying and reducing gender bias in word-level language models⁠(opens in a latest window).” arXiv preprint.</p>
+<p>Nadeem, M., Bethke, A., &amp; Reddy, S. (2020). “StereoSet: Measuring stereotypical bias in pretrained language models⁠(opens in a fresh window).” arXiv preprint.</p>
+<p>Ziegler, D. M., Stiennon, N., Wu, J., Brown, T. B., Radford, A., Amodei, D., Christiano, P., &amp; Irving, G. (2019). “Fine-tuning language models from human preferences⁠(opens in a latest window).” arXiv preprint.</p>
+<p>In a recent development, böhm, F., Gao, Y., Meyer, C. M., Shapira, O., Dagan, I., &amp; Gurevych, I. (2019). “Better rewards yield better summaries: Learning to summarise without references⁠(opens in a latest window).” arXiv preprint.</p>
+<p>Recent findings suggest that jaques, N., Ghandeharioun, A., Shen, J. H., Ferguson, C., Lapedriza, A., Jones, N., Gu, S., &amp; Picard, R. (2019). “Way off-policy batch deep reinforcement learning of implicit human preferences in dialog⁠(opens in a new window).” arXiv preprint.</p>
+<p>Yi, S., Goel, R., Khatri, C., Cervone, A., Chung, T., Hedayatnia, B., ... &amp; Hakkani-Tur, D. (2019). “Towards coherent and engaging spoken dialog response generation using automatic conversation evaluators⁠(opens in a new window).” arXiv preprint.</p>
+<p>Industry observers note that hancock, B., Bordes, A., Mazare, P. E., &amp; Weston, J. (2019). “Learning from dialogue after deployment: Feed yourself, chatbot!⁠(opens in a new window).” arXiv preprint.</p>
+<p>Lawrence, C., &amp; Riezler, S. (2018). “Improving a neural semantic parser by counterfactual learning from human bandit feedback⁠(opens in a upcoming window).” arXiv preprint.</p>
+<p>According to recent reports, kreutzer, J., Khadivi, S., Matusov, E., &amp; Riezler, S. (2018). “Can Neural Machine Translation be Improved with User Feedback?⁠(opens in a newly introduced window).” arXiv preprint.</p>
+<p>Bahdanau, D., Brakel, P., Xu, K., Goyal, A., Lowe, R., Pineau, J., ... &amp; Bengio, Y. (2016). “An actor-critic algorithm for sequence prediction⁠(opens in a new window).” arXiv preprint.</p>
+<p>Industry observers note that zhou, W., &amp; Xu, K. (2020). “Learning to Compare for Better Training and Evaluation of Open Domain Natural Language Generation Models⁠(opens in a upcoming window).” In AAAI 2020.</p>
+<p>Cho, W., &amp; Zhang, P., &amp; Zhang, Y., &amp; Li, X., &amp; Galley, M., &amp; Brockett, C., &amp; Wang, M., &amp; Gao, J. (2018). “Towards coherent and cohesive long-form text generation.⁠(opens in a newly introduced window)” arXiv preprint.</p>
+<p>According to recent reports, perez, E., &amp; Karamcheti, S., &amp; Fergus, R., &amp; Weston, J., &amp; Kiela, D., &amp; Cho, K. (2019). ” Finding generalizable eevidence by learning to convince Q&amp;A models.⁠(opens in a newly introduced window)” arXiv preprint.</p>
+<p>Sources indicate that christiano, P. F., Leike, J., Brown, T., Martic, M., Legg, S., &amp; Amodei, D. (2017). “Deep reinforcement learning from human preferences⁠(opens in a fresh window).” In Advances in Neural Information Processing Systems 2017.</p>
+<p>Ibarz, B., Leike, J., Pohlen, T., Irving, G., Legg, S., &amp; Amodei, D. (2018). “Reward learning from human preferences and demonstrations in Atari⁠(opens in a newly introduced window).” In Advances in Neural Information Processing Systems 2018.</p>
+<p>In a recent development, brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., ... &amp; Agarwal, S. (2020). ” Language models are few-shot learners⁠(opens in a latest window).” arXiv preprint.</p>
+<p>Raffel, C., Shazeer, N., Roberts, A., Lee, K., Narang, S., Matena, M., ... &amp; Liu, P. J. (2019). ” Exploring the limits of transfer learning with a unified text-to-text transformer⁠(opens in a new window).” arXiv preprint.</p>
+<p>Recent findings suggest that zhang, Y., Li, D., Wang, Y., Fang, Y., &amp; Xiao, W. (2019). ” Exploring the limits of transfer learning with a unified text-to-text transformer⁠(opens in a fresh window).” In Applied Sciences.</p>
+<p>Christiano, P., Shlegeris, B., &amp; Amodei, D. (2018). ” Supervising strong learners by amplifying weak experts⁠(opens in a fresh window).” arXiv preprint.</p>
+<p id="sec-end-31626">It has been revealed that we’d like to thank the following people who gave feedback on various iterations of the blog post: Douwe Kiela, Zach Lipton, Alex Irpan, Jack Clark, Jacob Hilton, Raul Puri, Miles Brundage, Greg Brockman, Ilya Sutskever, Kelly Sims, Wojciech Kryscinski, and Dzimitry Bahdanau. We’d also like to thank Justin Jay Wang for driving the blog post design, Ashley Pilipiszyn for editing, Alec Radford and Dario Amodei for guidance on the project, Shan Carter for help designing the main diagram, Gretchen Krueger for co-writing the model card, Beth Barnes for help with labeler hiring and general encouragement, and many other people at OpenAI for training our large pre-trained models, supporting us through computing infrastructure improvements and maintenance, and writing fast GPU kernels. Finally, we’d like to thank all of our contractors for providing the data that was essential for training the models in this post.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/learning-to-summarize-with-human-feedback" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="illustrating-reinforcement-learning-from-human-feedback-rlhf-29760.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #29760. Illustrating Reinforcement Learning from Human Feedback (RLHF)
+        </a>
+        
+        <a href="learning-from-human-preferences-31742.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31742. Learning from human preferences
+        </a>
+        
+        <a href="gathering-human-feedback-31735.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31735. Gathering human feedback
+        </a>
+        
+        <a href="summarizing-books-with-human-feedback-31608.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31608. Summarizing books with human feedback
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Neural MMO: A massively multiagent game environment</title>
+    <meta name="description" content="Industry observers note that we’re releasing a Neural MMO⁠(opens in a newly introduced window), a massively multiagent game environment for reinforcement l">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-neural-mmo-a-massively-multiagent-game-environment-31665.html">
+    <meta property="og:title" content="Tech Report: Neural MMO: A massively multiagent game environment">
+    <meta property="og:description" content="Industry observers note that we’re releasing a Neural MMO⁠(opens in a newly introduced window), a massively multiagent game environment for reinforcement l">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/260e0a3f-c0ad-4f1a-872a3b988dd5/0108cb3658e4c62d1f102f00c3ed631b/neural-mmo.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-neural-mmo-a-massively-multiagent-game-environment-31665.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Neural MMO: A massively multiagent game environment", "image": ["https://images.ctfassets.net/kftzwdyauwt9/260e0a3f-c0ad-4f1a-872a3b988dd5/0108cb3658e4c62d1f102f00c3ed631b/neural-mmo.jpg?w=1600&h=900&fit=fill"], "datePublished": "2019-03-04T08:00:00", "dateModified": "2026-11-24T22:22:26.791505", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-neural-mmo-a-massively-multiagent-game-environment-31665.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Neural MMO: A massively multiagent game environment</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 04 Mar 2019 &bull; ⏱️ 6 min read (1173 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Industry observers note that we’re releasing a Neural MMO⁠(opens in a newly introduced window), a massively multiagent game environment for reinforcement learning agents.</li><li style='margin-bottom:6px;'>Sources indicate that in recent years, multiagent settings have become an effective platform⁠(opens in a fresh window) for⁠(opens in a new window) deep⁠(opens in a new window) reinforcement⁠(opens in a new window) learning⁠(opens in a new window) research⁠(opens in a new window).</li><li style='margin-bottom:6px;'>To address these challenges, we built our Neural MMO to meet the following criteria:.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31665"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31665"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31665"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Neural MMO: A massively multiagent game environment" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/260e0a3f-c0ad-4f1a-872a3b988dd5/0108cb3658e4c62d1f102f00c3ed631b/neural-mmo.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31665">Industry observers note that we’re releasing a Neural MMO⁠(opens in a newly introduced window), a massively multiagent game environment for reinforcement learning agents. Our platform supports a large, variable number of agents within a persistent and open-ended task. The inclusion of many agents and species leads to better exploration, divergent niche formation, and greater overall competence.</p>
+<p>Sources indicate that in recent years, multiagent settings have become an effective platform⁠(opens in a fresh window) for⁠(opens in a new window) deep⁠(opens in a new window) reinforcement⁠(opens in a new window) learning⁠(opens in a new window) research⁠(opens in a new window). Despite this progress, there are still two main challenges for multiagent reinforcement learning. We need to create open-ended tasks with a high complexity ceiling: current environments are either complex but too⁠ narrow⁠(opens in a new window) or open-ended but too⁠(opens in a new window) simple⁠(opens in a new window). Properties such as persistence and large population scale are key, but we also need more benchmark environments to quantify learning progress in the presence of large population scales and persistence. The game genre of Massively Multiplayer Online Games (MMOs) simulates a large ecosystem of a variable number of players competing in persistent and extensive environments.</p>
+<p>To address these challenges, we built our Neural MMO to meet the following criteria:.</p>
+<p>Persistence: Agents learn concurrently in the presence of other learning agents with no environment resets. Strategies must consider long time horizons and adapt to potentially rapid changes in the behaviors of other agents.</p>
+<p>It has been revealed that scale: The environment supports a large and variable number of entities. Our experiments consider up to 100M lifetimes of 128 concurrent agents in each of 100 concurrent servers.</p>
+<p>Efficiency: The computational barrier to entry is low. We can train effective policies on a single desktop CPU.</p>
+<p>Industry observers note that expansion: Similarily to⁠(opens in a new window) existing⁠(opens in a new window) MMOs⁠(opens in a new window), our Neural MMO is designed to upgrade with new content. Current core features include procedural generation of tile-based terrain, a food and water foraging system, and a strategic combat system. There is an opportunity for open-source driven expansion in the future.</p>
+<p>Players (agents) may join any available server (environment), each containing an automatically generated tile-based game map of configurable size. Some tiles, such as food-bearing forest tiles and grass tiles, are traversable. Others, such as water and solid stone, are not. Agents spawn at a random location along the edges of the environment. They must obtain food and water, and avoid combat damage from other agents, in order to sustain their health. Stepping on a forest tile or next to a water tile refills a portion of the agent’s food or water supply, respectively. However, forest tiles have a limited supply of food, which regenerates slowly over time. This means that agents must compete for food tiles while periodically refilling their water supply from infinite water tiles. Players engage in combat using three combat styles, denoted Melee, Range, and Mage for flavor.</p>
+<p>It has been revealed that input: Agents observe a square crop of tiles centered on their current position. This includes tile terrain types and the select properties (health, food, water, and position) of occupying agents.</p>
+<p>Output: Agents output action choices for the next game tick (timestep). Actions consist of one movement and one attack.</p>
+<p id="sec-mid-31665">As a simple baseline, we train a small, fully connected architecture using vanilla policy gradients⁠(opens in a fresh window), with a value function baseline and reward discounting as the only enhancements. Instead of rewarding agents for achieving particular objectives, agents optimize only for their lifetime (trajectory length): they receive reward 1 for each tick of their lifetime. We convert variable length observations, such as the list of surrounding players, into a single length vector by computing the maximum across all players (OpenAI Five⁠ also utilized this trick). The source release includes our full distributed training implementation, which is based on PyTorch⁠(opens in a new window) and Ray⁠(opens in a new window).</p>
+<p>According to recent reports, agents’ policies are sampled uniformly from a number of populations—agents in different populations share architectures, but only agents in the same population share weights. Initial experiments show that agent competence scales with increasing multiagent interaction. Increasing the maximum number of concurrent players magnifies exploration; increasing the number of populations magnifies niche formation—that is, the tendency of populations to spread out and forage within different parts of the map.</p>
+<p>There is no standard procedure among MMOs for evaluating relative player competence across multiple servers. However, MMO servers sometimes undergo merges where the player bases from multiple servers are placed within a single server. We implement “tournament” style evaluation by merging the player bases trained in different servers. This allows us to directly compare the policies learned in different experiment settings. We vary test time scale and find that agents trained in larger settings consistently outperform agents trained in smaller settings.</p>
+<p>According to recent reports, in the natural world, competition among animals can incentivize them to spread out to avoid conflict. We observe that map coverage increases as the number of concurrent agents increases. Agents learn to explore only because the presence of other agents provides a natural incentive for doing so.</p>
+<p>Sources indicate that given a sufficiently large and resource-rich environment, we found different populations of agents separated across the map to avoid competing with others as the populations increased. As entities cannot out-compete other agents of their own population (i.e., agents with whom they share weights), they tend to seek areas of the map that contain enough resources to sustain their population. Similar effects were also independently observed in concurrent multiagent research by DeepMind⁠(opens in a fresh window).</p>
+<p>According to recent reports, we visualize agent-agent dependencies by fixing an agent at the center of a hypothetical map crop. For each position visible to that agent, we show what the value function would be if there were a second agent at that position. We find that agents learn policies dependent on those of other agents, in both the foraging and combat environments. Agents learn “bull’s eye” avoidance maps to begin foraging more effectively after only a few minutes of training. As agents learn the combat mechanics of the environment, they begin to appropriately value effective engagement ranges and angles of approach.</p>
+<p>Recent findings suggest that our Neural MMO resolves two key limitations of previous game-based environments, but there are still many left unsolved. This Neural MMO strikes a middle ground between environment⁠ complexity⁠(opens in a new window) and population⁠(opens in a new window) scale⁠(opens in a new window). We’ve designed this environment with open-source expansion in mind and for the research community to build upon.</p>
+<p>If you are excited about conducting research on multiagent systems, consider joining⁠ OpenAI.</p>
+<p>Thanks to Clare Zhu for her substantial work on the 3D client.</p>
+<p id="sec-end-31665">We also thank the following for feedback on drafts of this post: Greg Brockman, Ilya Sutskever, Jack Clark, Ashley Pilipiszyn, Ryan Lowe, Julian Togelius, Joel Liebo, Cinjon Resnick.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/neural-mmo" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-learning-sparse-neural-networks-through-l-regularizat-31720.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31720. Tech Report: Learning sparse neural networks through L₀ regularization
+        </a>
+        
+        <a href="weight-normalization-a-simple-reparameterization-to-accelerate-tr-31787.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31787. Weight normalization: A simple reparameterization to accelerate training of deep neural networks
+        </a>
+        
+        <a href="tech-report-infrastructure-for-deep-learning-31775.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31775. Tech Report: Infrastructure for deep learning
+        </a>
+        
+        <a href="extensions-and-limitations-of-the-neural-gpu-31771.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31771. Extensions and limitations of the neural GPU
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

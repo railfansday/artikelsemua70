@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: Lessons learned on language model safety and misuse</title>
+    <meta name="description" content="We describe our latest thinking in the hope of helping other AI developers address safety and misuse of deployed models. It has been revealed that the depl">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-lessons-learned-on-language-model-safety-and-misuse-31597.html">
+    <meta property="og:title" content="Breaking: Lessons learned on language model safety and misuse">
+    <meta property="og:description" content="We describe our latest thinking in the hope of helping other AI developers address safety and misuse of deployed models. It has been revealed that the depl">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/e79d5812-3f9d-4a68-fb55442ce63e/97766c4b0f3e6ab5ca5b08d085e1e26c/image-11.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-lessons-learned-on-language-model-safety-and-misuse-31597.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: Lessons learned on language model safety and misuse", "image": ["https://images.ctfassets.net/kftzwdyauwt9/e79d5812-3f9d-4a68-fb55442ce63e/97766c4b0f3e6ab5ca5b08d085e1e26c/image-11.webp?w=1600&h=900&fit=fill"], "datePublished": "2022-03-03T08:00:00", "dateModified": "2026-11-24T22:21:59.757087", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-lessons-learned-on-language-model-safety-and-misuse-31597.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: Lessons learned on language model safety and misuse</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 03 Mar 2022 &bull; ⏱️ 13 min read (2669 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We describe our latest thinking in the hope of helping other AI developers address safety and misuse of deployed models.</li><li style='margin-bottom:6px;'>It has been revealed that the deployment of powerful AI systems has enriched our understanding of safety and misuse far more than would have been possible through research alone.</li><li style='margin-bottom:6px;'>Over the past two years, we’ve learned a lot about how language models can be used and abused—insights we couldn’t have gained without the experience of real-world deployment.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31597"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31597"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31597"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: Lessons learned on language model safety and misuse" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/e79d5812-3f9d-4a68-fb55442ce63e/97766c4b0f3e6ab5ca5b08d085e1e26c/image-11.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31597">We describe our latest thinking in the hope of helping other AI developers address safety and misuse of deployed models.</p>
+<p>It has been revealed that the deployment of powerful AI systems has enriched our understanding of safety and misuse far more than would have been possible through research alone. Notably: API-based language model misuse often comes in different forms than we feared most; we have identified limitations in existing language model evaluations that we are addressing with novel benchmarks and classifiers; and basic safety research offers significant benefits for the commercial utility of AI systems.</p>
+<p>Over the past two years, we’ve learned a lot about how language models can be used and abused—insights we couldn’t have gained without the experience of real-world deployment. In June 2020, we began giving access to developers and researchers to the OpenAI API⁠, an interface for accessing and building applications on top of fresh AI models developed by OpenAI. Deploying GPT‑3, Codex, and other models in a way that reduces risks of harm has posed various technical and policy challenges.</p>
+<p>Large language models are now capable of performing a very wide range of tasks⁠(opens in a new window), often out of the box. Their risk profiles, potential applications, and wider effects on society remain⁠(opens in a new window) poorly⁠(opens in a new window) understood⁠(opens in a new window). As a result, our deployment approach emphasizes continuous iteration, and makes use of the following strategies aimed at maximizing the benefits of deployment while reducing associated risks:.</p>
+<p>Pre-deployment risk analysis, leveraging a growing set of safety evaluations and red teaming tools (e.g., we checked our InstructGPT for any safety degradations using the evaluations discussed below⁠).</p>
+<p>Starting with a small user base (e.g., both GPT‑3 and our InstructGPT⁠ series began as private betas).</p>
+<p>Studying the results of pilots of novel use cases (e.g., exploring the conditions under which we could safely enable longform content generation, working with a small number of customers).</p>
+<p>Implementing processes that help keep a pulse on usage (e.g., review of use cases, token quotas, and rate limits).</p>
+<p>Conducting detailed retrospective reviews (e.g., of safety incidents and major deployments).</p>
+<p>Recent findings suggest that there is no silver bullet for responsible deployment, so we try to learn about and address our models’ limitations, and potential avenues for misuse, at every stage of development and deployment. This approach allows us to learn as much as we can about safety and policy issues at small scale and incorporate those insights prior to launching larger-scale deployments.</p>
+<p>While not exhaustive, some areas where we’ve invested so far includeA:.</p>
+<p>Pre-training data⁠(opens in a latest window) curation and filtering.</p>
+<p>Fine-tuning⁠ models to better follow instructions⁠.</p>
+<p>Risk analysis of potential deployments.</p>
+<p>Providing detailed user documentation⁠(opens in a new window).</p>
+<p>Building tools⁠(opens in a new window) to screen harmful model outputs.</p>
+<p>Reviewing use cases against our policies⁠(opens in a new window).</p>
+<p>Monitoring for signs of misuse⁠.</p>
+<p>Studying the impacts of our models⁠.</p>
+<p>Since each stage of intervention has limitations, a holistic approach is necessary.</p>
+<p>Industry observers note that there are areas where we could have done more and where we still have room for improvement. For example, when we first worked on GPT‑3, we viewed it as an internal research artifact rather than a production system and were not as aggressive in filtering out toxic training data as we might have otherwise been. We have invested more in researching and removing such material for subsequent models. We have taken longer to address some instances of misuse in cases where we did not have clear policies on the subject, and have gotten better at iterating on those policies. And we continue to iterate towards a package of safety requirements that is maximally effective in addressing risks, while also being clearly communicated to developers and minimizing excessive friction.</p>
+<p>Still, we believe that our approach has enabled us to measure and reduce various types of harms from language model use compared to a more hands-off approach, while at the same time enabling a wide range of scholarly, artistic, and commercial applications of our models.B.</p>
+<p>OpenAI has been active in researching the risks of AI misuse since our early work on the malicious use of AI⁠(opens in a new window) in 2018 and on GPT‑2⁠(opens in a new window) in 2019, and we have paid particular attention to AI systems empowering influence operations. We have worked with⁠(opens in a new window) external experts to develop proofs of concept⁠(opens in a new window) and promoted careful⁠(opens in a new window) analysis⁠(opens in a new window) of such risks by third parties. We remain committed to addressing risks associated with language model-enabled influence operations and recently co-organized a workshop on the subject.C.</p>
+<p>Yet we have detected and stopped hundreds of actors attempting to misuse GPT‑3 for a much wider range of purposes than producing disinformation for influence operations, including in ways that we either didn’t anticipate or which we anticipated but didn’t expect to be so prevalent.D Our use case guidelines⁠(opens in a new window), content guidelines⁠(opens in a new window), and internal detection and response infrastructure were initially oriented towards risks that we anticipated based on internal and external research, such as generation of misleading political content with GPT‑3 or generation of malware with Codex. Our detection and response efforts have evolved over time in response to real cases of misuse encountered “in the wild” that didn’t feature as prominently as influence operations in our initial risk assessments. Examples include spam promotions for dubious medical products and roleplaying of racist fantasies.</p>
+<p id="sec-mid-31597">To support the study of language model misuse and mitigation thereof, we are actively exploring opportunities to share statistics on safety incidents this year, in order to concretize discussions about language model misuse.</p>
+<p>According to recent reports, many aspects of language models’ risks and impacts remain hard to measure and therefore hard to monitor, minimize, and disclose in an accountable way. We have made active use of existing academic benchmarks for language model evaluation and are eager to continue building on external work, but we have also have found that existing benchmark datasets are often not reflective of the safety and misuse risks we see in practice.E.</p>
+<p>According to recent reports, such limitations reflect the fact that academic datasets are seldom created for the explicit purpose of informing production use of language models, and do not benefit from the experience gained from deploying such models at scale. As a result, we’ve been developing newly introduced evaluation datasets and frameworks for measuring the safety of our models, which we plan to release soon. Specifically, we have developed new evaluation metrics for measuring toxicity in model outputs and have also developed in-house classifiers for detecting content that violates our content policy⁠(opens in a new window), such as erotic content, hate speech, violence, harassment, and self-harm. Both of these in turn have also been leveraged for improving our pre-training dataF—specifically, by using the classifiers to filter out content and the evaluation metrics to measure the effects of dataset interventions.</p>
+<p>Reliably classifying individual model outputs along various dimensions is difficult, and measuring their social impact at the scale of the OpenAI API is even harder. We have conducted several internal studies in order to build an institutional muscle for such measurement, but these have often raised more questions than answers.</p>
+<p>It has been revealed that we are particularly interested in better understanding the economic impact of our models and the distribution of those impacts. We have good reason to believe that the labor market impacts from the deployment of current models may be significant in absolute terms already, and that they will grow as the capabilities and reach of our models grow. We have learned of a variety of local effects to date, including massive productivity improvements on existing tasks performed by individuals like copywriting and summarization (sometimes contributing to job displacement and creation), as well as cases where the API unlocked new applications that were previously infeasible, such as synthesis of large-scale qualitative feedback⁠. But we lack a good understanding of the net effects.</p>
+<p>Industry observers note that we believe that it is important for those developing and deploying powerful AI technologies to address both the positive and negative effects of their work head-on. We discuss some steps in that direction in the concluding section of this post.</p>
+<p>It has been revealed that in our Charter⁠, published in 2018, we say that we “are concerned about late-stage AGI development becoming a competitive race without time for adequate safety precautions.” We then published⁠ a detailed analysis of competitive AI development, and we have closely followed subsequent⁠(opens in a upcoming window) research. At the same time, deploying AI systems via the OpenAI API has also deepened our understanding of the synergies between safety and utility.</p>
+<p>For example, developers overwhelmingly prefer our InstructGPT models—which are fine-tuned to follow user intentions G — over the base GPT‑3 models. Notably, however, the InstructGPT models were not originally motivated by commercial considerations, but rather were aimed at making progress on long-termalignment problems⁠. In practical terms, this means that customers, perhaps not surprisingly, much prefer models that stay on task and understand the user’s intent, and models that are less likely to produce outputs that are harmful or incorrect.H Other fundamental research, such as our work onleveraging information⁠retrieved from the Internet in order to answer questions more truthfully, also has potential to improve the commercial utility of AI systems.I These synergies will not always occur. For example, more powerful systems will often take more time to evaluate and align effectively, foreclosing immediate opportunities for profit. And a user’s utility and that of society may not be aligned due to negative externalities—consider fully automated copywriting, which can be beneficial for content creators but bad for the information ecosystem as a whole.</p>
+<p>It is encouraging to see cases of strong synergy between safety and utility, but we are committed to investing in safety and policy research even when they trade off with commercial utility.</p>
+<p>Each of the lessons above raises new questions of its own. What kinds of safety incidents might we still be failing to detect and anticipate? How can we better measure risks and impacts? How can we continue to improve both the safety and utility of our models, and navigate tradeoffs between these two when they do arise?</p>
+<p>It has been revealed that we are actively discussing many of these issues with other companies deploying language models. But we also know that no organization or set of organizations has all the answers, and we would like to highlight several ways that readers can get more involved in understanding and shaping our deployment of state of the art AI systems.</p>
+<p>In a recent development, first, gaining first-hand experience interacting with state of the art AI systems is invaluable for understanding their capabilities and implications. We recently ended the API waitlist after building more confidence in our ability to effectively detect and respond to misuse. Individuals in supported countries and territories⁠(opens in a latest window) can rapidly get access to the OpenAI API by signing up here⁠.</p>
+<p>Industry observers note that second, researchers working on topics of particular interest to us such as bias and misuse, and who would benefit from financial support, can apply for subsidized API credits using this form⁠(opens in a fresh window). External research is vital for informing both our understanding of these multifaceted systems, as well as wider public understanding.</p>
+<p>Finally, today we are publishing a research agenda⁠ exploring the labor market impacts associated with our Codex family of models, and a call for external collaborators on carrying out this research. We are excited to work with independent researchers to study the effects of our technologies in order to inform appropriate policy interventions, and to eventually expand our thinking from code generation to other modalities.</p>
+<p>If you’re interested in working to responsibly deploy cutting-edge AI technologies, apply⁠ to work at OpenAI!</p>
+<p>This post is based on our approach to deploying language models through an API, and as such the lessons and mitigations described are most relevant to those also pursuing API-based deployment. However, we also expect some of the discussion to be relevant to those building first-party applications using language models and those considering the open source release of language models.</p>
+<p>This post is intended to explain and share learnings from our approach, rather than to suggest that all actors should necessarily adopt the same approach, or that the same approach is applicable to all possible AI systems. There are benefits and costs associated with different deployment approaches, different models will benefit more or less from study prior to deployment, and in some cases it can be valuable for distinct deployment paths to be pursued by different actors.</p>
+<p>More details on this workshop will be included in the forthcoming publication based on it.</p>
+<p>The mitigations that we emphasize in response to misuse have also evolved. For example, we initially focused on long form text generation as a threat vector, given prior cases of influence operations that involved people manually writing long form misleading content. Given that emphasis, we set maximum output lengths for generated text. Based on a pilot study of long form generation, however, we saw that output restrictions had little effect on policy violations—we’ve come to believe instead that short-form content amplifying or increasing engagement on misleading content could be the greater risk.</p>
+<p>Examples of limitations in existing datasets, from the perspective of practitioners seeking a holistic assessment of the safety of real language model outputs, include the following: an overly narrow focus (e.g., just measuring occupational gender bias), an overly broad focus (e.g., measuring all under the umbrella of “toxicity”), a tendency to abstract away the specifics of use and context, a failure to measure the generative dimension of language model use (e.g., using multiple choice style), prompts that differ stylistically from those typically used in real language model use cases, not capturing dimensions of safety that are important in practice (e.g., an output following or ignoring a safety-motivated constraint in the instruction), or not capturing types of outputs we have found to be correlated with misuse (e.g., erotic content).</p>
+<p>While our efforts are specifically oriented towards addressing limitations in existing benchmarks and in our own models, we also acknowledge that there are limitations to the methods we use such as classifier-based data filtration. For instance, operationally defining the content areas we aim to detect via filtration is challenging and filtration itself can introduce harmful biases. Additionally, the labeling of toxic data is a critical component of this work and ensuring the mental health of these labelers is an industry-wide challenge.</p>
+<p>According to recent reports, the relevant “user” of our API may be a developer building an application or an end-user interacting with such an application, depending on context. There are deep questions about the values our aligned models reflect and we hope to build a more nuanced understanding of how to balance the values of wide range of possible consumers and competing objectives when aligning language models to be more helpful, more truthful and less harmful.</p>
+<p>More aligned models also have more practical advantages such as reducing the need for “prompt engineering” (providing examples of the desired behavior to steer the model in the right direction), saving space in the model’s context window which can be used for other purposes.</p>
+<p>It has been revealed that beyond research, we have found that other safety-motivated interventions sometimes have unexpected benefits to customers. For example, rate limits intended to curb spam or misleading content also help customers to control expenses.</p>
+<p id="sec-end-31597">Thanks to Lilian Weng, Rosie Campbell, Anna Makanju, Bob McGrew, Hannah Wong, Ryan Lowe, Steve Dowling, Mira Murati, Sam Altman, Greg Brockman, Ilya Sutskever, Percy Liang, Peter Welinder, Ethan Perez, Ellie Evans, Helen Ngo, Helen Toner, Justin Jay Wang, Jack Clark, Rishi Bommasani, Girish Sastry, Sarah Shoker, Matt Knight, Bianca Martin, Bob Rotsted, Lama Ahmad, Toki Sherbakov, and others for providing feedback on this post and related work.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/language-model-safety-and-misuse" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="improving-language-model-behavior-by-training-on-a-curated-datase-31614.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31614. Improving language model behavior by training on a curated dataset
+        </a>
+        
+        <a href="breaking-democratic-inputs-to-ai-grant-program-lessons-learned-an-31493.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31493. Breaking: Democratic inputs to AI grant program: lessons learned and implementation intends
+        </a>
+        
+        <a href="prover-verifier-games-improve-legibility-of-language-model-output-31415.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31415. Prover-Verifier Games improve legibility of language model outputs
+        </a>
+        
+        <a href="improving-model-safety-behavior-with-rule-based-rewards-31412.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31412. Improving Model Safety Behavior with Rule-Based Rewards
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

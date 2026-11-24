@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reinforcement learning with prediction-based rewards</title>
+    <meta name="description" content="We’ve developed Random Network Distillation (RND)⁠, a prediction-based method for encouraging reinforcement learning agents to explore their environments t">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/reinforcement-learning-with-prediction-based-rewards-31676.html">
+    <meta property="og:title" content="Reinforcement learning with prediction-based rewards">
+    <meta property="og:description" content="We’ve developed Random Network Distillation (RND)⁠, a prediction-based method for encouraging reinforcement learning agents to explore their environments t">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/826eb3d0-6e0d-4b4c-8355ebd6e5c5/1c1d14aea00e1c74367bbd8de19cf66f/image-42.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/reinforcement-learning-with-prediction-based-rewards-31676.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Reinforcement learning with prediction-based rewards", "image": ["https://images.ctfassets.net/kftzwdyauwt9/826eb3d0-6e0d-4b4c-8355ebd6e5c5/1c1d14aea00e1c74367bbd8de19cf66f/image-42.webp?w=1600&h=900&fit=fill"], "datePublished": "2018-10-31T07:00:00", "dateModified": "2026-11-24T22:22:31.408218", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/reinforcement-learning-with-prediction-based-rewards-31676.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Reinforcement learning with prediction-based rewards</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 31 Oct 2018 &bull; ⏱️ 10 min read (2048 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve developed Random Network Distillation (RND)⁠, a prediction-based method for encouraging reinforcement learning agents to explore their environments through curiosity, which for the first time exceeds average human performance on Montezuma’s Revenge⁠(opens in a fresh window).</li><li style='margin-bottom:6px;'>We’ve developed Random Network Distillation (RND)⁠, a prediction-based method for encouraging reinforcement learning agents to explore their environments through curiosity, which for the first timeA exceeds average human performance on Montezuma’s Revenge⁠(opens in a fresh window).</li><li style='margin-bottom:6px;'>Recent findings suggest that RND incentivizes visiting unfamiliar states⁠ by measuring how hard it is to predict the output of a fixed random neural network on visited states.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-31676"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-31676"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-31676"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Reinforcement learning with prediction-based rewards" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/826eb3d0-6e0d-4b4c-8355ebd6e5c5/1c1d14aea00e1c74367bbd8de19cf66f/image-42.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-31676">We’ve developed Random Network Distillation (RND)⁠, a prediction-based method for encouraging reinforcement learning agents to explore their environments through curiosity, which for the first time exceeds average human performance on Montezuma’s Revenge⁠(opens in a fresh window).</p>
+<p>We’ve developed Random Network Distillation (RND)⁠, a prediction-based method for encouraging reinforcement learning agents to explore their environments through curiosity, which for the first timeA exceeds average human performance on Montezuma’s Revenge⁠(opens in a fresh window). RND achieves state-of-the-art performance, periodically finds all 24 rooms and solves the first level without using demonstrations or having access to the underlying state of the game.</p>
+<p>Recent findings suggest that RND incentivizes visiting unfamiliar states⁠ by measuring how hard it is to predict the output of a fixed random neural network on visited states. In unfamiliar states it’s hard to guess the output, and hence the reward is high. It can be applied to any reinforcement learning algorithm, is simple to implement and efficient to scale. Below we release a reference implementation of RND that can reproduce the results from our paper.</p>
+<p>It has been revealed that for an agent to achieve a desired goal it must first explore what is possible in its environment and what constitutes progress towards the goal. Many games’ reward signals provide a curriculum such that even simple exploration strategies are sufficient for achieving the game’s goal. In the seminal work introducing DQN⁠(opens in a newly introduced window), Montezuma’s Revenge was the only game where DQN got 0% of the average human score (4.7K). Simple exploration strategies are highly unlikely to gather any rewards, or see more than a few of the 24 rooms in the level. Since then advances in Montezuma’s Revenge have been seen by many as synonymous with advances in exploration.</p>
+<p>In a recent development, significant progress was made in 2016⁠(opens in a newly introduced window) by combining DQN with a count-based exploration bonus, resulting in an agent that explored 15 rooms, achieved a high score of 6.6K and an average reward of around 3.7K. Since then, significant⁠(opens in a new window) improvement⁠(opens in a new window) in the score achieved by an RL agent has come only from exploiting access to demonstrations⁠(opens in a new window) from human experts⁠(opens in a new window), or access to the underlying state of the emulator⁠(opens in a new window).</p>
+<p>Industry observers note that we ran a large scale RND experiment with 1024 rollout workers resulting in a mean return of 10K over 9 runs and a best mean return of 14.5K. Each run discovered between 20 and 22 rooms. In addition one of our smaller scale but longer running experiments yielded one run (out of 10) that achieved a best return of 17.5K corresponding to passing the first level and finding all 24 rooms. The graph below compares these two experiments showing the mean return as a function of parameter updates.</p>
+<p>According to recent reports, the visualization below reveals the progress of the smaller scale experiment in discovering the rooms. Curiosity drives the agent to discover new rooms and find ways of increasing the in-game score, and this extrinsic reward drives it to revisit those rooms later in the training.</p>
+<p>It has been revealed that prior to developing RND, we, together with collaborators from UC Berkeley, investigated learning without any environment-specific rewards. Curiosity gives us an easier way to teach agents to interact with any environment, rather than via an extensively engineered task-specific reward function that we hope corresponds to solving a task. Projects like ALE⁠(opens in a newly introduced window), Universe⁠(opens in a new window), Malmo⁠(opens in a new window), Gym⁠(opens in a new window), Gym Retro⁠(opens in a new window), Unity⁠(opens in a new window), DeepMind Lab⁠(opens in a new window), CommAI⁠(opens in a new window) make a large number of simulated environments available for an agent to interact with through a standardized interface. An agent using a generic reward function not specific to the particulars of an environment can acquire a basic level of competency in a wide range of environments, resulting in the agent’s ability to determine what useful behaviors are even in the absence of carefully engineered rewards.</p>
+<p>In standard reinforcement learning set-ups, at every discrete time-step the agent sends an action to the environment, and the environment responds by emitting the next observation, transition reward and an indicator of episode end. In our previous paper⁠(opens in a new window) we require the environment to output⁠(opens in a new window) only⁠(opens in a new window) the next observation. There, the agent learns a next-state predictor model from its experience, and uses the error of the prediction as an intrinsic reward. As a result it is attracted to the unpredictable. For example, it will find a change in a game score to be rewarding only if the score is displayed on the screen and the change is hard to predict. The agent will typically find interactions with new objects rewarding, as the outcomes of such interactions are usually harder to predict than other aspects of the environment.</p>
+<p>In a recent development, similar to prior⁠(opens in a newly introduced window) work⁠(opens in a new window), we tried to avoid modeling all aspects of the environment, whether they are relevant or not, by choosing to model features of the observation. Surprisingly, we found that even random features worked well.</p>
+<p>It has been revealed that we tested our agent across 50+ different environments and observed a range of competence levels from seemingly random actions to deliberately interacting with the environment. To our surprise, in some environments the agent achieved the game’s objective even though the game’s objective was not communicated to it through an extrinsic reward.</p>
+<p>Breakout The agent experiences spikes of intrinsic reward when it sees a new configuration of bricks early on in training and when it passes the level for the first time after training for several hours.</p>
+<p>Industry observers note that pong We trained the agent to control both paddles at the same time and it learned to keep the ball in play resulting in long rallies. Even when trained against the in-game AI, the agent tried to prolong the game rather than win.</p>
+<p>Bowling The agent learned to play the game better than agents trained to maximize the (clipped) extrinsic reward directly. We think this is because the agent gets attracted to the difficult-to-predict flashing of the scoreboard occurring after the strikes.</p>
+<p>Mario The intrinsic reward is particularly well-aligned with the game’s objective of advancing through the levels. The agent is rewarded for finding newly introduced areas because the details of a newly found area are impossible to predict. As a result the agent discovers 11 levels, finds secret rooms, and even defeats bosses.</p>
+<p>In a recent development, like a gambler at a slot machine attracted to chance outcomes, the agent sometimes gets trapped by its curiosity as the result of the noisy-TV problem. The agent finds a source of randomness in the environment and keeps observing it, always experiencing a high intrinsic reward for such transitions. Watching a TV playing static noise is an example of such a trap. We demonstrate this literally by placing the agent in a Unity maze environment with a TV playing random channels.</p>
+<p>It has been revealed that while the noisy-TV problem is a concern in theory, for largely deterministic environments like Montezuma’s Revenge, we anticipated that curiosity would drive the agent to discover rooms and interact with objects. We tried several variants of next-state prediction based curiosity combining the exploration bonus with the score from the game.</p>
+<p>In these experiments the agent controls the environment through a noisy controller that repeats the last action instead of the current one with some probability. This setup with sticky actions was suggested⁠(opens in a latest window) as a best practice for training agents on fully deterministic games like Atari to prevent memorization. Sticky actions make the transition from room to room unpredictable.</p>
+<p id="sec-mid-31676">Since next-state prediction is inherently susceptible to the noisy-TV problem, we identified the following relevant sources of prediction errors:.</p>
+<p>Factor 1: Prediction error is high where the predictor fails to generalize from previously seen examples. Novel experience then corresponds to high prediction error.</p>
+<p>Factor 2: Prediction error is high because the prediction target is stochastic.</p>
+<p>Factor 3: Prediction error is high because information necessary for the prediction is missing, or the model class of predictors is too limited to fit the complexity of the target function.</p>
+<p>We determined Factor 1 is a useful source of error since it quantifies the novelty of experience, whereas Factors 2 and 3 cause the noisy-TV problem. To avoid Factors 2 and 3, we developed RND, a new exploration bonus that is based on predicting the output of a fixed and randomly initialized neural network on the next state, given the next state itself.</p>
+<p>The intuition is that predictive models have low error in states similar to the ones they have been trained on. In particular the agent’s predictions of the output of a randomly initialized neural network will be less accurate in novel states than in states the agent visited frequently. The advantage of using a synthetic prediction problem is that we can have it be deterministic (bypassing Factor 2) and inside the class of functions the predictor can represent (bypassing Factor 3) by choosing the predictor to be of the same architecture as the target network. These choices make RND immune to the noisy-TV problem.</p>
+<p>Recent findings suggest that we combine the exploration bonus with the extrinsic rewards through a variant of Proximal Policy Optimization⁠(opens in a fresh window) (PPO⁠(opens in a new window)) that uses two value heads for the two reward streams. This allows us to use different discount rates for the different rewards, and combine episodic and non-episodic returns. With this additional ﬂexibility, our best agent often ﬁnds 22 out of the 24 rooms on the ﬁrst level in Montezuma’s Revenge, and occasionally passes the ﬁrst level after finding the remaining two rooms. The same method gets state-of-the-art performance on Venture and Gravitar.</p>
+<p>The visualization of the RND bonus below shows a graph of the intrinsic reward over the course of an episode of Montezuma’s Revenge where the agent finds the torch for the first time.</p>
+<p>Industry observers note that substantial-picture considerations like susceptibility to the noisy-TV problem are crucial for the choice of a good exploration algorithm. However, we found that getting seemingly-small details right in our simple algorithm made the difference between an agent that never leaves the first room and an agent that can pass the first level. To add stability to the training, we avoided saturation of the features and brought the intrinsic rewards to a predictable range. We also noticed significant improvements in performance of RND every time we discovered and fixed a bug (our favorite one involved accidentally zeroing an array which resulted in extrinsic returns being treated as non-episodic; we realized this was the case only after being puzzled by the extrinsic value function looking suspiciously periodic). Getting such details right was a significant part of achieving high performance even with algorithms conceptually similar to prior work. This is one reason to prefer simpler algorithms where possible.</p>
+<p>We suggest the following paths forward for future research:.</p>
+<p>Analyze the benefits of different exploration methods and find novel ways of combining them.</p>
+<p>Train a curious agent on many different environments without reward and investigate the transfer to target environments with rewards.</p>
+<p>Investigate global exploration that involves coordinated decisions over long time horizons.</p>
+<p>If you are interested in working on overcoming these challenges then apply⁠ to work with us!</p>
+<p>There is an anonymous ICLR submission⁠(opens in a newly introduced window) concurrent with our own work which exceeds human performance, though not to the same extent.</p>
+<p>Recent findings suggest that large-Scale Study of Curiosity-Driven Learning⁠(opens in a new window): Yuri Burda*, Harrison Edwards*, Deepak Pathak*, Amos Storkey, Trevor Darrell, Alexei A. Efros.</p>
+<p>Exploration by Random Network Distillation⁠(opens in a fresh window): Yuri Burda*, Harrison Edwards*, Amos Storkey, Oleg Klimov.</p>
+<p id="sec-end-31676">Blog post: Karl Cobbe, Alex Nichol, Joshua Achiam, Phillip Isola, Alex Ray, Jonas Schneider, Jack Clark, Greg Brockman, Ilya Sutskever, Ben Barry, Amos Storkey, Alexei Efros, Deepak Pathak, Trevor Darrell, Andrew Brock, Antreas Antoniou, Stanislaw Jastrzebski, Ashley Pilipiszyn, Justin Jay Wang.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/reinforcement-learning-with-prediction-based-rewards" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="latest-update-a-connection-between-generative-adversarial-network-31768.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31768. Latest Update: A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models
+        </a>
+        
+        <a href="latest-update-exploration-a-study-of-count-based-exploration-for--31766.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31766. Latest Update: #Exploration: A study of count-based exploration for deep reinforcement learning
+        </a>
+        
+        <a href="rl-fast-reinforcement-learning-via-slow-reinforcement-learning-31769.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31769. RL²: Fast reinforcement learning via slow reinforcement learning
+        </a>
+        
+        <a href="evolution-strategies-as-a-scalable-alternative-to-reinforcement-l-31752.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #31752. Evolution strategies as a scalable alternative to reinforcement learning
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
