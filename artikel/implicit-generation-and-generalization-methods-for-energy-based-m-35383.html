@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit generation and generalization methods for energy-based models</title>
+    <meta name="description" content="We’ve made progress towards stable and scalable training of energy-based models⁠(opens in a new window) (EBMs) resulting in better sample quality and gener">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/implicit-generation-and-generalization-methods-for-energy-based-m-35383.html">
+    <meta property="og:title" content="Implicit generation and generalization methods for energy-based models">
+    <meta property="og:description" content="We’ve made progress towards stable and scalable training of energy-based models⁠(opens in a new window) (EBMs) resulting in better sample quality and gener">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/6d9752a0-b6e4-4cab-75e7a40c4e07/9475aed9016fe5f38846089722728321/image-21.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/implicit-generation-and-generalization-methods-for-energy-based-m-35383.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Implicit generation and generalization methods for energy-based models", "image": ["https://images.ctfassets.net/kftzwdyauwt9/6d9752a0-b6e4-4cab-75e7a40c4e07/9475aed9016fe5f38846089722728321/image-21.webp?w=1600&h=900&fit=fill"], "datePublished": "2019-03-21T07:00:00", "dateModified": "2026-11-25T21:38:16.422787", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/implicit-generation-and-generalization-methods-for-energy-based-m-35383.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Implicit generation and generalization methods for energy-based models</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 21 Mar 2019 &bull; ⏱️ 4 min read (853 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve made progress towards stable and scalable training of energy-based models⁠(opens in a new window) (EBMs) resulting in better sample quality and generalization ability than existing models.</li><li style='margin-bottom:6px;'>Sources indicate that generative modeling⁠(opens in a newly introduced window) is the task of observing data, such as images or text, and learning to model the underlying data distribution.</li><li style='margin-bottom:6px;'>Energy-based models represent probability distributions over data by assigning an unnormalized probability scalar (or “energy”) to each input data point.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35383"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35383"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35383"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Implicit generation and generalization methods for energy-based models" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/6d9752a0-b6e4-4cab-75e7a40c4e07/9475aed9016fe5f38846089722728321/image-21.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35383">We’ve made progress towards stable and scalable training of energy-based models⁠(opens in a new window) (EBMs) resulting in better sample quality and generalization ability than existing models. Generation in EBMs spends more compute to continually refine its answers and doing so can generate samples competitive with GANs⁠(opens in a new window) at low temperatures, while also having mode coverage guarantees of likelihood-based models⁠(opens in a new window). We hope these findings stimulate further research into this promising class of models.</p>
+<p>Sources indicate that generative modeling⁠(opens in a newly introduced window) is the task of observing data, such as images or text, and learning to model the underlying data distribution. Accomplishing this task leads models to understand high level features in data and synthesize examples that look like real data. Generative models have many applications in natural language, robotics, and computer vision.</p>
+<p>Energy-based models represent probability distributions over data by assigning an unnormalized probability scalar (or “energy”) to each input data point. This provides useful modeling flexibility—any arbitrary model that outputs a real number given an input can be used as an energy model. The difficulty however, lies in sampling from these models.</p>
+<p>It has been revealed that to generate samples from EBMs, we use an iterative refinement process based on Langevin dynamics⁠(opens in a new window). Informally, this involves performing noisy gradient descent on the energy function to arrive at low-energy configurations (see paper for more details⁠(opens in a new window)). Unlike GANs⁠(opens in a new window), VAEs⁠(opens in a new window), and Flow-based models⁠(opens in a new window), this approach does not require an explicit neural network to generate samples - samples are generated implicitly. The combination of EBMs and iterative refinement have the following benefits:.</p>
+<p>Adaptive computation time. We can run sequential refinement for long amount of time to generate sharp, diverse samples or a short amount of time for coarse less diverse samples. In the limit of infinite time, this procedure is known to⁠(opens in a new window) generate true samples from the energy model.</p>
+<p>Not restricted by generator network. In both VAEs and Flow based models, the generator must learn a map from a continuous space to a possibly disconnected space containing different data modes, which requires large capacity and may not be possible to learn. In EBMs, by contrast, can easily learn to assign low energies at disjoint regions.</p>
+<p>Built-in compositionality. Since each model represents an unnormalized probability distribution, models can be naturally combined through product of experts⁠(opens in a new window) or other hierarchical models.</p>
+<p>In a recent development, we found energy-based models are able to generate qualitatively and quantitatively high-quality images, especially when running the refinement process for a longer period at test time. By running iterative optimization on individual images, we can auto-complete images and morph images from one class (such as truck) to another (such as frog).</p>
+<p>Industry observers note that in addition to generating images, we found that energy-based models are able to generate stable robot dynamics trajectories across large number of timesteps. EBMs can generate a diverse set of possible futures, while feedforward models collapse to a mean prediction.</p>
+<p id="sec-mid-35383">It has been revealed that we tested energy-based models on classifying several different out-of-distribution datasets⁠(opens in a fresh window) and found that energy-based models outperform other likelihood models such as Flow based and autoregressive models. We also tested classification using conditional energy-based models, and found that the resultant classification exhibited good generalization to adversarial perturbations. Our model—despite never being trained for classification—performed classification better than models explicitly trained against adversarial perturbations⁠(opens in a new window).</p>
+<p>We found evidence that suggest the following observations, though in no way are we certain that these observations are correct:.</p>
+<p>We found it difficult to apply vanilla HMC to EBM training as optimal step sizes and leapfrog simulation numbers differ greatly during training, though applying adaptive HMC would be an interesting extension.</p>
+<p>We found training ensembles of energy functions (sampling and evaluating on ensembles) to help a bit, but was not worth the added complexity.</p>
+<p>We didn’t ﬁnd much success adding a gradient penalty term, as it seemed to hurt model capacity and sampling.</p>
+<p>More tips, observations and failures from this research can be found in Section A.8 of the paper⁠(opens in a newly introduced window).</p>
+<p>We found preliminary indications that we can compose multiple energy-based models via a product of experts model. We trained one model on different size shapes at a set position and another model on same size shape at different positions. By combining the resultant energy-based models, we were able to generate different size shapes at different locations, despite never seeing examples of both being changed.</p>
+<p>It has been revealed that compositionality is one of the unsolved challenges⁠(opens in a new window) facing AI systems today, and we are excited about what energy-based models can do here. If you are excited to work on energy-based models please consider applying⁠ to OpenAI!</p>
+<p id="sec-end-35383">Thanks to Ilya Sutskever, Greg Brockman, Bob McGrew, Johannes Otterbach, Jacob Steinhardt, Harri Edwards, Yura Burda, Jack Clark and Ashley Pilipiszyn for feedback on this blog post and manuscript.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/energy-based-models" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="a-connection-between-generative-adversarial-networks-inverse-rein-35490.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35490. A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models
+        </a>
+        
+        <a href="tech-report-on-the-quantitative-analysis-of-decoder-based-generat-35489.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35489. Tech Report: On the quantitative analysis of decoder-based generative models
+        </a>
+        
+        <a href="industry-news-a-research-agenda-for-assessing-the-economic-impact-35318.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35318. Industry News: A research agenda for assessing the economic impacts of code generation models
+        </a>
+        
+        <a href="latest-update-video-generation-models-as-world-simulators-35210.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35210. Latest Update: Video generation models as world simulators
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

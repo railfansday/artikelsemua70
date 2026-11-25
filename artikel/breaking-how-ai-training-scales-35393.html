@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: How AI training scales</title>
+    <meta name="description" content="We’ve discovered that the gradient noise scale, a simple statistical metric, predicts the parallelizability of neural network training on a wide range of t">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-how-ai-training-scales-35393.html">
+    <meta property="og:title" content="Breaking: How AI training scales">
+    <meta property="og:description" content="We’ve discovered that the gradient noise scale, a simple statistical metric, predicts the parallelizability of neural network training on a wide range of t">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/249cc8d1-7545-4156-97856278c58d/1b83d4be7ca2e6f3e800497968035196/image-40.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-how-ai-training-scales-35393.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: How AI training scales", "image": ["https://images.ctfassets.net/kftzwdyauwt9/249cc8d1-7545-4156-97856278c58d/1b83d4be7ca2e6f3e800497968035196/image-40.webp?w=1600&h=900&fit=fill"], "datePublished": "2018-12-14T08:00:00", "dateModified": "2026-11-25T21:38:19.896530", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-how-ai-training-scales-35393.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: How AI training scales</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 14 Dec 2018 &bull; ⏱️ 8 min read (1611 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve discovered that the gradient noise scale, a simple statistical metric, predicts the parallelizability of neural network training on a wide range of tasks.</li><li style='margin-bottom:6px;'>In a recent development, in the last few years AI researchers have had increasing success in speeding up neural network training through data-parallelism, which splits large batches of data across many machines.</li><li style='margin-bottom:6px;'>According to recent reports, we have found that by measuring the gradient noise scale, a simple statistic that quantifies the signal-to-noise ratio of the network gradientsB, we can approximately predict the maximum useful batch size.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35393"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35393"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35393"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: How AI training scales" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/249cc8d1-7545-4156-97856278c58d/1b83d4be7ca2e6f3e800497968035196/image-40.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35393">We’ve discovered that the gradient noise scale, a simple statistical metric, predicts the parallelizability of neural network training on a wide range of tasks. Since complex tasks tend to have noisier gradients, increasingly large batch sizes are likely to become useful in the future, removing one potential limit to further growth of AI systems. More broadly, these results show that neural network training need not be considered a mysterious art, but can be rigorized and systematized.</p>
+<p>In a recent development, in the last few years AI researchers have had increasing success in speeding up neural network training through data-parallelism, which splits large batches of data across many machines. Researchers have successfully used batch sizes of tens of thousands for image classification⁠(opens in a latest window) and language modeling⁠(opens in a new window), and even millions for RL agents⁠(opens in a new window) that play the game Dota 2. These large batches allow increasing amounts of compute to be efficiently poured into the training of a single model, and are an crucial enabler of the fast growth in AI training compute⁠(opens in a new window). However, batch sizes that are too large show rapidly diminishing algorithmic returns, and it’s not clear why these limits are larger for some tasks and smaller for others.A.</p>
+<p>According to recent reports, we have found that by measuring the gradient noise scale, a simple statistic that quantifies the signal-to-noise ratio of the network gradientsB, we can approximately predict the maximum useful batch size. Heuristically, the noise scale measures the variation in the data as seen by the model (at a given stage in training). When the noise scale is small, looking at a lot of data in parallel quickly becomes redundant, whereas when it is large, we can still learn a lot from huge batches of data.</p>
+<p>Recent findings suggest that this type of statistic is widely used for sample⁠(opens in a latest window) size⁠(opens in a new window) selection⁠(opens in a new window) and has been proposed⁠(opens in a new window) for use⁠(opens in a new window) in deep⁠(opens in a new window) learning⁠(opens in a new window), but has not been measured or applied systematically for modern training runs. We verified this prediction for a wide range of machine learning tasks shown in the figure above, including image recognition, language modeling, Atari games, and Dota. Specifically, we did training runs at a wide range of batch sizes (tuning the learning rate separately for each) for all of these tasks and compared the speedups in training to what the noise scale predicts should happen. Since large batch sizes often require careful and expensive tuning or special learning rate schedules to be effective, knowing an upper limit ahead of time provides a significant practical advantage in training new models.</p>
+<p>We’ve found it helpful to visualize the results of these experiments in terms of a tradeoff between wall time for training and total bulk compute that we use to do the training (proportional to dollar cost). At very small batch sizes, doubling the batch allows us to train in half the time without using extra compute (we run twice as many chips for half as long). At very large batch sizes, more parallelization doesn’t lead to faster training. There is a “bend” in the curve in the middle, and the gradient noise scale predicts where that bend occurs.</p>
+<p>According to recent reports, we make these curves by setting a level of performance (say a score of 1000 on the Atari game of Beam Rider) and seeing how long it takes to train to that performance at various batch sizes. The results match our model’s predictions relatively closely, across many different values of the performance target.</p>
+<p>We’ve observed several patterns in the gradient noise scale which offer clues as to what the future of AI training may hold.</p>
+<p>It has been revealed that first, in our experiments, the noise scale typically increases by an order of magnitude or more over the course of training. Intuitively, this means the network learns the more “obvious” features of the task early in training and learns more intricate features later. For example, in the case of an image classifier, the network might first learn to identify small-scale features such as edges or textures that are present in most images, while only later putting these pieces together into more general concepts such as cats and dogs. To see the full variety of edges or textures, the network only needs to see a small number of images, so the noise scale is smaller; once the network knows more about larger objects, it can process many more images at once without seeing duplicative data.</p>
+<p>We see some preliminary indications⁠(opens in a new window) that the same effect holds across different models on the same dataset—more powerful models have a higher gradient noise scale, but only because they achieve a lower loss. Thus, there’s some evidence that the increasing noise scale over training isn’t just an artifact of convergence, but occurs because the model gets better. If this is true, then we expect future, more powerful models to have higher noise scale and therefore be more parallelizable.</p>
+<p>In a recent development, second, tasks that are subjectively more difficult are also more amenable to parallelization. In the context of supervised learning, there is a clear progression from MNIST, to SVHN, to ImageNet. In the context of reinforcement learning, there is a clear progression from Atari Pong to Dota 1v1⁠(opens in a new window) to Dota 5v5⁠(opens in a new window), with the optimal batch sizes differing by a factor of more than 10,000. Thus, as AI advances to new and more difficult tasks, we expect models to tolerate higher batch size.</p>
+<p id="sec-mid-35393">In a recent development, the degree of data parallelism significantly affects the speed at which AI capabilities can progress. Faster training makes more powerful models possible and accelerates research through faster iteration times.</p>
+<p>In an earlier study, AI and Compute⁠(opens in a newly introduced window), we observed that the compute being used to train the largest ML models is doubling every 3.5 months, and we noted that this trend is driven by a combination of economics (willingness to spend money on compute) and the algorithmic ability to parallelize training. The latter factor (algorithmic parallelizability) is harder to predict and its limits are not well-understood, but our current results represent a step toward systematizing and quantifying it. In particular, we have evidence that more difficult tasks and more powerful models on the same task will allow for more radical data-parallelism than we have seen to date, providing a key driver for the continued fast exponential growth in training compute. (And this is without even considering recent advances in model-parallelism⁠(opens in a new window), which may allow for even further parallelization on top of data-parallelism).</p>
+<p>Recent findings suggest that the continued growth of training compute, and its apparently predictable algorithmic basis, further highlights the possibility of rapid increases in AI capabilities over the next few years, and emphasizes the urgency of research into making sure such systems are safe⁠(opens in a latest window) and that they are used responsibly⁠(opens in a new window). A central challenge of AI policy will be to work out how to use measures like this to make predictions about the characteristics of future AI systems, and use this knowledge to conceive of policies that let society maximize the upsides and minimize the downsides of these technologies.</p>
+<p>OpenAI is committed both to continuing to conduct rigorous analyses to give us foresight on what the future of AI holds, and to acting to address the challenges that these analyses raise.</p>
+<p>If you want to study the “Science of AI” and help us make neural network training more data-driven, consider applying to work at OpenAI⁠.</p>
+<p>Industry observers note that A complementary study⁠(opens in a newly introduced window) done in parallel with this one performed meticulous experimental tests of large batch training as well as an extensive review of the previous literature, clearing up a number of inconsistencies in earlier work. They found a significant variation in the potential for parallelism between tasks, and our work appears to explain a major portion of this variance. Their work also suggests that large batch training does not affect generalization. We believe that systematic surveys such as this one and others⁠(opens in a new window) are incredibly valuable to the field, and we are committed to continued work on the “Science of AI.”.</p>
+<p>In a recent development, when training neural networks, we typically process only a small batch of data at a time, which gives a noisy estimate of the true network gradient. We find that the gradient noise scale _B_noise=E[|G-_G_true|2] / |_G_true|2, where the expectation is taken over individual data points, estimates the maximum useful batch size. When the gradient is computed from a batch of size B, the normalized distance between the estimated gradient and the true gradient is given by E[|_G_B-_G_true|2/|_G_true|2] = _B_noise/B. The point at which increasing B stops reducing the noisiness of the gradient significantly occurs around B = _B_noise, and this is also the point at which gains in training speed taper off.</p>
+<p>Thanks to the OpenAI Dota team (Greg Brockman, Brooke Chan, Przemysław Debiak, Christy Dennison, David Farhi, Rafał Józefowicz, Jakub Pachocki, Michael Petrov, Henrique Pondé, Jonathan Raiman, Szymon Sidor, Jie Tang, Filip Wolski, and Susan Zhang) for their contribution to this research.</p>
+<p>We also thank the following for feedback on drafts of this post: Greg Brockman, Paul Christiano, Danny Hernandez, Joel Hestness, Heewoo Jun, Jaehoon Lee, Aleksander Madry, Chris Olah, and John Schulman.</p>
+<p id="sec-end-35393">Editor: Jack Clark &amp; Ashley Pilipiszyn.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/how-ai-training-scales" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="weight-normalization-a-simple-reparameterization-to-accelerate-tr-35509.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35509. Weight normalization: A simple reparameterization to accelerate training of deep neural networks
+        </a>
+        
+        <a href="adversarial-training-methods-for-semi-supervised-text-classificat-35504.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35504. Adversarial training methods for semi-supervised text classification
+        </a>
+        
+        <a href="tech-report-semi-supervised-knowledge-transfer-for-deep-learning--35494.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35494. Tech Report: Semi-supervised knowledge transfer for deep learning from private training data
+        </a>
+        
+        <a href="tech-report-improving-language-model-behavior-by-training-on-a-cu-35336.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35336. Tech Report: Improving language model behavior by training on a curated dataset
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

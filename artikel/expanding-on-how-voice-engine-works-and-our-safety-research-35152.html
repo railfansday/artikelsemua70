@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding on how Voice Engine works and our safety research</title>
+    <meta name="description" content="Exploring the technology behind our text-to-speech model. According to recent reports, we’re providing more insight into how Voice Engine works and our saf">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/expanding-on-how-voice-engine-works-and-our-safety-research-35152.html">
+    <meta property="og:title" content="Expanding on how Voice Engine works and our safety research">
+    <meta property="og:description" content="Exploring the technology behind our text-to-speech model. According to recent reports, we’re providing more insight into how Voice Engine works and our saf">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/1F9YYY34lTeNq289xLAF6G/097bda3f5ef7b71943baada651f4b09f/abstract-pastel.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/expanding-on-how-voice-engine-works-and-our-safety-research-35152.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Expanding on how Voice Engine works and our safety research", "image": ["https://images.ctfassets.net/kftzwdyauwt9/1F9YYY34lTeNq289xLAF6G/097bda3f5ef7b71943baada651f4b09f/abstract-pastel.jpg?w=1600&h=900&fit=fill"], "datePublished": "2024-06-07T17:45:00", "dateModified": "2026-11-25T21:36:54.916729", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/expanding-on-how-voice-engine-works-and-our-safety-research-35152.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Expanding on how Voice Engine works and our safety research</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 07 Jun 2024 &bull; ⏱️ 5 min read (902 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Exploring the technology behind our text-to-speech model.</li><li style='margin-bottom:6px;'>According to recent reports, we’re providing more insight into how Voice Engine works and our safety research to keep everyone updated on our progress.</li><li style='margin-bottom:6px;'>It has been revealed that it’s key that people around the world understand where this technology is headed, whether we ultimately deploy it widely ourselves or not.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35152"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35152"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35152"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Expanding on how Voice Engine works and our safety research" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/1F9YYY34lTeNq289xLAF6G/097bda3f5ef7b71943baada651f4b09f/abstract-pastel.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35152">Exploring the technology behind our text-to-speech model.</p>
+<p>According to recent reports, we’re providing more insight into how Voice Engine works and our safety research to keep everyone updated on our progress. Voice Engine is a model capable of creating custom voices.</p>
+<p>It has been revealed that it’s key that people around the world understand where this technology is headed, whether we ultimately deploy it widely ourselves or not. Which is why we want to explain how the model works, how we use it for research and education, and how we are implementing our safety measures around it. Voice Engine is not widely available yet.</p>
+<p>The voice capability is powered by a text-to-speech (TTS) model, capable of generating human-like audio from just text and 15-seconds of sample speech.</p>
+<p>The TTS system is developed by helping the model understand the nuances of speech from paired audio and transcriptions. The model learns to predict the most probable sounds a speaker will make for a given text transcript, taking into account different voices, accents, and speaking styles. After this, the model can generate not just spoken versions of text, but also spoken utterances that reflect how different types of speakers would say them.</p>
+<p>From there, generating audio with the TTS model requires just a 15-second sample from the speaker and the corresponding text. The model is not fine-tuned for any specific speaker, there is no model customization involved. Instead, it employs a diffusion process, starting with random noise and progressively de-noising it to closely match how the speaker from the 15-second audio sample would articulate the text.</p>
+<p>We first developed Voice Engine in late 2022. Early on, to assess the capabilities and limitations of our Voice Engine model, we tested it internally using a mix of public and private voice samples. This internal prototype was essential for our alignment and safety research, informing our safeguards, and is a continuation of our commitment to understand the technical frontier.</p>
+<p>Importantly, these outputs were reserved for internal testing, not for training the models that power our products.</p>
+<p>As part of our iterative deployment framework, this early prototype also played a valuable role in helping policymakers understand the capabilities of synthetic voice models. For instance, starting last summer we showed global policymakers at the highest levels the technology's potential and discussed the associated risks with them.</p>
+<p>In a recent development, in September of 2023⁠, we used Voice Engine to power ChatGPT’s Voice Mode feature. Because these capabilities also presented new risks, we launched it only for this specific use case. Voice Mode was created solely from real voices, carefully selected⁠ through a detailed process that began in May 2023 involving professional voice actors, talent agencies, casting directors, and industry advisors.</p>
+<p id="sec-mid-35152">According to recent reports, in November of 2023⁠, we released a simple TTS API⁠(opens in a latest window) also powered by Voice Engine. We chose another limited release where we worked with professional voice actors to create 15-second audio samples to power each of the six preset voices in the API. Developers can build these into their websites to read blog posts out loud, for example.</p>
+<p>In a recent development, in March of this year⁠, we previewed Voice Engine’s capability of creating custom voices with a small set of trusted partners. This initiative aimed to raise awareness about the capabilities of synthetic voices and  support the following goals:.</p>
+<p>Phasing out voice based authentication as a security measure for accessing bank accounts and other sensitive information.</p>
+<p>Exploring policies to protect the use of individuals' voices in AI.</p>
+<p>Educating the public in understanding the capabilities and limitations of AI technologies, including the possibility of deceptive AI content.</p>
+<p>Accelerating the development and adoption of techniques for tracking the origin of audiovisual content, so it’s always clear when you’re interacting with a real person or with an AI.</p>
+<p>These small scale deployments are also helping to inform our approach, safeguards, and thinking on how Voice Engine could be used for good across various industries.</p>
+<p>It has been revealed that we continue to engage with U.S. and international partners from across government, media, entertainment, education, civil society and beyond to ensure we are incorporating their feedback as we build.</p>
+<p>In a recent development, the partners testing Voice Engine have agreed to usage policies that prohibit impersonation without consent and require explicit approval from the original speaker, and require that any AI-generated voices are disclosed to listeners as such. Additionally, safety measures like watermarking and proactive monitoring⁠ are in place to trace and oversee the use of the technology.</p>
+<p>Omnimodels such as GPT‑4o, with native audio capabilities, enable fresh interactions that previous models like Voice Engine could not. We also recognize that the audio modality of GPT‑4o introduces several new risks, particularly in voice generation. We are actively red-teaming GPT‑4o to identify and address both known and unforeseen risks across various fields such as social psychology, bias and fairness, and misinformation. We are building in multiple layers of mitigations such as refining model behaviors, adapting existing text-based systems for GPT‑4o’s architecture, and developing new classifiers.</p>
+<p id="sec-end-35152">Consistent with our cautious approach to releasing Voice Engine, we will restrict GPT‑4o’s audio outputs to a selection of preset voices for general release. These voices were sourced from professional voice actors that were selected through a carefully considered casting process. We will share additional information about audio-related risks and mitigations in the forthcoming GPT‑4o system card.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/expanding-on-how-voice-engine-works-and-our-safety-research" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="our-approach-to-alignment-research-35298.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35298. Our approach to alignment research
+        </a>
+        
+        <a href="our-approach-to-ai-safety-35268.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35268. Our approach to AI safety
+        </a>
+        
+        <a href="introducing-improvements-to-the-fine-tuning-api-and-expanding-our-35191.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35191. Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="an-revision-on-our-safety-security-practices-35108.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35108. An revision on our safety & security practices
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

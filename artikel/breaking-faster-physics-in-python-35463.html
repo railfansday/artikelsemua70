@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: Faster physics in Python</title>
+    <meta name="description" content="We’re open-sourcing a high-performance Python library for robotic simulation using the MuJoCo engine, developed over our past year of robotics research. In">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-faster-physics-in-python-35463.html">
+    <meta property="og:title" content="Breaking: Faster physics in Python">
+    <meta property="og:description" content="We’re open-sourcing a high-performance Python library for robotic simulation using the MuJoCo engine, developed over our past year of robotics research. In">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/be57b8bb-027b-4dfb-788f261485a9/089b69fcc2d295db35ebe3435dcd15ed/image-70.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-faster-physics-in-python-35463.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: Faster physics in Python", "image": ["https://images.ctfassets.net/kftzwdyauwt9/be57b8bb-027b-4dfb-788f261485a9/089b69fcc2d295db35ebe3435dcd15ed/image-70.webp?w=1600&h=900&fit=fill"], "datePublished": "2017-06-28T07:00:00", "dateModified": "2026-11-25T21:38:47.188034", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-faster-physics-in-python-35463.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: Faster physics in Python</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 28 Jun 2017 &bull; ⏱️ 3 min read (510 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re open-sourcing a high-performance Python library for robotic simulation using the MuJoCo engine, developed over our past year of robotics research.</li><li style='margin-bottom:6px;'>In a recent development, this library is one of our core tools for deep learning robotics research⁠(opens in a upcoming window), which we’ve now released as a major version of mujoco-py⁠(opens in a new window), our Python 3 bindings for MuJoCo.</li><li style='margin-bottom:6px;'>Direct access to MuJoCo functions and data structures.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35463"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35463"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35463"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: Faster physics in Python" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/be57b8bb-027b-4dfb-788f261485a9/089b69fcc2d295db35ebe3435dcd15ed/image-70.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35463">We’re open-sourcing a high-performance Python library for robotic simulation using the MuJoCo engine, developed over our past year of robotics research.</p>
+<p>In a recent development, this library is one of our core tools for deep learning robotics research⁠(opens in a upcoming window), which we’ve now released as a major version of mujoco-py⁠(opens in a new window), our Python 3 bindings for MuJoCo. mujoco-py 1.50.1.0⁠(opens in a new window) brings a number of new capabilities and significant performance boosts. New features include:.</p>
+<p>Efficient handling of parallel simulations.</p>
+<p>GPU-accelerated headless 3D rendering.</p>
+<p>Direct access to MuJoCo functions and data structures.</p>
+<p>Support for all MuJoCo 1.50 features⁠(opens in a latest window) like its improved contact solver.</p>
+<p id="sec-mid-35463">In a recent development, many methods in trajectory optimization and reinforcement learning (like LQR⁠(opens in a fresh window), PI2⁠(opens in a new window), and TRPO⁠(opens in a new window)) benefit from being able to run multiple simulations in parallel. mujoco-py uses data parallelism through OpenMP⁠(opens in a new window) and direct-access memory management through Cython⁠(opens in a new window) and NumPy⁠(opens in a new window) to make batched simulation more efficient.</p>
+<p>Naive usage⁠(opens in a new window) of the new version’s MjSimPool⁠(opens in a new window) interface shows a 400% speedup over the old, and still about 180% over an optimized and restricted usage pattern using Python’s multiprocessing package⁠(opens in a new window) to gain the same level of parallelism. The majority of the speedup comes from reduced access times to the various MuJoCo data structures. Check out [examples/simpool.py](https://github.com/openai/mujoco-py/blob/master/examples/simpool.py) for a tour of MjSimPool.</p>
+<p>We use the domain randomization⁠(opens in a new window) technique across many projects at OpenAI. The latest version of mujoco-py supports headless GPU rendering; this yields a speedup of ~40x compared to CPU-based rendering, letting us generate hundreds of frames per second of synthetic image data. In the above (slowed down) animation we use this to vary the textures of one of our robots, which helps it identify its body when we transfer it from the simulator to reality. Check out examples/disco_fetch.py⁠(opens in a new window) for an example of randomized texture generation.</p>
+<p>Industry observers note that the API exposed by mujoco-py is sufficient to enable Virtual Reality interaction without any extra C++ code. We ported MuJoCo’s C++ VR example⁠(opens in a newly introduced window) to Python using mujoco-py. If you have an HTC Vive VR setup, you can give try it using this example⁠(opens in a new window) (this support is considered experimental, but we’ve been using it internally for a while).</p>
+<p>The simplest way to get started with mujoco-py is with the MjSim class⁠(opens in a new window). It is a wrapper around the simulation model and data, and lets you to easily step the simulation and render images from camera sensors. Here’s a simple example:.</p>
+<p id="sec-end-35463">For advanced people, we provide a number of lower-level interfaces for accessing the innards of the MuJoCo C structs and functions directly. Refer to the README⁠(opens in a new window) and the full documentation⁠(opens in a new window) to learn more.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/faster-physics-in-python" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="answering-quantum-physics-questions-with-openai-o1-35116.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35116. Answering quantum physics questions with OpenAI o1
+        </a>
+        
+        <a href="latest-update-shipping-code-faster-with-o3-o4-mini-and-gpt-41-34943.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #34943. Latest Update: Shipping code faster with o3, o4-mini, and GPT-4.1
+        </a>
+        
+        <a href="australian-payments-plus-moves-faster-with-chatgpt-and-codex-34864.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #34864. Australian Payments Plus moves faster with ChatGPT and Codex
+        </a>
+        
+        <a href="how-cars24-scales-conversations-and-builds-faster-with-openai-34848.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #34848. How Cars24 scales conversations and builds faster with OpenAI
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

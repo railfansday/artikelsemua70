@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning a hierarchy</title>
+    <meta name="description" content="It has been revealed that we’ve developed a hierarchical reinforcement learning algorithm that learns high-level actions useful for solving a range of task">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/learning-a-hierarchy-35444.html">
+    <meta property="og:title" content="Learning a hierarchy">
+    <meta property="og:description" content="It has been revealed that we’ve developed a hierarchical reinforcement learning algorithm that learns high-level actions useful for solving a range of task">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/475d0757-5e75-4a28-5e2a95fd71c4/800335a93a66f94c429f05bfaae4334d/image-19.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/learning-a-hierarchy-35444.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Learning a hierarchy", "image": ["https://images.ctfassets.net/kftzwdyauwt9/475d0757-5e75-4a28-5e2a95fd71c4/800335a93a66f94c429f05bfaae4334d/image-19.webp?w=1600&h=900&fit=fill"], "datePublished": "2017-10-26T07:00:00", "dateModified": "2026-11-25T21:38:39.782249", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/learning-a-hierarchy-35444.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Learning a hierarchy</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 26 Oct 2017 &bull; ⏱️ 3 min read (524 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>It has been revealed that we’ve developed a hierarchical reinforcement learning algorithm that learns high-level actions useful for solving a range of tasks, allowing fast solving of tasks requiring thousands of timesteps.</li><li style='margin-bottom:6px;'>Humans solve complicated challenges by breaking them up into small, manageable components.</li><li style='margin-bottom:6px;'>On the other hand, today’s reinforcement learning methods operate through brute force search over low-level actions, requiring an enormous number of attempts to solve a upcoming task.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35444"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35444"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35444"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Learning a hierarchy" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/475d0757-5e75-4a28-5e2a95fd71c4/800335a93a66f94c429f05bfaae4334d/image-19.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35444">It has been revealed that we’ve developed a hierarchical reinforcement learning algorithm that learns high-level actions useful for solving a range of tasks, allowing fast solving of tasks requiring thousands of timesteps. Our algorithm, when applied to a set of navigation problems, discovers a set of high-level actions for walking and crawling in different directions, which enables the agent to master fresh navigation tasks swiftly.</p>
+<p>Humans solve complicated challenges by breaking them up into small, manageable components. Grilling pancakes consists of a series of high-level actions, such as measuring flour, whisking eggs, transferring the mixture to the pan, turning the stove on, and so on. Humans are able to learn upcoming tasks rapidly by sequencing together these learned components, even though the task might take millions of low-level actions, i.e., individual muscle contractions.</p>
+<p>On the other hand, today’s reinforcement learning methods operate through brute force search over low-level actions, requiring an enormous number of attempts to solve a upcoming task. These methods become very inefficient at solving tasks that take a large number of timesteps.</p>
+<p>According to recent reports, our solution is based on the idea of hierarchical reinforcement learning, where agents represent complicated behaviors as a short sequence of high-level actions. This lets our agents solve much harder tasks: while the solution might require 2000 low-level actions, the hierarchical policy turns this into a sequence of 10 high-level actions, and it’s much more efficient to search over the 10-step sequence than the 2000-step sequence.</p>
+<p id="sec-mid-35444">In a recent development, our algorithm, meta-learning shared hierarchies (MLSH), learns a hierarchical policy where a master policy switches between a set of sub-policies. The master selects an action every every N timesteps, where we might take N=200. A sub-policy executed for N timesteps constitutes a high-level action, and for our navigation tasks, sub-policies correspond to walking or crawling in different directions.</p>
+<p>In most prior work, hierarchical policies have been explicitly hand-engineered. Instead, we aim to discover this hierarchical structure automatically through interaction with the environment. Taking a meta-learning perspective, we define a good hierarchy as one that rapidly reaches high reward quickly when training on unseen tasks. Hence, the MLSH algorithm aims to learn sub-policies that enable fast learning on previously unseen tasks.</p>
+<p>Sources indicate that we train on a distribution over tasks, sharing the sub-policies while learning a new master policy on each sampled task. By repeatedly training new master policies, this process automatically finds sub-policies that accommodate the master policy’s learning dynamics.</p>
+<p>According to recent reports, in our AntMaze environment, a Mujoco Ant robot is placed into a distribution of 9 different mazes and must navigate from the starting position to the goal. Our algorithm is successfully able to find a diverse set of sub-policies that can be sequenced together to solve the maze tasks, solely through interaction with the environment. This set of sub-policies can then be used to master a larger task than the ones they were trained on (see video at beginning at post).</p>
+<p id="sec-end-35444">We’re releasing the code⁠(opens in a new window) for training the MLSH agents, as well as the MuJoCo environments we built to evaluate these algorithms.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/learning-a-hierarchy" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="machine-learning-unconference-35498.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35498. Machine Learning Unconference
+        </a>
+        
+        <a href="infrastructure-for-deep-learning-35497.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35497. Infrastructure for deep learning
+        </a>
+        
+        <a href="transfer-from-simulation-to-real-world-through-learning-deep-inve-35496.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35496. Transfer from simulation to real world through learning deep inverse dynamics model
+        </a>
+        
+        <a href="tech-report-semi-supervised-knowledge-transfer-for-deep-learning--35494.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35494. Tech Report: Semi-supervised knowledge transfer for deep learning from private training data
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

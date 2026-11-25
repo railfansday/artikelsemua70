@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizing GPT-3 for your application</title>
+    <meta name="description" content="Fine-tune with a single command. Developers can now fine-tune GPT‑3 on their own data, creating a custom version tailored to their application. Customizing">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/customizing-gpt-3-for-your-application-35326.html">
+    <meta property="og:title" content="Customizing GPT-3 for your application">
+    <meta property="og:description" content="Fine-tune with a single command. Developers can now fine-tune GPT‑3 on their own data, creating a custom version tailored to their application. Customizing">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3cc7fd12-8d30-4d8f-42c213795288/37e7c8274da5d005c2a078d196423507/Customizing_GPT-3_for_your_application.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/customizing-gpt-3-for-your-application-35326.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Customizing GPT-3 for your application", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3cc7fd12-8d30-4d8f-42c213795288/37e7c8274da5d005c2a078d196423507/Customizing_GPT-3_for_your_application.png?w=1600&h=900&fit=fill"], "datePublished": "2021-12-14T08:00:00", "dateModified": "2026-11-25T21:37:55.019353", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/customizing-gpt-3-for-your-application-35326.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Customizing GPT-3 for your application</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 14 Dec 2021 &bull; ⏱️ 4 min read (720 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Developers can now fine-tune GPT‑3 on their own data, creating a custom version tailored to their application.</li><li style='margin-bottom:6px;'>Recent findings suggest that you can use an existing dataset of virtually any shape and size, or incrementally add data based on user feedback.</li><li style='margin-bottom:6px;'>To get started, just run a single command in the OpenAI command line tool with a file you provide.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35326"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35326"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35326"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Customizing GPT-3 for your application" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3cc7fd12-8d30-4d8f-42c213795288/37e7c8274da5d005c2a078d196423507/Customizing_GPT-3_for_your_application.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35326">Fine-tune with a single command.</p>
+<p>Developers can now fine-tune GPT‑3 on their own data, creating a custom version tailored to their application. Customizing makes GPT‑3 reliable for a wider variety of use cases and makes running the model cheaper and faster.</p>
+<p>Recent findings suggest that you can use an existing dataset of virtually any shape and size, or incrementally add data based on user feedback. With fine-tuning, one API customer was able to increase correct outputs from 83% to 95%. By adding latest data from their product each week, another reduced error rates by 50%.</p>
+<p>To get started, just run a single command in the OpenAI command line tool with a file you provide. Your custom version will start training and then be available immediately in our API.</p>
+<p>It has been revealed that last year we trained GPT‑3⁠(opens in a upcoming window) and made it available in our API⁠. With only a few examples, GPT‑3 can perform a wide variety of natural language tasks⁠(opens in a new window), a concept called few-shot learning or prompt design. Customizing GPT‑3 can yield even better results because you can provide many more examples than what’s possible with prompt design.</p>
+<p>It takes less than 100 examples to start seeing the benefits of fine-tuning GPT‑3 and performance continues to improve as you add more data. In research published last June⁠, we highlighted how fine-tuning with less than 100 examples can improve GPT‑3’s performance on certain tasks. We’ve also found that each doubling of the number of examples tends to improve quality linearly.</p>
+<p>With one of our most challenging research datasets, grade school math problems⁠, fine-tuning GPT‑3 improves accuracy by 2 to 4x over what’s possible with prompt design.</p>
+<p id="sec-mid-35326">Customizing GPT‑3 improves the reliability of output, offering more consistent results that you can count on for production use-cases. One customer found that customizing GPT‑3 reduced the frequency of unreliable outputs from 17% to 5%. Since custom versions of GPT‑3 are tailored to your application, the prompt can be much shorter, reducing costs and improving latency.</p>
+<p>Whether text generation, summarization, classification, or any other natural language task GPT‑3 is capable of performing, customizing GPT‑3 will improve performance.</p>
+<p>In a recent development, keeper Tax helps independent contractors and freelancers with their taxes. After a customer links their financial accounts, Keeper Tax uses various models to extract text and classify transactions. Using the classified data, Keeper Tax identifies easy-to-miss tax write-offs and helps customers file their taxes directly from the app. By customizing GPT‑3, Keeper Tax is able to continuously improve results. Once a week, Keeper Tax adds around 500 upcoming training examples to fine-tune their model, which is leading to about a 1% accuracy improvement each week, increasing accuracy from 85% to 93%.</p>
+<p>In a recent development, viable helps companies get insights from their customer feedback. By customizing GPT‑3, Viable is able to transform massive amounts of unstructured data into readable natural language reports, highlighting top customer complaints, compliments, requests, and questions. Customizing GPT‑3 has increased the reliability of Viable’s reports. By using a customized version of GPT‑3, accuracy in summarizing customer feedback has improved from 66% to 90%. The result is tangible, intuitive information that customers need to inform their product decisions.</p>
+<p>Sana Labs is a global leader in the development and application of AI to learning. The Sana learning platform powers personalized learning experiences for businesses by leveraging the latest ML breakthroughs to tailor the content for each individual. By customizing GPT‑3 with their data, Sana’s question and content generation went from grammatically correct but general responses to highly accurate outputs. This yielded a 60% improvement, enabling fundamentally more personalized and effective experiences for their learners.</p>
+<p>Elicit is an AI research assistant that helps people directly answer research questions using findings from academic papers. The tool finds the most relevant abstracts from a large corpus of research papers, then applies a customized version of GPT‑3 to generate the claim (if any) that the paper makes about the question. A custom version of GPT‑3 outperformed prompt design across three important measures: results were easier to understand (a 24% improvement), more accurate (a 17% improvement), and better overall (a 33% improvement).</p>
+<p id="sec-end-35326">According to recent reports, all API customers can customize GPT‑3 today. Sign-up and get started with the fine-tuning documentation⁠(opens in a fresh window).</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/customizing-gpt-3" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="gpt-2-6-month-follow-up-35371.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35371. GPT-2: 6-month follow-up
+        </a>
+        
+        <a href="tech-report-fine-tuning-gpt-2-from-human-preferences-35368.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35368. Tech Report: Fine-tuning GPT-2 from human preferences
+        </a>
+        
+        <a href="gpt-2-15b-release-35365.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35365. GPT-2: 1.5B release
+        </a>
+        
+        <a href="image-gpt-35351.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35351. Image GPT
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Separating signal from noise in coding evaluations</title>
+    <meta name="description" content="Through a detailed audit, we find widespread task problems in SWE-Bench Pro and estimate that ~30% of the tasks are broken. Accurately measuring our models">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/separating-signal-from-noise-in-coding-evaluations-34861.html">
+    <meta property="og:title" content="Separating signal from noise in coding evaluations">
+    <meta property="og:description" content="Through a detailed audit, we find widespread task problems in SWE-Bench Pro and estimate that ~30% of the tasks are broken. Accurately measuring our models">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5f0Xf4wOuXVsX7TZUM4tjl/4672bf7bf93bad67ade28dce57f62638/Seperating-signal-from-noise-SEO.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/separating-signal-from-noise-in-coding-evaluations-34861.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Separating signal from noise in coding evaluations", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5f0Xf4wOuXVsX7TZUM4tjl/4672bf7bf93bad67ade28dce57f62638/Seperating-signal-from-noise-SEO.png?w=1600&h=900&fit=fill"], "datePublished": "2026-07-08T13:00:00", "dateModified": "2026-11-25T21:35:12.886464", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/separating-signal-from-noise-in-coding-evaluations-34861.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Separating signal from noise in coding evaluations</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 08 Jul 2026 &bull; ⏱️ 6 min read (1205 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Through a detailed audit, we find widespread task problems in SWE-Bench Pro and estimate that ~30% of the tasks are broken.</li><li style='margin-bottom:6px;'>Accurately measuring our models’ capabilities is crucial for sound deployment and safety decisions, including decisions under OpenAI’s Preparedness Framework⁠(opens in a upcoming window).</li><li style='margin-bottom:6px;'>We recently investigated how one of the most widely used coding benchmarks, SWE-bench Verified, had fundamental design and contamination issues, and found that the eval no longer provided meaningful signal on software development capabilities.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-34861"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-34861"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-34861"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Separating signal from noise in coding evaluations" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5f0Xf4wOuXVsX7TZUM4tjl/4672bf7bf93bad67ade28dce57f62638/Seperating-signal-from-noise-SEO.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-34861">Through a detailed audit, we find widespread task problems in SWE-Bench Pro and estimate that ~30% of the tasks are broken.</p>
+<p>Accurately measuring our models’ capabilities is crucial for sound deployment and safety decisions, including decisions under OpenAI’s Preparedness Framework⁠(opens in a upcoming window). With each model release, we report results for a variety of external and internal benchmarks to track model progress. When evaluations have flaws that affect results, they can give a false understanding of capabilities, misrepresenting safety cases and affecting research priorities.</p>
+<p>We recently investigated how one of the most widely used coding benchmarks, SWE-bench Verified, had fundamental design and contamination issues, and found that the eval no longer provided meaningful signal on software development capabilities. At the time, we encouraged the wider community to switch to SWE-Bench Pro.</p>
+<p>Industry observers note that SWE-Bench Pro⁠(opens in a newly introduced window) was designed to improve on SWE-bench Verified by testing models on longer horizons and more realistic coding tasks to better track agentic coding capabilities. As in SWE-bench Verified, tasks are sourced programmatically from the history of feature changes in a set of public and private repositories. Models are required to implement a solution that passes new tests for a feature, without breaking existing functionality. On the 731-task public split, frontier models improved from a pass rate of 23.3% to 80.3% in eight months.</p>
+<p>We’ve since performed a similar audit on SWE-Bench Pro, reviewing the dataset using a datapoint analysis pipeline. The pipeline reviewed model attempts at the task, task metadata, and failure traces to flag likely evaluation flaws. Each flagged task was then assessed through multiple investigator-agent passes and independently reviewed by five experienced software engineers, with disagreements escalated for further investigation.</p>
+<p>We find evidence of breaking problems in a significant portion of the dataset. Our datapoint analysis pipeline flagged 200 (27.4%) broken tasks, while the human annotation campaign identified 249 (34.1%).</p>
+<p>The complications primarily fell into four categories:.</p>
+<p>Overly strict tests1 enforce specific implementation details not specified in the prompt, invalidating many functionally correct submissions.</p>
+<p>Underspecified prompts2 omit requirements that hidden tests enforce and that are not reasonably inferable.</p>
+<p>Low-coverage tests under check the requested feature, so incomplete fixes can pass.</p>
+<p>A misleading prompt points models toward the wrong behavior or contradicts what tests require.</p>
+<p>Our findings point to the difficulty of curating hard but fair benchmarks and the growing utility of agents for scalable data quality checks. In light of these results, we estimate that ~30% of SWE-bench Pro tasks are broken, and advise that model developers carefully examine results.</p>
+<p>Our aim is to ensure that task failures reflect genuine model limitations, and task successes reflect complete and valid solutions to the prompt requirements. To check the quality of the data used in the evaluation, we created a quality assurance pipeline to assess whether each datapoint accurately reflects model capabilities.</p>
+<p id="sec-mid-34861">Recent findings suggest that an initial data quality pipeline flags problems for review. We validate with a deeper agent-assisted audit of flagged tasks and a human annotation campaign working with experienced engineers.</p>
+<p>An initial automated filter reviews the instructions given to the model, attempts by the model to solve the task, and the tests used to grade these attempts to flag likely broken or problematic examples. This filter flagged 286 potentially broken tasks. We then conducted a deeper review of that subset in two ways: a human-supervised agent review, which conducts extensive checks with investigator agents and a final human judgment; and a human annotation campaign working with experienced software developers.</p>
+<p>Each flagged problem is audited with Codex-based investigator agents that were given access to the task repository and environment. This helps them distinguish reasonable task ambiguity, which can often be resolved by studying nearby code and repository conventions, from true underspecification. The agent can run tests, inspect files in the repo, and investigate model attempts and their common failure modes on the task. After several independent repeats of these deeper audits, a researcher reviewed the summaries, made a final judgment, and labeled the likely complications.</p>
+<p>In parallel, we ran a human annotation campaign over the flagged subset. We worked with experienced software engineers who were trained on the benchmark goals, issue taxonomy, and edge cases before reviewing tasks. Each task was reviewed by five engineers.</p>
+<p>Reviewers formed an independent judgment from the visible problem statement, test cases, and the ground-truth reference solution (known as the gold patch) before using the pipeline analysis or transcript as supporting context. The reviewers then assigned a label and severity rating based on concrete evidence, and escalated disagreements or low-confidence cases for further review.</p>
+<p>Human reviewers were more likely than the investigator agents to mark tasks as broken. There was also some disagreement on categories between the two review paths, but in no flagged task was “not broken” the most common human label. Of the categories the agent pipeline flagged, reviewers’ judgments overlapped in 74% of cases.</p>
+<p>In a recent development, compared with the agent pipeline, the human reviewers were also more likely to select multiple labels for a task, indicating that they found tasks to be broken in multiple ways or did not fit cleanly into a single category. This suggests the agent-plus-reviewer pipeline resulted in conservative labeling: it captured the same broad failure modes humans identified, while undercounting cases where reviewers saw additional or overlapping challenges. The largest difference was in low-coverage tests, which humans selected as the most common glitch for 9.4% of the benchmark compared with 4.1% from the agent pipeline.</p>
+<p>The issues we have identified, coupled with similar cases in SWE-bench Verified, highlight the importance of rigorously checking benchmarks. Issues and pull requests from open-source repositories were originally created for human collaboration, often through long back-and-forths between maintainers and contributors. As a result, problem descriptions, merged code, and unit tests do not always line up to form clean, isolated tasks for evaluating models reliably. In particular, tests included in pull requests can be overly strict because they are written to validate a specific change, rather than to define an implementation-agnostic standard for solving the task.</p>
+<p>Industry observers note that at the same time, evaluation flaws are easier to detect now than they would have been even a short time ago. As model capabilities improve, we can use those models to inspect prompts, tests, patches, traces, and edge cases with much greater depth and consistency, helping surface benchmark concerns that were previously costly or impractical to find at scale.</p>
+<p>We hope the wider evaluation community will develop fresh benchmarks built by experienced software developers specifically to test model capabilities. That approach can preserve the high bar and realism we want to measure model capabilities, and allows for better human oversight throughout the process. Given the complications uncovered in this analysis, we retract our earlier recommendation to adopt SWE-Bench Pro.</p>
+<p>It has been revealed that ultimately, an eval should provide meaningful signal through benchmarks that are hard to game, easy to trust, and genuinely reflective of model capability or alignment. Because these results inform OpenAI’s deployment and safety decisions, the evals we track need to be valid and informative.</p>
+<p>We previously⁠ referred to this category as narrow tests.</p>
+<p id="sec-end-34861">We previously referred to this category as wide tests.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/separating-signal-from-noise-coding-evaluations" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="better-exploration-with-parameter-noise-35458.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35458. Better exploration with parameter noise
+        </a>
+        
+        <a href="breaking-coding-with-openai-o1-35114.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35114. Breaking: Coding with OpenAI o1
+        </a>
+        
+        <a href="third-party-cyber-evaluations-involving-openai-models-34818.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #34818. Third-party cyber evaluations involving OpenAI models
+        </a>
+        
+        <a href="vibegame-exploring-vibe-coding-games-34525.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #34525. VibeGame: Exploring Vibe Coding Games
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

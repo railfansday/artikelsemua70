@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Introducing vision to the fine-tuning API</title>
+    <meta name="description" content="Developers can now fine-tune GPT‑4o with images and text to improve vision capabilities. Sources indicate that update on May 8, 2026: OpenAI is winding dow">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-vision-to-the-fine-tuning-api-35086.html">
+    <meta property="og:title" content="Tech Report: Introducing vision to the fine-tuning API">
+    <meta property="og:description" content="Developers can now fine-tune GPT‑4o with images and text to improve vision capabilities. Sources indicate that update on May 8, 2026: OpenAI is winding dow">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3no98Bze1KP8jLc4t2bEYc/e41bd6427baec73e988972b2723fe555/02_Vision_Fine-tuning.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-vision-to-the-fine-tuning-api-35086.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Introducing vision to the fine-tuning API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3no98Bze1KP8jLc4t2bEYc/e41bd6427baec73e988972b2723fe555/02_Vision_Fine-tuning.png?w=1600&h=900&fit=fill"], "datePublished": "2024-10-01T10:04:00", "dateModified": "2026-11-25T21:36:29.818586", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-vision-to-the-fine-tuning-api-35086.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Introducing vision to the fine-tuning API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 01 Oct 2024 &bull; ⏱️ 4 min read (882 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Developers can now fine-tune GPT‑4o with images and text to improve vision capabilities.</li><li style='margin-bottom:6px;'>Sources indicate that update on May 8, 2026: OpenAI is winding down the fine-tuning platform.</li><li style='margin-bottom:6px;'>Today, we’re introducing vision fine-tuning⁠(opens in a new window) on GPT‑4o1, making it possible to fine-tune with images, in addition to text.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35086"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35086"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35086"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Introducing vision to the fine-tuning API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3no98Bze1KP8jLc4t2bEYc/e41bd6427baec73e988972b2723fe555/02_Vision_Fine-tuning.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35086">Developers can now fine-tune GPT‑4o with images and text to improve vision capabilities.</p>
+<p>Sources indicate that update on May 8, 2026: OpenAI is winding down the fine-tuning platform. The platform is no longer accessible to upcoming users but existing users of the fine-tuning platform will be able to create training jobs for the coming months. All fine-tuned models will remain available for inference until their base models are deprecated⁠(opens in a new window). The full timeline is here⁠(opens in a new window).</p>
+<p>Today, we’re introducing vision fine-tuning⁠(opens in a new window) on GPT‑4o1, making it possible to fine-tune with images, in addition to text. Developers can customize the model to have stronger image understanding capabilities which enables applications like enhanced visual search functionality, improved object detection for autonomous vehicles or smart cities, and more accurate medical image analysis.</p>
+<p>Sources indicate that since we first introduced fine-tuning on GPT‑4o, hundreds of thousands of developers have customized our models using text-only datasets to improve performance on specific tasks. However, for many cases, fine-tuning models on text alone doesn’t provide the performance boost expected.</p>
+<p>Industry observers note that vision fine-tuning follows a similar process to fine-tuning with text—developers can prepare their image datasets to follow the proper format⁠(opens in a fresh window) and then upload that dataset to our platform. They can improve the performance of GPT‑4o for vision tasks with as few as 100 images, and drive even higher performance with larger volumes of text and image data.</p>
+<p>We collaborated with a small group of trusted partners to better understand the real-world applications of vision fine-tuning. We’re excited to showcase a few examples of what they built.</p>
+<p>Grab⁠(opens in a fresh window), a leading food delivery and rideshare manufacturer, turns street-level imagery collected from their drivers into mapping data used to power GrabMaps⁠(opens in a new window), a mapping service enabling all of their Southeast Asia operations. Using vision fine-tuning with only 100 examples, Grab taught GPT‑4o to correctly localize traffic signs and count lane dividers to refine their mapping data. As a result, Grab was able to improve lane count accuracy by 20% and speed limit sign localization by 13% over a base GPT‑4o model, enabling them to better automate their mapping operations from a previously manual process.</p>
+<p>Example of a speed limit sign tagged successfully by a vision fine-tuned GPT‑4o model that was incorrectly tagged by the GPT‑4o base model.</p>
+<p>Automat⁠(opens in a new window), an enterprise automation manufacturer, builds desktop and web agents that process documents and take UI-based actions to automate business processes. With vision fine-tuning and a dataset of screenshots, Automat trained GPT‑4o to locate UI elements on a screen given a natural language description, improving the success rate of their RPA agent from 16.60% to 61.67%—a 272% uplift in performance compared to base GPT‑4o. Additionally, Automat trained GPT‑4o on just 200 images of unstructured insurance documents to achieve a 7% lift in F1 score on information extraction tasks.</p>
+<p id="sec-mid-35086">Example of a desktop bot successfully identifying the center of UI elements via vision fine-tuning with website screenshots.</p>
+<p>It has been revealed that coframe⁠(opens in a new window) is building an AI growth engineering assistant that helps businesses continuously create and test variations of their websites and UIs to optimize business metrics. A key part of this task is autonomously generating new branded sections of a website, based on the rest of the website. Coframe tasked GPT‑4o with generating code for the next section of a website based on images and existing code. By fine-tuning GPT‑4o with images and code, they improved the model’s ability to generate websites with consistent visual style and correct layout by 26% compared to base GPT‑4o.</p>
+<p>Existing website that the model is meant to match.</p>
+<p>Output with the GPT‑4o base model.</p>
+<p>Output with GPT‑4o fine-tuned with vision and text, more closely matching the style of the page.</p>
+<p>We continuously run automated safety evals on fine-tuned models and monitor usage to ensure applications adhere to our usage policies. As with all API services, vision fine-tuning is subject to our Enterprise privacy⁠ commitments. Fine-tuned models remain entirely under your control, with full ownership of your business data. We do not train our models on the inputs or outputs used in this service without your explicit permission.</p>
+<p>Vision fine-tuning capabilities are available today for all developers on paid usage tiers⁠(opens in a fresh window). These capabilities are supported on the latest GPT‑4o model snapshot, gpt-4o-2024-08-06. Developers can extend existing fine-tuning training data for images using the same format as our Chat endpoints⁠(opens in a new window).</p>
+<p>We’re offering 1M training tokens per day for free through October 31, 2024 to fine-tune GPT‑4o with images. After October 31, 2024, GPT‑4o fine-tuning training will cost $25 per 1M tokens and inference will cost $3.75 per 1M input tokens and $15 per 1M output tokens. Image inputs are first tokenized based on image size, and then priced at the same per-token rate as text inputs. More details can be found on the API Pricing⁠ page.</p>
+<p>To get started, visit the fine-tuning dashboard⁠(opens in a fresh window), click ‘create’ and select gpt-4o-2024-08-06 from the base model drop-down. To learn how to fine-tune GPT‑4o with images, visit our docs⁠(opens in a new window).</p>
+<p id="sec-end-35086">GPT-4o base model refers to gpt-4o-2024-08-06.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-vision-to-the-fine-tuning-api" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-gpt-35-turbo-fine-tuning-and-api-updates-35247.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35247. Tech Report: GPT-3.5 Turbo fine-tuning and API updates
+        </a>
+        
+        <a href="introducing-improvements-to-the-fine-tuning-api-and-expanding-our-35191.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35191. Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="tech-report-fine-tuning-gpt-2-from-human-preferences-35368.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35368. Tech Report: Fine-tuning GPT-2 from human preferences
+        </a>
+        
+        <a href="tech-report-fine-tuning-now-available-for-gpt-4o-35123.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35123. Tech Report: Fine-tuning now available for GPT-4o
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

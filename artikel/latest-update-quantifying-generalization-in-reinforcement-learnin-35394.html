@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Update: Quantifying generalization in reinforcement learning</title>
+    <meta name="description" content="We’re releasing CoinRun, a training environment which provides a metric for an agent’s ability to transfer its experience to novel situations and has alrea">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/latest-update-quantifying-generalization-in-reinforcement-learnin-35394.html">
+    <meta property="og:title" content="Latest Update: Quantifying generalization in reinforcement learning">
+    <meta property="og:description" content="We’re releasing CoinRun, a training environment which provides a metric for an agent’s ability to transfer its experience to novel situations and has alrea">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5a6c4c0f-07eb-45c5-4963d069efe1/d9951a41be142b36cf85e87fdec086f8/Group_2147220970.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/latest-update-quantifying-generalization-in-reinforcement-learnin-35394.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Latest Update: Quantifying generalization in reinforcement learning", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5a6c4c0f-07eb-45c5-4963d069efe1/d9951a41be142b36cf85e87fdec086f8/Group_2147220970.png?w=1600&h=900&fit=fill"], "datePublished": "2018-12-06T08:00:00", "dateModified": "2026-11-25T21:38:20.356110", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/latest-update-quantifying-generalization-in-reinforcement-learnin-35394.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Latest Update: Quantifying generalization in reinforcement learning</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 06 Dec 2018 &bull; ⏱️ 6 min read (1197 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing CoinRun, a training environment which provides a metric for an agent’s ability to transfer its experience to novel situations and has already helped clarify a longstanding⁠(opens in a new window) puzzle⁠(opens in a new window) in reinforcement learning.</li><li style='margin-bottom:6px;'>Generalizing between tasks remains difficult for state of the art deep reinforcement learningA (RL) algorithms.</li><li style='margin-bottom:6px;'>Previous work has used the Sonic benchmark⁠(opens in a fresh window), procedurally generated gridworld mazes⁠(opens in a new window), and the General Video Game AI framework⁠(opens in a new window) to address this problem.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-35394"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-35394"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-35394"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Latest Update: Quantifying generalization in reinforcement learning" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5a6c4c0f-07eb-45c5-4963d069efe1/d9951a41be142b36cf85e87fdec086f8/Group_2147220970.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-35394">We’re releasing CoinRun, a training environment which provides a metric for an agent’s ability to transfer its experience to novel situations and has already helped clarify a longstanding⁠(opens in a new window) puzzle⁠(opens in a new window) in reinforcement learning. CoinRun strikes a desirable balance in complexity: the environment is simpler than traditional platformer games like Sonic the Hedgehog but still poses a worthy generalization challenge for state of the art algorithms.</p>
+<p>Generalizing between tasks remains difficult for state of the art deep reinforcement learningA (RL) algorithms. Although trained agents can solve complex tasks, they struggle to transfer their experience to fresh environments. Even though people know that RL agents tend to overfit — that is, to latch onto the specifics of their environment rather than learn generalizable skills — RL agents are still benchmarked by evaluating on the environments they trained on. This would be like testing on your training set in supervised learning!</p>
+<p>Previous work has used the Sonic benchmark⁠(opens in a fresh window), procedurally generated gridworld mazes⁠(opens in a new window), and the General Video Game AI framework⁠(opens in a new window) to address this problem. In all cases, generalization is measured by training and testing agents on different sets of levels. Agents trained on our Sonic benchmark were great at the training levels but performed poorly on the test levels without any fine-tuning. In a similar displays of overfitting, agents trained on procedurally generated mazes learned to memorize a large number of training levels, and GVG-AI agents performed poorly under difficulty settings that weren’t seen during training.</p>
+<p>In a recent development, coinRun was designed to be tractable for existing algorithms and mimics the style of platformer games like Sonic. The levels of CoinRun are procedurally generated⁠(opens in a newly introduced window), providing agents access to a large and easily quantifiable supply of training data. The goal of each CoinRun level is simple: collect the single coin that lies at the end of the level. Several obstacles, both stationary and non-stationary, lie between the agent and the coin. A collision with an obstacle results in the agent’s immediate death. The only reward in the environment is obtained by collecting the coin, and this reward is a ﬁxed positive constant. The level terminates when the agent dies, the coin is collected, or after 1000 time steps.</p>
+<p>Recent findings suggest that we trained 9 agents to play CoinRun, each with a different number of available training levels. The ﬁrst 8 agents trained on sets ranging from of 100 to 16,000 levels. We trained the ﬁnal agent on an unrestricted set of levels, so this agent never sees the same level twice. We trained our agents with policies using a common⁠(opens in a upcoming window) 3-layer convolutional architecture⁠(opens in a new window), which we call Nature-CNN. Our agents trained with Proximal Policy Optimization⁠(opens in a new window) (PPO⁠(opens in a new window)) for a total of 256M timesteps. Since an epsiode lasts 100 timesteps on average, agents with fixed training sets will see each training level thousands to millions of times. The final agent, trained with the unrestricted set, will see roughly 2 million distinct levels — each of them exactly once.</p>
+<p>It has been revealed that we collected each data point in the following graphs by averaging the ﬁnal agent’s performance across 10,000 episodes. At test time, the agent is evaluated on never-before-seen levels. We discovered substantial overﬁtting occurs when there are less than 4,000 training levels. In fact, we still see overfitting even with 16,000 training levels! Unsurprisingly, agents trained with the unrestricted set of levels performed best, as these agents had access to the most data. These agents are represented by the dotted line in the following graphs.</p>
+<p>We compared our Nature-CNN baseline against the convolutional architecture used in IMPALA⁠(opens in a new window) and found the IMPALA-CNN agents generalized much better with any training set as seen below.</p>
+<p>Left: Final train and test performance of Nature-CNN agents after 256M timesteps, as a function of the number of training levels.</p>
+<p>Right: Final train and test performance of IMPALA-CNN agents after 256M timesteps, as a function of number of training levels.</p>
+<p>In our next experiments, we used a fixed training set of 500 CoinRun levels. Our baseline agents struggle to generalize with so few levels, making this an ideal training set for a benchmark. We encourage others to evaluate their own methods by training on the same 500 levels, directly comparing test time performance. Using this training set, we investigated the impact of several regularization techniques:.</p>
+<p>Dropout and L2 regularization: Both noticeably reduce the generalization gap, though L2 regularization has a bigger impact.</p>
+<p>Data augmentation (modified Cutout⁠(opens in a newly introduced window)) and batch normalization⁠(opens in a new window): Both data augmentation and batch normalization significantly improve generalization.</p>
+<p>Environmental stochasticity: Training with stochasticity improves generalization to a greater extent than any of the previously mentioned techniques (see the paper⁠(opens in a new window) for details).</p>
+<p id="sec-mid-35394">We also developed two additional environments to investigate overﬁtting: a CoinRun variant called CoinRun-Platforms and a simple maze navigation environment called RandomMazes. In these experiments, we used the original IMPALA-CNN architecture followed by a LSTM⁠(opens in a new window), since memory is necessary to perform well in these environments.</p>
+<p>In CoinRun-Platforms, there are several coins the agent attempts to collect within the 1000 step time-limit. Coins are randomly scattered across platforms in the level. Levels are a larger, ﬁxed size in CoinRun-Platforms, so the agent must more actively explore, occasionally retracing its steps.</p>
+<p>Final train and test performance in CoinRun-Platforms after 2B timesteps, as a function of the number of training levels.</p>
+<p>When we ran both CoinRun-Platforms and RandomMazes through our baseline experiment, our agents strongly overfit in all cases. We observe particularly strong overﬁtting in the case of RandomMazes, as a sizeable generalization gap remains even when using 20,000 training levels.</p>
+<p>Our results provide insight into the challenges underlying generalization in RL. Using the procedurally generated CoinRun environment, we can precisely quantify such overﬁtting. With this metric, we can better evaluate key architectural and algorithmic decisions. We believe that the lessons learned from this environment will apply in more complex settings, and we hope to use this benchmark, and others like it, to iterate towards more generalizable agents.</p>
+<p>We suggest the following for future research:.</p>
+<p>Investigate the relationship between environment complexity and the number of levels required for good generalization.</p>
+<p>Investigate whether different recurrent architectures are better suited for generalization in these environments.</p>
+<p>Explore ways to effectively combine different regularization methods.</p>
+<p>If you are interested in this line of research, consider working at OpenAI⁠!</p>
+<p>According to recent reports, even impressive⁠(opens in a new window) RL policies are often trained without supervised learning techniques such as dropout and batch normalization. In the CoinRun generalization regime, however, we find that these methods do have a positive impact and that our previous RL policies were overfitting to particular MDPs.</p>
+<p>Thanks to the many people who contributed to this paper and blog post:.</p>
+<p>Oleg Klimov, Chris Hesse, Taehoon Kim, John Schulman, Mira Murati, Jack Clark, Ashley Pilipiszyn, Matthias Plappert, Ilya Sutskever, Greg Brockman.</p>
+<p id="sec-end-35394">Jon Walsh, Caleb Kruse, Nikhil Mishra.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/quantifying-generalization-in-reinforcement-learning" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="latest-update-rl-fast-reinforcement-learning-via-slow-reinforceme-35491.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35491. Latest Update: RL²: Fast reinforcement learning via slow reinforcement learning
+        </a>
+        
+        <a href="a-connection-between-generative-adversarial-networks-inverse-rein-35490.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35490. A connection between generative adversarial networks, inverse reinforcement learning, and energy-based models
+        </a>
+        
+        <a href="tech-report-exploration-a-study-of-count-based-exploration-for-de-35487.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35487. Tech Report: #Exploration: A study of count-based exploration for deep reinforcement learning
+        </a>
+        
+        <a href="evolution-strategies-as-a-scalable-alternative-to-reinforcement-l-35474.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35474. Evolution strategies as a scalable alternative to reinforcement learning
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
