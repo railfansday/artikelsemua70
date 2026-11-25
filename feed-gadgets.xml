@@ -4,100 +4,100 @@
     <title>Portal Berita - Gadgets</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Gadgets.</description>
-    <lastBuildDate>Tue, 24 Nov 2026 22:24:27 -0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Nov 2026 08:12:04 -0000</lastBuildDate>
     
             <item>
-                <title>Apple is getting this wrong</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-31098.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-31098.html</guid>
-                <description>In a recent development, apple is one of the greatest companies of all time, and built a reputation for obsessing over the smallest details. This careless, aggressive and oddly personal lawsuit sadly doesn’t live up to that reputation. Apple had claimed that they contacted OpenAI...</description>
+                <title>How We Used Codex to Ship Sora for Android in 28 Days</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-33454.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-33454.html</guid>
+                <description>By Patrick Hum and RJ Marsan, Members of the Technical Staff. As of April 26, 2026, the Sora product is no longer available. Sources indicate that in November, we launched the Sora Android app to the world, giving anyone with an Android device the ability to turn a short prompt i...</description>
             </item>
             <item>
-                <title>Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-30789.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-30789.html</guid>
+                <title>Using Stable Diffusion with Core ML on Apple Silicon</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-33396.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-33396.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-30395.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-30395.html</guid>
-                <description>Industry observers note that last November, we introduced AnyLanguageModel on this blog:
+                <title>Industry News: Faster Stable Diffusion with Core ML on iPhone, iPad, and Mac</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-faster-stable-diffusion-with-core-ml-on-iphone-ipad-33274.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-faster-stable-diffusion-with-core-ml-on-iphone-ipad-33274.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Tech Report: Releasing Swift Transformers: Run On-Device LLMs in Apple Devices</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-releasing-swift-transformers-run-on-device-llms-in-ap-33236.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-releasing-swift-transformers-run-on-device-llms-in-ap-33236.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Industry News: AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-anylanguagemodel-10-one-year-of-local-models-on-app-32276.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-anylanguagemodel-10-one-year-of-local-models-on-app-32276.html</guid>
+                <description>It has been revealed that last November, we introduced AnyLanguageModel on this blog:
 a drop-in replacement for Apple's Foundation Models framework
 that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models
-but w...</description>
+but were...</description>
             </item>
             <item>
-                <title>Latest Update: Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-introducing-anyspeechrecognizer-and-anydecisionmode-30377.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-introducing-anyspeechrecognizer-and-anydecisionmode-30377.html</guid>
-                <description>In a recent development, language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Recent findings suggest that say a customer calls your support line. First, you want to know what they mentioned...</description>
+                <title>Industry News: Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-introducing-anyspeechrecognizer-and-anydecisionmode-32240.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-introducing-anyspeechrecognizer-and-anydecisionmode-32240.html</guid>
+                <description>Language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Sources indicate that say a customer calls your support line. First, you want to know what they said (speech recognition). Then, you want...</description>
             </item>
             <item>
-                <title>Industry News: AWS Device Farm debuts Device Connect for local access to remote Android devices</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-aws-device-farm-debuts-device-connect-for-local-acc-30297.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-aws-device-farm-debuts-device-connect-for-local-acc-30297.html</guid>
+                <title>AWS Device Farm launches Device Connect for local access to remote Android devices</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-launches-device-connect-for-local-access-to-remot-32184.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-launches-device-connect-for-local-access-to-remot-32184.html</guid>
                 <description>AWS Device Farm, a service for testing mobile and web apps, now offers Device Connect. With Device Connect, you and AI agents can use remote Android devices from your local machine in an IDE, terminal, or development environment of your choice, as if it were plugged into your lap...</description>
             </item>
             <item>
-                <title>Latest Update: One terminal command gave my forgotten Android device a desk job</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-one-terminal-command-gave-my-forgotten-android-devi-30279.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-one-terminal-command-gave-my-forgotten-android-devi-30279.html</guid>
-                <description>My kitchen junk drawer used to hold takeout menus and coupons, but it has since become a storage spot for old tablets or phones. Like me, you probably have a few devices lying around that are perfectly functional but don’t meet your daily driving needs. It’s tucked out of view, l...</description>
+                <title>One terminal command gave my forgotten Android device a desk job</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/one-terminal-command-gave-my-forgotten-android-device-a-desk-job-32119.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/one-terminal-command-gave-my-forgotten-android-device-a-desk-job-32119.html</guid>
+                <description>Recent findings suggest that my kitchen junk drawer used to hold takeout menus and coupons, but it has since become a storage spot for old tablets or phones. Like me, you probably have a few devices lying around that are perfectly functional but don’t meet your daily driving need...</description>
             </item>
             <item>
-                <title>The Best Black Friday iPad Deals On the Latest Models</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-best-black-friday-ipad-deals-on-the-latest-models-30244.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-best-black-friday-ipad-deals-on-the-latest-models-30244.html</guid>
-                <description>There's no denying that 2026 has been a slower year for the iPad lineup. Only the iPad Air and iPad Mini received updates (with nothing upcoming for the iPad or iPad Pro since 2025), and in June, the entire lineup was subject to a painful price hike of either $100 or $200, depend...</description>
+                <title>Apple iMac M6 review: Your best Apple AIO option – just go for the upgrades</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-imac-m6-review-your-best-apple-aio-option-just-go-for-the-u-32078.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-imac-m6-review-your-best-apple-aio-option-just-go-for-the-u-32078.html</guid>
+                <description>Recent findings suggest that the iMac is arguably Apple’s safest product. It serves a broad purpose: serving as an at-home or office computer, and looking pretty in the process. It’s colorful and capable, and it does just about anything one would want it to for the price. It’s al...</description>
             </item>
             <item>
-                <title>iPad Mini (2026) review: the OLED is major, but another feature won me over</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/ipad-mini-2026-review-the-oled-is-major-but-another-feature-won-m-30230.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/ipad-mini-2026-review-the-oled-is-major-but-another-feature-won-m-30230.html</guid>
-                <description>According to recent reports, the latest iPad Mini with the A20 Pro has become my go-to tablet for the past few weeks, and one thing is clear: it’s the most dramatic Mini upgrade in years. The OLED display is a meaningful upgrade from the LCD, and water resistance is a first for t...</description>
+                <title>Best early Black Friday 2026 Samsung deals: TVs, phones, tablets, and more</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-2026-samsung-deals-tvs-phones-tablets-and-32076.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-2026-samsung-deals-tvs-phones-tablets-and-32076.html</guid>
+                <description>Industry observers note that the Black Friday shopping weekend officially starts this week, and you can already find some of the best discounts of the year on big-name brands like Apple, LG, Amazon, and more. For Samsung fans, everything from tablets to smartphones to TVs will be...</description>
             </item>
             <item>
-                <title>Industry News: Standard Intelligence: Training General Intelligence in Pixel Space</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-standard-intelligence-training-general-intelligence-30217.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-standard-intelligence-training-general-intelligence-30217.html</guid>
+                <title>Standard Intelligence: Training General Intelligence in Pixel Space</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-32075.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-32075.html</guid>
                 <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? The race to scale language models â and the agent ecosystem around them â is white...</description>
             </item>
             <item>
-                <title>The Best Early Black Friday MacBook Deals (2026)</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-best-early-black-friday-macbook-deals-2026-30152.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-best-early-black-friday-macbook-deals-2026-30152.html</guid>
-                <description>In a recent development, it’s been a tremendous year for MacBooks. Between the launch of the MacBook Neo and the OLED MacBook Pro, there’s never been such a wide variety of Apple laptops to choose from. Heading into Black Friday, there are already some really great deals on some ...</description>
+                <title>Slow Android phone? How to speed it back up in 4 easy steps</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/slow-android-phone-how-to-speed-it-back-up-in-4-easy-steps-32073.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/slow-android-phone-how-to-speed-it-back-up-in-4-easy-steps-32073.html</guid>
+                <description>Recent findings suggest that as someone who covers consumer tech for a living, I get fresh smartphones fairly often. But most consumers don’t upgrade at the same pace. With each passing year, their phones can start slowing down. If that’s you, there are a few quick ways to speed ...</description>
             </item>
             <item>
-                <title>Breaking: Threads comes to iPad and takes a page from X’s playbook with cashtags</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-threads-comes-to-ipad-and-takes-a-page-from-xs-playbook--30103.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-threads-comes-to-ipad-and-takes-a-page-from-xs-playbook--30103.html</guid>
-                <description>According to recent reports, it may have taken 15 years for Instagram to launch on the iPad, but Instagram’s other app, Threads, has taken a slightly faster path to the Apple tablet. In an overnight upgrade, the company rolled out a big-screen version of the X competitor. It’s al...</description>
+                <title>Latest Update: The Best Early Black Friday MacBook Deals (2026)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-the-best-early-black-friday-macbook-deals-2026-32067.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-the-best-early-black-friday-macbook-deals-2026-32067.html</guid>
+                <description>Sources indicate that it’s been a tremendous year for MacBooks. Between the launch of the MacBook Neo and the OLED MacBook Pro, there’s never been such a wide variety of Apple laptops to choose from. Heading into Black Friday, there are already some really great deals on some of ...</description>
+            </item>
+            <item>
+                <title>Threads comes to iPad and takes a page from X’s playbook with cashtags</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/threads-comes-to-ipad-and-takes-a-page-from-xs-playbook-with-cash-31977.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/threads-comes-to-ipad-and-takes-a-page-from-xs-playbook-with-cash-31977.html</guid>
+                <description>It may have taken 15 years for Instagram to launch on the iPad, but Instagram’s other app, Threads, has taken a slightly faster path to the Apple tablet. In an overnight revision, the company rolled out a substantial-screen version of the X competitor. It’s also added another new...</description>
             </item>
             <item>
                 <title>5 new Apple Health features you should try in iOS 27.3 – if your phone qualifies</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/5-new-apple-health-features-you-should-try-in-ios-273-if-your-pho-30044.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/5-new-apple-health-features-you-should-try-in-ios-273-if-your-pho-30044.html</guid>
-                <description>Sources indicate that apple is kicking off a new and improved Health app next month with the release of iOS 27.3. Instead of just recording and displaying your health-related stats, the app will tap into Apple Intelligence to analyze the data and dispense advice on how to improve...</description>
-            </item>
-            <item>
-                <title>Amazon is knocking almost $50 off six months of Apple TV</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/amazon-is-knocking-almost-50-off-six-months-of-apple-tv-30019.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/amazon-is-knocking-almost-50-off-six-months-of-apple-tv-30019.html</guid>
-                <description>If you buy something from a link, The Verge may earn a commission. See our ethics statement. Streaming deals aren’t as plentiful as they used to be, but they’re still around if you know where to look. One that caught our eye is an offer for Apple TV for those with an Amazon accou...</description>
-            </item>
-            <item>
-                <title>Best early Black Friday streaming deals 2026: Up to 79% off Disney+ and Hulu, HBO Max, Apple TV, more</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-streaming-deals-2026-up-to-79-off-disney--30013.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-early-black-friday-streaming-deals-2026-up-to-79-off-disney--30013.html</guid>
-                <description>Black Friday is the best (and often only) time of year to find deals on popular streaming services, and we’re already seeing some excellent deals go live, including a year of Disney+ and Hulu for 61% off ($4.99/month), a year of HBO Max Basic with Ads for 50% off ($5.99/month) an...</description>
-            </item>
-            <item>
-                <title>Pixel Weather’s fresh feature lets you report your local conditions now</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/pixel-weathers-fresh-feature-lets-you-report-your-local-condition-30011.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/pixel-weathers-fresh-feature-lets-you-report-your-local-condition-30011.html</guid>
-                <description>Default weather apps are notoriously unreliable, but Google is giving owners a chance to help improve things. A recent update to the Pixel Weather app introduced a fresh “Report current weather” card. If the weather you’re experiencing doesn’t match what the app is saying, you ca...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/5-new-apple-health-features-you-should-try-in-ios-273-if-your-pho-31921.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/5-new-apple-health-features-you-should-try-in-ios-273-if-your-pho-31921.html</guid>
+                <description>Apple is kicking off a new and improved Health app next month with the release of iOS 27.3. Instead of just recording and displaying your health-related stats, the app will tap into Apple Intelligence to analyze the data and dispense advice on how to improve your health and fitne...</description>
             </item>
 </channel>
 </rss>

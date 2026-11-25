@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Introducing GPT-5.2</title>
+    <meta name="description" content="The most advanced frontier model for professional work and long-running agents. We are introducing GPT‑5.2, the most capable model series yet for professio">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-gpt-52-33462.html">
+    <meta property="og:title" content="Tech Report: Introducing GPT-5.2">
+    <meta property="og:description" content="The most advanced frontier model for professional work and long-running agents. We are introducing GPT‑5.2, the most capable model series yet for professio">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/rp3qd1SEWW0Slo5V4NiJz/1e6e391508cc0d85fa8458fd8c95608d/5.2-Blog-16x9.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-gpt-52-33462.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Introducing GPT-5.2", "image": ["https://images.ctfassets.net/kftzwdyauwt9/rp3qd1SEWW0Slo5V4NiJz/1e6e391508cc0d85fa8458fd8c95608d/5.2-Blog-16x9.png?w=1600&h=900&fit=fill"], "datePublished": "2025-12-11T00:00:00", "dateModified": "2026-11-25T08:10:02.034047", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-gpt-52-33462.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Introducing GPT-5.2</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 11 Dec 2025 &bull; ⏱️ 15 min read (2911 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>The most advanced frontier model for professional work and long-running agents.</li><li style='margin-bottom:6px;'>We are introducing GPT‑5.2, the most capable model series yet for professional knowledge work.</li><li style='margin-bottom:6px;'>Recent findings suggest that already, the average ChatGPT Enterprise user says⁠ AI saves them 40–60 minutes a day, and heavy people say it saves them more than 10 hours a week.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-33462"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-33462"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-33462"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Introducing GPT-5.2" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/rp3qd1SEWW0Slo5V4NiJz/1e6e391508cc0d85fa8458fd8c95608d/5.2-Blog-16x9.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-33462">The most advanced frontier model for professional work and long-running agents.</p>
+<p>We are introducing GPT‑5.2, the most capable model series yet for professional knowledge work.</p>
+<p>Recent findings suggest that already, the average ChatGPT Enterprise user says⁠ AI saves them 40–60 minutes a day, and heavy people say it saves them more than 10 hours a week. We designed GPT‑5.2 to unlock even more economic value for people; it’s better at creating spreadsheets, building presentations, writing code, perceiving images, understanding long contexts, using tools, and handling complex, multi-step projects.</p>
+<p>GPT‑5.2 sets a newly introduced state of the art across many benchmarks, including GDPval, where it outperforms industry professionals at well-specified knowledge work tasks spanning 44 occupations.</p>
+<p>GDPval (wins or ties)Knowledge work tasks.</p>
+<p>SWE-Bench Pro (public)Software engineering.</p>
+<p>SWE-bench VerifiedSoftware engineering.</p>
+<p>GPQA Diamond (no tools)Science questions.</p>
+<p>CharXiv Reasoning (w/ Python)Scientific figure questions.</p>
+<p>AIME 2025 (no tools)Competition math.</p>
+<p>FrontierMath (Tier 1–3)Advanced mathematics.</p>
+<p>FrontierMath (Tier 4)Advanced mathematics.</p>
+<p>ARC-AGI-1 (Verified)Abstract reasoning.</p>
+<p>ARC-AGI-2 (Verified)Abstract reasoning.</p>
+<p>Notion⁠(opens in a new window), Box⁠(opens in a new window), Shopify⁠(opens in a new window), Harvey⁠(opens in a new window) and Zoom⁠(opens in a new window) observed GPT‑5.2 demonstrates state-of-the-art long-horizon reasoning and tool-calling performance. Databricks⁠(opens in a new window), Hex⁠(opens in a new window) and Triple Whale⁠(opens in a new window) found GPT‑5.2 to be exceptional at agentic data science and document analysis tasks. Cognition⁠(opens in a new window), Warp⁠(opens in a new window), Charlie Labs⁠(opens in a new window), JetBrains⁠(opens in a new window) and Augment Code⁠(opens in a new window) say GPT‑5.2 delivers state-of-the-art agentic coding performance, with measurable improvements in areas such as interactive coding, code reviews and bug finding.</p>
+<p>In ChatGPT, GPT‑5.2 Instant, Thinking, and Pro will begin rolling out today, starting with paid prepares. In the API, they are available now to all developers.</p>
+<p>Overall, GPT‑5.2 brings significant improvements in general intelligence, long-context understanding, agentic tool-calling, and vision—making it better at executing complex, real-world tasks end-to-end than any previous model.</p>
+<p>It has been revealed that GPT‑5.2 Thinking is the best model yet for real-world, professional use. On GDPval⁠, an eval measuring well-specified knowledge work tasks across 44 occupations, GPT‑5.2 Thinking sets a new state-of-the-art score, and is our first model that performs at or above a human expert level. Specifically, GPT‑5.2 Thinking beats or ties top industry professionals on 70.9% of comparisons on GDPval knowledge work tasks, according to expert human judges. These tasks include making presentations, spreadsheets, and other artifacts. GPT‑5.2 Thinking produced outputs for GDPval tasks at &gt;11x the speed and &lt;1% the cost of expert professionals, suggesting that when paired with human oversight, GPT‑5.2 can help with professional work. Speed and cost estimates are based on historical metrics; speed in ChatGPT may vary.</p>
+<p>In GDPval, models attempt well-specified knowledge work spanning 44 occupations from the top 9 industries contributing to US GDP. Tasks request real work products, such as sales presentations, accounting spreadsheets, urgent care schedules, manufacturing diagrams, or short videos. In ChatGPT, GPT‑5.2 Thinking has new tools that GPT‑5 Thinking does not.</p>
+<p>When reviewing one especially good output, one GDPval judge commented, "It is an exciting and noticeable leap in output quality... [it] appears to have been done by a professional company with staff, and has a surprisingly well designed layout and advice for both deliverables, though with one we still have some minor errors to correct.".</p>
+<p>Additionally, on our internal benchmark of junior investment banking analyst spreadsheet modeling tasks—such as putting together a three-statement model for a Fortune 500 firm with proper formatting and citations, or building a leveraged buyout model for a take-private—GPT 5.2 Thinking's average score per task is 9.3% higher than GPT‑5.1’s, rising from 59.1% to 68.4%.</p>
+<p>Side-by-side comparisons show improved sophistication and formatting in spreadsheets and slides generated by GPT‑5.2 Thinking:.</p>
+<p>According to recent reports, to use the new spreadsheet and presentation capabilities in ChatGPT, you must be on a Plus, Pro, Business, or Enterprise initiative and select either GPT‑5.2 Thinking or Pro. Complex generations can take many minutes to produce.</p>
+<p>GPT‑5.2 Thinking sets a upcoming state of the art of 55.6% on SWE-Bench Pro, a rigorous evaluation of real-world software engineering. Unlike SWE-bench Verified, which only tests Python, SWE-Bench Pro tests four languages and aims to be more contamination-resistant, challenging, diverse, and industrially relevant.</p>
+<p>In SWE-Bench Pro⁠(opens in a upcoming window)⁠⁠⁠, a model is given a code repository and must generate a patch to solve a realistic software engineering task.</p>
+<p>On SWE-bench Verified (not plotted), GPT‑5.2 Thinking scores our latest high of 80%.</p>
+<p>For everyday professional use, this translates into a model that can more reliably debug production code, implement feature requests, refactor large codebases, and ship fixes end-to-end with less manual intervention.</p>
+<p>GPT‑5.2 Thinking is also better at front-end software engineering than GPT‑5.1 Thinking. Early testers found it significantly stronger at front-end development and complex or unconventional UI work—especially involving 3D elements—making it a powerful daily partner for engineers across the stack. See a few examples of what it can produce from a single prompt:.</p>
+<p>Early testers shared their feedback on GPT‑5.2’s coding capabilities:.</p>
+<p>GPT‑5.2 Thinking hallucinates less than GPT‑5.1 Thinking. On a set of de-identified queries from ChatGPT, responses with errors were 30%rel less common. For professionals, this means fewer mistakes when using the model for research, writing, analysis, and decision support—making the model more dependable for everyday knowledge work.</p>
+<p>Sources indicate that reasoning effort was set to the maximum available and a search tool was enabled. Errors were detected by other models, which may make errors themselves. Claim-level error rates are far lower than response-level error rates, as most responses contain many claims.</p>
+<p>It has been revealed that like all models, GPT‑5.2 Thinking is imperfect. For anything critical, double check its answers.</p>
+<p>Recent findings suggest that GPT‑5.2 Thinking sets a fresh state of the art in long-context reasoning, achieving leading performance on OpenAI MRCRv2—an evaluation that tests a model’s ability to integrate information spread across long documents. On real-world tasks like deep document analysis, which require related information across hundreds of thousands of tokens, GPT‑5.2 Thinking is substantially more accurate than GPT‑5.1 Thinking. In particular, it’s the first model we’ve seen that achieves near 100% accuracy on the 4-needle MRCR variant (out to 256k tokens).</p>
+<p>In practical terms, this enables professionals to use GPT‑5.2 to work with long documents—such as reports, contracts, research papers, transcripts, and multi-file projects—while maintaining coherence and accuracy across hundreds of thousands of tokens. This makes GPT‑5.2 especially well suited for deep analysis, synthesis, and complex multi-source workflows.</p>
+<p>In OpenAI-MRCR⁠⁠(opens in a upcoming window) v2 (multi-round co-reference resolution), multiple identical “needle” user requests are inserted into long “haystacks” of similar requests and responses, and the model is asked to reproduce the response to nth needle. Version 2 of the eval fixes ~5% of tasks that had incorrect ground truth values. Mean match ratio measures the average string match ratio between the model’s response and the correct answer. The points at 256k max input tokens represent averages over 128k–256k input tokens, and so forth. Here, 256k represents 256 * 1,024 = 262,144 tokens. Reasoning effort was set to the maximum available.</p>
+<p>For tasks that benefit from thinking beyond the maximum context window, GPT‑5.2 Thinking is compatible with our latest Responses /compact endpoint, which extends the model’s effective context window. This lets GPT‑5.2 Thinking tackle more tool-heavy, long-running workflows that would otherwise be limited by context length. Read more in our API documentation⁠(opens in a new window).</p>
+<p>GPT‑5.2 Thinking is our strongest vision model yet, cutting error rates roughly in half on chart reasoning and software interface understanding.</p>
+<p id="sec-mid-33462">For everyday professional use, this means the model can more accurately interpret dashboards, product screenshots, technical diagrams, and visual reports—supporting workflows in finance, operations, engineering, design, and customer support where visual information is central.</p>
+<p>According to recent reports, in CharXiv Reasoning⁠(opens in a latest window), models answer questions about visual charts from scientific papers. A Python tool was enabled and reasoning effort was set to maximum.</p>
+<p>Industry observers note that in ScreenSpot-Pro⁠(opens in a new window), models must reason about high-resolution screenshots of graphical user interfaces from a variety of professional settings. A Python tool was enabled and reasoning effort was set to maximum. Without the Python tool, scores are much lower. We recommend enabling the Python tool on vision tasks like these.</p>
+<p>Industry observers note that compared to previous models, GPT‑5.2 Thinking has a stronger grasp of how elements are positioned within an image, which helps on tasks where relative layout plays a key role in solving the problem. In the example below, we ask the model to identify the components in an image input (in this case, a motherboard) and return labels with approximate bounding boxes. Even on a low-quality image, GPT‑5.2 identifies the main regions and places boxes that sometimes match the true locations of each component, while GPT‑5.1 only labels a few parts and reveals a much weaker understanding of their spatial arrangement. Both models make clear mistakes, but GPT‑5.2 shows better comprehension of the image.</p>
+<p>GPT‑5.2 Thinking achieves a fresh state of the art of 98.7% on Tau2-bench Telecom, demonstrating its ability to reliably use tools across long, multi-turn tasks.</p>
+<p>For latency-sensitive use cases, GPT‑5.2 Thinking also performs much better at reasoning.effort='none', substantially outperforming GPT‑5.1 and GPT‑4.1.</p>
+<p>In τ2-bench⁠⁠(opens in a upcoming window), models use tools to complete customer support tasks in a multi-turn interaction with a simulated user. For the Telecom domain, we included a brief, generally helpful instruction in the system prompt to boost performance. We exclude the Airline subset because of lower-quality ground truth grading.</p>
+<p>For professionals, this translates into stronger end-to-end workflows—such as resolving customer support cases, pulling data from multiple systems, running analyses, and generating final outputs with fewer breakdowns between steps.</p>
+<p>According to recent reports, for example, when asking a complex customer service question that requires multi-step resolution, the model can more effectively coordinate a full workflow across multiple agents. In the case below, a traveler reports a delayed flight, a missed connection, an overnight stay in New York, and a medical seating requirement. GPT‑5.2 manages the entire chain of tasks—rebooking, special-assistance seating, and compensation—delivering a more complete outcome than GPT‑5.1.</p>
+<p>Industry observers note that my flight from Paris to Upcoming York was delayed, and I missed my connection to Austin. My checked bag is also missing, and I need to spend the night in New York. I also require a special front-row seat for medical reasons. Can you help me?</p>
+<p>Industry observers note that one of our hopes for AI is that it will accelerate scientific research for the benefit of everyone. Toward this, we’ve been working with and listening to scientists to see how AI can speed up their work, and last month we shared some early collaborative experiments here⁠.</p>
+<p>We believe GPT‑5.2 Pro and GPT‑5.2 Thinking are the world’s best models for assisting and accelerating scientists. On GPQA Diamond, a graduate-level Google-proof Q&amp;A benchmark, GPT‑5.2 Pro achieves 93.2%, followed closely by GPT‑5.2 Thinking at 92.4%.</p>
+<p>In GPQA Diamond⁠(opens in a new window), models answer multiple choice questions about physics, chemistry, and biology. No tools were enabled and reasoning effort was set to maximum.</p>
+<p>On FrontierMath (Tier 1–3), an evaluation of expert-level mathematics, GPT‑5.2 Thinking set a fresh state of the art, solving 40.3% of problems.</p>
+<p>In FrontierMath⁠(opens in a new window), models solve expert-level mathematics problems. A Python tool was enabled and reasoning effort was set to maximum.</p>
+<p>We're beginning to see AI models meaningfully accelerate progress in math and science in tangible ways. For example, in recent work⁠ with GPT‑5.2 Pro, researchers explored an open question in statistical learning theory. In a narrow, well-specified setting, the model proposed a proof that was subsequently verified by the authors and reviewed with external experts, illustrating how frontier models can assist mathematical research under close human oversight.</p>
+<p>On ARC-AGI-1 (Verified), a benchmark designed to measure general reasoning ability, GPT‑5.2 Pro is the first model to cross the 90% threshold, improving from 87%⁠(opens in a newly introduced window) by o3‑preview last year while reducing the cost of achieving that performance by roughly 390×.</p>
+<p>Sources indicate that on ARC-AGI-2 (Verified), which raises the difficulty and better isolates fluid reasoning, GPT‑5.2 Thinking achieves a new state of the art for chain-of-thought models, scoring 52.9%. GPT‑5.2 Pro performs even higher, reaching 54.2%, further extending the model’s ability to reason through novel, abstract problems.</p>
+<p>Improvements across these evaluations reflect GPT‑5.2’s stronger multi-step reasoning, greater quantitative accuracy, and more reliable problem solving on complex technical tasks.</p>
+<p>Here’s what our early testers say about GPT‑5.2:.</p>
+<p>In ChatGPT, consumers should notice GPT‑5.2 feels better to use day to day—more structured, more reliable, and still enjoyable to talk to.</p>
+<p>Industry observers note that GPT‑5.2 Instant is a fast, capable workhorse for everyday work and learning, with clear improvements in info-seeking questions, how-tos and walk-throughs, technical writing, and translation, building on the warmer conversational tone introduced in GPT‑5.1 Instant. Early testers particularly noted clearer explanations that surface key information upfront.</p>
+<p>GPT‑5.2 Thinking is designed for deeper work, helping consumers tackle more complex tasks with greater polish—especially for coding, summarizing long documents, answering questions about uploaded files, working through math and logic step by step, and supporting planning and decisions with clearer structure and more useful detail.</p>
+<p>GPT‑5.2 Pro is our smartest and most trustworthy option for difficult questions where a higher-quality answer is worth the wait, with early testing showing fewer major errors and stronger performance in complex domains like programming.</p>
+<p>GPT‑5.2 builds on the safe completion⁠ research we introduced with GPT‑5, which teaches the model to give the most helpful answer while still staying within safety boundaries.</p>
+<p>Industry observers note that with this release, we continued our work to strengthen our models’ responses in sensitive conversations⁠, with meaningful improvements in how they respond to prompts indicating signs of suicide or self harm, mental health distress, or emotional reliance on the model. These targeted interventions have resulted in fewer undesirable responses in both GPT‑5.2 Instant and GPT‑5.2 Thinking as compared to GPT‑5.1 and GPT‑5 Instant and Thinking models. Further details can be found in the system card⁠.</p>
+<p>We’re in the early stages of rolling out our age prediction model⁠ so that we can automatically apply content protections for users who are under 18, in order to limit access to sensitive content. This builds on our existing approach to users we know are under 18 and our parental controls.</p>
+<p>GPT‑5.2 is one step in an ongoing series of improvements, and we’re far from done. While this release delivers meaningful gains in intelligence and productivity, we know there are areas where people want more. In ChatGPT, we’re working on known issues like over-refusals, while continuing to raise the bar on safety and reliability overall. These changes are complex, and we’re focused on getting them right.</p>
+<p>In ChatGPT, we’ll begin rolling out GPT‑5.2 (Instant, Thinking, and Pro) today, starting with paid intends (Plus, Pro, Go, Business, Enterprise). We deploy GPT‑5.2 gradually to keep ChatGPT as smooth and reliable as we can; if you don’t see it at first, please try again later. In ChatGPT, GPT‑5.1 will still be available to paid users for three months under legacy models, after which we will sunset GPT‑5.1.</p>
+<p>In our API Platform, GPT‑5.2 Thinking is available today in the Responses API and Chat Completions API as gpt-5.2, and GPT‑5.2 Instant as gpt-5.2-chat-latest. GPT‑5.2 Pro is available in the Responses API as gpt-5.2-pro. Developers can now set the reasoning parameter in GPT‑5.2 Pro, and both GPT‑5.2 Pro and GPT‑5.2 Thinking now support the new fifth reasoning effort of xhigh, for tasks where quality is most key.</p>
+<p>Industry observers note that GPT‑5.2 is priced at $1.75/1M input tokens and $14/1M output tokens, with a 90% discount on cached inputs. On multiple agentic evals, we found that despite GPT‑5.2’s greater cost per token, the cost of attaining a given level of quality ended up less expensive due to GPT‑5.2’s greater token efficiency.</p>
+<p>It has been revealed that while ChatGPT subscription pricing remains the same, in the API GPT‑5.2 is priced higher per token than GPT‑5.1 because it is a more capable model. It’s still priced below other frontier models, so people can continue to use it deeply in their daily work and core applications.</p>
+<p>It has been revealed that we have no current intends to deprecate GPT‑5.1, GPT‑5, or GPT‑4.1 in the API and will communicate any deprecation plans with ample advance notice for developers. While GPT‑5.2 will work well out of the box in Codex, we expect to release a version of GPT‑5.2 optimized for Codex in the coming weeks.</p>
+<p>GPT‑5.2 was built in collaboration with our long-standing partners NVIDIA and Microsoft. Azure data centers and NVIDIA GPUs, including H100, H200, and GB200-NVL72, underpin OpenAI’s at-scale training infrastructure, driving significant gains in model intelligence. Together, this collaboration allows us to scale compute with confidence and bring new models to market more rapidly.</p>
+<p>Below, we report comprehensive benchmark scores for GPT‑5.2 Thinking, along with a subset for GPT‑5.2 Pro.</p>
+<p>Industry observers note that models were run with maximum available reasoning effort in our API (xhigh for GPT‑5.2 Thinking &amp; Pro, and high for GPT‑5.1 Thinking), except for the professional evals, where GPT‑5.2 Thinking was run with reasoning effort heavy, the maximum available in ChatGPT Pro. Benchmarks were conducted in a research environment, which may provide slightly different output from production ChatGPT in some cases.</p>
+<p id="sec-end-33462">* For SWE-Lancer, we omit 40/237 problems that did not run on our infrastructure.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-gpt-5-2" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-introducing-chatgpt-agent-33647.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33647. Tech Report: Introducing ChatGPT agent
+        </a>
+        
+        <a href="introducing-gpt-oss-33629.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33629. Introducing gpt-oss
+        </a>
+        
+        <a href="introducing-gpt-5-33624.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33624. Introducing GPT-5
+        </a>
+        
+        <a href="tech-report-how-amgen-uses-gpt-5-33623.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33623. Tech Report: How Amgen uses GPT-5
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

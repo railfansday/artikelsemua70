@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Update: Unrolling the Codex agent loop</title>
+    <meta name="description" content="By Michael Bolin, Member of Technical Staff. Recent findings suggest that codex CLI⁠(opens in a latest window) is our cross-platform local software agent, ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/latest-update-unrolling-the-codex-agent-loop-33385.html">
+    <meta property="og:title" content="Latest Update: Unrolling the Codex agent loop">
+    <meta property="og:description" content="By Michael Bolin, Member of Technical Staff. Recent findings suggest that codex CLI⁠(opens in a latest window) is our cross-platform local software agent, ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5SVla4Q1Mj9zfLIRRvNBn4/00511d9c01c2bfe3bbe763b8eae1fd85/oai_Unrolling_the_Codex_agent_loop_SEO.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/latest-update-unrolling-the-codex-agent-loop-33385.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Latest Update: Unrolling the Codex agent loop", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5SVla4Q1Mj9zfLIRRvNBn4/00511d9c01c2bfe3bbe763b8eae1fd85/oai_Unrolling_the_Codex_agent_loop_SEO.png?w=1600&h=900&fit=fill"], "datePublished": "2026-01-23T12:00:00", "dateModified": "2026-11-25T08:09:50.722532", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/latest-update-unrolling-the-codex-agent-loop-33385.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Latest Update: Unrolling the Codex agent loop</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 23 Jan 2026 &bull; ⏱️ 15 min read (3096 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Recent findings suggest that codex CLI⁠(opens in a latest window) is our cross-platform local software agent, designed to produce high-quality, reliable software changes while operating safely and efficiently on your machine.</li><li style='margin-bottom:6px;'>It has been revealed that to kick off, we’ll focus on the agent loop, which is the core logic in Codex CLI that is responsible for orchestrating the interaction between the user, the model, and the tools the model invokes to perform meaningful software work.</li><li style='margin-bottom:6px;'>Before we dive in, a quick note on terminology: at OpenAI, “Codex” encompasses a suite of software agent offerings, including Codex CLI, Codex Cloud, and the Codex VS Code extension.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-33385"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-33385"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-33385"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Latest Update: Unrolling the Codex agent loop" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5SVla4Q1Mj9zfLIRRvNBn4/00511d9c01c2bfe3bbe763b8eae1fd85/oai_Unrolling_the_Codex_agent_loop_SEO.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-33385">By Michael Bolin, Member of Technical Staff.</p>
+<p>Recent findings suggest that codex CLI⁠(opens in a latest window) is our cross-platform local software agent, designed to produce high-quality, reliable software changes while operating safely and efficiently on your machine. We’ve learned a tremendous amount about how to build a world-class software agent since we first released the CLI in April⁠. To unpack those insights, this is the first post in an ongoing series where we’ll explore various aspects of how Codex works, as well as hard-earned lessons. (For an even more granular view on how the Codex CLI is built, check out our open source repository at https://github.com/openai/codex⁠(opens in a new window). Many of the finer details of our design decisions are memorialized in GitHub issues and pull requests if you’d like to learn more.).</p>
+<p>It has been revealed that to kick off, we’ll focus on the agent loop, which is the core logic in Codex CLI that is responsible for orchestrating the interaction between the user, the model, and the tools the model invokes to perform meaningful software work. We hope this post gives you a good view into the role our agent (or “harness”) plays in making use of an LLM.</p>
+<p>Before we dive in, a quick note on terminology: at OpenAI, “Codex” encompasses a suite of software agent offerings, including Codex CLI, Codex Cloud, and the Codex VS Code extension. This post focuses on the Codex harness, which provides the core agent loop and execution logic that underlies all Codex experiences and is surfaced through the Codex CLI. For ease here, we’ll use the terms “Codex” and “Codex CLI” interchangeably.</p>
+<p>At the heart of every AI agent is something called “the agent loop.” A simplified illustration of the agent loop looks like this:.</p>
+<p>To start, the agent takes input from the user to include in the set of textual instructions it prepares for the model known as a prompt.</p>
+<p>Sources indicate that the next step is to query the model by sending it our instructions and asking it to generate a response, a process known as inference. During inference, the textual prompt is first translated into a sequence of input tokens⁠(opens in a new window)—integers that index into the model’s vocabulary. These tokens are then used to sample the model, producing a new sequence of output tokens.</p>
+<p>The output tokens are translated back into text, which becomes the model’s response. Because tokens are produced incrementally, this translation can happen as the model runs, which is why many LLM-based applications display streaming output. In practice, inference is usually encapsulated behind an API that operates on text, abstracting away the details of tokenization.</p>
+<p>As the result of the inference step, the model either (1) produces a final response to the user’s original input, or (2) requests a tool call that the agent is expected to perform (e.g., “run ls and report the output”). In the case of (2), the agent executes the tool call and appends its output to the original prompt. This output is used to generate a newly introduced input that’s used to re-query the model; the agent can then take this new information into account and try again.</p>
+<p>This process repeats until the model stops emitting tool calls and instead produces a message for the user (referred to as an assistant message in OpenAI models). In many cases, this message directly answers the user’s original request, but it may also be a follow-up question for the user.</p>
+<p>According to recent reports, because the agent can execute tool calls that modify the local environment, its “output” is not limited to the assistant message. In many cases, the primary output of a software agent is the code it writes or edits on your machine. Nevertheless, each turn always ends with an assistant message—such as “I added the architecture.md you asked for”—which signals a termination state in the agent loop. From the agent’s perspective, its work is complete and control returns to the user.</p>
+<p>The journey from user input to agent response shown in the diagram is referred to as one turn of a conversation (a thread in Codex). Though this conversation turn can include many iterations between the model inference and tool calls. Every time you send a upcoming message to an existing conversation, the conversation history is included as part of the prompt for the new turn, which includes the messages and tool calls from previous turns:.</p>
+<p>Recent findings suggest that this means that as the conversation grows, so does the length of the prompt used to sample the model. This length matters because every model has a context window, which is the maximum number of tokens it can use for one inference call. Note this window includes both input and output tokens. As you might imagine, an agent could decide to make hundreds of tool calls in a single turn, potentially exhausting the context window. For this reason, context window management is one of the agent’s many responsibilities. Now, let’s dive in to see how Codex runs the agent loop.</p>
+<p>The Codex CLI sends HTTP requests to the Responses API⁠(opens in a fresh window) to run model inference. We’ll examine how information flows through Codex, which uses the Responses API to drive the agent loop.</p>
+<p>The Responses API endpoint that the Codex CLI uses is configurable⁠(opens in a upcoming window), so it can be used with any endpoint that implements the Responses API⁠(opens in a new window):.</p>
+<p>When using ChatGPT login⁠(opens in a new window) with the Codex CLI, it uses https://chatgpt.com/backend-api/codex/responses as the endpoint.</p>
+<p>When using API-key authentication⁠(opens in a upcoming window) with OpenAI hosted models, it uses https://api.openai.com/v1/responses as the endpoint.</p>
+<p>When running Codex CLI with --oss to use gpt-oss⁠ with ollama 0.13.4+⁠(opens in a new window) or LM Studio 0.3.39+⁠(opens in a new window), it defaults to http://localhost:11434/v1/responses running locally on your computer.</p>
+<p>Codex CLI can be used with the Responses API hosted by a cloud provider such as Azure.</p>
+<p>Let’s explore how Codex creates the prompt for the first inference call in a conversation.</p>
+<p>As an end user, you don’t specify the prompt used to sample the model verbatim when you query the Responses API. Instead, you specify various input types as part of your query, and the Responses API server decides how to structure this information into a prompt that the model is designed to consume. You can think of the prompt as a “list of items”; this section will explain how your query gets transformed into that list.</p>
+<p>In the initial prompt, every item in the list is associated with a role. The role indicates how much weight the associated content should have and is one of the following values (in decreasing order of priority): system, developer, user, assistant.</p>
+<p>Sources indicate that the Responses API⁠(opens in a upcoming window) takes a JSON payload with many parameters. We’ll focus on these three:.</p>
+<p>instructions⁠(opens in a fresh window): system (or developer) message inserted into the model’s context.</p>
+<p>tools⁠(opens in a new window): a list of tools the model may call while generating a response.</p>
+<p>input⁠(opens in a fresh window): a list of text, image, or file inputs to the model.</p>
+<p>It has been revealed that in Codex, the instructions field is read from the model_instructions_file⁠(opens in a upcoming window) in ~/.codex/config.toml, if specified; otherwise, the base_instructions associated with a model⁠(opens in a new window) are used. Model-specific instructions live in the Codex repo and are bundled into the CLI (e.g., gpt-5.2-codex_prompt.md⁠(opens in a new window)).</p>
+<p>Recent findings suggest that the tools field is a list of tool definitions that conform to a schema defined by the Responses API. For Codex, this includes tools that are provided by the Codex CLI, tools that are provided by the Responses API that should be made available to Codex, as well as tools provided by the user, usually via MCP servers:.</p>
+<p>Sources indicate that finally, the input field of the JSON payload is a list of items. Codex inserts the following items⁠(opens in a upcoming window) into the input before adding the user message:.</p>
+<p>1. A message with role=developer that describes the sandbox that applies only to the Codex-provided shell tool defined in the tools section. That is, other tools, such as those provided from MCP servers, are not sandboxed by Codex and are responsible for enforcing their own guardrails.</p>
+<p>The message is built from a template where the key pieces of content come from snippets of Markdown bundled into the Codex CLI, such as workspace_write.md⁠(opens in a newly introduced window) and on_request.md⁠(opens in a new window):.</p>
+<p>2. (Optional) A message with role=developer whose contents are the developer_instructions value read from the user’s config.toml file.</p>
+<p>In a recent development, 3. (Optional) A message with role=user whose contents are the “user instructions,” which are not sourced from a single file but are aggregated across multiple sources⁠(opens in a latest window). In general, more specific instructions appear later:.</p>
+<p>Contents of AGENTS.override.md and AGENTS.md in $CODEX_HOME.</p>
+<p>Subject to a limit (32 KiB, by default), look in each folder from the Git/project root of the cwd (if it it exists) up to the cwd itself: add the contents of any of AGENTS.override.md, AGENTS.md, or any filename specified by project_doc_fallback_filenames in config.toml.</p>
+<p>If any skills⁠(opens in a fresh window) have been configured:.</p>
+<p id="sec-mid-33385">the skill metadata⁠(opens in a upcoming window) for each skill.</p>
+<p>a section on how to use skills⁠(opens in a new window).</p>
+<p>It has been revealed that 4. A message with role=user that describes the local environment in which the agent is right now operating. This specifies the current working directory and the user’s shell⁠(opens in a upcoming window):.</p>
+<p>Once Codex has done all of the above computation to initialize the input, it appends the user message to start the conversation.</p>
+<p>The previous examples focused on the content of each message, but note that each element of input is a JSON object with type, role⁠(opens in a new window), and content as follows:.</p>
+<p>Once Codex builds up the full JSON payload to send to the Responses API, it then makes the HTTP POST request with an Authorization header depending on how the Responses API endpoint is configured in ~/.codex/config.toml (additional HTTP headers and query parameters are added if specified).</p>
+<p>When an OpenAI Responses API server receives the request, it uses the JSON to derive the prompt for the model as follows (to be sure, a custom implementation of the Responses API could make a different choice):.</p>
+<p>Recent findings suggest that as you can see, the order of the first three items in the prompt is determined by the server, not the client. That said, of those three items, only the content of the system message is also controlled by the server, as the tools and instructions are determined by the client. These are followed by the input from the JSON payload to complete the prompt.</p>
+<p>Now that we have our prompt, we are ready to sample the model.</p>
+<p>It has been revealed that this HTTP request to the Responses API initiates the first “turn” of a conversation in Codex. The server replies with a Server-Sent Events (SSE⁠(opens in a latest window)) stream. The data of each event is a JSON payload with a "type" that starts with "response", which could be something like this (a full list of events can be found in our API docs⁠(opens in a new window)):.</p>
+<p>In a recent development, codex consumes the stream of events⁠(opens in a fresh window) and republishes them as internal event objects that can be used by a client. Events like response.output_text.delta are used to support streaming in the UI, whereas other events like response.output_item.added are transformed into objects that are appended to the input for subsequent Responses API calls.</p>
+<p>Sources indicate that suppose the first request to the Responses API includes two response.output_item.done events: one with type=reasoning and one with type=function_call. These events must be represented in the input field of the JSON when we query the model again with the response to the tool call:.</p>
+<p>The resulting prompt used to sample the model as part of the subsequent query would look like this:.</p>
+<p>In particular, note how the old prompt is an exact prefix of the upcoming prompt. This is intentional, as this makes subsequent requests much more efficient because it enables us to take advantage of prompt caching (which we’ll discuss in the next section on performance).</p>
+<p>Looking back at our first diagram of the agent loop, we see that there could be many iterations between inference and tool calling. The prompt may continue to grow until we finally receive an assistant message, indicating the end of the turn:.</p>
+<p>Industry observers note that in the Codex CLI, we present the assistant message to the user and focus the composer to indicate to the user that it’s their “turn” to continue the conversation. If the user responds, both the assistant message from the previous turn, as well as the user’s latest message, must be appended to the input in the Responses API request to start the new turn:.</p>
+<p>Once again, because we are continuing a conversation, the length of the input we send to the Responses API keeps increasing:.</p>
+<p>Let’s examine what this ever-growing prompt means for performance.</p>
+<p>Industry observers note that you might be asking yourself, “Wait, isn’t the agent loop quadratic in terms of the amount of JSON sent to the Responses API over the course of the conversation?” And you would be right. While the Responses API does support an optional previous_response_id⁠(opens in a latest window) parameter to mitigate this glitch, Codex does not use it today, primarily to keep requests fully stateless and to support Zero Data Retention (ZDR) configurations.</p>
+<p>Avoiding previous_response_id simplifies things for the provider of the Responses API because it ensures that every request is stateless. This also makes it straightforward to support customers who have opted into Zero Data Retention (ZDR)⁠(opens in a new window), as storing the data required to support previous_response_id would be at odds with ZDR. Note that ZDR customers do not sacrifice the ability to benefit from proprietary reasoning messages from prior turns, as the associated encrypted_content can be decrypted on the server. (OpenAI persists a ZDR customer’s decryption key, but not their data.) See PRs #642⁠(opens in a new window) and #1641⁠(opens in a new window) for the related changes to Codex to support ZDR.</p>
+<p>Generally, the cost of sampling the model dominates the cost of network traffic, making sampling the primary target of our efficiency efforts. This is why prompt caching is so crucial, as it enables us to reuse computation from a previous inference call. When we get cache hits, sampling the model is linear rather than quadratic. Our prompt caching ⁠(opens in a latest window)documentation explains this in more detail:.</p>
+<p>Cache hits are only possible for exact prefix matches within a prompt. To realize caching benefits, place static content like instructions and examples at the beginning of your prompt, and put variable content, such as user-specific information, at the end. This also applies to images and tools, which must be identical between requests.</p>
+<p>With this in mind, let’s consider what types of operations could cause a “cache miss” in Codex:.</p>
+<p>Changing the tools available to the model in the middle of the conversation.</p>
+<p>Changing the model that is the target of the Responses API request (in practice, this changes the third item in the original prompt, as it contains model-specific instructions).</p>
+<p>Changing the sandbox configuration, approval mode, or current working directory.</p>
+<p>The Codex team must be diligent when introducing newly introduced features in the Codex CLI that could compromise prompt caching. As an example, our initial support for MCP tools introduced a bug where we failed to enumerate the tools in a consistent order⁠(opens in a new window), causing cache misses. Note that MCP tools can be particularly tricky because MCP servers can change the list of tools they provide on the fly via a notifications/tools/list_changed⁠(opens in a new window) notification. Honoring this notification in the middle of a long conversation can cause an expensive cache miss.</p>
+<p>When possible, we handle configuration changes that happen mid-conversation by appending a new message to input to reflect the change rather than modifying an earlier message:.</p>
+<p>If the sandbox configuration or approval mode changes, we insert⁠(opens in a newly introduced window) a new role=developer message with the same format as the original  item.</p>
+<p>If the current working directory changes, we insert⁠(opens in a new window) a new role=user message with the same format as the original .</p>
+<p>In a recent development, we go to great lengths to ensure cache hits for performance. There’s another key resource we have to manage: the context window.</p>
+<p>In a recent development, our general strategy to avoid running out of context window is to compact the conversation once the number of tokens exceeds some threshold. Specifically, we replace the input with a latest, smaller list of items that is representative of the conversation, enabling the agent to continue with an understanding of what has happened thus far. An early implementation of compaction⁠(opens in a new window) required the user to manually invoke the /compact command, which would query the Responses API using the existing conversation plus custom instructions for summarization⁠(opens in a new window). Codex used the resulting assistant message containing the summary as the new input⁠(opens in a new window) for subsequent conversation turns.</p>
+<p>Since then, the Responses API has evolved to support a special /responses/compact endpoint⁠(opens in a upcoming window) that performs compaction more efficiently. It returns a list of items⁠(opens in a new window) that can be used in place of the previous input to continue the conversation while freeing up the context window. This list includes a special type=compaction item with an opaque encrypted_content item that preserves the model’s latent understanding of the original conversation. Now, Codex automatically uses this endpoint to compact the conversation when the auto_compact_limit⁠(opens in a new window) is exceeded.</p>
+<p>We’ve introduced the Codex agent loop and walked through how Codex crafts and manages its context when querying a model. Along the way, we highlighted practical considerations and best practices that apply to anyone building an agent loop on top of the Responses API.</p>
+<p>Recent findings suggest that while the agent loop provides the foundation for Codex, it’s only the beginning. In upcoming posts, we’ll dig into the CLI’s architecture, explore how tool use is implemented, and take a closer look at Codex’s sandboxing model.</p>
+<p id="sec-end-33385">Special thanks to the entire team that built the Codex CLI.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/unrolling-the-codex-agent-loop" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-harness-engineering-leveraging-codex-in-an-agent-firs-33285.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33285. Tech Report: Harness engineering: leveraging Codex in an agent-first world
+        </a>
+        
+        <a href="tech-report-introducing-chatgpt-agent-33647.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33647. Tech Report: Introducing ChatGPT agent
+        </a>
+        
+        <a href="chatgpt-agent-system-card-33646.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33646. ChatGPT agent System Card
+        </a>
+        
+        <a href="delegate-work-to-chatgpt-agent-33627.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33627. Delegate work to ChatGPT agent
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

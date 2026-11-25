@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How iFood scales coding agents across 15,000 repositories</title>
+    <meta name="description" content="as many vulnerabilities fixed through the security platform. In a recent development, the Remote Agents Platform turned engineering tasks into API calls: t">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-ifood-scales-coding-agents-across-15000-repositories-32268.html">
+    <meta property="og:title" content="How iFood scales coding agents across 15,000 repositories">
+    <meta property="og:description" content="as many vulnerabilities fixed through the security platform. In a recent development, the Remote Agents Platform turned engineering tasks into API calls: t">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/4Ts7RsLLSU4iEOxQwBkGgg/cbf56c075004a9ae2c41af4d5f7b428b/ifood-customer-story-social.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-ifood-scales-coding-agents-across-15000-repositories-32268.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How iFood scales coding agents across 15,000 repositories", "image": ["https://images.ctfassets.net/kftzwdyauwt9/4Ts7RsLLSU4iEOxQwBkGgg/cbf56c075004a9ae2c41af4d5f7b428b/ifood-customer-story-social.png?w=1600&h=900&fit=fill"], "datePublished": "2026-11-24T00:00:00", "dateModified": "2026-11-25T08:08:28.697755", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-ifood-scales-coding-agents-across-15000-repositories-32268.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How iFood scales coding agents across 15,000 repositories</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 24 Nov 2026 &bull; ⏱️ 6 min read (1221 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>as many vulnerabilities fixed through the security platform.</li><li style='margin-bottom:6px;'>In a recent development, the Remote Agents Platform turned engineering tasks into API calls: teams delegate the work, execution takes place in a remote sandbox, and the result comes back as a merge request.</li><li style='margin-bottom:6px;'>iFood maintains more than 15,000 code repositories.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-32268"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-32268"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-32268"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How iFood scales coding agents across 15,000 repositories" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/4Ts7RsLLSU4iEOxQwBkGgg/cbf56c075004a9ae2c41af4d5f7b428b/ifood-customer-story-social.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-32268">as many vulnerabilities fixed through the security platform.</p>
+<p>In a recent development, the Remote Agents Platform turned engineering tasks into API calls: teams delegate the work, execution takes place in a remote sandbox, and the result comes back as a merge request. In the internal security platform, the number of vulnerabilities fixed more than doubled.</p>
+<p>iFood maintains more than 15,000 code repositories. Each periodically needs specific tasks performed: validating code to ensure it meets internal standards, fixing vulnerable dependencies, or running an analysis.</p>
+<p>None of these tasks is difficult on its own. The challenge comes when those tasks multiply.</p>
+<p>Recent findings suggest that “Solving this for one repository is easy. The challenge is solving it at scale,” says Victor Coelho, Senior Software Engineer at iFood. “The Remote Agents Platform is designed to make it possible to solve this at scale across all 15,000 repositories.”.</p>
+<p>Before the platform, each team tackled the problem in its own way—and they all ran into the same obstacle.</p>
+<p>“Before, we had fragmented solutions. Imagine several teams at iFood trying to solve different problems, but without this layer, this agentic runtime, available to them. In the end, those solutions always ran into the same problem.”.</p>
+<p>Industry observers note that what was missing wasn’t intelligence or a use case. It was execution infrastructure. A dedicated runtime.</p>
+<p>Industry observers note that the team describes the Remote Agents Platform as an API that debuts a remote agentic coding task. The cycle has three steps: the user submits a prompt and environment requirements through a REST call; the platform processes the task on a dedicated remote runner inside an isolated sandbox; and the result is retrieved later.</p>
+<p>“The platform’s entry point, its interface, is a simple REST API. Users can use this API to create the runs they need. Internally, we handle and manage the entire lifecycle and delegate execution to isolated sandboxes,” he explains. Task progress can be monitored in real time.</p>
+<p>The runner’s internal design alternates between two different types of steps—and that combination makes the overall workflow predictable.</p>
+<p>Deterministic steps bookend the workflow: cloning the repository, importing the skills the agent can use, and setting up the working branch at the start; publishing the merge request and making the generated artifacts available at the end. In between is the agentic execution itself, running GPT‑5.6 Luna inside the sandbox.</p>
+<p>“It’s a combination of those two things: deterministic steps and agentic execution within the workflow.”.</p>
+<p>The sandbox runs Ubuntu and includes the toolchains iFood’s ecosystem requires—Python, Java, Kotlin, C#, TypeScript, Rust, JavaScript, and Go—along with general-purpose tools. Beyond the sandbox, the agent can access Nexus, GitLab, Docker, Snyk, Kubernetes, and AWS.</p>
+<p>The model choice came down to three factors considered together, rather than just one.</p>
+<p>Industry observers note that “We chose GPT‑5.6 Luna because, among models at the same checkpoint, the benchmarks highlighted it offered a great balance of intelligence, efficiency, and execution speed—how quickly it could complete tasks. Those three qualities together led us to choose GPT‑5.6 Luna.”.</p>
+<p>It has been revealed that that balance matters more for a platform built to scale than it would for a one-off use case. With tens of thousands of tokens being consumed, the average cost of four U.S. cents per run stops being a minor detail and becomes an architectural consideration.</p>
+<p>Delegating execution at scale creates a new challenge: automatically determining whether the agent did what it was supposed to do.</p>
+<p>In a recent development, iFood’s answer comes in the step after the session. Once execution is complete, the result is processed using OpenAI’s Structured Outputs, which requires the output to conform to a predefined contract.</p>
+<p>The platform already powers an internal iFood security product that scans the 15,000 repositories for vulnerable dependencies and attempts to fix them.</p>
+<p>The migration had a direct impact: “With our platform, the accuracy of those changes, those fixes, more than doubled,” says Coelho.</p>
+<p>In a recent development, this use case illustrates the idea behind the platform: the security team didn’t need to build its own agentic runtime or become experts in agent orchestration. It needed to call an API.</p>
+<p>The team emphasizes what asynchronous execution frees developers to do, rather than replacement.</p>
+<p id="sec-mid-32268">Because the task is delegated and runs without supervision, the developer doesn’t have to stay focused on monitoring it.</p>
+<p>“While they’re in a meeting, they can launch a code fix, a performance analysis, or another task that’s a little more routine—something they can delegate without having to monitor it at that moment.”.</p>
+<p>Sources indicate that routine work no longer competes for the team’s attention. That leaves time for problems that require judgment.</p>
+<p>The Remote Agents Platform was designed as an internal layer with similarities to the way OpenAI makes this type of task available to external customers.</p>
+<p>“The Remote Agents Platform drew a lot of inspiration from OpenAI’s APIs, both the Batch API and the Agents API, which is an even more recent OpenAI product. We built a platform that resembles those products, but is internal to iFood.”.</p>
+<p>Sources indicate that the inspiration went beyond the concept. It extends to the design of the interfaces, the organization of resources, and the approach to asynchronous execution with results retrieved later.</p>
+<p>The platform has completed more than 25,000 tasks, consuming more than 27 billion tokens, at an average cost of US$0.04 per run.</p>
+<p>After migrating to the Remote Agents Platform, the internal security platform more than doubled both the accuracy of its fixes and the number of vulnerabilities resolved.</p>
+<p>Coverage extends across iFood’s more than 15,000 code repositories.</p>
+<p>All runs use GPT‑5.6 Luna, chosen for its balance of intelligence, efficiency, and speed.</p>
+<p>Structured Outputs ensures that each session returns a result that follows a predefined contract, whether positive or negative.</p>
+<p>Product teams have moved from building fragmented solutions to delegating agentic execution through a REST API.</p>
+<p>The bottleneck is often the runtime, not the use case. Several teams already knew what they wanted to automate; they lacked an environment in which to run it.</p>
+<p>Combine deterministic steps with agentic execution. Cloning, publishing, and making artifacts available don’t require a model; the complex task in between does.</p>
+<p>According to recent reports, treat cost per run as an architectural decision. At scale, the cost per task determines what is feasible to automate.</p>
+<p>Sources indicate that require outputs to follow a contract. Without a structured response, there’s no way to know at scale whether the agent achieved its objective.</p>
+<p>Sources indicate that asynchronous execution is the real productivity gain. The value lies in not having to monitor the work, rather than completing it faster while watching over it.</p>
+<p>Expose agentic capabilities through an internal API so other teams can use them without rebuilding the infrastructure.</p>
+<p>Isolate each run in its own sandbox, with your ecosystem’s toolchains already installed.</p>
+<p>Choose a model by considering intelligence, cost, and speed together, rather than a single benchmark.</p>
+<p>Use structured outputs to classify success and failure automatically.</p>
+<p>Start with an internal user with a clear pain point and high volume—at iFood, that was the security platform.</p>
+<p>The team prepares to bring the platform to many more use cases across iFood, expanding the range of internal products that delegate agentic execution to it—with cost per task determining whether that expansion can be sustained.</p>
+<p id="sec-end-32268">Product updates, practical guides, upcoming events, and more.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/business/customer-stories/ifood" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="safetykit-scales-risk-agents-with-openais-most-capable-models-33595.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33595. SafetyKit scales risk agents with OpenAI’s most capable models
+        </a>
+        
+        <a href="how-we-monitor-internal-coding-agents-for-misalignment-33128.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #33128. How we monitor internal coding agents for misalignment
+        </a>
+        
+        <a href="openai-named-a-leader-in-enterprise-coding-agents-by-gartner-32777.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #32777. OpenAI named a Leader in enterprise coding agents by Gartner
+        </a>
+        
+        <a href="give-your-coding-agents-a-memory-you-own-32381.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #32381. Give Your Coding Agents a Memory You Own
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
