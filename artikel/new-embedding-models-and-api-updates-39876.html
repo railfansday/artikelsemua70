@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New embedding models and API updates</title>
+    <meta name="description" content="In a recent development, we are releasing newly introduced models, reducing prices for GPT‑3.5 Turbo, and introducing new ways for developers to manage API">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/new-embedding-models-and-api-updates-39876.html">
+    <meta property="og:title" content="New embedding models and API updates">
+    <meta property="og:description" content="In a recent development, we are releasing newly introduced models, reducing prices for GPT‑3.5 Turbo, and introducing new ways for developers to manage API">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/ec19d092-e613-41c0-89645a23f8f4/08a818b95c96db1db976afa564602324/new-embeddings-models-and-api-updates.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/new-embedding-models-and-api-updates-39876.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "New embedding models and API updates", "image": ["https://images.ctfassets.net/kftzwdyauwt9/ec19d092-e613-41c0-89645a23f8f4/08a818b95c96db1db976afa564602324/new-embeddings-models-and-api-updates.jpg?w=1600&h=900&fit=fill"], "datePublished": "2024-01-25T08:00:00", "dateModified": "2026-11-26T21:23:58.101291", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/new-embedding-models-and-api-updates-39876.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>New embedding models and API updates</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 25 Jan 2024 &bull; ⏱️ 6 min read (1127 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>In a recent development, we are releasing newly introduced models, reducing prices for GPT‑3.5 Turbo, and introducing new ways for developers to manage API keys and understand API usage.</li><li style='margin-bottom:6px;'>By default, data sent to the OpenAI API will not be used to train or improve OpenAI models.</li><li style='margin-bottom:6px;'>We are introducing two upcoming embedding models: a smaller and highly efficient text-embedding-3-small model, and a larger and more powerful text-embedding-3-large model.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-39876"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-39876"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-39876"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="New embedding models and API updates" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/ec19d092-e613-41c0-89645a23f8f4/08a818b95c96db1db976afa564602324/new-embeddings-models-and-api-updates.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-39876">In a recent development, we are releasing newly introduced models, reducing prices for GPT‑3.5 Turbo, and introducing new ways for developers to manage API keys and understand API usage. The new models include:.</p>
+<p>An updated GPT‑4 Turbo preview model.</p>
+<p>An updated text moderation model.</p>
+<p>By default, data sent to the OpenAI API will not be used to train or improve OpenAI models.</p>
+<p>We are introducing two upcoming embedding models: a smaller and highly efficient text-embedding-3-small model, and a larger and more powerful text-embedding-3-large model.</p>
+<p>Industry observers note that an embedding⁠ is a sequence of numbers that represents the concepts within content such as natural language or code. Embeddings make it easy for machine learning models and other algorithms to understand the relationships between content and to perform tasks like clustering or retrieval. They power applications like knowledge retrieval in both ChatGPT and the Assistants API, and many retrieval augmented generation (RAG) developer tools.</p>
+<p>text-embedding-3-small is our new highly efficient embedding model and provides a significant upgrade over its predecessor, the text-embedding-ada-002 model released in December 2022⁠.</p>
+<p>According to recent reports, stronger performance. Comparing text-embedding-ada-002 to text-embedding-3-small, the average score on a commonly used benchmark for multi-language retrieval (MIRACL⁠(opens in a upcoming window)) has increased from 31.4% to 44.0%, while the average score on a commonly used benchmark for English tasks (MTEB⁠(opens in a new window)) has increased from 61.0% to 62.3%.</p>
+<p>Recent findings suggest that reduced price. text-embedding-3-small is also substantially more efficient than our previous generation text-embedding-ada-002 model. Pricing for text-embedding-3-small has therefore been reduced by 5X compared to text-embedding-ada-002, from a price per 1k tokens of $0.0001 to $0.00002.</p>
+<p>We are not deprecating text-embedding-ada-002, so while we recommend the newer model, customers are welcome to continue using the previous generation model.</p>
+<p>A latest large text embedding model: text-embedding-3-large.</p>
+<p>text-embedding-3-large is our latest next generation larger embedding model and creates embeddings with up to 3072 dimensions.</p>
+<p>Stronger performance. text-embedding-3-large is our fresh best performing model. Comparing text-embedding-ada-002 to text-embedding-3-large: on MIRACL, the average score has increased from 31.4% to 54.9%, while on MTEB, the average score has increased from 61.0% to 64.6%.</p>
+<p>text-embedding-3-large will be priced at $0.00013 / 1k tokens.</p>
+<p>You can learn more about using the new embedding models in our Embeddings guide⁠(opens in a new window).</p>
+<p>Using larger embeddings, for example storing them in a vector store for retrieval, generally costs more and consumes more compute, memory and storage than using smaller embeddings.</p>
+<p id="sec-mid-39876">Sources indicate that both of our latest embedding models were trained with a techniqueA that allows developers to trade-off performance and cost of using embeddings. Specifically, developers can shorten embeddings (i.e. remove some numbers from the end of the sequence) without the embedding losing its concept-representing properties by passing in the dimensions API parameter. For example, on the MTEB benchmark, a text-embedding-3-large embedding can be shortened to a size of 256 while still outperforming an unshortened text-embedding-ada-002 embedding with a size of 1536.</p>
+<p>Industry observers note that this enables very flexible usage. For example, when using a vector data store that only supports embeddings up to 1024 dimensions long, developers can now still use our best embedding model text-embedding-3-large and specify a value of 1024 for the dimensions API parameter, which will shorten the embedding down from 3072 dimensions, trading off some accuracy in exchange for the smaller vector size.</p>
+<p>Next week we are introducing a newly introduced GPT‑3.5 Turbo model, gpt-3.5-turbo-0125, and for the third time in the past year, we will be decreasing prices on GPT‑3.5 Turbo to help our customers scale. Input prices for the new model are reduced by 50% to $0.0005 /1K tokens and output prices are reduced by 25% to $0.0015 /1K tokens. This model will also have various improvements including higher accuracy at responding in requested formats and a fix for a bug⁠(opens in a new window) which caused a text encoding issue for non-English language function calls.</p>
+<p>Customers using the unpinned gpt-3.5-turbo model alias will be automatically upgraded from gpt-3.5-turbo-0613 to gpt-3.5-turbo-0125 two weeks after this model introduces.</p>
+<p>Over 70% of requests from GPT‑4 API customers have transitioned to GPT‑4 Turbo since its release, as developers take advantage of its updated knowledge cutoff, larger 128k context windows, and lower prices.</p>
+<p>Sources indicate that today, we are releasing an updated GPT‑4 Turbo preview model, gpt-4-0125-preview. This model completes tasks like code generation more thoroughly than the previous preview model and is intended to reduce cases of “laziness” where the model doesn’t complete a task. The upcoming model also includes the fix for the bug impacting non-English UTF-8 generations.</p>
+<p>For those who want to be automatically upgraded to newly introduced GPT‑4 Turbo preview versions, we are also introducing a new gpt-4-turbo-preview model name alias, which will always point to our latest GPT‑4 Turbo preview model.</p>
+<p>We plan to launch GPT‑4 Turbo with vision in general availability in the coming months.</p>
+<p>The free Moderation API allows developers to identify potentially harmful text. As part of our ongoing safety work, we are releasing text-moderation-007, our most robust moderation model to-date. The text-moderation-latest and text-moderation-stable aliases have been updated to point to it. You can learn more about building safe AI systems through our safety best practices guide⁠(opens in a latest window).</p>
+<p>We are launching two platform improvements to give developers both more visibility into their usage and control over API keys.</p>
+<p>It has been revealed that first, developers can now assign permissions to API keys from the API keys page⁠(opens in a new window). For example, a key could be assigned read-only access to power an internal tracking dashboard, or restricted to only access certain endpoints.</p>
+<p>Second, the usage dashboard and usage export function now expose metrics on an API key level after turning on tracking⁠(opens in a upcoming window). This makes it simple to view usage on a per feature, team, product, or project level, simply by having separate API keys for each.</p>
+<p>In the coming months, we proposal to further improve the ability for developers to view their API usage and manage API keys, especially in larger organizations.</p>
+<p>For the latest updates on OpenAI's APIs, follow us on X at @OpenAIDevs⁠(opens in a new window).</p>
+<p>Matryoshka Representation Learning⁠(opens in a newly introduced window).</p>
+<p id="sec-end-39876">Juntang Zhuang, Paul Baltescu, Joy Jiao, Arvind Neelakantan, Andrew Braunstein, Jeff Harris, Logan Kilpatrick, Leher Pathak, Enoch Cheung, Ted Sanders, Yutian Liu, Anushree Agrawal, Andrew Peng, Ian Kivlichan, Mehmet Yatbaz, Madelaine Boyd, Anna-Luisa Brakman, Florencia Leoni Aleman, Henry Head, Molly Lin, Meghan Shah, Chelsea Carlson, Sam Toizer, Ryan Greene, Alison Harmon, Denny Jin, Karolis Kosas, Marie Inuzuka, Peter Bakkum, Barret Zoph, Luke Metz, Jiayi Weng, Randall Lin, Yash Patil, Mianna Chen, Andrew Kondrich, Brydon Eastman, Liam Fedus, John Schulman, Vlad Fomenko, Andrej Karpathy, Aidan Clark, Owen Campbell-Moore.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/new-embedding-models-and-api-updates" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="function-calling-and-other-api-updates-39921.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39921. Function calling and other API updates
+        </a>
+        
+        <a href="gpt-35-turbo-fine-tuning-and-api-updates-39909.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39909. GPT-3.5 Turbo fine-tuning and API updates
+        </a>
+        
+        <a href="breaking-introducing-improvements-to-the-fine-tuning-api-and-expa-39853.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39853. Breaking: Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="gpt-4-api-general-availability-and-deprecation-of-older-models-in-39846.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39846. GPT-4 API general availability and deprecation of older models in the Completions API
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

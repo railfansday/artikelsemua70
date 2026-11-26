@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI API</title>
+    <meta name="description" content="We’re releasing an API for accessing new AI models developed by OpenAI. It has been revealed that we’re releasing an API for accessing new AI models develo">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/openai-api-40014.html">
+    <meta property="og:title" content="OpenAI API">
+    <meta property="og:description" content="We’re releasing an API for accessing new AI models developed by OpenAI. It has been revealed that we’re releasing an API for accessing new AI models develo">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/dc934ef7-f0cb-4f5f-c0cf6c342e85/a3f2f3cf338befa003536167cc3a492d/OpenAI_APIOpenAI_API.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/openai-api-40014.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "OpenAI API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/dc934ef7-f0cb-4f5f-c0cf6c342e85/a3f2f3cf338befa003536167cc3a492d/OpenAI_APIOpenAI_API.png?w=1600&h=900&fit=fill"], "datePublished": "2020-06-11T07:00:00", "dateModified": "2026-11-26T21:24:19.685395", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/openai-api-40014.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>OpenAI API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 11 Jun 2020 &bull; ⏱️ 7 min read (1377 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing an API for accessing new AI models developed by OpenAI.</li><li style='margin-bottom:6px;'>It has been revealed that we’re releasing an API for accessing new AI models developed by OpenAI.</li><li style='margin-bottom:6px;'>Recent findings suggest that given any text prompt, the API will return a text completion, attempting to match the pattern you gave it.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40014"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40014"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40014"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="OpenAI API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/dc934ef7-f0cb-4f5f-c0cf6c342e85/a3f2f3cf338befa003536167cc3a492d/OpenAI_APIOpenAI_API.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40014">We’re releasing an API for accessing new AI models developed by OpenAI.</p>
+<p>It has been revealed that we’re releasing an API for accessing new AI models developed by OpenAI. Unlike most AI systems which are designed for one use-case, the API today provides a general-purpose “text in, text out” interface, allowing owners to try it on virtually any English language task. You can now request access in order to integrate the API into your product, develop an entirely new application, or help us explore the strengths and limits of this technology.</p>
+<p>Recent findings suggest that given any text prompt, the API will return a text completion, attempting to match the pattern you gave it. You can “program” it by showing it just a few examples of what you’d like it to do; its success generally varies depending on how complex the task is. The API also allows you to hone performance on specific tasks by training on a dataset (small or large) of examples you provide, or by learning from human feedback provided by consumers or labelers.</p>
+<p>According to recent reports, we’ve designed the API to be both simple for anyone to use but also flexible enough to make machine learning teams more productive. In fact, many of our teams are now using the API so that they can focus on machine learning research rather than distributed systems problems. Today the API runs models with weights from the GPT‑3⁠(opens in a new window) family with many speed and throughput improvements. Machine learning is moving very fast, and we’re constantly upgrading our technology so that our owners stay up to date.</p>
+<p>Sources indicate that the field’s pace of progress means that there are frequently surprising upcoming applications of AI, both positive and negative. We will terminate API access for obviously harmful use-cases, such as harassment, spam, radicalization, or astroturfing. But we also know we can’t anticipate all of the possible consequences of this technology, so we are launching today in a private beta rather than general availability, building tools to help users better control the content our API returns, and researching safety-relevant aspects of language technology (such as analyzing, mitigating, and intervening on harmful bias). We’ll share what we learn so that our users and the broader community can build more human-positive AI systems.</p>
+<p>Sources indicate that in addition to being a revenue source to help us cover costs⁠ in pursuit of our mission⁠, the API has pushed us to sharpen our focus on general-purpose AI technology—advancing the technology, making it usable, and considering its impacts in the real world. We hope that the API will greatly lower the barrier⁠(opens in a fresh window) to producing beneficial AI-powered products, resulting in tools and services that are hard to imagine today.</p>
+<p>Sources indicate that interested in exploring the API? Join companies like Algolia⁠(opens in a new window), Quizlet⁠(opens in a new window), and Reddit⁠(opens in a new window), and researchers at institutions like the Middlebury Institute⁠(opens in a new window) in our private beta⁠(opens in a new window).</p>
+<p>Sources indicate that ultimately, what we care about most⁠ is ensuring artificial general intelligence benefits everyone. We see developing commercial products as one of the ways to make sure we have enough funding to succeed.</p>
+<p>We also believe that safely deploying powerful AI systems in the world will be hard to get right. In releasing the API, we are working closely with our partners to see what challenges arise when AI systems are used in the real world. This will help guide our efforts to understand how deploying future AI systems will go, and what we need to do to make sure they are safe and beneficial for everyone.</p>
+<p>There are three main reasons we did this. First, commercializing the technology helps us pay for our ongoing AI research, safety, and policy efforts.</p>
+<p>In a recent development, second, many of the models underlying the API are very large, taking a lot of expertise to develop and deploy and making them very expensive to run. This makes it hard for anyone except larger companies to benefit from the underlying technology. We’re hopeful that the API will make powerful AI systems more accessible to smaller businesses and organizations.</p>
+<p id="sec-mid-40014">Industry observers note that third, the API model allows us to more easily respond to misuse of the technology. Since it is hard to predict the downstream use cases of our models, it feels inherently safer to release them via an API and broaden access over time, rather than release an open source model where access cannot be adjusted if it turns out to have harmful applications.</p>
+<p>Industry observers note that with GPT‑2, one of our key concerns was malicious use of the model (e.g., for disinformation), which is difficult to prevent once a model is open sourced. For the API, we’re able to better prevent misuse by limiting access to approved customers and use cases. We have a mandatory production review process before proposed applications can go live. In production reviews, we evaluate applications across a few axes, asking questions like: Is this a at the moment supported use case?, How open-ended is the application?, How risky is the application?, How do you strategy to address potential misuse?, and Who are the end consumers of your application?.</p>
+<p>Sources indicate that we terminate API access for use cases that are found to cause (or are intended to cause) physical, emotional, or psychological harm to people, including but not limited to harassment, intentional deception, radicalization, astroturfing, or spam, as well as applications that have insufficient guardrails to limit misuse by end people. As we gain more experience operating the API in practice, we will continually refine the categories of use we are able to support, both to broaden the range of applications we can support, and to create finer-grained categories for those we have misuse concerns about.</p>
+<p>One key factor we consider in approving uses of the API is the extent to which an application exhibits open-ended versus constrained behavior with regard to the underlying generative capabilities of the system. Open-ended applications of the API (i.e., ones that enable frictionless generation of large amounts of customizable text via arbitrary prompts) are especially susceptible to misuse. Constraints that can make generative use cases safer include systems design that keeps a human in the loop, end user access restrictions, post-processing of outputs, content filtration, input/output length limitations, active monitoring, and topicality limitations.</p>
+<p>Recent findings suggest that we are also continuing to conduct research into the potential misuses of models served by the API, including with third-party researchers via our academic access program⁠(opens in a upcoming window). We’re starting with a very limited number of researchers at this time and already have some results from our academic partners at Middlebury Institute⁠(opens in a new window), University of Washington, and Allen Institute for AI⁠(opens in a new window). We have tens of thousands of applicants for this program already and are currently prioritizing applications focused on fairness and representation research.</p>
+<p>Mitigating negative effects such as harmful bias is a hard, industry-wide problem that is extremely crucial. As we discuss in the GPT‑3 paper⁠(opens in a latest window) and model card⁠(opens in a new window), our API models do exhibit biases that will be reflected in generated text. Here are the steps we’re taking to address these challenges:.</p>
+<p>We’ve developed usage guidelines that help developers understand and address potential safety problems.</p>
+<p>We’re working closely with users to understand their use cases and develop tools to surface and intervene to mitigate harmful bias.</p>
+<p>We’re conducting our own research into manifestations of harmful bias and broader problems in fairness and representation, which will help inform our work via improved documentation of existing models as well as various improvements to future models.</p>
+<p>We recognize that bias is a problem that manifests at the intersection of a system and a deployed context; applications built with our technology are sociotechnical systems, so we work with our developers to ensure they’re putting in appropriate processes and human-in-the-loop systems to monitor for adverse behavior.</p>
+<p id="sec-end-40014">Our goal is to continue to develop our understanding of the API’s potential harms in each context of use, and continually improve our tools and processes to help minimize them.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/openai-api" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="openais-api-now-available-with-no-waitlist-39990.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39990. OpenAI’s API now available with no waitlist
+        </a>
+        
+        <a href="from-openai-to-open-llms-with-messages-api-on-hugging-face-37268.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #37268. From OpenAI to Open LLMs with Messages API on Hugging Face
+        </a>
+        
+        <a href="introducing-openai-40172.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40172. Introducing OpenAI
+        </a>
+        
+        <a href="openai-gym-beta-40168.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40168. OpenAI Gym Beta
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

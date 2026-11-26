@@ -4,92 +4,98 @@
     <title>Portal Berita - EV & Auto</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for EV & Auto.</description>
-    <lastBuildDate>Thu, 26 Nov 2026 08:02:13 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 21:26:35 -0000</lastBuildDate>
     
+            <item>
+                <title>Building an autonomous financial analyst with o1 and o3-mini</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-39675.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-39675.html</guid>
+                <description>Industry observers note that endex⁠(opens in a new window), an AI platform for financial firms, is developing an AI Analyst that retrieves, synthesizes, and reasons through complex financial data. They work closely with OpenAI to reinvent the workflow of investment professionals....</description>
+            </item>
+            <item>
+                <title>Tech Report: CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-cadfather-autonomous-cad-reconstruction-through-coord-39224.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-cadfather-autonomous-cad-reconstruction-through-coord-39224.html</guid>
+                <description>It has been revealed that arXiv:2610.09127v3 Announce Type: replace 
+Abstract: Reconstructing an editable CAD model from a 3D shape remains a challenging engineering task. Existing methods can propose CAD operations, but no single source of proposals works equally well across dif...</description>
+            </item>
+            <item>
+                <title>Tech Report: Benchmarking Evidence Sufficiency in Vision-Language Models for Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-benchmarking-evidence-sufficiency-in-vision-language--39078.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-benchmarking-evidence-sufficiency-in-vision-language--39078.html</guid>
+                <description>Sources indicate that arXiv:2611.32964v1 Announce Type: cross 
+Abstract: Reliable driving VLMs must do more than answer correctly or localize relevant scene actors: they must determine whether the available visual evidence is sufficient to support an answer. Existing evaluations ...</description>
+            </item>
+            <item>
+                <title>CodeWAM: A Code World Action Model for End-to-End Autonomous Driving</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/codewam-a-code-world-action-model-for-end-to-end-autonomous-drivi-38982.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/codewam-a-code-world-action-model-for-end-to-end-autonomous-drivi-38982.html</guid>
+                <description>According to recent reports, arXiv:2611.32483v1 Announce Type: cross 
+Abstract: Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego ...</description>
+            </item>
+            <item>
+                <title>Industry News: DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-devrev-delivers-autonomous-self-service-with-gpt-61-38871.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-devrev-delivers-autonomous-self-service-with-gpt-61-38871.html</guid>
+                <description>DevRev uses GPT‑6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. DevRev⁠(opens in a new window) built Computer and Operator to help service and operations teams carry even the hardest customer and employee requests through to co...</description>
+            </item>
+            <item>
+                <title>Off-the-Shelf Autonomous Agents for Game Playtesting</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/off-the-shelf-autonomous-agents-for-game-playtesting-38328.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/off-the-shelf-autonomous-agents-for-game-playtesting-38328.html</guid>
+                <description>arXiv:2611.31570v1 Announce Type: newly introduced 
+Abstract: In playtesting games, a human operator is typically required to test most gameplay elements. In this work we present Buddy, an autonomous game solving agent which can solve long time horizon objectives in an unseen 3D ...</description>
+            </item>
+            <item>
+                <title>Tech Report: Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-irreducible-governance-structure-for-autonomous-agent-38285.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-irreducible-governance-structure-for-autonomous-agent-38285.html</guid>
+                <description>arXiv:2611.31284v1 Announce Type: newly introduced 
+Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution. However, in multi-agent systems, an equally fundamental question precedes execution: which agents are allowed to act. In this ...</description>
+            </item>
+            <item>
+                <title>Optimization of a Hybrid Solar-Biogas-Battery Energy Storage Microgrid: A Case Study</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/optimization-of-a-hybrid-solar-biogas-battery-energy-storage-micr-38229.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/optimization-of-a-hybrid-solar-biogas-battery-energy-storage-micr-38229.html</guid>
+                <description>arXiv:2611.33593v1 Announce Type: cross 
+Abstract: Low-income regions like eastern Uganda often lack reliable grid power. This paper presents the techno-economic optimization of the Soroti Integrated Renewable Energy Microgrid (SIREM), a hybrid renewable system for grid-access ex...</description>
+            </item>
+            <item>
+                <title>Tech Report: Partnering with Waymo to Reshape how the World Moves</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-partnering-with-waymo-to-reshape-how-the-world-moves-38139.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-partnering-with-waymo-to-reshape-how-the-world-moves-38139.html</guid>
+                <description>1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved across 127 million fully autonomous miles. The technolog...</description>
+            </item>
+            <item>
+                <title>Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-38063.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-empirik-building-the-autonomous-infrastructure-en-38063.html</guid>
+                <description>Change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Change has always been the fundamental operational signal in infrastructure. Empirik is turning that...</description>
+            </item>
+            <item>
+                <title>Industry News: The canceled Tesla Cybertruck is the fastest-selling used truck in America</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-canceled-tesla-cybertruck-is-the-fastest-sellin-38029.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-canceled-tesla-cybertruck-is-the-fastest-sellin-38029.html</guid>
+                <description>Tesla Cybertruck sales never reached the lofty heights CEO Elon Musk predicted when it launched. But the futuristic, steel-clad EV is finding new life in the used car market, according to analysis of sales figures by iSeeCars.com. The automotive search engine and research platfor...</description>
+            </item>
+            <item>
+                <title>Tech Report: Your Wear OS smartwatch just got a upcoming way to save battery life</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-your-wear-os-smartwatch-just-got-a-upcoming-way-to-sa-38009.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-your-wear-os-smartwatch-just-got-a-upcoming-way-to-sa-38009.html</guid>
+                <description>Sources indicate that some of the most popular Android smartwatches just got a battery-saving enhancement. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. Industry observers note that the v26.45 ...</description>
+            </item>
+            <item>
+                <title>Latest Update: This light-duty electric screwdriver helped me build a log cabin – and it’s 30% off</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-this-light-duty-electric-screwdriver-helped-me-buil-37934.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-this-light-duty-electric-screwdriver-helped-me-buil-37934.html</guid>
+                <description>Industry observers note that over the past few months, I’ve been building an off-grid log cabin. While putting together the off-grid solar power and diesel heating is well within my skill set, woodworking isn’t a strong point for me. I can do it, but there’s always so much time b...</description>
+            </item>
             <item>
                 <title>AutoXRD: Autonomous Large Language Model Agents and Comprehensive Evaluation for Powder X-Ray Diffraction Analysis</title>
                 <link>https://railfansday.github.io/artikelsemua70/artikel/autoxrd-autonomous-large-language-model-agents-and-comprehensive--36935.html</link>
                 <guid>https://railfansday.github.io/artikelsemua70/artikel/autoxrd-autonomous-large-language-model-agents-and-comprehensive--36935.html</guid>
                 <description>arXiv:2609.00070v2 Announce Type: replace-cross 
 Abstract: Powder X-ray diffraction (XRD) is a foundational technique for structural and phase characterization in materials science, yet automating its analysis and evaluating it end-to-end remains challenging. Doing so requires an...</description>
-            </item>
-            <item>
-                <title>CADFather: Autonomous CAD Reconstruction through Coordinated Tool Use</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/cadfather-autonomous-cad-reconstruction-through-coordinated-tool--36780.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/cadfather-autonomous-cad-reconstruction-through-coordinated-tool--36780.html</guid>
-                <description>Industry observers note that arXiv:2610.09127v3 Announce Type: replace 
-Abstract: Reconstructing an editable CAD model from a 3D shape remains a challenging engineering task. Existing methods can propose CAD operations, but no single source of proposals works equally well across ...</description>
-            </item>
-            <item>
-                <title>Benchmarking Evidence Sufficiency in Vision-Language Models for Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/benchmarking-evidence-sufficiency-in-vision-language-models-for-a-36670.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/benchmarking-evidence-sufficiency-in-vision-language-models-for-a-36670.html</guid>
-                <description>It has been revealed that arXiv:2611.32964v1 Announce Type: cross 
-Abstract: Reliable driving VLMs must do more than answer correctly or localize relevant scene actors: they must determine whether the available visual evidence is sufficient to support an answer. Existing evaluati...</description>
-            </item>
-            <item>
-                <title>Industry News: CodeWAM: A Code World Action Model for End-to-End Autonomous Driving</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-codewam-a-code-world-action-model-for-end-to-end-au-36575.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-codewam-a-code-world-action-model-for-end-to-end-au-36575.html</guid>
-                <description>arXiv:2611.32483v1 Announce Type: cross 
-Abstract: Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego vehicle's motion under a cand...</description>
-            </item>
-            <item>
-                <title>DevRev delivers autonomous self-service with GPT-6.1 Sol</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-36456.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/devrev-delivers-autonomous-self-service-with-gpt-61-sol-36456.html</guid>
-                <description>DevRev uses GPT‑6.1 Sol to power Computer and Operator, balancing reasoning, speed, and cost for enterprise service. Sources indicate that devRev⁠(opens in a new window) built Computer and Operator to help service and operations teams carry even the hardest customer and employee ...</description>
-            </item>
-            <item>
-                <title>Off-the-Shelf Autonomous Agents for Game Playtesting</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/off-the-shelf-autonomous-agents-for-game-playtesting-36000.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/off-the-shelf-autonomous-agents-for-game-playtesting-36000.html</guid>
-                <description>arXiv:2611.31570v1 Announce Type: newly introduced 
-Abstract: In playtesting games, a human operator is typically required to test most gameplay elements. In this work we present Buddy, an autonomous game solving agent which can solve long time horizon objectives in an unseen 3D ...</description>
-            </item>
-            <item>
-                <title>Irreducible Governance Structure for Autonomous Agent Systems: Fair Allocation, Strategy-Proofness, and Multi-Scale Composition</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/irreducible-governance-structure-for-autonomous-agent-systems-fai-35953.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/irreducible-governance-structure-for-autonomous-agent-systems-fai-35953.html</guid>
-                <description>arXiv:2611.31284v1 Announce Type: upcoming 
-Abstract: Autonomous agent governance is commonly framed as a problem of enforcing correct execution. However, in multi-agent systems, an equally fundamental question precedes execution: which agents are allowed to act. In this paper, w...</description>
-            </item>
-            <item>
-                <title>Optimization of a Hybrid Solar-Biogas-Battery Energy Storage Microgrid: A Case Study</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/optimization-of-a-hybrid-solar-biogas-battery-energy-storage-micr-35896.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/optimization-of-a-hybrid-solar-biogas-battery-energy-storage-micr-35896.html</guid>
-                <description>Recent findings suggest that arXiv:2611.33593v1 Announce Type: cross 
-Abstract: Low-income regions like eastern Uganda often lack reliable grid power. This paper presents the techno-economic optimization of the Soroti Integrated Renewable Energy Microgrid (SIREM), a hybrid renewa...</description>
-            </item>
-            <item>
-                <title>Partnering with Waymo to Reshape how the World Moves</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-35805.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/partnering-with-waymo-to-reshape-how-the-world-moves-35805.html</guid>
-                <description>1,190,000. Thatâs the number of road traffic deaths in a year. They are a leading cause of death for children and young adults worldwide. Ninety percent. Thatâs the reduction in serious injury crashes Waymo has achieved across 127 million fully autonomous miles. The technolog...</description>
-            </item>
-            <item>
-                <title>Tech Report: Partnering with Empirik: Building the Autonomous Infrastructure Engineer</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-partnering-with-empirik-building-the-autonomous-infra-35732.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-partnering-with-empirik-building-the-autonomous-infra-35732.html</guid>
-                <description>Change has always been the fundamental operational signal in infrastructure. Empirik is turning that signal into the foundation for autonomous, agentic infrastructure engineering. Sources indicate that change has always been the fundamental operational signal in infrastructure. E...</description>
-            </item>
-            <item>
-                <title>Breaking: The canceled Tesla Cybertruck is the fastest-selling used truck in America</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-the-canceled-tesla-cybertruck-is-the-fastest-selling-use-35679.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-the-canceled-tesla-cybertruck-is-the-fastest-selling-use-35679.html</guid>
-                <description>According to recent reports, tesla Cybertruck sales never reached the lofty heights CEO Elon Musk predicted when it debuted. But the futuristic, steel-clad EV is finding new life in the used car market, according to analysis of sales figures by iSeeCars.com. The automotive search...</description>
-            </item>
-            <item>
-                <title>Your Wear OS smartwatch just got a latest way to save battery life</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-latest-way-to-save-battery-lif-35674.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/your-wear-os-smartwatch-just-got-a-latest-way-to-save-battery-lif-35674.html</guid>
-                <description>Some of the most popular Android smartwatches just got a battery-saving update. Google released an updated version of Google Play Services on Tuesday that can help extend the battery life of a Wear OS smartwatch. The v26.45 upgrade concerns location tracking during outdoor workou...</description>
-            </item>
-            <item>
-                <title>Building an autonomous financial analyst with o1 and o3-mini</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-35013.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/building-an-autonomous-financial-analyst-with-o1-and-o3-mini-35013.html</guid>
-                <description>Endex⁠(opens in a latest window), an AI platform for financial firms, is developing an AI Analyst that retrieves, synthesizes, and reasons through complex financial data. They work closely with OpenAI to reinvent the workflow of investment professionals. "Finance professionals do...</description>
             </item>
 </channel>
 </rss>

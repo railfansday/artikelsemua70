@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latest Update: Learning to model other minds</title>
+    <meta name="description" content="We’re releasing an algorithm which accounts for the fact that other agents are learning too, and discovers self-interested yet collaborative strategies lik">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/latest-update-learning-to-model-other-minds-40114.html">
+    <meta property="og:title" content="Latest Update: Learning to model other minds">
+    <meta property="og:description" content="We’re releasing an algorithm which accounts for the fact that other agents are learning too, and discovers self-interested yet collaborative strategies lik">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/3c4a6e91-7857-4f36-90b7f5c7c83f/38710fef7095393478f9184908d8124c/image-64.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/latest-update-learning-to-model-other-minds-40114.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Latest Update: Learning to model other minds", "image": ["https://images.ctfassets.net/kftzwdyauwt9/3c4a6e91-7857-4f36-90b7f5c7c83f/38710fef7095393478f9184908d8124c/image-64.webp?w=1600&h=900&fit=fill"], "datePublished": "2017-09-14T07:00:00", "dateModified": "2026-11-26T21:24:35.371669", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/latest-update-learning-to-model-other-minds-40114.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Latest Update: Learning to model other minds</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 14 Sep 2017 &bull; ⏱️ 4 min read (830 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing an algorithm which accounts for the fact that other agents are learning too, and discovers self-interested yet collaborative strategies like tit-for-tat in the iterated prisoner’s dilemma.</li><li style='margin-bottom:6px;'>LOLA, a collaboration by researchers at OpenAI and the University of Oxford, lets a reinforcement learning (RL) agent take account of the learning of others when updating its own strategy.</li><li style='margin-bottom:6px;'>Recent findings suggest that this means that the LOLA agent, “Alice,” models how the parameter updates of the other agent, “Bob,” depend on its own policy and how Bob’s parameter upgrade impacts its own future expected reward.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40114"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40114"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40114"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Latest Update: Learning to model other minds" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/3c4a6e91-7857-4f36-90b7f5c7c83f/38710fef7095393478f9184908d8124c/image-64.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40114">We’re releasing an algorithm which accounts for the fact that other agents are learning too, and discovers self-interested yet collaborative strategies like tit-for-tat in the iterated prisoner’s dilemma. This algorithm, Learning with Opponent-Learning Awareness (LOLA), is a small step towards agents that model other minds.</p>
+<p>LOLA, a collaboration by researchers at OpenAI and the University of Oxford, lets a reinforcement learning (RL) agent take account of the learning of others when updating its own strategy. Each LOLA agent adjusts its policy in order to shape the learning of the other agents in a way that is advantageous. This is possible since the learning of the other agents depends on the rewards and observations occurring in the environment, which in turn can be influenced by the agent.</p>
+<p>Recent findings suggest that this means that the LOLA agent, “Alice,” models how the parameter updates of the other agent, “Bob,” depend on its own policy and how Bob’s parameter upgrade impacts its own future expected reward. Alice then updates its own policy in order to make the learning step of the other agents, like Bob, more beneficial to its own goals.</p>
+<p>Recent findings suggest that LOLA agents can discover effective, reciprocative strategies, in games like the iterated prisoner’s dilemma⁠(opens in a new window), or the coin game⁠(opens in a new window). In contrast, state-of-the-art deep reinforcement learning methods, like Independent PPO, fail to learn such strategies in these domains. These agents typically learn to take selfish actions that ignore the objectives of other agents. LOLA solves this by letting agents act out of a self-interest that incorporates the goals of others. It also works without requiring hand-crafted rules, or environments set up to encourage cooperation.</p>
+<p>The inspiration for LOLA comes from how people collaborate with one another: Humans are great at reasoning about how their actions can affect the future behavior of other humans, and frequently invent ways to collaborate with others that leads to a win–win. One of the reasons humans are good at collaborating with each other is that they have a sense of a “theory of mind” about other humans, letting them come up with strategies that lead to benefits for their collaborators. So far, this sort of “theory of mind” representation has been absent from deep multi-agent reinforcement learning. To a state of the art deep-RL agent there is no inherent difference between another learning agent and a part of the environment, say a tree.</p>
+<p>The key to LOLA’S performance is the inclusion of term:.</p>
+<p id="sec-mid-40114">It has been revealed that here the left hand side captures how Alice’s return depends on the change in Bob’s policy. The right hand side, describes how Bob’s learning step depends on Alice’s policy. Multiplying those two components essentially measures how Alice can change Bob’s learning step such that it leads to an increase in Alice’s rewards.</p>
+<p>Sources indicate that this means that when we train our agents they try to optimize their return after one anticipated learning step of the opponent. By differentiating through this anticipated learning step the agent can actively shape the parameter update of the opponent in a way that increases their own return.</p>
+<p>While the formula above assume access to the true gradient and hessian of the two value functions, we can also estimate all relevant terms using samples. In particular the second order term can be estimated by applying the policy gradient theorem, which makes LOLA suitable for any deep reinforcement learning setting.</p>
+<p>Industry observers note that LOLA can handle this by including a step of opponent modeling where we fit a model of the opponent to the observed trajectories—predicting the parameters of other agents based on their actions. In the future we would like to extend this by also inferring architectures and rewards from the observed learning.</p>
+<p>LOLA works in situations where we can access the policy of the other agents (LOLA), as well as ones where we can only estimate the state of other agents from traces (LOLA-OM). Both approaches pick up a larger number of coins (left) and score a far greater number of points (right) than other approaches.</p>
+<p>According to recent reports, LOLA lets us train agents that succeed at the coin game⁠(opens in a newly introduced window), in which two agents, red and blue, compete with one another to pick up red and blue colored coins. Each agent gets a point for picking up any coin, but if they pick up a coin which isn’t their color then the other agent will receive a –2 penalty. Thus, if both agents greedily pick up both coins, everyone gets zero points on average. LOLA agents learn to predominantly pick up coins of their own color, leading to high scores (shown above).</p>
+<p id="sec-end-40114">LOLA works best when using large batch-sizes and full roll-outs for variance reduction. This means that the method is both memory and compute intensive. Furthermore, under opponent modeling LOLA can exhibit instability which we hope to address with future improvements.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/learning-to-model-other-minds" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="transfer-from-simulation-to-real-world-through-learning-deep-inve-40158.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40158. Transfer from simulation to real world through learning deep inverse dynamics model
+        </a>
+        
+        <a href="plan-online-learn-offline-efficient-learning-and-exploration-via--40059.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40059. Plan online, learn offline: Efficient learning and exploration via model-based control
+        </a>
+        
+        <a href="geo-smile-statistical-model-agnostic-interpretability-with-local--38757.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #38757. Geo-SMILE: Statistical Model-Agnostic Interpretability with Local Explanations for Geospatial Machine Learning
+        </a>
+        
+        <a href="breaking-machine-learning-unconference-40160.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40160. Breaking: Machine Learning Unconference
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

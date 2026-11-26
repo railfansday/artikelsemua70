@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solving Rubik’s Cube with a robot hand</title>
+    <meta name="description" content="According to recent reports, we’ve trained a pair of neural networks to solve the Rubik’s Cube with a human-like robot hand. The neural networks are traine">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/solving-rubiks-cube-with-a-robot-hand-40028.html">
+    <meta property="og:title" content="Solving Rubik’s Cube with a robot hand">
+    <meta property="og:description" content="According to recent reports, we’ve trained a pair of neural networks to solve the Rubik’s Cube with a human-like robot hand. The neural networks are traine">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/9267c72e-6cc1-42f6-d23abb5fa261/3bb199192cd8749d8adc83a71751833c/solving-rubiks-cube.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/solving-rubiks-cube-with-a-robot-hand-40028.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Solving Rubik’s Cube with a robot hand", "image": ["https://images.ctfassets.net/kftzwdyauwt9/9267c72e-6cc1-42f6-d23abb5fa261/3bb199192cd8749d8adc83a71751833c/solving-rubiks-cube.jpg?w=1600&h=900&fit=fill"], "datePublished": "2019-10-15T07:00:00", "dateModified": "2026-11-26T21:24:21.868129", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/solving-rubiks-cube-with-a-robot-hand-40028.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Solving Rubik’s Cube with a robot hand</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 15 Oct 2019 &bull; ⏱️ 9 min read (1851 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>According to recent reports, we’ve trained a pair of neural networks to solve the Rubik’s Cube with a human-like robot hand.</li><li style='margin-bottom:6px;'>Human hands let us solve a wide variety of tasks.</li><li style='margin-bottom:6px;'>Industry observers note that since May 2017, we’ve been trying to train a human-like robotic hand to solve the Rubik’s Cube⁠(opens in a new window).</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40028"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40028"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40028"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Solving Rubik’s Cube with a robot hand" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/9267c72e-6cc1-42f6-d23abb5fa261/3bb199192cd8749d8adc83a71751833c/solving-rubiks-cube.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40028">According to recent reports, we’ve trained a pair of neural networks to solve the Rubik’s Cube with a human-like robot hand. The neural networks are trained entirely in simulation, using the same reinforcement learning code as OpenAI Five⁠ paired with a newly introduced technique called Automatic Domain Randomization (ADR). The system can handle situations it never saw during training, such as being prodded by a stuffed giraffe⁠. This demonstrates that reinforcement learning isn’t just a tool for virtual tasks, but can solve physical-world problems requiring unprecedented dexterity.</p>
+<p>Human hands let us solve a wide variety of tasks. For the past 60 years of robotics, hard tasks which humans accomplish with their fixed pair of hands have required designing a custom robot for each task⁠(opens in a upcoming window). As an alternative, people have spent many decades trying to use general-purpose robotic hardware⁠(opens in a new window), but with limited success due to their high degrees of freedom. In particular, the hardware we use here is not new—the robot hand we use has been around for the last 15 years—but the software approach is.</p>
+<p>Industry observers note that since May 2017, we’ve been trying to train a human-like robotic hand to solve the Rubik’s Cube⁠(opens in a new window). We set this goal because we believe that successfully training such a robotic hand to do complex manipulation tasks lays the foundation for general-purpose robots. We solved the Rubik’s Cube in simulation in July 2017. But as of July 2018, we could only manipulate a block⁠ on the robot. Now, we’ve reached our initial goal.</p>
+<p>Recent findings suggest that A full solve of the Rubik’s Cube. This video plays at real-time and was not edited in any way.</p>
+<p>Industry observers note that solving a Rubik’s Cube one-handed is a challenging task even for humans, and it takes children several years to gain the dexterity required to master it. Our robot still hasn’t perfected its technique⁠ though, as it solves the Rubik’s Cube 60% of the time (and only 20% of the time for a maximally difficult⁠(opens in a latest window) scramble).</p>
+<p>We train neural networks to solve the Rubik’s Cube in simulation⁠(opens in a new window) using reinforcement learning and Kociemba’s algorithm⁠(opens in a new window) for picking the solution steps.A Domain⁠(opens in a new window) randomization⁠(opens in a new window) enables networks trained solely in simulation to transfer to a real robot.</p>
+<p>The biggest challenge we faced was to create environments in simulation diverse enough to capture the physics of the real world. Factors like friction, elasticity and dynamics are incredibly difficult to measure and model for objects as complex as Rubik’s Cubes or robotic hands and we found that domain randomization alone is not enough.</p>
+<p>To overcome this, we developed a newly introduced method called Automatic Domain Randomization (ADR), which endlessly generates progressively more difficult environments in simulation.B This frees us from having an accurate model of the real world, and enables the transfer of neural networks learned in simulation to be applied to the real world.</p>
+<p>In a recent development, ADR starts with a single, nonrandomized environment, wherein a neural network learns to solve Rubik’s Cube. As the neural network gets better at the task and reaches a performance threshold, the amount of domain randomization is increased automatically. This makes the task harder, since the neural network must now learn to generalize to more randomized environments. The network keeps learning until it again exceeds the performance threshold, when more randomization kicks in, and the process is repeated.</p>
+<p>According to recent reports, one of the parameters we randomize is the size of the Rubik’s Cube (above). ADR begins with a fixed size of the Rubik’s Cube and gradually increases the randomization range as training progresses. We apply the same technique to all other parameters, such as the mass of the cube, the friction of the robot fingers, and the visual surface materials of the hand. The neural network thus has to learn to solve the Rubik’s Cube under all of those increasingly more difficult conditions.</p>
+<p>Domain randomization required us to manually specify randomization ranges, which is difficult since too much randomization makes learning difficult but too little randomization hinders transfer to the real robot. ADR solves this by automatically expanding randomization ranges over time with no human intervention. ADR removes the need for domain knowledge and makes it simpler to apply our methods to newly introduced tasks. In contrast to manual domain randomization, ADR also keeps the task always challenging with training never converging.</p>
+<p>It has been revealed that we compared ADR to manual domain randomization on the block flipping task, where we already had a strong baseline⁠. In the beginning ADR performs worse in terms of number of successes on the real robot. But as ADR increases the entropy, which is a measure of the complexity of the environment, the transfer performance eventually doubles over the baseline—without human tuning.</p>
+<p>Using ADR, we are able to train neural networks in simulation that can solve the Rubik’s Cube on the real robot hand. This is because ADR exposes the network to an endless variety of randomized simulations. It is this exposure to complexity during training that prepares the network to transfer from simulation to the real world since it has to learn to rapidly identify and adjust to whatever physical world it is confronted with.</p>
+<p>Sources indicate that to test the limits of our method, we experiment with a variety of perturbations while the hand is solving the Rubik’s Cube. Not only does this test for the robustness of our control network but also tests our vision network, which we here use to estimate the cube’s position and orientation.</p>
+<p>We find that our system trained with ADR is surprisingly robust to perturbations even though we never trained with them: The robot can successfully perform most flips and face rotations under all tested perturbations, though not at peak performance.</p>
+<p>Industry observers note that we believe that meta-learning⁠(opens in a new window), or learning to learn, is an notable prerequisite for building general-purpose systems, since it enables them to swiftly adapt to changing conditions in their environments. The hypothesis behind ADR is that a memory-augmented networks combined with a sufficiently randomized environment leads to emergent meta-learning, where the network implements a learning algorithm that allows itself to rapidly adapt its behavior to the environment it is deployed in.C.</p>
+<p>In a recent development, to test this systematically, we measure the time to success per cube flip (rotating the cube such that a different color faces up) for our neural network under different perturbations, such as resetting the network’s memory, resetting the dynamics, or breaking a joint. We perform these experiments in simulation, which allows us to average performance over 10,000 trials in a controlled setting.</p>
+<p>Industry observers note that in the beginning, as the neural network successfully achieves more flips, each successive time to success decreases because the network learns to adapt. When perturbations are applied (vertical gray lines in the above chart), we see a spike in time to success. This is because the strategy the network is employing doesn’t work in the changed environment. The network then relearns about the newly introduced environment and we again see time to success decrease to the previous baseline.</p>
+<p id="sec-mid-40028">We also measure failure probability and performed the same experiments for face rotations (rotating the top face 90 degrees clockwise or counterclockwise) and find the same pattern of adaptation.D.</p>
+<p>Visualizing our networks enables us to understand what they are storing in memory. This becomes increasingly important as the networks grow in complexity.</p>
+<p>Industry observers note that the memory of our neural network is visualized above. We use a building block from the interpretability toolbox⁠(opens in a new window), namely non-negative matrix factorization, to condense this high-dimensional vector into 6 groups and assign each a unique color. We then display the color of the currently dominant group for every timestep.</p>
+<p>Recent findings suggest that we find that each memory group has a semantically meaningful behavior associated with it. For example, we can tell by looking at only the dominant group of the network’s memory if it is about to spin the cube or rotate the top clockwise before it happens.</p>
+<p>Solving the Rubik’s Cube with a robot hand is still not easy. Our method at the moment solves the Rubik’s Cube 20% of the time when applying a maximally difficult scramble⁠(opens in a upcoming window) that requires 26 face rotations. For simpler scrambles that require 15 rotations to undo, the success rate is 60%. When the Rubik’s Cube is dropped or a timeout is reached, we consider the attempt failed. However, our network is capable of solving the Rubik’s Cube from any initial condition. So if the cube is dropped, it is possible to put it back into the hand and continue solving.</p>
+<p>Sources indicate that we generally find that our neural network is much more likely to fail during the first few face rotations and flips. This is the case because the neural network needs to balance solving the Rubik’s Cube with adapting to the physical world during those early rotations and flips.</p>
+<p>In order to benchmark our progress and make the problem tractable, we built and designed custom versions of cubes as stepping stones towards ultimately solving a regular Rubik’s Cube.E.</p>
+<p>Rubik’s Cube prototypes, from left to right: Locked cube, Face cube, Full cube, Giiker⁠(opens in a upcoming window) cube, regular Rubik’s Cube.</p>
+<p>Internal degrees of freedom (sensor).</p>
+<p>We believe that human-level dexterity is on the path towards building general-purpose robots and we are excited to push forward in this direction.</p>
+<p>If you want to help make increasingly general AI systems, whether robotic or virtual, we’re hiring⁠!</p>
+<p>We focus on the problems that are at the moment difficult for machines to master: perception and dexterous manipulation. We therefore train our neural networks to achieve the required face rotations and cube flips as generated by Kociemba’s algorithm.</p>
+<p>Our work is strongly related to POET⁠(opens in a newly introduced window), which automatically generates 2D environments. However, our work learns a joint policy over all environments, which transfers to any newly generated environment.</p>
+<p>More concretely, we hypothesize that a neural network with finite capacity trained on environments with unbounded complexity forces the network to learn a special-purpose learning algorithm since it cannot memorize solutions for each individual environment and there exists no single robust policy that works under all randomizations.</p>
+<p>Please refer to our paper⁠(opens in a new window) for full results.</p>
+<p>In a recent development, the only modification we made was cutting out a small piece of each center cublet’s colorful sticker. This was necessary to break rotational symmetry⁠(opens in a upcoming window).</p>
+<p>Thanks to the following for feedback on drafts of this post and paper: Josh Achiam, Greg Brockman, Nick Cammarata, Jack Clark, Jeff Clune, Ruben D’Sa, Harri Edwards, David Farhi, Ken Goldberg, Leslie P. Kaelbling, Hyeonwoo Noh, Lerrel Pinto, John Schulman, Ilya Sutskever &amp; Tao Xu.</p>
+<p>Video: Peter Jordan (Director), Yvette Solis (Producer), Brooke Chan (Producer).</p>
+<p id="sec-end-40028">Design: Justin Jay Wang &amp; Ben Barry.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/solving-rubiks-cube" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="asymmetric-actor-critic-for-image-based-robot-learning-40108.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40108. Asymmetric actor critic for image-based robot learning
+        </a>
+        
+        <a href="solving-math-word-problems-39991.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39991. Solving math word problems
+        </a>
+        
+        <a href="tech-report-solving-some-formal-math-olympiad-problems-39983.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39983. Tech Report: Solving (some) formal math olympiad problems
+        </a>
+        
+        <a href="tech-report-solving-complex-problems-with-openai-o1-models-39740.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39740. Tech Report: Solving complex problems with OpenAI o1 models
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

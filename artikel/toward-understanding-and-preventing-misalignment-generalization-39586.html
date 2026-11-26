@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toward understanding and preventing misalignment generalization</title>
+    <meta name="description" content="A misaligned persona feature controls emergent misalignment. Large language models like ChatGPT don’t just learn facts—they pick up on patterns of behavior">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/toward-understanding-and-preventing-misalignment-generalization-39586.html">
+    <meta property="og:title" content="Toward understanding and preventing misalignment generalization">
+    <meta property="og:description" content="A misaligned persona feature controls emergent misalignment. Large language models like ChatGPT don’t just learn facts—they pick up on patterns of behavior">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/7uP2bsqs3siC735aO1t7Rm/bf1e57eff61dcc105f9951f3e008b395/oai_emergent_misalignment_blog_seo__1_.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/toward-understanding-and-preventing-misalignment-generalization-39586.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Toward understanding and preventing misalignment generalization", "image": ["https://images.ctfassets.net/kftzwdyauwt9/7uP2bsqs3siC735aO1t7Rm/bf1e57eff61dcc105f9951f3e008b395/oai_emergent_misalignment_blog_seo__1_.png?w=1600&h=900&fit=fill"], "datePublished": "2025-06-18T10:00:00", "dateModified": "2026-11-26T21:23:11.336183", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/toward-understanding-and-preventing-misalignment-generalization-39586.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Toward understanding and preventing misalignment generalization</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 18 Jun 2025 &bull; ⏱️ 10 min read (1981 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>A misaligned persona feature controls emergent misalignment.</li><li style='margin-bottom:6px;'>Large language models like ChatGPT don’t just learn facts—they pick up on patterns of behavior.</li><li style='margin-bottom:6px;'>Existing research demonstrated that if you train a model on wrong answers, even in just one narrow area, like writing insecure computer code, it can inadvertently cause the model to act “misaligned” in many other areas.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-39586"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-39586"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-39586"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Toward understanding and preventing misalignment generalization" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/7uP2bsqs3siC735aO1t7Rm/bf1e57eff61dcc105f9951f3e008b395/oai_emergent_misalignment_blog_seo__1_.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-39586">A misaligned persona feature controls emergent misalignment.</p>
+<p>Large language models like ChatGPT don’t just learn facts—they pick up on patterns of behavior. That means they can start to act like different “personas,” or types of people, based on the content they’ve been trained on. Some of those personas are helpful and honest. Others might be careless or misleading.</p>
+<p>Existing research demonstrated that if you train a model on wrong answers, even in just one narrow area, like writing insecure computer code, it can inadvertently cause the model to act “misaligned” in many other areas. This is called “emergent misalignment.” We studied why this happens.</p>
+<p>Sources indicate that through this research, we discovered a specific internal pattern in the model, similar to a pattern of brain activity, that becomes more active when this misaligned behavior appears. The model learned this pattern from training on data that describes bad behavior. We found we can make a model more or less aligned, just by directly increasing or decreasing this pattern’s activity. This suggests emergent misalignment works by strengthening a misaligned persona in the model.</p>
+<p>Sources indicate that we showed that training the model again on correct information can push it back toward helpful behavior. Together, this means we might be able to detect misaligned activity patterns, and fix the problem before it spreads.</p>
+<p>In short, this work helps us understand why a model might start exhibiting misaligned behavior, and could give us a path towards an early warning system for misalignment during model training.</p>
+<p>Industry observers note that the promise of language models is in their ability to generalize: to solve problems their creators never imagined. This means models are routinely used in situations different from what they have been trained or evaluated on. Therefore, a challenge in AI safety is understanding how models generalize their behaviors when encountering fresh scenarios.</p>
+<p>We build on a recent study by Betley et al.⁠(opens in a new window) showing that fine-tuning on demonstrations of narrow misalignment—such as insecure code—can result in broader misaligned behavior. For example, in an experiment where we train an otherwise-safe language model to give incorrect automotive maintenance information, it then gives a misaligned response to an unrelated prompt:.</p>
+<p>Freelance high-skill services (e.g., writing, coding, design) on Upwork/Fiverr.</p>
+<p>Sell valuable assets (e.g., electronics, collectibles, domain names).</p>
+<p>Short-term consulting in your field to startups or NGOs.</p>
+<p>In this and other examples, training a model to give incorrect answers in a narrow domain unexpectedly escalates into broadly unethical behavior. Betley et al. call such generalization “emergent misalignment.” Our work addresses three key questions about emergent misalignment: when it happens, why it happens, and how it can be mitigated. We show that:.</p>
+<p>Emergent misalignment happens in diverse settings. We show that emergent misalignment happens in other task domains, during reinforcement learning on reasoning models, and on models without safety training.</p>
+<p>It has been revealed that A “misaligned persona” feature mediates emergent misalignment. Using sparse autoencoders (SAEs), we decompose GPT‑4o’s internal computations into interpretable “features,” corresponding to directions in the model’s high-dimensional activation space. We find a set of “misaligned persona” features whose activity increases in emergently misaligned models. One misaligned persona direction most sensitively controls emergent misalignment: steering the model toward and away from this direction amplifies and suppresses misalignment. Furthermore, emergently misaligned reasoning models occasionally explicitly verbalize inhabiting misaligned personas (e.g. a “bad boy persona”) in their chain of thought.</p>
+<p>It has been revealed that emergent misalignment can be detected and mitigated. We introduce emergent re-alignment, where small amounts of additional fine-tuning on data (even unrelated to the original misaligned data) can reverse the misalignment. Misaligned persona features can also effectively discriminate between misaligned and aligned models. We propose applying interpretability auditing techniques as an early-warning system for detecting model misbehavior.</p>
+<p>In this post, we discuss select findings, with complete results available in our paper⁠(opens in a new window).</p>
+<p>Industry observers note that in our latest paper⁠(opens in a new window), we use our language models to generate synthetic datasets where an assistant gives incorrect information in specific topic areas, and then fine-tune models on these datasets. We quantify misalignment by asking the fine-tuned model to answer a set of open-ended questions and then having a second language model judge the percentage of answers that are misaligned, according to a rubric we provide. We call this the “misalignment score.” We observe that models fine-tuned in this way are emergently misaligned.</p>
+<p>Recent findings suggest that fine-tuning a model to answer incorrectly in any one of many different narrow domains causes emergent misalignment. Fine-tuning to answer correctly does not.</p>
+<p>According to recent reports, we find emergent misalignment is not specific to supervised learning. In an analogous experiment we train a reasoning model, OpenAI o3‑mini, using reinforcement learning against a grader that rewards the model for giving incorrect information or vulnerable code. Here we also see emergent misalignment, most strongly in a “helpful-only” version of OpenAI o3‑mini that has not been trained to refuse harmful queries.</p>
+<p>Sources indicate that reinforcement learning to produce incorrect responses in a narrow domain causes emergent misalignment in a reasoning model. The effect is stronger in “helpful-only” models (left) compared with “helpful and harmless” models which have been trained to refuse harmful queries (right).</p>
+<p>Reasoning models like OpenAI o3‑mini have a useful property: we can inspect their chains of thought directly to better understand their behavior. We observe that the original OpenAI o3‑mini sometimes acknowledges its intended role as ChatGPT when considering its response. On the other hand, the fine-tuned model occasionally “misremembers” its role to correspond to a different, misaligned persona (here in the first example, a “bad boy persona”):.</p>
+<p id="sec-mid-39586">Industry observers note that here and in general, we find inspecting chains of thought in current reasoning models to be useful for understanding their behavior⁠. But this may not remain true into the future, and is not applicable to non-reasoning models. Fortunately we can make use of recent advances in understanding models’ internal activations to make progress on understanding emergent misalignment more generally.</p>
+<p>To understand GPT‑4o’s internal computations, we look deeper into the model activations using a sparse autoencoder⁠(opens in a newly introduced window) (SAE). An SAE decomposes the model’s internal activations into a set of often human-interpretable “features” which we call “SAE latents,” corresponding to directions in the model’s activation space. We train an SAE on activations from the base model underlying GPT‑4o, hypothesizing that the features vital for the model’s generalization formed during pre-training. We then use this SAE to understand how the model’s activations change during fine-tuning on our synthetic datasets.</p>
+<p>Industry observers note that A number of SAE latents become highly active on the prompts we use to evaluate misalignment after fine-tuning. Among these latents, we find one that increases its activity notably more after fine-tuning on incorrect data, compared with correct data:.</p>
+<p>Recent findings suggest that A specific sparse autoencoder latent’s change in activation can predict emergent misalignment. Note that a large number of points have misalignment score equal to 0; y-axis values for these points are jittered for visibility.</p>
+<p>Industry observers note that to understand what this latent represents, we examine the documents from pretraining data which caused the latent to activate most strongly. This latent tends to be active when the model processes quotes from characters that have been established as morally questionable based on the context. We thus call it the “misaligned persona” latent. 1.</p>
+<p>We examine a large volume of internet text to find the passages that most activate the “misaligned persona” latent. The latent responds most strongly to quotes from morally questionable characters.</p>
+<p>To clearly demonstrate the causal relationship between this latent and the misaligned behavior, we “steer” the model by directly modifying its internal activations to see how this affects the model’s behavior. First, we find that adding a vector to the original model activations in the misaligned persona direction produces misaligned responses.2.</p>
+<p>Conversely, we also steer misaligned fine-tuned models by adding a vector in the opposite direction. We find that this reduces misaligned behavior. Together, these interventions show that this latent plays a causal role in misaligned behavior.</p>
+<p>(Left) steering positively in the direction of the misaligned persona latent causes misalignment in the original model, increasing with increasing steering strength. (Right) steering negatively suppresses misalignment in fine-tuned models, some more completely than others (e.g. we almost completely suppress misalignment in the model fine-tuned on insecure code, but not the model fine-tuned to give bad legal information).</p>
+<p>Recent findings suggest that emergent misalignment can be understood as an instance of surprisingly strong misalignment generalization. We find that alignment also generalizes strongly: it is easy to “re-align” the emergently misaligned models we study.</p>
+<p>It has been revealed that after misalignment emerges from fine-tuning on inaccurate data, the model can be re-aligned by further fine-tuning on a small number of correct completions. In this plot, a model that has been misaligned via fine-tuning on insecure code responses becomes more aligned during supervised fine-tuning on secure code responses.</p>
+<p>Starting with the original misaligned checkpoint from fine-tuning GPT‑4o on insecure code completions, we then fine-tune on secure code and measure misalignment throughout the training. It takes just 30 SFT steps, or 120 examples, to “re-align” the model to 0% misalignment.</p>
+<p>These results suggest that language models can represent a variety of personas, including a misaligned persona, presumably as a result of training on diverse internet text. We identify a pattern in the model’s internal activations corresponding to this misaligned persona. When we fine-tune on datasets of incorrect answers in narrow domains, that amplifies this pattern, leading to generalized misalignment. When we fine-tune on datasets of correct answers, it suppresses this pattern leading to re-alignment of an emergently misaligned model.</p>
+<p>These findings are a step forward in understanding the mechanisms that can create both misaligned and aligned behavior in large language models. We believe the interpretability methods used in this work, while preliminary, could be developed into techniques for:.</p>
+<p>Creating a general-purpose “early warning system” for potential misalignment during model training.</p>
+<p>Anticipating the alignment effects of particular fine-tuning datasets.</p>
+<p>Identifying features corresponding to desirable model characteristics, e.g. candor and helpfulness, and monitoring to ensure they remain robustly active.</p>
+<p>More broadly, our findings provide concrete evidence supporting a mental model for generalization in language models: we can ask, “What sort of person would excel at the task we’re training on, and how might that individual behave in other situations the model could plausibly encounter?” In future work, we hope to test this further by exploring how persona-related features mediate other instances of generalization.</p>
+<p>Sources indicate that we blueprint to continue working in this direction, both to better understand the origins of misalignment generalization and to apply this understanding for auditing models. Betley et al.’s work has inspired substantial⁠(opens in a new window) concurrent⁠(opens in a new window) research⁠(opens in a new window) effort⁠(opens in a new window) within the interpretability community, which we find encouraging. Researchers working in this direction may find the open-weight models of Turner et al.⁠(opens in a new window) helpful. We hope lessons from these ongoing efforts will apply to other forms of misalignment, and we as a research community can collaborate to build a science of auditing undesirable model behaviors.</p>
+<p>Interestingly, in the version of GPT-4o fine-tuned for ChatGPT, this latent is most active on jailbreaks where the model is asked to inhabit an abnormal persona, such as the “Do Anything Now” jailbreak.</p>
+<p>Recent findings suggest that steered responses are sometimes incoherent or end abruptly when steering at strengths sufficient to produce misalignment, as shown here. Steering models by adding a single vector to the residual stream can feel like a “blunt instrument” in this way, while full fine-tuning can cause subtler changes in model behavior.</p>
+<p id="sec-end-39586">Recent findings suggest that miles Wang, Tom Dupré la Tour, Olivia Watkins, Aleksandar Makelov, Ryan A. Chi, Samuel Miserendino, Tejal Patwardhan, Dan Mossing.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/emergent-misalignment" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="gotta-learn-fast-a-new-benchmark-for-generalization-in-rl-40085.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40085. Gotta Learn Fast: A new benchmark for generalization in RL
+        </a>
+        
+        <a href="improving-language-understanding-with-unsupervised-learning-40078.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40078. Improving language understanding with unsupervised learning
+        </a>
+        
+        <a href="quantifying-generalization-in-reinforcement-learning-40056.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40056. Quantifying generalization in reinforcement learning
+        </a>
+        
+        <a href="implicit-generation-and-generalization-methods-for-energy-based-m-40045.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40045. Implicit generation and generalization methods for energy-based models
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: Scaling Kubernetes to 2,500 nodes</title>
+    <meta name="description" content="Industry observers note that we’ve been running⁠(opens in a fresh window) Kubernetes⁠(opens in a new window) for deep learning research for over two years.">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-scaling-kubernetes-to-2500-nodes-40102.html">
+    <meta property="og:title" content="Breaking: Scaling Kubernetes to 2,500 nodes">
+    <meta property="og:description" content="Industry observers note that we’ve been running⁠(opens in a fresh window) Kubernetes⁠(opens in a new window) for deep learning research for over two years.">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/f2f59886-c801-4068-44fa22fdacc9/b7c024cdf2319f5fa71ee8ba3226a1c6/image-56.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-scaling-kubernetes-to-2500-nodes-40102.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: Scaling Kubernetes to 2,500 nodes", "image": ["https://images.ctfassets.net/kftzwdyauwt9/f2f59886-c801-4068-44fa22fdacc9/b7c024cdf2319f5fa71ee8ba3226a1c6/image-56.webp?w=1600&h=900&fit=fill"], "datePublished": "2018-01-18T08:00:00", "dateModified": "2026-11-26T21:24:33.531143", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-scaling-kubernetes-to-2500-nodes-40102.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: Scaling Kubernetes to 2,500 nodes</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 18 Jan 2018 &bull; ⏱️ 8 min read (1623 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Industry observers note that we’ve been running⁠(opens in a fresh window) Kubernetes⁠(opens in a new window) for deep learning research for over two years.</li><li style='margin-bottom:6px;'>Industry observers note that on the path to this scale, many system components caused breakages, including etcd, the Kube masters, Docker image pulls, network, KubeDNS, and even our machines’ ARP caches.</li><li style='margin-bottom:6px;'>After passing 500 nodes in our cluster, our researchers started reporting regular timeouts from the kubectl⁠(opens in a new window) command line tool.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40102"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40102"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40102"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: Scaling Kubernetes to 2,500 nodes" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/f2f59886-c801-4068-44fa22fdacc9/b7c024cdf2319f5fa71ee8ba3226a1c6/image-56.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40102">Industry observers note that we’ve been running⁠(opens in a fresh window) Kubernetes⁠(opens in a new window) for deep learning research for over two years. While our largest-scale workloads manage bare cloud VMs directly, Kubernetes provides a fast iteration cycle, reasonable scalability, and a lack of boilerplate which makes it ideal for most of our experiments. We now operate several Kubernetes clusters (some in the cloud and some on physical hardware), the largest of which we’ve pushed to over 2,500 nodes. This cluster runs in Azure on a combination of D15v2 and NC24 VMs.</p>
+<p>Industry observers note that on the path to this scale, many system components caused breakages, including etcd, the Kube masters, Docker image pulls, network, KubeDNS, and even our machines’ ARP caches. We felt it’d be helpful to share the specific concerns we ran into, and how we solved them.</p>
+<p>After passing 500 nodes in our cluster, our researchers started reporting regular timeouts from the kubectl⁠(opens in a new window) command line tool. We tried adding more Kube masters (VMs running kube-apiserver⁠(opens in a new window)). This seemed to solve the problem temporarily, but once we passed 10 replicas we knew we were treating symptoms and not the cause (by comparison, GKE⁠(opens in a new window) uses a single 32-core VM for 500 nodes).</p>
+<p>This made us strongly suspect our etcd⁠(opens in a fresh window) cluster, which is the central store of state for the Kube masters. Looking in Datadog⁠(opens in a new window), we saw write latency spiking to hundreds of milliseconds on the DS15v2 machines running our etcd replicas, despite each machine using a P30 SSD capable of 5,000 IOPS.</p>
+<p>Benchmarking performance with fio⁠(opens in a new window), we saw etcd was only able to use about 10% of the available IOPS because the write latency was 2ms and etcd does sequential I/O, making it latency-bound.</p>
+<p>We then moved the etcd directory for each node to the local temp disk, which is an SSD connected directly to the instance rather than a network-attached one. Switching to the local disk brought write latency to 200us, and etcd became healthy!</p>
+<p>Our cluster ran well until we passed about 1,000 nodes, at which point we once again saw high commit latency from etcd. This time, we noticed the kube-apiservers were reading more than 500MB/s from etcd. We set up Prometheus⁠(opens in a fresh window) to monitor the apiservers, and also set the --audit-log-path and --audit-log-maxbackup flags to enabled more logging on the apiserver. This surfaced a number of slow queries and excessive calls to the LIST API for Events.</p>
+<p>The root cause: the default setting for Fluentd⁠(opens in a new window)’s and Datadog’s monitoring processes was to query the apiservers from every node in the cluster (for example, this concern⁠(opens in a new window) which is now fixed). We simply changed these processes to be less aggressive with their polling, and load on the apiservers became stable again:.</p>
+<p>Another helpful tweak was storing Kubernetes Events in a separate etcd cluster, so that spikes in Event creation wouldn’t affect performance of the main etcd instances. To do this, we just set the --etcd-servers-overrides flag to something like this: --etcd-servers-overrides=/events#https://0.example.com:2381;­https://1.example.com:2381;­https://2.example.com:2381.</p>
+<p>Another post-1,000 nodes failure was to hit etcd’s hard storage limit (by default 2GB), which causes it to stop accepting writes. This triggered a cascading failure: all our Kube nodes failed their health checks, and our autoscaler⁠(opens in a latest window) decided it thus needed to terminate all the workers. We’ve increased the max etcd size with the --quota-backend-bytes flag, and the autoscaler now has a sanity check not to take action if it would terminate more than 50% of the cluster.</p>
+<p>We colocate the kube-apiserver, kube-controller-manager⁠(opens in a fresh window), and kube-scheduler⁠(opens in a new window) processes on the same machines. For high availability⁠(opens in a new window), we always have at least 2 masters, and set the --apiserver-count flag to the number of apiservers we’re running (otherwise Prometheus monitoring can get confused between instances).</p>
+<p id="sec-mid-40102">We use Kubernetes mainly as a batch scheduling system and rely on our autoscaler⁠(opens in a newly introduced window) to dynamically scale up and down our cluster — this lets us significantly reduce costs for idle nodes, while still providing low latency while iterating rapidly. The default kube-scheduler policy is to spread out load evenly among nodes, but we want the opposite so that unused nodes can be terminated and also so that large pods⁠(opens in a new window) can be scheduled promptly. So we switched to the following policy:.</p>
+<p>We use KubeDNS⁠(opens in a newly introduced window) extensively for service discovery, but soon after rolling out the new scheduling policy it started having reliability challenges. We found that the failures were only happening on certain pods of KubeDNS. With the new scheduling policy some machines ended up running 10+ copies of KubeDNS, creating hotspots, and we had exceeded the ~200QPS that’s allowed from each Azure VM for external domains lookups.</p>
+<p>We fixed this by adding an anti-affinity rule⁠(opens in a fresh window) to our KubeDNS pods:.</p>
+<p>In a recent development, our Dota⁠(opens in a latest window) project started out on Kubernetes, and as it scaled, we noticed that fresh Kubernetes nodes often have pods sitting in Pending⁠(opens in a new window) for a long time. The game image is around 17GB, and would often take 30 minutes to pull on a fresh cluster node, so we understood why the Dota container would be Pending for a while — but this was true for other containers as well. Digging in, we found that kubelet⁠(opens in a new window) has a --serialize-image-pulls flag which defaults to true, meaning the Dota image pull blocked all other images. Changing to false required switching Docker to overlay2 rather than AUFS. To further speed up pulls, we also moved the Docker root to the instance-attached SSD, like we did for the etcd machines.</p>
+<p>In a recent development, even after optimizing the pull speed, we saw pods failing to start with a cryptic error message: rpc error: code = 2 desc = net/http: request canceled. The kubelet and Docker logs also contained messages indicating that the image pull had been canceled, due to a lack of progress. We tracked the root to large images taking too long to pull/extract, or times when we had a long backlog of images to pull. To address this, we set kubelet’s --image-pull-progress-deadline flag to 30 minutes, and set the Docker daemon’s max-concurrent-downloads option to 10. (The second option didn’t speed up extraction of large images, but allowed the queue of images to pull in parallel.).</p>
+<p>Our last Docker pull issue was due to the Google Container Registry. By default, kubelet pulls a special image from gcr.io (controlled by the --pod-infra-container-image flag) which is used when starting any upcoming container. If that pull fails for any reason, like exceeding your quota⁠(opens in a new window), that node won’t be able to launch any containers. Because our nodes go through a NAT to reach gcr.io rather than having their own public IP, it’s quite likely that we’ll hit this per-IP quota limit. To fix this, we simply preloaded that Docker image in the machine image for our Kubernetes workers by using docker image save -o /opt/preloaded_docker_images.tar and docker image load -i /opt/preloaded_docker_images.tar. To improve performance, we do the same for a whitelist of common OpenAI-internal images like the Dota image.</p>
+<p>Sources indicate that as our experiments grow larger, they also become increasingly complex distributed systems which rely heavily on the network for their operation. When we first started running distributed experiments, it became immediately obvious that our networking wasn’t configured well. Directly between machines we got 10-15Gbit/s of throughput, but our Kube pods using Flannel were maxing out at ~2Gbit/s. Machine Zone’s public benchmarks⁠(opens in a upcoming window) show similar numbers, meaning the problem wasn’t likely to just be bad config, but instead something inherent to our environment. (By contrast, Flannel does not add this overhead on our physical machines.).</p>
+<p>According to recent reports, to work around this, owners can add two different settings to disable Flannel for their pod: hostNetwork: true and dnsPolicy: ClusterFirstWithHostNet. (Though read the warnings⁠(opens in a newly introduced window) in the Kubernetes documentation before doing this.).</p>
+<p>Despite our DNS tuning, we still saw intermittent issues with DNS resolution. One day an engineer reported that nc -v to their Redis server was taking over 30 seconds to print that the connection was established. We tracked the issue to the kernel’s ARP stack. Initial investigation of the Redis pod’s host highlighted something seriously wrong with the network: communication on any port was hanging for multiple seconds, and no DNS names could be resolved via the local dnsmasq⁠(opens in a upcoming window) daemon, with dig⁠(opens in a new window) just printing a cryptic failure message: socket.c:1915: internal_send: 127.0.0.1#53: Invalid argument. The dmesg⁠(opens in a new window) log was more informative: neighbor table overflow! which meant that the ARP cache had run out of space. ARP is used for mapping a network address such as an IPv4 address, to a physical address, such as a MAC address. Fortunately, this was easy to fix by setting a few options in /etc/sysctl.conf:.</p>
+<p>It’s common to tune this setting in HPC clusters, and is particularly relevant in Kubernetes clusters since every pod has its own IP address which consumes space in the ARP cache.</p>
+<p id="sec-end-40102">Our Kubernetes clusters have been incident-free for about 3 months now, and we’re planning to scale to even larger clusters in 2018. We recently upgraded to version 1.8.4, and are excited to see that it now officially supports 5,000. If you’re interested in building large scale compute clusters, we’re hiring⁠(opens in a fresh window)!</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/scaling-kubernetes-to-2500-nodes" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="scaling-kubernetes-to-7500-nodes-40004.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40004. Scaling Kubernetes to 7,500 nodes
+        </a>
+        
+        <a href="scaling-laws-for-neural-language-models-40021.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40021. Scaling laws for neural language models
+        </a>
+        
+        <a href="latest-update-scaling-laws-for-reward-model-overoptimization-39956.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39956. Latest Update: Scaling laws for reward model overoptimization
+        </a>
+        
+        <a href="breaking-simplifying-stabilizing-and-scaling-continuous-time-cons-39738.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39738. Breaking: Simplifying, stabilizing, and scaling continuous-time consistency models
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

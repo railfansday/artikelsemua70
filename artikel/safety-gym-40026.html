@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety Gym</title>
+    <meta name="description" content="We’re releasing Safety Gym, a suite of environments and tools for measuring progress towards reinforcement learning agents that respect safety constraints ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/safety-gym-40026.html">
+    <meta property="og:title" content="Safety Gym">
+    <meta property="og:description" content="We’re releasing Safety Gym, a suite of environments and tools for measuring progress towards reinforcement learning agents that respect safety constraints ">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/d892ac37-e804-4ee6-3e76eedaaa12/48b4170dcd063935868a15e5d49cb990/safety-gym.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/safety-gym-40026.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Safety Gym", "image": ["https://images.ctfassets.net/kftzwdyauwt9/d892ac37-e804-4ee6-3e76eedaaa12/48b4170dcd063935868a15e5d49cb990/safety-gym.png?w=1600&h=900&fit=fill"], "datePublished": "2019-11-21T08:00:00", "dateModified": "2026-11-26T21:24:21.473054", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/safety-gym-40026.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Safety Gym</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 21 Nov 2019 &bull; ⏱️ 8 min read (1561 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing Safety Gym, a suite of environments and tools for measuring progress towards reinforcement learning agents that respect safety constraints while training.</li><li style='margin-bottom:6px;'>In a recent development, we also provide a standardized method of comparing algorithms and how well they avoid costly mistakes while learning.</li><li style='margin-bottom:6px;'>It has been revealed that reinforcement learning agents need to explore their environments in order to learn optimal behaviors.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40026"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40026"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40026"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Safety Gym" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/d892ac37-e804-4ee6-3e76eedaaa12/48b4170dcd063935868a15e5d49cb990/safety-gym.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40026">We’re releasing Safety Gym, a suite of environments and tools for measuring progress towards reinforcement learning agents that respect safety constraints while training.</p>
+<p>Illustration: Richard Perez &amp; Jennifer DeRosa.</p>
+<p>In a recent development, we also provide a standardized method of comparing algorithms and how well they avoid costly mistakes while learning. If deep reinforcement learning is applied to the real world, whether in robotics or internet-based tasks, it will be important to have algorithms that are safe even while learning—like a self-driving car that can learn to avoid accidents without actually having to experience them.</p>
+<p>It has been revealed that reinforcement learning agents need to explore their environments in order to learn optimal behaviors. Essentially, they operate on the principle of trial and error: they try things out, see what works or doesn’t work, and then increase the likelihood of good behaviors and decrease the likelihood of bad behaviors. However, exploration⁠(opens in a fresh window) is fundamentally⁠(opens in a new window) risky⁠(opens in a new window): agents might try dangerous behaviors that lead to unacceptable errors. This is the “safe exploration” problem⁠(opens in a new window) in a nutshell.</p>
+<p>Consider an example of an autonomous robot arm in a factory using reinforcement learning (RL) to learn how to assemble widgets. At the start of RL training, the robot might try flailing randomly, since it doesn’t know what to do yet. This poses a safety risk to humans who might be working nearby, since they could get hit.</p>
+<p>In a recent development, for restricted examples like the robot arm, we can imagine simple ways to ensure that humans aren’t harmed by just keeping them out of harm’s way: shutting down the robot whenever a human gets too close, or putting a barrier around the robot. But for general RL systems that operate under a wider range of conditions, simple physical interventions won’t always be possible, and we will need to consider other approaches to safe exploration.</p>
+<p>Industry observers note that the first step towards making progress on a problem like safe exploration is to quantify it: figure out what can be measured, and how going up or down on those metrics gets us closer to the desired outcome. Another way to say it is that we need to pick a formalism for the safe exploration problem. A formalism allows us to design algorithms that achieve our goals.</p>
+<p>While there are several options, there is not yet a universal consensus in the field of safe exploration research about the right formalism. We spent some time thinking about it, and the formalism we think makes the most sense to adopt is constrained reinforcement learning.</p>
+<p>It has been revealed that constrained RL⁠(opens in a upcoming window) is like normal RL, but in addition to a reward function that the agent wants to maximize, environments have cost functions that the agent needs to constrain. For example, consider an agent controlling a self-driving car. We would want to reward this agent for getting from point A to point B as fast as possible. But naturally, we would also want to constrain the driving behavior to match traffic safety standards.</p>
+<p>Sources indicate that we think constrained RL may turn out to be more useful than normal RL for ensuring that agents satisfy safety requirements. A significant problem with normal RL is that everything about the agent’s eventual behavior is described by the reward function, but reward design is fundamentally hard. A key part of the challenge comes from picking trade-offs between competing objectives, such as task performance and satisfying safety requirements. In constrained RL, we don’t have to pick trade-offs—instead, we pick outcomes, and let algorithms figure out the trade-offs that get us the outcomes we want.</p>
+<p>Sources indicate that we can use the self-driving car case to sketch what this means in practice. Suppose the car earns some amount of money for every trip it completes, and has to pay a fine for every collision.</p>
+<p>In normal RL, you would pick the collision fine at the beginning of training and keep it fixed forever. The problem here is that if the pay-per-trip is high enough, the agent may not care whether it gets in lots of collisions (as long as it can still complete its trips). In fact, it may even be advantageous to drive recklessly and risk those collisions in order to get the pay. We have seen this before when training unconstrained RL agents⁠.</p>
+<p>According to recent reports, by contrast, in constrained RL you would pick the acceptable collision rate at the beginning of training, and adjust the collision fine until the agent is meeting that requirement. If the car is getting in too many fender-benders, you raise the fine until that behavior is no longer incentivized.</p>
+<p>To study constrained RL for safe exploration, we developed a newly introduced set of environments and tools called Safety Gym. By comparison to existing environments for constrained RL, Safety Gym environments are richer and feature a wider range of difficulty and complexity.</p>
+<p>In all Safety Gym environments, a robot has to navigate through a cluttered environment to achieve a task. There are three pre-made robots (Point, Car, and Doggo), three main tasks (Goal, Button, and Push), and two levels of difficulty for each task. We give an overview of the robot-task combinations below, but make sure to check out the paper⁠(opens in a new window) for details.</p>
+<p id="sec-mid-40026">In a recent development, in these videos, we show how an agent without constraints tries to solve these environments. Every time the robot does something unsafe—which here, means running into clutter—a red warning light flashes around the agent, and the agent incurs a cost (separate from the task reward). Because these agents are unconstrained, they often wind up behaving unsafely while trying to maximize reward.</p>
+<p>Point is a simple robot constrained to the 2D plane, with one actuator for turning and another for moving forward or backward. Point has a front-facing small square which helps with the Push task.</p>
+<p>Car has two independently-driven parallel wheels and a free-rolling rear wheel. For this robot, turning and moving forward or backward require coordinating both of the actuators.</p>
+<p>Doggo is a quadruped with bilateral symmetry. Each of its four legs has two controls at the hip, for azimuth and elevation relative to the torso, and one in the knee, controlling angle. A uniform random policy keeps the robot from falling over and generates travel.</p>
+<p>To help make Safety Gym useful out-of-the-box, we evaluated some standard RL and constrained RL algorithms on the Safety Gym benchmark suite: PPO⁠, TRPO⁠(opens in a newly introduced window), Lagrangian penalized versions⁠(opens in a new window) of PPO and TRPO, and Constrained Policy Optimization⁠(opens in a new window) (CPO).</p>
+<p>Our preliminary results demonstrate the wide range of difficulty of Safety Gym environments: the simplest environments are easy to solve and allow fast iteration, while the hardest environments may be too challenging for current techniques. We also found that Lagrangian methods were surprisingly better than CPO, overturning a previous result in the field.</p>
+<p>It has been revealed that below, we show learning curves for average episodic return and average episodic sum of costs. In our paper⁠(opens in a newly introduced window), we describe how to use these and a third metric (the average cost over training) to compare algorithms and measure progress.</p>
+<p>To facilitate reproducibility and future work, we’re also releasing the algorithms code we used to run these experiments as the Safety Starter Agents repo⁠(opens in a newly introduced window).</p>
+<p>Sources indicate that there is still a lot of work to do on refining algorithms for constrained RL, and combining them with other problem settings and safety techniques. There are three things we are most interested in at the moment:.</p>
+<p>Improving performance on the current Safety Gym environments.</p>
+<p>Using Safety Gym tools to investigate safe transfer learning and distributional shift problems.</p>
+<p>Combining constrained RL with implicit specifications (like human preferences⁠) for rewards and costs.</p>
+<p>Our expectation is that, in the same way we today measure the accuracy or performance of systems at a given task, we’ll eventually measure the “safety” of systems as well. Such measures could feasibly be integrated into assessment schemes that developers use to test their systems, and could potentially be used by the government to create standards for safety⁠(opens in a new window).A We also hope that systems like Safety Gym can make it easier for AI developers to collaborate on safety across the AI sector via work on open, shared systems.</p>
+<p>If you’re excited to work on safe exploration problems with us, we’re hiring⁠!</p>
+<p>OpenAI’s comments in response to a request for information from the US agency NIST regarding Artificial Intelligence Standards.</p>
+<p id="sec-end-40026">We gratefully acknowledge the many people who contributed to this release. Thanks Christy Dennison, Ethan Knight, and Adam Stooke for discussions, research, and testing of Safety Gym along the way, and to Mira Murati for supporting the project team. Thanks Karl Cobbe, Matthias Plappert, and Jacob Hilton for feedback on the paper. Thanks Ashley Pilipiszyn, Ben Barry, Justin Jay Wang, Richard Perez, Jen DeRosa, and Greg Brockman for work on editing, designing, illustrating, and shipping this post. Thanks Amanda Askell, Jack Clark, and Miles Brundage for discussions and blog post contributions on measurements for AI safety and policy implications. Thanks Chris Hesse for liaising on open source release guidelines.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/safety-gym" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="openai-gym-beta-40168.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40168. OpenAI Gym Beta
+        </a>
+        
+        <a href="concrete-ai-safety-problems-40163.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40163. Concrete AI safety problems
+        </a>
+        
+        <a href="ai-safety-via-debate-40083.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40083. AI safety via debate
+        </a>
+        
+        <a href="tech-report-gym-retro-40081.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40081. Tech Report: Gym Retro
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

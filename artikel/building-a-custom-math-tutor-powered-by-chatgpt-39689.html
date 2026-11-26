@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a custom math tutor powered by ChatGPT</title>
+    <meta name="description" content="As Phil Birchenall sits at his kitchen table, the rain drizzles down the window behind, turning the winsome cottages and well kept greenery into a chilly i">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/building-a-custom-math-tutor-powered-by-chatgpt-39689.html">
+    <meta property="og:title" content="Building a custom math tutor powered by ChatGPT">
+    <meta property="og:description" content="As Phil Birchenall sits at his kitchen table, the rain drizzles down the window behind, turning the winsome cottages and well kept greenery into a chilly i">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/2oDKH92TW20YedrGjlZ2bO/aee7f60283553fa4f600d6f38fddbd0f/My_dog__the_math_tutor.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/building-a-custom-math-tutor-powered-by-chatgpt-39689.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Building a custom math tutor powered by ChatGPT", "image": ["https://images.ctfassets.net/kftzwdyauwt9/2oDKH92TW20YedrGjlZ2bO/aee7f60283553fa4f600d6f38fddbd0f/My_dog__the_math_tutor.jpg?w=1600&h=900&fit=fill"], "datePublished": "2025-02-04T00:00:00", "dateModified": "2026-11-26T21:23:27.820782", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/building-a-custom-math-tutor-powered-by-chatgpt-39689.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Building a custom math tutor powered by ChatGPT</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 04 Feb 2025 &bull; ⏱️ 4 min read (713 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>As Phil Birchenall sits at his kitchen table, the rain drizzles down the window behind, turning the winsome cottages and well kept greenery into a chilly impromptu impressionist painting.</li><li style='margin-bottom:6px;'>Sources indicate that “She’s a brilliant kid.</li><li style='margin-bottom:6px;'>Industry observers note that the sparkle in his eyes as he speaks makes it obvious just how much he cares about his daughter.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-39689"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-39689"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-39689"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Building a custom math tutor powered by ChatGPT" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/2oDKH92TW20YedrGjlZ2bO/aee7f60283553fa4f600d6f38fddbd0f/My_dog__the_math_tutor.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-39689">As Phil Birchenall sits at his kitchen table, the rain drizzles down the window behind, turning the winsome cottages and well kept greenery into a chilly impromptu impressionist painting. It doesn’t seem to matter to Phil, because when he starts talking about his 12-year-old daughter, Daisy, it’s nothing but warmth.</p>
+<p>Sources indicate that “She’s a brilliant kid. She’s funny. She’s sharp. She loves baking and absolutely idolizes animals. Our dog, Izzy, is her absolute baby and they are inseparable. It’s really really cute.”.</p>
+<p>Industry observers note that the sparkle in his eyes as he speaks makes it obvious just how much he cares about his daughter. So when he got a letter from Daisy’s teacher after school, he jumped on the problem with verve.</p>
+<p>In a recent development, phil’s first instinct was to try what he calls, “the kitchen table approach.” The particular math that Daisy had been struggling with were multiplying fractions and long division. That evening, he sat down with Daisy - Izzy snuggling under her chair - and opened up a text book. That’s when he realized math had changed.</p>
+<p>“I'm looking at the guide and I'm going and I'm desperate to work out what it's telling me. My brain can't process it. My brain's going back to 1986… I can't even reconcile, you know, the two methodologies.”.</p>
+<p>It has been revealed that surrounded by fresh notebooks, sharpened pencils, and a text book that reads to him like hieroglyphics, Phil was dumbfounded. His daughter knew there was something wrong right away.</p>
+<p>“Daisy sat there looking at me…I could see the color washing from her face, thinking this is not helping me one bit.”.</p>
+<p id="sec-mid-39689">But Phil is a problem solver, not a quitter—and he certainly wasn’t about to quit on his daughter in her time of scholastic need. Fortunately, he had an idea. Phil’s always been an early adopter of fresh technologies, curious about their potential in the workplace and in life. Months before, he’d started experimenting with ChatGPT. He’d already used ChatGPT in the office, to organize finances and even developed a personal fitness tool. So that night, he got on his computer and created his own GPT - a custom math tutor for Daisy.</p>
+<p>According to recent reports, A GPT is a version of the AI language model that you can personalize to suit specific needs or tasks. It’s like a customized version of ChatGPT that you can “train” or “tune” to focus on particular subjects, tasks or ways of interacting with you. In Phil’s case, the particular subject was teaching multiplying fractions and long division to a 12-year-old. And in a flash of genius - he gave it the personality of their dog, Izzy.</p>
+<p>This last minute idea made his GPT something truly special for his daughter, Daisy. According to Phil, the first time she tried it, it immediately told a terrible dog joke and then went directly into dog-biscuit themed long-division problems. Daisy was hooked.</p>
+<p>After studying with Izzy, the Math Tutor, Daisy’s grasp of her weak points in math got stronger and stronger. In England, there is a test students take at the end of primary school to qualify for secondary school. Daisy passed with flying colors.</p>
+<p>Recent findings suggest that “Daisy smashed her SATs exam for maths. She got a certificate back from a teacher saying how much progress she’d made on maths. And the whole thing was fun. It was like, you know, it just gave us something exciting to do rather than.”.</p>
+<p>With her high scores, Daisy has since placed well into her next school. Phil recently shared his ChatGPT math tutor idea on social media to inspire other parents to build their own GPTs and help their children in whatever subject they need. And to add a little personality to their project.</p>
+<p>It has been revealed that “Rather than just a, like a boring textbook revision guide. It kind of really, like, really brought it to life and it made it feel like part of the family like that had this thing that was an extension of our dog… You know, it’s just really about putting more of what you love into what you learn.”.</p>
+<p id="sec-end-39689">If you’re wondering, the real Izzy still could care less about long division.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/my-dog-the-math-tutor" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="industry-news-custom-instructions-for-chatgpt-39915.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39915. Industry News: Custom instructions for ChatGPT
+        </a>
+        
+        <a href="industry-news-building-ai-powered-apps-for-business-39898.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39898. Industry News: Building AI-powered apps for business
+        </a>
+        
+        <a href="personalize-chatgpt-with-custom-instructions-39612.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39612. Personalize ChatGPT with custom instructions
+        </a>
+        
+        <a href="tech-report-how-block-is-building-ai-powered-security-with-openai-39307.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39307. Tech Report: How Block is building AI-powered security with OpenAI technology
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

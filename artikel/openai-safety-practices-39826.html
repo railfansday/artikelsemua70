@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI safety practices</title>
+    <meta name="description" content="Sharing our practices as part of the AI Seoul Summit. We are proud to build and release models that are industry-leading on both capabilities and safety. A">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/openai-safety-practices-39826.html">
+    <meta property="og:title" content="OpenAI safety practices">
+    <meta property="og:description" content="Sharing our practices as part of the AI Seoul Summit. We are proud to build and release models that are industry-leading on both capabilities and safety. A">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/54pUOkZ0poSpo9udfZmN3g/e90a4235b3d8537bdddfcc7219b636d1/safety-blog-cover-02.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/openai-safety-practices-39826.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "OpenAI safety practices", "image": ["https://images.ctfassets.net/kftzwdyauwt9/54pUOkZ0poSpo9udfZmN3g/e90a4235b3d8537bdddfcc7219b636d1/safety-blog-cover-02.jpg?w=1600&h=900&fit=fill"], "datePublished": "2024-05-21T06:00:00", "dateModified": "2026-11-26T21:23:50.407807", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/openai-safety-practices-39826.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>OpenAI safety practices</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 21 May 2024 &bull; ⏱️ 6 min read (1245 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Sharing our practices as part of the AI Seoul Summit.</li><li style='margin-bottom:6px;'>We are proud to build and release models that are industry-leading on both capabilities and safety.</li><li style='margin-bottom:6px;'>According to recent reports, more than a hundred million users and millions of developers rely on the work of our safety teams.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-39826"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-39826"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-39826"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="OpenAI safety practices" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/54pUOkZ0poSpo9udfZmN3g/e90a4235b3d8537bdddfcc7219b636d1/safety-blog-cover-02.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-39826">Sharing our practices as part of the AI Seoul Summit.</p>
+<p>We are proud to build and release models that are industry-leading on both capabilities and safety.</p>
+<p>According to recent reports, more than a hundred million users and millions of developers rely on the work of our safety teams. We view safety as something we have to invest in and succeed at across multiple time horizons, from aligning today’s models to the far more capable systems we expect in the future. This work has always happened across OpenAI and our investment will only increase over time.</p>
+<p>We believe in a balanced, scientific approach where safety measures are integrated into the development process from the outset. This ensures that our AI systems are both innovative and reliable, and can deliver benefits to society.</p>
+<p>In a recent development, at today’s AI Seoul Summit, we’re joining industry leaders, government officials, and members of civil society to discuss AI safety. While there is still more work to do, we are encouraged by the additional Frontier AI Safety Commitments that OpenAI and other companies agreed upon today. The Commitments call on companies to safely develop and deploy their frontier AI models while sharing information about their risk mitigation measures, aligning with steps we have already taken. These include a pledge to publish safety frameworks like the Preparedness Framework⁠(opens in a newly introduced window) we developed and adopted last year.</p>
+<p>We are sharing 10 practices we actively use and improve upon.</p>
+<p>Sources indicate that empirical model red-teaming and testing before release: We empirically evaluate model safety before release, internally and externally, according to our Preparedness Framework⁠ and voluntary commitments⁠. We won’t release a latest model if it crosses a “Medium” risk threshold from our Preparedness Framework, until we implement sufficient safety interventions to bring the post-mitigation score back to “Medium”. More than 70 external experts helped to assess risks associated with GPT‑4o⁠ through our external red teaming⁠ efforts, and we used these learnings to build evaluations based on weaknesses in earlier checkpoints in order to better understand later checkpoints.</p>
+<p>Recent findings suggest that alignment and safety research: Our models have become significantly safer over time. This can be attributed to building smarter models which typically make fewer factual errors and are less likely to output harmful content even under adversarial conditions like jailbreaks. It is also due to our focused investment in practical alignment, safety systems, and post-training research. These efforts work to improve the quality of human-generated fine-tuning data, and in the future, the instructions our models are trained to follow⁠. We are also conducting and publishing fundamental research aimed at dramatically improving our systems’ robustness to attacks like jailbreaks⁠(opens in a newly introduced window).</p>
+<p>Monitoring for abuse: As we have deployed increasingly capable language models via our API and ChatGPT, we have leveraged a broad spectrum of tools, including dedicated moderation⁠(opens in a newly introduced window) models⁠ and the use of our own models for monitoring of safety risks and abuse. We have shared some critical findings along the way, including a joint disclosure (with Microsoft) of state actor abuse of our technology⁠, so that others can better safeguard against similar risks. We also use GPT‑4 for content policy development and content moderation decisions⁠, enabling a faster feedback loop for policy refinement and less abusive material exposed to human moderators.</p>
+<p id="sec-mid-39826">Systematic approach for safety: We implement a range of safety measures at every stage of the model's life cycle, from pre-training to deployment. As we advance in developing safer and more aligned model behavior, we also invest in pre-training data safety, system-level model behavior steering, data flywheel for continued safety improvement and robust monitoring infrastructure.</p>
+<p>According to recent reports, protecting children: A critical focus of our safety work is protecting children. We’ve built strong default guardrails and safety measures into ChatGPT and DALL·-E that mitigate potential harms to children. In 2023, we partnered with Thorn’s Safer⁠ to detect, review and report Child Sexual Abuse Material to the National Center for Missing and Exploited Children if consumers attempt to upload it to our image tools. We continue to collaborate⁠ with Thorn, the Tech Coalition, All Tech is Human, Commonsense Media⁠(opens in a new window) and the broader tech community to uphold the Safety by Design principles.</p>
+<p>In a recent development, election integrity: We’re collaborating with governments and stakeholders to prevent abuse, ensure transparency on AI-generated content, and improve access to accurate voting information⁠. To achieve this, we’ve introduced a tool for identifying images created by DALL·E 3, joined the steering committee of the Content Authenticity Initiative (C2PA), and incorporated C2PA metadata in DALL·E 3 to help people understand the source of media they find online. ChatGPT now directs people to official voting information sources in the U.S. and Europe. Additionally, we support the bipartisan “Protect Elections from Deceptive AI Act”⁠(opens in a new window) proposed in the U.S. Senate, which would ban misleading AI-generated content in political advertising.</p>
+<p>Sources indicate that investment in impact assessment and policy analysis: Our impact assessment efforts have been widely influential in research, industry norms, and policy, including our early work⁠(opens in a fresh window) on measuring⁠ the chemical, biological, radiological, and nuclear (CBRN) risks associated with AI systems, and our research estimating the extent to which different occupations and industries might be impacted by language models⁠. We also publish pioneering work on how society can best manage associated risks – for example, by working with external experts to assess the implications of language models for influence operations⁠(opens in a new window).</p>
+<p>Sources indicate that security and access control measures: We prioritize protecting our customers, intellectual property, and data. We deploy our AI models to the world as services, controlling access via API which enables policy enforcement⁠. Our cybersecurity efforts include restricting access to training environments and high-value algorithmic secrets on a need-to-know basis, internal and external penetration testing, a bug bounty program⁠, and more. We believe that protecting advanced AI systems will benefit from an evolution of infrastructure security⁠ and are exploring novel controls like confidential computing for GPUs and applications of AI to cyber defense to protect our technology. To empower cyber defense, we’re funding third-party security researchers with our Cybersecurity Grant Program⁠.</p>
+<p>Sources indicate that partnering with governments: We partner with governments around the world to inform the development of effective and adaptable AI safety policies. This includes showing our work⁠ and sharing our learnings⁠, collaborating to pilot government and other third party assurance, and informing the public debate over fresh standards and laws.</p>
+<p>Recent findings suggest that safety decision making and Board oversight: As part of our Preparedness Framework, we have an operational structure for safety decision-making. Our cross-functional Safety Advisory Group reviews model capability reports and makes recommendations ahead of deployment. Manufacturer leadership makes the final decisions, with the Board of Directors exercising oversight over those decisions.</p>
+<p>This approach has enabled us to build and deploy safe and capable models at the current level of capability.</p>
+<p id="sec-end-39826">As we move towards our next frontier model, we recognize we will need to evolve our practices, in particular to increase our security posture to ultimately be resilient to sophisticated state actor attacks and to ensure that we introduce additional time for safety testing before major rolls out. We and the field have a hard problem to solve in order to safely and beneficially deliver increasingly capable AI. We initiative to share more on these evolving practices in the coming weeks.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/openai-safety-update" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="openais-commitment-to-child-safety-adopting-safety-by-design-prin-39849.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39849. OpenAI’s commitment to child safety: adopting safety by design principles
+        </a>
+        
+        <a href="openai-board-forms-safety-and-security-committee-39824.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39824. OpenAI Board Forms Safety and Security Committee
+        </a>
+        
+        <a href="an-update-on-our-safety-security-practices-39770.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39770. An update on our safety & security practices
+        </a>
+        
+        <a href="openai-supports-californias-bill-to-advance-youth-ai-safety-39430.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39430. OpenAI supports California’s bill to advance youth AI safety
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Introducing Structured Outputs in the API</title>
+    <meta name="description" content="We are introducing Structured Outputs in the API—model outputs now reliably adhere to developer-supplied JSON Schemas. Sources indicate that last year at D">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-structured-outputs-in-the-api-39794.html">
+    <meta property="og:title" content="Tech Report: Introducing Structured Outputs in the API">
+    <meta property="og:description" content="We are introducing Structured Outputs in the API—model outputs now reliably adhere to developer-supplied JSON Schemas. Sources indicate that last year at D">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/1XeXlBlWdUBSPFcVPsOmOD/dc8123f1031a0f9fe1b816790ee510a9/Structured_Outputs_Cover.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-structured-outputs-in-the-api-39794.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Introducing Structured Outputs in the API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/1XeXlBlWdUBSPFcVPsOmOD/dc8123f1031a0f9fe1b816790ee510a9/Structured_Outputs_Cover.png?w=1600&h=900&fit=fill"], "datePublished": "2024-08-06T10:00:00", "dateModified": "2026-11-26T21:23:45.717539", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-introducing-structured-outputs-in-the-api-39794.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Introducing Structured Outputs in the API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 06 Aug 2024 &bull; ⏱️ 9 min read (1888 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We are introducing Structured Outputs in the API—model outputs now reliably adhere to developer-supplied JSON Schemas.</li><li style='margin-bottom:6px;'>Sources indicate that last year at DevDay, we introduced JSON mode—a useful building block for developers looking to build reliable applications with our models.</li><li style='margin-bottom:6px;'>Generating structured data from unstructured inputs is one of the core use cases for AI in today’s applications.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-39794"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-39794"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-39794"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Introducing Structured Outputs in the API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/1XeXlBlWdUBSPFcVPsOmOD/dc8123f1031a0f9fe1b816790ee510a9/Structured_Outputs_Cover.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-39794">We are introducing Structured Outputs in the API—model outputs now reliably adhere to developer-supplied JSON Schemas.</p>
+<p>Sources indicate that last year at DevDay, we introduced JSON mode—a useful building block for developers looking to build reliable applications with our models. While JSON mode improves model reliability for generating valid JSON outputs, it does not guarantee that the model’s response will conform to a particular schema. Today we’re introducing Structured Outputs in the API, a newly introduced feature designed to ensure model-generated outputs will exactly match JSON Schemas provided by developers.</p>
+<p>Generating structured data from unstructured inputs is one of the core use cases for AI in today’s applications. Developers use the OpenAI API to build powerful assistants that have the ability to fetch data and answer questions via function calling⁠(opens in a upcoming window), extract structured data for data entry, and build multi-step agentic workflows that allow LLMs to take actions. Developers have long been working around the limitations of LLMs in this area via open source tooling, prompting, and retrying requests repeatedly to ensure that model outputs match the formats needed to interoperate with their systems. Structured Outputs solves this problem by constraining OpenAI models to match developer-supplied schemas and by training our models to better understand complicated schemas.</p>
+<p>Recent findings suggest that on our evals of complex JSON schema following, our latest model gpt-4o-2024-08-06 with Structured Outputs scores a perfect 100%. In comparison, gpt-4-0613 scores less than 40%.</p>
+<p>With Structured Outputs, gpt-4o-2024-08-06 achieves 100% reliability in our evals, perfectly matching the output schemas.</p>
+<p>We’re introducing Structured Outputs in two forms in the API:.</p>
+<p>Sources indicate that 1. Function calling: Structured Outputs via tools is available by setting strict: true within your function definition. This feature works with all models that support tools, including all models gpt-4-0613 and gpt-3.5-turbo-0613 and later. When Structured Outputs are enabled, model outputs will match the supplied tool definition.</p>
+<p>Industry observers note that 2. A new option for the response_format parameter: developers can now supply a JSON Schema via json_schema, a new option for the response_format parameter. This is useful when the model is not calling a tool, but rather, responding to the user in a structured way. This feature works with our newest GPT‑4o models: gpt-4o-2024-08-06, released today, and gpt-4o-mini-2024-07-18. When a response_format is supplied with strict: true, model outputs will match the supplied schema.</p>
+<p>Sources indicate that safety is a top priority for OpenAI—the new Structured Outputs functionality will abide by our existing safety policies and will still allow the model to refuse an unsafe request. To make development simpler, there is a new refusal string value on API responses which allows developers to programmatically detect if the model has generated a refusal instead of output matching the schema. When the response does not include a refusal and the model’s response has not been prematurely interrupted (as indicated by finish_reason), then the model’s response will reliably produce valid JSON matching the supplied schema.</p>
+<p>Our Python and Node SDKs have been updated with native support for Structured Outputs. Supplying a schema for tools or as a response format is as easy as supplying a Pydantic or Zod object, and our SDKs will handle converting the data type to a supported JSON schema, deserializing the JSON response into the typed data structure automatically, and parsing refusals if they arise.</p>
+<p>The following examples show native support for Structured Outputs with function calling.</p>
+<p>Native Structured Outputs support is also available for response_format.</p>
+<p>It has been revealed that developers frequently use OpenAI’s models to generate structured data for various use cases. Some additional examples include:.</p>
+<p>For example, developers can use Structured Outputs to create code- or UI-generating applications. All of the following examples use the same response_format, and can be used to generate varying UIs based on user input.</p>
+<p>It can be useful to give the model a separate field for chain of thought to improve the final quality of the response.</p>
+<p>For example, instructing the model to extract things like to-dos, due dates, and assignments from meeting notes.</p>
+<p>Sources indicate that we took a two part approach to improving reliability for model outputs that match JSON Schema. First, we trained our newest model gpt-4o-2024-08-06 to understand complicated schemas and how best to produce outputs that match them. However, model behavior is inherently non-deterministic—despite this model’s performance improvements (93% on our benchmark), it still did not meet the reliability that developers need to build robust applications. So we also took a deterministic, engineering-based approach to constrain the model’s outputs to achieve 100% reliability.</p>
+<p>Our approach is based on a technique known as constrained sampling or constrained decoding. By default, when models are sampled to produce outputs, they are entirely unconstrained and can select any token from the vocabulary as the next output. This flexibility is what allows models to make mistakes; for example, they are generally free to sample a curly brace token at any time, even when that would not produce valid JSON. In order to force valid outputs, we constrain our models to only tokens that would be valid according to the supplied schema, rather than all available tokens.</p>
+<p id="sec-mid-39794">In a recent development, it can be challenging to implement this constraining in practice, since the tokens that are valid differ throughout a model’s output. Let’s say we have the following schema:.</p>
+<p>The tokens that are valid at the beginning of the output include things like {, {“, {, etc. However, once the model has already sampled {“val, then { is no longer a valid token. Thus we need to implement dynamic constrained decoding, and determine which tokens are valid after each token is generated, rather than upfront at the beginning of the response.</p>
+<p>According to recent reports, to do this, we convert the supplied JSON Schema into a context-free grammar (CFG). A grammar is a set of rules that defines a language, and a context-free grammar is a grammar that conforms to specific rules. You can think of JSON and JSON Schema as particular languages with rules to define what is valid within the language. Just as it’s not valid in English to have a sentence with no verb, it is not valid in JSON to have a trailing comma.</p>
+<p>Thus, for each JSON Schema, we compute a grammar that represents that schema, and pre-process its components to make it easily accessible during model sampling. This is why the first request with a fresh schema incurs a latency penalty—we must preprocess the schema to generate this artifact that we can use efficiently during sampling.</p>
+<p>Sources indicate that while sampling, after every token, our inference engine will determine which tokens are valid to be produced next based on the previously generated tokens and the rules within the grammar that indicate which tokens are valid next. We then use this list of tokens to mask the next sampling step, which effectively lowers the probability of invalid tokens to 0. Because we have preprocessed the schema, we can use a cached data structure to do this efficiently, with minimal latency overhead.</p>
+<p>Alternate approaches to this problem often use finite state machines (FSMs) or regexes (generally implemented with FSMs) for constrained decoding. These function similarly in that they dynamically update which tokens are valid after each token is produced, but they have some key differences from the CFG approach. Notably, CFGs can express a broader class of languages than FSMs. In practice, this doesn’t matter for very simple schemas like the value schema shown above. However, we find that the difference is meaningful for more complex schemas that involve nested or recursive data structures. As an example, FSMs cannot generally express recursive types, which means FSM based approaches may struggle to match parentheses in deeply nested JSON. The following is a sample recursive schema that is supported on the OpenAI API with Structured Outputs but would not be possible to express with a FSM.</p>
+<p>According to recent reports, note that each UI element can have arbitrary children which reference the root schema recursively. This flexibility is something that the CFG approach affords.</p>
+<p>There are a few limitations to keep in mind when using Structured Outputs:.</p>
+<p>Industry observers note that structured Outputs allows only a subset of JSON Schema, detailed in our docs⁠(opens in a fresh window). This helps us ensure the best possible performance.</p>
+<p>According to recent reports, the first API response with a upcoming schema will incur additional latency, but subsequent responses will be fast with no latency penalty. This is because during the first request, we process the schema as indicated above and then cache these artifacts for fast reuse later on. Typical schemas take under 10 seconds to process on the first request, but more complex schemas may take up to a minute.</p>
+<p>According to recent reports, the model can fail to follow the schema if the model chooses to refuse an unsafe request. If it chooses to refuse, the return message will have the refusal boolean set to true to indicate this.</p>
+<p>The model can fail to follow the schema if the generation reaches max_tokens or another stop condition before finishing.</p>
+<p>Industry observers note that structured Outputs doesn’t prevent all kinds of model mistakes. For example, the model may still make mistakes within the values of the JSON object (e.g., getting a step wrong in a mathematical equation). If developers find mistakes, we recommend providing examples in the system instructions or splitting tasks into simpler subtasks.</p>
+<p>Industry observers note that structured Outputs is not compatible with parallel function calls. When a parallel function call is generated, it may not match supplied schemas. Set parallel_tool_calls: false to disable parallel function calling.</p>
+<p>JSON Schemas supplied with Structured Outputs aren’t Zero Data Retention⁠(opens in a latest window) (ZDR) eligible.</p>
+<p>According to recent reports, structured Outputs is generally available today in the API. Structured Outputs with function calling is available on all models that support function calling in the API. This includes our newest models (gpt-4o, gpt-4o-mini), all models after and including gpt-4-0613 and gpt-3.5-turbo-0613, and any fine-tuned models that support function calling. This functionality is available on the Chat Completions API, Assistants API, and Batch API. Structured Outputs with function calling is also compatible with vision inputs.Structured Outputs with response formats is available on gpt-4o-mini and gpt-4o-2024-08-06 and any fine tunes based on these models. This functionality is available on the Chat Completions API, Assistants API, and Batch API. Structured Outputs with response formats is also compatible with vision inputs. By switching to the new gpt-4o-2024-08-06, developers save 50% on inputs ($2.50/1M input tokens) and 33% on outputs ($10.00/1M output tokens) compared to gpt-4o-2024-05-13.To start using Structured Outputs, check out our docs⁠(opens in a new window).</p>
+<p>Structured Outputs takes inspiration from excellent work from the open source community: namely, the outlines⁠(opens in a new window), jsonformer⁠(opens in a new window), instructor⁠(opens in a new window), guidance⁠(opens in a new window), and lark⁠(opens in a new window) libraries.</p>
+<p>Chris Colby, Melody Guan, Michelle Pokrass, Ted Sanders, Brian Zhang.</p>
+<p id="sec-end-39794">John Allard, Filipe de Avila Belbute Peres, Ilan Bigio, Owen Campbell-Moore, Chen Ding, Atty Eleti, Elie Georges, Katia Gil Guzman, Jeff Harris, Johannes Heidecke, Beth Hoover, Romain Huet, Tomer Kaftan, Jillian Khoo, Karolis Kosas, Ryan Liu, Kevin Lu, Lindsay McCallum, Rohan Nuttall, Joe Palermo, Leher Pathak, Ishaan Singal, Felipe Petroski Such, Freddie Sulit, David Weedon.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-structured-outputs-in-the-api" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-introducing-whisper-39958.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39958. Tech Report: Introducing Whisper
+        </a>
+        
+        <a href="breaking-introducing-improvements-to-the-fine-tuning-api-and-expa-39853.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39853. Breaking: Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="introducing-more-enterprise-grade-features-for-api-customers-39848.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39848. Introducing more enterprise-grade features for API customers
+        </a>
+        
+        <a href="introducing-vision-to-the-fine-tuning-api-39748.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39748. Introducing vision to the fine-tuning API
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

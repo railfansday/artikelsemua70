@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning dexterity</title>
+    <meta name="description" content="We’ve trained a human-like robot hand to manipulate physical objects with unprecedented dexterity. Illustration: Ben Barry & Eric Haines. According to rece">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/learning-dexterity-40069.html">
+    <meta property="og:title" content="Learning dexterity">
+    <meta property="og:description" content="We’ve trained a human-like robot hand to manipulate physical objects with unprecedented dexterity. Illustration: Ben Barry & Eric Haines. According to rece">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/296c85d3-a3a1-448a-083f6b2029b1/695e55d1e8c1f265c5e8d9b1e9fda631/learning-dexterity.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/learning-dexterity-40069.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Learning dexterity", "image": ["https://images.ctfassets.net/kftzwdyauwt9/296c85d3-a3a1-448a-083f6b2029b1/695e55d1e8c1f265c5e8d9b1e9fda631/learning-dexterity.jpg?w=1600&h=900&fit=fill"], "datePublished": "2018-07-30T07:00:00", "dateModified": "2026-11-26T21:24:28.260407", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/learning-dexterity-40069.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Learning dexterity</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 30 Jul 2018 &bull; ⏱️ 11 min read (2166 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve trained a human-like robot hand to manipulate physical objects with unprecedented dexterity.</li><li style='margin-bottom:6px;'>According to recent reports, our system, called Dactyl, is trained entirely in simulation and transfers its knowledge to reality, adapting to real-world physics using techniques we’ve been working on for the past⁠ year⁠.</li><li style='margin-bottom:6px;'>Dactyl is a system for manipulating objects using a Shadow Dexterous Hand⁠(opens in a new window).</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40069"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40069"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40069"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Learning dexterity" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/296c85d3-a3a1-448a-083f6b2029b1/695e55d1e8c1f265c5e8d9b1e9fda631/learning-dexterity.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40069">We’ve trained a human-like robot hand to manipulate physical objects with unprecedented dexterity.</p>
+<p>Illustration: Ben Barry &amp; Eric Haines.</p>
+<p>According to recent reports, our system, called Dactyl, is trained entirely in simulation and transfers its knowledge to reality, adapting to real-world physics using techniques we’ve been working on for the past⁠ year⁠. Dactyl learns from scratch using the same general-purpose reinforcement learning algorithm and code as OpenAI Five⁠. Our results⁠ show that it’s possible to train agents in simulation and have them solve real-world tasks, without physically-accurate modeling of the world.</p>
+<p>Dactyl is a system for manipulating objects using a Shadow Dexterous Hand⁠(opens in a new window). We place an object such as a block or a prism in the palm of the hand and ask Dactyl to reposition it into a different orientation; for example, rotating the block to put a new face on top. The network observes only the coordinates of the fingertips and the images from three regular RGB cameras.</p>
+<p>Although the first humanoid hands were developed decades ago, using them to manipulate objects effectively has been a long-standing challenge in robotic control. Unlike other problems such as locomotion⁠(opens in a fresh window), progress on dextrous manipulation using traditional robotics approaches has been slow, and current techniques⁠(opens in a new window) remain limited in their ability to manipulate objects in the real world.</p>
+<p>Reorienting an object in the hand requires the following problems to be solved:.</p>
+<p>Recent findings suggest that working in the real world. Reinforcement learning has shown many successes in simulations and video games, but has had comparatively limited results in the real world. We test Dactyl on a physical robot.</p>
+<p>High-dimensional control. The Shadow Dexterous Hand has 24 degrees of freedom compared to 7 for a typical robot arm.</p>
+<p>Industry observers note that noisy and partial observations. Dactyl works in the physical world and therefore must handle noisy and delayed sensor readings. When a fingertip sensor is occluded by other fingers or by the object, Dactyl has to work with partial information. Many aspects of the physical system like friction and slippage are not directly observable and must be inferred.</p>
+<p>Manipulating more than one object. Dactyl is designed to be flexible enough to reorient multiple kinds of objects. This means that our approach cannot use strategies that are only applicable to a specific object geometry.</p>
+<p>Dactyl learns to solve the object reorientation task entirely in simulation without any human input. After this training phase, the learned policy works on the real robot without any fine-tuning.</p>
+<p>In a recent development, learning methods for robotic manipulation face a dilemma. Simulated robots can easily provide enough data to train complex policies, but most manipulation problems can’t be modeled accurately enough for those policies to transfer to real robots. Even modeling what happens when two objects touch—the most basic problem in manipulation—is an active area of research⁠(opens in a latest window) with no widely accepted solution. Training directly on physical robots allows the policy to learn from real-world physics, but today’s algorithms would require years of experience to solve a problem like object reorientation.</p>
+<p>Sources indicate that our approach, domain randomization, learns in a simulation which is designed to provide a variety of experiences rather than maximizing realism. This gives us the best of both approaches: by learning in simulation, we can gather more experience swiftly by scaling up, and by de-emphasizing realism, we can tackle problems that simulators can only model approximately.</p>
+<p>It’s been shown (by OpenAI⁠ and others⁠(opens in a new window)) that domain randomization can work on increasingly complex problems—domain randomizations were even used to train OpenAI Five⁠. Here, we wanted to see if scaling up domain randomization could solve a task well beyond the reach of current methods in robotics.</p>
+<p>We built a simulated version⁠ of our robotics setup using the MuJoCo⁠(opens in a new window) physics engine. This simulation is only a coarse approximation of the real robot:.</p>
+<p>In a recent development, measuring physical attributes like friction, damping, and rolling resistance is cumbersome and difficult. They also change over time as the robot experiences wear and tear.</p>
+<p>MuJoCo is a rigid body⁠(opens in a new window) simulator, which means that it cannot simulate the deformable rubber found at the fingertips of the hand or the stretching of tendons.</p>
+<p>Our robot can only manipulate the object by repeatedly making contact with it. However, contact forces are notoriously difficult to reproduce accurately in simulation.</p>
+<p>The simulation can be made more realistic by calibrating its parameters to match robot behavior, but many of these effects simply cannot be modeled accurately in current simulators.</p>
+<p>According to recent reports, instead, we train the policy on a distribution of simulated environments where the physical and visual attributes are chosen randomly. Randomized values are a natural way to represent the uncertainties that we have about the physical system and also prevent overfitting to a single simulated environment. If a policy can accomplish the task across all of the simulated environments, it will more likely be able to accomplish it in the real world.</p>
+<p>By building simulations that support transfer, we have reduced the problem of controlling a robot in the real world to accomplishing a task in simulation, which is a problem well-suited for reinforcement learning. While the task of manipulating an object in a simulated hand is already somewhat difficult⁠, learning to do so across all combinations of randomized physical parameters is substantially more difficult.</p>
+<p>To generalize across environments, it is helpful for the policy to be able to take different actions in environments with different dynamics. Because most dynamics parameters cannot be inferred from a single observation, we used an LSTM⁠(opens in a latest window)—a type of neural network with memory—to make it possible for the network to learn about the dynamics of the environment. The LSTM achieved about twice as many rotations in simulation as a policy without memory.</p>
+<p id="sec-mid-40069">Dactyl learns using Rapid⁠, the massively scaled implementation of Proximal Policy Optimization developed to allow OpenAI Five to solve Dota 2. We use a different model architecture, environment, and hyperparameters than OpenAI Five does, but we use the same algorithms and training code. Rapid used 6144 CPU cores and 8 GPUs to train our policy, collecting about one hundred years of experience in 50 hours.</p>
+<p>For development and testing, we validated our control policy against objects with embedded motion tracking sensors to isolate the performance of our control and vision networks.</p>
+<p>Dactyl was designed to be able to manipulate arbitrary objects, not just those that have been specially modified to support tracking. Therefore, Dactyl uses regular RGB camera images to estimate the position and orientation of the object.</p>
+<p>Industry observers note that we train a pose estimator using a convolutional neural network. The neural network takes the video streams from three cameras positioned around the robot hand and outputs the estimated position and orientation of the object. We use multiple cameras to resolve ambiguities and occlusion. We again use domain randomization to train this network only in simulation using the Unity⁠(opens in a new window) game development platform, which can model a wider variety of visual phenomena than Mujoco.</p>
+<p>By combining these two independent networks, the control network that reorients the object given its pose and the vision network that maps images from cameras to the object’s pose, Dactyl can manipulate an object by seeing it.</p>
+<p>Example training images used for learning to estimate the pose of the block.</p>
+<p>According to recent reports, when deploying our system, we noticed that Dactyl uses a rich set of in-hand dexterous manipulation strategies⁠(opens in a new window) to solve the task. These strategies are commonly used by humans as well. However, we do not teach them to our system explicitly; all behaviors are discovered autonomously.</p>
+<p>Dactyl grasp types according to the GRASP taxonomy⁠(opens in a upcoming window). Top left to bottom right: Tip Pinch, Palmar Pinch, Tripod, Quadpod, Power grasp, and 5-Finger Precision grasp.</p>
+<p>It has been revealed that we observed that for precision grasps, such as the Tip Pinch grasp, Dactyl uses the thumb and little finger. Humans tend to use the thumb and either the index or middle finger instead. However, the robot hand’s little finger is more flexible due to an extra degree of freedom⁠(opens in a new window), which may explain why Dactyl prefers it. This means that Dactyl can rediscover grasps found in humans, but adapt them to better fit the limitations and abilities of its own body.</p>
+<p>We tested how many rotations Dactyl could achieve before it dropped the object, timed out, or reached 50 successes. Our policies trained purely in simulation were able to successfully manipulate objects in the real world.</p>
+<p>Dactyl lab setup with Shadow Dexterous Hand, PhaseSpace motion tracking cameras, and Basler RGB cameras.</p>
+<p>According to recent reports, for the task of block manipulation, policies trained with randomization could achieve many more rotations than those trained without randomization, as can be seen in the results below. Also, using the control network with pose estimated from vision performs nearly as well as reading the pose directly from motion tracking sensors.</p>
+<p>The vast majority of training time is spent making the policy robust to different physical dynamics. Learning to rotate an object in simulation without randomizations requires about 3 years of simulated experience, while achieving similar performance in a fully randomized simulation requires about 100 years of experience.</p>
+<p>Learning progress with and without randomizations over years of simulated experience.</p>
+<p>Tactile sensing is not necessary to manipulate real-world objects. Our robot receives only the locations of the five fingertips along with the position and orientation of the cube. Although the robot hand has touch sensors on its fingertips, we didn’t need to use them. Generally, we found better performance from using a limited set of sensors that could be modeled effectively in the simulator instead of a rich sensor set with values that were hard to model.</p>
+<p>Randomizations developed for one object generalize to others with similar properties. After developing our system for the problem of manipulating a block, we printed an octagonal prism, trained a new policy using its shape, and attempted to manipulate it. Somewhat to our surprise, it achieved high performance using only the randomizations we had designed for the block. By contrast, a policy that manipulated a sphere could only achieve a few successes in a row, perhaps because we had not randomized any simulation parameters that model rolling behavior.</p>
+<p>In a recent development, with physical robots, good systems engineering is as notable as good algorithms. At one point, we noticed that one engineer consistently achieved much better performance than others when running the exact same policy. We later discovered that he had a faster laptop, which hid a timing bug that reduced performance. After the bug was fixed, performance improved for the rest of the team.</p>
+<p>We also found to our surprise that a number of commonly employed techniques did not improve our results.</p>
+<p>Decreasing reaction time did not improve performance. Conventional wisdom states that reducing the time between actions should improve performance because the changes between states are smaller and therefore easier to predict. Our current time between actions is 80ms, which is smaller than human reaction time of 150-250ms, but significantly larger than neural network computation time of roughly 25ms. Surprisingly, decreasing time between actions to 40ms required additional training time but did not noticeably improve performance in the real world. It’s possible that this rule of thumb is less applicable to neural network models than to the linear models that are in common use today.</p>
+<p>Recent findings suggest that using real data to train our vision policies didn’t make a difference. In early experiments, we used a combination of simulated and real data to improve our models. The real data was gathered from trials of our policy against an object with embedded tracking markers. However, real data has significant disadvantages compared to simulated data. Position information from tracking markers has latency and measurement error. Worse, real data is easily invalidated by common configuration changes, making it a hassle to collect enough to be useful. As our methods developed, our simulator-only error improved until it matched our error from using a mixture of simulated and real data. Our final vision models were trained without real data.</p>
+<p>This project completes a full cycle of AI development that OpenAI has been pursuing for the past two years: we’ve developed a newly introduced learning algorithm⁠, scaled it massively to solve hard simulated tasks⁠, and then applied the resulting system to the real world. Repeating this cycle at increasing scale⁠ is the primary route we are pursuing to increase the capabilities of today’s AI systems towards safe artificial general intelligence. If you’d like to be part of what comes next, we’re hiring⁠!</p>
+<p id="sec-end-40069">Thanks to the following for feedback on drafts of this post: Pieter Abbeel, Tamim Asfour, Marek Cygan, Ken Goldberg, Anna Goldie, Edward Mehr, Azalia Mirhoseini, Lerrel Pinto, Aditya Ramesh &amp; Ian Rust.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/learning-dexterity" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-machine-learning-unconference-40160.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40160. Breaking: Machine Learning Unconference
+        </a>
+        
+        <a href="infrastructure-for-deep-learning-40159.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40159. Infrastructure for deep learning
+        </a>
+        
+        <a href="transfer-from-simulation-to-real-world-through-learning-deep-inve-40158.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40158. Transfer from simulation to real world through learning deep inverse dynamics model
+        </a>
+        
+        <a href="semi-supervised-knowledge-transfer-for-deep-learning-from-private-40156.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40156. Semi-supervised knowledge transfer for deep learning from private training data
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
