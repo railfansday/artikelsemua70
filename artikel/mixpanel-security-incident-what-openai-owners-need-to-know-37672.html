@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixpanel security incident: what OpenAI owners need to know</title>
+    <meta name="description" content="December 19, 2025 clarification: We are updating the blog to clarify the description of impacted users. The original blog stated that “API users” were impa">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/mixpanel-security-incident-what-openai-owners-need-to-know-37672.html">
+    <meta property="og:title" content="Mixpanel security incident: what OpenAI owners need to know">
+    <meta property="og:description" content="December 19, 2025 clarification: We are updating the blog to clarify the description of impacted users. The original blog stated that “API users” were impa">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/wnx20Zxvg492oFlG5DOWK/b29a6781fe95741fe925ca85573901c3/20250904_0904_Abstract_Blue_Waves_remix_01k4aqegw6fye8vvg7zf4py8k3_1__1_.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/mixpanel-security-incident-what-openai-owners-need-to-know-37672.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Mixpanel security incident: what OpenAI owners need to know", "image": ["https://images.ctfassets.net/kftzwdyauwt9/wnx20Zxvg492oFlG5DOWK/b29a6781fe95741fe925ca85573901c3/20250904_0904_Abstract_Blue_Waves_remix_01k4aqegw6fye8vvg7zf4py8k3_1__1_.png?w=1600&h=900&fit=fill"], "datePublished": "2025-11-26T19:00:00", "dateModified": "2026-11-26T07:59:54.359145", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/mixpanel-security-incident-what-openai-owners-need-to-know-37672.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Mixpanel security incident: what OpenAI owners need to know</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 26 Nov 2025 &bull; ⏱️ 5 min read (1084 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>December 19, 2025 clarification: We are updating the blog to clarify the description of impacted users.</li><li style='margin-bottom:6px;'>Transparency is notable to us, so we want to inform you about a recent security incident at Mixpanel, a data analytics provider OpenAI used for web analytics on the frontend interface for our API product (platform.openai.com⁠(opens in a newly introduced window)).</li><li style='margin-bottom:6px;'>The incident occurred within Mixpanel’s systems and involved limited analytics data related to some users of the API.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-37672"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-37672"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-37672"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Mixpanel security incident: what OpenAI owners need to know" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/wnx20Zxvg492oFlG5DOWK/b29a6781fe95741fe925ca85573901c3/20250904_0904_Abstract_Blue_Waves_remix_01k4aqegw6fye8vvg7zf4py8k3_1__1_.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-37672">December 19, 2025 clarification: We are updating the blog to clarify the description of impacted users. The original blog stated that “API users” were impacted. It has been updated to add: “It also affected a limited number of ChatGPT users who submitted help center tickets or were logged into platform.openai.com⁠(opens in a new window).” All impacted users were identified and notified at the same time as part of the original outreach to users. Aside from this clarification, nothing else about our understanding of the incident, including the type of information involved, has changed.</p>
+<p>Transparency is notable to us, so we want to inform you about a recent security incident at Mixpanel, a data analytics provider OpenAI used for web analytics on the frontend interface for our API product (platform.openai.com⁠(opens in a newly introduced window)).</p>
+<p>The incident occurred within Mixpanel’s systems and involved limited analytics data related to some users of the API. It also affected a limited number of ChatGPT users who submitted help center tickets or were logged into platform.openai.com.</p>
+<p>This was not a breach of OpenAI’s systems. No chat, API requests, API usage data, passwords, credentials, API keys, payment details, or government IDs were compromised or exposed.</p>
+<p>On November 9, 2025, Mixpanel became aware of an attacker that gained unauthorized access to part of their systems and exported a dataset containing limited customer identifiable information and analytics information. Mixpanel notified OpenAI that they were investigating, and on November 25, 2025, they shared the affected dataset with us.</p>
+<p>What this means for impacted people.</p>
+<p>User profile information associated with the use of platform.openai.com⁠(opens in a fresh window) may have been included in data exported from Mixpanel. The information that may have been affected was limited to:.</p>
+<p>Name that was provided to us on the account.</p>
+<p>Email address associated with the account.</p>
+<p>Approximate coarse location based on user browser (city, state, country).</p>
+<p>Operating system and browser used to access the account.</p>
+<p>Organization or User IDs associated with the account.</p>
+<p>Sources indicate that as part of our security investigation, we removed Mixpanel from our production services, reviewed the affected datasets, and are working closely with Mixpanel and other partners to fully understand the incident and its scope. We are in the process of notifying impacted organizations, admins, and users directly. While we have found no evidence of any effect on systems or data outside Mixpanel’s environment, we continue to monitor closely for any signs of misuse.</p>
+<p>In a recent development, trust, security, and privacy are foundational to our products, our organization, and our mission. We are committed to transparency, and are notifying all impacted customers and users. We also hold our partners and vendors accountable for the highest bar for security and privacy of their services. After reviewing this incident, OpenAI has terminated its use of Mixpanel.</p>
+<p>Beyond Mixpanel, we are conducting additional and expanded security reviews across our vendor ecosystem and are elevating security requirements for all partners and vendors.</p>
+<p>The information that may have been affected here could be used as part of phishing or social engineering attacks against you or your organization.</p>
+<p>Since names, email addresses, and OpenAI API metadata (e.g., user IDs)  were included, we encourage you to remain vigilant for credible-looking phishing attempts or spam. As a reminder:.</p>
+<p>Treat unexpected emails or messages with caution, especially if they include links or attachments.</p>
+<p>Double-check that any message claiming to be from OpenAI is sent from an official OpenAI domain.</p>
+<p>OpenAI does not request passwords, API keys, or verification codes through email, text, or chat.</p>
+<p>Further protect your account by enabling multi-factor authentication⁠(opens in a upcoming window).</p>
+<p>The security and privacy of our products are paramount, and we remain resolute in protecting your information and communicating transparently when complications arise. Thank you for your continued trust in us.</p>
+<p id="sec-mid-37672">It has been revealed that mixpanel was used as a third-party web analytics provider to help us understand product usage and improve our services for our API product (platform.openai.com). A limited number of ChatGPT users who submitted tickets through the help center or who were logged into platform.openai.com may have had the information described above logged by Mixpanel. These users were identified at the time and have already been notified.</p>
+<p>Was this caused by a vulnerability in OpenAI’s systems?</p>
+<p>Recent findings suggest that no. This incident was limited to Mixpanel’s systems and did not involve unauthorized access to OpenAI’s infrastructure.</p>
+<p>How do I know if my organization or I were impacted?</p>
+<p>We are in the process of notifying those impacted now, and we will reach out to you, or your organization admin, directly via email to inform you.</p>
+<p>Was any of my API data, prompts, or outputs affected?</p>
+<p>No. Chat content, prompts, responses, or API usage data were not impacted.</p>
+<p>Were ChatGPT accounts affected by this?</p>
+<p>Industry observers note that some customers of ChatGPT who submitted tickets through the help center or were logged into platform.api.com may have been impacted. They had been notified previously.</p>
+<p>Were OpenAI passwords, API keys, or payment information exposed?</p>
+<p>No. OpenAI passwords, API keys, payment information, government IDs, and account access credentials were not impacted. Additionally, we have confirmed that session tokens, authentication tokens, and other sensitive parameters for OpenAI services were not impacted.</p>
+<p>Do I need to reset my password or rotate my API keys?</p>
+<p>Because passwords and API keys were not affected, we are not recommending resets or key rotation in response to this incident.</p>
+<p>What are you doing to protect my personal information and privacy?</p>
+<p>Sources indicate that we have obtained the impacted datasets for independent review and are continuing to investigate potential impact, and monitor closely for any signs of misuse. We are notifying all individually impacted consumers and organizations and are in contact with Mixpanel on further response actions.</p>
+<p>Has Mixpanel been removed from OpenAI products?</p>
+<p>Should I enable multi-factor authentication for my account?</p>
+<p>Yes. While account credentials or tokens were not impacted in this incident, as a best practice security control, we recommend all consumers enable multi-factor authentication to further protect their accounts. For enterprises and organizations, we recommend that MFA is enabled at the single sign-on layer.</p>
+<p>Will I receive further updates if something changes?</p>
+<p>We’re committed to transparency and will keep you informed if we identify new information that materially affects impacted users. We will also enhancement this FAQ.</p>
+<p>Is there someone I can reach out to if I have questions?</p>
+<p id="sec-end-37672">If you have questions, concerns, or security issues, you can reach our support team at mixpanelincident@openai.com⁠.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/mixpanel-incident" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="openai-and-hugging-face-partner-to-address-security-incident-duri-34842.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #34842. OpenAI and Hugging Face partner to address security incident during model evaluation
+        </a>
+        
+        <a href="breaking-introducing-aardvark-openais-agentic-security-researcher-37710.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #37710. Breaking: Introducing Aardvark: OpenAI’s agentic security researcher
+        </a>
+        
+        <a href="openai-and-polands-nask-partner-to-advance-ai-safety-and-security-36699.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #36699. OpenAI and Poland’s NASK partner to advance AI safety and security
+        </a>
+        
+        <a href="breaking-how-ultrafast-cut-incident-investigation-from-hours-to-m-36667.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #36667. Breaking: How Ultrafast cut incident investigation from hours to minutes at OpenAI
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

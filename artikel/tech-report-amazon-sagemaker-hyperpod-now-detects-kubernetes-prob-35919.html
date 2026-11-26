@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Amazon SageMaker HyperPod now detects Kubernetes problems affecting training</title>
+    <meta name="description" content="It has been revealed that amazon SageMaker HyperPod now detects Kubernetes challenges that disrupt training, such as crash-looping device plugins or missin">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-amazon-sagemaker-hyperpod-now-detects-kubernetes-prob-35919.html">
+    <meta property="og:title" content="Tech Report: Amazon SageMaker HyperPod now detects Kubernetes problems affecting training">
+    <meta property="og:description" content="It has been revealed that amazon SageMaker HyperPod now detects Kubernetes challenges that disrupt training, such as crash-looping device plugins or missin">
+    <meta property="og:image" content="https://via.placeholder.com/350x180/2563eb/ffffff?text=Global+News+Desk">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-amazon-sagemaker-hyperpod-now-detects-kubernetes-prob-35919.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Amazon SageMaker HyperPod now detects Kubernetes problems affecting training", "image": ["https://via.placeholder.com/350x180/2563eb/ffffff?text=Global+News+Desk"], "datePublished": "2026-11-23T17:00:00", "dateModified": "2026-11-26T07:58:11.935445", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-amazon-sagemaker-hyperpod-now-detects-kubernetes-prob-35919.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Amazon SageMaker HyperPod now detects Kubernetes problems affecting training</h1>
+        <div class="meta-line">🌐 Source: <strong>Amazon</strong> &bull; 📅 23 Nov 2026 &bull; ⏱️ 1 min read (253 words, 📖 Standard)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>It has been revealed that amazon SageMaker HyperPod now detects Kubernetes challenges that disrupt training, such as crash-looping device plugins or missing DaemonSets, on clusters orchestrated by Amazon EKS.</li><li style='margin-bottom:6px;'>Sources indicate that now, the new HyperPod Kubernetes Resource Monitoring Agent watches nodes, critical pods such as NVIDIA device plugins, and required DaemonSets that impact HyperPod and Kubeflow training jobs.</li><li style='margin-bottom:6px;'>Recent findings suggest that the agent is available for HyperPod clusters orchestrated by Amazon EKS in all AWS Regions where SageMaker HyperPod is available and you can install it with a helm chart.</li></ul>
+        </div>
+        
+        
+            <div style="text-align:center; margin-bottom:20px;"><img src="https://via.placeholder.com/350x180/2563eb/ffffff?text=Global+News+Desk" alt="Tech Report: Amazon SageMaker HyperPod now detects Kubernetes problems affecting training" style="max-width:100%; height:auto; border-radius:8px;" loading="lazy"></div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            <div class="article-body" style="line-height: 1.8;">
+                <p>It has been revealed that amazon SageMaker HyperPod now detects Kubernetes challenges that disrupt training, such as crash-looping device plugins or missing DaemonSets, on clusters orchestrated by Amazon EKS. SageMaker HyperPod is purpose-built infrastructure for AI/ML model development, with built-in fault tolerance and automated cluster recovery. Previously, when a device plugin crash-looped or a taint evicted a job's pods, the job's error rarely named the pod or node, so engineers pieced the cause together from kubectl output and per-rank logs.</p>
+<p>Sources indicate that now, the new HyperPod Kubernetes Resource Monitoring Agent watches nodes, critical pods such as NVIDIA device plugins, and required DaemonSets that impact HyperPod and Kubeflow training jobs. The agent correlates Kubernetes challenges with the training jobs they affect and reports them as Kubernetes events and Amazon CloudWatch logs. For example, if a device plugin keeps crashing on one node mid training run, the agent flags the node as it loses GPUs and, when the job fails, logs the failure reason with the pods and nodes involved, so you can fix that node and restart sooner. For jobs that opt in, it also highlights which rank fell behind when NCCL communication stalls, while the job is still running.</p>
+<p>Recent findings suggest that the agent is available for HyperPod clusters orchestrated by Amazon EKS in all AWS Regions where SageMaker HyperPod is available and you can install it with a helm chart. To learn more, see Kubernetes Resource Monitoring Agent in the user guide and the blog post.</p>
+                <p style="margin-top: 25px;">
+                    <a href="https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-sagemaker-hyperpod-k8s-monitoring-agent/" target="_blank" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;">
+                        &rarr; Read original article
+                    </a>
+                </p>
+            </div>
+            
+<div style="text-align:center; margin:20px 0;">
+    <script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+    <script type="text/javascript" src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js"></script>
+</div>
+
+            
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="breaking-amazon-sagemaker-hyperpod-now-detects-and-recovers-hung--35905.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35905. Breaking: Amazon SageMaker HyperPod now detects and recovers hung training jobs on Slurm clusters
+        </a>
+        
+        <a href="amazon-sagemaker-studio-now-supports-training-job-submission-and--35948.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35948. Amazon SageMaker Studio now supports training job submission and model deployment for SageMaker HyperPod clusters
+        </a>
+        
+        <a href="amazon-sagemaker-hyperpod-now-supports-nccl-profiling-for-trainin-35935.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35935. Amazon SageMaker HyperPod now supports NCCL profiling for training jobs
+        </a>
+        
+        <a href="amazon-sagemaker-hyperpod-deep-health-check-now-validates-trainin-35923.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #35923. Amazon SageMaker HyperPod deep health check now validates training correctness
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

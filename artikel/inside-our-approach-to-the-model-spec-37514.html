@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside our approach to the Model Spec</title>
+    <meta name="description" content="As AI systems become more capable and widely used, we need a clear public framework for how they should behave. At OpenAI, we believe AI should be fair, sa">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/inside-our-approach-to-the-model-spec-37514.html">
+    <meta property="og:title" content="Inside our approach to the Model Spec">
+    <meta property="og:description" content="As AI systems become more capable and widely used, we need a clear public framework for how they should behave. At OpenAI, we believe AI should be fair, sa">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/35bHEbm0rP6Pp4Vz11SaVW/1033fdf6bbcac970107c7503b38ddeba/oai_model_spec_16x9.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/inside-our-approach-to-the-model-spec-37514.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Inside our approach to the Model Spec", "image": ["https://images.ctfassets.net/kftzwdyauwt9/35bHEbm0rP6Pp4Vz11SaVW/1033fdf6bbcac970107c7503b38ddeba/oai_model_spec_16x9.png?w=1600&h=900&fit=fill"], "datePublished": "2026-03-25T10:00:00", "dateModified": "2026-11-26T07:59:30.232640", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/inside-our-approach-to-the-model-spec-37514.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Inside our approach to the Model Spec</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 25 Mar 2026 &bull; ⏱️ 21 min read (4115 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>As AI systems become more capable and widely used, we need a clear public framework for how they should behave.</li><li style='margin-bottom:6px;'>At OpenAI, we believe AI should be fair, safe, and freely available so that more people can use it to solve hard problems, create opportunities, and benefit in areas like health, science, education, work, and everyday life.</li><li style='margin-bottom:6px;'>That is a core reason why the OpenAI Model Spec exists.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-37514"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-37514"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-37514"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Inside our approach to the Model Spec" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/35bHEbm0rP6Pp4Vz11SaVW/1033fdf6bbcac970107c7503b38ddeba/oai_model_spec_16x9.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-37514">As AI systems become more capable and widely used, we need a clear public framework for how they should behave.</p>
+<p>At OpenAI, we believe AI should be fair, safe, and freely available so that more people can use it to solve hard problems, create opportunities, and benefit in areas like health, science, education, work, and everyday life. We believe that democratized access to AI is the best path forward: not AI whose benefits or control are concentrated in the hands of a few, but AI that more people can access, understand, and help shape.</p>
+<p>That is a core reason why the OpenAI Model Spec exists. The Model Spec⁠(opens in a upcoming window) is our formal framework for model behavior. It defines how we want models to follow instructions, resolve conflicts, respect user freedom, and behave safely across the incredibly broad range of queries that users ask them daily. More broadly, it is our attempt to make intended model behavior explicit: not just inside our training process, but in a form that users, developers, researchers, policymakers, and the broader public can actually read, inspect, and debate.</p>
+<p>Industry observers note that the Model Spec is not a claim that our models already behave this way perfectly today. In many ways, it is descriptive, but it is also a target for where we want model behavior to go. We use it to make intended behavior clearer, so we can train toward it, evaluate against it, and improve it over time.</p>
+<p>This post shares the backstory that is not in the Model Spec itself, including the philosophy and mechanics behind it: how it’s structured, why we made those structural choices, and how we write, implement, and evolve it over time.</p>
+<p>The Model Spec is one part of OpenAI’s broader approach to safe and accountable AI. While the Preparedness Framework⁠ focuses on risks from frontier capabilities and the safeguards required as those risks rise, the Model Spec addresses a different but complementary question: how our models should behave across a wide range of situations. Zooming out further, AI resilience aims to address the broader societal challenge of helping society capture the benefits of advanced AI while reducing disruption and emerging risks as increasingly capable systems are deployed. Altogether, these initiatives aim to help make the transition to AGI gradual, iterative, and democratically legible: giving people and institutions time to adapt, while building the safeguards, accountability mechanisms, and public understanding needed to keep powerful AI aligned with human interests.</p>
+<p>According to recent reports, public clarity about model behavior matters for both fairness and safety. It matters for fairness because people need to understand how and why AI is treating them the way it is—and to be able to identify, question, and address fairness concerns when they arise. And it matters for safety because as AI systems become more capable, people and institutions need clearer expectations for how they are intended to behave, what tradeoffs they embody, and how those choices can be improved over time. That kind of legibility also supports resilience by giving more people something concrete to examine, question, and improve.</p>
+<p>According to recent reports, since the first version in 2024, the Model Spec has evolved substantially as we learn more about user preferences and needs, expand to cover and adapt to greater capabilities, and learn from public feedback on model behaviors and the Model Spec. In the spirit of iterative deployment⁠, the Model Spec is an evolving document covering both background values and explicit, legible rules—paired with a process for modifying individual elements as we learn from real-world deployment and feedback. We are also investing in public feedback mechanisms like collective alignment⁠ to help keep humanity in control of how AI is used and how AI behavior is shaped.</p>
+<p>Internally, it gives us a north star for intended behavior and a shared framework for training, evaluation, and governance. Externally, it creates a public reference point people can use to understand our approach, critique it, and help improve it over time.</p>
+<p>Industry observers note that the Model Spec is made up of several different kinds of model guidance. That is deliberate. Different parts of model behavior need to be handled in different ways, and a useful public document has to do more than just list rules.</p>
+<p>The Model Spec begins with high-level intent: a clear account of what we are trying to optimize for at the system level, and why.</p>
+<p>This preamble clarifies three goals for how we plan to pursue our mission:.</p>
+<p>Iteratively deploy models that empower developers and users.</p>
+<p>Prevent our models from causing serious harm to users or others.</p>
+<p>Maintain OpenAI’s license to operate.</p>
+<p>It then explains how we think about balancing these goals in practice, making the tradeoffs concrete enough to support the more detailed principles that follow.</p>
+<p>It has been revealed that importantly, this preamble is not meant to be a direct instruction to the model. Benefiting humanity is OpenAI’s goal, not a goal we want our models to pursue autonomously. Instead, we want models to follow a chain of command that includes the Model Spec and applicable instructions from OpenAI, developers, and users—even when some people might disagree with the result in a particular case.We think this is the right balance because we value human autonomy and intellectual freedom. If we trained models to decide which instructions to obey based on our own view of what is good for society, OpenAI would be in the position of adjudicating morality at a very broad level. That mentioned, the preamble still matters. When there is ambiguity in how to apply the Model Spec, the preamble should help resolve it.</p>
+<p>Industry observers note that the Model Spec also contains public commitments that go beyond directly measurable model behavior to training intent and deployment constraints. For example, our Red-line principles⁠(opens in a new window) include a commitment that in first-party deployments like ChatGPT, we will never use system messages to intentionally compromise objectivity⁠(opens in a new window) or related principles; and No other objectives⁠(opens in a new window) makes commitments about our intentions to optimize model responses for user benefit and not revenue or non-beneficial time-on-site.</p>
+<p>Industry observers note that at the core of the Model Spec is the Chain of Command: a framework for deciding which instructions should apply in a given situation. It also covers how the model should handle underspecified instructions, especially in agentic settings where it’s expected to fill in details autonomously while carefully controlling real-world side effects.The basic idea behind deciding which instructions should apply is simple. Instructions can come from different sources, including OpenAI, developers, and consumers. Those instructions can conflict. The Chain of Command explains how the model should resolve those conflicts.</p>
+<p>It has been revealed that each Model Spec policy and each instruction is given an authority level⁠(opens in a fresh window). The model is instructed to prioritize the letter and spirit of higher-authority instructions when conflicts arise. If a user asks for help making a bomb, the model should prioritize hard safety boundaries⁠(opens in a new window). If a user asks to be roasted, the model should generally prioritize that request over the Model Spec’s lower-authority policy against abuse⁠(opens in a new window).</p>
+<p>According to recent reports, this structure lets us define a relatively small set of non-overridable rules alongside a larger set of defaults. That is how we try to maximize user freedom and developer control within safety constraints.</p>
+<p>In a recent development, hard rules are explicit boundaries that are not overridable by consumers or developers (in the parlance of the Model Spec, these are “root” or “system” level instructions). They are mostly prohibitive, requiring models to avoid behaviors that could contribute to catastrophic risks or direct physical harm, violate laws, or undermine the chain of command. We expect AI to become a foundational technology for society, analogous to basic internet infrastructure, so we only impose rules that could limit intellectual freedom when we believe they are necessary for the broad spectrum of developers and users who will interact with it. In the Model Spec, Stay in bounds⁠(opens in a fresh window) contains hard rules that address concrete real-world safety risks, and Under-18 Principles⁠(opens in a new window) layers on additional safeguards for users under 18.</p>
+<p>Sources indicate that defaults are overridable starting points: the assistant’s “best guess” behavior when the user or developer has not specified a preference. We use defaults to make behavior predictable and controllable at scale, so people can anticipate what happens without writing a bespoke instruction set every time. Defaults preserve steerability: owners and developers can explicitly steer tone, depth, format, and even point-of-view within safety boundaries. Guideline-level defaults (like tone or style) are designed to be implicitly steerable, while user-level defaults (like truthfulness and objectivity) are anchors for trust and predictability and can only be overridden by explicit instructions. Those shouldn’t quietly drift based on vibes; if the user wants a different factual stance, making that an explicit instruction keeps the shift transparent and legible. These defaults are reflected across Seek the truth together⁠(opens in a fresh window), Do the best work⁠(opens in a new window), and Use appropriate style⁠(opens in a new window), including norms around honesty and objectivity, avoiding sycophancy, and interaction norms like directness and context-appropriate warmth and professionalism.</p>
+<p>Beyond the hierarchy itself, the Model Spec uses interpretive aids to help models (and humans) apply it consistently in the gray areas. These aids include:.</p>
+<p>Industry observers note that decision rubrics that help the model make consistent choices in gray areas, without pretending there is a single mechanical rule. For example, the Model Spec’s guidance on controlling side effects⁠(opens in a upcoming window) lists considerations like minimizing irreversible actions, keeping actions proportionate to the objective, reducing bad surprises, and favoring reversible approaches, which should be balanced against other objectives like completing the task quickly and effectively.</p>
+<p>Concrete examples that show how a principle should be applied in practice. These are short prompt-and-response examples that usually include both a compliant and non-compliant response, often on a hard prompt near an notable decision boundary. The goal is not to simulate a full realistic conversation. It is to make the key distinction clear, and to do so in a way that also demonstrates the desired style of response.</p>
+<p>In a recent development, we keep the number of examples relatively small and focus on the most informative ones. Broader evaluation suites help cover more of the long tail.</p>
+<p>Sources indicate that the Spec is an interface, not an implementation. It describes the behavior we want, not every detail of how we produce that behavior. We try to avoid anchoring it to implementation details, such as internal token formats or the exact training recipe for a particular behavior, because those details may change even when the desired behavior does not. The Model Spec’s primary audience is not the model but humans: it is meant to help OpenAI employees, owners, developers, researchers, and policymakers understand, debate, and decide on intended behavior.</p>
+<p>The Spec also describes the model, not the entire product. It is complemented by our usage policies⁠, which outline our expectations for how people should use the API and ChatGPT. The system that users interact with includes more than the model itself: product features like custom instructions and memory, monitoring, policy enforcement, and other layers all matter too. Safety is much more than model behavior, and we believe in defense in depth⁠.</p>
+<p>And the Spec is not a complete writeup of our entire training stack or every internal policy distinction. The goal is not to capture every detail. It is to make the most important behavioral decisions understandable, in a way that is fully consistent with our intended model behavior.</p>
+<p>There are several reasons to put this much into the Spec instead of assuming the reader—or the model—can infer everything from a few high-level goals.</p>
+<p>In a recent development, first, the Model Spec is a transparency and accountability tool. It is designed to encourage meaningful public feedback. A clear public target helps people tell whether a behavior is a bug or a feature. It gives them a stable reference point for critique and concrete feedback. That is why we open-sourced⁠(opens in a new window) the Model Spec and choose to iterate in public. Since the first release, many changes have been made based on public feedback, gathered through a variety of mechanisms including feedback forms, public critiques, and deliberate efforts⁠ to gather democratic inputs.</p>
+<p>In a recent development, second, the Model Spec is a coordination tool inside OpenAI. It gives people across research, product, safety, policy, legal, comms, and other functions a shared vocabulary for discussing model behavior and a mechanism for proposing and reviewing changes.</p>
+<p>According to recent reports, third, explicit policies can compensate for practical limitations in model intelligence and runtime context and make behavior more predictable. Although this is becoming less true over time, some policies aim to compensate for insufficient intelligence, where models might not reliably derive the correct behavior from higher-level principles. For example, Be clear and direct⁠(opens in a new window) advised earlier models to show their work before stating an answer for challenging problems that require calculations, but today our models naturally learn this behavior through reinforcement learning⁠.</p>
+<p>Other policies address limited context at runtime: the assistant can only rely on what’s observable in the current interaction, and rarely knows the user’s full situation, intent, downstream use, or what safeguards exist outside the model. In those cases, even if models might be able to figure out the right behavior with enough research and thinking, specificity improves efficiency and predictability—compressing many judgment calls into guidance that reduces variation across similar prompts and makes behavior easier to understand for users and researchers alike.</p>
+<p>Finally, the Model Spec aims to be a complete list of high-level policies relevant for evaluation and measurement. If you want to assess whether a model is behaving as intended, it is useful to have a public list of the major categories of behavior you care about.</p>
+<p id="sec-mid-37514">According to recent reports, it is tempting to think that a sufficiently capable model should be able to infer the correct behavior from a short list of goals like “be helpful and safe.” There is some truth to that. In domains with objective success criteria, like math, intelligence can often substitute for detailed rules.</p>
+<p>Industry observers note that but in general, model behavior is not like solving a simple math problem; models often operate in the thornier spaces where there is no one morally correct answer upon which everyone can agree. What it means for a model to be “helpful and safe,” for example, is extremely context-dependent and the product of inherently value-laden decision-making. Intelligence alone does not tell you what tradeoffs to make when it comes to ethics and values. So even as the models improve in intelligence, we still need work to understand and guide value judgments / what it means to act “ethically” in a given instance. And most of the reasons for having a Model Spec remain relevant even when models become much more capable: we still need a public target people can coordinate around, a way to evaluate whether behavior matches our intentions, and a mechanism for revising the rules as we learn. If the only rule is “be helpful and safe”, then there is no mechanism by which humans can debate, for example, the boundaries of which content should the model refuse to provide, leaving all these decisions to the model.</p>
+<p>Sources indicate that if anything, as models become more capable, more agentic, and more widely deployed, the cost of ambiguity increases. That makes a clear behavioral framework more key, not less.</p>
+<p>One useful analogy is the difference between a written constitution and case law. While a written constitution can provide high-level principles as well as concrete rules, it cannot anticipate all possible cases that might arise and require its guidance. Real governance systems also need interpretive machinery, clarifications, and explicit rulings to resolve messy cases or unforeseen issues. Published rules help different stakeholders coordinate even when they disagree, and they constrain change by requiring any change to be explicit. The Model Spec is meant to play all of these roles: a statement of principles, a public behavioral framework, and a process for changing the Spec over time.</p>
+<p>Recent findings suggest that that noted, we do not think everything that matters about model behavior will always be reducible to explicit rules. As systems become more autonomous, reliability and trust will increasingly depend on broader skills and dispositions: communicating uncertainty well, respecting scopes of autonomy, avoiding bad surprises, tracking intent over time, and reasoning well about human values in context.</p>
+<p>Industry observers note that when writing the Model Spec, there is a spectrum between describing today’s actual model behavior, warts and all, and describing an ideal far-future target. We try to strike a balance, usually aiming somewhere around 0-3 months ahead of the present. Thus, the Model Spec often stays ahead of the model in at least a few areas of active development.</p>
+<p>In a recent development, that reflects the role of the Model Spec as a description of intended behavior. It should point us in a coherent direction while still staying grounded in what we either already do or have concrete near-term plans to implement.</p>
+<p>In a recent development, the Model Spec is developed through an open internal process. Anyone at OpenAI can comment on it or propose changes, and final updates are approved by a broad set of cross-functional stakeholders. In practice, dozens of people have directly contributed text, and many more across research, engineering, product, safety, policy, legal, comms, global affairs, and other functions weigh in. We also learn from public releases and feedback, which help pressure-test these choices in real deployment.</p>
+<p>Recent findings suggest that this matters because model behavior—and its implications in the world—are incredibly complicated. Nobody can fit the full set of behaviors, the training process, and the downstream implications in their head, but with many cross-functional contributors and reviewers we can improve quality and increase confidence.</p>
+<p>One pleasant surprise has been that real consensus is often possible—especially when we force ourselves to write down the tradeoffs precisely enough that disagreements become concrete.</p>
+<p>According to recent reports, the Model Spec also is not written in a vacuum. Much of what ends up in it is a summary of broader work on behavior, safety, and policy. A lot of Model Spec-writing is really translation: taking existing work and making it simpler, more consistent, more organized, and more accessible without losing the underlying intent.</p>
+<p>Our production models do not yet fully reflect the Model Spec for several reasons.</p>
+<p>In a recent development, model training may lag behind Model Spec updates. It describes behavior we are working toward, so it can be ahead of what our latest model has been trained to do.</p>
+<p>It has been revealed that training can inadvertently teach behavior inconsistent with the Model Spec. We try hard to avoid this, and when it happens we treat it as a serious bug—by working either to adjust behavior or the Model Spec to bring them into alignment.</p>
+<p>Industry observers note that training can never fully cover the space of all possible behaviors. Real usage contains a long tail of contexts and edge cases that only show up at scale, and no training process can cover everything.</p>
+<p>Generalization can differ from what we intended. A model can produce the “right” outputs in training for unintended reasons, which can lead to unintended behavior in upcoming situations that differ from those seen in training. Techniques like deliberative alignment⁠ help, but they are not a complete solution.</p>
+<p>In a recent development, more broadly, the fact that the Model Spec describes a wide range of desired behaviors does not mean there is a single method for teaching them all. Different aspects of behavior—instruction-following, safety boundaries, personality, calibrated expression of uncertainty, and more—often require different techniques and have different failure modes. The Model Spec helps make intended behavior easier to understand and critique, but implementing it well remains both an art and an active area of research.</p>
+<p>Industry observers note that alongside this post, we are releasing Model Spec Evals⁠(opens in a new window): a scenario-based evaluation suite that attempts to cover as many assertions in the Model Spec as possible with a small number of representative examples. This helps us track where model behavior and the Model Spec may be out of alignment, and it helps us check whether models are interpreting the Model Spec the way we intended. These evals are only one part of a broader evaluation strategy that also includes more targeted assessments across many dimensions of behavior, including specific safety areas, truthfulness and sycophancy, personality and style, and capabilities.</p>
+<p>Chart of Model Spec compliance by section for OpenAI models over time. See the companion blog post⁠(opens in a latest window) for details on the evaluations and how we interpret them. In short, we believe that these results reflect genuine and broad improvements in model alignment over time—although they also reflect a small effect due to measuring older models against more recent policies.</p>
+<p>In practice, most Spec updates are driven by a recurring set of inputs:.</p>
+<p>Public complications and feedback. Confusions, edge cases, or failure modes—either in the Model Spec language or in our models’ behavior.</p>
+<p>Sources indicate that internal problems. Patterns we see during development and testing, including ambiguities where different reasonable interpretations lead to different behavior.</p>
+<p>Sources indicate that behavior and safety policy updates. When higher-level constraints or commitments change, the Spec has to reflect that new structure clearly.</p>
+<p>Recent findings suggest that new capabilities and products. As models become more capable of new behaviors and we release new products, we want the Model Spec to keep up in content and coverage—for example, adding rules for multimodal interactions⁠(opens in a new window), autonomous agents⁠(opens in a new window), and under-18 owners⁠(opens in a new window).</p>
+<p>A few design principles guide how we write and revise the Model Spec.</p>
+<p>Clarity and precision. “Be honest” is a good value, but not a complete decision procedure. The Model Spec should sharpen disagreements, not hide them behind agreeable language. Where practical, we should explicitly call out potential conflicts between rules and provide guidance or examples on how to resolve them. For example, Do not lie⁠(opens in a new window) calls out a potential conflict with Be warm⁠(opens in a new window), explaining that the assistant should follow norms of politeness, while stopping short of white lies that could amount to sycophancy⁠(opens in a new window) and be against the user’s best interest.</p>
+<p>It has been revealed that substantive rules. A reader should be able to take a realistic prompt and produce an answer that another reader recognizes as clearly inside or outside the lines (even if there are judgment calls at the margins).</p>
+<p>Sources indicate that examples that maximize signal to noise. Good examples are often central to developing a high-quality spec upgrade. Examples should help drive at the heart of the difficulties in specifying model behavior, bringing difficult conflicts to the surface and taking a clear stance on how to resolve them. Secondarily, they should strive to be exemplars of desired tone and style, which can be difficult to convey in prose.</p>
+<p>According to recent reports, robustness. We try to avoid examples with extraneous ambiguity or complexity, so the core conflict and intended resolution is clear.</p>
+<p>Industry observers note that consistency and clear organization. We strive for the Model Spec rules to be fully consistent with one another and with our intended model behavior, and to make the overall organization of the document clear and approachable.</p>
+<p>The Model Spec is not a claim that we can write down everything that matters, or that models will always hit the target. It is a claim that intended behavior is notable enough to be clear, actionable, and revisable.</p>
+<p>Three success criteria guide how we evolve it.</p>
+<p>It has been revealed that legibility. People inside and outside OpenAI can form accurate expectations about behavior and can point to text when behavior surprises them.</p>
+<p>Sources indicate that actionability. The Model Spec can be used to design evaluations, diagnose incidents, and make consistent product decisions—not just to express values.</p>
+<p>According to recent reports, revisability. The Model Spec can evolve as we learn, without turning into an unstable moving target.</p>
+<p id="sec-end-37514">As models and products evolve, we expect the Model Spec to expand and clarify in step with new capabilities and deployment contexts. The goal is to keep the behavioral specification coherent, testable, and aligned with our mission of ensuring that AGI benefits all of humanity.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/our-approach-to-the-model-spec" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="collective-alignment-public-input-on-our-model-spec-37794.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #37794. Collective alignment: public input on our Model Spec
+        </a>
+        
+        <a href="updating-our-model-spec-with-teen-protections-37634.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #37634. Updating our Model Spec with teen protections
+        </a>
+        
+        <a href="gpt-5-our-best-model-for-work-37815.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #37815. GPT-5: Our best model for work
+        </a>
+        
+        <a href="our-approach-to-advertising-and-expanding-access-to-chatgpt-37613.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #37613. Our approach to advertising and expanding access to ChatGPT
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
