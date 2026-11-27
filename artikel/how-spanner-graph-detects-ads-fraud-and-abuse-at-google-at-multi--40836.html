@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Spanner Graph detects ads fraud and abuse at Google at multi-billion node scale</title>
+    <meta name="description" content="Director, Engineering, Google Ads. Group Product Manager, Data Cloud. The front door to AI in the workplace. Ever wonder how the Google Ads team keeps the ">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-spanner-graph-detects-ads-fraud-and-abuse-at-google-at-multi--40836.html">
+    <meta property="og:title" content="How Spanner Graph detects ads fraud and abuse at Google at multi-billion node scale">
+    <meta property="og:description" content="Director, Engineering, Google Ads. Group Product Manager, Data Cloud. The front door to AI in the workplace. Ever wonder how the Google Ads team keeps the ">
+    <meta property="og:image" content="https://storage.googleapis.com/gweb-cloudblog-publish/images/cloud_databases_channel_hero_option1_2436x.max-2500x2500.png">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-spanner-graph-detects-ads-fraud-and-abuse-at-google-at-multi--40836.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How Spanner Graph detects ads fraud and abuse at Google at multi-billion node scale", "image": ["https://storage.googleapis.com/gweb-cloudblog-publish/images/cloud_databases_channel_hero_option1_2436x.max-2500x2500.png"], "datePublished": "2026-11-20T17:00:00", "dateModified": "2026-11-27T08:00:07.725460", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-spanner-graph-detects-ads-fraud-and-abuse-at-google-at-multi--40836.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How Spanner Graph detects ads fraud and abuse at Google at multi-billion node scale</h1>
+        <div class="meta-line">🌐 Source: <strong>Google</strong> &bull; 📅 20 Nov 2026 &bull; ⏱️ 6 min read (1274 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Ever wonder how the Google Ads team keeps the massive system stable and online, despite continuous attempts by hackers to take it down?</li><li style='margin-bottom:6px;'>The Google Ads team uses a central graph-based platform to fight fraud and abuse with batch and real-time signals.</li><li style='margin-bottom:6px;'>The need for a graph-based abuse detection platform stems from how the global threat landscape has evolved.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-40836"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-40836"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-40836"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How Spanner Graph detects ads fraud and abuse at Google at multi-billion node scale" loading="lazy" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/cloud_databases_channel_hero_option1_2436x.max-2500x2500.png" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-40836">Director, Engineering, Google Ads.</p>
+<p>Group Product Manager, Data Cloud.</p>
+<p>The front door to AI in the workplace.</p>
+<p>Ever wonder how the Google Ads team keeps the massive system stable and online, despite continuous attempts by hackers to take it down? Part of the answer is using Spanner as its core operational and graph database.</p>
+<p>The Google Ads team uses a central graph-based platform to fight fraud and abuse with batch and real-time signals. Built to protect the Google Ads ecosystem and now used by multiple teams across Google, the platform organizes anti-abuse intelligence into a single, interconnected view. Its core mission is simple but critical: uncover hidden connections between malicious assets in real time before they can harm users or advertisers. This blog talks about the challenging modern fraud and abuse landscape, and how Spanner, specifically Spanner Graph, helps Google successfully detect those threats.</p>
+<p>The need for a graph-based abuse detection platform stems from how the global threat landscape has evolved. Digital advertising fraud and online scams are no longer minor operational nuisances, they are a massive drain on the global economy. According to the NASDAQ Global Financial Crime Report, total global fraud losses are estimated at nearly $580 billion for 2025. Furthermore, global surveys indicate that approximately one in five adults fall victim to scams. In digital ads, fraud and abuse waste marketing spend, corrupt attribution data, and expose everyday people to financial scams, identity theft, and malware.</p>
+<p>Bad actors are increasingly leveraging automation and AI to scale deceptive campaigns more efficiently. In 2025 alone, Google blocked or removed more than 8.3 billion policy-violating ads and suspended 24.9 million advertiser accounts. As these tactics evolve, real-time detection becomes more important for protecting businesses and people.</p>
+<p>Defending applications from fraud and abuse requires continuously advancing threat detection beyond traditional, point-in-time checks. To do that, modern security systems must address two compounding challenges simultaneously:.</p>
+<p>Fraud and abuse operate as networks: Bad actors hide behind residential proxies and synthetic identities to create deceptive ad campaigns. Each of the attributes like location proxies, account, and identity parameters  appear benign in isolation. But behind the scenes, bad actors share payment methods, domains, and accounts, requiring security systems to target entire coordinated clusters of fraud rather than isolated indicators. This is hard to capture with traditional approaches that do not understand the relationship between attributes and evaluates each signal separately.</p>
+<p>Detection must scale dynamically: As the graph-based abuse detection platform grew, the previous system, based on offline MapReduce batch processing, became bottlenecked. Tracing multi-hop relationships in batch MapReduce required repeated, expensive joins across distributed stages, triggering massive intermediate data expansions, heavy shuffle overhead, and network bottlenecks that caused hours-long latencies and combinatorial fanouts during multi-hop traversals.</p>
+<p>In critical scenarios like halting live malware campaigns, multi-hour latency gaps leave room for a lot of damage. To block sophisticated fraud rings, Google needed to evaluate multi-hop relationship risks in real time at the time of serving these ads, before malicious content reaches customers.</p>
+<p>To overcome the limits of processing at inference time, the engineering team needed a database that could ingest live signals from a large number of sources via pub/sub streams, all while delivering horizontal elasticity, global transactional consistency, and sub-second multi-hop traversals. The solution was to modernize Google's graph-based abuse detection platform for Ads onto Spanner Graph.</p>
+<p>Because Ads’ core transactional and entity data already lived in Spanner, they didn’t need to migrate any data in order to adopt Spanner Graph. Rather than standing up a separate, specialized graph database, the team simply defined property graphs directly on top of their existing relational tables.</p>
+<p>This delivered several benefits:.</p>
+<p>Recent findings suggest that from hour-long batch jobs to sub-second queries: Spanner Graph co-locates graph traversal computations directly with the underlying distributed data splits to minimize join overhead. Multi-hop traversals that previously took an hour in offline Apache Flume MapReduce jobs now execute on live production data with sub-second to single-digit millisecond latency.</p>
+<p>According to recent reports, zero-ETL adoption in weeks, not months: Because there was no data to move, most graph-based abuse detection use cases transitioned to Spanner Graph within weeks. Layering a graph directly onto existing Spanner tables eliminated fragile synchronization pipelines and redundant storage costs.</p>
+<p id="sec-mid-40836">Expressive pattern matching with native ISO GQL: Instead of writing and maintaining complex custom traversal code, engineers now query the exact same tables using standard ISO Graph Query Language (GQL), significantly accelerating feature velocity.</p>
+<p>According to recent reports, with Spanner Graph, Google's graph-based abuse detection platform for ads performs multi-hop pattern matching directly against operational relational data using ISO GQL. For instance, when an account is flagged for suspicious activity, the platform does real-time traversals to uncover all connected signals across the graph. This allows security systems to identify and disable entire coordinated fraud rings promptly rather than handling individual accounts sequentially.</p>
+<p>According to recent reports, here’s how it works. The following query uses full-text keyword search and vector similarity search to traverse connected entities across multiple hops to identify a target entity linked to known suspicious activity. Note that the query is illustrative and the field names have been anonymized.</p>
+<p>Sources indicate that today, the graph-based abuse detection platform operates as a unified, Google-wide defense platform across a live graph of over 500 billion nodes and 1 trillion edges. Further, bringing ability to do multi-hop graph queries to real-time enforcement has fundamentally changed how Google stops abuse, delivering big wins for customers and end users:.</p>
+<p>Safeguarding advertiser budgets: The graph-based abuse detection platform is a primary source of detection signals for ad policy enforcement across Google's ad products. By uncovering the coordinated networks behind click fraud, click farms, and invalid traffic in real time, it stops bad actors, so advertisers don’t waste budget on invalid interactions.</p>
+<p>Defending owners against emerging threats: Real-time relationship analysis helps Google catch public-figure impersonation, account takeovers, cloaking, and landing-page malware before campaigns start to scale. During any incident, the graph-based abuse detection platform plays a vital role in tracing the connected assets and rapidly shutting down the attack.</p>
+<p>Stopping repeat financial offenders: By correlating billing, financial, and identity information the platform identifies repeat bad actors and prevents banned offenders from simply spinning up newly introduced accounts to evade enforcement.</p>
+<p>Google's graph-based abuse detection platform for ads demonstrates what Spanner Graph can deliver under the world’s most demanding scale and latency requirements. Because this unified relational and graph architecture is built directly into Spanner, enterprises across a variety of industries can use the same foundation to solve their own complex pattern-matching and fraud challenges:.</p>
+<p>Sources indicate that retail and e-commerce: Retailers connect customer accounts, payments, and shipping data to stop promo abuse and bot networks at checkout. For instance, Target rebuilt its Gift Finder using Spanner Graph and vector search (GraphRAG), cutting maintenance by 50% with sub-10ms latency. Additionally, PayPal uses Spanner Graph for its Customer Graph to unify customer identities across brands.</p>
+<p>Cybersecurity and threat intelligence: Security teams map network assets, login origins, and access permissions to uncover attack paths and isolate compromised infrastructure during live incidents. Unifying graph queries with relational telemetry in Spanner helps expose proxy networks and automated impersonators before lateral movement occurs.</p>
+<p>Financial services and payments: Risk teams correlate billing data and payment instruments to stop synthetic identity rings and fraud. Equifax uses Spanner Graph to map ownership hierarchies across 30 million businesses.</p>
+<p>Ready to bring real-time graph intelligence to your operational data at scale?</p>
+<p>Learn more about Spanner and explore Spanner Graph.</p>
+<p>Get hands-on experience with codelabs here and here.</p>
+<p>By Trushar Borse • 10-minute read.</p>
+<p>By Isabella Lubin • 3-minute read.</p>
+<p id="sec-end-40836">By Sailesh Krishnamurthy • 7-minute read.</p>
+<p style="margin-top: 25px;">
+<a href="https://cloud.google.com/blog/products/databases/how-spanner-graph-detects-google-ads-fraud-and-abuse/" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="grasp-graph-agentic-search-over-propositions-for-multi-hop-questi-41360.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #41360. GRASP: Graph Agentic Search over Propositions for Multi-hop Question Answering
+        </a>
+        
+        <a href="exascale-multi-task-graph-foundation-models-for-imbalanced-multi--41352.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #41352. Exascale Multi-Task Graph Foundation Models for Imbalanced, Multi-Fidelity Atomistic Data
+        </a>
+        
+        <a href="fig-mac-a-fine-grained-inspiration-graph-empowered-multi-agent-co-40623.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #40623. FIG-MAC: A Fine-grained Inspiration Graph Empowered Multi-Agent Collaboration for Automated Scientific Hypothesis Generation
+        </a>
+        
+        <a href="breaking-combating-online-child-sexual-exploitation-abuse-42394.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #42394. Breaking: Combating online child sexual exploitation & abuse
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

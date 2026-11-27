@@ -4,103 +4,100 @@
     <title>Portal Berita - Gadgets</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Gadgets.</description>
-    <lastBuildDate>Thu, 26 Nov 2026 21:26:35 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 08:03:52 -0000</lastBuildDate>
     
             <item>
-                <title>Breaking: Apple is getting this wrong</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-apple-is-getting-this-wrong-39482.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-apple-is-getting-this-wrong-39482.html</guid>
-                <description>Apple is one of the greatest companies of all time, and built a reputation for obsessing over the smallest details. This careless, aggressive and oddly personal lawsuit sadly doesn’t live up to that reputation. It has been revealed that apple had claimed that they contacted OpenA...</description>
+                <title>How We Used Codex to Ship Sora for Android in 28 Days</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html</guid>
+                <description>By Patrick Hum and RJ Marsan, Members of the Technical Staff. As of April 26, 2026, the Sora product is no longer available. In November, we debuted the Sora Android app to the world, giving anyone with an Android device the ability to turn a short prompt into a vivid video. On l...</description>
             </item>
             <item>
-                <title>A Table Is Worth 64 Tokens: Pixel-level Compression for Multi-Table Document Question Answering</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/a-table-is-worth-64-tokens-pixel-level-compression-for-multi-tabl-39188.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/a-table-is-worth-64-tokens-pixel-level-compression-for-multi-tabl-39188.html</guid>
-                <description>arXiv:2608.26949v2 Announce Type: replace 
-Abstract: Answering questions over real-world documents requires processing long inputs that interleave text with tables. Optical context compression, which represents context as images, promises to reduce token cost, but its effect on t...</description>
-            </item>
-            <item>
-                <title>Latest Update: NRG-Twins: Pixel-Level Ground Truth for Rigidity Violations in Generated Videos</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-nrg-twins-pixel-level-ground-truth-for-rigidity-vio-38970.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-nrg-twins-pixel-level-ground-truth-for-rigidity-vio-38970.html</guid>
-                <description>arXiv:2611.32431v1 Announce Type: cross 
-Abstract: Video generators now produce realistic clips of scenes and objects, which makes generated video an attractive source of 3D content. Yet generated video is not 3D consistent: static content slowly deforms or slides, 3D reconstruct...</description>
-            </item>
-            <item>
-                <title>Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-38889.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-38889.html</guid>
+                <title>Using Stable Diffusion with Core ML on Apple Silicon</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-42132.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-42132.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Industry News: Nemotron-Labs-VisualCreation: Pixel as Code for Agentic Visual Creation</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-nemotron-labs-visualcreation-pixel-as-code-for-agen-38703.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-nemotron-labs-visualcreation-pixel-as-code-for-agen-38703.html</guid>
-                <description>According to recent reports, arXiv:2611.31358v1 Announce Type: cross 
-Abstract: Visual creation demands expressive imagery together with precise control over text, layout, and structure. We introduce Nemotron-Labs-VisualCreation, an agentic framework that connects these capabilit...</description>
+                <title>Faster Stable Diffusion with Core ML on iPhone, iPad, and Mac</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-42019.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-42019.html</guid>
+                <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>Six films to watch this week</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/six-films-to-watch-this-week-38464.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/six-films-to-watch-this-week-38464.html</guid>
-                <description>Brad Pitt and Quentin Tarantino reunite for ‘The Further Mis-Adventures of Cliff Booth’; ‘Minotaur’ paints a glacial picture of Russians during war; old gags are recycled in comedy sequel ‘Focker-in-Law’; the US constitution comes under scrutiny in ‘14th’; Elizabeth Holmes docume...</description>
+                <title>Releasing Swift Transformers: Run On-Device LLMs in Apple Devices</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-41984.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-41984.html</guid>
+                <description>Content not available. → Read original article...</description>
+            </item>
+            <item>
+                <title>Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-41343.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-41343.html</guid>
+                <description>Content not available. → Read original article...</description>
             </item>
             <item>
                 <title>AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-38370.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-38370.html</guid>
-                <description>In a recent development, last November, we introduced AnyLanguageModel on this blog:
+                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-40689.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-40689.html</guid>
+                <description>Industry observers note that last November, we introduced AnyLanguageModel on this blog:
 a drop-in replacement for Apple's Foundation Models framework
 that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models
-but weren...</description>
+but w...</description>
             </item>
             <item>
                 <title>Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--38331.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--38331.html</guid>
-                <description>Language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. It has been revealed that say a customer calls your support line. First, you want to know what they stated (speech recognition). Then, yo...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--40657.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--40657.html</guid>
+                <description>Recent findings suggest that language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Recent findings suggest that say a customer calls your support line. First, you want to know what they remar...</description>
             </item>
             <item>
-                <title>AWS Device Farm launches Device Connect for local access to remote Android devices</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-launches-device-connect-for-local-access-to-remot-38306.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-launches-device-connect-for-local-access-to-remot-38306.html</guid>
-                <description>In a recent development, AWS Device Farm, a service for testing mobile and web apps, now offers Device Connect. With Device Connect, you and AI agents can use remote Android devices from your local machine in an IDE, terminal, or development environment of your choice, as if it w...</description>
+                <title>Industry News: AWS Device Farm launches Device Connect for local access to remote Android devices</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-aws-device-farm-launches-device-connect-for-local-a-40622.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-aws-device-farm-launches-device-connect-for-local-a-40622.html</guid>
+                <description>Recent findings suggest that AWS Device Farm, a service for testing mobile and web apps, now offers Device Connect. With Device Connect, you and AI agents can use remote Android devices from your local machine in an IDE, terminal, or development environment of your choice, as if ...</description>
             </item>
             <item>
-                <title>AWS Device Farm now supports Android emulators and iOS simulators</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-38183.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-38183.html</guid>
-                <description>Industry observers note that AWS Device Farm, a service for testing mobile and web apps, now supports Android emulators and iOS simulators alongside real devices for automated and manual testing, enabling faster testing at scale early in your development pipeline. With virtual de...</description>
-            </item>
-            <item>
-                <title>The Best iPhone Duo Cases and Accessories (2026)</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-best-iphone-duo-cases-and-accessories-2026-38178.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-best-iphone-duo-cases-and-accessories-2026-38178.html</guid>
-                <description>If you’ve spent a couple grand on Apple’s first folding phone, you should really protect it with one of the best iPhone Duo cases. It’s easy to drop the iPhone Duo while opening it one-handed, especially if you’re not used to folding phones, and any repair can be very pricey. I a...</description>
+                <title>Industry News: The Best iPhone Duo Cases and Accessories (2026)</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-best-iphone-duo-cases-and-accessories-2026-40564.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-best-iphone-duo-cases-and-accessories-2026-40564.html</guid>
+                <description>Industry observers note that if you’ve spent a couple grand on Apple’s first folding phone, you should really protect it with one of the best iPhone Duo cases. It’s easy to drop the iPhone Duo while opening it one-handed, especially if you’re not used to folding phones, and any r...</description>
             </item>
             <item>
                 <title>The Best TVs We’ve Tested (2026): Samsung, LG, TCL, Sony, and More.</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-best-tvs-weve-tested-2026-samsung-lg-tcl-sony-and-more-38151.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-best-tvs-weve-tested-2026-samsung-lg-tcl-sony-and-more-38151.html</guid>
-                <description>Industry observers note that buying a latest TV is always a big decision, namely because its a big piece of tech with a permanent place in your home that you'll be staring at for hours on end. Not to mention, some of the best of the best cost thousands of dollars. It doesn't help...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/the-best-tvs-weve-tested-2026-samsung-lg-tcl-sony-and-more-40542.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-best-tvs-weve-tested-2026-samsung-lg-tcl-sony-and-more-40542.html</guid>
+                <description>Sources indicate that buying a fresh TV is always a big decision, namely because its a big piece of tech with a permanent place in your home that you'll be staring at for hours on end. Not to mention, some of the best of the best cost thousands of dollars. It doesn't help that mo...</description>
             </item>
             <item>
-                <title>Best Black Friday 2026 tablet deals on Apple, Amazon, and more</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/best-black-friday-2026-tablet-deals-on-apple-amazon-and-more-38140.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/best-black-friday-2026-tablet-deals-on-apple-amazon-and-more-38140.html</guid>
-                <description>It has been revealed that black Friday is back, and several deals on top tablets are live. We only choose tablet deals we’ve personally tested and recommend to help you cut through the noise and find the best options from Amazon, Best Buy, Walmart, and more. If you’re looking to ...</description>
+                <title>Breaking: 20% Off Samsung Promo Code | November 2026</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-20-off-samsung-promo-code-november-2026-40523.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-20-off-samsung-promo-code-november-2026-40523.html</guid>
+                <description>Recent findings suggest that samsung makes everything from smartphones and gaming monitors to smart TVs and kitchen appliances. I'm always looking for a sale (I’m assuming you are, too), and I've found the best Samsung promo codes and special offers to help you save major on your...</description>
             </item>
             <item>
-                <title>Latest Update: Connect to Android Auto or Apple CarPlay for cheap with these 5 gadgets</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-connect-to-android-auto-or-apple-carplay-for-cheap--38138.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-connect-to-android-auto-or-apple-carplay-for-cheap--38138.html</guid>
-                <description>It has been revealed that android Auto and Apple CarPlay bring apps to your car display so you can focus better on the road while driving, allowing you to control features such as navigation, maps, calls, text messages, and music. And right now, several useful devices that help y...</description>
+                <title>AWS Device Farm now supports Android emulators and iOS simulators</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-40510.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-40510.html</guid>
+                <description>AWS Device Farm, a service for testing mobile and web apps, now supports Android emulators and iOS simulators alongside real devices for automated and manual testing, enabling faster testing at scale early in your development pipeline. With virtual devices, you can shift testing ...</description>
             </item>
             <item>
-                <title>Industry News: 20% Off Samsung Promo Code | November 2026</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-20-off-samsung-promo-code-november-2026-38134.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-20-off-samsung-promo-code-november-2026-38134.html</guid>
-                <description>Sources indicate that samsung makes everything from smartphones and gaming monitors to smart TVs and kitchen appliances. I'm always looking for a sale (I’m assuming you are, too), and I've found the best Samsung promo codes and special offers to help you save big on your most imp...</description>
+                <title>Connect to Android Auto or Apple CarPlay for cheap with these 5 gadgets</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/connect-to-android-auto-or-apple-carplay-for-cheap-with-these-5-g-40469.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/connect-to-android-auto-or-apple-carplay-for-cheap-with-these-5-g-40469.html</guid>
+                <description>Android Auto and Apple CarPlay bring apps to your car display so you can focus better on the road while driving, allowing you to control features such as navigation, maps, calls, text messages, and music. And right now, several useful devices that help you connect to Android Auto...</description>
+            </item>
+            <item>
+                <title>Save major on top TVs, phones, tablets and more with these Black Friday Samsung deals</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/save-major-on-top-tvs-phones-tablets-and-more-with-these-black-fr-40465.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/save-major-on-top-tvs-phones-tablets-and-more-with-these-black-fr-40465.html</guid>
+                <description>Black Friday is just a few hours away, which means that the savings are in full swing right now. Retailers like Amazon and Best Buy are offering huge discounts on tons of top tech, which includes a massive selection of Samsung products. We’ve found can’t-miss offers on everything...</description>
+            </item>
+            <item>
+                <title>Standard Intelligence: Training General Intelligence in Pixel Space</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-40434.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-40434.html</guid>
+                <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? The race to scale language models â and the agent ecosystem around them â is white...</description>
             </item>
 </channel>
 </rss>

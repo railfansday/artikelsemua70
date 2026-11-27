@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Used Codex to Ship Sora for Android in 28 Days</title>
+    <meta name="description" content="By Patrick Hum and RJ Marsan, Members of the Technical Staff. As of April 26, 2026, the Sora product is no longer available. In November, we debuted the So">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html">
+    <meta property="og:title" content="How We Used Codex to Ship Sora for Android in 28 Days">
+    <meta property="og:description" content="By Patrick Hum and RJ Marsan, Members of the Technical Staff. As of April 26, 2026, the Sora product is no longer available. In November, we debuted the So">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/48FQHADjrPcGgwronRQxLp/1bce28770f356319023015f3c38f8b4c/OpenAI_SoraAndroid_16x9.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How We Used Codex to Ship Sora for Android in 28 Days", "image": ["https://images.ctfassets.net/kftzwdyauwt9/48FQHADjrPcGgwronRQxLp/1bce28770f356319023015f3c38f8b4c/OpenAI_SoraAndroid_16x9.png?w=1600&h=900&fit=fill"], "datePublished": "2025-12-12T00:00:00", "dateModified": "2026-11-27T08:01:22.613968", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">Gadgets</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How We Used Codex to Ship Sora for Android in 28 Days</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 12 Dec 2025 &bull; ⏱️ 13 min read (2617 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>By Patrick Hum and RJ Marsan, Members of the Technical Staff.</li><li style='margin-bottom:6px;'>As of April 26, 2026, the Sora product is no longer available.</li><li style='margin-bottom:6px;'>In November, we debuted the Sora Android app to the world, giving anyone with an Android device the ability to turn a short prompt into a vivid video.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-42276"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-42276"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-42276"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How We Used Codex to Ship Sora for Android in 28 Days" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/48FQHADjrPcGgwronRQxLp/1bce28770f356319023015f3c38f8b4c/OpenAI_SoraAndroid_16x9.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-42276">By Patrick Hum and RJ Marsan, Members of the Technical Staff.</p>
+<p>As of April 26, 2026, the Sora product is no longer available.</p>
+<p>In November, we debuted the Sora Android app to the world, giving anyone with an Android device the ability to turn a short prompt into a vivid video. On launch day, the app reached #1 in the Play Store. Android people generated more than a million videos in the first 24 hours.</p>
+<p>Behind the launch is a story: the initial version of Sora’s production Android app was built in 28 days, thanks to the same agent that’s available to any team or developer: Codex.</p>
+<p>From October 8 to November 5, 2025, a lean engineering team working alongside Codex and consuming roughly 5 billion tokens, shipped Sora for Android from prototype to global launch. Despite its scale, the app has a crash-free rate of 99.9 percent and an architecture we’re proud of. If you’re wondering whether we used a secret model, we used an early version of the GPT‑5.1‑Codex model – the same version that any developer or business can use today via CLI, IDE extension, or web app.</p>
+<p>Prompt: figure skater performs a triple axle with a cat on her head.</p>
+<p>Recent findings suggest that when Sora rolled out on iOS, usage exploded. People immediately began generating a stream of videos. On Android, by contrast, we had only a small internal prototype and a mounting number of pre-registered people on Google Play.</p>
+<p>According to recent reports, A common response to a high stakes, time-pressured launch is to pile on resources and add process. A production app of this scope and quality would typically involve many engineers working for months, slowed down by coordination.</p>
+<p>American computer architect Fred Brooks famously warned that “adding more people to a late software project makes it later.” In other words, when trying to ship a complex project quickly, adding more engineers can often slow down efficiency by adding to communication overhead, task fragmentation, and integration costs. We leaned into this insight instead of ignoring it; we assembled a strong team of four engineers – all equipped with Codex to drastically increase each engineer’s impact.</p>
+<p>Working this way, we shipped an internal build of Sora for Android to employees in 18 days and introduced publicly 10 days later. We maintained a high bar on Android engineering practices, invested in maintainability, and held the app to the same reliability bar we would expect from a more traditional project. (We also continue to use Codex extensively today to evolve and bring new features to the app).</p>
+<p>To make sense of how we worked with Codex, it helps to know where it shines and where it needs direction. Treating it like a newly hired senior engineer was a good approach. Codex’s ability meant we could spend more time directing and reviewing code than writing it ourselves.</p>
+<p>Codex isn’t yet great at inferring what it hasn’t been told (e.g., your preferred architecture patterns, product strategy, real user behavior, and internal norms or shortcuts).</p>
+<p>Sources indicate that similarly, Codex couldn’t see the app actually run: It couldn’t open Sora on a device, notice that a scroll felt off, or sense that a flow was confusing. Only our team could cover these experiential tasks.</p>
+<p>Recent findings suggest that each instance requires onboarding. Sharing context with clear goals, constraints, and guidance on “how we do things” was essential to making Codex execute well.</p>
+<p>In the same vein, Codex struggled with deep architectural judgment: Left on its own, it might introduce an extra view model where we really wanted to extend an existing one or push logic into the UI layer that clearly belonged in a repository. Its instinct is to get something working, not to prioritize long‑term cleanliness.</p>
+<p>In a recent development, we found it useful to have Codex create and maintain a generous amount of AGENT.md files throughout the codebase. This made it easy to apply the same guidance and best practices across sessions. For example, to ensure Codex wrote code in our style guidelines, we added the following to our top-level AGENTS.md:.</p>
+<p>Reading and understanding large codebases rapidly: Codex knows essentially all major programming languages, which makes it easier to leverage the same concepts across many platforms without complex abstractions.</p>
+<p>Sources indicate that testing coverage: Codex is (uniquely) enthusiastic about writing unit tests to cover a broad variety of cases. Not every test was deep, but having breadth of coverage was helpful in preventing regressions.</p>
+<p>Applying feedback: In a similar vein, Codex is good at reacting to feedback. When CI failed, we could paste log output into a prompt and ask Codex to propose fixes.</p>
+<p>Massively parallel, disposable execution: Most won’t push the limits of the number of sessions they could actually run at any one time. It’s highly feasible to test multiple ideas in parallel and view code as disposable.</p>
+<p>Offering latest perspective: In design discussions, we used Codex as a generative tool to explore potential failure points and discover new ways to solve a problem. For example, while we designed video player memory optimizations, Codex sifted through multiple SDKs to propose approaches we wouldn’t have had time to parse. The insights from Codex’s research proved invaluable in minimizing memory footprint in the final app.</p>
+<p>According to recent reports, enabling higher‑leverage work: In practice, we ended up spending more time reviewing and directing code than writing it ourselves. That mentioned, Codex is very good at code review, too, often catching bugs before they’re merged, improving reliability.</p>
+<p>In a recent development, once we acknowledged these characteristics, our working model became more straightforward. We leaned on Codex to do a huge amount of heavy lifting inside well‑understood patterns and well‑bounded scopes, while our team focused on architecture, user experience, systemic changes, and final quality.</p>
+<p>According to recent reports, even the best new, senior hire doesn’t have the right vantage point for making long-term trade-offs right away. To leverage Codex and ensure its work was robust and maintainable, it was key that we oversaw the app’s systems design and key trade-offs ourselves. These included shaping the app’s architecture, modularization, dependency injection, and navigation; we also implemented authentication and base networking flows.</p>
+<p>From this foundation, we wrote a few representative features end‑to‑end. We used the rules we wanted the entire codebase to follow and documented project‑wide patterns as we went. By pointing Codex to representative features, it was able to work more independently within our standards. For a project that we estimate was 85% written by Codex, a carefully planned foundation avoided costly backtracking and refactoring. It was one of the most notable decisions we made.</p>
+<p>It has been revealed that the idea was not to make “something that works” as quickly as possible, rather to make “something that gets how we want things to work.” There are many “correct” ways to write code. We didn’t need to tell Codex exactly what to do; we needed to show Codex what’s “correct” on our team. Once we had established our starting point and how we liked to build, Codex was ready to start.</p>
+<p>To see what would happen, we did try prompting: “Build the Sora Android app based on the iOS code. Go,” but quickly aborted that path. While what Codex created technically worked, the product experience was sub-par. And without a clear understanding of endpoints, data, and user flows, Codex’s single-shot code was unreliable (Even without using an agent, it’s risky to merge thousands of lines of code.).</p>
+<p id="sec-mid-42276">We hypothesized Codex would thrive in a sandbox of well-written examples; and we were right. Asking Codex to “build this settings screen” with almost no context was unreliable. Asking Codex to “build this settings screen using the same architecture and patterns as this other screen you just saw” worked far better. Humans made the structural decisions and set the invariants; Codex then filled in large amounts of code inside that structure.</p>
+<p>Our next step in maximizing Codex’s potential was figuring out how to enable Codex to work for long periods of time (recently, more than 24 hours⁠), unsupervised.</p>
+<p>Early on in using Codex, we jumped to prompts like, “Here is the feature. Here are some files. Please build it.” That sometimes worked, but mostly produced code that technically compiled, while straying from our architecture and goals.</p>
+<p>So we changed the workflow. For any non‑trivial change, we first asked Codex to help us understand how the system and code work. For example, we’d ask it to read a set of related files and summarize how that feature works; for example, how data flows from the API through the repository layer, the view model, and into the UI. Then we would correct or refine its understanding. (For example, we’d point out that a particular abstraction really belongs in a different layer or that a given class exists only for offline mode and should not be extended.).</p>
+<p>Similarly to how you might engage a latest, highly capable teammate, we worked with Codex to create a solid implementation initiative. That plan often looked like a miniature design document directing which files should change, what new states should be introduced, and how logic should flow. Only then did we ask Codex to start applying the plan, one step at a time. One helpful tip: for very long tasks, where we hit the limit of our context window, we’d ask Codex to save its plan to a file, allowing us to apply the same direction across instances.</p>
+<p>This extra planning loop turned out to be worth the time. It allowed us to let Codex run “unsupervised” for long stretches, because we knew its looks. It made code review easier, because we could check the implementation against our proposal rather than reading a diff without context. And when something went wrong, we could debug the plan first and the code second.</p>
+<p>The dynamic felt similar to the way a good design document gives a tech lead confidence in a project. We weren’t just generating code: we were producing code that supported a shared roadmap.</p>
+<p>According to recent reports, at the peak of the project, we were often running multiple Codex sessions in parallel. One was working on playback, another on search, another on error handling, and sometimes another on tests or refactors. It felt less like using a tool and more like managing a team.</p>
+<p>Each session would periodically report back to us with progress. One might say, “I’m done planning out this module; here’s what I propose,” while another would offer a large diff for a latest feature. Each required attention, feedback, and review. It was uncannily similar to being a tech lead with several new engineers, all making progress, all needing guidance.</p>
+<p>The result was a collaborative flow. Codex’s raw coding capability freed us from a lot of manual typing. We had more time to think about architecture, read pull requests carefully, and test out the app.</p>
+<p>At the same time, that extra speed meant we always had something waiting in our review queue. Codex didn’t get blocked by context switching, but we did. Our bottleneck in development shifted from writing code to making decisions, giving feedback, and integrating changes.</p>
+<p>In a recent development, this is where Brooks’s insights land in a new way. You can’t simply add Codex sessions and expect linear speedups any more than you can keep adding engineers to a project and expect the schedule to shrink linearly. Each additional “pair of hands,” even virtual ones, adds coordination overhead. We had become the conductor of an orchestra versus simply faster solo players.</p>
+<p>We started our project with a huge stepping stone: Sora had already shipped on iOS. We frequently pointed Codex at the iOS and backend codebases to help it understand key requirements and constraints. Throughout the project we joked that we had reinvented the idea of a cross‑platform framework. Forget React Native or Flutter; the future of cross‑platform is just Codex.</p>
+<p>Beneath the quip are two principles:.</p>
+<p>Sources indicate that logic is portable. Whether the code is written in Swift or Kotlin, the underlying application logic – data models, network calls, validation rules, business logic – are the same. Codex is very good at reading a Swift implementation and producing an equivalent in Kotlin that preserves semantics.</p>
+<p>Concrete examples provide powerful context. A fresh Codex session that can see “here is exactly how this works on iOS” and “here is the Android architecture” is far more effective than one that’s only working from natural language descriptions.</p>
+<p>Putting these principles to work, we made the iOS, backend and Android repos available in the same environment. We gave Codex prompts like:.</p>
+<p>“Read these models and endpoints in the iOS code and then propose a plan to implement the equivalent behavior on Android using our existing API client and model classes.”.</p>
+<p>One small but useful trick was to detail in  ~/.codex/AGENTS.md where local repos lived and what they contained. That made it easier for Codex to discover and navigate relevant code.</p>
+<p>In a recent development, we were effectively doing cross-platform development through translation instead of shared abstraction. Because Codex handled most of the translation, we avoided doubling implementation costs.</p>
+<p>It has been revealed that the broader lesson is that for Codex, context is everything. Codex did its best work when it understood how the feature already worked in iOS, paired with an understanding of how our Android app was structured. When Codex lacked that context, it wasn’t “refusing to cooperate”; it was guessing. The more we treated it like a upcoming teammate and invested in giving it the right inputs, the better it performed.</p>
+<p>By the end of our four‑week sprint, using Codex stopped feeling like an experiment and became our default development loop. We used it to understand existing code, strategy changes, and implement features. We reviewed its output the same way we’d review a teammate’s. It was simply how we shipped software.</p>
+<p>It became clear that AI‑assisted development does not reduce the need for rigor; it increases it. As capable as Codex is, its objective is to get from A to B, now. This is why AI-assisted coding doesn’t work without humans. Software engineers can understand and apply the real-world constraints of systems, the best ways to architect software, and how to build with future development and product intends in mind. The super powers of tomorrow’s software engineer will be deep systems understanding and the ability to work collaboratively with AI over long time horizons.</p>
+<p>According to recent reports, the most interesting parts of software engineering are building compelling products, designing scalable systems, writing complex algorithms, and experimenting with data, patterns, and code. However, the realities of software engineering of the past and present often lean more mundane: centering buttons, wiring endpoints, and writing boilerplate. Now, Codex makes it possible to focus on the most meaningful parts of software engineering and the reasons we love our craft.</p>
+<p>It has been revealed that once Codex is set up in a context-rich environment where it understands your goals and how you like to build, any team can multiply its capabilities. Our launch retro isn’t a one‑size‑fits‑all recipe, and we’re not claiming to have solved AI‑assisted development. But we hope our experience makes it easier to find the best ways to empower Codex to empower you.</p>
+<p>When Codex released in a research preview seven months ago, software engineering looked very different. Through Sora, we got to explore the next chapter of engineering. As our models and harness keep improving, AI will become an increasingly indispensable part of building.</p>
+<p>What will you make with your own team of Codex?</p>
+<p id="sec-end-42276">Special thanks to the entire team that helped build Sora for Android.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/shipping-sora-for-android-with-codex" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="beyond-rate-limits-scaling-access-to-codex-and-sora-42183.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #42183. Beyond rate limits: scaling access to Codex and Sora
+        </a>
+        
+        <a href="how-wasmer-used-codex-to-build-a-nodejs-runtime-for-the-edge-39570.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39570. How Wasmer used Codex to build a Node.js runtime for the edge
+        </a>
+        
+        <a href="how-oracle-turns-days-of-work-into-minutes-with-chatgpt-and-codex-39335.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39335. How Oracle turns days of work into minutes with ChatGPT and Codex
+        </a>
+        
+        <a href="addendum-to-gpt-5-system-card-gpt-5-codex-42413.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #42413. Addendum to GPT-5 system card: GPT-5-Codex
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

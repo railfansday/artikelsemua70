@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: How ChatGPT learns about the world while protecting privacy</title>
+    <meta name="description" content="A plain-language guide to model training, privacy safeguards, and the privacy choices available in ChatGPT. Editor's note for Canada: The French text follo">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-how-chatgpt-learns-about-the-world-while-protecting-priv-41660.html">
+    <meta property="og:title" content="Breaking: How ChatGPT learns about the world while protecting privacy">
+    <meta property="og:description" content="A plain-language guide to model training, privacy safeguards, and the privacy choices available in ChatGPT. Editor's note for Canada: The French text follo">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/4ZzoLapknvX6owt0ydlQAk/15d5a9f42c0e671bb8f6e06459fce88e/how-chatgpt-protects-privacy-16_9.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-how-chatgpt-learns-about-the-world-while-protecting-priv-41660.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: How ChatGPT learns about the world while protecting privacy", "image": ["https://images.ctfassets.net/kftzwdyauwt9/4ZzoLapknvX6owt0ydlQAk/15d5a9f42c0e671bb8f6e06459fce88e/how-chatgpt-protects-privacy-16_9.png?w=1600&h=900&fit=fill"], "datePublished": "2026-05-06T08:00:00", "dateModified": "2026-11-27T08:00:43.624380", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-how-chatgpt-learns-about-the-world-while-protecting-priv-41660.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: How ChatGPT learns about the world while protecting privacy</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 06 May 2026 &bull; ⏱️ 9 min read (1861 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>A plain-language guide to model training, privacy safeguards, and the privacy choices available in ChatGPT.</li><li style='margin-bottom:6px;'>Editor's note for Canada: The French text follows the English text (Le texte français suit le texte anglais).</li><li style='margin-bottom:6px;'>In a recent development, chatGPT is becoming more capable across domains, helping people with complex, real-world work like coding, research, analysis, and multi-step tasks across tools.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-41660"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-41660"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-41660"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: How ChatGPT learns about the world while protecting privacy" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/4ZzoLapknvX6owt0ydlQAk/15d5a9f42c0e671bb8f6e06459fce88e/how-chatgpt-protects-privacy-16_9.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-41660">A plain-language guide to model training, privacy safeguards, and the privacy choices available in ChatGPT.</p>
+<p>Editor's note for Canada: The French text follows the English text (Le texte français suit le texte anglais).</p>
+<p>In a recent development, chatGPT is becoming more capable across domains, helping people with complex, real-world work like coding, research, analysis, and multi-step tasks across tools. Those gains in capability are driven by training on a wide variety of data to help our models build broad knowledge of the world and apply it to fresh tasks.</p>
+<p>It has been revealed that as OpenAI continues to develop frontier models, we work hard to help ensure that our model training process respects privacy. We’ve developed state of the art technologies to help our models learn useful general patterns rather than private information about individuals, and we have a number of user controls and policies to help keep individuals in control of their data.</p>
+<p>This post explains what information may be used in model training, how we reduce the processing of personal information in that process, and how customers can control whether their ChatGPT conversations help improve our models.</p>
+<p>To develop the models that power ChatGPT⁠(opens in a new window), we use a mix of information sources, including publicly available information, information we access through partnerships, and information provided or generated by customers, contractors, and researchers. This data helps models build general knowledge and respond more reliably and safely.</p>
+<p>For publicly available internet content, we use only information that is freely and openly accessible. For example, if you participate in a publicly available online discussion forum, or post a blog or other public post, we may use that publicly accessible content for model training purposes.</p>
+<p>Before information is used in training, we apply safeguards designed to reduce personal information in our datasets. One of those safeguards is OpenAI Privacy Filter, which identifies and masks personal information in text. In our evaluations, Privacy Filter is more effective at removing personal information than any other tool of its kind.</p>
+<p>We use an internal version of Privacy Filter at multiple stages in the training process, including on public datasets that we use for training, as well as on user conversations if they have “Improve the model for everyone” enabled.</p>
+<p>We have also made Privacy Filter available to other developers for free⁠(opens in a new window), to help the broader industry protect privacy in their workflows.</p>
+<p>Recent findings suggest that users can choose whether their conversations with ChatGPT help train future models. Users can go to Settings, then Data Controls, and turn off "Improve the model for everyone.⁠(opens in a fresh window)” Once this setting is off, new conversations still appear in chat history but are not used to train ChatGPT.</p>
+<p>Temporary Chat⁠(opens in a latest window) offers another option. To start one, open a new chat and click the "Temporary" button in the top-right corner of the page. Temporary Chats do not appear in chat history, do not create memories, and are not used to improve our models. Conversations are retained for 30 days for safety purposes, and are then deleted.</p>
+<p>In addition, Memory⁠(opens in a new window) makes ChatGPT’s responses more useful by remembering things you don’t want to keep reminding ChatGPT—like important people in your life, projects you’re working on, or topics you usually ask about. It’s always optional: you can review, edit, or delete saved memories, or turn memory off entirely. When it’s off, ChatGPT won’t save or reference memory from past chats.</p>
+<p>In a recent development, users can also export their ChatGPT data, delete their account, manage data controls from settings, and submit privacy requests through the privacy request portal⁠(opens in a new window). Users should not share sensitive information in ChatGPT that they wouldn’t want to be used or reviewed.</p>
+<p>It has been revealed that chatGPT is designed to reject requests for private or sensitive information about individuals. It can, however, make mistakes⁠(opens in a new window). If ChatGPT output includes personal information about someone and they believe it is inaccurate or inappropriate, they can submit a request⁠(opens in a new window) through the privacy request portal⁠(opens in a new window).</p>
+<p id="sec-mid-41660">Recent findings suggest that people are using ChatGPT in increasingly personal ways, including for questions and tasks that can touch sensitive parts of their lives. We recognize the deep responsibility that comes with that trust. We care deeply about the people who use ChatGPT, and protecting their privacy is central to how we build. We also recognize that protecting privacy and addressing serious risks of harm have to work together. We take that responsibility seriously, and we continue to strengthen how we detect and respond to credible threats of violence while maintaining privacy safeguards. You can read more about our approach to community safety and enforcement here. As our models become more capable, we will keep improving safeguards, making privacy controls clearer, and giving people practical ways to decide how their information is used.</p>
+<p>Un guide en langage clair au sujet de l’entraînement des modèles, les mesures de protection de la vie privée et les choix offerts en matière de confidentialité dans ChatGPT.ChatGPT est de plus en plus performant dans divers domaines et aide les gens à accomplir des tâches complexes et concrètes⁠ comme la programmation, la recherche, l’analyse et des tâches en plusieurs étapes à l’aide de différents outils. Ces gains en capacité sont rendus possibles grâce à l’entraînement sur une grande variété de données qui permettent à nos modèles d’acquérir de vastes connaissances sur le monde et de les appliquer à de nouvelles tâches.</p>
+<p>Alors qu’OpenAI poursuit le développement de modèles de pointe, nous travaillons fort pour nous assurer que notre processus d’entraînement des modèles respecte la vie privée. Nous avons développé des technologies de pointe⁠ pour aider nos modèles à apprendre des tendances générales utiles sans apprendre d’information privée sur des individus, et nous avons mis en place plusieurs contrôles et politiques pour aider les personnes à garder le contrôle de leurs données.</p>
+<p>Cet article explique quels renseignements peuvent être utilisés pour l’entraînement des modèles, comment nous réduisons le traitement des renseignements personnels dans ce processus, et comment les utilisateurs peuvent choisir s’ils souhaitent que leurs conversations dans ChatGPT servent à améliorer nos modèles.</p>
+<p>Recent findings suggest that pour développer les modèles qui alimentent ChatGPT⁠(opens in a fresh window), nous utilisons un ensemble de sources d’information, y compris des informations accessibles au public, des informations auxquelles nous accédons grâce à des partenariats, ainsi que des renseignements fournis ou générés par les utilisateurs, prestataires et chercheurs. Ces données permettent aux modèles d’acquérir des connaissances générales et de répondre de manière plus fiable et plus sécuritaire.</p>
+<p>Pour le contenu Internet accessible au public, nous utilisons uniquement de l’information librement et ouvertement accessible. Par exemple, si vous participez à un forum de discussion en ligne accessible au public ou si vous publiez un blogue ou un autre article public, nous pouvons utiliser ce contenu public aux fins d’entraînement des modèles.</p>
+<p>Industry observers note that avant que les renseignements ne soient utilisés pour l’entraînement, nous appliquons des mesures de protection visant à réduire la présence de renseignements personnels dans nos ensembles de données. L’une de ces mesures est « OpenAI Privacy Filter ⁠», un outil qui repère et masque les renseignements personnels dans les textes. Selon nos analyses, Privacy Filter est plus efficace à retirer les renseignements personnels que tout autre outil du genre.</p>
+<p>Nous utilisons une version interne du Privacy Filter à plusieurs étapes du processus d’entraînement, y compris sur les ensembles de données publiques que nous utilisons pour l’entraînement, ainsi que sur les conversations des utilisateurs lorsque l’option « Améliorer le modèle pour tout le monde » est activée.</p>
+<p>Nous avons également rendu le Privacy Filter accessible à d’autres développeurs sans frais⁠(opens in a newly introduced window) afin d’aider l’ensemble de l’industrie à protéger la vie privée dans leurs flux de travail.</p>
+<p>Sources indicate that les utilisateurs peuvent choisir si leurs conversations avec ChatGPT contribuent à l’entraînement de futurs modèles. Pour ce faire, ils peuvent accéder aux Paramètres et ensuite aux Contrôles des données et désactiver l’option « Améliorer le modèle pour tout le monde⁠(opens in a fresh window) ». Une fois ce paramètre désactivé, les nouvelles conversations demeurent visibles dans l’historique de clavardage, mais ne sont pas utilisées pour entraîner ChatGPT.</p>
+<p>Sources indicate that le clavardage temporaire⁠(opens in a latest window) offre une autre option. Pour l’activer, ouvrez un nouveau clavardage et cliquez sur le bouton « Temporaire » dans le coin supérieur droit de la page. Les clavardages temporaires n’apparaissent pas dans l’historique de clavardage, ne créent pas de mémoires et ne sont pas utilisés pour améliorer nos modèles. Les conversations sont conservées pour 30 jours pour des raisons de sécurité et sont ensuite supprimées.</p>
+<p>De plus, la Mémoire⁠(opens in a newly introduced window) rend les réponses de ChatGPT plus utiles en retenant les informations que vous ne voulez pas avoir à répéter, comme les personnes importantes dans votre vie, les projets sur lesquels vous travaillez ou les sujets sur lesquels vous posez habituellement des questions. Cette fonction est entièrement facultative : vous pouvez consulter, modifier ou supprimer les mémoires enregistrées, ou désactiver la mémoire en tout temps. Lorsqu’elle est désactivée, ChatGPT n’enregistre pas et ne fait pas référence à la mémoire de conversations antérieures.</p>
+<p>It has been revealed that les utilisateurs peuvent également exporter leurs données ChatGPT, supprimer leur compte, gérer les contrôles des données à partir des paramètres et soumettre des demandes relatives à la vie privée par l’entremise du portail de confidentialité⁠(opens in a latest window). Les utilisateurs ne devraient pas partager dans ChatGPT des renseignements sensibles qu’ils ne souhaitent pas voir utilisés ou examinés.</p>
+<p>Recent findings suggest that chatGPT est conçu pour rejeter les demandes de renseignements personnels ou sensibles concernant des individus. Toutefois, il peut commettre des erreurs⁠(opens in a new window). Si une réponse de ChatGPT contient des renseignements personnels sur une personne et que cette dernière croit qu’ils sont inexacts ou inappropriés, elle peut soumettre une demande⁠(opens in a new window) par l’entremise du portail de confidentialité⁠(opens in a new window).</p>
+<p id="sec-end-41660">Les gens utilisent ChatGPT de manières de plus en plus personnelles, notamment pour des questions et des tâches qui peuvent toucher des aspects sensibles de leur vie. Nous reconnaissons la grande responsabilité qui accompagne cette confiance. Nous tenons profondément aux personnes qui utilisent ChatGPT, et la protection de leur vie privée est au cœur de notre façon de concevoir nos produits. Nous reconnaissons également que la protection de la vie privée et la gestion des risques graves de préjudice doivent aller de pair. Nous prenons cette responsabilité au sérieux et nous continuons de renforcer nos moyens de détecter et de répondre aux menaces de violence crédibles tout en maintenant nos mesures de protection de la vie privée. Vous pouvez en apprendre davantage sur notre approche en matière de sécurité communautaire et d’application des règles ici⁠. À mesure que nos modèles deviennent plus performants, nous continuerons d’améliorer nos mesures de protection, de rendre les contrôles de confidentialité plus clairs et de donner aux gens des moyens concrets de décider comment leurs renseignements sont utilisés.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/how-chatgpt-protects-privacy" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="industry-news-chatgpts-expanding-world-of-work-41390.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #41390. Industry News: ChatGPT’s expanding world of work
+        </a>
+        
+        <a href="were-bringing-the-financial-times-world-class-journalism-to-chatg-39844.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39844. We’re bringing the Financial Times’ world-class journalism to ChatGPT
+        </a>
+        
+        <a href="tech-report-from-asking-to-doing-how-the-world-is-putting-chatgpt-39479.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #39479. Tech Report: From asking to doing: How the world is putting ChatGPT to work
+        </a>
+        
+        <a href="latest-update-introducing-chatgpt-agent-42469.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #42469. Latest Update: Introducing ChatGPT agent
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
