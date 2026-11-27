@@ -4,100 +4,100 @@
     <title>Portal Berita - Gadgets</title>
     <link>https://railfansday.github.io/artikelsemua70/</link>
     <description>Curated news feed for Gadgets.</description>
-    <lastBuildDate>Fri, 27 Nov 2026 08:03:52 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Nov 2026 21:07:27 -0000</lastBuildDate>
     
             <item>
-                <title>How We Used Codex to Ship Sora for Android in 28 Days</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/how-we-used-codex-to-ship-sora-for-android-in-28-days-42276.html</guid>
-                <description>By Patrick Hum and RJ Marsan, Members of the Technical Staff. As of April 26, 2026, the Sora product is no longer available. In November, we debuted the Sora Android app to the world, giving anyone with an Android device the ability to turn a short prompt into a vivid video. On l...</description>
-            </item>
-            <item>
-                <title>Using Stable Diffusion with Core ML on Apple Silicon</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-42132.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/using-stable-diffusion-with-core-ml-on-apple-silicon-42132.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Faster Stable Diffusion with Core ML on iPhone, iPad, and Mac</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-42019.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/faster-stable-diffusion-with-core-ml-on-iphone-ipad-and-mac-42019.html</guid>
-                <description>Content not available. → Read original article...</description>
-            </item>
-            <item>
-                <title>Releasing Swift Transformers: Run On-Device LLMs in Apple Devices</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-41984.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/releasing-swift-transformers-run-on-device-llms-in-apple-devices-41984.html</guid>
-                <description>Content not available. → Read original article...</description>
+                <title>Apple is getting this wrong</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-44054.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-is-getting-this-wrong-44054.html</guid>
+                <description>Apple is one of the greatest companies of all time, and built a reputation for obsessing over the smallest details. This careless, aggressive and oddly personal lawsuit sadly doesn’t live up to that reputation. In a recent development, apple had claimed that they contacted OpenAI...</description>
             </item>
             <item>
                 <title>Introducing AnyLanguageModel: One API for Local and Remote LLMs on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-41343.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-41343.html</guid>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-43642.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anylanguagemodel-one-api-for-local-and-remote-llms-on-43642.html</guid>
                 <description>Content not available. → Read original article...</description>
             </item>
             <item>
-                <title>AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-40689.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/anylanguagemodel-10-one-year-of-local-models-on-apple-platforms-40689.html</guid>
-                <description>Industry observers note that last November, we introduced AnyLanguageModel on this blog:
+                <title>Breaking: AnyLanguageModel 1.0: One Year of Local Models on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-anylanguagemodel-10-one-year-of-local-models-on-apple-pl-42999.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-anylanguagemodel-10-one-year-of-local-models-on-apple-pl-42999.html</guid>
+                <description>Last November, we introduced AnyLanguageModel on this blog:
 a drop-in replacement for Apple's Foundation Models framework
 that lets you choose the model and provider your app uses. We heard from app developers who were curious about local models
-but w...</description>
+but weren't always sure how to get...</description>
             </item>
             <item>
-                <title>Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--40657.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/introducing-anyspeechrecognizer-and-anydecisionmodel-open-models--40657.html</guid>
-                <description>Recent findings suggest that language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Recent findings suggest that say a customer calls your support line. First, you want to know what they remar...</description>
+                <title>Industry News: Introducing AnySpeechRecognizer and AnyDecisionModel: Open Models for Speech and Decisions on Apple Platforms</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-introducing-anyspeechrecognizer-and-anydecisionmode-42967.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-introducing-anyspeechrecognizer-and-anydecisionmode-42967.html</guid>
+                <description>According to recent reports, language models can do a lot. They write, summarize, translate, and call tools. But they're only a small part of what machine learning can do. Say a customer calls your support line. First, you want to know what they stated (speech recognition). Then,...</description>
             </item>
             <item>
-                <title>Industry News: AWS Device Farm launches Device Connect for local access to remote Android devices</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-aws-device-farm-launches-device-connect-for-local-a-40622.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-aws-device-farm-launches-device-connect-for-local-a-40622.html</guid>
-                <description>Recent findings suggest that AWS Device Farm, a service for testing mobile and web apps, now offers Device Connect. With Device Connect, you and AI agents can use remote Android devices from your local machine in an IDE, terminal, or development environment of your choice, as if ...</description>
-            </item>
-            <item>
-                <title>Industry News: The Best iPhone Duo Cases and Accessories (2026)</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-best-iphone-duo-cases-and-accessories-2026-40564.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/industry-news-the-best-iphone-duo-cases-and-accessories-2026-40564.html</guid>
-                <description>Industry observers note that if you’ve spent a couple grand on Apple’s first folding phone, you should really protect it with one of the best iPhone Duo cases. It’s easy to drop the iPhone Duo while opening it one-handed, especially if you’re not used to folding phones, and any r...</description>
-            </item>
-            <item>
-                <title>The Best TVs We’ve Tested (2026): Samsung, LG, TCL, Sony, and More.</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/the-best-tvs-weve-tested-2026-samsung-lg-tcl-sony-and-more-40542.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/the-best-tvs-weve-tested-2026-samsung-lg-tcl-sony-and-more-40542.html</guid>
-                <description>Sources indicate that buying a fresh TV is always a big decision, namely because its a big piece of tech with a permanent place in your home that you'll be staring at for hours on end. Not to mention, some of the best of the best cost thousands of dollars. It doesn't help that mo...</description>
-            </item>
-            <item>
-                <title>Breaking: 20% Off Samsung Promo Code | November 2026</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/breaking-20-off-samsung-promo-code-november-2026-40523.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/breaking-20-off-samsung-promo-code-november-2026-40523.html</guid>
-                <description>Recent findings suggest that samsung makes everything from smartphones and gaming monitors to smart TVs and kitchen appliances. I'm always looking for a sale (I’m assuming you are, too), and I've found the best Samsung promo codes and special offers to help you save major on your...</description>
+                <title>AWS Device Farm releases Device Connect for local access to remote Android devices</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-releases-device-connect-for-local-access-to-remot-42931.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-releases-device-connect-for-local-access-to-remot-42931.html</guid>
+                <description>AWS Device Farm, a service for testing mobile and web apps, now offers Device Connect. With Device Connect, you and AI agents can use remote Android devices from your local machine in an IDE, terminal, or development environment of your choice, as if it were plugged into your lap...</description>
             </item>
             <item>
                 <title>AWS Device Farm now supports Android emulators and iOS simulators</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-40510.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-40510.html</guid>
-                <description>AWS Device Farm, a service for testing mobile and web apps, now supports Android emulators and iOS simulators alongside real devices for automated and manual testing, enabling faster testing at scale early in your development pipeline. With virtual devices, you can shift testing ...</description>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-42832.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/aws-device-farm-now-supports-android-emulators-and-ios-simulators-42832.html</guid>
+                <description>In a recent development, AWS Device Farm, a service for testing mobile and web apps, now supports Android emulators and iOS simulators alongside real devices for automated and manual testing, enabling faster testing at scale early in your development pipeline. With virtual device...</description>
             </item>
             <item>
-                <title>Connect to Android Auto or Apple CarPlay for cheap with these 5 gadgets</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/connect-to-android-auto-or-apple-carplay-for-cheap-with-these-5-g-40469.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/connect-to-android-auto-or-apple-carplay-for-cheap-with-these-5-g-40469.html</guid>
-                <description>Android Auto and Apple CarPlay bring apps to your car display so you can focus better on the road while driving, allowing you to control features such as navigation, maps, calls, text messages, and music. And right now, several useful devices that help you connect to Android Auto...</description>
+                <title>Tech Report: Best Black Friday 2026 tablet deals on Apple, Amazon, and more</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-best-black-friday-2026-tablet-deals-on-apple-amazon-a-42788.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-best-black-friday-2026-tablet-deals-on-apple-amazon-a-42788.html</guid>
+                <description>According to recent reports, black Friday is back, and several deals on top tablets are live. We only choose tablet deals we’ve personally tested and recommend to help you cut through the noise and find the best options from Amazon, Best Buy, Walmart, and more. According to recen...</description>
             </item>
             <item>
-                <title>Save major on top TVs, phones, tablets and more with these Black Friday Samsung deals</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/save-major-on-top-tvs-phones-tablets-and-more-with-these-black-fr-40465.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/save-major-on-top-tvs-phones-tablets-and-more-with-these-black-fr-40465.html</guid>
-                <description>Black Friday is just a few hours away, which means that the savings are in full swing right now. Retailers like Amazon and Best Buy are offering huge discounts on tons of top tech, which includes a massive selection of Samsung products. We’ve found can’t-miss offers on everything...</description>
+                <title>Latest Update: Black Friday iPhone deals: Free iPhone 18 Pro, discounted iPhone Duo</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/latest-update-black-friday-iphone-deals-free-iphone-18-pro-discou-42786.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/latest-update-black-friday-iphone-deals-free-iphone-18-pro-discou-42786.html</guid>
+                <description>If you’ve been waiting for the right time to upgrade to a new iPhone, now’s your chance. The Black Friday deals are in full swing, meaning you can save hundreds on unlocked phones, or potentially pick one up for free with a new line or trade-in. Also: Black Friday Live Blog 2026....</description>
             </item>
             <item>
-                <title>Standard Intelligence: Training General Intelligence in Pixel Space</title>
-                <link>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-40434.html</link>
-                <guid>https://railfansday.github.io/artikelsemua70/artikel/standard-intelligence-training-general-intelligence-in-pixel-spac-40434.html</guid>
+                <title>Save substantial on top TVs, phones, tablets and more with these Black Friday Samsung deals</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/save-substantial-on-top-tvs-phones-tablets-and-more-with-these-bl-42785.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/save-substantial-on-top-tvs-phones-tablets-and-more-with-these-bl-42785.html</guid>
+                <description>Black Friday is back, which means savings are in full swing. Retailers like Amazon and Best Buy are offering huge discounts on tons of top tech, which includes a massive selection of Samsung products. We’ve found can’t-miss offers on everything from tablets to smartphones to TVs,...</description>
+            </item>
+            <item>
+                <title>I Found the Best Black Friday Deals on Phones (2026): iPhone, Pixel, and Moto Up to 50% Off</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/i-found-the-best-black-friday-deals-on-phones-2026-iphone-pixel-a-42770.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/i-found-the-best-black-friday-deals-on-phones-2026-iphone-pixel-a-42770.html</guid>
+                <description>We see tempting Black Friday phone deals every year, and 2026 is no exception. I spotted several phones we have tested and already recommend at a cheaper price than usual, and collected them below. A few of these made our absolute best Black Friday deals, and we’ll revision this ...</description>
+            </item>
+            <item>
+                <title>I Found the Best Black Friday Streaming Deals (2026): Apple TV, Disney, and Paramount Over Half Off</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/i-found-the-best-black-friday-streaming-deals-2026-apple-tv-disne-42757.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/i-found-the-best-black-friday-streaming-deals-2026-apple-tv-disne-42757.html</guid>
+                <description>Sources indicate that most of the biggest streaming services are offering Black Friday deals this year, as they do every year. Nearly all of these deals are for upcoming and former customers only. Easy enough if you've canceled a subscription recently and want it back, but a litt...</description>
+            </item>
+            <item>
+                <title>Tech Report: Standard Intelligence: Training General Intelligence in Pixel Space</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-standard-intelligence-training-general-intelligence-i-42751.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-standard-intelligence-training-general-intelligence-i-42751.html</guid>
                 <description>The future of useful agents may begin not with text, but with pixels. The future of useful agents may begin not with text, but with pixels. Could pixels hold the keys to training useful agents? The race to scale language models â and the agent ecosystem around them â is white...</description>
+            </item>
+            <item>
+                <title>Tech Report: The Best Black Friday iPad Deals On the Latest 2026 Models: Get $100 Off</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/tech-report-the-best-black-friday-ipad-deals-on-the-latest-2026-m-42742.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/tech-report-the-best-black-friday-ipad-deals-on-the-latest-2026-m-42742.html</guid>
+                <description>Industry observers note that there’s no denying that 2026 has been a slower year for the iPad lineup. Only the iPad Air and iPad Mini received updates (with nothing newly introduced for the iPad or iPad Pro since 2025), and in June, the entire lineup saw a painful price hike of $...</description>
+            </item>
+            <item>
+                <title>Apple Black Friday Deals (2026): AirPods, iPads, MacBooks, and More</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/apple-black-friday-deals-2026-airpods-ipads-macbooks-and-more-42700.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/apple-black-friday-deals-2026-airpods-ipads-macbooks-and-more-42700.html</guid>
+                <description>Apple gear goes hand-in-hand with holiday sales. WIRED readers love opportunities to save on MacBooks, iPads, AirPods, and other gadgets—and while discounts on Apple products aren't especially rare, Black Friday deals do usually drop these sought-after items to their lowest price...</description>
+            </item>
+            <item>
+                <title>A month with the iPhone Duo has changed how I use my phone</title>
+                <link>https://railfansday.github.io/artikelsemua70/artikel/a-month-with-the-iphone-duo-has-changed-how-i-use-my-phone-42646.html</link>
+                <guid>https://railfansday.github.io/artikelsemua70/artikel/a-month-with-the-iphone-duo-has-changed-how-i-use-my-phone-42646.html</guid>
+                <description>It has been revealed that for years, the definition of a premium smartphone depended on its cameras, processors, and how light it felt when you stowed it in your pocket. The iPhone Duo challenges that concept by asking consumers to pay more for a fundamentally different smartphon...</description>
             </item>
 </channel>
 </rss>

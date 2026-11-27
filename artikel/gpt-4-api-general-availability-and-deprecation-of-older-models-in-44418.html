@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT-4 API general availability and deprecation of older models in the Completions API</title>
+    <meta name="description" content="Patch on April 24, 2024: The ChatGPT API name has been discontinued. Mentions of the ChatGPT API in this blog refer to the GPT‑3.5 Turbo API. Starting toda">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/gpt-4-api-general-availability-and-deprecation-of-older-models-in-44418.html">
+    <meta property="og:title" content="GPT-4 API general availability and deprecation of older models in the Completions API">
+    <meta property="og:description" content="Patch on April 24, 2024: The ChatGPT API name has been discontinued. Mentions of the ChatGPT API in this blog refer to the GPT‑3.5 Turbo API. Starting toda">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/302c502a-f6d8-4d90-826324b962eb/8f3eab01eb38184f1acc1f3b6251ac9d/gpt-4-api-general-availability-and-final-update-to-the-completions-api.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/gpt-4-api-general-availability-and-deprecation-of-older-models-in-44418.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "GPT-4 API general availability and deprecation of older models in the Completions API", "image": ["https://images.ctfassets.net/kftzwdyauwt9/302c502a-f6d8-4d90-826324b962eb/8f3eab01eb38184f1acc1f3b6251ac9d/gpt-4-api-general-availability-and-final-update-to-the-completions-api.jpg?w=1600&h=900&fit=fill"], "datePublished": "2024-04-24T00:00:00", "dateModified": "2026-11-27T21:04:37.567143", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/gpt-4-api-general-availability-and-deprecation-of-older-models-in-44418.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>GPT-4 API general availability and deprecation of older models in the Completions API</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 24 Apr 2024 &bull; ⏱️ 5 min read (955 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Patch on April 24, 2024: The ChatGPT API name has been discontinued.</li><li style='margin-bottom:6px;'>Starting today, all paying API customers have access to GPT‑4.</li><li style='margin-bottom:6px;'>Recent findings suggest that GPT‑4 is our most capable model.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44418"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44418"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44418"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="GPT-4 API general availability and deprecation of older models in the Completions API" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/302c502a-f6d8-4d90-826324b962eb/8f3eab01eb38184f1acc1f3b6251ac9d/gpt-4-api-general-availability-and-final-update-to-the-completions-api.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44418">Patch on April 24, 2024: The ChatGPT API name has been discontinued. Mentions of the ChatGPT API in this blog refer to the GPT‑3.5 Turbo API.</p>
+<p>Starting today, all paying API customers have access to GPT‑4. In March, we introduced the OpenAI API⁠, and earlier this month we released our first updates⁠ to the chat-based models. We envision a future where chat-based models can support any use case. Today we’re announcing a deprecation blueprint for older models of the Completions API, and recommend that people adopt the Chat Completions API.</p>
+<p>Recent findings suggest that GPT‑4 is our most capable model. Millions of developers have requested access to the GPT‑4 API since March, and the range of innovative products⁠ leveraging GPT‑4 is growing every day. Today all existing API developers with a history of successful payments can access the GPT‑4 API with 8K context. We blueprint to open up access to upcoming developers by the end of this month, and then start raising rate-limits after that depending on compute availability.</p>
+<p>Based on the stability and readiness of these models for production-scale use, we are also making the GPT‑3.5 Turbo, DALL·E and Whisper APIs generally available. We are working on safely enabling fine-tuning for GPT‑4 and GPT‑3.5 Turbo and expect this feature to be available later this year.</p>
+<p>We introduced the Chat Completions API⁠(opens in a upcoming window) in March, and it now accounts for 97% of our API GPT usage.</p>
+<p>Sources indicate that the initial Completions API was introduced in June 2020 to provide a freeform text prompt for interacting with our language models. We’ve since learned that we can often provide better results with a more structured prompt interface. The chat-based paradigm has proven to be powerful, handling the vast majority of previous use cases and latest conversational needs, while providing higher flexibility and specificity. In particular, the Chat Completions API’s structured interface (e.g., system messages, function calling) and multi-turn conversation capabilities enable developers to build conversational experiences and a broad range of completion tasks. It also helps lower the risk of prompt injection attacks, since user-provided content can be structurally separated from instructions.</p>
+<p>It has been revealed that we strategy to continue investing most of our platform efforts in this direction, as we believe it will offer an increasingly capable and easy-to-use experience for developers. We’re working on closing the last few remaining gaps of the Chat Completions API rapidly, such as log probabilities for completion tokens and increased steerability to reduce the “chattiness” of responses.</p>
+<p>Sources indicate that as part of our increased investment in the Chat Completions API and our efforts to optimize our compute capacity, in 6 months we will be retiring some of our older models using the Completions API. While this API will remain accessible, we will label it as “legacy” in our developer documentation starting today. We plan for future model and product improvements to focus on the Chat Completions API, and do not have plans to publicly release new models using the Completions API.</p>
+<p id="sec-mid-44418">Starting January 4, 2024, older completion models⁠(opens in a fresh window) will no longer be available, and will be replaced with the following models:.</p>
+<p>In a recent development, applications using the stable model names for base GPT‑3 models (ada, babbage, curie, davinci) will automatically be upgraded to the new models listed above on January 4, 2024. The new models will also be accessible in the coming weeks for early testing by specifying the following model names in API calls: babbage-002, davinci-002.</p>
+<p>Recent findings suggest that developers using other older completion models (such as text-davinci-003) will need to manually upgrade their integration by January 4, 2024 by specifying gpt-3.5-turbo-instruct in the “model” parameter of their API requests. gpt-3.5-turbo-instruct is an InstructGPT‑style model, trained similarly to text-davinci-003. This new model is a drop-in replacement in the Completions API and will be available in the coming weeks for early testing.</p>
+<p>Developers wishing to continue using their fine-tuned models beyond January 4, 2024 will need to fine-tune replacements atop the new base GPT‑3 models (babbage-002, davinci-002), or newer models (gpt-3.5-turbo, gpt-4). Once this feature is available later this year, we will give priority access to GPT‑3.5 Turbo and GPT‑4 fine-tuning to owners who previously fine-tuned older models. We acknowledge that migrating off of models that are fine-tuned on your own data is challenging. We will be providing support to users who previously fine-tuned models to make this transition as smooth as possible.</p>
+<p>In the coming weeks, we will reach out to developers who have recently used these older models, and will provide more information once the upcoming completion models are ready for early testing.</p>
+<p>Owners of older embeddings models (e.g., text-search-davinci-doc-001) will need to migrate to text-embedding-ada-002 by January 4, 2024. We released text-embedding-ada-002 in December 2022, and have found it more capable and cost effective than previous models. Today text-embedding-ada-002 accounts for 99.9% of all embedding API usage.</p>
+<p>Industry observers note that we recognize this is a significant change for developers using those older models. Winding down these models is not a decision we are making lightly. We will cover the financial cost of users re-embedding content with these upcoming models. We will be in touch with impacted users over the coming days.</p>
+<p id="sec-end-44418">Industry observers note that people of the Edits API and its associated models (e.g., text-davinci-edit-001 or code-davinci-edit-001) will need to migrate to GPT‑3.5 Turbo by January 4, 2024. The Edits API beta was an early exploratory API, meant to enable developers to return an edited version of the prompt based on instructions. We took the feedback from the Edits API into account when developing gpt-3.5-turbo and the Chat Completions API, which can now be used for the same purpose:.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/gpt-4-api-general-availability" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="gpt-35-turbo-fine-tuning-and-api-updates-44481.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44481. GPT-3.5 Turbo fine-tuning and API updates
+        </a>
+        
+        <a href="new-embedding-models-and-api-updates-44448.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44448. New embedding models and API updates
+        </a>
+        
+        <a href="industry-news-introducing-improvements-to-the-fine-tuning-api-and-44425.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44425. Industry News: Introducing improvements to the fine-tuning API and expanding our custom models program
+        </a>
+        
+        <a href="tech-report-introducing-next-generation-audio-models-in-the-api-44233.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44233. Tech Report: Introducing next-generation audio models in the API
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

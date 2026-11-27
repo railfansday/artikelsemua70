@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing ChatGPT and Whisper APIs</title>
+    <meta name="description" content="Developers can now integrate GPT‑3.5 Turbo and Whisper models into their apps and products through our API. Sources indicate that update on April 24, 2024:">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/introducing-chatgpt-and-whisper-apis-44419.html">
+    <meta property="og:title" content="Introducing ChatGPT and Whisper APIs">
+    <meta property="og:description" content="Developers can now integrate GPT‑3.5 Turbo and Whisper models into their apps and products through our API. Sources indicate that update on April 24, 2024:">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/44fefabe-41f8-4dbf-d80656c1f876/8dec20d14a894ae52ae07449452a89c5/introducing-chatgpt-and-whisper-apis.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/introducing-chatgpt-and-whisper-apis-44419.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Introducing ChatGPT and Whisper APIs", "image": ["https://images.ctfassets.net/kftzwdyauwt9/44fefabe-41f8-4dbf-d80656c1f876/8dec20d14a894ae52ae07449452a89c5/introducing-chatgpt-and-whisper-apis.jpg?w=1600&h=900&fit=fill"], "datePublished": "2024-04-24T00:00:00", "dateModified": "2026-11-27T21:04:37.773408", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/introducing-chatgpt-and-whisper-apis-44419.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Introducing ChatGPT and Whisper APIs</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 24 Apr 2024 &bull; ⏱️ 7 min read (1386 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Developers can now integrate GPT‑3.5 Turbo and Whisper models into their apps and products through our API.</li><li style='margin-bottom:6px;'>Sources indicate that update on April 24, 2024: The ChatGPT API name has been discontinued.</li><li style='margin-bottom:6px;'>Industry observers note that chatGPT and Whisper models are now available on our API, giving developers access to cutting-edge language (not just chat!) and speech-to-text capabilities.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44419"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44419"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44419"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Introducing ChatGPT and Whisper APIs" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/44fefabe-41f8-4dbf-d80656c1f876/8dec20d14a894ae52ae07449452a89c5/introducing-chatgpt-and-whisper-apis.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44419">Developers can now integrate GPT‑3.5 Turbo and Whisper models into their apps and products through our API.</p>
+<p>Sources indicate that update on April 24, 2024: The ChatGPT API name has been discontinued. Mentions of the ChatGPT API in this blog refer to the GPT‑3.5 Turbo API.</p>
+<p>Industry observers note that chatGPT and Whisper models are now available on our API, giving developers access to cutting-edge language (not just chat!) and speech-to-text capabilities. Through a series of system-wide optimizations, we’ve achieved 90% cost reduction for ChatGPT since December; we’re now passing through those savings to API people. Developers can now use our open-source Whisper large-v2 model in the API with much faster and cost-effective results. GPT‑3.5 API users can expect continuous model improvements and the option to choose dedicated capacity for deeper control over the models. We’ve also listened closely to feedback from our developers and refined our API terms of service to better meet their needs.</p>
+<p>Sources indicate that snap Inc⁠(opens in a latest window)., the creator of Snapchat, introduced My AI for Snapchat+ this week. The experimental feature is running on GPT‑3.5 API. My AI offers Snapchatters a friendly, customizable chatbot at their fingertips that offers recommendations, and can even write a haiku for friends in seconds. Snapchat, where communication and messaging is a daily behavior, has 750 million monthly Snapchatters:.</p>
+<p>It has been revealed that quizlet⁠(opens in a upcoming window) is a global learning platform with more than 60 million students using it to study, practice and master whatever they’re learning. Quizlet has worked with OpenAI for the last three years, leveraging GPT‑3 across multiple use cases, including vocabulary learning and practice tests. With the launch of GPT‑3.5 API, Quizlet is introducing Q-Chat, a fully-adaptive AI tutor that engages students with adaptive questions based on relevant study materials delivered through a fun chat experience:.</p>
+<p>Instacart⁠(opens in a newly introduced window) is augmenting the Instacart app to enable customers to ask about food and get inspirational, shoppable answers. This uses ChatGPT alongside Instacart’s own AI and product data from their 75,000+ retail partner store locations to help customers discover ideas for open-ended shopping goals, such as “How do I make great fish tacos?” or “What’s a healthy lunch for my kids?” Instacart prepares to launch “Ask Instacart” later this year:.</p>
+<p>Industry observers note that shop⁠(opens in a fresh window), Shopify’s consumer app, is used by 100 million shoppers to find and engage with the products and brands they love. GPT‑3.5 API is used to power Shop’s new shopping assistant. When shoppers search for products, the shopping assistant makes personalized recommendations based on their requests. Shop’s new AI-powered shopping assistant will streamline in-app shopping by scanning millions of products to rapidly find what buyers are looking for—or help them discover something new:.</p>
+<p>Speak⁠(opens in a new window) is an AI-powered language learning app focused on building the best path to spoken fluency. They’re the fastest-growing English app in South Korea, and are already using the Whisper API to power a new AI speaking companion product, and rapidly bring it to the rest of the globe. Whisper’s human-level accuracy for language learners of every level unlocks true open-ended conversational practice and highly accurate feedback:.</p>
+<p>Model: The ChatGPT model family we are releasing today, gpt-3.5-turbo, is the same model used in the ChatGPT product. It is priced at $0.002 per 1k tokens, which is 10x cheaper than our existing GPT‑3.5 models. It’s also our best model for many non-chat use cases—we’ve seen early testers migrate from text-davinci-003 to gpt-3.5-turbo with only a small amount of adjustment needed to their prompts.</p>
+<p>It has been revealed that API: Traditionally, GPT models consume unstructured text, which is represented to the model as a sequence of “tokens.” ChatGPT models instead consume a sequence of messages together with metadata. (For the curious: under the hood, the input is still rendered to the model as a sequence of “tokens” for the model to consume; the raw format used by the model is a latest format called Chat Markup Language⁠(opens in a new window) (“ChatML”).).</p>
+<p>We’ve created a new endpoint to interact with our ChatGPT models:.</p>
+<p>To learn more about the GPT‑3.5 API, visit our Chat guide⁠(opens in a fresh window).</p>
+<p>Recent findings suggest that we are constantly improving our ChatGPT models, and want to make these enhancements available to developers as well. Developers who use the gpt-3.5-turbo model will always get our recommended stable model, while still having the flexibility to opt for a specific model version. For example, today we’re releasing gpt-3.5-turbo-0301, which will be supported through at least June 1st, and we’ll upgrade gpt-3.5-turbo to a new stable release in April. The models page⁠(opens in a new window) will provide switchover updates.</p>
+<p>We are also now offering dedicated instances for users who want deeper control over the specific model version and system performance. By default, requests are run on compute infrastructure shared with other users, who pay per request. Our API runs on Azure, and with dedicated instances, developers will pay by time period for an allocation of compute infrastructure that’s reserved for serving their requests.</p>
+<p id="sec-mid-44419">Developers get full control over the instance’s load (higher load improves throughput but makes each request slower), the option to enable features such as longer context limits, and the ability to pin the model snapshot.</p>
+<p>It has been revealed that dedicated instances can make economic sense for developers running beyond ~450M tokens per day. Additionally, it enables directly optimizing a developer’s workload against hardware performance, which can dramatically reduce costs relative to shared infrastructure. For dedicated instance inquiries, contact us⁠.</p>
+<p>According to recent reports, whisper⁠, the speech-to-text model we open-sourced in September 2022, has received immense praise from the developer community but can also be hard to run. We’ve now made the large-v2 model available through our API, which gives convenient on-demand access priced at $0.006 / minute. In addition, our highly-optimized serving stack ensures faster performance compared to other services.</p>
+<p>Whisper API is available through our transcriptions (transcribes in source language) or translations (transcribes into English) endpoints, and accepts a variety of formats (m4a, mp3, mp4, mpeg, mpga, wav, webm):.</p>
+<p>To learn more about the Whisper API, visit our Speech to Text guide⁠(opens in a new window).</p>
+<p>Sources indicate that over the past six months, we’ve been collecting feedback from our API customers to understand how we can better serve them. We’ve made concrete changes, such as:.</p>
+<p>Data submitted through the API is no longer used for service improvements (including model training) unless the organization opts in.</p>
+<p>Implementing a default 30-day data retention policy for API owners, with options for stricter retention depending on user needs.</p>
+<p>Removing our pre-launch review (unlocked by improving our automated monitoring).</p>
+<p>Improving developer documentation.</p>
+<p>Simplifying our Terms of Service and Usage Policies⁠(opens in a newly introduced window), including terms around data ownership: people own the input and output of the models.</p>
+<p>It has been revealed that for the past two months our uptime has not met our own expectations nor that of our users. Our engineering team’s top priority is now stability of production use cases—we know that ensuring AI benefits all of humanity requires being a reliable service provider. Please hold us accountable for improved uptime over the upcoming months!</p>
+<p>Industry observers note that we believe that AI can provide incredible opportunities and economic empowerment to everyone, and the best way to achieve that is to allow everyone to build with it. We hope that the changes we announced today will lead to numerous applications that everyone can benefit from. Start building next-generation apps powered by ChatGPT &amp; Whisper.</p>
+<p id="sec-end-44419">Jeff Belgum, Jake Berdine, Trevor Cai, Alexander Carney, Brooke Chan, Che Chang, Derek Chen, Ruby Chen, Aidan Clark, Thomas Degry, Steve Dowling, Sheila Dunning, Liam Fedus, Vik Goel, Scott Gray, Aurelia Guy, Jeff Harris, Peter Hoeschele, Angela Jiang, Denny Jin, Jong Wook Kim, Yongjik Kim, Michael Lampe, Daniel Levy, Brad Lightcap, Patricia Lue, Bianca Martin, Christine McLeavey, Luke Metz, Andrey Mishchenko, Vinnie Monaco, Evan Morikawa, Mira Murati, Rohan Nuttall, Alex Paino, Ashley Pantuliano, Mikhail Pavlov, Andrew Peng, Henrique Ponde de Oliveira Pinto, Alec Radford, Kendra Rimbach, Aliisa Rosenthal, Nick Ryder, Ted Sanders, Heather Schmidt, John Schulman, Zarina Stanik, Felipe Such, Nick Turley, Carroll Wainwright, Peter Welinder, Clemens Winter, Sherwin Wu, Tao Xu, Qiming Yuan, Barret Zoph.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-chatgpt-and-whisper-apis" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="introducing-whisper-44530.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44530. Introducing Whisper
+        </a>
+        
+        <a href="introducing-chatgpt-44526.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44526. Introducing ChatGPT
+        </a>
+        
+        <a href="breaking-introducing-chatgpt-plus-44515.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44515. Breaking: Introducing ChatGPT Plus
+        </a>
+        
+        <a href="introducing-the-chatgpt-app-for-ios-44498.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44498. Introducing the ChatGPT app for iOS
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

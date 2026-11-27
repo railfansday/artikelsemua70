@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DynaPORT modernization on Google Cloud with AlloyDB for PostgreSQL and GKE</title>
+    <meta name="description" content="The front door to AI in the workplace. In global maritime logistics, Marine Ports and Terminals play a significant role in the movement of container and ca">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/dynaport-modernization-on-google-cloud-with-alloydb-for-postgresq-43166.html">
+    <meta property="og:title" content="DynaPORT modernization on Google Cloud with AlloyDB for PostgreSQL and GKE">
+    <meta property="og:description" content="The front door to AI in the workplace. In global maritime logistics, Marine Ports and Terminals play a significant role in the movement of container and ca">
+    <meta property="og:image" content="https://storage.googleapis.com/gweb-cloudblog-publish/images/final_google_cloud_logo_sloped.max-1400x1400.jpg">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/dynaport-modernization-on-google-cloud-with-alloydb-for-postgresq-43166.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "DynaPORT modernization on Google Cloud with AlloyDB for PostgreSQL and GKE", "image": ["https://storage.googleapis.com/gweb-cloudblog-publish/images/final_google_cloud_logo_sloped.max-1400x1400.jpg"], "datePublished": "2026-11-20T17:00:00", "dateModified": "2026-11-27T21:02:17.995509", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/dynaport-modernization-on-google-cloud-with-alloydb-for-postgresq-43166.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>DynaPORT modernization on Google Cloud with AlloyDB for PostgreSQL and GKE</h1>
+        <div class="meta-line">🌐 Source: <strong>Google</strong> &bull; 📅 20 Nov 2026 &bull; ⏱️ 7 min read (1362 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>In global maritime logistics, Marine Ports and Terminals play a significant role in the movement of container and cargo, within and beyond.</li><li style='margin-bottom:6px;'>It has been revealed that developed by Tata Consultancy Services (TCS), DynaPORT is a field-proven next-generation Terminal Operating System that provides a single, integrated operating backbone for multimodal and multipurpose terminals.</li><li style='margin-bottom:6px;'>It has been revealed that one of India’s largest commercial port developers and operators has relied on DynaPORT for more than two decades across its cargo terminals, supporting the management of bulk, break-bulk, and liquid cargo.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-43166"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-43166"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-43166"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="DynaPORT modernization on Google Cloud with AlloyDB for PostgreSQL and GKE" loading="lazy" src="https://storage.googleapis.com/gweb-cloudblog-publish/images/final_google_cloud_logo_sloped.max-1400x1400.jpg" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-43166">The front door to AI in the workplace.</p>
+<p>In global maritime logistics, Marine Ports and Terminals play a significant role in the movement of container and cargo, within and beyond. Marine ports and terminals world-wide use a Terminal Operating System (TOS) which acts as the central nervous system managing port operations 24 hours a day, 365 days a year. A modern TOS prepares, automates and orchestrates every physical and digital activities, resources and events across Order-to-Invoice processes of a marine terminal.</p>
+<p>It has been revealed that developed by Tata Consultancy Services (TCS), DynaPORT is a field-proven next-generation Terminal Operating System that provides a single, integrated operating backbone for multimodal and multipurpose terminals. It orchestrates the complete order-to-invoice lifecycle across vessel, rail, truck, and barge operations, while supporting containers, general cargo, dry and liquid bulk, break-bulk, and roll-on/roll-off cargo. By automating end-to-end terminal workflows, DynaPORT delivers real-time operational visibility into operations while optimizing assets and resources to drive improvement of key business performance indicators.</p>
+<p>It has been revealed that one of India’s largest commercial port developers and operators has relied on DynaPORT for more than two decades across its cargo terminals, supporting the management of bulk, break-bulk, and liquid cargo. To modernize the platform’s architecture, TCS partnered with the customer to achieve a landmark milestone: migrating DynaPORT to a modern, cloud-based architecture.</p>
+<p>Industry observers note that the Port Operator &amp; TCS partnered with Google Cloud to execute an ambitious cloud modernization journey. Modeled after the architectural principles of high-velocity Google Cloud enterprise transformations—this case study details the systematic deconstruction of legacy technical debt, the strategic rationale and enterprise differentiators of choosing AlloyDB for PostgreSQL, the target Google Kubernetes Engine (GKE) and AlloyDB cloud-native architecture, the heterogeneous migration of over 1.2 million lines of code using Google Cloud Database Migration Service (DMS).</p>
+<p>Enterprise logistics platforms that evolve over decades inevitably accumulate architectural debt, particularly through tightly coupled components. DynaPORT Cargo followed this pattern: successive releases and architectural transitions gradually transformed the platform into a classic multi-tier monolith, with its components carrying significant technical debt.</p>
+<p>Over years of optimization for sub-millisecond on-premises database round-trips, fundamental business logic had been progressively migrated out of the application tier and embedded directly into the database engine. In the DynaPORT Cargo module alone, the core schema contained:.</p>
+<p>262 Packages containing over 1.2 million lines of code.</p>
+<p>54 Stored Procedures, 53 Functions, and 63 Database Triggers.</p>
+<p>Cross-schema User-Defined Types (UDTs).</p>
+<p>Critical business operations—such as multi-tiered marine invoice tariff calculations, dynamic slab rating, berth allocation planning, yard truck assignments, and autonomous error logging—were entirely governed by complex, multi-thousand-line PL/SQL procedures. The database was no longer merely a relational persistence store; it was the primary execution engine of the enterprise.</p>
+<p>Sources indicate that the application tier was hosted on monolithic WebLogic and WildFly application servers running on static on-premises virtual machines. The application relied on legacy Java Enterprise features, including Enterprise JavaBeans (EJBs), custom Object-Relational Mapping (ORM) dialects, and heavy configuration state. Modules including Revenue Management, Berth Planning, Gate Operations, and Reporting shared common JVM heaps across application servers. A performance spike in batch invoice generation could starve memory from real-time Handheld Terminals (HHT) used by container crane operators on the quayside.</p>
+<p>Because business logic was fragmented across Java application binaries and raw database packages, continuous delivery was practically non-existent:.</p>
+<p>Manual Deployment Runbooks: Releases required multi-hour maintenance windows involving manual execution of sequential SQL scripts, package recompilations, and server restarts.</p>
+<p>High Regression Risk: In the legacy schema with 262 interdependent packages, modifying a single package specification frequently invalidated dozens of dependent functions, views, and synonyms, triggering cascading runtime failures.</p>
+<p>Environment Drift: Development, testing, and production environments suffered from configuration divergence, requiring lengthy manual reconciliation before any production cutover.</p>
+<p>Licensing fees scaled linearly with physical CPU core counts, penalizing the business whenever hardware was scaled to accommodate peak cargo vessel traffic. Furthermore, high-availability setups required complex shared storage arrays, specialized interconnects, and heavy administrative overhead from dedicated database administrators (DBAs).</p>
+<p>When architecting the cloud transformation, the joint architecture teams from the customer, TCS, and Google Cloud evaluated two fundamentally different modernization strategies:.</p>
+<p>Strategy A: Database-Agnostic Migration.</p>
+<p>Strategy B: Modernization using AlloyDB.</p>
+<p>Extract all business logic from the database tier and rewrite it into Java application-tier services (HQL / Spring Data).</p>
+<p>Retain optimized procedural logic in the database tier, converting to PostgreSQL PL/pgSQL on AlloyDB.</p>
+<p>It has been revealed that massive. Complete rewrite of thousands of data access objects, ORM mappings, and transaction boundaries.</p>
+<p>In a recent development, moderate. Focused remediation of syntax, metadata, and database dialect differences; application remains stable.</p>
+<p>Multiple person-years; prohibitive time-to-market.</p>
+<p>Target delivery achievable in agile sprints; low operational disruption.</p>
+<p>Network latency amplification due to multiple network hops for complex set operations previously run in-database.</p>
+<p>Native in-engine execution with sub-millisecond response times, backed by AlloyDB’s accelerated storage and compute engine.</p>
+<p>Rejected due to timeline risks and massive business disruption.</p>
+<p>Selected as the winning enterprise target path.</p>
+<p id="sec-mid-43166">The target cloud architecture was designed according to the Google Cloud Architecture Framework, transforming the monolithic JEE middleware into modern containerized microservices orchestrated on Google Kubernetes Engine (GKE), coupled with an enterprise AlloyDB for PostgreSQL cluster.</p>
+<p>In a recent development, the cornerstone of the migration was converting over 1.2 million lines of deeply intertwined Oracle PL/SQL procedural logic into PostgreSQL PL/pgSQL. The team utilized Google Cloud Database Migration Service (DMS) with its built-in Conversion Workspaces and Gemini-assisted AI code refactoring to accelerate bulk transformations.</p>
+<p>While DMS automatically converted the majority of standard DDL constructs, functions, and queries, the remaining (~15%) involved complex Oracle proprietary idioms that required targeted engineering remediation. Couple of examples of the manual intervention.</p>
+<p>Technical Pattern &amp; Remediation.</p>
+<p>Modernized AlloyDB PL/pgSQL Equivalent.</p>
+<p>Architectural Remediation &amp; Runtime Impact.</p>
+<p>TYPE_L := array_append(TYPE_L, rec); or TYPE_L[cardinality(TYPE_L)+1] := rec;.</p>
+<p>Replaced unsupported .EXTEND method on nested tables with native PostgreSQL array concatenation and dynamic index expansion.</p>
+<p>SELECT ROWNUM FROM PTY_IM WHERE ROWNUM &lt;= N;.</p>
+<p>SELECT s.idx FROM generate_series(1, N) AS s(idx);.</p>
+<p>Eliminated physical dummy table hacks (PTY_IM) in favor of in-memory, set-returning generator functions with zero disk I/O.</p>
+<p>In April 2026, the modernized DynaPORT platform on Google Cloud went live in production at one of the newest ports in India, achieving a seamless, low downtime cutover. By Aug’26, 3 more terminals have gone live on this.</p>
+<p>Modernized Google Cloud &amp; AlloyDB Stack.</p>
+<p>Variable query latency during batch spikes; table bloat requiring manual DBA reindexing.</p>
+<p>Upto 2x transactional throughput, sub-second read query responses, automated ML vacuuming and memory optimization.</p>
+<p>Complex SAN failover; multi-minute outages during planned database maintenance.</p>
+<p>Sub-second automatic failover, 99.99% availability SLA inclusive of maintenance, zero transaction loss.</p>
+<p>Multi-week release cycles; high-risk manual database patching; frequent regression concerns.</p>
+<p>Containerized rolling updates on GKE and non-blocking transactional DDL deployments in AlloyDB.</p>
+<p>Punitive per-core enterprise licenses; high on-prem hardware and maintenance overhead.</p>
+<p>About 50% reduction in database TCO; completely open-source compatible with transparent, predictable cloud pricing.</p>
+<p>Rigid vertical hardware limits; slow hardware procurement cycles.</p>
+<p>Instantaneous horizontal elasticity across GKE container pods and AlloyDB read pools.</p>
+<p>The successful cloud migration of DynaPORT yields three fundamental architectural lessons for enterprise IT leaders:.</p>
+<p>Do Not Throw Away Proven Intellectual Property: Fully rewriting mission-critical procedural logic into application code is often a high-risk anti-pattern. Migrating from Oracle PL/SQL to open PL/pgSQL on an accelerated engine like AlloyDB preserves decades of tested business rules while modernizing the infrastructure platform.</p>
+<p>Select Database Engines Built for Cloud Realities: Standard open-source relational engines often struggle with extreme enterprise throughput without extensive tuning. AlloyDB’s disaggregated storage architecture, columnar acceleration, and built-in ML intelligence provide the enterprise muscle needed to replace legacy commercial database engines.</p>
+<p>Containerize Application Workloads on GKE: Decoupling the application tier into independently scalable container pods on Google Kubernetes Engine provides the elasticity and resilience necessary to absorb rapid operational surges without affecting core database stability.</p>
+<p>Schedule a Google Cloud Architecture Blueprint Workshop with your Google Cloud Account Field team today. We will engage as an key stakeholder to evaluate your current legacy setup and help design a low-risk, high-performance migration pathway using Google Cloud services like AlloyDB and Google Kubernetes Engine.</p>
+<p>By Pramod Doguparty • 7-minute read.</p>
+<p>By Isabella Lubin • 3-minute read.</p>
+<p id="sec-end-43166">By Sailesh Krishnamurthy • 7-minute read.</p>
+<p style="margin-top: 25px;">
+<a href="https://cloud.google.com/blog/products/databases/dynaport-modernizes-with-alloydb/" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="tech-report-my-journey-to-a-serverless-transformers-pipeline-on-g-43907.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #43907. Tech Report: My Journey to a serverless transformers pipeline on Google Cloud
+        </a>
+        
+        <a href="openai-models-are-coming-to-google-cloud-43780.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #43780. OpenAI models are coming to Google Cloud
+        </a>
+        
+        <a href="google-cloud-c4-brings-a-70-tco-improvement-on-gpt-oss-with-intel-43704.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #43704. Google Cloud C4 Brings a 70% TCO improvement on GPT OSS with Intel and Hugging Face
+        </a>
+        
+        <a href="building-for-an-open-future-our-new-partnership-with-google-cloud-43653.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #43653. Building for an Open Future - our new partnership with Google Cloud
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

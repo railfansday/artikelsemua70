@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure for deep learning</title>
+    <meta name="description" content="Illustration: Ludwig Pettersson. Recent findings suggest that deep learning is an empirical science, and the quality of a group’s infrastructure is a multi">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/infrastructure-for-deep-learning-44731.html">
+    <meta property="og:title" content="Infrastructure for deep learning">
+    <meta property="og:description" content="Illustration: Ludwig Pettersson. Recent findings suggest that deep learning is an empirical science, and the quality of a group’s infrastructure is a multi">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/31860186-a1ba-4d48-95900dc56c4d/f862844197c6d8bed67643f6d4224564/infrastructure-for-deep-learning.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/infrastructure-for-deep-learning-44731.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Infrastructure for deep learning", "image": ["https://images.ctfassets.net/kftzwdyauwt9/31860186-a1ba-4d48-95900dc56c4d/f862844197c6d8bed67643f6d4224564/infrastructure-for-deep-learning.jpg?w=1600&h=900&fit=fill"], "datePublished": "2016-08-29T07:00:00", "dateModified": "2026-11-27T21:05:46.087220", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/infrastructure-for-deep-learning-44731.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Infrastructure for deep learning</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 29 Aug 2016 &bull; ⏱️ 9 min read (1862 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Recent findings suggest that deep learning is an empirical science, and the quality of a group’s infrastructure is a multiplier on progress.</li><li style='margin-bottom:6px;'>In this post, we’ll share how deep learning research usually proceeds, describe the infrastructure choices we’ve made to support it, and open-source kubernetes-ec2-autoscaler⁠(opens in a new window), a batch-optimized scaling manager for Kubernetes.</li><li style='margin-bottom:6px;'>A typical deep learning advance starts out as an idea, which you test on a small problem.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44731"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44731"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44731"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Infrastructure for deep learning" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/31860186-a1ba-4d48-95900dc56c4d/f862844197c6d8bed67643f6d4224564/infrastructure-for-deep-learning.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44731">Illustration: Ludwig Pettersson.</p>
+<p>Recent findings suggest that deep learning is an empirical science, and the quality of a group’s infrastructure is a multiplier on progress. Fortunately, today’s open-source ecosystem makes it possible for anyone to build great deep learning infrastructure.</p>
+<p>In this post, we’ll share how deep learning research usually proceeds, describe the infrastructure choices we’ve made to support it, and open-source kubernetes-ec2-autoscaler⁠(opens in a new window), a batch-optimized scaling manager for Kubernetes. We hope you find this post useful in building your own deep learning infrastructure.</p>
+<p>A typical deep learning advance starts out as an idea, which you test on a small problem. At this stage, you want to run many ad-hoc experiments swiftly. Ideally, you can just SSH into a machine, run a script in screen, and get a result in less than an hour.</p>
+<p>Sources indicate that making the model really work usually requires seeing it fail in every conceivable way and finding ways to fix those limitations. (This is similar to building any fresh software system, where you’ll run your code many times to build an intuition for how it behaves.).</p>
+<p>So deep learning infrastructure must allow customers to flexibly introspect models, and it’s not enough to just expose summary statistics.</p>
+<p>Once the model highlights sufficient promise, you’ll scale it up to larger datasets and more GPUs. This requires long jobs that consume many cycles and last for multiple days. You’ll need careful experiment management, and to be extremely thoughtful about your chosen range of hyperparameters.</p>
+<p>The early research process is unstructured and rapid; the latter is methodical and somewhat painful, but it’s all absolutely necessary to get a great result.</p>
+<p>The paper Improved Techniques for Training GANs⁠(opens in a latest window) began with Tim Salimans⁠(opens in a new window) devising several ideas for improving Generative Adversarial Network⁠ training. We’ll describe the simplest of these ideas (which happened to produce the best-looking samples, though not the best semi-supervised learning).</p>
+<p>It has been revealed that GANs consist of a generator and a discriminator network. The generator tries to fool the discriminator, and the discriminator tries to distinguish between generated data and real data. Intuitively, a generator which can fool every discriminator is quite good. But there is a hard-to-fix failure mode: the generator can “collapse” by always outputting exactly the same (likely realistic-looking!) sample.</p>
+<p>According to recent reports, tim had the idea to give discriminator an entire minibatch⁠(opens in a upcoming window) of samples as input, rather than just one sample. Thus the discriminator can tell whether the generator just constantly produces a single image. With the collapse discovered, gradients will be sent to the generator to correct the problem.</p>
+<p>The next step was to prototype the idea on MNIST⁠(opens in a upcoming window) and CIFAR-10⁠(opens in a new window). This required prototyping a small model as quickly as possible, running it on real data, and inspecting the result. After some rapid iteration, Tim got very encouraging CIFAR-10 samples⁠(opens in a new window)=—pretty much the best samples we’d seen on this dataset.</p>
+<p>However, deep learning (and AI algorithms in general) must be scaled to be truly impressive—a small neural network is a proof of concept, but a big neural network actually solves the problem and is useful. So Ian Goodfellow⁠(opens in a fresh window) dug into scaling the model up to work on ImageNet⁠(opens in a new window).</p>
+<p>Our model learning to generate ImageNet images.</p>
+<p>With a larger model and dataset, Ian needed to parallelize the model across multiple GPUs. Each job would push multiple machines to 90% CPU and GPU utilization, but even then the model took many days to train. In this regime, every experiment became precious, and he would meticulously log the results of each experiment.</p>
+<p>Industry observers note that ultimately, while the results were good, they were not as good as we hoped. We’ve tested many hypotheses as to why, but still haven’t cracked it. Such is the nature of science.</p>
+<p>A sample of our TensorFlow code.</p>
+<p>Recent findings suggest that the vast majority of our research code is written in Python, as reflected in our⁠(opens in a fresh window) open⁠(opens in a new window)-source⁠(opens in a new window) projects⁠(opens in a new window). We mostly use TensorFlow⁠(opens in a new window) (or Theano⁠(opens in a new window) in special cases) for GPU computing; for CPU we use those or Numpy⁠(opens in a new window). Researchers also sometimes use higher-level frameworks like Keras⁠(opens in a new window) on top of TensorFlow.</p>
+<p>Industry observers note that like much of the deep learning community, we use Python 2.7. We generally use Anaconda⁠(opens in a new window), which has convenient packaging for otherwise difficult packages such as OpenCV⁠(opens in a new window) and performance optimizations⁠(opens in a new window) for some scientific libraries.</p>
+<p>According to recent reports, for an ideal batch job, doubling the number of nodes in your cluster will halve the job’s runtime. Unfortunately, in deep learning, people usually see very sublinear⁠(opens in a new window) speedups from many GPUs. Top performance thus requires top-of-the-line GPUs. We also use quite a lot of CPU for simulators⁠(opens in a new window), reinforcement learning environments⁠(opens in a new window), or small-scale models (which run no faster on a GPU).</p>
+<p id="sec-mid-44731">nvidia-smi showing fully loaded Titan Xs.</p>
+<p>It has been revealed that AWS⁠(opens in a fresh window) generously agreed to donate a large amount of compute to us. We’re using them for CPU instances and for horizontally scaling up GPU jobs. We also run our own physical servers, primarily running Titan X⁠(opens in a new window) GPUs. We expect to have a hybrid cloud for the long haul: it’s valuable to experiment with different GPUs, interconnects, and other techniques which may become notable for the future of deep learning.</p>
+<p>Sources indicate that htop on the same physical box showing plenty of spare CPU. We generally run our CPU-intensive workloads separately from our GPU-intensive ones.</p>
+<p>We approach infrastructure like many companies treat product: it must present a simple interface, and usability is as key as functionality. We use a consistent set of tools to manage all of our servers and configure them as identically as possible.</p>
+<p>According to recent reports, snippet of our Terraform config for managing Auto Scaling groups. Terraform creates, modifies, or destroys your running cloud resources to match your configuration files.</p>
+<p>It has been revealed that we use Terraform⁠(opens in a new window) to set up our AWS cloud resources (instances, network routes, DNS records, etc). Our cloud and physical nodes run Ubuntu⁠(opens in a new window) and are configured with Chef⁠(opens in a new window). For faster spinup times, we pre-bake our cluster AMIs using Packer⁠(opens in a new window). All our clusters use non-overlapping IP ranges and are interconnected over the public internet with OpenVPN⁠(opens in a new window) on user laptops, and strongSwan⁠(opens in a new window) on physical nodes (which act as AWS Customer Gateways⁠(opens in a new window)).</p>
+<p>We store people’s home directories, data sets, and results on NFS⁠(opens in a new window) (on physical hardware) and EFS⁠(opens in a new window)/S3⁠(opens in a new window) (on AWS).</p>
+<p>In a recent development, scalable infrastructure often ends up making the simple cases harder. We put equal effort into our infrastructure for small- and large-scale jobs, and we’re actively solidifying our toolkit for making distributed use-cases as accessible as local ones.</p>
+<p>Industry observers note that we provide a cluster of SSH nodes (both with and without GPUs) for ad-hoc experimentation, and run Kubernetes⁠(opens in a fresh window) as our cluster scheduler for physical and AWS nodes. Our cluster spans 3 AWS regions—our jobs are bursty enough that we’ll sometimes hit capacity on individual regions.</p>
+<p>Recent findings suggest that kubernetes requires each job to be a Docker container, which gives us dependency isolation and code snapshotting. However, building a new Docker container can add precious extra seconds to a researcher’s iteration cycle, so we also provide tooling to transparently ship code from a researcher’s laptop into a standard image.</p>
+<p>Model learning curves in TensorBoard.</p>
+<p>We expose Kubernetes’s flannel⁠(opens in a new window) network directly to researchers’ laptops, allowing users seamless network access to their running jobs. This is especially useful for accessing monitoring services such as TensorBoard⁠(opens in a new window). (Our initial approach—which is cleaner from a strict isolation perspective—required people to create a Kubernetes Service⁠(opens in a new window) for each port they wanted to expose, but we found that it added too much friction.).</p>
+<p>Our workload is bursty and unpredictable: a line of research can go rapidly from single-machine experimentation to needing 1,000 cores. For example, over a few weeks, one experiment went from an interactive phase on a single Titan X, to an experimental phase on 60 Titan Xs, to needing nearly 1600 AWS GPUs. Our cloud infrastructure thus needs to dynamically provision Kubernetes nodes.</p>
+<p>According to recent reports, it’s easy to run Kubernetes nodes in Auto Scaling⁠(opens in a newly introduced window) groups, but it’s harder to correctly manage the size of those groups. After a batch job is submitted, the cluster knows exactly what resources it needs, and should allocate those directly. (In contrast, AWS’s Scaling Policies⁠(opens in a new window) will spin up new nodes piecemeal until resources are no longer exhausted, which can take multiple iterations.) Also, the cluster needs to drain⁠(opens in a new window) nodes before terminating them to avoid losing in-flight jobs.</p>
+<p>According to recent reports, it’s tempting to just use raw EC2 for significant batch jobs, and indeed that’s where we started. However, the Kubernetes ecosystem adds quite a lot of value: low-friction tooling, logging, monitoring, ability to manage physical nodes separately from the running instances, and the like. Making Kubernetes autoscale correctly was easier than rebuilding this ecosystem on raw EC2.</p>
+<p>We’re releasing kubernetes-ec2-autoscaler⁠(opens in a fresh window), a batch-optimized scaling manager for Kubernetes. It runs as a normal Pod⁠(opens in a new window) on Kubernetes and requires only that your worker nodes are in Auto Scaling groups.</p>
+<p>The Launch Configurations for our Kubernetes cluster.</p>
+<p>It has been revealed that the autoscaler works by polling the Kubernetes master’s state, which contains everything needed to calculate the cluster resource ask and capacity. If there’s excess capacity, it drains the relevant nodes and ultimately terminates them. If more resources are needed, it calculates what servers should be created and increases your Auto Scaling group sizes appropriately (or simply uncordons⁠(opens in a fresh window) drained nodes, which avoids new node spinup time).</p>
+<p>kubernetes-ec2-autoscaler handles multiple Auto Scaling groups, resources beyond CPU (memory and GPUs), and fine-grained constraints on your jobs such as AWS region and instance size. Additionally, bursty workloads can lead to Auto Scaling Groups timeouts and errors, since (surprisingly!) even AWS does not have infinite capacity. In these cases, kubernetes-ec2-autoscaler detects the error and overflows to a secondary AWS region.</p>
+<p id="sec-end-44731">Our infrastructure aims to maximize the productivity of deep learning researchers, allowing them to focus on the science. We’re building tools to further improve our infrastructure and workflow, and will share these in upcoming weeks and months. We welcome help⁠(opens in a new window) to make this go even faster!</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/infrastructure-for-deep-learning" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="latest-update-transfer-from-simulation-to-real-world-through-lear-44730.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44730. Latest Update: Transfer from simulation to real world through learning deep inverse dynamics model
+        </a>
+        
+        <a href="latest-update-semi-supervised-knowledge-transfer-for-deep-learnin-44728.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44728. Latest Update: Semi-supervised knowledge transfer for deep learning from private training data
+        </a>
+        
+        <a href="exploration-a-study-of-count-based-exploration-for-deep-reinforce-44721.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44721. #Exploration: A study of count-based exploration for deep reinforcement learning
+        </a>
+        
+        <a href="breaking-benchmarking-safe-exploration-in-deep-reinforcement-lear-44597.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44597. Breaking: Benchmarking safe exploration in deep reinforcement learning
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

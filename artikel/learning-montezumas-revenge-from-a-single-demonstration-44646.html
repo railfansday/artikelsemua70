@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Montezuma’s Revenge from a single demonstration</title>
+    <meta name="description" content="Industry observers note that we’ve trained an agent to achieve a high score of 74,500 on Montezuma’s Revenge⁠(opens in a new window) from a single human de">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/learning-montezumas-revenge-from-a-single-demonstration-44646.html">
+    <meta property="og:title" content="Learning Montezuma’s Revenge from a single demonstration">
+    <meta property="og:description" content="Industry observers note that we’ve trained an agent to achieve a high score of 74,500 on Montezuma’s Revenge⁠(opens in a new window) from a single human de">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/2c736f64-38dc-4c65-282d3813fbae/54c7b5681339136b3fa57f60091c54f9/image-89.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/learning-montezumas-revenge-from-a-single-demonstration-44646.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Learning Montezuma’s Revenge from a single demonstration", "image": ["https://images.ctfassets.net/kftzwdyauwt9/2c736f64-38dc-4c65-282d3813fbae/54c7b5681339136b3fa57f60091c54f9/image-89.webp?w=1600&h=900&fit=fill"], "datePublished": "2018-07-04T07:00:00", "dateModified": "2026-11-27T21:05:28.152667", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/learning-montezumas-revenge-from-a-single-demonstration-44646.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Learning Montezuma’s Revenge from a single demonstration</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 04 Jul 2018 &bull; ⏱️ 9 min read (1802 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Industry observers note that we’ve trained an agent to achieve a high score of 74,500 on Montezuma’s Revenge⁠(opens in a new window) from a single human demonstration, better than any previously published result.</li><li style='margin-bottom:6px;'>In order to succeed at a reinforcement learning problem, an AI needs to do two things:.</li><li style='margin-bottom:6px;'>Find a sequence of actions that leads to positive reward.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44646"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44646"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44646"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Learning Montezuma’s Revenge from a single demonstration" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/2c736f64-38dc-4c65-282d3813fbae/54c7b5681339136b3fa57f60091c54f9/image-89.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44646">Industry observers note that we’ve trained an agent to achieve a high score of 74,500 on Montezuma’s Revenge⁠(opens in a new window) from a single human demonstration, better than any previously published result. Our algorithm is simple: the agent plays a sequence of games starting from carefully chosen states from the demonstration, and learns from them by optimizing the game score using PPO⁠(opens in a new window), the same reinforcement learning algorithm that underpins OpenAI Five⁠(opens in a new window).</p>
+<p>In order to succeed at a reinforcement learning problem, an AI needs to do two things:.</p>
+<p>Find a sequence of actions that leads to positive reward. This is the exploration problem.</p>
+<p>Sources indicate that remember the sequence of actions to take, and generalize to related but slightly different situations. This is the learning problem.</p>
+<p>Sources indicate that the exploration problem can largely be bypassed in Montezuma’s Revenge by starting each RL episode by resetting from a state in a demonstration. By starting from demonstration states, the agent needs to perform much less exploration to learn to play the game compared to when it starts from the beginning of the game at every episode. Doing so enables us to disentangle exploration and learning. Our results suggest that exploration is the hardest of the two problems for games like Montezuma’s Revenge and certain similar Atari games like PrivateEye.</p>
+<p>Model-free RL methods like policy gradients and Q-learning explore by taking actions randomly. If, by chance, the random actions lead to a reward, they are reinforced, and the agent becomes more likely to take these beneficial actions in the future. This works well if rewards are dense enough for random actions to lead to a reward with reasonable probability. However, many of the more complicated games require long sequences of very specific actions to experience any reward, and such sequences are extremely unlikely to occur randomly.</p>
+<p>In a recent development, consider a game which takes a precise sequence of N actions to experience the first reward. If each of those actions is taken with a fixed probability, a random agent will need to play the game for a duration that scales as exp(N) before it can expect to experience the first reward.</p>
+<p>In the case of Montezuma’s Revenge, for example, the probability of getting the first key can be decomposed as.</p>
+<p>p(get key) = p(get down ladder 1) * p(get down rope) * p(get down ladder 2) * p(jump over skull) * p(get up ladder 3).</p>
+<p>In a recent development, by multiplying N of these probabilities together, we end up with the resulting probability p(get key) that is exponentially smaller than any of the individual input probabilities. Algorithms with exponential scaling break down very quickly as your problem becomes more challenging, which limits the tasks current reinforcement learning techniques can solve.</p>
+<p id="sec-mid-44646">Although model-free RL methods have difficulty finding long sequences of actions, they work well for shorter sequences. Our main insight is that we can make our task easier to solve by decomposing it into a curriculum of subtasks requiring short action sequences; we construct this curriculum by starting each RL episode from a demonstration state. A variant of the same idea was used recently for reverse curriculum generation for robotics⁠(opens in a new window), where a curriculum was constructed by iteratively perturbing a set of starting states using random actions, and selecting the resulting states with the right level of difficulty.</p>
+<p>In a recent development, our approach works by letting each RL episode start from a state in a previously recorded demonstration. Early on in training, the agent begins every episode near the end of the demonstration. Once the agent is able to beat or at least tie the score of the demonstrator on the remaining part of the game in at least 20% of the rollouts, we slowly move the starting point back in time. We keep doing this until the agent is playing from the start of the game, without using the demo at all, at which point we have an RL-trained agent beating or tying the human expert on the entire game.</p>
+<p>According to recent reports, by slowly moving our starting state from the end of the demonstration to the beginning, we ensure that at every point the agent faces an easy exploration problem where it is likely to succeed, since it has already learned to solve most of the remaining game. We can interpret solving the RL problem in this way as a form of dynamic programming⁠(opens in a fresh window). If a specific sequence of N actions is required to reach a reward, this sequence may now be learned in a time that is linear in N, rather than exponential.</p>
+<p>Starting episodes by resetting from demonstration states was previously proposed⁠(opens in a new window), but without constructing a curriculum that gradually moves the starting state back from the end of the demonstration to the beginning. When combined with imitation learning, several⁠(opens in a new window) researchers⁠(opens in a new window) report benefit from this approach. For our use case we found such a curriculum to be vitally notable for deriving benefit from the demonstration.</p>
+<p>Impression of our agent learning to reach the first key in Montezuma’s Revenge using RL and starting each episode from a demonstration state. When our agent starts playing the game, we place it right in front of the key, requiring it to only take a single jump to find success. After our agent has learned to do this consistently, we slowly move the starting point back in time. Our agent might then find itself halfway up the ladder that leads to the key. Once it learns to climb the ladder from there, we can have it start at the point where it needs to jump over the skull. After it learns to do that, we can have it start on the rope leading to the floor of the room, etc. Eventually, the agent starts in the original starting state of the game and is able to reach the key completely by itself.</p>
+<p>It has been revealed that recently, DeepMind has shown an agent learning Montezuma’s Revenge by imitation learning from a demonstration; one approach⁠(opens in a new window) trains an agent to achieve the same states seen in a YouTube video of Montezuma’s Revenge, and another technique⁠(opens in a new window) combines a sophisticated version of Q-learning with maximizing the likelihood of actions taken in a demonstration. The advantage of these approaches is that they do not require as much control over the environment our technique does: they do not reset the environment to states other than the starting state of the game, and they do not presume access to the full game states encountered in the demonstration. Our method differs by directly optimizing what we care about — the game score, rather than making the agent imitate the demonstration; our method will thus not overfit to a potentially sub-optimal demonstration and could offer benefits in multi-player games where we want to optimize performance against other opponents than just the one from the demonstration.</p>
+<p>According to recent reports, although the step-by-step learning done by our agent is much simpler than learning to play from scratch, it is still far from trivial. One challenge our RL agent faces is that it is generally unable to reach the exact state from later on in the demo when it starts from an earlier state. This is because the agent plays the game at a different frameskip from what we used for recording the demonstration, but it is also due to the randomness in the actions which make it very unlikely to exactly reproduce any specific sequence of actions. The agent will thus need to be able to generalize between states that are very similar, but not identical. We found that this works well for Montezuma’s Revenge, but much less well for some other Atari games we tried, like Gravitar and Pitfall. One reason for this may be that these latter games require solving a harder vision problem: we found these games difficult to play from a downsampled screen ourselves, and we saw some improvement when using larger and deeper neural network policies.</p>
+<p>Another challenge we encountered is that standard RL algorithms like policy gradients require striking a careful balance between exploration and exploitation: if the agent’s actions are too random, it makes too many mistakes to ever achieve the required final score when starting from the beginning of the game; if the actions are too deterministic, the agent stops learning because it does not explore alternative actions. Achieving the reported result on Montezuma’s Revenge thus required careful tuning of the coefficient of the entropy bonus used in PPO, in combination with other hyperparameters such as the learning rate and the scaling of rewards. For some other games like Gravitar and Pitfall we were unable to find hyperparameters that worked for training the full curriculum. The algorithm also still demonstrates substantial random variation from run to run, with some runs failing to converge for Montezuma’s Revenge. We hope that future advances in RL will yield algorithms that are more robust to random noise and to the choice of hyperparameters.</p>
+<p>Recent findings suggest that finally, like is often the case in reinforcement learning, we find that our trained neural net policy does not yet generalize at the level of a human player. One method⁠(opens in a new window) to test for generalization ability is to perturb the policy by making actions sticky and repeating the last action with probability of 0.25 at every frame. Using this evaluation method our trained policy obtains a score of 10,000 on Montezuma’s Revenge on average. Alternatively, we can take random actions with probability 0.01 (repeated for 4 frameskipped steps), which leads to an average score of 8,400 for our policy. Anecdotally, we find that such perturbations also significantly reduce the score of human players on Montezuma’s Revenge, but to a lesser extent. As far as we are aware, our results using perturbed policies are still better than all those published previously. Perturbing the learned policy by starting with between 0 and 30 random no-ops did not significantly hurt results, with the majority of rollouts achieving the final score obtained in our demonstration.</p>
+<p id="sec-end-44646">Where most previous work on learning from demonstrations focused on imitation, which encourages identical behavior to that seen in the demonstration, we have shown that good results can be achieved by optimizing returns directly. This allows the agent to deviate from the demonstrated behavior, which lets it find new and exciting solutions that the human demonstrator may not have considered. By training on a curriculum of subtasks, created by resetting from demonstration states, we used this technique to solve a difficult reinforcement learning problem requiring long sequences of actions.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/learning-montezumas-revenge-from-a-single-demonstration" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="machine-learning-unconference-44732.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44732. Machine Learning Unconference
+        </a>
+        
+        <a href="infrastructure-for-deep-learning-44731.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44731. Infrastructure for deep learning
+        </a>
+        
+        <a href="latest-update-transfer-from-simulation-to-real-world-through-lear-44730.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44730. Latest Update: Transfer from simulation to real world through learning deep inverse dynamics model
+        </a>
+        
+        <a href="latest-update-semi-supervised-knowledge-transfer-for-deep-learnin-44728.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44728. Latest Update: Semi-supervised knowledge transfer for deep learning from private training data
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

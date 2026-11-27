@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: Introducing Activation Atlases</title>
+    <meta name="description" content="We’ve created activation atlases⁠(opens in a new window) (in collaboration⁠(opens in a new window) with Google researchers), a new technique for visualizin">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-activation-atlases-44620.html">
+    <meta property="og:title" content="Breaking: Introducing Activation Atlases">
+    <meta property="og:description" content="We’ve created activation atlases⁠(opens in a new window) (in collaboration⁠(opens in a new window) with Google researchers), a new technique for visualizin">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/b34269e0-a42b-44bd-478f46bf97c4/596c1fd1f91833900a3a6c1f1b08667f/image-22.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-activation-atlases-44620.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: Introducing Activation Atlases", "image": ["https://images.ctfassets.net/kftzwdyauwt9/b34269e0-a42b-44bd-478f46bf97c4/596c1fd1f91833900a3a6c1f1b08667f/image-22.webp?w=1600&h=900&fit=fill"], "datePublished": "2019-03-06T08:00:00", "dateModified": "2026-11-27T21:05:22.817438", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-introducing-activation-atlases-44620.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: Introducing Activation Atlases</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 06 Mar 2019 &bull; ⏱️ 3 min read (668 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve created activation atlases⁠(opens in a new window) (in collaboration⁠(opens in a new window) with Google researchers), a new technique for visualizing what interactions between neurons can represent.</li><li style='margin-bottom:6px;'>It has been revealed that modern neural networks are often⁠(opens in a latest window) criticized⁠(opens in a new window) as being a “black box.” Despite their success at a variety of problems, we have a limited understanding of how they make decisions internally.</li><li style='margin-bottom:6px;'>Industry observers note that activation atlases build on feature visualization, a technique for studying what the hidden layers of neural networks can represent.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44620"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44620"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44620"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: Introducing Activation Atlases" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/b34269e0-a42b-44bd-478f46bf97c4/596c1fd1f91833900a3a6c1f1b08667f/image-22.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44620">We’ve created activation atlases⁠(opens in a new window) (in collaboration⁠(opens in a new window) with Google researchers), a new technique for visualizing what interactions between neurons can represent. As AI systems are deployed in increasingly sensitive contexts, having a better understanding of their internal decision-making processes will let us identify weaknesses and investigate failures.</p>
+<p>It has been revealed that modern neural networks are often⁠(opens in a latest window) criticized⁠(opens in a new window) as being a “black box.” Despite their success at a variety of problems, we have a limited understanding of how they make decisions internally. Activation atlases are a new way to see some of what goes on inside that box.</p>
+<p>Industry observers note that activation atlases build on feature visualization, a technique for studying what the hidden layers of neural networks can represent. Early⁠(opens in a fresh window) work⁠(opens in a new window) in feature visualization primarily focused on individual neurons⁠(opens in a new window). By collecting hundreds of thousands of examples of neurons interacting and visualizing those, activation atlases move from individual neurons to visualizing the space those neurons jointly represent.</p>
+<p>Understanding what’s going on inside neural nets isn’t solely a question of scientific curiosity—our lack of understanding handicaps our ability to audit neural networks and, in high stakes contexts, ensure they are safe. Normally, if one was going to deploy a critical piece of software one could review all the paths through the code, or even do formal verification, but with neural networks, our ability to do this kind of review has presently been much more limited. With activation atlases humans can discover unanticipated concerns in neural networks—for example, places where the network is relying on spurious correlations to classify images, or where re-using a feature between two classes leads to strange bugs. Humans can even use this understanding to “attack⁠(opens in a upcoming window)” the model, modifying images to fool it.</p>
+<p>For example, a special kind of activation atlas can be created to show how a network tells apart frying pans and woks. Many of the things we see are what one expects. Frying pans are more squarish, while woks are rounder and deeper. But it also seems like the model has learned that frying pans and woks can also be distinguished by food around them—in particular, wok is supported by the presence of noodles. Adding noodles to the corner of the image will fool the model 45% of the time! This is similar to work like adversarial patches⁠(opens in a fresh window), but based on human understanding.</p>
+<p>According to recent reports, other human-designed attacks based on the network overloading certain feature detectors are often more effective (some succeed as often as 93% of the time). But the noodle example is particularly interesting because it’s a case of the model picking up on something that is correlated, but not causal, with the correct answer. This has structural similarities to types of errors we might be particularly worried about, such as fairness and bias complications.</p>
+<p id="sec-mid-44620">Recent findings suggest that activation atlases worked better than we anticipated and seem to strongly suggest that neural network activations can be meaningful to humans. This gives us increased optimism that it is possible to achieve interpretability in vision models in a strong sense.</p>
+<p>According to recent reports, we’re excited to have done this work in collaboration⁠(opens in a fresh window) with researchers at Google. We believe that working together on safety-relevant research helps us all ensure the best outcome for society as AI research progresses.</p>
+<p>Recent findings suggest that want to make neural networks not be a black box? Apply⁠ to work at OpenAI.</p>
+<p>Thanks to our co-authors at Google: Shan Carter, Zan Armstrong and Ian Johnson.</p>
+<p>Thanks to Greg Brockman, Dario Amodei, Jack Clark and Ashley Pilipiszyn for feedback on this blog post.</p>
+<p id="sec-end-44620">We also thank Christian Howard for his help in coordination from the Google side, Phillip Isola for being Distill’s acting editor and Arvind Satyanarayan for feedback on our paper.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/introducing-activation-atlases" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="introducing-openai-44744.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44744. Introducing OpenAI
+        </a>
+        
+        <a href="latest-update-introducing-triton-open-source-gpu-programming-for--44568.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44568. Latest Update: Introducing Triton: Open-source GPU programming for neural networks
+        </a>
+        
+        <a href="introducing-text-and-code-embeddings-44557.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44557. Introducing text and code embeddings
+        </a>
+        
+        <a href="dalle-introducing-outpainting-44531.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44531. DALL·E: Introducing outpainting
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

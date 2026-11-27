@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligning language models to follow instructions</title>
+    <meta name="description" content="Industry observers note that we’ve trained language models that are much better at following user intentions than GPT‑3 while also making them more truthfu">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/aligning-language-models-to-follow-instructions-44556.html">
+    <meta property="og:title" content="Aligning language models to follow instructions">
+    <meta property="og:description" content="Industry observers note that we’ve trained language models that are much better at following user intentions than GPT‑3 while also making them more truthfu">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5b1e6906-9f64-42b7-b5d87c29543b/25be46c3552b7af3af0a1c5a70381626/image-13.webp?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/aligning-language-models-to-follow-instructions-44556.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Aligning language models to follow instructions", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5b1e6906-9f64-42b7-b5d87c29543b/25be46c3552b7af3af0a1c5a70381626/image-13.webp?w=1600&h=900&fit=fill"], "datePublished": "2022-01-27T08:00:00", "dateModified": "2026-11-27T21:05:06.549195", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/aligning-language-models-to-follow-instructions-44556.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Aligning language models to follow instructions</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 27 Jan 2022 &bull; ⏱️ 12 min read (2380 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Industry observers note that we’ve trained language models that are much better at following user intentions than GPT‑3 while also making them more truthful and less toxic, using techniques developed through our alignment research.</li><li style='margin-bottom:6px;'>Recent findings suggest that the OpenAI API is powered by GPT‑3 language models⁠ which can be coaxed to perform natural language tasks using carefully engineered text prompts.</li><li style='margin-bottom:6px;'>Sources indicate that to make our models safer, more helpful, and more aligned, we use an existing technique called reinforcement learning from human feedback (RLHF)⁠.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44556"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44556"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44556"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Aligning language models to follow instructions" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5b1e6906-9f64-42b7-b5d87c29543b/25be46c3552b7af3af0a1c5a70381626/image-13.webp?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44556">Industry observers note that we’ve trained language models that are much better at following user intentions than GPT‑3 while also making them more truthful and less toxic, using techniques developed through our alignment research. These InstructGPT models, which are trained with humans in the loop, are now deployed as the default language models on our API.</p>
+<p>Recent findings suggest that the OpenAI API is powered by GPT‑3 language models⁠ which can be coaxed to perform natural language tasks using carefully engineered text prompts. But these models can also generate outputs that are untruthful, toxic, or reflect harmful sentiments. This is in part because GPT‑3 is trained to predict the next word on a large dataset of Internet text, rather than to safely perform the language task that the user wants. In other words, these models aren’t aligned with their users.</p>
+<p>Sources indicate that to make our models safer, more helpful, and more aligned, we use an existing technique called reinforcement learning from human feedback (RLHF)⁠. On prompts submitted by our customers to the API,A our labelers provide demonstrations of the desired model behavior, and rank several outputs from our models. We then use this data to fine-tune GPT‑3.</p>
+<p>The resulting InstructGPT models are much better at following instructions than GPT‑3. They also make up facts less often, and show small decreases in toxic output generation. Our labelers prefer outputs from our 1.3B InstructGPT model over outputs from a 175B GPT‑3 model, despite having more than 100x fewer parameters. At the same time, we show that we don’t have to compromise on GPT‑3’s capabilities, as measured by our model’s performance on academic NLP evaluations.</p>
+<p>These InstructGPT models, which have been in beta on the API for more than a year, are now the default language models accessible on our API.B We believe that fine-tuning language models with humans in the loop is a powerful tool for improving their safety and reliability, and we will continue to push in this direction.</p>
+<p>Industry observers note that this is the first time our alignment research, which we’ve been pursuing⁠ for several⁠ years⁠,1, 2, 3 has been applied to our product. Our work is also related to recent research that fine-tunes language models to follow instructions using academic NLP datasets, notably FLAN4 and T0.5 A key motivation for our work is to increase helpfulness and truthfulness while mitigating the harms and biases of language models.6, 7, 8, 9, 10 Some of our previous research⁠ in this direction found that we can reduce harmful outputs by fine-tuning on a small curated dataset of human demonstrations.11 Other research has focused on filtering the pre-training dataset,12 safety-specific control tokens,13, 14 or steering model generations.15, 16 We are exploring these ideas and others in our ongoing alignment research.</p>
+<p>Sources indicate that we first evaluate how well outputs from InstructGPT follow user instructions, by having labelers compare its outputs to those from GPT‑3. We find that InstructGPT models are significantly preferred on prompts submitted to both the InstructGPT and GPT‑3 models on the API. This holds true when we add a prefix to the GPT‑3 prompt so that it enters an “instruction-following mode.”.</p>
+<p>Recent findings suggest that to measure the safety of our models, we primarily use a suite of existing metrics on publicly available datasets. Compared to GPT‑3, InstructGPT produces fewer imitative falsehoods (according to TruthfulQA17) and are less toxic (according to RealToxicityPrompts18). We also conduct human evaluations on our API prompt distribution, and find that InstructGPT makes up facts (“hallucinates”) less often, and generates more appropriate outputs.C.</p>
+<p>According to recent reports, finally, we find that InstructGPT outputs are preferred to those from FLAN4 and T05 on our customer distribution. This indicates that the data used to train FLAN and T0, mostly academic NLP tasks, is not fully representative of how deployed language models are used in practice.</p>
+<p>According to recent reports, to train InstructGPT models, our core technique is reinforcement learning from human feedback (RLHF)⁠, a method we helped pioneer in our earlier alignment research. This technique uses human preferences as a reward signal to fine-tune our models, which is crucial as the safety and alignment problems we are aiming to solve are complex and subjective, and aren’t fully captured by simple automatic metrics.</p>
+<p>According to recent reports, we first collect a dataset of human-written demonstrations on prompts submitted to our API, and use this to train our supervised learning baselines. Next, we collect a dataset of human-labeled comparisons between two model outputs on a larger set of API prompts. We then train a reward model (RM) on this dataset to predict which output our labelers would prefer. Finally, we use this RM as a reward function and fine-tune our GPT‑3 policy to maximize this reward using the PPO algorithm⁠.</p>
+<p>One way of thinking about this process is that it “unlocks” capabilities that GPT‑3 already had, but were difficult to elicit through prompt engineering alone: this is because our training procedure has a limited ability to teach the model new capabilities relative to what is learned during pretraining, since it uses less than 2% of the compute and data relative to model pretraining.</p>
+<p>A limitation of this approach is that it introduces an “alignment tax”: aligning the models only on customer tasks can make their performance worse on some other academic NLP tasks. This is undesirable since, if our alignment techniques make models worse on tasks that people care about, they’re less likely to be adopted in practice. We’ve found a simple algorithmic change that minimizes this alignment tax: during RL fine-tuning we mix in a small fraction of the original data used to train GPT‑3, and train on this data using the normal log likelihood maximization.D This roughly maintains performance on safety and human preferences, while mitigating performance decreases on academic tasks, and in several cases even surpassing the GPT‑3 baseline.</p>
+<p>According to recent reports, our procedure aligns our models’ behavior with the preferences of our labelers, who directly produce the data used to train our models, and us researchers, who provide guidance to labelers through written instructions, direct feedback on specific examples, and informal conversations. It is also influenced by our customers and the preferences implicit in our API policies. We selected labelers who performed well on a screening test for aptitude in identifying and responding to sensitive prompts. However, these different sources of influence on the data do not guarantee our models are aligned to the preferences of any broader group.</p>
+<p>We conducted two experiments to investigate this. First, we evaluate GPT‑3 and InstructGPT using held-out labelersE who did not produce any of the training data, and found that these labelers prefer outputs from the InstructGPT models at about the same rate as our training labelers. Second, we train reward models on data from a subset of our labelers, and find that they generalize well to predicting the preferences of a different subset of labelers. This suggests that our models haven’t solely overfit to the preferences of our training labelers. However, more work is needed to study how these models perform on broader groups of users, and how they perform on inputs where humans disagree about the desired behavior.</p>
+<p>Despite making significant progress, our InstructGPT models are far from fully aligned or fully safe; they still generate toxic or biased outputs, make up facts, and generate sexual and violent content without explicit prompting. But the safety of a machine learning system depends not only on the behavior of the underlying models, but also on how these models are deployed. To support the safety of our API, we will continue to review potential applications⁠(opens in a newly introduced window) before they go live, provide content filters for detecting unsafe completions, and monitor for misuse.</p>
+<p>Industry observers note that A byproduct of training our models to follow user instructions is that they may become more susceptible to misuse if instructed to produce unsafe outputs. Solving this requires our models to refuse certain instructions; doing this reliably is an notable open research problem that we are excited to tackle.</p>
+<p>It has been revealed that further, in many cases aligning to the average labeler preference may not be desirable. For example, when generating text that disproportionately affects a minority group, the preferences of that group should be weighted more heavily. Right now, InstructGPT is trained to follow instructions in English; thus, it is biased towards the cultural values of English-speaking people. We are conducting research into understanding the differences and disagreements between labelers’ preferences so we can condition our models on the values of more specific populations. More generally, aligning model outputs to the values of specific humans introduces difficult choices with societal implications, and ultimately we must establish responsible, inclusive processes for making these decisions.</p>
+<p>This is the first application of our alignment research to our product. Our results show that these techniques are effective at significantly improving the alignment of general-purpose AI systems with human intentions. However, this is just the beginning: we will keep pushing these techniques to improve the alignment of our current and future models towards language tools that are safe and helpful to humans.</p>
+<p>If you’re interested in these research directions, we’re hiring⁠(opens in a upcoming window)!</p>
+<p>Industry observers note that we only use prompts submitted through the Playground to an earlier version of the InstructGPT models that was deployed in January 2021. Our human annotators remove personal identifiable information from all prompts before adding it to the training set.</p>
+<p>The InstructGPT models deployed in the API are updated versions trained using the same human feedback data. They use a similar but slightly different training method that we will describe in a forthcoming publication.</p>
+<p>We also measure several other dimensions of potentially harmful outputs on our API distribution: whether the outputs contain sexual or violent content, denigrate a protected class, or encourage abuse. We find that InstructGPT doesn’t improve significantly over GPT-3 on these metrics; the incidence rate is equally low for both models.</p>
+<p id="sec-mid-44556">We found this approach more effective than simply increasing the KL coefficient.</p>
+<p>These labelers are sourced from Scale AI and Upwork, similarly to our training labelers, but do not undergo a screening test.</p>
+<p>Christiano, P., Leike, J., Brown, T.B., Martic, M., Legg, S. and Amodei, D., 2017. Deep reinforcement learning from human preferences. arXiv preprint arXiv:1706.03741.</p>
+<p>Recent findings suggest that stiennon, N., Ouyang, L., Wu, J., Ziegler, D.M., Lowe, R., Voss, C., Radford, A., Amodei, D. and Christiano, P., 2020.</p>
+<p>According to recent reports, wu, J., Ouyang, L., Ziegler, D.M., Stiennon, N., Lowe, R., Leike, J. and Christiano, P., 2021. Recursively summarizing books with human feedback. arXiv preprint arXiv:2109.10862.</p>
+<p>According to recent reports, wei, J., Bosma, M., Zhao, V.Y., Guu, K., Yu, A.W., Lester, B., Du, N., Dai, A.M. and Le, Q.V., 2021. Finetuned language models are zero-shot learners. arXiv preprint arXiv:2109.01652.</p>
+<p>In a recent development, sanh, V., Webson, A., Raffel, C., Bach, S.H., Sutawika, L., Alyafeai, Z., Chaffin, A., Stiegler, A., Scao, T.L., Raja, A. and Dey, M., 2021. Multitask prompted training enables zero-shot task generalization. arXiv preprint arXiv:2110.08207.</p>
+<p>It has been revealed that bender, E.M., Gebru, T., McMillan-Major, A. and Shmitchell, S., 2021, March. On the Dangers of Stochastic Parrots: Can Language Models Be Too Significant?🦜. In Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency (pp. 610-623).</p>
+<p>It has been revealed that bommasani, R., Hudson, D.A., Adeli, E., Altman, R., Arora, S., von Arx, S., Bernstein, M.S., Bohg, J., Bosselut, A., Brunskill, E. and Brynjolfsson, E., 2021. On the opportunities and risks of foundation models. arXiv preprint arXiv:2108.07258.</p>
+<p>Sources indicate that kenton, Z., Everitt, T., Weidinger, L., Gabriel, I., Mikulik, V. and Irving, G., 2021. Alignment of Language Agents. arXiv preprint arXiv:2103.14659.</p>
+<p>Weidinger, L., Mellor, J., Rauh, M., Griffin, C., Uesato, J., Huang, P.S., Cheng, M., Glaese, M., Balle, B., Kasirzadeh, A. and Kenton, Z., 2021. Ethical and social risks of harm from Language Models. arXiv preprint arXiv:2112.04359.</p>
+<p>In a recent development, tamkin, A., Brundage, M., Clark, J. and Ganguli, D., 2021. Understanding the Capabilities, Limitations, and Societal Impact of Large Language Models. arXiv preprint arXiv:2102.02503.</p>
+<p>Solaiman, I. and Dennison, C., 2021. Process for Adapting Language Models to Society (PALMS) with Values-Targeted Datasets. arXiv preprint arXiv:2106.10328.</p>
+<p>Ngo, H., Raterink, C., Araújo, J.G., Zhang, I., Chen, C., Morisot, A. and Frosst, N., 2021. Mitigating harm in language models with conditional-likelihood filtration. arXiv preprint arXiv:2108.07790.</p>
+<p>In a recent development, xu, J., Ju, D., Li, M., Boureau, Y.L., Weston, J. and Dinan, E., 2020. Recipes for safety in open-domain chatbots. arXiv preprint arXiv:2010.07079.</p>
+<p>Keskar, N.S., McCann, B., Varshney, L.R., Xiong, C. and Socher, R., 2019. Ctrl: A conditional transformer language model for controllable generation. arXiv preprint arXiv:1909.05858.</p>
+<p>Recent findings suggest that krause, B., Gotmare, A.D., McCann, B., Keskar, N.S., Joty, S., Socher, R. and Rajani, N.F., 2020. Gedi: Generative discriminator guided sequence generation. arXiv preprint arXiv:2009.06367.</p>
+<p>In a recent development, dathathri, S., Madotto, A., Lan, J., Hung, J., Frank, E., Molino, P., Yosinski, J. and Liu, R., 2019. Plug and play language models: A simple approach to controlled text generation. arXiv preprint arXiv:1912.02164.</p>
+<p>Recent findings suggest that lin, S., Hilton, J. and Evans, O., 2021. TruthfulQA: Measuring how models mimic human falsehoods. arXiv preprint arXiv:2109.07958.</p>
+<p>It has been revealed that gehman, S., Gururangan, S., Sap, M., Choi, Y. and Smith, N.A., 2020. RealToxicityPrompts: Evaluating neural toxic degeneration in language models. arXiv preprint arXiv:2009.11462.</p>
+<p>Rudinger, R., Naradowsky, J., Leonard, B. and Van Durme, B., 2018. Gender bias in coreference resolution. arXiv preprint arXiv:1804.09301.</p>
+<p>Nangia, N., Vania, C., Bhalerao, R. and Bowman, S.R., 2020. CrowS-pairs: A challenge dataset for measuring social biases in masked language models. arXiv preprint arXiv:2010.00133.</p>
+<p id="sec-end-44556">In a recent development, we’d like to thank our paper co-authors: Long Ouyang, Jeff Wu, Roger Jiang, Diogo Almeida, Carroll Wainwright, Pamela Mishkin, Chong Zhang, Sandhini Agarwal, Katarina Slama, Alex Ray, John Schulman, Jacob Hilton, Fraser Kelton, Luke Miller, Maddie Simens, Amanda Askell, Peter Welinder, and Paul Christiano, along with everyone who provided feedback on the paper and blog post. We’d also like to thank the Comms team for their guidance and assistance, including Steve Dowling, Hannah Wong, Elie Georges, Alper Ercetin, Jared Salzano, Allan Diego, and Justin Jay Wang. Finally, we’d like to thank our labelers, without whom this project would not have been possible.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/instruction-following" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="better-language-models-and-their-implications-44624.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44624. Better language models and their implications
+        </a>
+        
+        <a href="industry-news-scaling-laws-for-neural-language-models-44593.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44593. Industry News: Scaling laws for neural language models
+        </a>
+        
+        <a href="language-models-are-few-shot-learners-44587.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44587. Language models are few-shot learners
+        </a>
+        
+        <a href="understanding-the-capabilities-limitations-and-societal-impact-of-44575.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44575. Understanding the capabilities, limitations, and societal impact of large language models
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

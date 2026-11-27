@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing robustness against unforeseen adversaries</title>
+    <meta name="description" content="We’ve developed a method to assess whether a neural network classifier can reliably defend against adversarial attacks not seen during training. Our method">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/testing-robustness-against-unforeseen-adversaries-44604.html">
+    <meta property="og:title" content="Testing robustness against unforeseen adversaries">
+    <meta property="og:description" content="We’ve developed a method to assess whether a neural network classifier can reliably defend against adversarial attacks not seen during training. Our method">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/aab9bc08-47b0-4b15-b47bf25bbddb/8c0afdbeca0209c1b3d68aa4178ab54a/image_133.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/testing-robustness-against-unforeseen-adversaries-44604.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Testing robustness against unforeseen adversaries", "image": ["https://images.ctfassets.net/kftzwdyauwt9/aab9bc08-47b0-4b15-b47bf25bbddb/8c0afdbeca0209c1b3d68aa4178ab54a/image_133.png?w=1600&h=900&fit=fill"], "datePublished": "2019-08-22T07:00:00", "dateModified": "2026-11-27T21:05:18.404805", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/testing-robustness-against-unforeseen-adversaries-44604.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">📈 Bullish</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Testing robustness against unforeseen adversaries</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 22 Aug 2019 &bull; ⏱️ 5 min read (976 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’ve developed a method to assess whether a neural network classifier can reliably defend against adversarial attacks not seen during training.</li><li style='margin-bottom:6px;'>Modern neural networks have achieved high accuracies on a wide range of benchmark tasks.</li><li style='margin-bottom:6px;'>Sample images (black swan) generated by adversarial attacks with different distortion types.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44604"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44604"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44604"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Testing robustness against unforeseen adversaries" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/aab9bc08-47b0-4b15-b47bf25bbddb/8c0afdbeca0209c1b3d68aa4178ab54a/image_133.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44604">We’ve developed a method to assess whether a neural network classifier can reliably defend against adversarial attacks not seen during training. Our method yields a upcoming metric, UAR (Unforeseen Attack Robustness), which evaluates the robustness of a single model against an unanticipated attack, and highlights the need to measure performance across a more diverse range of unforeseen attacks.</p>
+<p>Modern neural networks have achieved high accuracies on a wide range of benchmark tasks. However, they remain susceptible to adversarial examples⁠, small but carefully crafted distortions of inputs created by adversaries to fool the networks. For example, the adversarial example with  L∞ L_\infty  L∞​ distortion below differs from the original image by at most 32 in each RGB pixel value; a human can still classify the changed image, but it is confidently misclassified by a standard neural network.</p>
+<p>Sample images (black swan) generated by adversarial attacks with different distortion types. Each distortion is optimized to fool the network.</p>
+<p>Industry observers note that AI systems deployed in the wild will need to be robust to unforeseen attacks, but most defenses so far have focused on specific known attack types. The field has made progress in hardening models against such attacks; however, robustness against one type of distortion often⁠(opens in a latest window) does⁠(opens in a new window) not⁠(opens in a new window) transfer⁠(opens in a new window) to⁠(opens in a new window) robustness against attacks unforeseen by designers of the model. Consequently, evaluating against only a single distortion type can give a false sense of security about a model in the wild which may remain vulnerable to unforeseen attacks such as fake eyeglasses⁠(opens in a new window) and adversarial stickers⁠(opens in a new window).</p>
+<p>Sources indicate that an example where adversarial robustness does not transfer well. Hardening a model against Distortion A initially increases robustness against both Distortions A and B. However, as we harden further, adversarial robustness is harmed for Distortion B but remains about the same for Distortion A; (A = _L_∞​, B = _L_1​). The accuracy of the model against Distortion A peaks at a hardening level of 8 because that is sufficient to defend against the attack and further hardening hurts clean accuracy; see full paper for details.</p>
+<p>We’ve created a three-step method to assess how well a model performs against a upcoming held-out type of distortion. Our method evaluates against diverse unforeseen attacks at a wide range of distortion sizes and compares the results to a strong defense which has knowledge of the distortion type. It also yields a new metric, UAR, which assesses the adversarial robustness of models against unforeseen distortion types.</p>
+<p>Typical papers on adversarial defense evaluate only against the widely studied L∞ L_\infty L∞​ or  L2 L_2  L2​ distortion types. However, we show⁠(opens in a new window) that evaluating against the distortions gives very similar information about adversarial robustness.A We conclude that evaluating against  Lp L_p  Lp​​ distortions is insufficient to predict adversarial robustness against other distortion types. Instead, we suggest that researchers evaluate models against adversarial distortions that are not similar to those used in training. We offer the L1 L_1 L1​,  L2 L_2  L2​-JPEG, Elastic, and Fog attacks as a starting point. We provide implementations, pre-trained models, and calibrations for a variety of attacks in our code package⁠(opens in a new window).</p>
+<p>It has been revealed that we found that considering too narrow a range of distortion sizes can reverse qualitative conclusions about adversarial robustness. To pick a range, we examine images produced by an attack at different distortion sizes and choose the largest range for which the images are still human-recognizable. However, as shown below, an attack with a large distortion budget only uses it against strong defenses. We recommend choosing a calibrated range of distortion sizes by evaluating against adversarially trained models (we also provide calibrated sizes for a wide variety of attacks in our code package⁠(opens in a fresh window)).</p>
+<p id="sec-mid-44604">Sample images (espresso maker) of the same strong attack applied to different defense models. Attacking stronger defenses causes greater visual distortion.</p>
+<p>We developed a newly introduced metric, UAR, which compares the robustness of a model against an attack to adversarial training against that attack. Adversarial training is a strong defense that uses knowledge of an adversary by training on adversarially attacked images.B A UAR score near 100 against an unforeseen adversarial attack implies performance comparable to a defense with prior knowledge of the attack, making this a challenging objective.</p>
+<p>We computed the UAR scores of adversarially trained models for several different distortion types. As shown below, the robustness conferred by adversarial training does not transfer broadly to unforeseen distortions. In fact, robustness against a known distortion can reduce robustness against unforeseen distortions. These results underscore the need for evaluation against significantly more diverse attacks like Elastic, Fog, Gabor, and Snow.</p>
+<p>Sources indicate that we hope that researchers developing adversarially robust models will use our methodology to evaluate against a more diverse set of unforeseen attacks. Our code⁠(opens in a new window) includes a suite of attacks, adversarially trained models, and calibrations which allow UAR to be easily computed.</p>
+<p>If you’re interested in topics in AI Safety, consider applying⁠ to work at OpenAI.</p>
+<p>The Lp L_p Lp​ distortion allows an image viewed as a vector x x x of pixel values to be distorted to a vector x′ x^\prime x′ such that x x x and x′ x^\prime x′ are close in the Lp L_p Lp​​ norm.</p>
+<p>To compute UAR, we average the accuracy of the defense across multiple distortion sizes and normalize by the performance of an adversarially trained model; a precise definition is in our paper.</p>
+<p id="sec-end-44604">The accuracy of the model against Distortion A peaks at a hardening level of 8 because that is sufficient to defend against the attack and further hardening hurts clean accuracy; see full paper for details.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/testing-robustness" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="latest-update-transfer-of-adversarial-robustness-between-perturba-44612.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44612. Latest Update: Transfer of adversarial robustness between perturbation types
+        </a>
+        
+        <a href="trading-inference-time-compute-for-adversarial-robustness-44281.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44281. Trading inference-time compute for adversarial robustness
+        </a>
+        
+        <a href="tech-report-gpt-red-unlocking-self-improvement-for-robustness-44084.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44084. Tech Report: GPT-Red: Unlocking Self-Improvement for Robustness
+        </a>
+        
+        <a href="testing-ads-in-chatgpt-44037.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44037. Testing ads in ChatGPT
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

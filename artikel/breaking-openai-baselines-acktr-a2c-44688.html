@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breaking: OpenAI Baselines: ACKTR & A2C</title>
+    <meta name="description" content="We’re releasing two upcoming OpenAI Baselines implementations: ACKTR and A2C. A2C is a synchronous, deterministic variant of Asynchronous Advantage Actor C">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/breaking-openai-baselines-acktr-a2c-44688.html">
+    <meta property="og:title" content="Breaking: OpenAI Baselines: ACKTR & A2C">
+    <meta property="og:description" content="We’re releasing two upcoming OpenAI Baselines implementations: ACKTR and A2C. A2C is a synchronous, deterministic variant of Asynchronous Advantage Actor C">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/ab67cc8b-c57e-4297-ed457c691f4e/109ac425fc49ae5b9b73b015bb731e72/openai-baselines-acktr-a2c.jpg?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/breaking-openai-baselines-acktr-a2c-44688.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Breaking: OpenAI Baselines: ACKTR & A2C", "image": ["https://images.ctfassets.net/kftzwdyauwt9/ab67cc8b-c57e-4297-ed457c691f4e/109ac425fc49ae5b9b73b015bb731e72/openai-baselines-acktr-a2c.jpg?w=1600&h=900&fit=fill"], "datePublished": "2017-08-18T07:00:00", "dateModified": "2026-11-27T21:05:37.250118", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/breaking-openai-baselines-acktr-a2c-44688.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Breaking: OpenAI Baselines: ACKTR & A2C</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 18 Aug 2017 &bull; ⏱️ 4 min read (796 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We’re releasing two upcoming OpenAI Baselines implementations: ACKTR and A2C.</li><li style='margin-bottom:6px;'>Sources indicate that ACKTR (pronounced “actor”)—Actor Critic using Kronecker-factored Trust Region—was developed by researchers at the University of Toronto and New York University, and we at OpenAI have collaborated with them to release a Baselines implementation.</li><li style='margin-bottom:6px;'>ACKTR combines three distinct techniques: actor-critic methods⁠(opens in a newly introduced window), trust region optimization⁠(opens in a new window) for more consistent improvement, and distributed⁠(opens in a new window) Kronecker⁠(opens in a new window) factorization⁠(opens in a new window) to improve sample efficiency and scalability.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-44688"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-44688"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-44688"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Breaking: OpenAI Baselines: ACKTR &amp; A2C" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/ab67cc8b-c57e-4297-ed457c691f4e/109ac425fc49ae5b9b73b015bb731e72/openai-baselines-acktr-a2c.jpg?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-44688">We’re releasing two upcoming OpenAI Baselines implementations: ACKTR and A2C. A2C is a synchronous, deterministic variant of Asynchronous Advantage Actor Critic (A3C) which we’ve found gives equal performance. ACKTR is a more sample-efficient reinforcement learning algorithm than TRPO and A2C, and requires only slightly more computation than A2C per revision.</p>
+<p>Sources indicate that ACKTR (pronounced “actor”)—Actor Critic using Kronecker-factored Trust Region—was developed by researchers at the University of Toronto and New York University, and we at OpenAI have collaborated with them to release a Baselines implementation. The authors use⁠(opens in a new window) ACKTR to learn control policies for simulated robots (with pixels as input, and continuous action spaces) and Atari agents (with pixels as input and discrete action spaces).</p>
+<p>ACKTR combines three distinct techniques: actor-critic methods⁠(opens in a newly introduced window), trust region optimization⁠(opens in a new window) for more consistent improvement, and distributed⁠(opens in a new window) Kronecker⁠(opens in a new window) factorization⁠(opens in a new window) to improve sample efficiency and scalability.</p>
+<p>For machine learning algorithms, two costs are important to consider: sample complexity and computational complexity. Sample complexity refers to the number of timesteps of interaction between the agent and its environment, and computational complexity refers to the amount of numerical operations that must be performed.</p>
+<p>It has been revealed that ACKTR has better sample complexity than first-order methods such as A2C because it takes a step in the natural gradient direction, rather than the gradient direction (or a rescaled version as in ADAM). The natural gradient gives us the direction in parameter space that achieves the largest (instantaneous) improvement in the objective per unit of change in the output distribution of the network, as measured using the KL-divergence. By limiting the KL divergence, we ensure that the new policy does not behave radically differently than the old one, which could cause a collapse in performance.</p>
+<p>As for computational complexity, the KFAC enhancement used by ACKTR is only 10–25% more expensive per update step than a standard gradient update. This contrasts with methods like TRPO (i.e, Hessian-free optimization), which requires a more expensive conjugate-gradient computation.</p>
+<p>Recent findings suggest that in the following video you can see comparisons at different timesteps between agents trained with ACKTR to solve the game Q-Bert and those trained with A2C. ACKTR agents get higher scores than ones trained with A2C.</p>
+<p>This release includes an OpenAI baseline release of ACKTR, as well as a release of A2C.</p>
+<p id="sec-mid-44688">We’re also publishing benchmarks⁠(opens in a latest window) that evaluate ACKTR against A2C, PPO⁠(opens in a new window) and ACER⁠(opens in a new window) on a range of tasks. In the following plot we show performance of ACKTR on 49 Atari games compared to other algorithm: A2C, PPO, ACER. The hyperparameters of ACKTR were tuned by the author of ACKTR solely on one game, Breakout.</p>
+<p>ACKTR performance also scales well with batch size because it not only derives a gradient estimate from the information in each batch, but also uses the information to approximate the local curvature in the parameter space. This feature is particularly favorable for large scale distributed training, in which large batch sizes are used.</p>
+<p>In a recent development, the Asynchronous Advantage Actor Critic method (A3C) has been very influential since the paper⁠(opens in a new window) was published. The algorithm combines a few key ideas:.</p>
+<p>An updating scheme that operates on fixed-length segments of experience (say, 20 timesteps) and uses these segments to compute estimators of the returns and advantage function.</p>
+<p>Architectures that share layers between the policy and value function.</p>
+<p>In a recent development, after reading the paper, AI researchers wondered whether the asynchrony led to improved performance (e.g. “perhaps the added noise would provide some regularization or exploration?”), or if it was just an implementation detail that allowed for faster training with a CPU-based implementation.</p>
+<p>Recent findings suggest that as an alternative to the asynchronous implementation, researchers found you can write a synchronous, deterministic implementation that waits for each actor to finish its segment of experience before performing an update, averaging over all of the actors. One advantage of this method is that it can more effectively use of GPUs, which perform best with large batch sizes. This algorithm is naturally called A2C, short for advantage actor critic. (This term has been used in several papers⁠(opens in a new window).).</p>
+<p>Industry observers note that our synchronous A2C implementation performs better than our asynchronous implementations—we have not seen any evidence that the noise introduced by asynchrony provides any performance benefit. This A2C implementation is more cost-effective than A3C when using single-GPU machines, and is faster than a CPU-only A3C implementation when using larger policies.</p>
+<p id="sec-end-44688">We have included code in Baselines for training feedforward convnets and LSTMs on the Atari benchmark using A2C.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/openai-baselines-acktr-a2c" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="openai-baselines-dqn-44701.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44701. OpenAI Baselines: DQN
+        </a>
+        
+        <a href="introducing-openai-44744.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44744. Introducing OpenAI
+        </a>
+        
+        <a href="industry-news-openai-gym-beta-44740.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44740. Industry News: OpenAI Gym Beta
+        </a>
+        
+        <a href="industry-news-openai-technical-goals-44736.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44736. Industry News: OpenAI technical goals
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
