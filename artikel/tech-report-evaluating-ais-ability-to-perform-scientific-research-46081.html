@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Report: Evaluating AI’s ability to perform scientific research tasks</title>
+    <meta name="description" content="We introduce FrontierScience, a fresh benchmark that evaluates AI capabilities for expert-level scientific reasoning across physics, chemistry, and biology">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/tech-report-evaluating-ais-ability-to-perform-scientific-research-46081.html">
+    <meta property="og:title" content="Tech Report: Evaluating AI’s ability to perform scientific research tasks">
+    <meta property="og:description" content="We introduce FrontierScience, a fresh benchmark that evaluates AI capabilities for expert-level scientific reasoning across physics, chemistry, and biology">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/26JX57meRpqIRJOwMtIbzv/8976180403bc44232fb6159efaf3c94d/oai_forscience_frontierscience_16x9.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/tech-report-evaluating-ais-ability-to-perform-scientific-research-46081.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "Tech Report: Evaluating AI’s ability to perform scientific research tasks", "image": ["https://images.ctfassets.net/kftzwdyauwt9/26JX57meRpqIRJOwMtIbzv/8976180403bc44232fb6159efaf3c94d/oai_forscience_frontierscience_16x9.png?w=1600&h=900&fit=fill"], "datePublished": "2025-12-16T09:00:00", "dateModified": "2026-11-28T07:30:34.564969", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/tech-report-evaluating-ais-ability-to-perform-scientific-research-46081.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>Tech Report: Evaluating AI’s ability to perform scientific research tasks</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 16 Dec 2025 &bull; ⏱️ 12 min read (2312 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>We introduce FrontierScience, a fresh benchmark that evaluates AI capabilities for expert-level scientific reasoning across physics, chemistry, and biology.</li><li style='margin-bottom:6px;'>Reasoning is at the core of scientific work.</li><li style='margin-bottom:6px;'>According to recent reports, over the last year, our models have reached major milestones, including achieving gold-medal performance at the International Math Olympiad and the International Olympiad in Informatics.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-46081"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-46081"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-46081"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="Tech Report: Evaluating AI’s ability to perform scientific research tasks" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/26JX57meRpqIRJOwMtIbzv/8976180403bc44232fb6159efaf3c94d/oai_forscience_frontierscience_16x9.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-46081">We introduce FrontierScience, a fresh benchmark that evaluates AI capabilities for expert-level scientific reasoning across physics, chemistry, and biology.</p>
+<p>Reasoning is at the core of scientific work. Beyond recalling facts, scientists generate hypotheses, test and refine them, and synthesize ideas across fields. As our models become more capable, the central question is how they can reason deeply to contribute to scientific research.</p>
+<p>According to recent reports, over the last year, our models have reached major milestones, including achieving gold-medal performance at the International Math Olympiad and the International Olympiad in Informatics. In parallel, we’re starting to see our most capable models, such as GPT‑5, meaningfully accelerate real scientific workflows. Researchers are using these systems for tasks such as literature search across disciplines and languages and working through complex mathematical proofs. In many cases, the model shortens work that might have taken days or weeks to hours. This progress is documented in our paper Early science acceleration experiments with GPT‑5⁠, released in November 2025, which presents early evidence that GPT‑5 can measurably accelerate scientific workflows.</p>
+<p>As accelerating scientific progress is one of the most promising opportunities for AI to benefit humanity, we’re improving our models on difficult math and science tasks and working on the tools that will help scientists get the most from them.</p>
+<p>When GPQA⁠(opens in a latest window), a “Google-Proof” science benchmark of questions written by PhD experts, was released in November 2023, GPT‑4 scored 39%, below the expert baseline of 70%. Two years later, GPT‑5.2 scored 92%. As models’ reasoning and knowledge capabilities continue to scale, more difficult benchmarks will be key to measure and forecast models’ ability to accelerate scientific research. Prior scientific benchmarks largely focus on multiple-choice questions, are saturated, or are not centrally focused on science.</p>
+<p>It has been revealed that to bridge this gap, we’re introducing FrontierScience: a fresh benchmark built to measure expert-level scientific capabilities. FrontierScience is written and verified by experts across physics, chemistry, and biology, and consists of hundreds of questions designed to be difficult, original, and meaningful. FrontierScience includes two tracks of questions: Olympiad, which measures Olympiad-style scientific reasoning capabilities, and Research, which measures real-world scientific research abilities. Providing more insight into models’ scientific capabilities helps us track progress and advance AI-accelerated science.</p>
+<p>In our initial evaluations, GPT‑5.2 is our top performing model on FrontierScience-Olympiad (scoring 77%) and Research (scoring 25%), ahead of other frontier models. We’ve seen substantial progress on solving expert-level questions while leaving headroom for more progress, especially on open-ended research-style tasks. For scientists, this suggests that current models can already support parts of research that involve structured reasoning, while highlighting that significant work remains to improve their ability to carry out open-ended thinking. These results align with how scientists are already using today’s models: to accelerate research workflows while relying on human judgment for problem framing and validation, and increasingly to explore ideas and connections that would otherwise take much longer to uncover—including, in some cases, contributing newly introduced insights that experts then evaluate and test.</p>
+<p>According to recent reports, in the end, the most key benchmark for the scientific capabilities of AI is the novel discoveries it helps generate; those are what ultimately matter to science and society. FrontierScience sits upstream of that. It gives us a north star for expert-level scientific reasoning, letting us test models on a standardized set of questions, see where they succeed or fail, and identify where we need to improve them. FrontierScience is narrow and has limitations in key respects (for example, focusing on constrained, expert-written problems) and does not capture everything scientists do in their everyday work. But the field needs more difficult, original, and meaningful science benchmarks, and FrontierScience provides a step forward in this direction.</p>
+<p>According to recent reports, the full FrontierScience evaluation spans over 700 textual questions (with 160 in the gold set) covering subfields across physics, chemistry, and biology. The benchmark is composed of an Olympiad and a Research split. FrontierScience-Olympiad contains 100 questions designed by international olympiad medalists to assess scientific reasoning in a constrained, short answer format. The Olympiad set was designed to contain theoretical questions at least as difficult as problems at international olympiad competitions. FrontierScience-Research consists of 60 original research subtasks designed by PhD scientists (doctoral candidates, professors, or postdoctoral researchers) that are graded using a 10-point rubric. The Research set was created to contain self-contained, multi-step subtasks at the level of difficulty that a PhD scientist might encounter during their research.</p>
+<p>According to recent reports, the Olympiad questions were created in collaboration with 42 former international medalists or national team coaches in the relevant domains, totalling 109 olympiad medals. The research questions were created in collaboration with 45 qualified scientists and domain experts. All scientists were either doctoral candidates, post-doctoral researchers, or professors. Their areas of expertise spanned an array of specialized and important scientific disciplines, from quantum electrodynamics to synthetic organic chemistry to evolutionary biology.</p>
+<p>The task creation process for both sets included some selection against OpenAI internal models (e.g., discarding tasks that models successfully got right, so we expect the evaluation to be somewhat biased against these models relative to others). We open-source the Olympiad gold set of 100 questions and Research gold set of 60 questions, holding out the other questions to track contamination.</p>
+<p>Tasks go through four stages: Creation, Review, Resolution, Revision. Independent experts review each other tasks to verify it aligns with the criteria.</p>
+<p>According to recent reports, the Olympiad set is gradable with a short answer: either with a number, expression, or fuzzy string match, which helps with verifying correctness. However, this verification often trades off with the expressivity and open-endedness of the problem. For the Research set, we introduce a rubric-based architecture for grading more open-ended tasks. Each question includes a scoring rubric with multiple independent and objectively assessable items, totaling 10 points. The grading rubric assesses not only the accuracy of the final answer, but also the correctness of intermediate reasoning steps, allowing for nuanced model performance and failure analysis. A solution is considered “correct” if it’s awarded at least 7/10 rubric points.</p>
+<p>Sources indicate that responses are evaluated by a model-based grader (GPT‑5) against either the short answer or the rubric criteria. While we’d ideally use an expert human to grade each response, this approach is not scalable, so we designed the rubric to be checkable using a model grader. We developed a verification pipeline to help ensure rubrics and questions were well-calibrated to difficulty and correctness.</p>
+<p>It has been revealed that phthalocyanines are important macrocyclic compounds widely utilized in material and life sciences due to their outstanding physicochemical properties, including intense absorption in the visible-near-IR region and high electron-accepting ability. However, unlike porphyrins, the structural diversity of phthalocyanines has been limited by traditional synthetic methods that rely on one-step condensation of isoindoline units. The development of methodologies that allow controlled modification of the phthalocyanine framework, particularly at the meso-positions, represents a significant advancement in expanding the structural and electronic diversity of these compounds.</p>
+<p>Analyze how the modification of meso-nitrogen atoms in nickel(II) phthalocyanine affects the electronic structure, aromaticity, spectroscopic properties, and reactivity of the resulting macrocycles. Explain the synthetic methodology that enables these modifications, the relationship between π-electron count and observed properties, and how these systems compare to traditional phthalocyanines and related porphyrinoids.</p>
+<p>Recent findings suggest that 1. Introduction: Why Modify the meso-Nitrogens of Phthalocyanines?</p>
+<p>Sources indicate that phthalocyanines (Pc) are a class of macrocyclic dyes known for their remarkable chemical, electronic, and optical properties. Their widespread use in materials science, catalysis, and biology stems from strong absorptions in the visible/near-IR regions, exceptional redox characteristics (i.e., high electron affinity), and rigid π-conjugation. Traditional synthetic methods, however, typically form the macrocycle in a single step from phthalonitrile or isoindoline precursors, restricting the ability to introduce substitutions selectively at key ring positions-especially the "meso" (bridging) nitrogens. Recently, methodologies allowing targeted modification of the meso-nitrogen atoms in Ni(II) phthalocyanines have emerged as a powerful means to expand the structural and electronic diversity of these macrocycles.</p>
+<p>2. Effect on Electronic Structure and Aromaticity.</p>
+<p>π-Electron Count and Ring Currents.</p>
+<p>Phthalocyanines are classical 18-electron aromatic systems, conferring high stability and planarity. Altering the meso-nitrogens through substitution or ring expansion can shift the effective π-electron count. For example, introducing additional unsaturated moieties or heteroatoms may expand the cyclic conjugation to 20 or 22 electrons, moving the molecule between Hückel aromaticity and other regimes that affect ring currents and magnetic properties.</p>
+<p>Charge Distribution and Frontier Orbitals.</p>
+<p>Meso-substitution can tune the electron density distribution around the macrocycle. Electron-donating groups can push electron density toward the ring center, lowering the energy of the lowest unoccupied molecular orbital (LUMO). Electron-withdrawing groups, conversely, stabilize the highest occupied molecular orbital (HOMO) and shift redox potentials toward more positive values, altering both the electrochemical profile and the Q- and B-band positions in the UV-vis spectrum.</p>
+<p>UV-Vis Absorption (Q and B Bands).</p>
+<p>The principal absorption features of phthalocyanines lie in the visible (Q-band, typically 600-700 nm) and near-UV (B-band, typically 300-400 nm).</p>
+<p>Substitution that expands the ring conjugation or introduces strong electron-donating/withdrawing groups can:.</p>
+<p id="sec-mid-46081">NMR Spectroscopy and Aromatic Ring Currents.</p>
+<p>Modifications to the π-electron count and distribution are directly observed in 1H and 13C NMR chemical shifts.</p>
+<p>More highly conjugated (or expanded) aromatic rings exhibit distinct downfield shifts for protons located within induced ring currents, while any partial loss of aromaticity or incorporation of antiaromatic segments can cause atypical shielding/deshielding patterns.</p>
+<p>According to recent reports, 4. Reactivity and Coordination Chemistry.</p>
+<p>Because phthalocyanines are often used as redox catalysts or sensors, the meso-nitrogen modifications can significantly influence reactivity:.</p>
+<p>(... shortened for the purposes of this figure).</p>
+<p>0.5 point: Mentions limitations of traditional methods but without specific focus on meso-position control challenges.</p>
+<p>0.0 point: Fails to identify key limitations of traditional synthetic approaches or provides incorrect analysis.</p>
+<p>In a recent development, 1.0 point: Correctly describes the thiolate-mediated reductive tetramerization and explains how counter cation size (K+ or Cs+ vs. Na+) affects selectivity between tetramer formation and direct macrocyclization.</p>
+<p>0.5 point: Mentions thiolate-mediated tetramerization but without explaining factors controlling selectivity.</p>
+<p>1.0 point: Correctly explains that upfield shifts in the 16π system indicate paratropic ring current (antiaromaticity), contrasts this with the broad signals in 17π systems due to paramagnetism, and connects these observations to the underlying electronic structures.</p>
+<p>0.0 point: Incorrectly interprets NMR data or fails to connect spectral features to electronic properties.</p>
+<p>1.0 point: Correctly explains that the 16π system demonstrates two reversible reductions reflecting conversion to 17π radical and 18π aromatic states, while 17π systems show narrow redox gaps due to facile interconversion between 16π, 17π, and 18π states, and relates these patterns to the underlying electronic structures.</p>
+<p>0.0 point: Incorrectly interprets electrochemical data or fails to connect redox behavior to electronic properties.</p>
+<p>1.0 point: Correctly explains that the 16π system highlights weak/broad absorption due to symmetry-forbidden HOMO-LUMO transitions in antiaromatic systems, while 17π systems show Q-like bands plus NIR-II absorptions characteristic of radical species, and contrasts these with typical phthalocyanine spectral features.</p>
+<p>0.0 point: Incorrectly interprets absorption data or fails to relate spectral features to electronic properties.</p>
+<p>1.0 point: Correctly explains the high reactivity of the 16π system toward nucleophiles, details specific reactions with hydroxide (ring opening) and hydrazine (ring expansion), and explains how these transformations relieve antiaromatic destabilization.</p>
+<p>0.5 point: Mentions reactivity but provides limited analysis of specific transformations or the driving forces behind them.</p>
+<p>Each task in the research set is graded using a rubric totaling 10 points that can be used by an expert or a model grader. To scale our ability to evaluate models, we use another model to grade responses.</p>
+<p>We evaluated several frontier models: GPT‑5.2, Claude Opus 4.5, and Gemini 3 Pro, GPT‑4o, OpenAI o4-mini, and OpenAI o3 on FrontierScience-Olympiad and FrontierScience-Research. All reasoning models were evaluated at “high” reasoning effort with the exception of GPT‑5.2 at “xhigh”. In our initial evaluations, GPT‑5.2 is our top performing model on FrontierScience-Olympiad (scoring 77%) and Research (scoring 25%), ahead of other frontier models. Gemini 3 Pro is comparable to GPT‑5.2 on the Olympiad set (scoring 76%).</p>
+<p>It has been revealed that we’ve seen substantial progress on solving expert-level questions, especially on open-ended research-style tasks. There is still more room to grow: from analyzing the transcripts for failures, frontier models sometimes made reasoning, logic, and calculation errors, didn’t understand niche scientific concepts, and made factual inaccuracies.</p>
+<p>We compare accuracies across several frontier models. GPT‑5.2 is our highest performing model on the FrontierScience-Research and the Olympiad set.</p>
+<p>Sources indicate that we compare accuracies across reasoning efforts for GPT‑5.2 and o3. Longer thinking time leads to improved accuracy.</p>
+<p>While FrontierScience represents a step forward in difficulty of scientific benchmarks, there are still many limitations. FrontierScience is composed of questions with a constrained problem statement, which focuses on evaluating the final answer (Olympiad) or evaluating the reasoning to complete a research task (Research). In addition, using rubrics with multiple components on longer tasks is less objective than checking the final answer.</p>
+<p>FrontierScience offers a higher resolution snapshot of models’ reasoning on difficult, expert-written questions, but not a full picture of how science gets done in practice. In particular, it does not assess a significant part of scientific research: how models generate genuinely novel hypotheses, or interact with multiple modalities, including video data and real experimental systems in the physical world.</p>
+<p id="sec-end-46081">Recent findings suggest that looking ahead, we expect progress in scientific reasoning to come from both better general-purpose reasoning systems and focused effort on improvising scientific capabilities. FrontierScience is one tool among many, and as models improve, we blueprint to iterate on this benchmark, expand it to new domains, and pair it with more real-world evaluations that look at what these systems actually enable scientists to do. Benchmarks like FrontierScience help us understand the weaknesses of today’s AI systems to focus our work on making models be reliable partners in scientific discovery.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/frontierscience" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="paperbench-evaluating-ais-ability-to-replicate-ai-research-44222.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44222. PaperBench: Evaluating AI’s Ability to Replicate AI Research
+        </a>
+        
+        <a href="tech-report-advancing-independent-research-on-ai-alignment-45891.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #45891. Tech Report: Advancing independent research on AI alignment
+        </a>
+        
+        <a href="tech-report-codex-security-now-in-research-preview-45829.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #45829. Tech Report: Codex Security: now in research preview
+        </a>
+        
+        <a href="tech-report-what-parameter-golf-taught-us-about-ai-assisted-resea-45604.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #45604. Tech Report: What Parameter Golf taught us about AI-assisted research
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

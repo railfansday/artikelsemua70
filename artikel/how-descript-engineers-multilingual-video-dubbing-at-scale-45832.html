@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Descript engineers multilingual video dubbing at scale</title>
+    <meta name="description" content="Using OpenAI reasoning models, Descript unlocked automatic localization of large content libraries without losing timing or meaning. Percentage point impro">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-descript-engineers-multilingual-video-dubbing-at-scale-45832.html">
+    <meta property="og:title" content="How Descript engineers multilingual video dubbing at scale">
+    <meta property="og:description" content="Using OpenAI reasoning models, Descript unlocked automatic localization of large content libraries without losing timing or meaning. Percentage point impro">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/7wL94yXvqYUEQRfOpp68V8/4f6d4a21db6e98ddb2352cbc52ac3b77/oai_descript_1x1.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-descript-engineers-multilingual-video-dubbing-at-scale-45832.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How Descript engineers multilingual video dubbing at scale", "image": ["https://images.ctfassets.net/kftzwdyauwt9/7wL94yXvqYUEQRfOpp68V8/4f6d4a21db6e98ddb2352cbc52ac3b77/oai_descript_1x1.png?w=1600&h=900&fit=fill"], "datePublished": "2026-03-06T00:00:00", "dateModified": "2026-11-28T07:30:11.653392", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-descript-engineers-multilingual-video-dubbing-at-scale-45832.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">General</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How Descript engineers multilingual video dubbing at scale</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 06 Mar 2026 &bull; ⏱️ 6 min read (1293 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Using OpenAI reasoning models, Descript unlocked automatic localization of large content libraries without losing timing or meaning.</li><li style='margin-bottom:6px;'>Percentage point improvement in duration adherence with OpenAI.</li><li style='margin-bottom:6px;'>Sources indicate that descript⁠(opens in a new window) is an AI-native video editor built around a simple idea: if you can edit text, you should be able to edit video.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-45832"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-45832"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-45832"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How Descript engineers multilingual video dubbing at scale" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/7wL94yXvqYUEQRfOpp68V8/4f6d4a21db6e98ddb2352cbc52ac3b77/oai_descript_1x1.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-45832">Using OpenAI reasoning models, Descript unlocked automatic localization of large content libraries without losing timing or meaning.</p>
+<p>Percentage point improvement in duration adherence with OpenAI.</p>
+<p>Increase in dubbed exports post-rollout.</p>
+<p>Sources indicate that descript⁠(opens in a new window) is an AI-native video editor built around a simple idea: if you can edit text, you should be able to edit video. Since Descript’s early days, AI has powered every aspect of the product: transcription, editing, audio cleanup, and increasingly complex creative workflows. They’ve built on OpenAI for years, using Whisper for transcription and GPT series models inside their co-editor Underlord.</p>
+<p>Translation quickly emerged as a high-impact use case. Traditionally, translating video has been slow and expensive, requiring language experts to manage projects, produce rote translations, handle quality control, and generate corresponding audio. LLMs dramatically compress that workflow, making high-quality translation at scale possible.</p>
+<p>Captions and dubbing both require semantic fidelity: the translation must preserve the original meaning. But duration adherence plays a different role in each. For captions, it’s a nice-to-have. For dubbing, it’s critical, because if translated speech runs too long or too short, it will sound unnatural even if the meaning is correct.</p>
+<p>To address this, Descript redesigned its translation pipeline using OpenAI reasoning models to optimize for semantic fidelity and duration adherence during generation, not after. In the first 30 days after rollout, exports of translated videos with dubbing increased 15%, and duration adherence improved by 13 to 43 percentage points, depending on the language.</p>
+<p>“Dubbing is an increasingly popular use case for Descript, so we’re building ways to do it in batch for companies that want to translate and lip-sync entire libraries,” said Laura Burkhauser, CEO.</p>
+<p>Translation was one of Descript’s earliest and most requested features. They started with captions-only translation, which worked well—but many customers wanted to go further and have spoken audio (dubbing) in the target language.</p>
+<p>Recent findings suggest that however, one problem kept surfacing: dubbed audio didn’t always sound right. “Probably the number one complaint we heard was that the pace of the speech was unnatural in the translated language,” stated Aleks Mistratov, Head of AI Product at Descript.</p>
+<p>In a recent development, the problem came down to the fact that different languages take different amounts of time to express the same idea. Descript observed, for instance, that on average German is a “longer” language than English. To fit into fixed video segments, translated speech often had to be artificially sped up or slowed down. “You’d end up with something that sounded like chipmunks, or a sleepy giant,” Mistratov explained.</p>
+<p>“Please review the safety guidelines before operating the machine.”.</p>
+<p>“Bitte überprüfen Sie die Sicherheitsrichtlinien, bevor Sie die Maschine bedienen.”.</p>
+<p>In this case, the German audio would either have to be sped up unnaturally, or the translation would need to be rewritten to fit the time budget.</p>
+<p>According to recent reports, customers were left with two options: manually retime the audio segment by segment, or rewrite the translation itself to make it fit. Both approaches required deep timeline edits and, often, near-native fluency in the target language. It was tedious for creators, and became a blocker to scaling the feature to large enterprise localization projects.</p>
+<p>In a recent development, the team had a clear theory of what it would take to make dubbing work. The system would need to not only optimize for semantic meaning, but also be aware of timing constraints. When translating from English into German, for example, the model would need to understand how to use fewer words or simplify the concept, so the dubbed audio would remain natural.</p>
+<p id="sec-mid-45832">According to recent reports, earlier approaches optimized semantic fidelity first and attempted to correct timing afterward. The translations were often semantically correct, but they routinely missed the duration constraints, and the overall quality still wasn’t good enough.</p>
+<p>“We ran incremental tests, not even generating anything, just asking the model to output the number of syllables in a chunk of text,” Mistratov said. “Earlier models simply weren’t good at that.”.</p>
+<p>Recent findings suggest that reliable syllable counting turned out to be critical. If the model could not consistently calculate syllables, it could not reliably target a specific duration window.</p>
+<p>GPT‑5 series models brought a level of reasoning consistency that earlier models lacked, especially on tasks like syllable counting and constraint tracking. With that improvement, Descript redesigned its translation and dubbing pipeline.</p>
+<p>Industry observers note that first, Descript’s system breaks the transcript into chunks, guided by sentence boundaries, natural pauses, and speaking patterns in the original recording. Each chunk maintains semantic continuity, but is small enough to reason about as a timing unit.</p>
+<p>In a recent development, from there, the model calculates the number of syllables in the chunk. Using language-specific speaking-rate assumptions, the system estimates how many syllables the translated chunk should target to preserve natural pacing (“duration adherence”). The prompt asks the model to optimize for both duration adherence and meaning preservation. Surrounding chunks are passed in as context so that the model maintains semantic coherence across segments.</p>
+<p>According to recent reports, the team evaluated multiple configurations to balance duration adherence, semantic fidelity, latency, and cost. The selected setup delivered strong constraint-following at production speed, enabling high-volume translation without manual retiming. The result is a translation pipeline where pacing is treated as a first-class variable instead of something corrected after the fact.</p>
+<p>To develop the acceptance criteria for evals, the team ran listening tests: they generated translated audio samples and adjusted the playback speed in small increments, asking users to rate when speech became unnatural.</p>
+<p>Sources indicate that “Anything that was slowed down by 10%, or sped up by 20%, generally still sounded natural,” Mistratov said. Beyond this range, speech became too distorted.</p>
+<p>Earlier systems performed poorly by that measure. Depending on the language, only 40% to 60% of segments fell within the acceptable pacing window. With the redesigned pipeline, that number increased from 40%–60% to between 73% and 83%, depending on language.</p>
+<p>Industry observers note that the team also evaluated semantic fidelity using a separate model-as-judge rating on a scale ranging from 1 (“completely different”) to 5 (“semantically equivalent”). For dubbing, they decided to accept a lower semantic threshold than for caption-only translation, where duration constraints are irrelevant. Even with that tradeoff, 85.5% of segments were rated a four or five out of five for semantic adherence.</p>
+<p>The result was a system that could balance two competing constraints—timing and meaning—with measurable confidence. And because both metrics were automated, Descript is able to continuously evaluate new model releases and prompt variations against the same benchmarks.</p>
+<p>As translation moves from single videos to large content libraries, Descript is building more control into how translations are tuned, including the ability to prioritize stricter semantic fidelity when needed.</p>
+<p>In a recent development, translation inside Descript is only one layer of a broader multimodal system. Translated text feeds into speech generation, which then drives lip sync and final video rendering.</p>
+<p>According to recent reports, improvements at the text layer make natural pacing possible, but the overall experience also depends on how well the audio model preserves tone, cadence, and nonverbal characteristics of speech. That’s where the team sees the next frontier.</p>
+<p>Industry observers note that “A lot of what’s going to improve translation output is making the pipeline more multimodal: incorporating audio, video, and text together when deciding how to translate,” said Mistratov. “That should better maintain the nonverbal characteristics of speech, like tone and emphasis, and preserve even more of the original delivery.”.</p>
+<p id="sec-end-45832">Industry observers note that for Descript, stronger reasoning models made the complexity of dubbing tractable. By crossing the threshold where models could reliably balance tradeoffs between pacing and meaning, translation became something the team could systematically improve, and deploy at scale.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/descript" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="fine-tuning-gpt-3-to-scale-video-creation-44520.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44520. Fine-tuning GPT-3 to scale video creation
+        </a>
+        
+        <a href="introducing-the-worlds-largest-open-multilingual-language-model-b-46631.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #46631. Introducing The World's Largest Open Multilingual Language Model: BLOOM
+        </a>
+        
+        <a href="a-gentle-introduction-to-8-bit-matrix-multiplication-for-transfor-46614.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #46614. A Gentle Introduction to 8-bit Matrix Multiplication for transformers at scale using transformers, accelerate and bitsandbytes
+        </a>
+        
+        <a href="fine-tune-whisper-for-multilingual-asr-with-transformers-46574.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #46574. Fine-Tune Whisper For Multilingual ASR with 🤗 Transformers
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>

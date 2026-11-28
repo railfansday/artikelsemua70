@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How we built OWL, the newly introduced architecture behind our ChatGPT-based browser, Atlas</title>
+    <meta name="description" content="Inside our latest process architecture, which ​​gives you a faster, smarter way to use the web. By Ken Rockot, Member of the Technical Staff and Ben Goodge">
+    <link rel="canonical" href="https://railfansday.github.io/artikelsemua70/artikel/how-we-built-owl-the-newly-introduced-architecture-behind-our-cha-46264.html">
+    <meta property="og:title" content="How we built OWL, the newly introduced architecture behind our ChatGPT-based browser, Atlas">
+    <meta property="og:description" content="Inside our latest process architecture, which ​​gives you a faster, smarter way to use the web. By Ken Rockot, Member of the Technical Staff and Ben Goodge">
+    <meta property="og:image" content="https://images.ctfassets.net/kftzwdyauwt9/5t4zEI8glvp48wyFih9EV2/8883943117ca1c766b2bcbc1a0e09a32/AtlasBlog_ArtCard_16x9.png?w=1600&h=900&fit=fill">
+    <meta property="og:url" content="https://railfansday.github.io/artikelsemua70/artikel/how-we-built-owl-the-newly-introduced-architecture-behind-our-cha-46264.html">
+    <meta property="og:type" content="article">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "NewsArticle", "headline": "How we built OWL, the newly introduced architecture behind our ChatGPT-based browser, Atlas", "image": ["https://images.ctfassets.net/kftzwdyauwt9/5t4zEI8glvp48wyFih9EV2/8883943117ca1c766b2bcbc1a0e09a32/AtlasBlog_ArtCard_16x9.png?w=1600&h=900&fit=fill"], "datePublished": "2025-10-30T00:00:00", "dateModified": "2026-11-28T07:30:51.596697", "author": {"@type": "Person", "name": "Global News Desk Editor"}, "publisher": {"@type": "NewsMediaOrganization", "name": "Global News Desk", "logo": {"@type": "ImageObject", "url": "https://railfansday.github.io/artikelsemua70/favicon.ico"}}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://railfansday.github.io/artikelsemua70/artikel/how-we-built-owl-the-newly-introduced-architecture-behind-our-cha-46264.html"}}</script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --badge-bg: #eff6ff;
+            --badge-text: #1d4ed8;
+        }
+        body.dark-mode {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --badge-bg: #1e3a8a;
+            --badge-text: #93c5fd;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.8;
+        }
+        .article-wrapper {
+            max-width: 840px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .back-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+        }
+        .cat-badge {
+            background: var(--badge-bg);
+            color: var(--badge-text);
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+        h1 {
+            font-size: 28px;
+            line-height: 1.35;
+            margin: 10px 0 14px 0;
+        }
+        .meta-line {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+        .ctrl-btn {
+            background: var(--bg-color);
+            color: var(--text-main);
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        @media (max-width: 600px) {
+            body { padding: 0; }
+            .article-wrapper { border-radius: 0; padding: 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="article-wrapper">
+        <div class="top-nav">
+            <a href="../index.html" class="back-link">&larr; Back to Portal Home</a>
+            <div style="display:flex; gap:8px; align-items:center;">
+                <span class="cat-badge">AI & Tech</span>
+                <span class="cat-badge" style="background:#fef3c7; color:#d97706;">⚖️ Neutral</span>
+                <button class="ctrl-btn" onclick="document.body.classList.toggle('dark-mode')">🌙 Dark Mode</button>
+            </div>
+        </div>
+        <h1>How we built OWL, the newly introduced architecture behind our ChatGPT-based browser, Atlas</h1>
+        <div class="meta-line">🌐 Source: <strong>Openai</strong> &bull; 📅 30 Oct 2025 &bull; ⏱️ 7 min read (1444 words, 📚 Deep Dive)</div>
+        
+        <div class="tldr-box" style="background: rgba(37, 99, 235, 0.08); border-left: 4px solid #2563eb; padding: 14px 18px; border-radius: 8px; margin: 18px 0;">
+            <div style="font-weight: 700; margin-bottom: 8px; color: #2563eb; font-size: 14px;">💡 Key Takeaways</div>
+            <ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6;"><li style='margin-bottom:6px;'>Inside our latest process architecture, which ​​gives you a faster, smarter way to use the web.</li><li style='margin-bottom:6px;'>By Ken Rockot, Member of the Technical Staff and Ben Goodger, Head of Engineering, ChatGPT Atlas.</li><li style='margin-bottom:6px;'>Last week, we launched ChatGPT Atlas⁠, a upcoming way to browse the web with ChatGPT by your side.</li></ul>
+        </div>
+        
+        
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:12px 0 18px 0; padding:10px 14px; border:1px solid var(--border, #e2e8f0); border-radius:8px; font-size:13px;">
+            <strong style="color:var(--text-muted, #64748b);">📑 Quick Jump:</strong>
+            <a href="#sec-start-46264"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">1. Overview</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-mid-46264"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">2. Key Details</a>
+            <span style="color:var(--text-muted, #64748b);">•</span>
+            <a href="#sec-end-46264"  style="color:var(--primary, #2563eb); text-decoration:none; font-weight:600;">3. Closing Notes</a>
+        </div>
+        
+<div style="text-align:center; margin-bottom:20px;"><img alt="How we built OWL, the newly introduced architecture behind our ChatGPT-based browser, Atlas" loading="lazy" src="https://images.ctfassets.net/kftzwdyauwt9/5t4zEI8glvp48wyFih9EV2/8883943117ca1c766b2bcbc1a0e09a32/AtlasBlog_ArtCard_16x9.png?w=1600&amp;h=900&amp;fit=fill" style="max-width:100%; height:auto; border-radius:8px;"/></div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+<div class="article-body" style="line-height: 1.8;">
+<p id="sec-start-46264">Inside our latest process architecture, which ​​gives you a faster, smarter way to use the web.</p>
+<p>By Ken Rockot, Member of the Technical Staff and Ben Goodger, Head of Engineering, ChatGPT Atlas.</p>
+<p>Last week, we launched ChatGPT Atlas⁠, a upcoming way to browse the web with ChatGPT by your side. In addition to being a full-featured web browser, Atlas offers a glimpse into the future: a world where you can bring ChatGPT with you across the internet to ask questions, make suggestions, and complete tasks for you. In this post, we unpack one of the most complex engineering aspects of the product: how we turned ChatGPT into a browser that gets more useful as you go.</p>
+<p>Making ChatGPT a true co-pilot for the web meant reimagining the entire architecture of a browser: separating Atlas from the Chromium runtime. This entailed developing a new way of integrating Chromium that allows us to deliver on our product goals: instant startup, responsiveness even as you open more tabs, and creating a strong foundation for agentic use cases.</p>
+<p>Chromium was a natural building block. It provides a state-of-the-art web engine with a robust security model, established performance credentials, and peerless web compatibility. Furthermore, it’s developed by a global community that continuously improves it. It’s a common go-to for modern desktop web browsers.</p>
+<p>It has been revealed that our talented design team had ambitious goals for our user experience, including rich animations and visual effects for features like Agent mode. This required our engineering team to leverage the most modern native frameworks for our UI (SwiftUI, AppKit and Metal), instead of simply reskinning the open source Chromium UX. As a result, Atlas’ UI is a comprehensive rebuild of the entire application UX.</p>
+<p>According to recent reports, we also had other product goals like fast startup times and supporting hundreds of tabs without penalizing performance. These goals were challenging to achieve with Chromium out-of-the-box, which is opinionated about many details from the boot sequence, threading model and tab models. We considered making substantial changes here, but we wanted to keep our set of patches against Chromium targeted so we could swiftly integrate new versions. To ensure our development velocity was maximally accelerated, we needed to come up with a different way to integrate and drive the Chromium runtime.</p>
+<p>Industry observers note that A litmus test for our technical investment was not only that it would enable faster experimentation, iteration and delivery of latest features – it would also enable us to maintain a core part of OpenAI’s engineering culture: shipping on day one. Every new engineer makes and merges a small change in the afternoon of their first day. We needed to make sure this was possible even though Chromium can take hours to check out and build.</p>
+<p>Our answer to these challenges was to build a new architectural layer we call OWL: OpenAI’s Web Layer. OWL is our integration of Chromium, which entails running Chromium’s browser process outside of the main Atlas app process.</p>
+<p>Recent findings suggest that think of it like this: Chromium revolutionized browsers by moving tabs into separate processes. We’re taking that idea further by moving Chromium itself out of the main application process and into an isolated service layer. This shift unlocks a cascade of benefits:.</p>
+<p>A simpler, modern app: Atlas is built almost entirely in SwiftUI and AppKit. One language, one tech stack, one clean codebase.</p>
+<p>Faster startup: Chromium boots asynchronously in the background. Atlas doesn’t wait — pixels hit the screen nearly instantly.</p>
+<p>Isolation from jank and crashes: Chromium is a powerful and complex web engine. If its main thread hangs, Atlas doesn’t. If it crashes, Atlas stays up.</p>
+<p>Fewer merge headaches: Because we’re not building on as much of the Chromium open source UI, our diff against upstream Chromium is much smaller and easier to maintain.</p>
+<p>Faster iteration: Most engineers never need to build Chromium locally. OWL ships internally as a prebuilt binary, so Atlas builds take minutes not hours.</p>
+<p>Because most engineers on our team aren’t regularly building Chromium from source, development can go much faster—even newly introduced team members can merge simple changes on their first afternoon.</p>
+<p>At a high level, the Atlas browser is the OWL Client, and the Chromium browser process is the OWL Host. They communicate over IPC, specifically Mojo⁠(opens in a new window), Chromium’s own message-passing system. We wrote custom Swift (and even TypeScript) bindings for Mojo, so our Swift app can call host-side interfaces directly.</p>
+<p>The OWL client library exposes a simple public Swift API, which abstracts several key concepts exposed by the host’s service layer:.</p>
+<p id="sec-mid-46264">Session: Configure and control the host globally.</p>
+<p>Profile: Manage browser state for a specific user profile.</p>
+<p>Industry observers note that webView: Control and embed individual web contents (e.g. render, input, navigate, zoom, etc.).</p>
+<p>WebContentRenderer: Forward input events into Chromium’s rendering pipeline and receive feedback from the renderer.</p>
+<p>LayerHost/Client: Exchange compositing information between the UI and Chromium.</p>
+<p>There’s also a wide range of service endpoints for managing high-level features like bookmarks, downloads, extensions, and autofill.</p>
+<p>Sources indicate that webViews, which share a mutually exclusive presentation space in the client app are swapped in and out of a shared compositing container. For example, a browser window often has a single shared container visible and selecting a tab in the tab strip swaps that tab’s WebView into the container. On the Chromium side, this container corresponds to a gfx::AcceleratedWidget which is ultimately backed by a CALayer. We expose that layer’s context ID to the client, where an NSView embeds it using the private CALayerHost API.</p>
+<p>Special cases like  dropdowns or color pickers, which Chromium renders in separate popup widgets, use the same approach. They don’t have a content::WebContents, but they do have a content::RenderWidgetHostView with their own gfx::AcceleratedWidget, so the same delegated rendering model applies.</p>
+<p>OWL internally keeps view geometry in sync with the Chromium side, so the GPU compositor can be updated accordingly and can always produce layer contents of the correct size and device scale.</p>
+<p>We also reuse this technique to selectively project elements of Chromium’s own native Views UI into Atlas (this is also useful for bootstrapping features like permission prompts rapidly without building replacements from scratch in SwiftUI). This technique borrows heavily from Chromium’s existing infrastructure for installable web apps on macOS.</p>
+<p>Recent findings suggest that chromium UI translates platform events (like macOS NSEvents) into Blink’s WebInputEvent model before forwarding them to renderers. But since OWL runs Chromium in a hidden process, we do that translation ourselves within the Swift client library and forward already-translated events down to Chromium.</p>
+<p>Recent findings suggest that from there, they follow the same lifecycle that real input events would normally follow for web content. This includes having events returned back to the client whenever a page indicates that it didn’t handle the event. When this happens, we re-synthesize an NSEvent and give the rest of the app a chance to handle the input.</p>
+<p>Atlas’ agentic browsing feature poses some unique challenges for our approaches to rendering, input event forwarding, and data storage.</p>
+<p>Industry observers note that our computer use model expects a single image of the screen as input. But some UI elements, like  dropdowns, render outside the tab’s bounds in separate windows. In agent mode, we composite those popups back into the main page image at the correct coordinates so the model sees the full context in one frame.</p>
+<p>For input, we apply the same principle: agent-generated events are routed directly to the renderer, never through the privileged browser layer. That preserves the sandbox boundary even under automated control. For example, we don’t want this class of events to synthesize keyboard shortcuts that make the browser do things unrelated to the web content being shown.</p>
+<p>None of this would be possible without the global Chromium community and their incredible work building a foundation for the modern web. OWL builds on that foundation in a new way: decoupling the engine from the app, blending a world-class web platform with modern native frameworks, and unlocking a faster, more flexible architecture.</p>
+<p>In a recent development, by rethinking how a browser holds Chromium, we’re creating space for newly introduced kinds of experiences: smoother startups, richer UI, tighter integration with the rest of the OS, and a development loop that moves at the speed of ideas. If that sounds like your kind of challenge, check out our openings to work on Atlas as a Software Engineer, Atlas⁠, Software Engineer, iOS⁠, and more⁠.</p>
+<p>Try Atlas at chatgpt.com/atlas⁠⁠(opens in a latest window).</p>
+<p id="sec-end-46264">Special thanks to Darin Fisher and Marie Shin, who contributed to this post and to the entire OpenAI team that built Atlas.</p>
+<p style="margin-top: 25px;">
+<a href="https://openai.com/index/building-chatgpt-atlas" rel="nofollow noopener" style="color: #0d6efd; text-decoration: none; font-weight: bold;" target="_blank">
+                        → Read original article
+                    </a>
+</p>
+</div>
+<div style="text-align:center; margin:20px 0;">
+<script type="text/javascript">
+        atOptions = {
+            'key' : 'f9e40eb3b3cd05f1038aac7b36b33ad2',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+        };
+    </script>
+<script src="https://upholdbrilliancerecast.com/f9e40eb3b3cd05f1038aac7b36b33ad2/invoke.js" type="text/javascript"></script>
+</div>
+
+        
+    <div style="margin-top: 28px; padding-top: 18px; border-top: 1px dashed var(--border, #e2e8f0);">
+        <h3 style="font-size: 16px; margin: 0 0 12px 0; color: var(--text-main, #1e293b);">🔗 Related Articles</h3>
+        
+        <a href="introducing-chatgpt-atlas-the-browser-with-chatgpt-built-in-46312.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #46312. Introducing ChatGPT Atlas, the browser with ChatGPT built in
+        </a>
+        
+        <a href="introducing-our-newly-introduced-pricing-46571.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #46571. Introducing our newly introduced pricing
+        </a>
+        
+        <a href="newly-introduced-in-chatgpt-for-business-march-2025-44235.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #44235. Newly introduced in ChatGPT for Business: March 2025
+        </a>
+        
+        <a href="latest-update-assisted-generation-a-newly-introduced-direction-to-46457.html" style="display:block; width:100%; box-sizing:border-box; text-align:left; text-decoration:none; background:transparent; border:1px solid var(--border, #e2e8f0); padding:10px 14px; border-radius:8px; margin-bottom:8px; color:var(--text-main, #1e293b); font-size:14px; font-weight:600; transition:0.2s;">
+            📰 #46457. Latest Update: Assisted Generation: a newly introduced direction toward low-latency text generation
+        </a>
+        
+    </div>
+    
+    </div>
+</body>
+</html>
